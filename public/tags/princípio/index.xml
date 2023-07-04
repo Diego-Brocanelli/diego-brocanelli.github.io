@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>princípio on Diego Brocanelli</title>
+    <link>http://example.org/tags/princ%C3%ADpio/</link>
+    <description>Recent content in princípio on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 01 Jan 2018 02:35:55 +0000</lastBuildDate><atom:link href="http://example.org/tags/princ%C3%ADpio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YAGNI – Você não vai precisar disso</title>
+      <link>http://example.org/php/yagni-voce-nao-vai-precisar-disso/</link>
+      <pubDate>Mon, 01 Jan 2018 02:35:55 +0000</pubDate>
+      
+      <guid>http://example.org/php/yagni-voce-nao-vai-precisar-disso/</guid>
+      <description>YAGNI é um acrônimo para “You Aren’t Gonna Need It” (Você não vai precisar disso) mantra pregado pela Extreme Programming (XP) onde se diz que não devemos adicionar possíveis novas funcionalidades ao software a não ser que seja necessário.
+Nós desenvolvedores de software temos a péssima mania de tentar prever o futuro, implementando &amp;ldquo;aquele recurso&amp;rdquo; que economizará muito tempo, que convenhamos quase nunca usamos.
+Toda &amp;ldquo;futurologia&amp;rdquo; empregada por mim só renderam dores de cabeça, pois quase nunca são utilizados, além da manutenção que será aplicado no código, sendo uma carga desnecessária ao projeto.</description>
+    </item>
+    
+  </channel>
+</rss>

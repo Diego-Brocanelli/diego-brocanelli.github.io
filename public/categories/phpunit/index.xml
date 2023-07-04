@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>phpUnit on Diego Brocanelli</title>
+    <link>http://example.org/categories/phpunit/</link>
+    <description>Recent content in phpUnit on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 10 Dec 2016 21:06:31 +0000</lastBuildDate><atom:link href="http://example.org/categories/phpunit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hhbr : 05 – Refatoração (vídeo)</title>
+      <link>http://example.org/php/refatoracao-video/</link>
+      <pubDate>Sat, 10 Dec 2016 21:06:31 +0000</pubDate>
+      
+      <guid>http://example.org/php/refatoracao-video/</guid>
+      <description>Olá pessoal, tudo bem?!
+Ocorreu hoje a quinta edição do hhbr, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka @devdrops.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!
+Dados da palestra Tema: “Refatoração” Palestrante: Davi Marcondes Moreira Twitter: https://twitter.com/devdrops Site: devdrops.me GitHub: https://github.com/devdrops Comunidade: http://phpdojeitocerto.tumblr.com/ Slides: https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45 Links mencionados PHPMD: https://phpmd.org/ Blackfire: https://blackfire.io/ CorgiBytes: http://corgibytes.com/ PHPUnit: https://phpunit.de/ SensiolabsInsight: https://insight.</description>
+    </item>
+    
+    <item>
+      <title>Testes de forma simples, fácil e robusto em sistemas PHP com PHPUnit!</title>
+      <link>http://example.org/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</link>
+      <pubDate>Tue, 06 Dec 2016 02:09:40 +0000</pubDate>
+      
+      <guid>http://example.org/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</guid>
+      <description>Olá pessoal, tudo bem?!
+Construir sistemas robustos, seguros e livres bugs (ou pelo menos o menor número possível 🙂 ) está presente em nosso dia a dia, e com isso temos diversas metodologias, ferramentas e recursos para que nossos códigos tenham qualidade e garantia de sua eficácia.
+Para o ecossistema PHP não é diferente, temos disponível uma ferramenta fantástica para executarmos testes unitários, e hoje vamos aprender um pouco sobre ela, seu nome é PHPUnit.</description>
+    </item>
+    
+  </channel>
+</rss>

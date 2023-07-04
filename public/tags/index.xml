@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Diego Brocanelli</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>http://example.org/tags/linux/</link>
+      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
+      
+      <guid>http://example.org/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programação</title>
+      <link>http://example.org/tags/programa%C3%A7%C3%A3o/</link>
+      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
+      
+      <guid>http://example.org/tags/programa%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wsl</title>
+      <link>http://example.org/tags/wsl/</link>
+      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
+      
+      <guid>http://example.org/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wsl2</title>
+      <link>http://example.org/tags/wsl2/</link>
+      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
+      
+      <guid>http://example.org/tags/wsl2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brocanelli</title>
+      <link>http://example.org/tags/brocanelli/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      
+      <guid>http://example.org/tags/brocanelli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>diego</title>
+      <link>http://example.org/tags/diego/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      
+      <guid>http://example.org/tags/diego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fechatag</title>
+      <link>http://example.org/tags/fechatag/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      
+      <guid>http://example.org/tags/fechatag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>podcast</title>
+      <link>http://example.org/tags/podcast/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      
+      <guid>http://example.org/tags/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>estudos</title>
+      <link>http://example.org/tags/estudos/</link>
+      <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
+      
+      <guid>http://example.org/tags/estudos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iniciante</title>
+      <link>http://example.org/tags/iniciante/</link>
+      <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
+      
+      <guid>http://example.org/tags/iniciante/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

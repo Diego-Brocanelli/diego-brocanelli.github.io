@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>parse on Diego Brocanelli</title>
+    <link>http://example.org/tags/parse/</link>
+    <description>Recent content in parse on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 05 Jan 2018 21:05:12 +0000</lastBuildDate><atom:link href="http://example.org/tags/parse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como realizar parse da query string de forma simples com PHP</title>
+      <link>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</link>
+      <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
+      
+      <guid>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <description>Olá, tudo bem!
+Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
+Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.
+Vou lhe demostrar que não precisamos de nada disso para realizar essa tarefa!
+O que é query String? É parte da URL, onde contém dados sendo transmitidos.
+Exemplo: 1 http://meusite.com.br/produto?chave=valor&amp;amp;outraChave=outroValor Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ajax on Diego Brocanelli</title>
+    <link>http://example.org/tags/ajax/</link>
+    <description>Recent content in ajax on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 30 Apr 2018 10:59:26 +0000</lastBuildDate><atom:link href="http://example.org/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Realizando uma requisição AJAX sem framework Javascript</title>
+      <link>http://example.org/javascript/realizando-um-request-ajax-sem-framework-javascript/</link>
+      <pubDate>Mon, 30 Apr 2018 10:59:26 +0000</pubDate>
+      
+      <guid>http://example.org/javascript/realizando-um-request-ajax-sem-framework-javascript/</guid>
+      <description>Olá, tudo bem?!
+Realizar uma requisição AJAX não precisa ser uma coisa de outro mundo, muito pelo contrário é algo bem comum e amplamente utilizado.
+Normalmente é realizado a implementação fazendo uso de alguma biblioteca Javascript.
+Neste post irei demonstrar de forma simples uma requisição AJAX para a API SWAPI (Star Wars API) e consumir seu retorno na página HTML.
+Crie um arquivo HTML com o nome ajax-javascript.html, dentro do mesmo insira a seguinte estrutura de código.</description>
+    </item>
+    
+  </channel>
+</rss>

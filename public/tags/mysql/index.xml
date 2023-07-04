@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mysql on Diego Brocanelli</title>
+    <link>http://example.org/tags/mysql/</link>
+    <description>Recent content in mysql on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="http://example.org/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
+      <link>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
+      
+      <guid>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <description>Olá, tudo bem?!
+O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
+Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
+    </item>
+    
+    <item>
+      <title>Gerando QR Codes com PHP &#43; MySQL &#43; PHP QR Code</title>
+      <link>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</link>
+      <pubDate>Sun, 14 Jan 2018 12:14:37 +0000</pubDate>
+      
+      <guid>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</guid>
+      <description>Olá, tudo bem!
+Recentemente fui abordado com o seguinte questionamento, “é possível gerar QR Codes com PHP e MySQL”.
+Minha resposta foi sim!
+Bom, dito isso, a pessoa ao qual me fez essa pergunta relatou que estava tentando, porém sem sucesso.
+A mesma está utilizando PHP + MySQL + PHP QR Code uma biblioteca que auxilia na construção das imagens.
+Para poder auxiliar da melhor maneira, separei o problema em partes, sendo:</description>
+    </item>
+    
+    <item>
+      <title>Comandos básicos do MySQL no terminal</title>
+      <link>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</link>
+      <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
+      
+      <guid>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</guid>
+      <description>Olá pessoal, tudo bem?!
+Não é nada fora do comum que nós desenvolvedores tenhamos que manipular/modificar/criar bancos de dados, com certeza isso é o pesadelo de qualquer DBA. Particularmente gosto de trabalhar com front, back e banco de dados pois isso me permite a ter acesso a conteúdos fantásticos aprendendo coisas novas sempre.
+Como podemos manipular o banco de dados? Bom, particularmente para atividades corriqueira utilizo o terminal, sim o terminal, é simples e rápido.</description>
+    </item>
+    
+  </channel>
+</rss>

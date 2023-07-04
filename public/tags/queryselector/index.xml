@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>queryselector on Diego Brocanelli</title>
+    <link>http://example.org/tags/queryselector/</link>
+    <description>Recent content in queryselector on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 28 Apr 2018 15:40:25 +0000</lastBuildDate><atom:link href="http://example.org/tags/queryselector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utilizando query Selector do Javascript</title>
+      <link>http://example.org/javascript/utilizando-queryselector-do-javascript/</link>
+      <pubDate>Sat, 28 Apr 2018 15:40:25 +0000</pubDate>
+      
+      <guid>http://example.org/javascript/utilizando-queryselector-do-javascript/</guid>
+      <description>Olá, tudo bem?!
+Quantas vezes utilizamos bibliotecas como JQuery para ações básicas com Javascript? Eu mesmo por diversas vezes, acabamos tomando essa ação por falta de conhecimento.
+Por exemplo, para selecionar algum elemento no HTML um exemplo prático seria utilizar o $(‘elemento’) do JQuery e a partir disso manipular o elemento. Entretanto, podemos fazer esta ação de forma nativa utilizando document.querySelector(‘elemento’).
+Vamos para um exemplo prático, abaixo temos um página HTML com um botão, no qual desejamos inserir um atributo data-value=”Valor do atributo”.</description>
+    </item>
+    
+  </channel>
+</rss>

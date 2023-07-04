@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>podcast on Diego Brocanelli</title>
+    <link>http://example.org/tags/podcast/</link>
+    <description>Recent content in podcast on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate><atom:link href="http://example.org/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Participação no Podcast Fechatag</title>
+      <link>http://example.org/video/participacao-no-podcast-fechatag/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      
+      <guid>http://example.org/video/participacao-no-podcast-fechatag/</guid>
+      <description>Olá, tudo bem?
+Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
+Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
+Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos.</description>
+    </item>
+    
+    <item>
+      <title>PHP Do Jeito Certo: Episódio VI – O Retorno do PODCAST</title>
+      <link>http://example.org/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</link>
+      <pubDate>Fri, 30 Sep 2016 00:43:18 +0000</pubDate>
+      
+      <guid>http://example.org/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</guid>
+      <description>Olá pessoal tudo bem?!
+Após um tempo sem novos episódios lançamos mais um episódio do PHP Do Jeito Certo, um podcast que desde 2013 junto com meus amigos Davi, Jack e Marcelo tocamos e gostamos muito de fazer.
+Neste episódio, falamos o que se decorreu desde o último episódio gravado, e o que estamos envolvidos atualmente. Espero que apreciem, e acompanhem pois lançaremos mais episódios conforme o tempo nos permitir.</description>
+    </item>
+    
+  </channel>
+</rss>

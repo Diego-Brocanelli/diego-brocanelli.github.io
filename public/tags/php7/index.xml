@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>php7 on Diego Brocanelli</title>
+    <link>http://example.org/tags/php7/</link>
+    <description>Recent content in php7 on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 22 Mar 2016 04:03:26 +0000</lastBuildDate><atom:link href="http://example.org/tags/php7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP 7 – Scalar Type</title>
+      <link>http://example.org/php/php-7-scalar-type/</link>
+      <pubDate>Tue, 22 Mar 2016 04:03:26 +0000</pubDate>
+      
+      <guid>http://example.org/php/php-7-scalar-type/</guid>
+      <description>Como bem sabemos o PHP tem uma tipagem fraca, e ele continua com esta característica. Porem na nova versão PHP 7 lançada dia 03/12/2015, trazendo novos tipos para o Scalar Type declarations.
+Os novos tipos implementados são:
+int; float; string; bool. Temos dois tipos de declaração, a coercive ( sendo default) e a strict (rigorosa), para acessar a strict é necessário informar no incio do arquivo PHP. Para isso devemos utilizar a função declare() para definir diretivas de execução para um bloco de código.</description>
+    </item>
+    
+  </channel>
+</rss>

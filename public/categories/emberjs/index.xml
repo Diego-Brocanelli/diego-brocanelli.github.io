@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>emberjs on Diego Brocanelli</title>
+    <link>http://example.org/categories/emberjs/</link>
+    <description>Recent content in emberjs on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 04 May 2017 14:55:09 +0000</lastBuildDate><atom:link href="http://example.org/categories/emberjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hhbr : 09 – Ember.js: Por que você ainda não está usando? (vídeo)</title>
+      <link>http://example.org/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
+      <pubDate>Thu, 04 May 2017 14:55:09 +0000</pubDate>
+      
+      <guid>http://example.org/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
+      <description>Olá, tudo bem?!
+É com alegria que apresento o vídeo da nona edição do canal hhbr e nesta edição tivemos a honra de prestigiar uma super palestra do grande Danilo Vaz, nesta edição foi abordado o tema “Ember.js: Por que você ainda não está usando?”, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade.</description>
+    </item>
+    
+  </channel>
+</rss>

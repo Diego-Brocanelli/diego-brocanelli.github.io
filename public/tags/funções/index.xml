@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>funções on Diego Brocanelli</title>
+    <link>http://example.org/tags/fun%C3%A7%C3%B5es/</link>
+    <description>Recent content in funções on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate><atom:link href="http://example.org/tags/fun%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Funções nativas PHP – str_getcsv</title>
+      <link>http://example.org/php/funcoes-nativas-php-str_getcsv/</link>
+      <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
+      
+      <guid>http://example.org/php/funcoes-nativas-php-str_getcsv/</guid>
+      <description>Olá!
+PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.
+Uma dessas funções é a str_getcsv, responsável por ler um arquivo csv e converter seus valores em um array.
+Versões do PHP suportadas: PHP 5 &amp;gt;= 5.3.0 e PHP 7
+Assinatura da função: 1 str_getcsv ( string $input [, string $delimiter = &amp;#34;,&amp;#34; [, string $enclosure = &amp;#39;&amp;#34;&amp;#39; [, string $escape = &amp;#34;\\&amp;#34; ]]] ) Retorno da função: array</description>
+    </item>
+    
+    <item>
+      <title>PHP e seu vasto arsenal de funções nativas</title>
+      <link>http://example.org/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/</link>
+      <pubDate>Thu, 11 Feb 2016 00:59:12 +0000</pubDate>
+      
+      <guid>http://example.org/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/</guid>
+      <description>Fala pessoal tudo certinho.
+Todos sabemos da grande capacidade e poder que o PHP dispõem para o desenvolvimento web, porem o que muitos deixam escapar é sua vasta lista de funções nativas que ele fornece.
+Com isso segue abaixo uma pequena demonstração de funções que podem auxiliar e muito no dia a dia.
+filter_input Esta função irá lhe ajudar pra abolir da sua vida as chamadas diretas as variáveis $_POST e $_GET e seus derivados, pois com esta função podemos obter uma variável específica e realizar um tratamento automaticamente.</description>
+    </item>
+    
+  </channel>
+</rss>

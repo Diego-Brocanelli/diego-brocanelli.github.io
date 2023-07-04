@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>7.4 on Diego Brocanelli</title>
+    <link>http://example.org/tags/7.4/</link>
+    <description>Recent content in 7.4 on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 05 May 2019 11:41:17 +0000</lastBuildDate><atom:link href="http://example.org/tags/7.4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Novidades do PHP 7.4</title>
+      <link>http://example.org/php/novidades-do-php-7-4/</link>
+      <pubDate>Sun, 05 May 2019 11:41:17 +0000</pubDate>
+      
+      <guid>http://example.org/php/novidades-do-php-7-4/</guid>
+      <description>Olá, tudo bem?!
+Com previsão de lançamento para dezembro de 2019, o PHP 7.4 está com novidades muito legais e que temos que estar antenados e acompanhando essa evolução, separei abaixo algumas novas funcionalidades que acredito serem bem bacanas.
+Preloading rfc Preloading é uma adição incrível ao core do PHP, o que pode resultar em uma melhora em seu desempenho.
+Atualmente os arquivos PHP são carregados e recompilados a cada requisição.</description>
+    </item>
+    
+  </channel>
+</rss>

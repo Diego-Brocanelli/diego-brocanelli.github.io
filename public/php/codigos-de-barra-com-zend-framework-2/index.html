@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Códigos de barra com Zend Framework 2 | Diego Brocanelli</title>
+<meta name="keywords" content="code bar, código de barra, php, zend framework">
+<meta name="description" content="É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.
+O Zend Framework 2 dispõem de um poderoso componente Zenb\Barcode\Barcode que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode.">
+<meta name="author" content="Diego Brocanelli">
+<link rel="canonical" href="http://example.org/php/codigos-de-barra-com-zend-framework-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8df1fad3ca6512801a68ca87e5acd038fb2c764920d0c97b45c11e7365b2c360.css" integrity="sha256-jfH608plEoAaaMqH5azQOPssdkkg0Ml7RcEec2Wyw2A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp; / &nbsp;<a href="http://example.org/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Códigos de barra com Zend Framework 2
+    </h1>
+    <div class="post-meta"><span title='2016-01-22 20:57:53 +0000 UTC'>2016-01-22</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Diego Brocanelli
+
+</div>
+  </header> 
+  <div class="post-content"><p>É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.</p>
+<p>O Zend Framework 2 dispõem de um poderoso componente <a href="http://framework.zend.com/manual/current/en/modules/zend.barcode.creation.html">Zenb\Barcode\Barcode</a> que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode. Sendo assim deve-se levar em consideração o tipo de código de barra que deseja criar em sua aplicação.</p>
+<p>Para implementarmos um exemplo prático vou utilizar o <a href="https://github.com/zendframework/ZendSkeletonApplication">skeleton appliation</a> default do <em>Zf2</em>. Vou subentender que você já conhece o processo de clone do skeleton e instalação.</p>
+<p>Caso não conheça:</p>
+<ul>
+<li><a href="https://git-scm.com/book/pt-br/v1/Git-Essencial-Obtendo-um-Reposit%C3%B3rio-Git#Clonando-um-Reposit%C3%B3rio-Existente">Clonar repositório do gihhub</a></li>
+<li><a href="https://getcomposer.org/doc/03-cli.md#install">Instalação de pacotes pelo composer</a></li>
+</ul>
+<p>Para utilizar o componente Zend\Barcode\Barcode a <!-- raw HTML omitted -->extensão GD deve estar habilitado</p>
+<p>Primeiro passo vamos limpar a view padrão index, para renderizarmos nosso barcode.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/1_view_index.png#center" alt="Local arquivo view padrão"  />
+</p>
+<p>Vamos implementar nossa estrutura no arquivo <strong>Application\Controller\IndexController</strong>.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/2_index_controller.png#center" alt="Local do arquivo do controle"  />
+</p>
+<p>Ao abrir o arquivo <strong>IndexController</strong> ele estará desta maneira.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/3_indexcontroller.png#center" alt="Método indexController no controler"  />
+</p>
+<p>Primeiro passo vamos importar o componente para o nosso controller controlle.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/4_import_barcode.png#center" alt="Importe do componente Barcode"  />
+</p>
+<p>O componente <strong>Zend\Barcode\Barcode</strong>, é uma classe abstrata ou seja não pode ser instanciada, com isso vamos fazer uso direto em nosso método.</p>
+<p>O componente <strong>Barcode</strong> é composto por 5 parâmetros sendo eles:</p>
+<ul>
+<li>
+<p>Primeiro parâmetro (required) nome do tipo do código de barras, estando disponível:</p>
+<ul>
+<li>codabar</li>
+<li>codabar</li>
+<li>code128</li>
+<li>code25</li>
+<li>code25interleaved</li>
+<li>code39</li>
+<li>ean13</li>
+<li>ean2</li>
+<li>ean5</li>
+<li>ean8</li>
+<li>error</li>
+<li>identcode</li>
+<li>itf14</li>
+<li>leitcode</li>
+<li>planet</li>
+<li>postnet</li>
+<li>royalmail</li>
+<li>upca</li>
+<li>upce</li>
+</ul>
+</li>
+<li>
+<p>Segundo parâmetro (required) nome do render, estando disponíveis</p>
+<ul>
+<li>image</li>
+<li>PDF (necessita do ZendPDF)</li>
+<li>svg</li>
+</ul>
+</li>
+<li>
+<p>Terceiro parâmetro (optional) parâmetros do barcode.</p>
+</li>
+<li>
+<p>Quarto parâmetro (optional) parâmetros do render.</p>
+</li>
+<li>
+<p>Quinto parâmetro (optional) render Errors, default TRUE para exibir.</p>
+</li>
+</ul>
+<p>Vamos criar uma variável com para armazenar as opçẽos do barcode.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/5_barcode_opt.png#center" alt="Códgio exemplo dos parâmetros"  />
+</p>
+<p>O texto que estamos passando como parâmetro, será o mesmo impresso no código de barras. Ou seja o valor desejado para compor o códido de barras deve ser informado conforme o tipo de barcode que será implementado.</p>
+<p>Vamos criar uma variável para passar os parâmetros do render, podemos passar um array vazio, pois como vimos anteriormente ele é um parâmetro opcional, ou podemos por exempl definir o tipo de imagem que desejamos que o barcode seja criado.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/6_renderOpt.png#center" alt="Códgio exemplo dos parâmetros do render"  />
+</p>
+<p>Vamos criar uma variável chamada $barcodeImg, e armazenarmos a estrutura que irá criar o nosso barcode. Como primeiro parâmtro eu defini que será utilizado o tipo de barcode chamado <em>“codabar”</em>__, e o segundo parâmetro eu determino que dever ser criado no formato _“image”</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/7_barcodeImg.png#center" alt="Códgio exemplo dos parâmetros do render código de barras"  />
+</p>
+<p>Agora basta passar a variável $barcodeImg para nossa ViewModel.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/8_param_view_barcode.png#center" alt="Inserir Barcode no ViewModel"  />
+</p>
+<p>Vamos incluir a estrutura pra exibir o nosso código de barras na view index.phtml.</p>
+<p>Com isso teremos como retorno uma imagem no formato “jpeg” do nosso <em>barcode</em>.</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/10_result_barcode.png#center" alt="Resultado implementação código de barras"  />
+</p>
+<p>Viram como é extremamente fácil criar um <em>barcode</em> com o componente <em>Zend\Barcode\Barcode</em>. Claro que nossa implementação foi grosseira e construímos tudo no nosso <em>controller</em>, porem agora que sabemos como implementar basta construir toda sua regra de negócio e somente consumir o resultado no controller.</p>
+<p>Abaixo temos alguns outros exemplos de <em>barcode</em>.</p>
+<p>Code25</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/12_code25.png#center" alt="Resultado implementação código de barras code25"  />
+</p>
+<p>Code25interleaved</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/13_code25interleaved.png#center" alt="Resultado implementação código de barras Code25interleaved"  />
+</p>
+<p>code128</p>
+<p><img loading="lazy" src="/wp-content/uploads/2016/01/14_code128.png#center" alt="Resultado implementação código de barras code128"  />
+</p>
+<p>Foi criado um <a href="https://github.com/Diego-Brocanelli/zf2-barcode">repositório no Github</a> contendo os códigos implementados neste post.</p>
+<p>Bom é isso ai pessoal espero que tenham gostado deste tutorial de como construir <em>barcodes</em> com o Zend Framework 2, até breve!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://example.org/tags/code-bar/">code bar</a></li>
+      <li><a href="http://example.org/tags/c%C3%B3digo-de-barra/">código de barra</a></li>
+      <li><a href="http://example.org/tags/php/">php</a></li>
+      <li><a href="http://example.org/tags/zend-framework/">zend framework</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://example.org/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/">
+    <span class="title"> &lt;&lt; </span>
+    <br>
+    <span>PHP e seu vasto arsenal de funções nativas</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Códigos de barra com Zend Framework 2 on twitter"
+        href="https://twitter.com/intent/tweet/?text=C%c3%b3digos%20de%20barra%20com%20Zend%20Framework%202&amp;url=http%3a%2f%2fexample.org%2fphp%2fcodigos-de-barra-com-zend-framework-2%2f&amp;hashtags=codebar%2cc%c3%b3digodebarra%2cphp%2czendframework">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Códigos de barra com Zend Framework 2 on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fexample.org%2fphp%2fcodigos-de-barra-com-zend-framework-2%2f&amp;title=C%c3%b3digos%20de%20barra%20com%20Zend%20Framework%202&amp;summary=C%c3%b3digos%20de%20barra%20com%20Zend%20Framework%202&amp;source=http%3a%2f%2fexample.org%2fphp%2fcodigos-de-barra-com-zend-framework-2%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

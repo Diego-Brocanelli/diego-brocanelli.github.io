@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>wsl on Diego Brocanelli</title>
+    <link>http://example.org/tags/wsl/</link>
+    <description>Recent content in wsl on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="http://example.org/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como programador, sou obrigado a usar Linux?</title>
+      <link>http://example.org/linux/como-programador-sou-obrigado-a-usar-linux/</link>
+      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
+      
+      <guid>http://example.org/linux/como-programador-sou-obrigado-a-usar-linux/</guid>
+      <description>Gostaria de bater um papo sobre uma pergunta bem interessante.
+“Como programador, sou obrigado a usar Linux?“
+Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉
+Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).
+Para determinadas atividades que deseja desempenhar, de fato o Windows se mostrará mais prático como jogos, alguns softwares como Photohop e etc.</description>
+    </item>
+    
+  </channel>
+</rss>

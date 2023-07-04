@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>php on Diego Brocanelli</title>
+    <link>http://example.org/tags/php/</link>
+    <description>Recent content in php on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate><atom:link href="http://example.org/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Funções nativas PHP – str_getcsv</title>
+      <link>http://example.org/php/funcoes-nativas-php-str_getcsv/</link>
+      <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
+      
+      <guid>http://example.org/php/funcoes-nativas-php-str_getcsv/</guid>
+      <description>Olá!
+PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.
+Uma dessas funções é a str_getcsv, responsável por ler um arquivo csv e converter seus valores em um array.
+Versões do PHP suportadas: PHP 5 &amp;gt;= 5.3.0 e PHP 7
+Assinatura da função: 1 str_getcsv ( string $input [, string $delimiter = &amp;#34;,&amp;#34; [, string $enclosure = &amp;#39;&amp;#34;&amp;#39; [, string $escape = &amp;#34;\\&amp;#34; ]]] ) Retorno da função: array</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
+      <link>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
+Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
+      <link>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <description>Olá, tudo bem?!
+Nesta décima sexta edição da comunidade hhbr trazemos uma grande palestra com o tema “Contribuindo com o PHP e o PHP TestFest 2017”, ministrado pelo grande Rogerio Prado de Jesus.
+Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Palestrante: Rogerio Prado de Jesus Site: https://rogeriopradoj.com/ Twitter: https://twitter.com/RogerioPradoJ GitHub: https://github.com/RogerioPradoJ Comunidade: https://t.me/PHPTestFestBrasil Link dos slides: https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16 Links Comentados https://phptestfest.org/&amp;gt; https://3v4l.org/ http://pensandonaweb.com.br/ https://externals.io/ https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ https://qa.</description>
+    </item>
+    
+    <item>
+      <title>Novidades do PHP 7.4</title>
+      <link>http://example.org/php/novidades-do-php-7-4/</link>
+      <pubDate>Sun, 05 May 2019 11:41:17 +0000</pubDate>
+      
+      <guid>http://example.org/php/novidades-do-php-7-4/</guid>
+      <description>Olá, tudo bem?!
+Com previsão de lançamento para dezembro de 2019, o PHP 7.4 está com novidades muito legais e que temos que estar antenados e acompanhando essa evolução, separei abaixo algumas novas funcionalidades que acredito serem bem bacanas.
+Preloading rfc Preloading é uma adição incrível ao core do PHP, o que pode resultar em uma melhora em seu desempenho.
+Atualmente os arquivos PHP são carregados e recompilados a cada requisição.</description>
+    </item>
+    
+    <item>
+      <title>Refactoring – Replace temp with query</title>
+      <link>http://example.org/php/refactoring-replace-temp-with-query/</link>
+      <pubDate>Mon, 17 Sep 2018 12:37:37 +0000</pubDate>
+      
+      <guid>http://example.org/php/refactoring-replace-temp-with-query/</guid>
+      <description>Olá, tubo bem?!
+Frequentemente vemos o uso de variáveis locais realizarem operações e/ou ações.
+1 2 3 4 5 6 7 8 9 10 &amp;lt;?php $basePrice = $this-&amp;gt;quantity * $this-&amp;gt;itemPrice; if ($basePrice &amp;gt; 1000){ return $basePrice * 0.95; } else{ return $basePrice * 0.98; } Por que devemos refatorar? Abrirá portas para utilizarmos o Extract Methods. Podemos reutilizar a mesma expressão em outras partes do sistema. Facilitamos as modificações/implementações de regras de negócio.</description>
+    </item>
+    
+    <item>
+      <title>Tratamento de HTML dentro de uma string com PHP</title>
+      <link>http://example.org/php/tratamento-de-html-dentro-de-uma-string-com-php/</link>
+      <pubDate>Thu, 03 May 2018 20:10:54 +0000</pubDate>
+      
+      <guid>http://example.org/php/tratamento-de-html-dentro-de-uma-string-com-php/</guid>
+      <description>Olá, tudo bem?!
+Armazenar dados html ou até mesmo manipular é importante, pois devemos nos preocupar com a segurança e também com a integridade dos dados.
+Há momentos que desejamos armazenar a string HTML, um exemplo é quando temos um textarea que contem a estrutura similar ao word.
+Devemos tratar os dados para serem armazenados ou exibidos, para nossa felicidade o PHP traz um recurso nativo para nos auxiliar, a função htmlentities, onde irá converter os caracteres aplicáveis em entidades HTML, vamos para um exemplo prático:</description>
+    </item>
+    
+    <item>
+      <title>Validando os dados do formulário com Zend-Validator</title>
+      <link>http://example.org/php/validando-os-dados-do-formulario-com-zend-validator/</link>
+      <pubDate>Sun, 22 Apr 2018 12:45:21 +0000</pubDate>
+      
+      <guid>http://example.org/php/validando-os-dados-do-formulario-com-zend-validator/</guid>
+      <description>Olá, tudo bem?!
+Todas aplicações que desenvolvemos necessita de entradas e saídas de dados, isso é muito comum, porém cada desenvolvedor acaba implementando a “sua solução” para esse problema. Definitivamente essa não é uma boa prática por diversos motivos.
+O mais recomendado é a utilização de componentes criados pela comunidade, porque devo usar um componente? Simples, irei listar algumas das principais vantagens, sendo:
+Grande volume de contribuidores. Maior correção de bugs.</description>
+    </item>
+    
+    <item>
+      <title>Composer – Automatizando tarefas com Scripts</title>
+      <link>http://example.org/php/composer-automatizando-tarefas-com-scripts/</link>
+      <pubDate>Sun, 21 Jan 2018 15:36:22 +0000</pubDate>
+      
+      <guid>http://example.org/php/composer-automatizando-tarefas-com-scripts/</guid>
+      <description>Olá, tudo bem!
+Que o Composer é uma ferramenta sensacional isso nós já sabemos, porém o que poucos sabem é que ele dispõem de recursos de execução de scripts para nos auxiliar na automatização de tarefas.
+Acredite, após conhecer esse recurso você vai adotá-lo em seu dia a dia, pois irá lhe economizar um bom tempo em seu dia a dia.
+O que é um script? Em uma tradução livre podemos encontrar a seguinte definição na documentação do composer.</description>
+    </item>
+    
+    <item>
+      <title>Gerando QR Codes com PHP &#43; MySQL &#43; PHP QR Code</title>
+      <link>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</link>
+      <pubDate>Sun, 14 Jan 2018 12:14:37 +0000</pubDate>
+      
+      <guid>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</guid>
+      <description>Olá, tudo bem!
+Recentemente fui abordado com o seguinte questionamento, “é possível gerar QR Codes com PHP e MySQL”.
+Minha resposta foi sim!
+Bom, dito isso, a pessoa ao qual me fez essa pergunta relatou que estava tentando, porém sem sucesso.
+A mesma está utilizando PHP + MySQL + PHP QR Code uma biblioteca que auxilia na construção das imagens.
+Para poder auxiliar da melhor maneira, separei o problema em partes, sendo:</description>
+    </item>
+    
+    <item>
+      <title>Como realizar parse da query string de forma simples com PHP</title>
+      <link>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</link>
+      <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
+      
+      <guid>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <description>Olá, tudo bem!
+Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
+Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.
+Vou lhe demostrar que não precisamos de nada disso para realizar essa tarefa!
+O que é query String? É parte da URL, onde contém dados sendo transmitidos.
+Exemplo: 1 http://meusite.com.br/produto?chave=valor&amp;amp;outraChave=outroValor Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘?</description>
+    </item>
+    
+  </channel>
+</rss>

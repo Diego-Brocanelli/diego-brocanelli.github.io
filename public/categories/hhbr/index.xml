@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hhbr on Diego Brocanelli</title>
+    <link>http://example.org/categories/hhbr/</link>
+    <description>Recent content in hhbr on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 05 Nov 2019 16:42:33 +0000</lastBuildDate><atom:link href="http://example.org/categories/hhbr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
+      <link>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <description>Olá, tudo bem?!
+Nesta edição de número 28 do hhbr tivemos uma mega palestra sobre Vue.js com o palestrante William Correa, que explanou em detalhes diversos pontos bacanas da renderização com Vue.
+Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: William Correa Twitter: @wilcorrea Github: @wilcorrea Links Comentado https://vuejs.org/ https://br.vuejs.org/ https://template-explorer.vuejs.org </description>
+    </item>
+    
+    <item>
+      <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
+      <link>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
+Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
+      <link>http://example.org/video/hhbr-26-ecossistema-javascript/</link>
+      <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-26-ecossistema-javascript/</guid>
+      <description>Olá!
+Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
+Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.
+Dados da palestra Tema: “Ecossistema javascript” Palestrante: Marco Bruno Twitter: @marcobrunobr Twitter: @collabcodetech Facebook: collabcode Youtube: collabcode Site: medium.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 24 – Um bate papo sobre TI (vídeo)</title>
+      <link>http://example.org/video/hhbr-24-um-bate-papo-sobre-ti/</link>
+      <pubDate>Tue, 05 Nov 2019 16:39:06 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-24-um-bate-papo-sobre-ti/</guid>
+      <description>Olá, tudo bem?!
+Nesta 24º edição da comunidade hhbr tivemos a oportunidade de bater um papo sobre “Um bate papo sobre TI” com o fantástico Roberto Achar e comigo, um super bate papo sobre TI seus pontos positivos, negativos, mercado etc e com a participação incrível da comunidade com muitas perguntas bacanas.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!
+Dados da palestra Tema: “Um bate papo sobre TI” Palestrante: Roberto Achar Site: https://showmethecode.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 23 – Como aprender a aprender (vídeo)</title>
+      <link>http://example.org/hhbr/hhbr-23-como-aprender-a-aprender/</link>
+      <pubDate>Tue, 05 Nov 2019 16:38:16 +0000</pubDate>
+      
+      <guid>http://example.org/hhbr/hhbr-23-como-aprender-a-aprender/</guid>
+      <description>Olá, tudo bem?!
+Nesta 23º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Como aprender a aprender” com a fantástica Carol Soare, um tema muito em alta na comunidade de TI, pois a prática do estudo é uma constante no dia a dia do profissional de TI, aumentar a produtividade e a qualidade fará total diferença em nossas carreiras.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 20 – Faculdade na área de TI (vídeo)</title>
+      <link>http://example.org/video/hhbr-20-faculdade-na-area-de-ti/</link>
+      <pubDate>Tue, 05 Nov 2019 16:35:46 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-20-faculdade-na-area-de-ti/</guid>
+      <description>Olá, tudo bem?!
+Nesta 20º edição da comunidade hhbr pudemos apreciar um fantástico bate papo sobre faculdade na área da TI.
+Debatemos sobre os pontos positivos, negativos, oportunidades, desafios e respondemos perguntas dos participantes, para que assim de alguma maneira podermos auxiliar quem está na dúvida sobre fazer ou não uma faculdade.
+Dados da palestra Participantes: Vinícius Martins Site: http://viniciusmsantos.github.io Twitter: @vinimarsan Github: @viniciusmsantos Caio Andrade de Sousa Twitter: @CaioAndCafu Linkedin: https://www.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 19 – Soft skills para devs (vídeo)</title>
+      <link>http://example.org/video/hhbr-19-soft-skills-para-devs-video/</link>
+      <pubDate>Tue, 05 Nov 2019 16:34:40 +0000</pubDate>
+      
+      <guid>http://example.org/video/hhbr-19-soft-skills-para-devs-video/</guid>
+      <description>Olá, tudo bem?!
+Nesta 19º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Soft skills para devs” ministrado pelo grande Leonam Pereira Dias.
+Um conteúdo fantástico que nos faz refletir sobre muito de nossa postura, a adoção das dicas e técnicas que o palestrante nos brindou na palestra com certeza agrega muito valor tento em nossa vida pessoal quanto na profissional.
+Dados da palestra Tema: “Soft skills para devs” Palestrante: Leonam Pereira Dias Email: leonam.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 18 – Docker &#43; Kubernetes &#43; Minikube (vídeo)</title>
+      <link>http://example.org/docker/hhbr-18-docker-kubernetes-minikube/</link>
+      <pubDate>Tue, 05 Nov 2019 16:33:20 +0000</pubDate>
+      
+      <guid>http://example.org/docker/hhbr-18-docker-kubernetes-minikube/</guid>
+      <description>Olá, tudo bem?!
+Nesta 18º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Docker + Kubernetes + Minikube” ministrado pelo grande Roberto Achar.
+Palestra com conteúdo prático e ótimos exemplos e dicas somados a grande didática do palestrante que consegue prender nossa atenção do início ao fim da Palestra. Sem mais delongas, abaixo temos o vídeo com todo do conteúdo.
+Dados da palestra Tema: “Docker + Kubernetes + Minikube” Palestrante: Roberto Achar Site: https://showmethecode.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
+      <link>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <description>Olá, tudo bem?!
+Nesta décima sexta edição da comunidade hhbr trazemos uma grande palestra com o tema “Contribuindo com o PHP e o PHP TestFest 2017”, ministrado pelo grande Rogerio Prado de Jesus.
+Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Palestrante: Rogerio Prado de Jesus Site: https://rogeriopradoj.com/ Twitter: https://twitter.com/RogerioPradoJ GitHub: https://github.com/RogerioPradoJ Comunidade: https://t.me/PHPTestFestBrasil Link dos slides: https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16 Links Comentados https://phptestfest.org/&amp;gt; https://3v4l.org/ http://pensandonaweb.com.br/ https://externals.io/ https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ https://qa.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 15 – SPL e Estruturas de Dados (vídeo)</title>
+      <link>http://example.org/php/hhbr-15-spl-e-estruturas-de-dados/</link>
+      <pubDate>Thu, 26 Oct 2017 10:47:45 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-15-spl-e-estruturas-de-dados/</guid>
+      <description>Olá, tudo bem?!
+Rolou a 15 edição do hhbr, nesta edição trago para vocês uma palestra super bacana apresentada pelo mestre Davi Marcondes sobre Estrutura de dados com SPL no PHP.
+Uma palestra recheada de muito conteúdo e exemplos práticos das estruturas de dados implementadas utilizando SPL.
+Você que quer aprender a utilizar de forma correta e aumentar a performance dos seus algoritmos, então aperte o play e aproveite o mega conteúdo 🙂</description>
+    </item>
+    
+  </channel>
+</rss>

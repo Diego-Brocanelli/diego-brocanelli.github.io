@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Senhas mais seguras com Zend-Crypt | Diego Brocanelli</title>
+<meta name="keywords" content="password, php, senhas, zend crypt, zf2">
+<meta name="description" content="Olá pessoal, tudo bem?!
+Hoje em dia não consigo listar um sistema se quer que eu tenha trabalhado sem um mecanismo de login, pode ser com e-mail &#43; senha, usuário &#43; senha porem esse é um recurso que todos os sistema utilizam. E decorrente a isso aparece a grande pergunta, como tratar a senha?
+Sim, devemos tratar a senha e não devemos nunca, vou repetir, NUNCA devemos armazenar a senha em texto puro no banco de dados ou em qualquer outro tipo de armazenamento.">
+<meta name="author" content="Diego Brocanelli">
+<link rel="canonical" href="http://example.org/php/senhas-mais-seguras-com-zend-crypt/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8df1fad3ca6512801a68ca87e5acd038fb2c764920d0c97b45c11e7365b2c360.css" integrity="sha256-jfH608plEoAaaMqH5azQOPssdkkg0Ml7RcEec2Wyw2A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp; / &nbsp;<a href="http://example.org/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Senhas mais seguras com Zend-Crypt
+    </h1>
+    <div class="post-meta"><span title='2016-12-28 17:37:47 +0000 UTC'>2016-12-28</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli
+
+</div>
+  </header> 
+  <div class="post-content"><p>Olá pessoal, tudo bem?!</p>
+<p>Hoje em dia não consigo listar um sistema se quer que eu tenha trabalhado sem um mecanismo de login, pode ser com e-mail + senha, usuário + senha porem esse é um recurso que todos os sistema utilizam. E decorrente a isso aparece a grande pergunta, como tratar a senha?</p>
+<p>Sim, devemos tratar a senha e não devemos nunca, vou repetir, NUNCA devemos armazenar a senha em texto puro no banco de dados ou em qualquer outro tipo de armazenamento. Isso é uma das regras básicas de segurança em aplicações tanto desktop quanto para web.</p>
+<p>Porém, como vamos tratar esta informação que já sabemos ser bem valiosa?</p>
+<p>Eu gosto muito do componente Zend-Crypt, uma poderosa ferramenta para gerar hash.</p>
+<p>Este componente é modular, podendo ser utilizado dentro da estrutura do Zend Framework, ou de forma isolada, para facilitar sua compreensão, vamos utilizá-lo de forma isolada, porem como dito seu uso não difere no ZF.</p>
+<p>Para iniciar, devemos criar nossa estrutura base do projeto, seguindo o modelo descrito abaixo.</p>
+<ul>
+<li>zend_crypt_post
+<ul>
+<li>index.php</li>
+</ul>
+</li>
+</ul>
+<p>Sim, nossa estrutura inicial é basicamente um único arquivo 🙂</p>
+<p>Vamos dar inicio ao desenvolvimento, agora devemos instalar o componente e será utilizado o composer para isso, acesse a raiz do projeto e execute o comando abaixo.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require zendframework/zend-crypt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Após o processo de instalação ser concluído, a estrutura do projeto deve ficar semelhante ao demonstrado abaixo.</p>
+<ul>
+<li>zend_crypt_post
+<ul>
+<li>vendor</li>
+<li>composer.json</li>
+<li>composer.lock</li>
+<li>index.php</li>
+</ul>
+</li>
+</ul>
+<p>Estrutura do projeto finalizado, vamos para a parte divertida, mão na massa!</p>
+<p>Abra o arquivo index.php, e importe o autoload.php, conforme demonstrado abaixo.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agora devemos declarar o uso do recurso Bcrypt.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Zend\Crypt\Password\Bcrypt</span>;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Vamos utilizar o bcrypt, por ser considerado uma das formas mais seguras de tratamento de senhas, caso você tenha o hábito de utilizar md5 ou sha espero que no final deste post eu o tenha convencido de não mais utilizar estes dois métodos e passe a utilizar o bcrypt, para melhor segurança de suas senhas 🙂</p>
+<p>Para gerar nosso hash de senha, basta utilizar o método create();</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Zend\Crypt\Password\Bcrypt</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;minha primeira senha&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bcrypt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Bcrypt</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">create</span>($password);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como resultado teremos uma string contendo 60 caracteres:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>$2y$14$zbK.VtsYCUwDgyPF6snCmuQUzUlR5Wtw9P0d3qGS19EfiR9Otv1da
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Viram como é simples, e não para por aí, podemos utilziar mais dois recursos bacanas para potencializar a segurança da nossa senha, sendo elas:</p>
+<ul>
+<li>salt
+<ul>
+<li>Conceito utilizado não somente no bcrypt, porem para implementar uma maior segurança a seu hash, tendo em vista que o salt fica alocado internamente no sistema.</li>
+</ul>
+</li>
+<li>cost
+<ul>
+<li>O bcrypt usa o sistema de cost “custo”, para especificar o número de ciclos a serem utilizados pelo algoritmo no processo de criação do hash. É representado por um valor inteiro entre 4 à 31, tendo como valor padrão 10, salientando que quanto maior seu valor mais ciclos serão utilizados e consequentemente mais tempo levará para criar o hash!</li>
+</ul>
+</li>
+</ul>
+<p>Vamos implementar essas melhorias.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Zend\Crypt\Password\Bcrypt</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;minha primeira senha&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bcrypt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Bcrypt</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$salt   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;AVsr@341234$rxffssaasdf&amp;&#39;</span>;
+</span></span><span style="display:flex;"><span>$bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setSalt</span>($salt);
+</span></span><span style="display:flex;"><span>$bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setCost</span>(<span style="color:#ae81ff">14</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$securePassword <span style="color:#f92672">=</span> $bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">create</span>($password);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como resultado teremos a seguinte string:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>$2y$14$QVZzckAzNDEyMzQkcnhmZeMkI8R2iGrStlP9EqX6GgXpxFm2KQ11i
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como observado, o hash gerado utilizando <em>salt</em> e <em>cost</em> é diferente da primeira, sendo que na segunda opção utilizamos um <em>cost</em> maior de 14 ciclos ao invés do custo padrão 10.</p>
+<p>Para finalizar o ciclo, vamos validar a senha em texto puro com o hash gerado, e para isso vamos utilizar o método vefify();</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Zend\Crypt\Password\Bcrypt</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;minha primeira senha&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bcrypt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Bcrypt</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$salt   <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;AVsr@341234$rxffssaasdf&amp;&#39;</span>;
+</span></span><span style="display:flex;"><span>$bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setSalt</span>($salt);
+</span></span><span style="display:flex;"><span>$bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setCost</span>(<span style="color:#ae81ff">14</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$securePassword <span style="color:#f92672">=</span> $bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">create</span>($password);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$verify <span style="color:#f92672">=</span> $bcrypt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">verify</span>($password, $securePassword);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Nesta comparação o resultado será <em>true</em>, porem caso os valores não correspondam o mesmo retornará <em>false</em>.</p>
+<p>Como observado, o uso do Bcrypt é simples e agiliza o processo de gerenciamento de hash para as senhas, normalmente gosto de trabalhar com e-mail e senha no formulário de login, pois como o e-mail deve ser único evita conflitos.</p>
+<p>Os exemplos acima são bem básicos, porem muito úteis no dia a dia, podemos expandir o horizonte de uso como por exemplo, utilizar em API, onde o client realiza a request e o server (contendo o bcrypt) iria realizar todo o processo de verificação ou de criação de hash. Com isso podemos ter uma aplicação em nodejs que realiza o processo de login em uma API, com isso, independente do sistema, o processo de autenticação será centralizado em uma API e consumida por diversos clients.</p>
+<p>Deixe sua imaginação correr e abuse do recurso, que como visto e muito poderoso.</p>
+<p>Caso tenham interesse, segue o link para consulta da <a href="https://docs.zendframework.com/zend-crypt/">documentação oficial do Zend-crypt</a>.</p>
+<p>Qualquer dúvida ou sugestão deixe nos comentários, vamos discutir sobre o tema e com isso aprender ainda mais!</p>
+<p>Espero que tenham apreciado, até a próxima 🙂</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://example.org/tags/password/">password</a></li>
+      <li><a href="http://example.org/tags/php/">php</a></li>
+      <li><a href="http://example.org/tags/senhas/">senhas</a></li>
+      <li><a href="http://example.org/tags/zend-crypt/">zend crypt</a></li>
+      <li><a href="http://example.org/tags/zf2/">zf2</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://example.org/video/criptografia-entendendo-o-https-video/">
+    <span class="title"> &lt;&lt; </span>
+    <br>
+    <span>hhbr : 06 – Criptografia: Entendendo o HTTPS (Vídeo)</span>
+  </a>
+  <a class="next" href="http://example.org/php/refatoracao-video/">
+    <span class="title"> >></span>
+    <br>
+    <span>hhbr : 05 – Refatoração (vídeo)</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Senhas mais seguras com Zend-Crypt on twitter"
+        href="https://twitter.com/intent/tweet/?text=Senhas%20mais%20seguras%20com%20Zend-Crypt&amp;url=http%3a%2f%2fexample.org%2fphp%2fsenhas-mais-seguras-com-zend-crypt%2f&amp;hashtags=password%2cphp%2csenhas%2czendcrypt%2czf2">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Senhas mais seguras com Zend-Crypt on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fexample.org%2fphp%2fsenhas-mais-seguras-com-zend-crypt%2f&amp;title=Senhas%20mais%20seguras%20com%20Zend-Crypt&amp;summary=Senhas%20mais%20seguras%20com%20Zend-Crypt&amp;source=http%3a%2f%2fexample.org%2fphp%2fsenhas-mais-seguras-com-zend-crypt%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

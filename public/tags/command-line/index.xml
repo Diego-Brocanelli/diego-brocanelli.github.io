@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>command line on Diego Brocanelli</title>
+    <link>http://example.org/tags/command-line/</link>
+    <description>Recent content in command line on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 21 Apr 2017 16:27:37 +0000</lastBuildDate><atom:link href="http://example.org/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comandos básicos do MySQL no terminal</title>
+      <link>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</link>
+      <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
+      
+      <guid>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</guid>
+      <description>Olá pessoal, tudo bem?!
+Não é nada fora do comum que nós desenvolvedores tenhamos que manipular/modificar/criar bancos de dados, com certeza isso é o pesadelo de qualquer DBA. Particularmente gosto de trabalhar com front, back e banco de dados pois isso me permite a ter acesso a conteúdos fantásticos aprendendo coisas novas sempre.
+Como podemos manipular o banco de dados? Bom, particularmente para atividades corriqueira utilizo o terminal, sim o terminal, é simples e rápido.</description>
+    </item>
+    
+  </channel>
+</rss>

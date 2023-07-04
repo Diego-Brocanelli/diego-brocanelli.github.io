@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Criando e baixando arquivos ZIP com PHP | Diego Brocanelli</title>
+<meta name="keywords" content="download, php, zip">
+<meta name="description" content="O PHP é uma linguagem fantástica e repleta de recursos que nos surpreende todos os dias.
+Não é a primeira (e não será a última) vez que me pedem para implementar um recurso para compactar arquivos de um diretório e fazer o seu download para o usuário.
+Com isso resolvi escrever um post para tentar auxiliar quem esteja necessitando de implementar um recurso similar.
+A estrutura do projeto de exemplo será:">
+<meta name="author" content="Diego Brocanelli">
+<link rel="canonical" href="http://example.org/php/criando-e-baixando-arquivos-zip-com-php/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8df1fad3ca6512801a68ca87e5acd038fb2c764920d0c97b45c11e7365b2c360.css" integrity="sha256-jfH608plEoAaaMqH5azQOPssdkkg0Ml7RcEec2Wyw2A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp; / &nbsp;<a href="http://example.org/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Criando e baixando arquivos ZIP com PHP
+    </h1>
+    <div class="post-meta"><span title='2016-08-25 01:52:19 +0000 UTC'>2016-08-25</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli
+
+</div>
+  </header> 
+  <div class="post-content"><p>O PHP é uma linguagem fantástica e repleta de recursos que nos surpreende todos os dias.</p>
+<p>Não é a primeira (e não será a última) vez que me pedem para implementar um recurso para compactar arquivos de um diretório e fazer o seu download para o usuário.</p>
+<p>Com isso resolvi escrever um post para tentar auxiliar quem esteja necessitando de implementar um recurso similar.</p>
+<p>A estrutura do projeto de exemplo será:</p>
+<ul>
+<li>diretorio_raiz
+<ul>
+<li>index.php</li>
+<li>files
+<ul>
+<li>imagem_01.jpg</li>
+<li>imagem_02.jpg</li>
+<li>imagem_03.jpg</li>
+<li>imagem_04.jpg</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>O arquivo index.php irá conter nossa lógica de programação.</p>
+<p>O diretório files contém as imagens que iremos compactar e fazer o download.</p>
+<p>Vamos implementar nosso arquivo index.php</p>
+<p>Utilizarei uma classe nativa do PHP chamada <a href="http://php.net/manual/en/class.ziparchive.php">ZipArchive</a> uma poderosa classe que nos auxiliará e facilitará muito nossa manipulação de arquivos zip.</p>
+<p>Vale observar que para usar esta classe é <a href="http://php.net/manual/pt_BR/book.zip.php"><strong>requerido a extensão Zip</strong></a> do PHP caso não esteja disponível basta executar o comando abaixo (ambiente linux) para instalar.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install php7.0-zip
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Com o comando acima eu instalo a extensão na versão 7.0 do PHP, caso deseja em outra versão basta substituir o número.</p>
+<p>Antes de iniciar a codificação, nosso objetivo será:</p>
+<ol>
+<li>Ler os arquivos contido no diretório files.</li>
+<li>Criar o arquivo zip, contento as imagens do diretório.</li>
+<li>Baixar o arquivo zip.</li>
+<li>Remover o arquivo zip do servidor.</li>
+</ol>
+<p>Após a instalação vamos iniciar nossa implementação da nossa lógica.</p>
+<p>Primeiramente definimos nossa variáveis base;</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$fileName  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;zipFile.zip&#39;</span>;
+</span></span><span style="display:flex;"><span>$path      <span style="color:#f92672">=</span> <span style="color:#66d9ef">__DIR__</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/files&#39;</span>;
+</span></span><span style="display:flex;"><span>$fullPath  <span style="color:#f92672">=</span> $path<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/&#39;</span><span style="color:#f92672">.</span>$fileName;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Definimos o nome do arquivo, seu caminho e o caminho completo.</p>
+<p>Agora necessitamos percorrer o diretório para varrer em busca de arquivos, e utilizaremos uma função nativa do PHP chamada <a href="http://php.net/manual/pt_BR/function.scandir.php">scandir()</a> esta função tem como responsabilidade listar arquivos e diretórios contidos do diretório que for passado.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Executo a leitura no diretório para coletar os nomes dos arquivos.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$scanDir <span style="color:#f92672">=</span> <span style="color:#a6e22e">scandir</span>($path);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como podemos ver, passamos nosso path que foi declarado no início do nosso arquivo, ele irá percorrer e nos retornar um array com os nomes dos arquivos encontrados.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Retorno da busca pela função scandir
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">array</span> (<span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;.&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;..&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">2</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_01.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">3</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_02.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">4</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_03.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">5</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_04.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como podemos ver ele retorna nos 02 primeiros incides do array os pontos de retorno do diretório, porem não iremos utilizar, então devemos remover.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// A função array_shift remove o primeiro índice do array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">array_shift</span>($scanDir);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">array_shift</span>($scanDir);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Após a remoção o array ficará como o demonstrado abaixo.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">array</span> (<span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_01.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_02.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">2</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_03.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">3</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">string</span> <span style="color:#e6db74">&#39;imagem_04.jpg&#39;</span> (<span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agora que dispomos dos arquivos que desejamos compactar, vamos iniciar o processo de criação do arquivo zip.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$zip = new \ZipArchive();
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Após instanciarmos nossa classe, vamos verificar a criação do arquivo e percorrer o array que dispõem o nome dos arquivos para adiciona-los em nosso zip.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Criamos o arquivo e verificamos se ocorreu tudo certo
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($zip<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">open</span>($fullPath, <span style="color:#a6e22e">\ZipArchive</span><span style="color:#f92672">::</span><span style="color:#a6e22e">CREATE</span>) ) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// adiciona ao zip todos os arquivos contidos no diretório.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">foreach</span>($scanDir <span style="color:#66d9ef">as</span> $file){
+</span></span><span style="display:flex;"><span>      $zip<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">addFile</span>($path<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/&#39;</span><span style="color:#f92672">.</span>$file, $file);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// fechar o arquivo zip após a inclusão dos arquivos desejados
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $zip<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agora se você rodar nosso arquivo index.php ele irá criar nosso arquivo zipFile.zip dentro do diretório files.</p>
+<p>Como nossa última meta é baixar o arquivo para o usuário, vamos implementar nosso código para executar esta ação.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Primeiro nos certificamos de que o arquivo zip foi criado.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">file_exists</span>($fullPath)) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Forçamos o donwload do arquivo.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Content-Type: application/zip&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Content-Disposition: attachment; filename=&#34;&#39;</span><span style="color:#f92672">.</span>$fileName<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">readfile</span>($fullPath);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//removemos o arquivo zip após download
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">unlink</span>($fullPath);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agora basta executarmos novamente nosso arquivo index.php, e pronto é executado o download do nosso arquivo zip automaticamente.</p>
+<p>Cabe uma observação, neste post eu adicionei ao arquivo zip apenas imagens jpg, porém podemos adicionar qualquer arquivo que desejarmos, png, xml, sql entre outros.</p>
+<p>Vale lembrar também que esta é uma pequena demonstração, porém pode facilmente ser implementada e ampliada de acordo com sua necessidade 😉</p>
+<p>Caso deseja, foi criado um repositório no GitHub  <a href="https://github.com/Diego-Brocanelli/zip_php">zip_php</a> para  acessar os arquivos mencionados neste post.</p>
+<p>Espero que tenham gostado, até a próxima pessoal</p>
+<p> </p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://example.org/tags/download/">download</a></li>
+      <li><a href="http://example.org/tags/php/">php</a></li>
+      <li><a href="http://example.org/tags/zip/">zip</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://example.org/docker/docker-para-iniciantes/">
+    <span class="title"> &lt;&lt; </span>
+    <br>
+    <span>Docker para iniciantes (vídeo)</span>
+  </a>
+  <a class="next" href="http://example.org/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/">
+    <span class="title"> >></span>
+    <br>
+    <span>Software livre de código aberto e software gratuito, quais são suas diferenças?</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Criando e baixando arquivos ZIP com PHP on twitter"
+        href="https://twitter.com/intent/tweet/?text=Criando%20e%20baixando%20arquivos%20ZIP%20com%20PHP&amp;url=http%3a%2f%2fexample.org%2fphp%2fcriando-e-baixando-arquivos-zip-com-php%2f&amp;hashtags=download%2cphp%2czip">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Criando e baixando arquivos ZIP com PHP on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fexample.org%2fphp%2fcriando-e-baixando-arquivos-zip-com-php%2f&amp;title=Criando%20e%20baixando%20arquivos%20ZIP%20com%20PHP&amp;summary=Criando%20e%20baixando%20arquivos%20ZIP%20com%20PHP&amp;source=http%3a%2f%2fexample.org%2fphp%2fcriando-e-baixando-arquivos-zip-com-php%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>zend on Diego Brocanelli</title>
+    <link>http://example.org/categories/zend/</link>
+    <description>Recent content in zend on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 22 Apr 2018 12:45:21 +0000</lastBuildDate><atom:link href="http://example.org/categories/zend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validando os dados do formulário com Zend-Validator</title>
+      <link>http://example.org/php/validando-os-dados-do-formulario-com-zend-validator/</link>
+      <pubDate>Sun, 22 Apr 2018 12:45:21 +0000</pubDate>
+      
+      <guid>http://example.org/php/validando-os-dados-do-formulario-com-zend-validator/</guid>
+      <description>Olá, tudo bem?!
+Todas aplicações que desenvolvemos necessita de entradas e saídas de dados, isso é muito comum, porém cada desenvolvedor acaba implementando a “sua solução” para esse problema. Definitivamente essa não é uma boa prática por diversos motivos.
+O mais recomendado é a utilização de componentes criados pela comunidade, porque devo usar um componente? Simples, irei listar algumas das principais vantagens, sendo:
+Grande volume de contribuidores. Maior correção de bugs.</description>
+    </item>
+    
+  </channel>
+</rss>
