@@ -1,7 +1,7 @@
 baseURL = 'http://example.org/'
 languageCode = 'pt-br'
 title = 'Diego Brocanelli'
-theme = "PaperMod"
+theme = "hugo-PaperMod"
 enableRobotsTXT = true
 enableEmoji = true
 defaultContentLanguage = "pt-br"
