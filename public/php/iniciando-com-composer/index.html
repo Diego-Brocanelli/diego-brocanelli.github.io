@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Iniciando com Composer | Diego Brocanelli</title>
+<meta name="keywords" content="composer, php, terminal">
+<meta name="description" content="Olá, tudo bem?
+Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
+O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.
+Citando o amigo Elton Minetto:
+“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.">
+<meta name="author" content="Diego Brocanelli">
+<link rel="canonical" href="http://example.org/php/iniciando-com-composer/">
+<link crossorigin="anonymous" href="/assets/css/person.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp;»&nbsp;<a href="http://example.org/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Iniciando com Composer
+    </h1>
+    <div class="post-meta"><span title='2017-03-24 19:05:05 +0000 UTC'>2017-03-24</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Diego Brocanelli
+
+</div>
+  </header> 
+  <div class="post-content"><p>Olá, tudo bem?</p>
+<p>Em diversos posts aqui no blog faço uso do <!-- raw HTML omitted -->Composer<!-- raw HTML omitted -->, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.</p>
+<h3 id="o-que-é-o-composer">O que é o composer?<a hidden class="anchor" aria-hidden="true" href="#o-que-é-o-composer">#</a></h3>
+<p>Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.</p>
+<p>Citando o amigo <a href="http://eltonminetto.net/">Elton Minetto</a>:</p>
+<blockquote>
+<p>“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.</p>
+</blockquote>
+<h3 id="o-que-ele-faz">O que ele faz?<a hidden class="anchor" aria-hidden="true" href="#o-que-ele-faz">#</a></h3>
+<p>Gerencia todos os pacotes que sua aplicação tem como dependente, podendo instalar, atualizar ou remover facilmente qualquer pacote.</p>
+<h3 id="como-ele-funciona">Como ele funciona?<a hidden class="anchor" aria-hidden="true" href="#como-ele-funciona">#</a></h3>
+<p>Todo projeto PHP deve conter um arquivo chamado composer.json, onde nele será definido todas as dependências e informações do seu projeto.</p>
+<p>Podemos visualizar abaixo um exemplo do arquivo composer.json do projeto <a href="https://github.com/Diego-Brocanelli/image-gravatar-php/blob/master/composer.json">image-gravatar-php</a>.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;diego-brocanelli/image-gravatar-php&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Library for get images Gravatar&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Library&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;BSD-3&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;version&#34;</span>:<span style="color:#e6db74">&#34;1.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;authors&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Diego Brocanelli&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;diegod2@msn.com&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;minimum-stability&#34;</span>: <span style="color:#e6db74">&#34;dev&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;require&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;php&#34;</span>: <span style="color:#e6db74">&#34;&gt;=5.3.8&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;autoload&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;psr-4&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;DiegoBrocanelli\\Gravatar\\&#34;</span>:<span style="color:#e6db74">&#34;src/Gravatar&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instalando-o-composer">Instalando o Composer<a hidden class="anchor" aria-hidden="true" href="#instalando-o-composer">#</a></h3>
+<p>Existem duas maneiras para instalá-lo utilizando o composer.phar, sendo um único arquivo que contém o Composer e pode ser utilizado de forma isolada dos demais projetos ou de forma global na sua maquina, eu faço uso da segunda opção pois como uso com certa frequência fica mais fácil.</p>
+<h3 id="instalar-no-windows">Instalar no Windows<a hidden class="anchor" aria-hidden="true" href="#instalar-no-windows">#</a></h3>
+<p>Acesse a URL <a href="https://getcomposer.org/download">https://getcomposer.org/download/</a> e realize o download do arquivo <a href="https://getcomposer.org/Composer-Setup.exe">composer-Setup.exe</a>, onde basta seguir o modelo next, next finish.</p>
+<h3 id="instalar-no-linux">Instalar no Linux<a hidden class="anchor" aria-hidden="true" href="#instalar-no-linux">#</a></h3>
+<p>Basta executar os comandos abaixo:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php -r <span style="color:#e6db74">&#34;readfile(&#39;https://getcomposer.org/installer&#39;);&#34;</span> | php
+</span></span><span style="display:flex;"><span>Com o comando abaixo, basta digitar composer no prompt para acessar
+</span></span><span style="display:flex;"><span>sudo mv composer.phar /usr/bin/composer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Após o processo de instalação finalizar abra o terminal e digite:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>E pronto será exibido a versão instalada.</p>
+<blockquote>
+<p>Nota: Obrigado ao colega <a href="https://github.com/andrebian">Andre Cardoso</a> por prestigiar o conteúdo e contribuir com uma dica para melhoria do post.</p>
+</blockquote>
+<h3 id="o-arquivo-composerjson">O arquivo composer.json<a hidden class="anchor" aria-hidden="true" href="#o-arquivo-composerjson">#</a></h3>
+<p>Como mencionado acima, todas as configurações que o Composer necessita deve estar descrito em seu arquivo composer.json, sendo assim cada projeto deve ter o seu arquivo exclusivo.</p>
+<p>A maneira mais simples de se obter o nosso arquivo é acessando o terminal (deu para notar que o terminal é uma ferramenta indispensável para nós 🙂 ) acesse o diretório onde deseja criar o arquivo e execute o seguinte comando:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Ele automaticamente iniciará o processo de criação fazendo as seguintes perguntas:</p>
+<p>O nome do pacote, o composer utiliza o <a href="https://packagist.org/">Packagist</a> como repositório defautl de projetos e também utiliza/respeita as [PSR-0 e PSR-4]http://www.php-fig.org/psr/(). Então devemos também seguir as recomendações para a criação do vendor do nosso pacote.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Package name <span style="color:#f92672">(</span>&lt;vendor&gt;/&lt;name&gt;<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>root/exemplo-composer<span style="color:#f92672">]</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Após a definição do nome, será requisitado a descrição do pacote, recomendado evitar caracteres especiais ou acentuação para evitar quebra de string.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Description <span style="color:#f92672">[]</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Autor do arquivo/pacote:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Author <span style="color:#f92672">[</span>SEU NOME &lt;seur_email@email.com&gt;, n to skip<span style="color:#f92672">]</span>:<span style="color:#ae81ff">\
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>A instabilidade do pacote, devendo ser ‘stable, rc, beta, alpha ou dev’:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Minimum Stability <span style="color:#f92672">[]</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O tipo do projeto (library, project, metapackage ou composer-plugin):</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Package Type <span style="color:#f92672">(</span>e.g. library, project, metapackage, composer-plugin<span style="color:#f92672">)</span> <span style="color:#f92672">[]</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O tipo de licença (muito importante! Caso tenha alguma dúvida, tenho um post sobre o assunto “<a href="http://www.diegobrocanelli.com.br/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/">Software livre de código aberto e software gratuito, quais são suas diferenças?</a>“)</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>License <span style="color:#f92672">[]</span>:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>E caso você deseje, poderá definir os pacotes que você deseja instalar no projeto:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Would you like to define your dependencies <span style="color:#f92672">(</span>require<span style="color:#f92672">)</span> interactively <span style="color:#f92672">[</span>yes<span style="color:#f92672">]</span>?
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Por ultimo, irá imprimir no terminal o arquivo demonstrativo e lhe questionar se as informações inseridas estão corretas, no final basta digitar yes e pressionar enter, caso não aceite o processo é interrompido.</p>
+<p>Pode parecer longo, porem esse processo não leva mais do que alguns segundos, como o composer realiza o download dos componente que você irá utilizar em seu sistema a agilidade no processo de instalação fica atrelada a velocidade e qualidade da internet.</p>
+<h3 id="o-arquivo-composerlock">O arquivo composer.lock<a hidden class="anchor" aria-hidden="true" href="#o-arquivo-composerlock">#</a></h3>
+<p>Após a execução do comando ‘composer install’ será gerado nosso arquivo composer.lock, onde será armazenado as versões exatas de todos os pacotes que foi instalado em seu projeto. Isso é excelente pois com isso todos os integrantes do time terá a garantia de obtenção dos mesmos pacotes.</p>
+<p>É recomendado que este arquivo entre em seu controle de versão justamente pelo motivo citado acima, garantindo a integridade do seu projeto para qualquer membro do time.</p>
+<p>Se o seu projeto já venha com o arquivo de lock, basta executar o comando abaixo para atualizar/instalar as dependência em seu projeto.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Automaticamente o composer irá analisar os arquivos ‘composer.json’ e ‘composer.lock’ para gerenciar as dependências em seu projeto, muito simples.</p>
+<h3 id="autoloading">Autoloading<a hidden class="anchor" aria-hidden="true" href="#autoloading">#</a></h3>
+<p>Não somente gerenciar pacotes, podemos também configurar e gera o ‘autoloader’ do nosso projeto, lembrando sempre que o composer segue as PSR-0 e PSR-4.</p>
+<p>Podemos utilizar como exemplo o composer.json gerado anteriormente:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;autoload&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;psr-4&#34;</span>:{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;DiegoBrocanelli\\Gravatar\\&#34;</span>:<span style="color:#e6db74">&#34;src/Gravatar&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como podemos visualizar, é declarado a key “autoload” em seguida definimos o padrão que desejamos utilizar, que neste caso será “psr-4” e por último foi definido o nome do vendor seguido pelo caminho do diretório.</p>
+<p>A utilização do autoload pelo composer é muito simples e poderosa, você pode construir um pacote</p>
+<h3 id="comandos-básicos">Comandos básicos<a hidden class="anchor" aria-hidden="true" href="#comandos-básicos">#</a></h3>
+<ul>
+<li><strong>composer init</strong>
+<ul>
+<li>Basicamente cria seu arquivo composer.json para você de forma simples e rápida.</li>
+</ul>
+</li>
+<li><strong>composer install</strong>
+<ul>
+<li>Para podermos instalar todas as dependências descritas no arquivo composer.json, devemos utilizar este comando para executar a tarefa de forma automática.</li>
+</ul>
+</li>
+<li><strong>composer update</strong>
+<ul>
+<li>Caso deseje inserir ou remover pacotes ou alterar o autoload devemos sempre atualizar nosso projeto, e com esse comando tudo o que listei é feito de forma automática sem dores de cabeça :).</li>
+</ul>
+</li>
+<li><strong>composer self-update</strong>
+<ul>
+<li>Como todo sistema o composer recebe constantemente atualizações, e  para atualiza-lo utilizamos o self-update.</li>
+</ul>
+</li>
+<li><strong>composer  dump-autoload ou dumpautoload</strong>
+<ul>
+<li>Toda vez que houver necessidade de atualizar o autoloader do nosso sistema, podemos utilizar uma dessas duas versões do comando para tal atividade, ambas no final das contas obtém o mesmo resultado.</li>
+</ul>
+</li>
+<li><strong>composer –helper ou –h</strong>
+<ul>
+<li>Ele também disponibiliza de um helper, listando os comandos disponíveis e sua forma de uso.</li>
+</ul>
+</li>
+</ul>
+<p>Hoje com os grandes avanços no ecossistema PHP (caso tenha interesse a galera do Hipsters.tech lanço um episódio fantástico “<a href="http://hipsters.tech/php-nao-e-coisa-de-sobrinho-hipsters-36/">PHP não é coisa de sobrinho!</a>” recomendo ouvir 🙂 ), todos os grandes frameworks tem seus componentes modularizados, podendo ser utilizado de forma isolada e o composer facilitará sua vida caso deseja utiliza-los em seus projetos.</p>
+<p>Por exemplo, caso desejamos utilizar a <a href="http://twig.sensiolabs.org/">engine de template Twig</a> em nosso projeto basta acessarmos o diretório do nosso projeto e executar o seguinte comando;</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require <span style="color:#e6db74">&#34;twig/twig:^2.0&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Automaticamente será instalado no sistema todos os pacotes necessários para utilização do Twig.</p>
+<p>Este post já ficou muito extenso e ainda nem arranhei a superfície das funcionalidades que o Composer dispõe então vou encerra-lo por aqui, porem caso deseje um post explorando mais recursos deixe nos comentários.</p>
+<p>Espero ter conseguido demonstrar como é vantajoso a utilização desta ferramenta, na minha opinião é impossível ser um programador PHP nos dias de hoje sem saber o básico dessa ferramenta.</p>
+<p>Caso tenha alguma dúvida, sugestão ou elogio por favor deixe nos comentários pois podemos gerar um conteúdo muito bacana.</p>
+<p>Até a próxima pessoal!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://example.org/tags/composer/">composer</a></li>
+      <li><a href="http://example.org/tags/php/">php</a></li>
+      <li><a href="http://example.org/tags/terminal/">terminal</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://example.org/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/">
+    <span class="title">« </span>
+    <br>
+    <span>hhbr : 08 – Vue.js e Single Page Applications: O que saber antes de começar (Vídeo)</span>
+  </a>
+  <a class="next" href="http://example.org/php/obtendo-imagens-do-gravatar/">
+    <span class="title"> »</span>
+    <br>
+    <span>Obtendo imagens do Gravatar</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Iniciando com Composer on twitter"
+        href="https://twitter.com/intent/tweet/?text=Iniciando%20com%20Composer&amp;url=http%3a%2f%2fexample.org%2fphp%2finiciando-com-composer%2f&amp;hashtags=composer%2cphp%2cterminal">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Iniciando com Composer on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fexample.org%2fphp%2finiciando-com-composer%2f&amp;title=Iniciando%20com%20Composer&amp;summary=Iniciando%20com%20Composer&amp;source=http%3a%2f%2fexample.org%2fphp%2finiciando-com-composer%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

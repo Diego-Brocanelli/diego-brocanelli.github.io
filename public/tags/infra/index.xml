@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>infra on Diego Brocanelli</title>
+    <link>http://example.org/tags/infra/</link>
+    <description>Recent content in infra on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate><atom:link href="http://example.org/tags/infra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuração automática de estação de trabalho</title>
+      <link>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
+      <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
+      
+      <guid>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
+      <description>Olá, tudo bem!
+Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado workstation_configuration, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.
+Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scripts shell que fazem todo o trabalho de instalação e configuração conforme informações contidas no arquivo setup.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 17 – Primeiros passos com integração contínua (vídeo)</title>
+      <link>http://example.org/php/hhbr-17-primeiros-passos-com-integracao-continua/</link>
+      <pubDate>Tue, 05 Nov 2019 16:32:13 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-17-primeiros-passos-com-integracao-continua/</guid>
+      <description>Olá, tudo bem?!
+Nesta 17º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Primeiros passos com integração contínua” ministrado pelo grande Iury Alves.
+Demonstrado na prática as principais técnicas e conceitos para iniciar com a integração contínua, abordando ferramentas que facilitam nossa vida. Sem mais delongas, segue abaixo a gravação da palestra.
+Dados da palestra Tema: “Primeiros passos com integração contínua” Palestrante: Iury Alves Site: https://medium.com/@iurysouza/ Twitter: https://twitter.com/yorix20 GitHub: https://github.</description>
+    </item>
+    
+    <item>
+      <title>hhbr : 01 – Docker para iniciantes</title>
+      <link>http://example.org/php/hhbr-01-docker-para-iniciantes/</link>
+      <pubDate>Tue, 05 Nov 2019 16:26:41 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-01-docker-para-iniciantes/</guid>
+      <description>Olá, tudo bem?!
+Em nossa primeira edição da comunidade hhbr trazemos uma grande palestra com o tema “Docker para iniciantes”, ministrado pelo grande Wellington F. Silva.
+Foi abordado os principais conceitos básicos, com muitos exemplos de uso prático. Espero que apreceiem o conteúdo.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!
+Dados da palestra Tema: “Docker para iniciantes” Palestrante: Wellington F. Silva Site: http://wfsilva.com Twitter: https://twitter.com/_wsilva LinkedIn: https://linkedin.</description>
+    </item>
+    
+  </channel>
+</rss>

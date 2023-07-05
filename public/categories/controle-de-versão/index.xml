@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>controle de versão on Diego Brocanelli</title>
+    <link>http://example.org/categories/controle-de-vers%C3%A3o/</link>
+    <description>Recent content in controle de versão on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 31 Oct 2017 13:17:36 +0000</lastBuildDate><atom:link href="http://example.org/categories/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como controlar a versão do software like a boss com Semantic Version</title>
+      <link>http://example.org/semantic-version/controlando-a-versao-do-software-like-a-boss/</link>
+      <pubDate>Tue, 31 Oct 2017 13:17:36 +0000</pubDate>
+      
+      <guid>http://example.org/semantic-version/controlando-a-versao-do-software-like-a-boss/</guid>
+      <description>Olá, Tudo bem?!
+Quem nunca dedicou tempo para analisar como seria o controle da versão do seu sistema, ou teve problemas com “aquela solução infalível”, tem também quem nunca se preocupou com isso, porém, já deve ter sofrido pois aquela lib favorita que utiliza no projeto quebrou a compatibilidade após um simples update?!
+Ao desenvolvermos algum sistema/componente/lib/framework seja lá o que for, um ponto importante é, como será controlada a sua versão?</description>
+    </item>
+    
+  </channel>
+</rss>

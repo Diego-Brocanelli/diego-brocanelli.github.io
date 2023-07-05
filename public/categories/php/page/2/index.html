@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>php | Diego Brocanelli</title>
+<meta name="keywords" content="">
+<meta name="description" content="Diego Brocanelli Full Stack Developer">
+<meta name="author" content="">
+<link rel="canonical" href="http://example.org/categories/php/">
+<link crossorigin="anonymous" href="/assets/css/person.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://example.org/categories/php/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp;»&nbsp;<a href="http://example.org/categories/">Categories</a></div>
+  <h1>
+    php
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Refactoring – Extract Method
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem?!
+Você já deve ter esbarrado ou feito manutenção em códigos que o método tem muitas ações, como bem sabemos isso é muito ruim, pois aumenta a complexidade da leitura, manutenção, acoplamento e dificulta seu reuso. Abaixo podemos observar um exemplo:
+1 2 3 4 5 6 7 8 9 &lt;?php public function printOwing() { $this-&gt;printBanner(); //print details print(&#34;name: &#34; . $this-&gt;name); print(&#34;amount &#34; . $this-&gt;getOutstanding()); Por que refatorar?...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-08-27 16:17:28 +0000 UTC'>2018-08-27</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Refactoring – Extract Method" href="http://example.org/php/refactoring-extract-method/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>hhbr: 21 – Projeto Statik Stack
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem?!
+Nesta 21º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Projeto Statik Stack” com o grande Roberto Achar, apresentando seu projeto e comunidade que visa fornecer started kits para iniciantes darem um ponta pé inicial em seus projetos.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!
+Dados da palestra Tema: “Projeto Statik Stack” Palestrante: Roberto Achar Site: https://showmethecode.com.br Email: robertoachar@showmethecode.com.br Twitter: https://twitter.com/robertoachar LinkedIn: https://br....</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-08-16 16:37:21 +0000 UTC'>2018-08-16</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to hhbr: 21 – Projeto Statik Stack" href="http://example.org/php/hhbr-21-projeto-statik-stack/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Tratamento de HTML dentro de uma string com PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem?!
+Armazenar dados html ou até mesmo manipular é importante, pois devemos nos preocupar com a segurança e também com a integridade dos dados.
+Há momentos que desejamos armazenar a string HTML, um exemplo é quando temos um textarea que contem a estrutura similar ao word.
+Devemos tratar os dados para serem armazenados ou exibidos, para nossa felicidade o PHP traz um recurso nativo para nos auxiliar, a função htmlentities, onde irá converter os caracteres aplicáveis em entidades HTML, vamos para um exemplo prático:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-05-03 20:10:54 +0000 UTC'>2018-05-03</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Tratamento de HTML dentro de uma string com PHP" href="http://example.org/php/tratamento-de-html-dentro-de-uma-string-com-php/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Validando os dados do formulário com Zend-Validator
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem?!
+Todas aplicações que desenvolvemos necessita de entradas e saídas de dados, isso é muito comum, porém cada desenvolvedor acaba implementando a “sua solução” para esse problema. Definitivamente essa não é uma boa prática por diversos motivos.
+O mais recomendado é a utilização de componentes criados pela comunidade, porque devo usar um componente? Simples, irei listar algumas das principais vantagens, sendo:
+Grande volume de contribuidores. Maior correção de bugs....</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-04-22 12:45:21 +0000 UTC'>2018-04-22</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Validando os dados do formulário com Zend-Validator" href="http://example.org/php/validando-os-dados-do-formulario-com-zend-validator/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Composer – Automatizando tarefas com Scripts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem!
+Que o Composer é uma ferramenta sensacional isso nós já sabemos, porém o que poucos sabem é que ele dispõem de recursos de execução de scripts para nos auxiliar na automatização de tarefas.
+Acredite, após conhecer esse recurso você vai adotá-lo em seu dia a dia, pois irá lhe economizar um bom tempo em seu dia a dia.
+O que é um script? Em uma tradução livre podemos encontrar a seguinte definição na documentação do composer....</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-01-21 15:36:22 +0000 UTC'>2018-01-21</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Composer – Automatizando tarefas com Scripts" href="http://example.org/php/composer-automatizando-tarefas-com-scripts/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Gerando QR Codes com PHP &#43; MySQL &#43; PHP QR Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem!
+Recentemente fui abordado com o seguinte questionamento, “é possível gerar QR Codes com PHP e MySQL”.
+Minha resposta foi sim!
+Bom, dito isso, a pessoa ao qual me fez essa pergunta relatou que estava tentando, porém sem sucesso.
+A mesma está utilizando PHP &#43; MySQL &#43; PHP QR Code uma biblioteca que auxilia na construção das imagens.
+Para poder auxiliar da melhor maneira, separei o problema em partes, sendo:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-01-14 12:14:37 +0000 UTC'>2018-01-14</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Gerando QR Codes com PHP &#43; MySQL &#43; PHP QR Code" href="http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Como realizar parse da query string de forma simples com PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem!
+Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
+Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.
+Vou lhe demostrar que não precisamos de nada disso para realizar essa tarefa!
+O que é query String? É parte da URL, onde contém dados sendo transmitidos.
+Exemplo: 1 http://meusite.com.br/produto?chave=valor&amp;outraChave=outroValor Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘?...</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-01-05 21:05:12 +0000 UTC'>2018-01-05</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Como realizar parse da query string de forma simples com PHP" href="http://example.org/php/realizar-parse-da-query-string-de-forma-simples/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>YAGNI – Você não vai precisar disso
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>YAGNI é um acrônimo para “You Aren’t Gonna Need It” (Você não vai precisar disso) mantra pregado pela Extreme Programming (XP) onde se diz que não devemos adicionar possíveis novas funcionalidades ao software a não ser que seja necessário.
+Nós desenvolvedores de software temos a péssima mania de tentar prever o futuro, implementando “aquele recurso” que economizará muito tempo, que convenhamos quase nunca usamos.
+Toda “futurologia” empregada por mim só renderam dores de cabeça, pois quase nunca são utilizados, além da manutenção que será aplicado no código, sendo uma carga desnecessária ao projeto....</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-01-01 02:35:55 +0000 UTC'>2018-01-01</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to YAGNI – Você não vai precisar disso" href="http://example.org/php/yagni-voce-nao-vai-precisar-disso/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>hhbr: 15 – SPL e Estruturas de Dados (vídeo)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá, tudo bem?!
+Rolou a 15 edição do hhbr, nesta edição trago para vocês uma palestra super bacana apresentada pelo mestre Davi Marcondes sobre Estrutura de dados com SPL no PHP.
+Uma palestra recheada de muito conteúdo e exemplos práticos das estruturas de dados implementadas utilizando SPL.
+Você que quer aprender a utilizar de forma correta e aumentar a performance dos seus algoritmos, então aperte o play e aproveite o mega conteúdo 🙂...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-10-26 10:47:45 +0000 UTC'>2017-10-26</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to hhbr: 15 – SPL e Estruturas de Dados (vídeo)" href="http://example.org/php/hhbr-15-spl-e-estruturas-de-dados/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://example.org/categories/php/">
+      «&nbsp;&nbsp;
+    </a>
+    <a class="next" href="http://example.org/categories/php/page/3/">&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

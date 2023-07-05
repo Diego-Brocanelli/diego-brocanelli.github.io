@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>php | Diego Brocanelli</title>
+<meta name="keywords" content="">
+<meta name="description" content="Diego Brocanelli Full Stack Developer">
+<meta name="author" content="">
+<link rel="canonical" href="http://example.org/tags/php/">
+<link crossorigin="anonymous" href="/assets/css/person.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://example.org/tags/php/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://example.org/">Home</a>&nbsp;»&nbsp;<a href="http://example.org/tags/">Tags</a></div>
+  <h1>
+    php
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Gerando Breadcrumbs no Zend Framework
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Fala galera, tudo tranquilo?!
+Recentemente um amigo me questionou como ele poderia criar breadcrumbs no Zend Framework, e com base nessa conversa vou demonstra o quão simples é este processo.
+Para quem nunca se deparou com este termo, breadcrumb é um padrão implementado pela Yahoo para indicar ao usuário onde ele se encontra no site, como podemos observar na imagem abaixo.
+Após essa breve e rápida introdução, SHOW ME THE CODE!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-10-19 00:48:43 +0000 UTC'>2016-10-19</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Gerando Breadcrumbs no Zend Framework" href="http://example.org/php/gerando-breadcrumbs-no-zend-framework/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Twig – A Super engine template para PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal tudo certo?!
+Quem nunca se deparou com um projeto no qual teria que trabalhar com renderização HTML? Praticamente todos em algum momento certo? Pois é inevitável a construção de um sistema web PHP sem a interação com o usuário, e com isso surge o grande problema: Como vamos trabalhar as páginas HTML e como podemos utilizar o conceito de template para que nosso sistema fique robusto e com um super visual....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-10-04 13:46:38 +0000 UTC'>2016-10-04</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Twig – A Super engine template para PHP" href="http://example.org/php/twig-a-super-engine-template-para-php/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>PHP Do Jeito Certo: Episódio VI – O Retorno do PODCAST
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal tudo bem?!
+Após um tempo sem novos episódios lançamos mais um episódio do PHP Do Jeito Certo, um podcast que desde 2013 junto com meus amigos Davi, Jack e Marcelo tocamos e gostamos muito de fazer.
+Neste episódio, falamos o que se decorreu desde o último episódio gravado, e o que estamos envolvidos atualmente. Espero que apreciem, e acompanhem pois lançaremos mais episódios conforme o tempo nos permitir....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-30 00:43:18 +0000 UTC'>2016-09-30</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to PHP Do Jeito Certo: Episódio VI – O Retorno do PODCAST" href="http://example.org/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Manipulando  diretórios com PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal, tudo bem?!
+Neste final de semana estive criando um pet project para praticar TDD, e foi direcionado a manipulação de diretórios.
+E com isso resolvi criar este post para mostrar um recurso muito bom do PHP, sendo a classe nativa RecursiveDirectoryIterator, onde dispõem de um leque de ferramentas bacanas que podem facilitar sua vida.
+Para realizarmos este post vamos criar um diretório ‘post_manipulando_diretorios_com_php’ e dentro dele vamos criar o arquivo index....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-09-04 20:53:17 +0000 UTC'>2016-09-04</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Manipulando  diretórios com PHP" href="http://example.org/php/manipulando-diretorios-com-php/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Criando e baixando arquivos ZIP com PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>O PHP é uma linguagem fantástica e repleta de recursos que nos surpreende todos os dias.
+Não é a primeira (e não será a última) vez que me pedem para implementar um recurso para compactar arquivos de um diretório e fazer o seu download para o usuário.
+Com isso resolvi escrever um post para tentar auxiliar quem esteja necessitando de implementar um recurso similar.
+A estrutura do projeto de exemplo será:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-08-25 01:52:19 +0000 UTC'>2016-08-25</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Criando e baixando arquivos ZIP com PHP" href="http://example.org/php/criando-e-baixando-arquivos-zip-com-php/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Um grande passo, Zend Framework 3 released!!!
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal tudo tranquilo?!
+Foi lançado o Zend Framework 3, estava bem ansioso em relação a esta nova versão que prometida muitas melhorias para o framework.
+Foram cerca de 17 meses de produção, teve um grande aumento de performance, suporte ao PHP 7 e foco em pacotes. Pegando o gancho dos pacotes, algo que realmente é muito interessante, pois agora temos cada componente do framework em um repositório individual no GitHub....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-30 00:29:19 +0000 UTC'>2016-06-30</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Um grande passo, Zend Framework 3 released!!!" href="http://example.org/php/um-grande-passo-zend-framework-3-released/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>PHP Coding Standards Fixer
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal tudo bem?
+Anteriormente fiz um post para demonstrar o uso do PHPCodeSniffer, uma ferramenta muito útil para verificar possíveis erros em nossos códigos, e com isso nos auxiliar a melhora-los. Pois bem hoje vou lhes mostrar outra ferramenta PHP Coding Standards Fixer ou mais conhecido como PHP-CS-Fixer (repositório Github).
+Com esta ferramenta poderemos realizar o processo de correção automática para as violações por exemplo da PSR-2, isso mesmo de forma automática!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-07 01:54:02 +0000 UTC'>2016-06-07</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to PHP Coding Standards Fixer" href="http://example.org/php/php-coding-standards-fixer/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Generators no PHP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Desde sua versão 5.5 encontra-se disponível o recurso de generators no PHP&lt;, esse recurso nos permite realizar iterações tendo ganho de performance, pois realiza a entrega dos dados sobe demanda, diferentemente do iterador padrão do PHP, onde processa o conjunto de dados na memória.
+Para criar um generator é muito simples, pois são somente funções PHP que fazem uso da palavra chave yield. Diferente do retorno convencional de uma função PHP, ao utilizar um generator ele apenas gera valores por demanda, como podemos analisar no exemplo abaixo....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-06-02 23:24:19 +0000 UTC'>2016-06-02</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to Generators no PHP" href="http://example.org/php/generators-no-php/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>PHP CodeSniffer
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Olá pessoal tudo bem?
+Hoje temos diversas ferramentas que nos auxiliam em nosso dia a dia, para que tarefas repetitivas sejam realizadas de formas mais práticas e eficientes. Dito isso trago uma ferramenta (que não é nova) porem que irá ajudar com certeza, poupando muito tempo no seu dia.
+O nome desta ferramenta é PHP CodeSniffer, e sua finalidade é analisar os padrões em seu código, auxiliando na qualidade do código produzido....</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-05-14 00:29:49 +0000 UTC'>2016-05-14</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Diego Brocanelli</footer>
+  <a class="entry-link" aria-label="post link to PHP CodeSniffer" href="http://example.org/php/php-codesniffer/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://example.org/tags/php/page/3/">
+      «&nbsp;&nbsp;
+    </a>
+    <a class="next" href="http://example.org/tags/php/page/5/">&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on Diego Brocanelli</title>
+    <link>http://example.org/tags/git/</link>
+    <description>Recent content in git on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate><atom:link href="http://example.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT – Seu guia de sobrevivência</title>
+      <link>http://example.org/git/git-seu-guia-de-sobrevivencia/</link>
+      <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
+      
+      <guid>http://example.org/git/git-seu-guia-de-sobrevivencia/</guid>
+      <description>Olá, tudo bem!
+O que é GIT? É uma ferramente para controle de versão descentralizada criada por Linus Torvalds, que possibilita a gestão do versionamento de códigos, alias, não necessariamente apenas códigos, sendo a ferramente mais utilizada para a finalidade a que se propõem.
+Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?
+Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas cada vez maiores, onde dezenas ou centenas de pessoas estão interagindo com o mesmo repositório de código mandando correções ou novas funcionalidades.</description>
+    </item>
+    
+  </channel>
+</rss>

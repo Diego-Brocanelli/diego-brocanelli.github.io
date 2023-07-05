@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>front in vale on Diego Brocanelli</title>
+    <link>http://example.org/tags/front-in-vale/</link>
+    <description>Recent content in front in vale on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 12 Sep 2016 02:58:58 +0000</lastBuildDate><atom:link href="http://example.org/tags/front-in-vale/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Um sábado fantástico, evento Front In Vale 2016!!!</title>
+      <link>http://example.org/eventos/um-sabado-fantastico-evento-front-in-vale-2016/</link>
+      <pubDate>Mon, 12 Sep 2016 02:58:58 +0000</pubDate>
+      
+      <guid>http://example.org/eventos/um-sabado-fantastico-evento-front-in-vale-2016/</guid>
+      <description>Sábado dia 10/09/2016 foi um dia muito top, ocorreu o Front In Vale 2016. Um evento fantástico com uma galera muito bacana e que fazem a internet dia a dia com projetos pra lá de excelentes, e também uma oportunidade de encontrar amigos.
+O evento já começa com dois pés no peito com uma super palestra da Alda Rocha com o tema “Empoderei, e agora?”, vários pontos bem interessantes e que nos faz refletir sobre nossas carreiras e nossas atitudes do dia a dia, e como motivar novas pessoas a engessarem no mercado de TI.</description>
+    </item>
+    
+  </channel>
+</rss>

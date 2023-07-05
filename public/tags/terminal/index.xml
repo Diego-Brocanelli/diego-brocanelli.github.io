@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>terminal on Diego Brocanelli</title>
+    <link>http://example.org/tags/terminal/</link>
+    <description>Recent content in terminal on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 21 Apr 2017 16:27:37 +0000</lastBuildDate><atom:link href="http://example.org/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comandos básicos do MySQL no terminal</title>
+      <link>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</link>
+      <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
+      
+      <guid>http://example.org/mysql/comandos-basicos-mysql-no-terminal/</guid>
+      <description>Olá pessoal, tudo bem?!
+Não é nada fora do comum que nós desenvolvedores tenhamos que manipular/modificar/criar bancos de dados, com certeza isso é o pesadelo de qualquer DBA. Particularmente gosto de trabalhar com front, back e banco de dados pois isso me permite a ter acesso a conteúdos fantásticos aprendendo coisas novas sempre.
+Como podemos manipular o banco de dados? Bom, particularmente para atividades corriqueira utilizo o terminal, sim o terminal, é simples e rápido.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com Composer</title>
+      <link>http://example.org/php/iniciando-com-composer/</link>
+      <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
+      
+      <guid>http://example.org/php/iniciando-com-composer/</guid>
+      <description>Olá, tudo bem?
+Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
+O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.
+Citando o amigo Elton Minetto:
+“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.</description>
+    </item>
+    
+  </channel>
+</rss>

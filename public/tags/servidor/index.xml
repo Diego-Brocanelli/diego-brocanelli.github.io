@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>servidor on Diego Brocanelli</title>
+    <link>http://example.org/tags/servidor/</link>
+    <description>Recent content in servidor on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 05 Nov 2019 16:33:20 +0000</lastBuildDate><atom:link href="http://example.org/tags/servidor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hhbr: 18 – Docker &#43; Kubernetes &#43; Minikube (vídeo)</title>
+      <link>http://example.org/docker/hhbr-18-docker-kubernetes-minikube/</link>
+      <pubDate>Tue, 05 Nov 2019 16:33:20 +0000</pubDate>
+      
+      <guid>http://example.org/docker/hhbr-18-docker-kubernetes-minikube/</guid>
+      <description>Olá, tudo bem?!
+Nesta 18º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Docker + Kubernetes + Minikube” ministrado pelo grande Roberto Achar.
+Palestra com conteúdo prático e ótimos exemplos e dicas somados a grande didática do palestrante que consegue prender nossa atenção do início ao fim da Palestra. Sem mais delongas, abaixo temos o vídeo com todo do conteúdo.
+Dados da palestra Tema: “Docker + Kubernetes + Minikube” Palestrante: Roberto Achar Site: https://showmethecode.</description>
+    </item>
+    
+  </channel>
+</rss>

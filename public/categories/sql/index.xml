@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SQL on Diego Brocanelli</title>
+    <link>http://example.org/categories/sql/</link>
+    <description>Recent content in SQL on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="http://example.org/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
+      <link>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
+      
+      <guid>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <description>Olá, tudo bem?!
+O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
+Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
+    </item>
+    
+    <item>
+      <title>Defesa eficaz contra SQL Injection – Introdução</title>
+      <link>http://example.org/php/defesa-eficaz-contra-sql-injection-introducao/</link>
+      <pubDate>Mon, 06 Feb 2017 22:08:07 +0000</pubDate>
+      
+      <guid>http://example.org/php/defesa-eficaz-contra-sql-injection-introducao/</guid>
+      <description>Fala galera, tudo tranquilo?!
+Um tema muito bacana e recorrente no desenvolvimento web é SQL Injection e neste post irei abordar algumas boas práticas na defesa contra esses ataques.
+Teremos 3 posts relacionados ao tema, sendo:
+Introdução ao SQL Injection. Filtragem e validação de dados. Comunicação com o banco de dados. O que é SQL Injection? É um tipo de ameaça relacionado a segurança, que se aproveita de falhas em sistemas que interagem com bases de dados para inserir trechos de código SQL para realizar ações não desejadas e para manipular, roubar ou danificar a estrutura ou dados contidos no banco de dados.</description>
+    </item>
+    
+  </channel>
+</rss>

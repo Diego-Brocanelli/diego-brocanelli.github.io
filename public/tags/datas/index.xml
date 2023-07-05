@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>datas on Diego Brocanelli</title>
+    <link>http://example.org/tags/datas/</link>
+    <description>Recent content in datas on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 09 Feb 2017 09:25:15 +0000</lastBuildDate><atom:link href="http://example.org/tags/datas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculando a diferença entre duas datas com PHP</title>
+      <link>http://example.org/php/calculando-diferenca-entre-duas-datas-com-php/</link>
+      <pubDate>Thu, 09 Feb 2017 09:25:15 +0000</pubDate>
+      
+      <guid>http://example.org/php/calculando-diferenca-entre-duas-datas-com-php/</guid>
+      <description>Olá, tudo tranquilo?!
+Uma ação bem simples e que pode nos auxiliar em muito no dia a dia é calcular a diferença entre duas datas. Para isso vou demonstrar a forma mais simples para realizar esta ação.
+1 2 3 4 5 6 &amp;lt;?php $dateStart = new \DateTime(&amp;#39;2017-01-01&amp;#39;); $dateNow = new \DateTime(date(&amp;#39;Y-m-d&amp;#39;)); $dateDiff = $dateStart-&amp;gt;diff($dateNow);&amp;lt; Vamos detalhar o código acima:
+Primeiro armazenamos a data base na qual desejamos verificar.
+Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando que poderia ser qualquer data passado, presente ou futuro.</description>
+    </item>
+    
+  </channel>
+</rss>

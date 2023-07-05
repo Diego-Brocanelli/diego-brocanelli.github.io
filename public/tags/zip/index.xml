@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>zip on Diego Brocanelli</title>
+    <link>http://example.org/tags/zip/</link>
+    <description>Recent content in zip on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 25 Aug 2016 01:52:19 +0000</lastBuildDate><atom:link href="http://example.org/tags/zip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Criando e baixando arquivos ZIP com PHP</title>
+      <link>http://example.org/php/criando-e-baixando-arquivos-zip-com-php/</link>
+      <pubDate>Thu, 25 Aug 2016 01:52:19 +0000</pubDate>
+      
+      <guid>http://example.org/php/criando-e-baixando-arquivos-zip-com-php/</guid>
+      <description>O PHP é uma linguagem fantástica e repleta de recursos que nos surpreende todos os dias.
+Não é a primeira (e não será a última) vez que me pedem para implementar um recurso para compactar arquivos de um diretório e fazer o seu download para o usuário.
+Com isso resolvi escrever um post para tentar auxiliar quem esteja necessitando de implementar um recurso similar.
+A estrutura do projeto de exemplo será:</description>
+    </item>
+    
+  </channel>
+</rss>

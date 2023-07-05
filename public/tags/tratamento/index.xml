@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tratamento on Diego Brocanelli</title>
+    <link>http://example.org/tags/tratamento/</link>
+    <description>Recent content in tratamento on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 03 May 2018 20:10:54 +0000</lastBuildDate><atom:link href="http://example.org/tags/tratamento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tratamento de HTML dentro de uma string com PHP</title>
+      <link>http://example.org/php/tratamento-de-html-dentro-de-uma-string-com-php/</link>
+      <pubDate>Thu, 03 May 2018 20:10:54 +0000</pubDate>
+      
+      <guid>http://example.org/php/tratamento-de-html-dentro-de-uma-string-com-php/</guid>
+      <description>Olá, tudo bem?!
+Armazenar dados html ou até mesmo manipular é importante, pois devemos nos preocupar com a segurança e também com a integridade dos dados.
+Há momentos que desejamos armazenar a string HTML, um exemplo é quando temos um textarea que contem a estrutura similar ao word.
+Devemos tratar os dados para serem armazenados ou exibidos, para nossa felicidade o PHP traz um recurso nativo para nos auxiliar, a função htmlentities, onde irá converter os caracteres aplicáveis em entidades HTML, vamos para um exemplo prático:</description>
+    </item>
+    
+  </channel>
+</rss>

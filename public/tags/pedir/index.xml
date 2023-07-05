@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pedir on Diego Brocanelli</title>
+    <link>http://example.org/tags/pedir/</link>
+    <description>Recent content in pedir on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sun, 17 Feb 2019 13:40:54 +0000</lastBuildDate><atom:link href="http://example.org/tags/pedir/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como pedir ajuda?</title>
+      <link>http://example.org/comunidade/como-pedir-ajuda-em-comunidade-de-ti/</link>
+      <pubDate>Sun, 17 Feb 2019 13:40:54 +0000</pubDate>
+      
+      <guid>http://example.org/comunidade/como-pedir-ajuda-em-comunidade-de-ti/</guid>
+      <description>Olá, tudo bem?!
+A comunidade de TI é maravilhosa, muitos profissionais trocando conhecimento e informações, comumente também utilizamos dessa rede para pedir auxílio em algum problema que estamos enfrentando e a comunidade é maravilhosa nesse ponto, a colaboração é fantástica.
+Entretanto é comum depararmos com um grande problema pessoas pedindo ajuda, porém não sabem como fazer ou pedindo de forma muito ruim, para exemplificar situações em que eu já presenciei e vivencie.</description>
+    </item>
+    
+  </channel>
+</rss>

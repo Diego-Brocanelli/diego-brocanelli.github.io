@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dev on Diego Brocanelli</title>
+    <link>http://example.org/tags/dev/</link>
+    <description>Recent content in dev on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 16 Aug 2018 16:37:21 +0000</lastBuildDate><atom:link href="http://example.org/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hhbr: 21 – Projeto Statik Stack</title>
+      <link>http://example.org/php/hhbr-21-projeto-statik-stack/</link>
+      <pubDate>Thu, 16 Aug 2018 16:37:21 +0000</pubDate>
+      
+      <guid>http://example.org/php/hhbr-21-projeto-statik-stack/</guid>
+      <description>Olá, tudo bem?!
+Nesta 21º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Projeto Statik Stack” com o grande Roberto Achar, apresentando seu projeto e comunidade que visa fornecer started kits para iniciantes darem um ponta pé inicial em seus projetos.
+Acesse o vídeo da palestra e espero que aprecie o conteúdo!
+Dados da palestra Tema: “Projeto Statik Stack” Palestrante: Roberto Achar Site: https://showmethecode.com.br Email: robertoachar@showmethecode.com.br Twitter: https://twitter.com/robertoachar LinkedIn: https://br.</description>
+    </item>
+    
+  </channel>
+</rss>
