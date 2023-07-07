@@ -1,6 +1,8 @@
 :root{
+    --blue-code: #094b843b;
     --blue-light: #094b8414 !important;
     --blue: #094b84 !important;
+    --white-dark-mode: rgb(196, 196, 197);
 }
 
 a , h1, h2, h3, h4, h5, h6 {
@@ -11,10 +13,20 @@ a {
     font-style: italic;
 }
 
-h3 {
-    margin-top: 7% !important;
+.post-single a:hover {
+    background-color: var(--blue) !important;
+    color: #ffffff !important;
+    /* padding: 2px; */
+    border-radius: 3px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
+h3 {
+    margin-top: 10% !important;
+}
 
 blockquote {
     color: var(--blue);
@@ -25,13 +37,17 @@ blockquote {
     font-style: italic;
 }
 
+p code {
+    background-color: var(--blue-code) !important;
+    font-style: italic;
+}
+
 ::marker {
     color: var(--blue);
 }
 
 .main {
     max-width: 80% !important;
-    text-align: justify;
 }
 
 /* home */
@@ -44,11 +60,29 @@ blockquote {
     margin-bottom: 15%;
 }
 
-.post-entry {
-    width: 33%;
-    display: inline-table;
-    min-height: 260px;
-    margin-bottom: 30px !important;
+@media (min-width: 992px) {
+    .post-entry {
+        width: 30%;
+        display: inline-table;
+        min-height: 260px;
+        margin-bottom: 30px !important;
+        margin-right: 3%;
+    }
+}
+
+/* logo */
+nav .logo a {
+    content: "asdasda";
+    color: transparent !important;
+    background-image: url("https://diego-brocanelli.github.io/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 5%;
+}
+
+/* posts */
+.post-content {
+    text-align: justify;
 }
 
 .post-entry header {
@@ -60,4 +94,38 @@ blockquote {
     border-radius: 5px !important;
     background-color: var(--blue) !important;
     color: #ffffff !important;
+}
+
+/* ajustes darkmode */
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark a ,
+.dark ::marker {
+    color: var(--white-dark-mode) !important;
+}
+
+/* personalização dos comentários */
+.utterances {
+    max-width: 100% !important;
+}
+
+.dark .post-single a:hover {
+    background-color: var(--white-dark-mode) !important;
+    color: var(--blue) !important;
+}
+
+.dark blockquote {
+    color: #242424;
+    background-color: #ebebeb !important;
+    border-inline-start: 5px solid var(--blue) !important;
+}
+
+.dark .pagination a {
+    background-color: var(--white-dark-mode) !important;
+    color: var(--blue) !important;
 }
