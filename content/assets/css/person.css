@@ -47,7 +47,12 @@ p code {
 }
 
 .main, .nav {
-    max-width: 80% !important;
+    max-width: 100% !important;
+    padding: auto;
+}
+
+.main {
+    padding: 5px;
 }
 
 /* home */
@@ -63,6 +68,10 @@ p code {
 @media (min-width: 992px) {
     .main, .nav {
         max-width: 90% !important;
+    }
+
+    .main {
+        padding: 14px;
     }
 
     .post-entry {
@@ -130,6 +139,6 @@ nav .logo a {
 }
 
 .dark .pagination a {
-    background-color: var(--white-dark-mode) !important;
-    color: var(--blue) !important;
+    background-color: rgb(65, 66, 68) !important;
+    color: var(--white-dark-mode) !important;
 }
