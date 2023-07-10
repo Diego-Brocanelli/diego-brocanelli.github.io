@@ -46,8 +46,8 @@ p code {
     color: var(--blue);
 }
 
-.main {
-    max-width: 80% !important;
+.main, .nav {
+    max-width: 99% !important;
 }
 
 /* home */
@@ -61,6 +61,10 @@ p code {
 }
 
 @media (min-width: 992px) {
+    .main, .nav {
+        max-width: 90% !important;
+    }
+
     .post-entry {
         width: 30%;
         display: inline-table;

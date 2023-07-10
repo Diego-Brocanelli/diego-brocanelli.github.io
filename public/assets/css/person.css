@@ -2,6 +2,7 @@
     --blue-code: #094b843b;
     --blue-light: #094b8414 !important;
     --blue: #094b84 !important;
+    --white-dark-mode: rgb(196, 196, 197);
 }
 
 a , h1, h2, h3, h4, h5, h6 {
@@ -15,8 +16,8 @@ a {
 .post-single a:hover {
     background-color: var(--blue) !important;
     color: #ffffff !important;
-    padding: 2px;
-    border-radius: 10px;
+    /* padding: 2px; */
+    border-radius: 3px;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transition: all 0.3s ease-in-out 0s;
@@ -61,10 +62,11 @@ p code {
 
 @media (min-width: 992px) {
     .post-entry {
-        width: 33%;
+        width: 30%;
         display: inline-table;
         min-height: 260px;
         margin-bottom: 30px !important;
+        margin-right: 3%;
     }
 }
 
@@ -104,7 +106,7 @@ nav .logo a {
 .dark h6,
 .dark a ,
 .dark ::marker {
-    color:#ffffff !important;
+    color: var(--white-dark-mode) !important;
 }
 
 /* personalização dos comentários */
@@ -113,7 +115,7 @@ nav .logo a {
 }
 
 .dark .post-single a:hover {
-    background-color: #ffffff !important;
+    background-color: var(--white-dark-mode) !important;
     color: var(--blue) !important;
 }
 
@@ -121,4 +123,9 @@ nav .logo a {
     color: #242424;
     background-color: #ebebeb !important;
     border-inline-start: 5px solid var(--blue) !important;
+}
+
+.dark .pagination a {
+    background-color: var(--white-dark-mode) !important;
+    color: var(--blue) !important;
 }
