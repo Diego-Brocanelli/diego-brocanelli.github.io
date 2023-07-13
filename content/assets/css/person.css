@@ -13,10 +13,9 @@ a {
     font-style: italic;
 }
 
-.post-single a:hover {
+.post-content a:hover {
     background-color: var(--blue) !important;
     color: #ffffff !important;
-    /* padding: 2px; */
     border-radius: 3px;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

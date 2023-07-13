@@ -3,14 +3,18 @@
 <nav class="paginav">
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">
-    <span class="title">&#129044; {{ i18n "prev_page" }}</span>
+    <span class="title">
+      <i class="fa-solid fa-arrow-left"></i> {{ i18n "prev_page" }}
+    </span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}
   {{- with $pages.Prev . }}
   <a class="next" href="{{ .Permalink }}">
-    <span class="title">{{ i18n "next_page" }} &#129046;</span>
+    <span class="title">{{ i18n "next_page" }}
+      <i class="fa-solid fa-arrow-right"></i>
+    </span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
