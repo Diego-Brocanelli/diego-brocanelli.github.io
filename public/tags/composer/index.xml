@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>composer on Diego Brocanelli</title>
-    <link>http://example.org/tags/composer/</link>
+    <link>https://diegobrocanelli.com.br/tags/composer/</link>
     <description>Recent content in composer on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 21 Jan 2018 15:36:22 +0000</lastBuildDate><atom:link href="http://example.org/tags/composer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jan 2018 15:36:22 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Composer – Automatizando tarefas com Scripts</title>
-      <link>http://example.org/php/composer-automatizando-tarefas-com-scripts/</link>
+      <link>https://diegobrocanelli.com.br/php/composer-automatizando-tarefas-com-scripts/</link>
       <pubDate>Sun, 21 Jan 2018 15:36:22 +0000</pubDate>
       
-      <guid>http://example.org/php/composer-automatizando-tarefas-com-scripts/</guid>
+      <guid>https://diegobrocanelli.com.br/php/composer-automatizando-tarefas-com-scripts/</guid>
       <description>Olá, tudo bem!
 Que o Composer é uma ferramenta sensacional isso nós já sabemos, porém o que poucos sabem é que ele dispõem de recursos de execução de scripts para nos auxiliar na automatização de tarefas.
 Acredite, após conhecer esse recurso você vai adotá-lo em seu dia a dia, pois irá lhe economizar um bom tempo em seu dia a dia.
@@ -21,10 +21,10 @@ O que é um script? Em uma tradução livre podemos encontrar a seguinte defini�
     
     <item>
       <title>Como usar Traits no PHP com namespace</title>
-      <link>http://example.org/php/como-usar-traits-no-php-com-namespace/</link>
+      <link>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</link>
       <pubDate>Tue, 08 Aug 2017 23:10:42 +0000</pubDate>
       
-      <guid>http://example.org/php/como-usar-traits-no-php-com-namespace/</guid>
+      <guid>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</guid>
       <description>Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
 Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
 Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:</description>
@@ -32,10 +32,10 @@ Para nossa implementação devemos criar o diretório com o nome ‘traits_com_n
     
     <item>
       <title>Iniciando com Composer</title>
-      <link>http://example.org/php/iniciando-com-composer/</link>
+      <link>https://diegobrocanelli.com.br/php/iniciando-com-composer/</link>
       <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
       
-      <guid>http://example.org/php/iniciando-com-composer/</guid>
+      <guid>https://diegobrocanelli.com.br/php/iniciando-com-composer/</guid>
       <description>Olá, tudo bem?
 Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
 O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.

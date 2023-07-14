@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>uri on Diego Brocanelli</title>
-    <link>http://example.org/tags/uri/</link>
+    <link>https://diegobrocanelli.com.br/tags/uri/</link>
     <description>Recent content in uri on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 29 Oct 2016 01:08:43 +0000</lastBuildDate><atom:link href="http://example.org/tags/uri/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Oct 2016 01:08:43 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/uri/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manipulando e validando URI com Zend-URI</title>
-      <link>http://example.org/php/manipulando-e-validando-uri-com-zend-uri/</link>
+      <link>https://diegobrocanelli.com.br/php/manipulando-e-validando-uri-com-zend-uri/</link>
       <pubDate>Sat, 29 Oct 2016 01:08:43 +0000</pubDate>
       
-      <guid>http://example.org/php/manipulando-e-validando-uri-com-zend-uri/</guid>
+      <guid>https://diegobrocanelli.com.br/php/manipulando-e-validando-uri-com-zend-uri/</guid>
       <description>Olá pessoal, tudo bem?!
 Para um programador é uma tarefa muito corriqueira manipular ou validar URI. E para facilitar essa tarefa iremos aprender a utilizar o componente Zend-URI, ferramenta fantástica e simples, que irá agilizar nosso dia a dia.
 Uma breve descrição do que é URI (Uniform Resource Identifier), sendo uma cadeia de caracteres utilizada para identificar ou denominar um recurso na internet.

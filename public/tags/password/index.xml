@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>password on Diego Brocanelli</title>
-    <link>http://example.org/tags/password/</link>
+    <link>https://diegobrocanelli.com.br/tags/password/</link>
     <description>Recent content in password on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 28 Dec 2016 17:37:47 +0000</lastBuildDate><atom:link href="http://example.org/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Dec 2016 17:37:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/password/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Senhas mais seguras com Zend-Crypt</title>
-      <link>http://example.org/php/senhas-mais-seguras-com-zend-crypt/</link>
+      <link>https://diegobrocanelli.com.br/php/senhas-mais-seguras-com-zend-crypt/</link>
       <pubDate>Wed, 28 Dec 2016 17:37:47 +0000</pubDate>
       
-      <guid>http://example.org/php/senhas-mais-seguras-com-zend-crypt/</guid>
+      <guid>https://diegobrocanelli.com.br/php/senhas-mais-seguras-com-zend-crypt/</guid>
       <description>Olá pessoal, tudo bem?!
 Hoje em dia não consigo listar um sistema se quer que eu tenha trabalhado sem um mecanismo de login, pode ser com e-mail + senha, usuário + senha porem esse é um recurso que todos os sistema utilizam. E decorrente a isso aparece a grande pergunta, como tratar a senha?
 Sim, devemos tratar a senha e não devemos nunca, vou repetir, NUNCA devemos armazenar a senha em texto puro no banco de dados ou em qualquer outro tipo de armazenamento.</description>

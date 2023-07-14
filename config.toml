@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://diegobrocanelli.com.br/'
 languageCode = 'pt-br'
 title = 'Diego Brocanelli'
 theme = "hugo-PaperMod"
@@ -13,7 +13,7 @@ googleAnalytics = "UA-75414916-1"
 
 [author]
   name = "Diego Brocanelli"
-  bio = "asdfasdfasdfasdfasdfasdfasdfasdfasd"
+  bio = "Sou desenvolvedor de software, pai e apaixonado por tecnologia."
   twitter = "diego_b2"
 
 [Menus]
@@ -40,9 +40,6 @@ googleAnalytics = "UA-75414916-1"
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  socialIcons = [
-    {Name = "twitter", title = "batata", url = "https://batata.com"}
-  ]
 
 [params.assets]
   disableHLJS = false

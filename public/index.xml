@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Diego Brocanelli</title>
-    <link>http://example.org/</link>
+    <link>https://diegobrocanelli.com.br/</link>
     <description>Recent content on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como programador, sou obrigado a usar Linux?</title>
-      <link>http://example.org/linux/como-programador-sou-obrigado-a-usar-linux/</link>
+      <link>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</link>
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
       
-      <guid>http://example.org/linux/como-programador-sou-obrigado-a-usar-linux/</guid>
+      <guid>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</guid>
       <description>Gostaria de bater um papo sobre uma pergunta bem interessante.
 “Como programador, sou obrigado a usar Linux?“
 Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉
@@ -22,10 +22,10 @@ Para determinadas atividades que deseja desempenhar, de fato o Windows se mostra
     
     <item>
       <title>Participação no Podcast Fechatag</title>
-      <link>http://example.org/video/participacao-no-podcast-fechatag/</link>
+      <link>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
       
-      <guid>http://example.org/video/participacao-no-podcast-fechatag/</guid>
+      <guid>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</guid>
       <description>Olá, tudo bem?
 Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
 Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
@@ -34,10 +34,10 @@ Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham s
     
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>http://example.org/comunidade/como-estudo-uma-nova-tecnologia/</link>
+      <link>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
       
-      <guid>http://example.org/comunidade/como-estudo-uma-nova-tecnologia/</guid>
+      <guid>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</guid>
       <description>Olá, tudo bem?!
 É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.
 Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.</description>
@@ -45,10 +45,10 @@ Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar,
     
     <item>
       <title>GIT – Seu guia de sobrevivência</title>
-      <link>http://example.org/git/git-seu-guia-de-sobrevivencia/</link>
+      <link>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
       
-      <guid>http://example.org/git/git-seu-guia-de-sobrevivencia/</guid>
+      <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
       <description>Olá, tudo bem!
 O que é GIT? É uma ferramente para controle de versão descentralizada criada por Linus Torvalds, que possibilita a gestão do versionamento de códigos, alias, não necessariamente apenas códigos, sendo a ferramente mais utilizada para a finalidade a que se propõem.
 Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?
@@ -57,10 +57,10 @@ Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas
     
     <item>
       <title>Laboratório de ideias</title>
-      <link>http://example.org/open-source/laboratorio-de-ideias/</link>
+      <link>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
       
-      <guid>http://example.org/open-source/laboratorio-de-ideias/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</guid>
       <description>Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.
 Tendo isso em mente, criei o projeto Laboratório de ideias, focado em evitar desperdício de tempo e trazer maior foco nos estudos.
 Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.
@@ -69,10 +69,10 @@ Para enviar sua ideia é bem simples, acesse as issues do projeto, analise se a 
     
     <item>
       <title>Funções nativas PHP – str_getcsv</title>
-      <link>http://example.org/php/funcoes-nativas-php-str_getcsv/</link>
+      <link>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</link>
       <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
       
-      <guid>http://example.org/php/funcoes-nativas-php-str_getcsv/</guid>
+      <guid>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</guid>
       <description>Olá!
 PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.
 Uma dessas funções é a str_getcsv, responsável por ler um arquivo csv e converter seus valores em um array.
@@ -82,10 +82,10 @@ Assinatura da função: 1 str_getcsv ( string $input [, string $delimiter = &amp
     
     <item>
       <title>Configuração automática de estação de trabalho</title>
-      <link>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
+      <link>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
       <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
       
-      <guid>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
+      <guid>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
       <description>Olá, tudo bem!
 Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado workstation_configuration, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.
 Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scripts shell que fazem todo o trabalho de instalação e configuração conforme informações contidas no arquivo setup.</description>
@@ -93,10 +93,10 @@ Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scr
     
     <item>
       <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
-      <link>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
       <description>Olá, tudo bem?!
 Nesta edição de número 28 do hhbr tivemos uma mega palestra sobre Vue.js com o palestrante William Correa, que explanou em detalhes diversos pontos bacanas da renderização com Vue.
 Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: William Correa Twitter: @wilcorrea Github: @wilcorrea Links Comentado https://vuejs.org/ https://br.vuejs.org/ https://template-explorer.vuejs.org </description>
@@ -104,20 +104,20 @@ Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: W
     
     <item>
       <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
-      <link>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
       <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
 Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
     </item>
     
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>http://example.org/video/hhbr-26-ecossistema-javascript/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-26-ecossistema-javascript/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
       <description>Olá!
 Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
 Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>qr code on Diego Brocanelli</title>
-    <link>http://example.org/tags/qr-code/</link>
+    <link>https://diegobrocanelli.com.br/tags/qr-code/</link>
     <description>Recent content in qr code on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 14 Jan 2018 12:14:37 +0000</lastBuildDate><atom:link href="http://example.org/tags/qr-code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Jan 2018 12:14:37 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/qr-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gerando QR Codes com PHP &#43; MySQL &#43; PHP QR Code</title>
-      <link>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</link>
+      <link>https://diegobrocanelli.com.br/php/gerando-qr-codes-com-php-mysql-php-qr-code/</link>
       <pubDate>Sun, 14 Jan 2018 12:14:37 +0000</pubDate>
       
-      <guid>http://example.org/php/gerando-qr-codes-com-php-mysql-php-qr-code/</guid>
+      <guid>https://diegobrocanelli.com.br/php/gerando-qr-codes-com-php-mysql-php-qr-code/</guid>
       <description>Olá, tudo bem!
 Recentemente fui abordado com o seguinte questionamento, “é possível gerar QR Codes com PHP e MySQL”.
 Minha resposta foi sim!

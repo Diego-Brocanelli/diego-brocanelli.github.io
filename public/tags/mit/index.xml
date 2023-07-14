@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>mit on Diego Brocanelli</title>
-    <link>http://example.org/tags/mit/</link>
+    <link>https://diegobrocanelli.com.br/tags/mit/</link>
     <description>Recent content in mit on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 03 Aug 2017 11:53:22 +0000</lastBuildDate><atom:link href="http://example.org/tags/mit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2017 11:53:22 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/mit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Licença MIT</title>
-      <link>http://example.org/open-source/a-licenca-mit/</link>
+      <link>https://diegobrocanelli.com.br/open-source/a-licenca-mit/</link>
       <pubDate>Thu, 03 Aug 2017 11:53:22 +0000</pubDate>
       
-      <guid>http://example.org/open-source/a-licenca-mit/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/a-licenca-mit/</guid>
       <description>Uma opção para licenciar seu software.
 A licença MIT foi criada pelo Massachusetts Institute of Technology, sendo uma licença copyleft utilizada no mundo Open Source.
 Caso não conheça esse termo open source, recomendo a leitura do meu post Software livre de código aberto e software gratuito, quais são suas diferenças?. 🙂

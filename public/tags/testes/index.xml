@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>testes on Diego Brocanelli</title>
-    <link>http://example.org/tags/testes/</link>
+    <link>https://diegobrocanelli.com.br/tags/testes/</link>
     <description>Recent content in testes on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 06 Dec 2016 02:09:40 +0000</lastBuildDate><atom:link href="http://example.org/tags/testes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2016 02:09:40 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/testes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testes de forma simples, fácil e robusto em sistemas PHP com PHPUnit!</title>
-      <link>http://example.org/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</link>
+      <link>https://diegobrocanelli.com.br/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</link>
       <pubDate>Tue, 06 Dec 2016 02:09:40 +0000</pubDate>
       
-      <guid>http://example.org/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</guid>
+      <guid>https://diegobrocanelli.com.br/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</guid>
       <description>Olá pessoal, tudo bem?!
 Construir sistemas robustos, seguros e livres bugs (ou pelo menos o menor número possível 🙂 ) está presente em nosso dia a dia, e com isso temos diversas metodologias, ferramentas e recursos para que nossos códigos tenham qualidade e garantia de sua eficácia.
 Para o ecossistema PHP não é diferente, temos disponível uma ferramenta fantástica para executarmos testes unitários, e hoje vamos aprender um pouco sobre ela, seu nome é PHPUnit.</description>

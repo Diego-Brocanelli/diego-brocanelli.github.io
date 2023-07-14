@@ -2,98 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Diego Brocanelli</title>
-    <link>http://example.org/categories/</link>
+    <link>https://diegobrocanelli.com.br/categories/</link>
     <description>Recent content in Categories on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux</title>
-      <link>http://example.org/categories/linux/</link>
+      <link>https://diegobrocanelli.com.br/categories/linux/</link>
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
       
-      <guid>http://example.org/categories/linux/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>podcast</title>
-      <link>http://example.org/categories/podcast/</link>
+      <link>https://diegobrocanelli.com.br/categories/podcast/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
       
-      <guid>http://example.org/categories/podcast/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/podcast/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vídeo</title>
-      <link>http://example.org/categories/v%C3%ADdeo/</link>
+      <link>https://diegobrocanelli.com.br/categories/v%C3%ADdeo/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
       
-      <guid>http://example.org/categories/v%C3%ADdeo/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/v%C3%ADdeo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>comunidade</title>
-      <link>http://example.org/categories/comunidade/</link>
+      <link>https://diegobrocanelli.com.br/categories/comunidade/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
       
-      <guid>http://example.org/categories/comunidade/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/comunidade/</guid>
       <description></description>
     </item>
     
     <item>
       <title>iniciante</title>
-      <link>http://example.org/categories/iniciante/</link>
+      <link>https://diegobrocanelli.com.br/categories/iniciante/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
       
-      <guid>http://example.org/categories/iniciante/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/iniciante/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://example.org/categories/git/</link>
+      <link>https://diegobrocanelli.com.br/categories/git/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
       
-      <guid>http://example.org/categories/git/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub</title>
-      <link>http://example.org/categories/github/</link>
+      <link>https://diegobrocanelli.com.br/categories/github/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
       
-      <guid>http://example.org/categories/github/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>open source</title>
-      <link>http://example.org/categories/open-source/</link>
+      <link>https://diegobrocanelli.com.br/categories/open-source/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
       
-      <guid>http://example.org/categories/open-source/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>http://example.org/categories/php/</link>
+      <link>https://diegobrocanelli.com.br/categories/php/</link>
       <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
       
-      <guid>http://example.org/categories/php/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>desenvolvimento</title>
-      <link>http://example.org/categories/desenvolvimento/</link>
+      <link>https://diegobrocanelli.com.br/categories/desenvolvimento/</link>
       <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
       
-      <guid>http://example.org/categories/desenvolvimento/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/desenvolvimento/</guid>
       <description></description>
     </item>
     

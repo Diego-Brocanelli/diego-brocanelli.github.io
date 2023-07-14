@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>gravatar on Diego Brocanelli</title>
-    <link>http://example.org/tags/gravatar/</link>
+    <link>https://diegobrocanelli.com.br/tags/gravatar/</link>
     <description>Recent content in gravatar on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 27 Feb 2017 15:34:47 +0000</lastBuildDate><atom:link href="http://example.org/tags/gravatar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2017 15:34:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/gravatar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obtendo imagens do Gravatar</title>
-      <link>http://example.org/php/obtendo-imagens-do-gravatar/</link>
+      <link>https://diegobrocanelli.com.br/php/obtendo-imagens-do-gravatar/</link>
       <pubDate>Mon, 27 Feb 2017 15:34:47 +0000</pubDate>
       
-      <guid>http://example.org/php/obtendo-imagens-do-gravatar/</guid>
+      <guid>https://diegobrocanelli.com.br/php/obtendo-imagens-do-gravatar/</guid>
       <description>Olá, tudo bem?!
 Um serviço muito bacana é o Gravatar, onde você pode vincular uma imagem ao e-mail desejado e com isso ao comentar em um blog ou serviço que disponibiliza o recurso o mesmo exibirá automaticamente a imagem configurada.
 E para manipular o serviço com maior facilidade construí uma biblioteca para executar esta tarefa, vamos ao seu uso!

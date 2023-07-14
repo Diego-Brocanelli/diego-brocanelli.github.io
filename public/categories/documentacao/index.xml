@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>documentacao on Diego Brocanelli</title>
-    <link>http://example.org/categories/documentacao/</link>
+    <link>https://diegobrocanelli.com.br/categories/documentacao/</link>
     <description>Recent content in documentacao on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 02 May 2017 18:15:43 +0000</lastBuildDate><atom:link href="http://example.org/categories/documentacao/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2017 18:15:43 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/documentacao/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHPDoc, para que server e onde devo usar?</title>
-      <link>http://example.org/php/phpdoc-para-que-server-e-onde-devo-usar/</link>
+      <link>https://diegobrocanelli.com.br/php/phpdoc-para-que-server-e-onde-devo-usar/</link>
       <pubDate>Tue, 02 May 2017 18:15:43 +0000</pubDate>
       
-      <guid>http://example.org/php/phpdoc-para-que-server-e-onde-devo-usar/</guid>
+      <guid>https://diegobrocanelli.com.br/php/phpdoc-para-que-server-e-onde-devo-usar/</guid>
       <description>Olá pessoal, tudo bem?!
 Com certa frequência menosprezamos o valor do PHPDoc, porém o que é isso?
 ‘”PHPDoc” is a section of documentation which provides information on aspects of a “Structural Element”.’
@@ -23,10 +23,10 @@ Sua falta se dá no pior momento, onde necessitamos consultar um recurso e não 
     
     <item>
       <title>Gerando documentação do seu sistema utilizando a API SAMI</title>
-      <link>http://example.org/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</link>
+      <link>https://diegobrocanelli.com.br/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</link>
       <pubDate>Thu, 12 May 2016 01:57:27 +0000</pubDate>
       
-      <guid>http://example.org/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</guid>
+      <guid>https://diegobrocanelli.com.br/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</guid>
       <description>Fala pessoal tudo tranquilo?
 Quem nunca se deparou com a necessidade de documentar o sistema que está desenvolvendo, para que outros programadores consigam realizar novas implementações, correções ou até mesmo consumir a API.
 Sabemos que a documentação é algo essencial e indispensável no desenvolvimento de softwares para garantir a longevidade de nossos sistemas. O PHP não fica para trás neste quesito, atualmente no PHP-FIG está em processo de “Draft” a PSR-5 visando um padrão para PHPDoc para comunidade PHP.</description>

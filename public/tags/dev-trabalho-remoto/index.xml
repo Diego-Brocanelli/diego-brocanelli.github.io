@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>dev - trabalho remoto on Diego Brocanelli</title>
-    <link>http://example.org/tags/dev-trabalho-remoto/</link>
+    <link>https://diegobrocanelli.com.br/tags/dev-trabalho-remoto/</link>
     <description>Recent content in dev - trabalho remoto on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:37:21 +0000</lastBuildDate><atom:link href="http://example.org/tags/dev-trabalho-remoto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:37:21 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/dev-trabalho-remoto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 22 – Trabalho Remoto na Vida Real</title>
-      <link>http://example.org/php/hhbr-22-trabalho-remoto-na-vida-real/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-22-trabalho-remoto-na-vida-real/</link>
       <pubDate>Tue, 05 Nov 2019 16:37:21 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-22-trabalho-remoto-na-vida-real/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-22-trabalho-remoto-na-vida-real/</guid>
       <description>Olá, tudo bem?!
 Nesta 22º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Trabalho Remoto na Vida Real” com o grande Davi Marcondes Moreira, um tema muito em alta na comunidade de TI, por chamar muito a atenção por um estilo que proporciona maior qualidade de vida e produtividade.
 Foram abordados os pontos positivos, negativos e muitas dicas para poder se preparar e iniciar sua jornada com o trabalho remoto.</description>

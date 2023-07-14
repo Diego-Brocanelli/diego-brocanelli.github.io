@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>git on Diego Brocanelli</title>
-    <link>http://example.org/categories/git/</link>
+    <link>https://diegobrocanelli.com.br/categories/git/</link>
     <description>Recent content in git on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate><atom:link href="http://example.org/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT – Seu guia de sobrevivência</title>
-      <link>http://example.org/git/git-seu-guia-de-sobrevivencia/</link>
+      <link>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
       
-      <guid>http://example.org/git/git-seu-guia-de-sobrevivencia/</guid>
+      <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
       <description>Olá, tudo bem!
 O que é GIT? É uma ferramente para controle de versão descentralizada criada por Linus Torvalds, que possibilita a gestão do versionamento de códigos, alias, não necessariamente apenas códigos, sendo a ferramente mais utilizada para a finalidade a que se propõem.
 Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?
@@ -21,10 +21,10 @@ Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas
     
     <item>
       <title>Atualizando seu fork no GitHub</title>
-      <link>http://example.org/git/atualizando-seu-fork-no-github/</link>
+      <link>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</link>
       <pubDate>Fri, 17 Nov 2017 18:02:27 +0000</pubDate>
       
-      <guid>http://example.org/git/atualizando-seu-fork-no-github/</guid>
+      <guid>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</guid>
       <description>Olá, tudo bem?!
 É comum atualizar o fork do projeto que contribuirmos no GitHub.
 Pois conforme contribuímos outros contribuidores também fazem o mesmo, com isso o fork fica desatualizado.

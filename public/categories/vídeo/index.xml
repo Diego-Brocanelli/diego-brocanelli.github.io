@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>vídeo on Diego Brocanelli</title>
-    <link>http://example.org/categories/v%C3%ADdeo/</link>
+    <link>https://diegobrocanelli.com.br/categories/v%C3%ADdeo/</link>
     <description>Recent content in vídeo on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate><atom:link href="http://example.org/categories/v%C3%ADdeo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/v%C3%ADdeo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Participação no Podcast Fechatag</title>
-      <link>http://example.org/video/participacao-no-podcast-fechatag/</link>
+      <link>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
       
-      <guid>http://example.org/video/participacao-no-podcast-fechatag/</guid>
+      <guid>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</guid>
       <description>Olá, tudo bem?
 Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
 Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
@@ -21,10 +21,10 @@ Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham s
     
     <item>
       <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
-      <link>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
       <description>Olá, tudo bem?!
 Nesta edição de número 28 do hhbr tivemos uma mega palestra sobre Vue.js com o palestrante William Correa, que explanou em detalhes diversos pontos bacanas da renderização com Vue.
 Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: William Correa Twitter: @wilcorrea Github: @wilcorrea Links Comentado https://vuejs.org/ https://br.vuejs.org/ https://template-explorer.vuejs.org </description>
@@ -32,20 +32,20 @@ Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: W
     
     <item>
       <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
-      <link>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
       <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
 Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
     </item>
     
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>http://example.org/video/hhbr-26-ecossistema-javascript/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-26-ecossistema-javascript/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
       <description>Olá!
 Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
 Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.
@@ -54,10 +54,10 @@ Dados da palestra Tema: “Ecossistema javascript” Palestrante: Marco Bruno Tw
     
     <item>
       <title>hhbr: 24 – Um bate papo sobre TI (vídeo)</title>
-      <link>http://example.org/video/hhbr-24-um-bate-papo-sobre-ti/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-24-um-bate-papo-sobre-ti/</link>
       <pubDate>Tue, 05 Nov 2019 16:39:06 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-24-um-bate-papo-sobre-ti/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-24-um-bate-papo-sobre-ti/</guid>
       <description>Olá, tudo bem?!
 Nesta 24º edição da comunidade hhbr tivemos a oportunidade de bater um papo sobre “Um bate papo sobre TI” com o fantástico Roberto Achar e comigo, um super bate papo sobre TI seus pontos positivos, negativos, mercado etc e com a participação incrível da comunidade com muitas perguntas bacanas.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!
@@ -66,10 +66,10 @@ Dados da palestra Tema: “Um bate papo sobre TI” Palestrante: Roberto Achar S
     
     <item>
       <title>hhbr: 20 – Faculdade na área de TI (vídeo)</title>
-      <link>http://example.org/video/hhbr-20-faculdade-na-area-de-ti/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-20-faculdade-na-area-de-ti/</link>
       <pubDate>Tue, 05 Nov 2019 16:35:46 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-20-faculdade-na-area-de-ti/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-20-faculdade-na-area-de-ti/</guid>
       <description>Olá, tudo bem?!
 Nesta 20º edição da comunidade hhbr pudemos apreciar um fantástico bate papo sobre faculdade na área da TI.
 Debatemos sobre os pontos positivos, negativos, oportunidades, desafios e respondemos perguntas dos participantes, para que assim de alguma maneira podermos auxiliar quem está na dúvida sobre fazer ou não uma faculdade.
@@ -78,10 +78,10 @@ Dados da palestra Participantes: Vinícius Martins Site: http://viniciusmsantos.
     
     <item>
       <title>hhbr: 19 – Soft skills para devs (vídeo)</title>
-      <link>http://example.org/video/hhbr-19-soft-skills-para-devs-video/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-19-soft-skills-para-devs-video/</link>
       <pubDate>Tue, 05 Nov 2019 16:34:40 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-19-soft-skills-para-devs-video/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-19-soft-skills-para-devs-video/</guid>
       <description>Olá, tudo bem?!
 Nesta 19º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Soft skills para devs” ministrado pelo grande Leonam Pereira Dias.
 Um conteúdo fantástico que nos faz refletir sobre muito de nossa postura, a adoção das dicas e técnicas que o palestrante nos brindou na palestra com certeza agrega muito valor tento em nossa vida pessoal quanto na profissional.
@@ -90,10 +90,10 @@ Dados da palestra Tema: “Soft skills para devs” Palestrante: Leonam Pereira 
     
     <item>
       <title>hhbr: 15 – SPL e Estruturas de Dados (vídeo)</title>
-      <link>http://example.org/php/hhbr-15-spl-e-estruturas-de-dados/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-15-spl-e-estruturas-de-dados/</link>
       <pubDate>Thu, 26 Oct 2017 10:47:45 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-15-spl-e-estruturas-de-dados/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-15-spl-e-estruturas-de-dados/</guid>
       <description>Olá, tudo bem?!
 Rolou a 15 edição do hhbr, nesta edição trago para vocês uma palestra super bacana apresentada pelo mestre Davi Marcondes sobre Estrutura de dados com SPL no PHP.
 Uma palestra recheada de muito conteúdo e exemplos práticos das estruturas de dados implementadas utilizando SPL.
@@ -102,10 +102,10 @@ Você que quer aprender a utilizar de forma correta e aumentar a performance dos
     
     <item>
       <title>HHBR: 14 – Iniciando com Composer (vídeo)</title>
-      <link>http://example.org/php/hhbr-14-iniciando-com-composer-video/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</link>
       <pubDate>Thu, 28 Sep 2017 12:15:24 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-14-iniciando-com-composer-video/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</guid>
       <description>Olá, tudo bem?!
 Rolou a 14 edição do hhbr, nesta edição trago para vocês uma talk bacana que produzi apresentando o Composer, a ferramenta de gestão de dependências do PHP.
 Uma talk voltada para o público iniciante, porém, focado em incentivar a adoção da ferramentas pelos desenvolvedores PHP, demonstrando os principais recursos da ferramenta.
@@ -114,10 +114,10 @@ Dados da palestra Tema: &amp;ldquo;Iniciando com Composer&amp;rdquo; Palestrante
     
     <item>
       <title>HHBR: 13 – Henrique Bastos (vídeo)</title>
-      <link>http://example.org/video/henrique-bastos/</link>
+      <link>https://diegobrocanelli.com.br/video/henrique-bastos/</link>
       <pubDate>Thu, 07 Sep 2017 14:00:11 +0000</pubDate>
       
-      <guid>http://example.org/video/henrique-bastos/</guid>
+      <guid>https://diegobrocanelli.com.br/video/henrique-bastos/</guid>
       <description>Olá pessoal, tudo bem?!
 Rolou a 13 edição do HHBR com o grande Henrique Bastos, foi uma edição fantástica, onde rolou um super bate papo recheado de perguntas feitas pela comunidade durante a gravação.
 Nesta edição abordamos diversos temas como carreira , programação, estilo de vida e muito mais.

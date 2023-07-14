@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ecosistema on Diego Brocanelli</title>
-    <link>http://example.org/tags/ecosistema/</link>
+    <link>https://diegobrocanelli.com.br/tags/ecosistema/</link>
     <description>Recent content in ecosistema on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate><atom:link href="http://example.org/tags/ecosistema/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/ecosistema/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>http://example.org/video/hhbr-26-ecossistema-javascript/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-26-ecossistema-javascript/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
       <description>Olá!
 Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
 Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.

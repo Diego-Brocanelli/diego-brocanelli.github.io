@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>php on Diego Brocanelli</title>
-    <link>http://example.org/categories/php/</link>
+    <link>https://diegobrocanelli.com.br/categories/php/</link>
     <description>Recent content in php on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate><atom:link href="http://example.org/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Funções nativas PHP – str_getcsv</title>
-      <link>http://example.org/php/funcoes-nativas-php-str_getcsv/</link>
+      <link>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</link>
       <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
       
-      <guid>http://example.org/php/funcoes-nativas-php-str_getcsv/</guid>
+      <guid>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</guid>
       <description>Olá!
 PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.
 Uma dessas funções é a str_getcsv, responsável por ler um arquivo csv e converter seus valores em um array.
@@ -22,10 +22,10 @@ Assinatura da função: 1 str_getcsv ( string $input [, string $delimiter = &amp
     
     <item>
       <title>hhbr: 25 – Introdução a CQRS e Event Sourcing (vídeo)</title>
-      <link>http://example.org/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
       <pubDate>Tue, 05 Nov 2019 16:40:45 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
       <description>Olá, tudo bem?!
 Nesta 25º edição da comunidade hhbr tivemos uma incrível palestra sobre “Introdução a CQRS e Event Sourcing” com o monstro da programação Marcelo Santos, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!
@@ -34,10 +34,10 @@ Dados da palestra Tema: “Introdução a CQRS e Event Sourcing” Palestrante: 
     
     <item>
       <title>hhbr: 22 – Trabalho Remoto na Vida Real</title>
-      <link>http://example.org/php/hhbr-22-trabalho-remoto-na-vida-real/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-22-trabalho-remoto-na-vida-real/</link>
       <pubDate>Tue, 05 Nov 2019 16:37:21 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-22-trabalho-remoto-na-vida-real/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-22-trabalho-remoto-na-vida-real/</guid>
       <description>Olá, tudo bem?!
 Nesta 22º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Trabalho Remoto na Vida Real” com o grande Davi Marcondes Moreira, um tema muito em alta na comunidade de TI, por chamar muito a atenção por um estilo que proporciona maior qualidade de vida e produtividade.
 Foram abordados os pontos positivos, negativos e muitas dicas para poder se preparar e iniciar sua jornada com o trabalho remoto.</description>
@@ -45,10 +45,10 @@ Foram abordados os pontos positivos, negativos e muitas dicas para poder se prep
     
     <item>
       <title>hhbr: 17 – Primeiros passos com integração contínua (vídeo)</title>
-      <link>http://example.org/php/hhbr-17-primeiros-passos-com-integracao-continua/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-17-primeiros-passos-com-integracao-continua/</link>
       <pubDate>Tue, 05 Nov 2019 16:32:13 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-17-primeiros-passos-com-integracao-continua/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-17-primeiros-passos-com-integracao-continua/</guid>
       <description>Olá, tudo bem?!
 Nesta 17º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Primeiros passos com integração contínua” ministrado pelo grande Iury Alves.
 Demonstrado na prática as principais técnicas e conceitos para iniciar com a integração contínua, abordando ferramentas que facilitam nossa vida. Sem mais delongas, segue abaixo a gravação da palestra.
@@ -57,10 +57,10 @@ Dados da palestra Tema: “Primeiros passos com integração contínua” Palest
     
     <item>
       <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
-      <link>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
       <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
       <description>Olá, tudo bem?!
 Nesta décima sexta edição da comunidade hhbr trazemos uma grande palestra com o tema “Contribuindo com o PHP e o PHP TestFest 2017”, ministrado pelo grande Rogerio Prado de Jesus.
 Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Palestrante: Rogerio Prado de Jesus Site: https://rogeriopradoj.com/ Twitter: https://twitter.com/RogerioPradoJ GitHub: https://github.com/RogerioPradoJ Comunidade: https://t.me/PHPTestFestBrasil Link dos slides: https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16 Links Comentados https://phptestfest.org/&amp;gt; https://3v4l.org/ http://pensandonaweb.com.br/ https://externals.io/ https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ https://qa.</description>
@@ -68,10 +68,10 @@ Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Pales
     
     <item>
       <title>hhbr : 01 – Docker para iniciantes</title>
-      <link>http://example.org/php/hhbr-01-docker-para-iniciantes/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-01-docker-para-iniciantes/</link>
       <pubDate>Tue, 05 Nov 2019 16:26:41 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-01-docker-para-iniciantes/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-01-docker-para-iniciantes/</guid>
       <description>Olá, tudo bem?!
 Em nossa primeira edição da comunidade hhbr trazemos uma grande palestra com o tema “Docker para iniciantes”, ministrado pelo grande Wellington F. Silva.
 Foi abordado os principais conceitos básicos, com muitos exemplos de uso prático. Espero que apreceiem o conteúdo.
@@ -81,10 +81,10 @@ Dados da palestra Tema: “Docker para iniciantes” Palestrante: Wellington F. 
     
     <item>
       <title>Novidades do PHP 7.4</title>
-      <link>http://example.org/php/novidades-do-php-7-4/</link>
+      <link>https://diegobrocanelli.com.br/php/novidades-do-php-7-4/</link>
       <pubDate>Sun, 05 May 2019 11:41:17 +0000</pubDate>
       
-      <guid>http://example.org/php/novidades-do-php-7-4/</guid>
+      <guid>https://diegobrocanelli.com.br/php/novidades-do-php-7-4/</guid>
       <description>Olá, tudo bem?!
 Com previsão de lançamento para dezembro de 2019, o PHP 7.4 está com novidades muito legais e que temos que estar antenados e acompanhando essa evolução, separei abaixo algumas novas funcionalidades que acredito serem bem bacanas.
 Preloading rfc Preloading é uma adição incrível ao core do PHP, o que pode resultar em uma melhora em seu desempenho.
@@ -93,10 +93,10 @@ Atualmente os arquivos PHP são carregados e recompilados a cada requisição.</
     
     <item>
       <title>Refactoring – Replace temp with query</title>
-      <link>http://example.org/php/refactoring-replace-temp-with-query/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</link>
       <pubDate>Mon, 17 Sep 2018 12:37:37 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-replace-temp-with-query/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</guid>
       <description>Olá, tubo bem?!
 Frequentemente vemos o uso de variáveis locais realizarem operações e/ou ações.
 1 2 3 4 5 6 7 8 9 10 &amp;lt;?php $basePrice = $this-&amp;gt;quantity * $this-&amp;gt;itemPrice; if ($basePrice &amp;gt; 1000){ return $basePrice * 0.95; } else{ return $basePrice * 0.98; } Por que devemos refatorar? Abrirá portas para utilizarmos o Extract Methods. Podemos reutilizar a mesma expressão em outras partes do sistema. Facilitamos as modificações/implementações de regras de negócio.</description>
@@ -104,10 +104,10 @@ Frequentemente vemos o uso de variáveis locais realizarem operações e/ou aç�
     
     <item>
       <title>Modularizando Sua Aplicação Laravel</title>
-      <link>http://example.org/php/laravel-module/</link>
+      <link>https://diegobrocanelli.com.br/php/laravel-module/</link>
       <pubDate>Wed, 05 Sep 2018 13:34:32 +0000</pubDate>
       
-      <guid>http://example.org/php/laravel-module/</guid>
+      <guid>https://diegobrocanelli.com.br/php/laravel-module/</guid>
       <description>Olá, tudo bem?!
 Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.
 Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.
@@ -116,10 +116,10 @@ O Laravel é um grande framework, onde vem crescendo cada vez mais ao longo dos 
     
     <item>
       <title>Refactoring – Extract Method</title>
-      <link>http://example.org/php/refactoring-extract-method/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-extract-method/</link>
       <pubDate>Mon, 27 Aug 2018 16:17:28 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-extract-method/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-extract-method/</guid>
       <description>Olá, tudo bem?!
 Você já deve ter esbarrado ou feito manutenção em códigos que o método tem muitas ações, como bem sabemos isso é muito ruim, pois aumenta a complexidade da leitura, manutenção, acoplamento e dificulta seu reuso. Abaixo podemos observar um exemplo:
 1 2 3 4 5 6 7 8 9 &amp;lt;?php public function printOwing() { $this-&amp;gt;printBanner(); //print details print(&amp;#34;name: &amp;#34; . $this-&amp;gt;name); print(&amp;#34;amount &amp;#34; . $this-&amp;gt;getOutstanding()); Por que refatorar?</description>

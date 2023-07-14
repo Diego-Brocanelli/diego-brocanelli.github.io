@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>iniciante on Diego Brocanelli</title>
-    <link>http://example.org/tags/iniciante/</link>
+    <link>https://diegobrocanelli.com.br/tags/iniciante/</link>
     <description>Recent content in iniciante on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate><atom:link href="http://example.org/tags/iniciante/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/iniciante/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>http://example.org/comunidade/como-estudo-uma-nova-tecnologia/</link>
+      <link>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
       
-      <guid>http://example.org/comunidade/como-estudo-uma-nova-tecnologia/</guid>
+      <guid>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</guid>
       <description>Olá, tudo bem?!
 É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.
 Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.</description>
@@ -20,10 +20,10 @@ Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar,
     
     <item>
       <title>hhbr : 01 – Docker para iniciantes</title>
-      <link>http://example.org/php/hhbr-01-docker-para-iniciantes/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-01-docker-para-iniciantes/</link>
       <pubDate>Tue, 05 Nov 2019 16:26:41 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-01-docker-para-iniciantes/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-01-docker-para-iniciantes/</guid>
       <description>Olá, tudo bem?!
 Em nossa primeira edição da comunidade hhbr trazemos uma grande palestra com o tema “Docker para iniciantes”, ministrado pelo grande Wellington F. Silva.
 Foi abordado os principais conceitos básicos, com muitos exemplos de uso prático. Espero que apreceiem o conteúdo.
@@ -33,10 +33,10 @@ Dados da palestra Tema: “Docker para iniciantes” Palestrante: Wellington F. 
     
     <item>
       <title>Como realizar parse da query string de forma simples com PHP</title>
-      <link>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</link>
+      <link>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</link>
       <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
       
-      <guid>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <guid>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</guid>
       <description>Olá, tudo bem!
 Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
 Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.

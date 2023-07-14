@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>desenvolvimento on Diego Brocanelli</title>
-    <link>http://example.org/categories/desenvolvimento/</link>
+    <link>https://diegobrocanelli.com.br/categories/desenvolvimento/</link>
     <description>Recent content in desenvolvimento on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate><atom:link href="http://example.org/categories/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuração automática de estação de trabalho</title>
-      <link>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
+      <link>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
       <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
       
-      <guid>http://example.org/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
+      <guid>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
       <description>Olá, tudo bem!
 Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado workstation_configuration, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.
 Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scripts shell que fazem todo o trabalho de instalação e configuração conforme informações contidas no arquivo setup.</description>
@@ -20,10 +20,10 @@ Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scr
     
     <item>
       <title>Melhore a qualidade do código da sua equipe com Code Review</title>
-      <link>http://example.org/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
+      <link>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
       <pubDate>Wed, 10 May 2017 22:20:12 +0000</pubDate>
       
-      <guid>http://example.org/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
+      <guid>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
       <description>Olá, tudo bem?!
 Um dos métodos que podemos utilizar para melhorar nosso source code é adotar a pratica de code review.
 Ao realizar este processo, teremos a oportunidade de compartilhar conhecimento, melhorar o código e diminuir a quantidade de bugs que possivelmente existem no sistema.
@@ -33,10 +33,10 @@ Regras para um bom code review De 200 à 400 linhas de código no máximo.</desc
     
     <item>
       <title>hhbr : 05 – Refatoração (vídeo)</title>
-      <link>http://example.org/php/refatoracao-video/</link>
+      <link>https://diegobrocanelli.com.br/php/refatoracao-video/</link>
       <pubDate>Sat, 10 Dec 2016 21:06:31 +0000</pubDate>
       
-      <guid>http://example.org/php/refatoracao-video/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refatoracao-video/</guid>
       <description>Olá pessoal, tudo bem?!
 Ocorreu hoje a quinta edição do hhbr, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka @devdrops.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!

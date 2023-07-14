@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>python on Diego Brocanelli</title>
-    <link>http://example.org/categories/python/</link>
+    <link>https://diegobrocanelli.com.br/categories/python/</link>
     <description>Recent content in python on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 07 Sep 2017 14:00:11 +0000</lastBuildDate><atom:link href="http://example.org/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Sep 2017 14:00:11 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HHBR: 13 – Henrique Bastos (vídeo)</title>
-      <link>http://example.org/video/henrique-bastos/</link>
+      <link>https://diegobrocanelli.com.br/video/henrique-bastos/</link>
       <pubDate>Thu, 07 Sep 2017 14:00:11 +0000</pubDate>
       
-      <guid>http://example.org/video/henrique-bastos/</guid>
+      <guid>https://diegobrocanelli.com.br/video/henrique-bastos/</guid>
       <description>Olá pessoal, tudo bem?!
 Rolou a 13 edição do HHBR com o grande Henrique Bastos, foi uma edição fantástica, onde rolou um super bate papo recheado de perguntas feitas pela comunidade durante a gravação.
 Nesta edição abordamos diversos temas como carreira , programação, estilo de vida e muito mais.
@@ -22,10 +22,10 @@ Dados da palestra Palestrante: Henrique Bastos Site: http://henriquebastos.net/ 
     
     <item>
       <title>hhbr : 03 – Resolvendo os seus problemas web com Flask  (Vídeo)</title>
-      <link>http://example.org/video/resolvendo-os-seus-problemas-web-com-flask-video/</link>
+      <link>https://diegobrocanelli.com.br/video/resolvendo-os-seus-problemas-web-com-flask-video/</link>
       <pubDate>Tue, 25 Oct 2016 23:53:51 +0000</pubDate>
       
-      <guid>http://example.org/video/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
+      <guid>https://diegobrocanelli.com.br/video/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
       <description>Olá pessoal, tudo bem?!
 Hoje tivemos a terceira edição do hhbr, o tema da palestra deste mês foi “Resolvendo os seus problemas web com Flask”.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!

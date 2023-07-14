@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>refactoring on Diego Brocanelli</title>
-    <link>http://example.org/tags/refactoring/</link>
+    <link>https://diegobrocanelli.com.br/tags/refactoring/</link>
     <description>Recent content in refactoring on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:42:02 +0000</lastBuildDate><atom:link href="http://example.org/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:42:02 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
-      <link>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <link>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
       
-      <guid>http://example.org/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <guid>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
       <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
 Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
     </item>
     
     <item>
       <title>Refactoring – Replace temp with query</title>
-      <link>http://example.org/php/refactoring-replace-temp-with-query/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</link>
       <pubDate>Mon, 17 Sep 2018 12:37:37 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-replace-temp-with-query/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</guid>
       <description>Olá, tubo bem?!
 Frequentemente vemos o uso de variáveis locais realizarem operações e/ou ações.
 1 2 3 4 5 6 7 8 9 10 &amp;lt;?php $basePrice = $this-&amp;gt;quantity * $this-&amp;gt;itemPrice; if ($basePrice &amp;gt; 1000){ return $basePrice * 0.95; } else{ return $basePrice * 0.98; } Por que devemos refatorar? Abrirá portas para utilizarmos o Extract Methods. Podemos reutilizar a mesma expressão em outras partes do sistema. Facilitamos as modificações/implementações de regras de negócio.</description>
@@ -30,10 +30,10 @@ Frequentemente vemos o uso de variáveis locais realizarem operações e/ou aç�
     
     <item>
       <title>Refactoring – Extract Method</title>
-      <link>http://example.org/php/refactoring-extract-method/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-extract-method/</link>
       <pubDate>Mon, 27 Aug 2018 16:17:28 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-extract-method/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-extract-method/</guid>
       <description>Olá, tudo bem?!
 Você já deve ter esbarrado ou feito manutenção em códigos que o método tem muitas ações, como bem sabemos isso é muito ruim, pois aumenta a complexidade da leitura, manutenção, acoplamento e dificulta seu reuso. Abaixo podemos observar um exemplo:
 1 2 3 4 5 6 7 8 9 &amp;lt;?php public function printOwing() { $this-&amp;gt;printBanner(); //print details print(&amp;#34;name: &amp;#34; . $this-&amp;gt;name); print(&amp;#34;amount &amp;#34; . $this-&amp;gt;getOutstanding()); Por que refatorar?</description>
@@ -41,10 +41,10 @@ Você já deve ter esbarrado ou feito manutenção em códigos que o método tem
     
     <item>
       <title>Refactoring – Extract Variable</title>
-      <link>http://example.org/engenharia-de-software/refactoring-extract-variable/</link>
+      <link>https://diegobrocanelli.com.br/engenharia-de-software/refactoring-extract-variable/</link>
       <pubDate>Mon, 20 Aug 2018 17:21:01 +0000</pubDate>
       
-      <guid>http://example.org/engenharia-de-software/refactoring-extract-variable/</guid>
+      <guid>https://diegobrocanelli.com.br/engenharia-de-software/refactoring-extract-variable/</guid>
       <description>Olá, tubo bem?!
 Refatorar é um processo que faz parte do dia a dia do desenvolvedor, existem diversos motivos e técnicas para isso.
 Um problema comum que deparamos são condicionais complexas, dificultando sua legibilidade e a manutenção, abaixo podemos observar um exemplo.
@@ -53,10 +53,10 @@ Um problema comum que deparamos são condicionais complexas, dificultando sua le
     
     <item>
       <title>hhbr : 05 – Refatoração (vídeo)</title>
-      <link>http://example.org/php/refatoracao-video/</link>
+      <link>https://diegobrocanelli.com.br/php/refatoracao-video/</link>
       <pubDate>Sat, 10 Dec 2016 21:06:31 +0000</pubDate>
       
-      <guid>http://example.org/php/refatoracao-video/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refatoracao-video/</guid>
       <description>Olá pessoal, tudo bem?!
 Ocorreu hoje a quinta edição do hhbr, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka @devdrops.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!

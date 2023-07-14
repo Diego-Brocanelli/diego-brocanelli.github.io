@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>software on Diego Brocanelli</title>
-    <link>http://example.org/tags/software/</link>
+    <link>https://diegobrocanelli.com.br/tags/software/</link>
     <description>Recent content in software on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 27 Aug 2018 16:17:28 +0000</lastBuildDate><atom:link href="http://example.org/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Aug 2018 16:17:28 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Refactoring – Extract Method</title>
-      <link>http://example.org/php/refactoring-extract-method/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-extract-method/</link>
       <pubDate>Mon, 27 Aug 2018 16:17:28 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-extract-method/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-extract-method/</guid>
       <description>Olá, tudo bem?!
 Você já deve ter esbarrado ou feito manutenção em códigos que o método tem muitas ações, como bem sabemos isso é muito ruim, pois aumenta a complexidade da leitura, manutenção, acoplamento e dificulta seu reuso. Abaixo podemos observar um exemplo:
 1 2 3 4 5 6 7 8 9 &amp;lt;?php public function printOwing() { $this-&amp;gt;printBanner(); //print details print(&amp;#34;name: &amp;#34; . $this-&amp;gt;name); print(&amp;#34;amount &amp;#34; . $this-&amp;gt;getOutstanding()); Por que refatorar?</description>
@@ -20,10 +20,10 @@ Você já deve ter esbarrado ou feito manutenção em códigos que o método tem
     
     <item>
       <title>Refactoring – Extract Variable</title>
-      <link>http://example.org/engenharia-de-software/refactoring-extract-variable/</link>
+      <link>https://diegobrocanelli.com.br/engenharia-de-software/refactoring-extract-variable/</link>
       <pubDate>Mon, 20 Aug 2018 17:21:01 +0000</pubDate>
       
-      <guid>http://example.org/engenharia-de-software/refactoring-extract-variable/</guid>
+      <guid>https://diegobrocanelli.com.br/engenharia-de-software/refactoring-extract-variable/</guid>
       <description>Olá, tubo bem?!
 Refatorar é um processo que faz parte do dia a dia do desenvolvedor, existem diversos motivos e técnicas para isso.
 Um problema comum que deparamos são condicionais complexas, dificultando sua legibilidade e a manutenção, abaixo podemos observar um exemplo.

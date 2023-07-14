@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>sql on Diego Brocanelli</title>
-    <link>http://example.org/tags/sql/</link>
+    <link>https://diegobrocanelli.com.br/tags/sql/</link>
     <description>Recent content in sql on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="http://example.org/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
-      <link>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <link>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
       <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
       
-      <guid>http://example.org/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <guid>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
       <description>Olá, tudo bem?!
 O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
 Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
@@ -20,10 +20,10 @@ Resolução e demonstração prática Para aplicação prática devemos inicialm
     
     <item>
       <title>Defesa eficaz contra SQL Injection – Comunicação com o banco de dados</title>
-      <link>http://example.org/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</link>
+      <link>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:22 +0000</pubDate>
       
-      <guid>http://example.org/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</guid>
+      <guid>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</guid>
       <description>Fala galera, tudo tranquilo?!
 Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados) recomendo a leitura para maior compreensão do tema.
 Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.</description>
@@ -31,10 +31,10 @@ Nós demos uma introdução do SQL Injection, abordamos o quão importante é va
     
     <item>
       <title>Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</title>
-      <link>http://example.org/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</link>
+      <link>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:16 +0000</pubDate>
       
-      <guid>http://example.org/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</guid>
+      <guid>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</guid>
       <description>Fala galera, tudo tranquilo?!
 Neste post daremos continuidade a nossa seŕie de posts para prevenção de SQL injection, caso você ainda não tenha lido nosso primeiro post “Defesa eficaz contra SQL Injection – Introdução” recomendo a leitura para que assim você possa usufruir com maior qualidade dos textos.
 Todo sistema, sendo ele desktop, mobile ou web ele recebe dados transmitidos pelo usuário, podendo ser um simples formulário para coleta de e-mail até informações complexas como controle de fluxo orçamentário da empresa.</description>
@@ -42,10 +42,10 @@ Todo sistema, sendo ele desktop, mobile ou web ele recebe dados transmitidos pel
     
     <item>
       <title>Defesa eficaz contra SQL Injection – Introdução</title>
-      <link>http://example.org/php/defesa-eficaz-contra-sql-injection-introducao/</link>
+      <link>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-introducao/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:07 +0000</pubDate>
       
-      <guid>http://example.org/php/defesa-eficaz-contra-sql-injection-introducao/</guid>
+      <guid>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-introducao/</guid>
       <description>Fala galera, tudo tranquilo?!
 Um tema muito bacana e recorrente no desenvolvimento web é SQL Injection e neste post irei abordar algumas boas práticas na defesa contra esses ataques.
 Teremos 3 posts relacionados ao tema, sendo:

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>data on Diego Brocanelli</title>
-    <link>http://example.org/tags/data/</link>
+    <link>https://diegobrocanelli.com.br/tags/data/</link>
     <description>Recent content in data on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 01 Feb 2017 19:37:42 +0000</lastBuildDate><atom:link href="http://example.org/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2017 19:37:42 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converter data para PT-BR com PHP</title>
-      <link>http://example.org/php/converter-data-para-pt-br-com-php/</link>
+      <link>https://diegobrocanelli.com.br/php/converter-data-para-pt-br-com-php/</link>
       <pubDate>Wed, 01 Feb 2017 19:37:42 +0000</pubDate>
       
-      <guid>http://example.org/php/converter-data-para-pt-br-com-php/</guid>
+      <guid>https://diegobrocanelli.com.br/php/converter-data-para-pt-br-com-php/</guid>
       <description>Fala galera, tudo bem?!
 Uma dúvida recorrente é a conversão de data de EN para PT-BR, uma tarefa corriqueira em nosso dia a dia.
 Comumente trabalhamos no formato EN para armazenar a informação no banco de dados, porém em determinados casos temos a necessidade de converter a data para PT_BR.

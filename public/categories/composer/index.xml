@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>composer on Diego Brocanelli</title>
-    <link>http://example.org/categories/composer/</link>
+    <link>https://diegobrocanelli.com.br/categories/composer/</link>
     <description>Recent content in composer on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 28 Sep 2017 12:15:24 +0000</lastBuildDate><atom:link href="http://example.org/categories/composer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2017 12:15:24 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HHBR: 14 – Iniciando com Composer (vídeo)</title>
-      <link>http://example.org/php/hhbr-14-iniciando-com-composer-video/</link>
+      <link>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</link>
       <pubDate>Thu, 28 Sep 2017 12:15:24 +0000</pubDate>
       
-      <guid>http://example.org/php/hhbr-14-iniciando-com-composer-video/</guid>
+      <guid>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</guid>
       <description>Olá, tudo bem?!
 Rolou a 14 edição do hhbr, nesta edição trago para vocês uma talk bacana que produzi apresentando o Composer, a ferramenta de gestão de dependências do PHP.
 Uma talk voltada para o público iniciante, porém, focado em incentivar a adoção da ferramentas pelos desenvolvedores PHP, demonstrando os principais recursos da ferramenta.
@@ -21,10 +21,10 @@ Dados da palestra Tema: &amp;ldquo;Iniciando com Composer&amp;rdquo; Palestrante
     
     <item>
       <title>Como usar Traits no PHP com namespace</title>
-      <link>http://example.org/php/como-usar-traits-no-php-com-namespace/</link>
+      <link>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</link>
       <pubDate>Tue, 08 Aug 2017 23:10:42 +0000</pubDate>
       
-      <guid>http://example.org/php/como-usar-traits-no-php-com-namespace/</guid>
+      <guid>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</guid>
       <description>Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
 Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
 Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:</description>
@@ -32,10 +32,10 @@ Para nossa implementação devemos criar o diretório com o nome ‘traits_com_n
     
     <item>
       <title>Iniciando com Composer</title>
-      <link>http://example.org/php/iniciando-com-composer/</link>
+      <link>https://diegobrocanelli.com.br/php/iniciando-com-composer/</link>
       <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
       
-      <guid>http://example.org/php/iniciando-com-composer/</guid>
+      <guid>https://diegobrocanelli.com.br/php/iniciando-com-composer/</guid>
       <description>Olá, tudo bem?
 Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
 O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.

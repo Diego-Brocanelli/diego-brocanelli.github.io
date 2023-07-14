@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>skeleton on Diego Brocanelli</title>
-    <link>http://example.org/tags/skeleton/</link>
+    <link>https://diegobrocanelli.com.br/tags/skeleton/</link>
     <description>Recent content in skeleton on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 18 May 2016 00:17:43 +0000</lastBuildDate><atom:link href="http://example.org/tags/skeleton/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2016 00:17:43 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/skeleton/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Construindo um Silex Skeleton Application</title>
-      <link>http://example.org/php/construindo-um-silex-skeleton-application/</link>
+      <link>https://diegobrocanelli.com.br/php/construindo-um-silex-skeleton-application/</link>
       <pubDate>Wed, 18 May 2016 00:17:43 +0000</pubDate>
       
-      <guid>http://example.org/php/construindo-um-silex-skeleton-application/</guid>
+      <guid>https://diegobrocanelli.com.br/php/construindo-um-silex-skeleton-application/</guid>
       <description>Olá pessoal tudo bem?
 Irei construir um skeleton application utilizando o micro framework Silex. Este micro framework é irmão do Symfony framework full stack e ambos os projetos são mantidos pela comunidade PHP e a empresa SensioLabs empresa fundada pelo Fabien Potencier e criador de ambos frameworks citados acima.
 O Silex tem como base o Symfony e Pimple e foi inspirado pelo Sinatra um framework Ruby. Tendo como foco a simplicidade no desenvolvimento de aplicações.</description>

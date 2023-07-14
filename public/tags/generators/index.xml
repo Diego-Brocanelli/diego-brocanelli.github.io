@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Generators on Diego Brocanelli</title>
-    <link>http://example.org/tags/generators/</link>
+    <link>https://diegobrocanelli.com.br/tags/generators/</link>
     <description>Recent content in Generators on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 02 Jun 2016 23:24:19 +0000</lastBuildDate><atom:link href="http://example.org/tags/generators/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jun 2016 23:24:19 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/generators/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generators no PHP</title>
-      <link>http://example.org/php/generators-no-php/</link>
+      <link>https://diegobrocanelli.com.br/php/generators-no-php/</link>
       <pubDate>Thu, 02 Jun 2016 23:24:19 +0000</pubDate>
       
-      <guid>http://example.org/php/generators-no-php/</guid>
+      <guid>https://diegobrocanelli.com.br/php/generators-no-php/</guid>
       <description>Desde sua versão 5.5 encontra-se disponível o recurso de generators no PHP&amp;lt;, esse recurso nos permite realizar iterações tendo ganho de performance, pois realiza a entrega dos dados sobe demanda, diferentemente do iterador padrão do PHP, onde processa o conjunto de dados na memória.
 Para criar um generator é muito simples, pois são somente funções PHP que fazem uso da palavra chave yield. Diferente do retorno convencional de uma função PHP, ao utilizar um generator ele apenas gera valores por demanda, como podemos analisar no exemplo abaixo.</description>
     </item>

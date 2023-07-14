@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>open source on Diego Brocanelli</title>
-    <link>http://example.org/tags/open-source/</link>
+    <link>https://diegobrocanelli.com.br/tags/open-source/</link>
     <description>Recent content in open source on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate><atom:link href="http://example.org/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratório de ideias</title>
-      <link>http://example.org/open-source/laboratorio-de-ideias/</link>
+      <link>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
       
-      <guid>http://example.org/open-source/laboratorio-de-ideias/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</guid>
       <description>Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.
 Tendo isso em mente, criei o projeto Laboratório de ideias, focado em evitar desperdício de tempo e trazer maior foco nos estudos.
 Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.
@@ -21,10 +21,10 @@ Para enviar sua ideia é bem simples, acesse as issues do projeto, analise se a 
     
     <item>
       <title>hhbr: 21 – Projeto Statik Stack</title>
-      <link>http://example.org/open-source/projeto-statik-stack/</link>
+      <link>https://diegobrocanelli.com.br/open-source/projeto-statik-stack/</link>
       <pubDate>Thu, 14 Jun 2018 22:30:37 +0000</pubDate>
       
-      <guid>http://example.org/open-source/projeto-statik-stack/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/projeto-statik-stack/</guid>
       <description>Olá, tudo bem?!
 O grande Roberto Achar apresentou sua ideia de projeto open source chamado Statik Stack.
 O projeto tem como meta criar estruturas base para o start do desenvolvimento de projetos, fornecendo uma estrutura base, padronizada, de fácil compreensão e uso para que todos que desejam iniciar um projeto, porém sem saber por onde dar o primeiro passo ou até mesmo para profissionais mais experientes que desejam iniciar um projeto já com toda a base implementada.</description>
@@ -32,10 +32,10 @@ O projeto tem como meta criar estruturas base para o start do desenvolvimento de
     
     <item>
       <title>Software livre de código aberto e software gratuito, quais são suas diferenças?</title>
-      <link>http://example.org/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</link>
+      <link>https://diegobrocanelli.com.br/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</link>
       <pubDate>Sat, 09 Jul 2016 16:40:00 +0000</pubDate>
       
-      <guid>http://example.org/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</guid>
       <description>Olá pessoal tudo bem?! Eu sou um grande consumidor de Podcast e a um tempo ouvi o episódio do Mateada Podcast sobre leis na internet e fiquei curioso até mesmo sobre licenças de softwares, e recentemente o pessoal da Lambda3 lançou um episódio do podcast excelente sobre open source, e reacendeu a chama da curiosidade sobre o mundo do software livre, suas vertentes, os tipos de licenças e tudo o mais.</description>
     </item>
     

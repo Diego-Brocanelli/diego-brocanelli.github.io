@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>golang on Diego Brocanelli</title>
-    <link>http://example.org/categories/golang/</link>
+    <link>https://diegobrocanelli.com.br/categories/golang/</link>
     <description>Recent content in golang on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 01 Aug 2017 03:04:42 +0000</lastBuildDate><atom:link href="http://example.org/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2017 03:04:42 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 12 – Por que Golang? (Vídeo)</title>
-      <link>http://example.org/video/por-que-golang-video/</link>
+      <link>https://diegobrocanelli.com.br/video/por-que-golang-video/</link>
       <pubDate>Tue, 01 Aug 2017 03:04:42 +0000</pubDate>
       
-      <guid>http://example.org/video/por-que-golang-video/</guid>
+      <guid>https://diegobrocanelli.com.br/video/por-que-golang-video/</guid>
       <description>Go é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição ZeuCXB traz uma palestra robusta, recheado de exemplos para nós.
 Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.
 Acesse o vídeo da palestra e espero que aprecie o conteúdo!

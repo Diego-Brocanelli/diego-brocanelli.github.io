@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ideias on Diego Brocanelli</title>
-    <link>http://example.org/tags/ideias/</link>
+    <link>https://diegobrocanelli.com.br/tags/ideias/</link>
     <description>Recent content in ideias on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate><atom:link href="http://example.org/tags/ideias/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/ideias/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratório de ideias</title>
-      <link>http://example.org/open-source/laboratorio-de-ideias/</link>
+      <link>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
       
-      <guid>http://example.org/open-source/laboratorio-de-ideias/</guid>
+      <guid>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</guid>
       <description>Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.
 Tendo isso em mente, criei o projeto Laboratório de ideias, focado em evitar desperdício de tempo e trazer maior foco nos estudos.
 Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.

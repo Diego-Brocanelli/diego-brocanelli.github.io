@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>query on Diego Brocanelli</title>
-    <link>http://example.org/tags/query/</link>
+    <link>https://diegobrocanelli.com.br/tags/query/</link>
     <description>Recent content in query on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 17 Sep 2018 12:37:37 +0000</lastBuildDate><atom:link href="http://example.org/tags/query/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Sep 2018 12:37:37 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/query/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Refactoring – Replace temp with query</title>
-      <link>http://example.org/php/refactoring-replace-temp-with-query/</link>
+      <link>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</link>
       <pubDate>Mon, 17 Sep 2018 12:37:37 +0000</pubDate>
       
-      <guid>http://example.org/php/refactoring-replace-temp-with-query/</guid>
+      <guid>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</guid>
       <description>Olá, tubo bem?!
 Frequentemente vemos o uso de variáveis locais realizarem operações e/ou ações.
 1 2 3 4 5 6 7 8 9 10 &amp;lt;?php $basePrice = $this-&amp;gt;quantity * $this-&amp;gt;itemPrice; if ($basePrice &amp;gt; 1000){ return $basePrice * 0.95; } else{ return $basePrice * 0.98; } Por que devemos refatorar? Abrirá portas para utilizarmos o Extract Methods. Podemos reutilizar a mesma expressão em outras partes do sistema. Facilitamos as modificações/implementações de regras de negócio.</description>
@@ -20,10 +20,10 @@ Frequentemente vemos o uso de variáveis locais realizarem operações e/ou aç�
     
     <item>
       <title>Utilizando query Selector do Javascript</title>
-      <link>http://example.org/javascript/utilizando-queryselector-do-javascript/</link>
+      <link>https://diegobrocanelli.com.br/javascript/utilizando-queryselector-do-javascript/</link>
       <pubDate>Sat, 28 Apr 2018 15:40:25 +0000</pubDate>
       
-      <guid>http://example.org/javascript/utilizando-queryselector-do-javascript/</guid>
+      <guid>https://diegobrocanelli.com.br/javascript/utilizando-queryselector-do-javascript/</guid>
       <description>Olá, tudo bem?!
 Quantas vezes utilizamos bibliotecas como JQuery para ações básicas com Javascript? Eu mesmo por diversas vezes, acabamos tomando essa ação por falta de conhecimento.
 Por exemplo, para selecionar algum elemento no HTML um exemplo prático seria utilizar o $(‘elemento’) do JQuery e a partir disso manipular o elemento. Entretanto, podemos fazer esta ação de forma nativa utilizando document.querySelector(‘elemento’).
@@ -32,10 +32,10 @@ Vamos para um exemplo prático, abaixo temos um página HTML com um botão, no q
     
     <item>
       <title>Como realizar parse da query string de forma simples com PHP</title>
-      <link>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</link>
+      <link>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</link>
       <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
       
-      <guid>http://example.org/php/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <guid>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</guid>
       <description>Olá, tudo bem!
 Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
 Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.
