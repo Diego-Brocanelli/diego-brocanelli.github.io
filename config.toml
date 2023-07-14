@@ -9,7 +9,7 @@ hasCJKLanguage = false
 paginate = 9
 rssLimit = 10
 searchHidden = true
-googleAnalytics = "UA-75414916-1"
+googleAnalytics = "G-724B54J2LY"
 
 [author]
   name = "Diego Brocanelli"
