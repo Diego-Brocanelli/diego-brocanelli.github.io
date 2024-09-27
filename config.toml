@@ -1,7 +1,7 @@
 baseURL = 'https://diegobrocanelli.com.br/'
 languageCode = 'pt-br'
 title = 'Diego Brocanelli'
-theme = "hugo-PaperMod"
+theme = "hugo-PaperMod-6.0"
 enableRobotsTXT = true
 enableEmoji = true
 defaultContentLanguage = "pt-br"

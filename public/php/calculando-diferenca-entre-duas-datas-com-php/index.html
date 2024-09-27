@@ -6,20 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Calculando a diferença entre duas datas com PHP | Diego Brocanelli</title>
-<meta name="keywords" content="datas, php">
+<meta name="keywords" content="datas, php" />
 <meta name="description" content="Olá, tudo tranquilo?!
 Uma ação bem simples e que pode nos auxiliar em muito no dia a dia é calcular a diferença entre duas datas. Para isso vou demonstrar a forma mais simples para realizar esta ação.
 1 2 3 4 5 6 &lt;?php $dateStart = new \DateTime(&#39;2017-01-01&#39;); $dateNow = new \DateTime(date(&#39;Y-m-d&#39;)); $dateDiff = $dateStart-&gt;diff($dateNow);&lt; Vamos detalhar o código acima:
 Primeiro armazenamos a data base na qual desejamos verificar.
 Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando que poderia ser qualquer data passado, presente ou futuro.">
 <meta name="author" content="Diego Brocanelli">
-<link rel="canonical" href="https://diegobrocanelli.com.br/php/calculando-diferenca-entre-duas-datas-com-php/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
-
-<link rel="stylesheet" href="/assets/css/person.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+<link rel="canonical" href="https://diegobrocanelli.com.br/php/calculando-diferenca-entre-duas-datas-com-php/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://diegobrocanelli.com.br/favicon-16x16.png">
@@ -28,6 +24,7 @@ Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando q
 <link rel="mask-icon" href="https://diegobrocanelli.com.br/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.111.3">
 <noscript>
     <style>
         #theme-toggle,
@@ -83,14 +80,14 @@ Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando q
     <nav class="nav">
         <div class="logo">
             <a href="https://diegobrocanelli.com.br/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
-            <div class="logo-switches">
+            <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -104,7 +101,7 @@ Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando q
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-            </div>
+            </span>
         </div>
         <ul id="menu">
             <li>
@@ -304,16 +301,12 @@ Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando q
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://diegobrocanelli.com.br/php/mercado-de-trabalho-video/">
-    <span class="title">
-      <i class="fa-solid fa-arrow-left"></i> 
-    </span>
+    <span class="title">« </span>
     <br>
     <span>hhbr : 07 – Mercado de Trabalho (vídeo)</span>
   </a>
   <a class="next" href="https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/">
-    <span class="title">
-      <i class="fa-solid fa-arrow-right"></i>
-    </span>
+    <span class="title"> »</span>
     <br>
     <span>Defesa eficaz contra SQL Injection – Comunicação com o banco de dados</span>
   </a>
@@ -323,36 +316,30 @@ Logo em seguida criamos uma variável e nela inserimos a data atual, lembrando q
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share Calculando a diferença entre duas datas com PHP on twitter"
         href="https://twitter.com/intent/tweet/?text=Calculando%20a%20diferen%c3%a7a%20entre%20duas%20datas%20com%20PHP&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcalculando-diferenca-entre-duas-datas-com-php%2f&amp;hashtags=datas%2cphp">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share Calculando a diferença entre duas datas com PHP on linkedin"
         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcalculando-diferenca-entre-duas-datas-com-php%2f&amp;title=Calculando%20a%20diferen%c3%a7a%20entre%20duas%20datas%20com%20PHP&amp;summary=Calculando%20a%20diferen%c3%a7a%20entre%20duas%20datas%20com%20PHP&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcalculando-diferenca-entre-duas-datas-com-php%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
         </svg>
     </a>
 </div>
-  </footer><script src="https://utteranc.es/client.js"
-        id="comments-form"
-        repo="Diego-Brocanelli/diego-brocanelli.github.io"
-        issue-term="title"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+
+  </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
+    <span>&copy; 2024 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
