@@ -4,8 +4,6 @@ date: 2024-09-26T14:44:00Z
 author: Diego Brocanelli
 type: post
 draft: true
-videos:
-    - /assets/images/rabbitmq-poc-fanout-queue.mp4
 ---
 
 ## Indice
@@ -20,7 +18,7 @@ videos:
 
 ## O que é RabbitMQ?
 
-De acorodo com sua própria documentação, em uma tradução livre:
+De acordo com sua própria documentação, em uma tradução livre:
 
 > "RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na sua máquina local."
 
@@ -28,7 +26,7 @@ Mas o que é um "broker" ou "message broker"?
 
 É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).
 
-O broker gerencia as *queue* (filas) de mensagens, garantindo que sejão entregues de forma eficiente e segura.
+O broker gerencia as *queue* (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.
 
 Ao enviar uma mensagem, o broker fica responsável por alocar na(s) fila(s) de destino.
 
@@ -60,7 +58,7 @@ Uma vez que a mensagem for roteada, ela pode ser distribuida em diversas filas.
 O RabbitMq utiliza o padrão **FIFO** (First-In-First-Out), podendo ser persistentes ou voláteis.
 
 - **Persistentes**: São armazenadas em disco, sendo mantidas mesmo com a reinicialização do *broker*;
-- **Volateis**: São armazenadass em memória, caso o *broker* seja reinicializado as informações são apagas.
+- **Voláteis**: São armazenadass em memória, caso o *broker* seja reinicializado as informações são apagas.
 
 ## Publicador e Consumidor: como funcionam no RabbitMQ
 
@@ -70,7 +68,7 @@ O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a m
 
 Abaixo podemos ver um exemplo simpes de uso do *fanout routing*.
 
-![RabbitMq exemplo de ecommerce usando exchange do tipo fanout](/assets/images/rabbitmq-ecommerce-fanout.gif)
+{{< figure src="/assets/images/rabbitmq-ecommerce-fanout.gif" title="RabbitMq exemplo de ecommerce usando exchange do tipo fanout" >}}
 
 Como observado, o *ECCOMERCE* (publisher) envia para o *PURCHASE ORDER* (broker) a mensagem contendo as informações da compra.
 
@@ -82,10 +80,7 @@ O *broker* destina a mensagem para as 3 filas vincuiladas a ele, sendo:
 
 Para por a mão na massa, produzi uma POC, onde são geradas uma quantidade *X* de ordens de compra pelo *publisher* e o *subscriber* recebe e processa cada ordem gerada.
 
-<video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=RuaBZfTVUX0">
-  Your browser does not support the video tag.
-</video>
+{{< youtube RuaBZfTVUX0 >}}
 
 No vídeo acima, propositalmente foi deixado um deleay de 1s para cada mensagem, deixando assim mais didático o lado do *subscriber*.
 
@@ -122,7 +117,7 @@ Para não impactar o cliente, o uso de mensageria se encaixa perfeitamente!
 - Aumento na percepção de performance pelo usuário;
 - Possibilita ter uma comunicação eficiente entre sistemas legados;
 - Aumenta a confiabilidade no sistema;
-- Possibilita a expecialização dos sistemas conforme seu *core domain*.
+- Possibilita a especialização dos sistemas conforme seu *core domain*.
 
 Nos exemplos demonstrados anteriormente, foi observado um exemplo de ordem de compra realizada em um ecommerce, porém podemos utilizar em serviçoes de **stream**, **fintechs**, **monitoramento**, **automação de marketing** e dentro muitos outros.
 
