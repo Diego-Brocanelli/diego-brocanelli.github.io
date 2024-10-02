@@ -6,17 +6,7 @@
     <description>Recent content in Posts on Diego Brocanelli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 26 Sep 2024 14:44:00 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Filas e mensageria com RabbitMq revolucione a comunicação do seu sistema</title>
-      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
-      <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
-      <description>Indice O que é RabbitMQ? Como Exchanges e Filas funcionam no RabbitMQ Publicador e Consumidor: como funcionam no RabbitMQ Vantagens e desvantagens das filas fanout Mas por que usar mensageria? Conclusão Links e referências O que é RabbitMQ? De acorodo com sua própria documentação, em uma tradução livre:
-&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na sua máquina local.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 28 Apr 2023 19:50:55 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como programador, sou obrigado a usar Linux?</title>
       <link>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</link>
@@ -120,6 +110,18 @@ Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: W
       <guid>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</guid>
       <description>Olá, Tudo bem?! Nesta edição 27 do hhbr, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos php-poo do Training Center, um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!
 Dados da palestra Tema: “Refactoring calculadora de IMC” Palestrante: Diego Brocanelli Site: http://diegobrocanelli.</description>
+    </item>
+    
+    <item>
+      <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
+      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
+      <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
+      
+      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
+      <description>Olá!
+Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
+Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.
+Dados da palestra Tema: “Ecossistema javascript” Palestrante: Marco Bruno Twitter: @marcobrunobr Twitter: @collabcodetech Facebook: collabcode Youtube: collabcode Site: medium.</description>
     </item>
     
   </channel>
