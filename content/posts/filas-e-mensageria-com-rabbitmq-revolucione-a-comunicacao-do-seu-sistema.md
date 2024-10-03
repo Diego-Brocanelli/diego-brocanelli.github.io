@@ -4,6 +4,14 @@ date: 2024-09-26T14:44:00Z
 author: Diego Brocanelli
 type: post
 draft: true
+categories:
+  - programação
+tags:
+  - rabbitmq
+  - programação
+  - pub/sub
+  - mensageria
+  - arquitetura
 ---
 
 ## Indice
@@ -84,7 +92,7 @@ Para por a mão na massa, produzi uma POC, onde são geradas uma quantidade *X* 
 
 No vídeo acima, propositalmente foi deixado um deleay de 1s para cada mensagem, deixando assim mais didático o lado do *subscriber*.
 
-## Vantagens edesvantagens das filas fanout
+## Vantagens e desvantagens das filas fanout
 
 ### Vantagens
 
