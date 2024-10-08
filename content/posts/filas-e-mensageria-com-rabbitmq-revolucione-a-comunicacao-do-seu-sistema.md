@@ -1,5 +1,5 @@
 ---
-title: "Filas e mensageria com RabbitMq revolucione a comunicação do seu sistema"
+title: "Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema"
 date: 2024-09-26T14:44:00Z
 author: Diego Brocanelli
 type: post
@@ -28,25 +28,25 @@ tags:
 
 De acordo com sua própria documentação, em uma tradução livre:
 
-> "RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na sua máquina local."
+> "RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local."
 
 Mas o que é um "broker" ou "message broker"?
 
 É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).
 
-O broker gerencia as *queue* (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.
+O broker gerencia as *queues* (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.
 
 Ao enviar uma mensagem, o broker fica responsável por alocar na(s) fila(s) de destino.
 
-O protocolo padrão do RabbitMq é o **AMQP** (Advanced Message Queuing Protocol), porém é fornecido compatibilidade com outros protocolos.
+O protocolo padrão do RabbitMQ é o **AMQP** (Advanced Message Queuing Protocol), porém é fornecido compatibilidade com outros protocolos.
 
 ## Como exchanges e filas funcionam no RabbitMQ
 
-Para melhor compreender o RabbitMq temos que abordar dois pilares sendo elas **Exchanges** e **Queues**;
+Para melhor compreender o RabbitMQ temos que abordar dois pilares sendo elas **Exchanges** e **Queues**;
 
 ### Exchanges
 
-Uma exchange é responsável por receber as mensagens enviadas pelos *publishers*, encaminhando adequadamente para as *queues*, tendo como base as regras de roteamento.
+Uma exchange é responsável por receber as mensagens enviadas pelos *publishers*, encaminhando adequadamente para as *queues*, tendo como base as regras de roteamentos.
 
 A exchange **não armazena mensagens**, apenas distribui.
 
@@ -63,34 +63,34 @@ Local onde as mensagens são encaminhadas até serem coletadas pelos *subscriber
 
 Uma vez que a mensagem for roteada, ela pode ser distribuida em diversas filas.
 
-O RabbitMq utiliza o padrão **FIFO** (First-In-First-Out), podendo ser persistentes ou voláteis.
+O RabbitMQ utiliza o padrão **FIFO** (First-In-First-Out), podendo ser persistentes ou voláteis.
 
 - **Persistentes**: São armazenadas em disco, sendo mantidas mesmo com a reinicialização do *broker*;
-- **Voláteis**: São armazenadas em memória, caso o *broker* seja reinicializado as informações são apagas.
+- **Voláteis**: São armazenadas em memória, caso o *broker* seja reinicializado, as informações são apagadas.
 
 ## Publicador e Consumidor: como funcionam no RabbitMQ
 
-Este padrão é conhecido como *Pub/Sub* (*publisher* e *subscriber*) , e funciona da seguinte maneira.
+Este padrão é conhecido como *Pub/Sub* (*publisher* e *subscriber*) e funciona da seguinte maneira.
 
 O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a mensagem para as filas e os *subscribers* coletam essa menagem e faz o devido uso dos dados coletados.
 
-Abaixo podemos ver um exemplo simpes de uso do *fanout routing*.
+Abaixo podemos ver um exemplo simples de uso do *fanout routing*.
 
-{{< figure src="/assets/images/rabbitmq-ecommerce-fanout.gif" title="RabbitMq exemplo de ecommerce usando exchange do tipo fanout" >}}
+{{< figure src="/assets/images/rabbitmq-ecommerce-fanout.gif" title="RabbitMQ exemplo de ecommerce usando exchange do tipo fanout" >}}
 
 Como observado, o *ECCOMERCE* (publisher) envia para o *PURCHASE ORDER* (broker) a mensagem contendo as informações da compra.
 
-O *broker* destina a mensagem para as 3 filas vincuiladas a ele, sendo:
+O *broker* destina a mensagem   para as três filas vinculadas a ele, sendo:
 
 - *CREATED ORDER*: Fila utilizada pelo subscriber *SEND MAIL CLIENT*, responsável por enviar o e-mail de notificação de compra ao cliente;
 - *PAYMENT ANALYSIS*: Fila utilizada pelo subscriber *FINANCIAL*, responsável por seguir com as regras de validação do pagamento da compra;
 - *SEPARATION ORDER*: Fila utilizada pelo subscriber *DISTRIBUTION CENTER*, responsável por realizar a separação dos itens da ordem de compra.
 
-Para por a mão na massa, produzi uma POC, onde são geradas uma quantidade *X* de ordens de compra pelo *publisher* e o *subscriber* recebe e processa cada ordem gerada.
+Para pôr a mão na massa, produzi uma POC, onde são geradas uma quantidade *X* de ordens de compra pelo *publisher* e o *subscriber* recebe e processa cada ordem gerada.
 
 {{< youtube RuaBZfTVUX0 >}}
 
-No vídeo acima, foi propositalmente deixado um delay de 1s para cada mensagem, deixando assim mais didático o lado do *subscriber*.
+No vídeo acima, foi propositalmente deixado um delay de 1 segundo para cada mensagem, deixando assim o lado do *subscriber* mais didático.
 
 ## Vantagens e desvantagens das filas fanout
 
@@ -127,7 +127,7 @@ Para não impactar o cliente, o uso de mensageria se encaixa perfeitamente!
 - Aumenta a confiabilidade no sistema;
 - Possibilita a especialização dos sistemas conforme seu *core domain*.
 
-Nos exemplos demonstrados anteriormente, foi observado um exemplo de ordem de compra realizada em um e-commerce, porém podemos utilizar em serviçoes de **stream**, **fintechs**, **monitoramento**, **automação de marketing** e dentro muitos outros.
+Nos exemplos demonstrados anteriormente, foi observado um exemplo de ordem de compra realizada em um e-commerce, porém podemos utilizar em serviços de **stream**, **fintechs**, **monitoramento**, **automação de marketing** e dentro muitos outros.
 
 ## Conclusão
 
