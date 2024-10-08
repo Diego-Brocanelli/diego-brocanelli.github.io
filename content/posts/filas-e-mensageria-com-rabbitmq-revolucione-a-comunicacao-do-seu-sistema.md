@@ -38,7 +38,7 @@ O broker gerencia as *queue* (filas) de mensagens, garantindo que sejam entregue
 
 Ao enviar uma mensagem, o broker fica responsável por alocar na(s) fila(s) de destino.
 
-O protocolo padrão do RabbitMq é o **AMQP** (Advanced Message Queuing Protocol), porém é fornecido compatilidade com outros protocolos.
+O protocolo padrão do RabbitMq é o **AMQP** (Advanced Message Queuing Protocol), porém é fornecido compatibilidade com outros protocolos.
 
 ## Como exchanges e filas funcionam no RabbitMQ
 
@@ -66,13 +66,13 @@ Uma vez que a mensagem for roteada, ela pode ser distribuida em diversas filas.
 O RabbitMq utiliza o padrão **FIFO** (First-In-First-Out), podendo ser persistentes ou voláteis.
 
 - **Persistentes**: São armazenadas em disco, sendo mantidas mesmo com a reinicialização do *broker*;
-- **Voláteis**: São armazenadass em memória, caso o *broker* seja reinicializado as informações são apagas.
+- **Voláteis**: São armazenadas em memória, caso o *broker* seja reinicializado as informações são apagas.
 
 ## Publicador e Consumidor: como funcionam no RabbitMQ
 
 Este padrão é conhecido como *Pub/Sub* (*publisher* e *subscriber*) , e funciona da seguinte maneira.
 
-O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a mensagem para as filas e os *subscribers* coletam essa menagem e faz o devído uso dos dados coletados.
+O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a mensagem para as filas e os *subscribers* coletam essa menagem e faz o devido uso dos dados coletados.
 
 Abaixo podemos ver um exemplo simpes de uso do *fanout routing*.
 
@@ -83,14 +83,14 @@ Como observado, o *ECCOMERCE* (publisher) envia para o *PURCHASE ORDER* (broker)
 O *broker* destina a mensagem para as 3 filas vincuiladas a ele, sendo:
 
 - *CREATED ORDER*: Fila utilizada pelo subscriber *SEND MAIL CLIENT*, responsável por enviar o e-mail de notificação de compra ao cliente;
-- *PAYMENT ANNALISE*: Fila utilizada pelo subscriber *FINACIAL*, responsável por seguir com as regras de validação do pagamento da compra;
+- *PAYMENT ANALYSIS*: Fila utilizada pelo subscriber *FINANCIAL*, responsável por seguir com as regras de validação do pagamento da compra;
 - *SEPARATION ORDER*: Fila utilizada pelo subscriber *DISTRIBUTION CENTER*, responsável por realizar a separação dos itens da ordem de compra.
 
 Para por a mão na massa, produzi uma POC, onde são geradas uma quantidade *X* de ordens de compra pelo *publisher* e o *subscriber* recebe e processa cada ordem gerada.
 
 {{< youtube RuaBZfTVUX0 >}}
 
-No vídeo acima, propositalmente foi deixado um deleay de 1s para cada mensagem, deixando assim mais didático o lado do *subscriber*.
+No vídeo acima, foi propositalmente deixado um delay de 1s para cada mensagem, deixando assim mais didático o lado do *subscriber*.
 
 ## Vantagens e desvantagens das filas fanout
 
@@ -101,7 +101,7 @@ No vídeo acima, propositalmente foi deixado um deleay de 1s para cada mensagem,
 - Escalabilidade do sistema, permitindo adicionar novos consumidores a qualquer momento;
 - Ideal para notificações globais, sendo eventos que devem ser propagados em diversos sistemas ao mesmo tempo.
 
-### Desvantagesn
+### Desvantagens
 
 - Falta de controle no roteamento;
 - Baixo controle sobre o destino das mensagens;
@@ -112,13 +112,13 @@ No vídeo acima, propositalmente foi deixado um deleay de 1s para cada mensagem,
 
 Ao chegar aqui você pode estar se perguntando.
 
-> Mas por que devo utilzar a estratégia de mensageria nos sistemas?
+> Mas por que devo utilizar a estratégia de mensageria nos sistemas?
 
 Uma dúvida válida, como toda ferramenta ela não deve ser "enfiada" de qualquer maneira em qualquer cenário ou lugar.
 
 Essa estratégia possibilita maior desacoplamento entre sistemas e trazendo mais performance.
 
-É muito comum esbarrarmos em sistemas que são lentos para processar o que lhe foi solicitado, pois esse processamento é pesadou e/ou demorado. 
+É muito comum esbarrarmos em sistemas que são lentos para processar o que lhe foi solicitado, pois esse processamento é pesado e/ou demorado. 
 
 Para não impactar o cliente, o uso de mensageria se encaixa perfeitamente!
 
@@ -127,17 +127,17 @@ Para não impactar o cliente, o uso de mensageria se encaixa perfeitamente!
 - Aumenta a confiabilidade no sistema;
 - Possibilita a especialização dos sistemas conforme seu *core domain*.
 
-Nos exemplos demonstrados anteriormente, foi observado um exemplo de ordem de compra realizada em um ecommerce, porém podemos utilizar em serviçoes de **stream**, **fintechs**, **monitoramento**, **automação de marketing** e dentro muitos outros.
+Nos exemplos demonstrados anteriormente, foi observado um exemplo de ordem de compra realizada em um e-commerce, porém podemos utilizar em serviçoes de **stream**, **fintechs**, **monitoramento**, **automação de marketing** e dentro muitos outros.
 
 ## Conclusão
 
-É uma excelente estratégia para melhorar a performance dos sistemas, deve-se ser utilizado com sabedoria e parcimonia, para que não se transforme em um caos de comunicações.
+É uma excelente estratégia para melhorar a performance dos sistemas, deve-se ser utilizado com sabedoria e parcimônia, para que não se transforme em um caos de comunicações.
 
-Podemos somar estratgias de *cache* aumentando ainda mais a performance.
+Podemos somar estratégias de *cache* aumentando ainda mais a performance.
 
 Não usaria em sistema muito simples ou que demandam baixo uso.
 
-Focaria inicialmente em funcionalidades expecíficas do sistema, onde demandam maior performance.
+Focaria inicialmente em funcionalidades específicas do sistema, onde demandam maior performance.
 
 Se o sistema depende de uma resposta em *tempo real*, essa abordagem pode não atender.
 
