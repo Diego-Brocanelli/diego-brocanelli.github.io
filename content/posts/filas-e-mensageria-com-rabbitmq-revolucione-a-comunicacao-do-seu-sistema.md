@@ -14,7 +14,7 @@ tags:
   - arquitetura
 ---
 
-## Indice
+## Índice
 
 - [O que é RabbitMQ?](#o-que-é-rabbitmq)
 - [Como Exchanges e Filas funcionam no RabbitMQ](#como-exchanges-e-filas-funcionam-no-rabbitmq)
@@ -26,7 +26,7 @@ tags:
 
 ## O que é RabbitMQ?
 
-De acordo com sua própria documentação, em uma tradução livre:
+De acordo com sua própria documentação, em tradução livre:
 
 > "RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local."
 
@@ -36,25 +36,25 @@ Mas o que é um "broker" ou "message broker"?
 
 O broker gerencia as *queues* (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.
 
-Ao enviar uma mensagem, o broker fica responsável por alocar na(s) fila(s) de destino.
+Ao enviar uma mensagem, o broker fica responsável por alocá-la na(s) fila(s) de destino.
 
 O protocolo padrão do RabbitMQ é o **AMQP** (Advanced Message Queuing Protocol), porém é fornecido compatibilidade com outros protocolos.
 
 ## Como exchanges e filas funcionam no RabbitMQ
 
-Para melhor compreender o RabbitMQ temos que abordar dois pilares sendo elas **Exchanges** e **Queues**;
+Para melhor compreender o RabbitMQ, é necessário abordar dois pilares: **Exchanges** e **Queues**;
 
 ### Exchanges
 
-Uma exchange é responsável por receber as mensagens enviadas pelos *publishers*, encaminhando adequadamente para as *queues*, tendo como base as regras de roteamentos.
+Uma exchange é responsável por receber as mensagens enviadas pelos *publishers*, encaminhando adequadamente para as *queues*, com base nas regras de roteamento.
 
-A exchange **não armazena mensagens**, apenas distribui.
+A exchange **não armazena mensagens**, apenas distribui-as.
 
 Os tipos de roteamento são:
 
 - **Direct**: Utiliza *routing keys* (chave de roteamento) para determinar quais *queues* destinar a mensagem;
 - **Fanout**: Envia as mensagens para todas as *queues* ligadas a ela;
-- **Topic**: Utiliza padrões de *routing key*, permitindo enviar mensagens para queues com chaves parcias, utilizando os caracteres `*` ou `#`.
+- **Topic**: Utiliza padrões de *routing key*, permitindo enviar mensagens para queues com chaves parciais, utilizando os caracteres `*` ou `#`.
 - **Headers**: Faz uso do cabeçalho da mensagem em vez de *routing keys* para definir as regras de encaminhamento da mensagem.
 
 ### Queues
@@ -72,7 +72,7 @@ O RabbitMQ utiliza o padrão **FIFO** (First-In-First-Out), podendo ser persiste
 
 Este padrão é conhecido como *Pub/Sub* (*publisher* e *subscriber*) e funciona da seguinte maneira.
 
-O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a mensagem para as filas e os *subscribers* coletam essa menagem e faz o devido uso dos dados coletados.
+O *publisher* envia uma mensagem para o *broker*, este por sua vez encaminha a mensagem para as filas e os *subscribers* coletam essa mensagem e fazem o devido uso dos dados coletados.
 
 Abaixo podemos ver um exemplo simples de uso do *fanout routing*.
 
@@ -98,7 +98,7 @@ No vídeo acima, foi propositalmente deixado um delay de 1 segundo para cada men
 
 - Distribui a mensagem para todas as filas associadas;
 - Simples e eficiente, pois não demanda configurar regras complexas de *routing key*;
-- Escalabilidade do sistema, permitindo adicionar novos consumidores a qualquer momento;
+- Escalabilidade do sistema, permite a adição de novos consumidores a qualquer momento;
 - Ideal para notificações globais, sendo eventos que devem ser propagados em diversos sistemas ao mesmo tempo.
 
 ### Desvantagens
@@ -116,7 +116,7 @@ Ao chegar aqui você pode estar se perguntando.
 
 Uma dúvida válida, como toda ferramenta ela não deve ser "enfiada" de qualquer maneira em qualquer cenário ou lugar.
 
-Essa estratégia possibilita maior desacoplamento entre sistemas e trazendo mais performance.
+Essa estratégia possibilita maior desacoplamento entre sistemas e traz mais performance.
 
 É muito comum esbarrarmos em sistemas que são lentos para processar o que lhe foi solicitado, pois esse processamento é pesado e/ou demorado. 
 
@@ -139,7 +139,7 @@ Não usaria em sistema muito simples ou que demandam baixo uso.
 
 Focaria inicialmente em funcionalidades específicas do sistema, onde demandam maior performance.
 
-Se o sistema depende de uma resposta em *tempo real*, essa abordagem pode não atender.
+Se o sistema depender de uma resposta em tempo real, essa abordagem pode não ser adequada.
 
 ## Referências
 
