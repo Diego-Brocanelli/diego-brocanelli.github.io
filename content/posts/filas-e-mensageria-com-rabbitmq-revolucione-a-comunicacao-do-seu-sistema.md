@@ -3,7 +3,7 @@ title: "Filas e mensageria com RabbitMQ revolucione a comunicação do seu siste
 date: 2024-09-26T14:44:00Z
 author: Diego Brocanelli
 type: post
-draft: true
+draft: false
 categories:
   - programação
 tags:
