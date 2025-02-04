@@ -35,6 +35,17 @@
   </div>
   {{- end }}
 
+  <!-- Adicionando o código do Utterances -->
+  <div id="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="Diego-Brocanelli/diego-brocanelli.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
   <footer class="post-footer">
     {{- if .Params.tags }}
     <ul class="post-tags">
