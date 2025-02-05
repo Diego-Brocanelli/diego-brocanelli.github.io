@@ -1,5 +1,5 @@
 ---
-title: Atualizando seu fork no GitHub
+title: Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!
 author: Diego Brocanelli
 type: post
 date: 2017-11-17T18:02:27+00:00
@@ -10,65 +10,73 @@ tc-thumb-fld:
 categories:
   - git
   - GitHub
-
+  - fork
+  - atualizar fork
 ---
 
 Olá, tudo bem?!
 
-É  comum atualizar o fork do projeto que contribuirmos no GitHub.
+## Sumário
 
-Pois conforme contribuímos outros contribuidores também fazem o mesmo, com isso o fork fica desatualizado.
+1. [Introdução](#introdução)
+2. [Adicionando um repositório remoto](#adicionando-um-repositório-remoto)
+3. [Atualizando o upstream](#atualizando-o-upstream)
+4. [Realizando o commit das informações](#realizando-o-commit-das-informações)
+5. [Enviando para o GitHub](#enviando-para-o-github)
+6. [Considerações](#considerações)
 
-Neste momento podemos ficar com receio de contribuir, por não dominar o Git e GitHub.
+## Introdução
 
-Para atualizar o fork o processo é muito simples e iremos aprender neste post. Para realizar a atualização será utilizado o [_upstream_][1].
+É comum atualizarmos o fork do projeto ao qual contribuímos no _"GitHub"_.
 
-> **Obs:** Todos os comandos abaixo devem ser executados via terminal na raiz do seu fork.
+Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o _"fork"_ pode ficar desatualizado.
 
-&nbsp;
+Nesse momento, podemos ficar receosos em contribuir por não dominarmos o _"Git"_ e o _"GitHub"_.
 
-### Adicionando um repositório remoto
+Para realizar a atualização, utilizaremos o [_upstream_][1].
 
-Devemos adicionar um repositório remoto, no caso **devemos adicionar o repositório base original**!
+> **Obs.:** Todos os comandos abaixo devem ser executados no terminal, na raiz do seu _"fork"_.
+
+## Adicionando um repositório remoto
+
+Precisamos adicionar um repositório remoto, no caso _devemos adicionar o repositório base original_!
 
 ```bash
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 ```
 
-### Atualizando o upstream
+## Atualizando o upstream
 
-Após adicionarmos o repositório devemos atualizar o _upstream_. Para isso execute o comando abaixo.
+Após adicionar o repositório, devemos atualizar o _"upstream"_. Para isso, execute o comando abaixo.
 
 ```bash
 git fetch upstream
 ```
 
-### Realizando o commit das informações 
+## Realizando o commit das informações 
 
-Com o _upstream_ atualizado e supondo que estamos no _branch_ _master_, devemos realizar o _merge_ ou _rebase_ das informações obtidas na atualização.
+Com o _"upstream"_ atualizado e supondo que estamos na branch _"main"_, devemos fazer o _"merge"_ ou o _"rebase"_ das alterações.
 
 ```bash
-git rebase upstream/master master
+git rebase upstream/main main
 ```
 
-> Aqui cabe uma nota, fiz uso do _rebase_, porém poderia ser utilizado o _merge_. Obviamente há diferenças entre o _rebase_ e o _merge_, entretanto cabe em um post a parte para melhor detalhamento.
+> IMPORTANTE: Vale ressaltar que utilizei o _"rebase"_, mas o _"merge"_ também poderia ser uma opção."
 
-### Enviando para o GitHub
+## Enviando para o GitHub
 
-Para que possamos atualizar o GitHub basta executar o comando abaixo.
+Para atualizar o _"fork"_ no _"GitHub"_, basta executar o comando abaixo.
 
 ```bash
 git push
 ```
 
-### Considerações
+## Considerações
 
-Viram como é simples atualizar o fork, com poucos comandos foi realizado todo o processo.
+Viu como é simples atualizar um fork? Com poucos comandos, conseguimos realizar todo o processo.
 
-Espero que tenham apreciado o conteúdo e que o mesmo agregue em seu dia a dia.
+Espero que tenha gostado do conteúdo e que ele seja útil no seu dia a dia.
 
-Caso tenha alguma dúvida, dica, sugestão deixe nos comentários, para que possamos aprender cada vez mais.
-
-Grande abraço e sucesso nos projetos.
+Se tiver alguma dúvida, dica ou sugestão, deixe nos comentários para aprendermos juntos!
 
  [1]: https://help.github.com/articles/configuring-a-remote-for-a-fork/
