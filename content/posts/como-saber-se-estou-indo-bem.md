@@ -24,7 +24,7 @@ tags:
 
 ## Introdução
 
-Recentemente finalizei a leitura do livro _“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”_ do autor Richard L. Willians, este livro foi uma indicação do meu amigo Davi já há alguns anos, e resolvi ler.
+Recentemente finalizei a leitura do livro _“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”_ do autor Richard L. Willians, este livro foi uma indicação do meu amigo [Davi](https://devdrops.github.io/about/) já há alguns anos, obrigado pela recomendação!
 
 Uma das habilidades que está em foco para aperfeiçoamento este ano de 2025 é a comunicação, onde busco uma comunicação:
 
