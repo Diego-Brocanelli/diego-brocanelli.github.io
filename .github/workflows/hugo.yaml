@@ -60,6 +60,13 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Ensure no symlinks exist
+        run: find public -type l -delete
+
+      - name: Check artifact size
+        run: du -sh public
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
