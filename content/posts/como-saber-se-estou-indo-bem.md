@@ -3,7 +3,7 @@ title: "Como saber se estou indo bem? A importância de dar e receber feedbacks"
 date: 2025-02-04T22:21:55Z
 draft: false
 categories:
-  - soft skills
+  - soft-skills
 tags:
   - feedback
   - soft skill
