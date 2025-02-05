@@ -27,8 +27,9 @@ tags:
 Recentemente finalizei a leitura do livro _“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”_ do autor Richard L. Willians, este livro foi uma indicação do meu amigo Davi já há alguns anos, e resolvi ler.
 
 Uma das habilidades que está em foco para aperfeiçoamento este ano de 2025 é a comunicação, onde busco uma comunicação:
-    - **Assertiva:** conseguir transmitir as informações com clareza, dinâmica e respeito, para que assim obtenha o retorno esperado;
-    - **Não violenta:** foca em uma comunicação que promove empatia, conexão e respeito, voltada para melhorar os relacionamentos.
+
+- **Assertiva:** conseguir transmitir as informações com clareza, dinâmica e respeito, para que assim obtenha o retorno esperado;
+- **Não violenta:** foca em uma comunicação que promove empatia, conexão e respeito, voltada para melhorar os relacionamentos.
 
 Sou programador e temos o péssimo hábito de nos isolar e quando nos comunicamos nem sempre fazemos de uma maneira que seja fácil para o interlocutor, usando uma alta carga de termos técnicos e muita complexidade. É necessário clareza e assertividade na comunicação quando estamos, por exemplo, auxiliando um programador menos experiente, em reunião com o cliente ou time, ou mesmo dando um feedback.
 
