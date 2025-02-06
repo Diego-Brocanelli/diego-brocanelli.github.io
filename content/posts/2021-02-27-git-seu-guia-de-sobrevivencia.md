@@ -18,7 +18,7 @@ Olá, tudo bem!
 
 ## Sumário
 
-1. Introduçao
+1. Introdução
 2. Comandos
     - [git config](#git-config)
     - [git init](#git-init)
