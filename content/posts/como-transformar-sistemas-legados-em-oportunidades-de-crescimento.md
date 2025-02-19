@@ -47,11 +47,11 @@ Um ponto importante a se destacar é que o novo software escrito hoje será o le
 ## Por que há tanto medo de sistemas legados?
 
 O medo de lidar com sistemas legados geralmente está associado a fatores como:
-- Complexidade: A falta de padrões, sobreposição de soluções temporárias e dividas técnicas tornam o sistema difícil de entender;
-- Riscos: Alterar um sistema legado pode introduzir novos bugs ou até comprometer funcionalidades críticas;
-- Falta de testes: normalmente um sistema legado não tem testes ou está desatualizado;
-- Conhecimento limitado: Muitas vezes, quem desenvolveu o sistema não está mais na empresa, e o conhecimento acumulado foi perdido, somado a possível falta de documentação;
-- Custo: manutenção ou substituição de sistemas legados geralmente exige tempo e recursos significativos.
+- __Complexidade:__ A falta de padrões, sobreposição de soluções temporárias e dividas técnicas tornam o sistema difícil de entender;
+- __Riscos:__ Alterar um sistema legado pode introduzir novos bugs ou até comprometer funcionalidades críticas;
+- __Falta de testes:__ normalmente um sistema legado não tem testes ou está desatualizado;
+- __Conhecimento limitado:__ Muitas vezes, quem desenvolveu o sistema não está mais na empresa, e o conhecimento acumulado foi perdido, somado a possível falta de documentação;
+- __Custo:__ manutenção ou substituição de sistemas legados geralmente exige tempo e recursos significativos.
 
 Esses medos são compreensíveis, mas podem ser mitigados com planejamento adequado e uma abordagem colaborativa.
 
