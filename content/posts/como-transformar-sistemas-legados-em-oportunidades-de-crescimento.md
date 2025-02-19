@@ -249,7 +249,7 @@ Crie documentações técnicas, manuais de usuário e diagramas de arquitetura p
 
 Abaixo, apresento as opiniões de grandes profissionais sobre sistemas legados.
 
-### [Elton Mineto](https://eltonminetto.dev/)
+### [Elton Minetto](https://eltonminetto.dev/)
 
 #### Para você, o que caracteriza um sistema legado?
 
