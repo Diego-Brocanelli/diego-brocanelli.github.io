@@ -1,7 +1,7 @@
 ---
 title: "Como transformar sistemas legados em oportunidades de crescimento"
 date: 2025-02-18T21:03:48Z
-draft: true
+draft: false
 categories:
   - programação
 tags:
