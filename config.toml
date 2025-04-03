@@ -13,7 +13,7 @@ googleAnalytics = "G-724B54J2LY"
 
 [author]
   name = "Diego Brocanelli"
-  bio = "Sou desenvolvedor de software, pai e apaixonado por tecnologia."
+  bio = "Engenheiro de Software e Arquiteto de Soluções com 10+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos! 🚀"
   twitter = "diego_b2"
 
 [Menus]
@@ -46,7 +46,7 @@ googleAnalytics = "G-724B54J2LY"
 
 [Params.homeInfoParams]
   Title = "Olá! Meu nome é Diego Brocanelli 👋"
-  Content = "Sou desenvolvedor de software, pai e apaixonado por tecnologia."
+  Content = "Engenheiro de Software e Arquiteto de Soluções com 10+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
 
 [Params.cover]
   hidden = false
