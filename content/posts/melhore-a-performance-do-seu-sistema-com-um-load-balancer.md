@@ -6,7 +6,7 @@ categories:
   - arquitetura
 tags:
   - Load balancer
-  - balanceador de carag
+  - balanceador de caraga
 ---
 
 # Sumário
