@@ -2,12 +2,12 @@
  * Configurações globais
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400..700&family=Inter:wght@400;600;700&display=swap');
 
 :root {
     /* global */
     --font-sans: 'Inter', sans-serif;
-    --font-cursive: 'Fuzzy Bubbles', cursive;
+    --font-cursive: "Caveat Brush", cursive;
     /* dark */
     --color-accent-light: #3a4e6b;
     --color-bg-light: #f0f5fd;
