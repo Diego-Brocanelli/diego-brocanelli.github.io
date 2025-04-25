@@ -57,10 +57,17 @@ body:not(.dark) {
 
     p a {
         box-shadow: none;
-        border-bottom: 0.15rem solid var(--color-border-light);
+    }
+
+    .jumbotrom {
+        padding-top: 1.6rem;
+        padding-left: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        background-color: var(--color-bg-light);
+        border-radius: 1rem;
     }
 }
-
 
 /*
  * Blockquote - Dark Theme 
@@ -86,7 +93,6 @@ body.dark {
 
     blockquote strong {
         color: var(--color-border-dark);
-        border-bottom: 0.1rem solid var(--color-border-dark);
     }
 
     p a {
@@ -96,6 +102,15 @@ body.dark {
 
     strong {
         font-style: italic;
+    }
+
+    .jumbotrom {
+        padding-top: 1.6rem;
+        padding-left: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        background-color: var(--color-bg-dark);
+        border-radius: 1rem;
     }
 }
 
