@@ -41,8 +41,9 @@ googleAnalytics = "G-724B54J2LY"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
 
-[params.assets]
+[Params.assets]
   disableHLJS = false
+  customCSS = ["/css/custom.css"]
 
 [Params.homeInfoParams]
   Title = "Olá! Meu nome é Diego Brocanelli 👋"
@@ -70,3 +71,6 @@ googleAnalytics = "G-724B54J2LY"
   guessSyntax = true
   lineNos = true
   style = "monokai"
+
+[markup.goldmark.renderer]
+  unsafe = true

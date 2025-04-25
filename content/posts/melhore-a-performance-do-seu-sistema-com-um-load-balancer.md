@@ -74,7 +74,7 @@ Se o seu site ou aplicação enfrenta lentidão frequente, ou risco de downtime,
 
 # Exemplo do problema
 
-> **Nota**: Este é um exemplo simplificado, apenas ilustrando a adoção do load balancer
+> **Nota:** Este é um exemplo simplificado, apenas ilustrando a adoção do load balancer
 
 A empresa MyTicket é uma plataforma de venda de ingressos online, e para o dia-a-dia a plataforma atende com tranquilidade a demanda de compra de ingressos.
 

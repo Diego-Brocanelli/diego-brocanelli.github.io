@@ -92,7 +92,7 @@ Novamente para isso utilizo a funcionalidade de tarefas do [taskier](https://tas
 
 Eu particularmente me frustro quando o planejamento foge do trilho, normalmente por conta de urgências, mas para evitar isso deixo sempre uma gordura no dia para realizar uma call, atender um chamado que possa surgir ou qualquer imprevisto, mas essas mudanças devem ocorrer raramente.
 
-> Onde tudo é urgente nada é urgente!
+> 🚨 Onde tudo é urgente, nada é urgente!
 
 A priorização deve ser levada com muita seriedade, para que tudo seja feito sem correrias e de maneira organizada, pois no final tudo sairá com maior qualidade, porém, já atuei em outras empresas que era o extremo oposto, tudo era urgente, para agora e o que é urgente agora daqui a 5min pode não ser mais, sabemos que isso causa:
 

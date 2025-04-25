@@ -1,0 +1,120 @@
+/*
+ * Configurações globais
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    /* global */
+    --font-sans: 'Inter', sans-serif;
+    --font-cursive: 'Fuzzy Bubbles', cursive;
+    /* dark */
+    --color-accent-light: #3a4e6b;
+    --color-bg-light: #f0f5fd;
+    --color-border-light: #3a4e6b;
+    /* light */
+    --color-accent-dark: #e74848;
+    --color-bg-dark: #292a2b;
+    --color-border-dark: #e74848;
+}
+
+/*
+ * Blockquote - Light Theme 
+ */
+body:not(.dark) {
+    body {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        /* line-height: 1.7; */
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        max-width: 65ch;
+        background: white;
+        color: #1a1a1a;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    blockquote {
+        background-color: var(--color-bg-light);
+        border: 1px solid var(--color-bg-light) !important;
+        font-family: var(--font-cursive) !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        padding: 1.2rem !important;
+        border-radius: 1rem;
+    }
+
+    blockquote p {
+        padding: 1rem;
+        border: 1px solid var(--color-border-light);
+        border-radius: 0.5rem;
+        margin: 0 !important;
+    }
+
+    blockquote strong {
+        color: var(--color-border-light);
+        text-transform: uppercase;
+        border-bottom: 0.15rem solid var(--color-border-light);
+    }
+
+    p a {
+        box-shadow: none;
+        border-bottom: 0.15rem solid var(--color-border-light);
+    }
+}
+
+
+/*
+ * Blockquote - Dark Theme 
+ */
+
+body.dark {
+    blockquote {
+        background-color: var(--color-bg-dark);
+        border: 1px solid var(--color-bg-dark) !important;
+        font-family: var(--font-cursive) !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        padding: 1.2rem !important;
+        border-radius: 1rem;
+    }
+
+    blockquote p {
+        padding: 1rem;
+        border: 1px solid var(--color-border-dark);
+        border-radius: 0.5rem;
+        margin: 0 !important;
+    }
+
+    blockquote strong {
+        color: var(--color-border-dark);
+        text-transform: uppercase;
+        border-bottom: 0.15rem solid var(--color-border-dark);
+    }
+
+    p a {
+        box-shadow: none;
+        border-bottom: 0.1rem solid var(--color-border-dark);
+    }
+
+    strong {
+        font-style: italic;
+    }
+}
+
+p,
+code,
+li,
+blockquote {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+blockquote p {
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+img {
+    margin: 1rem auto !important;
+}
