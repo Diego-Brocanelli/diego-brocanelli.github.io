@@ -52,8 +52,7 @@ body:not(.dark) {
 
     blockquote strong {
         color: var(--color-border-light);
-        text-transform: uppercase;
-        border-bottom: 0.15rem solid var(--color-border-light);
+        border-bottom: 0.1rem solid var(--color-border-light);
     }
 
     p a {
@@ -87,8 +86,7 @@ body.dark {
 
     blockquote strong {
         color: var(--color-border-dark);
-        text-transform: uppercase;
-        border-bottom: 0.15rem solid var(--color-border-dark);
+        border-bottom: 0.1rem solid var(--color-border-dark);
     }
 
     p a {
@@ -105,7 +103,6 @@ p,
 code,
 li,
 blockquote {
-    /* text-align: justify; */
     line-height: 1.4;
 }
 
