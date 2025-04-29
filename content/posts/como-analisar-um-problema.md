@@ -1,11 +1,11 @@
 ---
-title: "Como Analisar Um Problema"
+title: "Como analisar um problema"
 date: 2025-04-25T20:06:37Z
-draft: true
+draft: false
 categories:
   - soft-skills
 tags:
-  - analise
+  - análise
   - analisar
   - soft skills
   - problema
@@ -14,6 +14,13 @@ tags:
 # Como analisar um problema?
 
 # Sumário
+
+- [O que motivou o post?](#o-que-motivou-o-post)
+- [O que caracteriza uma análise ser ruim?](#o-que-caracteriza-uma-análise-ser-ruim)
+- [Consequências de uma má análise](#consequências-de-uma-má-análise)
+- [O que faz uma análise ser excelente?](#o-que-faz-uma-análise-ser-excelente)
+- [Exemplo prático](#exemplo-prático)
+- [Considerações finais](#considerações-finais)
 
 ## O que motivou o post?
 
@@ -31,7 +38,7 @@ São diversos os fatores que podem fazer com que a análise seja de péssima qua
 
 ### Achismo
 
-Achar é algo que nós programadores nunca devemos fazer! Pois, achando não temos dados e fatos para ponderar e buscar a melhor alternativa possível. Fora que, a meu ver, traz um viés amador.
+Achar é algo que nós programadores nunca devemos fazer! Pois, achando não temos dados e fatos para ponderar e buscar a melhor alternativa possível. Fora que, na minha visão, transmite um viés de amadorismo.
 
 Imagine o cenário de um médico, você está com dor no estômago, e o mesmo "acha" que você tem “gastrite” e receita diversos remédios. Porém, no final das contas foi apenas o lanche que caiu mal.
 
@@ -41,7 +48,7 @@ Do mesmo modo que nunca esperamos nos consultar com um médico medíocre, nós t
 
 ### Análise rasa
 
-Fazer uma análise superficial, é tão perigoso quanto nenhuma análise, pois traz pouca ou nenhuma evidência, podendo estar erradas!
+Fazer uma análise superficial, é tão perigoso quanto nenhuma análise, pois traz pouca ou nenhuma evidência, podendo estarem erradas!
 
 Não poucas vezes, principalmente no início de carreira, iniciamos a análise e na primeira evidência que é achada tomamos como verdade, interrompemos a análise e partimos para a ação. Porém, não poucas vezes também, temos que parar o que está sendo feito, pois não está correto ou claro, devido à análise superficial, fazendo com que o planejamento seja superficial causando diversos retrabalhos.
 
@@ -73,7 +80,7 @@ Ter hipóteses é saudável, mas elas precisam ser investigadas e testadas. Sem 
 ## O que faz uma análise ser excelente?
 
 - **Análise técnica:** devemos analisar sempre 100%, garantindo que todos os fatos e evidências necessárias foram mapeadas;
-- **Coleta de evidências:** conforme analisamos, devemos coletar todas as evidências encontradas, imagens, logs, códigos, entrevista com pessoas envolvidas, etc., imagine as evidências sendo como peças de um quebra cabeça, a diferença que podemos, às vezes, estar mexendo com peças de mais de um quebra-cabeça. Somente com todas as peças juntas poderemos saber;
+- **Coleta de evidências:** conforme analisamos, devemos coletar todas as evidências encontradas, imagens, logs, códigos, entrevista com as pessoas envolvidas, etc., imagine as evidências sendo como peças de um quebra cabeça, a diferença que podemos, às vezes, estar mexendo com peças de mais de um quebra-cabeça. Somente com todas as peças juntas poderemos entender o cenário completo;
 - **Opiniões externas:** podemos até receber opiniões externas que nos ajudam, porém, não devemos negligenciar a análise completa. Não podemos ignorar nenhuma etapa, por mais óbvia que seja, pois o “é óbvio que já foi analisado” pode ser no final onde justamente o problema estava. Há momentos que o cliente pode abrir um chamado e descrever o que “acha”, porém, sempre repasse tudo, pode ser que em sua ótica o que foi desconsiderado por ele seja onde o problema se encontra;
 - **Hipóteses:** podemos ter hipóteses de um problema ou ação, o que diferencia do “achismo” é o seu processo de análise e validação;
 - **Separe os contextos:** nem tudo que parece bug é de fato. Pode ser uma regra de negócio mal compreendida ou uma nova necessidade;
@@ -143,7 +150,7 @@ Ao observarmos o que foi dito pelo cliente, ele está invertendo as datas, e iss
 
 ### Documentando o resultado da análise
 
-Após a realização de toda a análise do problema, foi constatado o relatório não está sendo gerado pelo fato das datas estarem invertidas, com isso o programador retornou no chamado com a seguinte resposta.
+Após a realização de toda a análise do problema, foi constatado o relatório não está sendo gerado pelo fato das datas estarem invertidas, com isso o programador respondeu ao chamado com a seguinte resposta.
 
 <div class="jumbotrom">
 
@@ -176,13 +183,13 @@ Atenciosamente,
 
 Como podemos observar acima, a resposta traz de forma geral o problema, como a análise ocorreu sem trazer jargões técnicos e descreveu como e quando será solucionada a eventualidade trazida pelo cliente.
 
-Fazendo assim, caso no futuro seja necessário retomar este chamado, ou mesmo um outra pessoa tenha que compreender o que ocorreu, todas as mensagens trocadas entre cliente e programador descreve todo o caminho percorrido até a solução. Não deixando dúvidas no processo.
+Fazendo assim, caso no futuro seja necessário retomar este chamado, ou mesmo outra pessoa tenha que compreender o que ocorreu, todas as mensagens trocadas entre cliente e programador descreve todo o caminho percorrido até a solução. Não deixando dúvidas no processo.
 
 > **Atenção!** A resposta da análise deve ser clara, direta e conter todas as informações necessárias para esclarecer a decisão tomada.
 
 </aside>
 
-Para montar o texto de resposta sempre devemos ter em mente que tem que ser 100% compreensível pelo cliente ou quem ler o texto, nunca o foco é quem está escrevendo, pois ele etá munido de todo o ocorrido na cabeça, devemos montar todas as peças para que todos possam ser capazes de ver o quebra-cabeça finalizado.
+Para montar o texto de resposta sempre devemos ter em mente que tem que ser 100% compreensível pelo cliente ou quem ler o texto, nunca o foco é quem está escrevendo, pois ele está munido de todo o ocorrido na cabeça, devemos montar todas as peças para que todos possam ser capazes de ver o quebra-cabeça finalizado.
 
 Particularmente gosto de dividir minha resposta nas três etapas:
 
@@ -190,7 +197,7 @@ Particularmente gosto de dividir minha resposta nas três etapas:
 - Todo o processo de análise e seus resultados detalhados;
 - O que será feito com a decisão tomada.
 
-Nem sempre o resultado será uma ação propriamente dita, no exemplo que trouxe, por se tratar de uma falha houve ação de correção. Porém, podemos chegar a conclusão que o que está sendo reportado não é um problema e sim uma ação decorrente a regra de negócio, ou também, podemos chegar a conclusão que seja uma necessidade de evoluir o sistema e atualizar as regras de negócio.
+Nem sempre o resultado será uma ação propriamente dita, no exemplo que trouxe, por se tratar de uma falha houve ação de correção. Porém, podemos chegar em conclusões de que o reportado não é, de fato, um problema e sim uma ação decorrente a regra de negócio, ou também, que seja uma necessidade de evoluir o sistema e atualizar as regras de negócio.
 
 ## Considerações finais
 

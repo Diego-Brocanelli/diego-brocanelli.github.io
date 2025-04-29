@@ -7,7 +7,7 @@
 :root {
     /* global */
     --font-sans: 'Inter', sans-serif;
-    --font-cursive: "Caveat Brush", cursive;
+    /* --font-cursive: "Caveat Brush", cursive; */
     /* dark */
     --color-accent-light: #3a4e6b;
     --color-bg-light: #f0f5fd;
@@ -36,7 +36,7 @@ body:not(.dark) {
     blockquote {
         background-color: var(--color-bg-light);
         border: 1px solid var(--color-bg-light) !important;
-        font-family: var(--font-cursive) !important;
+        font-family: var(--font-sans) !important;
         font-weight: 400 !important;
         font-style: normal !important;
         padding: 1.2rem !important;
@@ -77,7 +77,7 @@ body.dark {
     blockquote {
         background-color: var(--color-bg-dark);
         border: 1px solid var(--color-bg-dark) !important;
-        font-family: var(--font-cursive) !important;
+        font-family: var(--font-sans) !important;
         font-weight: 400 !important;
         font-style: normal !important;
         padding: 1.2rem !important;
