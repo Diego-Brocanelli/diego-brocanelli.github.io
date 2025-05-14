@@ -57,6 +57,7 @@ body:not(.dark) {
 
     p a {
         box-shadow: none;
+        border-bottom: 0.1rem solid var(--color-border-light);
     }
 
     .jumbotrom {

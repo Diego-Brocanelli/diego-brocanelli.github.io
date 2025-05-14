@@ -15,8 +15,11 @@ tags:
   - mysql
   - prompt
   - terminal
-
 ---
+
+## Sumário
+
+## Objetivo
 
 Olá pessoal, tudo bem?!
 
@@ -33,13 +36,13 @@ Abra o terminal e digite:
 ```bash
 mysql -u root -p
 ```
+
 * **Parâmetro:**
-  * _-u_
-    * Indica o usuário ao qual desejamos utilizar para conectar ao banco.
-  * _root_
-    * Nome do usuário que estamos utilizando para realizar a conexão com o banco de dados. Onde pode ser qualquer usuário cadastrado no MySQL.
-  * _-p_
-    * Indica a senha do usuário para conexão com o banco, este parâmetro é opcional, pois caso o usuário desejado não utilize senha para se conectar basta omitir este parâmetro, porem não é nada recomendado utilizar usuários sem senha. 🙂
+
+| Parâmetro | Valor        | Descrição                                                                                                                                                      |
+|-----------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-u`      | `root`       | Indica o usuário utilizado para conectar ao banco de dados. Neste caso, `root` é o nome do usuário, podendo ser qualquer um cadastrado no MySQL.              |
+| `-p`      | (opcional)   | Indica a senha do usuário. Pode ser omitido se o usuário não usar senha, mas não é recomendado utilizar usuários sem senha. 🙂                                 |
 
 ### Conectar no MySQL acessando  direto o banco de dados desejado
 
@@ -49,13 +52,9 @@ Abra o terminal e digite:
 mysql -u root -p nome_do_banco_de_dados
 ```
 
-* **Parâmetro:**
-  * _nome_do_banco_de_dados_
-    * Como descrito, refere-se ao nome do banco de dados que desejamos acessar.
-
-Após execução do comando é realizado a conexão e acesso ao banco de dados que desejamos utilizar.
-
-
+| Parâmetro                | Descrição                                                                |
+|--------------------------|--------------------------------------------------------------------------|
+| `nome_do_banco_de_dados` | Nome do banco de dados que desejamos acessar |
 
 ### Listar os banco de dados
 
@@ -90,7 +89,7 @@ Abra o terminal acesso o MySQL, em seguida acesse o banco de dados desejado e di
 show tables;
 ```
 
-Exemplo de resultado.
+**Exemplo de resultado**
 
 ```bash
 +--------------------+
@@ -108,12 +107,12 @@ Exemplo de resultado.
 Abra o terminal acesso o MySQL, em seguida acesse o banco de dados desejado e digite:
 
 ```bash
-describe table_name;
+describe nome_tabela;
 ```
 
-* ** Parâmetro**
-  * table_name
-    * Substitua pelo nome da tabela desejada.
+| Parâmetro     | Descrição                                         |
+|---------------|---------------------------------------------------|
+| `nome_tabela` | Nome da tabela de deseja visualizar sua estrutura |
 
 **Exemplo de resultado**
 
@@ -135,12 +134,14 @@ describe table_name;
 Para criar uma cópia da base de dados desejados abara o terminal, acesse o diretório no qual deseja criar o arquivo em seguida digite o comando:
 
 ```bash
-mysqldump -u root -p database_name > database_name.sql;
+mysqldump -u root -p nome_tabela > nome-tabela.sql;
 ```
 
-* **Parâmetro**
-  * database_name
-    * Substitua pelo nome do banco de dados ao qual deseja realizar a cópia.
+| Parâmetro         | Descrição                                                      |
+|-------------------|----------------------------------------------------------------|
+| `nome_tabela`     | Nome da tabela de deseja visualizar sua estrutura              |
+| `>`               | Operador que indica o repasse do resultado para o arquivo      |
+| `nome-tabela.sql` | Nome do arquivo que receberá as informações contídas na tabela |
 
 Após executar o comando, será criado um arquivo .sql no local de desetino desejado. Caso você tenha o costume de utilizar por exemplo o PHPMyAdmin para gear o dump, recomendo que passe a utilizar o terminal, pois a interface gráfica em alguns casos pode gerar um arquivo .sql que ao ser importado por outro membro da sua equipe pode conter erros. Já o arquivo gerado pelo terminal as chances são mínimas, pois se o comando executado não apresentar erro seu resultado será correto e o arquivo gerado poderá ser importado sem maiores eventualidades.
 
