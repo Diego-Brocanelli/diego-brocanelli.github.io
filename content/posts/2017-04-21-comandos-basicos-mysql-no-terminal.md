@@ -4,7 +4,6 @@ author: Diego Brocanelli
 type: post
 date: 2017-04-21T16:27:37+00:00
 url: /mysql/comandos-basicos-mysql-no-terminal/
-featured_image: /wp-content/uploads/2017/04/39_mysql_terminal.png
 tc-thumb-fld:
   - 'a:2:{s:9:"_thumb_id";i:1393;s:11:"_thumb_type";s:5:"thumb";}'
 categories:
@@ -19,217 +18,331 @@ tags:
 
 ## Sumário
 
-## Objetivo
+- [Introdução](#introdução)
+- [1. Conexão e Navegação](#1-conexão-e-navegação)
+  - [Conectar ao MySQL](#conectar-ao-mysql)
+  - [Conectar diretamente a um banco de dados](#conectar-diretamente-a-um-banco-de-dados)
+  - [Listar todos os bancos de dados](#listar-todos-os-bancos-de-dados)
+  - [Selecionar um banco de dados](#selecionar-um-banco-de-dados)
+  - [Listar tabelas do banco selecionado](#listar-tabelas-do-banco-selecionado)
+  - [Ver estrutura de uma tabela](#ver-estrutura-de-uma-tabela)
+- [2. Gerenciamento de Bancos e Tabelas](#2-gerenciamento-de-bancos-e-tabelas)
+  - [Criar um novo banco de dados](#criar-um-novo-banco-de-dados)
+  - [Apagar um banco de dados](#apagar-um-banco-de-dados)
+  - [Criar uma nova tabela](#criar-uma-nova-tabela)
+  - [Apagar uma tabela](#apagar-uma-tabela)
+- [3. Manipulação de Dados](#3-manipulação-de-dados)
+  - [Inserir dados em uma tabela](#inserir-dados-em-uma-tabela)
+  - [Inserir de múltiplos dados em uma tabela](#inserir-de-múltiplos-dados-em-uma-tabela)
+  - [Consultar dados de uma tabela](#consultar-dados-de-uma-tabela)
+  - [Atualizar dados em uma tabela](#atualizar-dados-em-uma-tabela)
+  - [Deletar dados de uma tabela](#deletar-dados-de-uma-tabela)
+- [4. Backup e Restauração](#4-backup-e-restauração)
+  - [Exportar (dump) um banco de dados](#exportar-dump-um-banco-de-dados)
+  - [Exportar (dump) apenas a estrutura do banco de dados](#exportar-dump-apenas-a-estrutura-do-banco-de-dados)
+  - [Exportar todas as bases de dados](#exportar-todas-as-bases-de-dados)
+  - [Importar um banco de dados](#importar-um-banco-de-dados)
+- [5. Gerenciamento de Usuários e Permissões](#5-gerenciamento-de-usuários-e-permissões)
+  - [Criar um novo usuário](#criar-um-novo-usuário)
+  - [Conceder privilégios a um usuário](#conceder-privilégios-a-um-usuário)
+  - [Visualizar privilégios de um usuário](#visualizar-privilégios-de-um-usuário)
+  - [Revogar privilégios de um usuário](#revogar-privilégios-de-um-usuário)
+- [6. Comandos Úteis](#6-comandos-úteis)
+  - [Ver versão do MySQL](#ver-versão-do-mysql)
+  - [Limpar a tela do terminal](#limpar-a-tela-do-terminal)
+  - [Sair do MySQL](#sair-do-mysql)
+- [Tabela de Referência Rápida](#tabela-de-referência-rápida)
+- [Considerações Finais](#considerações-finais)
 
-Olá pessoal, tudo bem?!
+## Introdução
 
-Não é nada fora do comum que nós desenvolvedores  tenhamos que manipular/modificar/criar bancos de dados, com certeza isso é o pesadelo de qualquer DBA. Particularmente gosto de trabalhar com front, back e banco de dados pois isso me permite a ter acesso a conteúdos fantásticos aprendendo coisas novas sempre.
+Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.
 
-Como podemos manipular o banco de dados? Bom, particularmente para atividades corriqueira utilizo o terminal, sim o terminal, é simples e rápido.
+Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.
 
-Caso você seja usuário Windows recomento que utilize o [cmder](http://cmder.net/) software portable que emula o terminal como se fosse no Linux, caso você seja usuário Linux ou Mac, bom, sua vida com o terminal já é tranquila. 🙂
+## 1. Conexão e Navegação
 
-### Conectar no MySQL
-
-Abra o terminal e digite:
-
-```bash
-mysql -u root -p
-```
-
-* **Parâmetro:**
-
-| Parâmetro | Valor        | Descrição                                                                                                                                                      |
-|-----------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `-u`      | `root`       | Indica o usuário utilizado para conectar ao banco de dados. Neste caso, `root` é o nome do usuário, podendo ser qualquer um cadastrado no MySQL.              |
-| `-p`      | (opcional)   | Indica a senha do usuário. Pode ser omitido se o usuário não usar senha, mas não é recomendado utilizar usuários sem senha. 🙂                                 |
-
-### Conectar no MySQL acessando  direto o banco de dados desejado
-
-Abra o terminal e digite:
-
-```bash
-mysql -u root -p nome_do_banco_de_dados
-```
-
-| Parâmetro                | Descrição                                                                |
-|--------------------------|--------------------------------------------------------------------------|
-| `nome_do_banco_de_dados` | Nome do banco de dados que desejamos acessar |
-
-### Listar os banco de dados
-
-Abra o terminal acesso o MySQL e digite:
-
-```bash
-show databases;
-```
-
-Abaixo segue um exemplo de retorno do comando, podemos observar que é listado todos os bancos de dados até mesmo os utilizados pelo MySQL.
-
-```bash
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| banco_01           |
-| livraria           |
-| mysql              |
-| performance_schema |
-| post_sql           |
-| sys                |
-| banco_02           |
-+--------------------+
-```
-
-### Listar as tabelas do banco de dados
-
-Abra o terminal acesso o MySQL, em seguida acesse o banco de dados desejado e digite:
+### Conectar ao MySQL
 
 ```bash
-show tables;
+mysql -u [usuário] -p
 ```
 
-**Exemplo de resultado**
+| **Parâmetro** | **Propósito** |
+| --- | --- |
+| -u | Informar qual o nome de usuário deseja usar para se conectar ao MySQL |
+| -p | Exige que a senha seja informada |
+
+### Conectar diretamente a um banco de dados
 
 ```bash
-+--------------------+
-| Tables_in_livraria |
-+--------------------+
-| autores            |
-| capitulos          |
-| livros             |
-| vendas             |
-+--------------------+
+mysql -u [usuário] -p [nome_do_banco]
 ```
 
-### Visualizar estrutura da tabela
+### Listar todos os bancos de dados
 
-Abra o terminal acesso o MySQL, em seguida acesse o banco de dados desejado e digite:
+```sql
+SHOW DATABASE;
+```
+
+### Selecionar um banco de dados
+
+```sql
+USE [nome_do_banco];
+```
+
+### Listar tabelas do banco selecionado
+
+```sql
+SHOW TABLES;
+```
+
+### Ver estrutura de uma tabela
+
+```sql
+DESCRIBE [nome_da_tabela];
+```
+
+---
+
+## 2. Gerenciamento de Bancos e Tabelas
+
+### Criar um novo banco de dados
+
+```sql
+CREATE DATABASE [nome_do_banco];
+```
+
+### Apagar um banco de dados
+
+```sql
+DROP DATABASE [nome_do_banco];
+```
+
+> **Atenção!** Use com cautela, pois o banco de dados será APAGADO!
+> 
+
+### Criar uma nova tabela
+
+```sql
+CREATE TABLE [nome_da_tabela] (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  data_criacao DATE
+);
+```
+
+**Exemplo:**
+
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255)  NOT NULL,
+  created_at DATETIME
+);
+```
+
+### Apagar uma tabela
+
+```sql
+DROP TABLE [nome_da_tabela];
+```
+
+> **Atenção!** Use com cautela, pois a tabela e seus dados serão APAGADOS!
+> 
+
+## 3. Manipulação de Dados
+
+### Inserir dados em uma tabela
+
+```sql
+INSERT INTO [nome_da_tabela]
+(coluna1, coluna2)
+VALUES
+('valor1', 'valor2');
+```
+
+**Exemplo:**
+
+```sql
+INSERT INTO users
+(name, email, password)
+VALUES
+("José Couves", "couves.jose@couves.com", "$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe
+");
+```
+
+### Inserir de múltiplos dados em uma tabela
+
+```sql
+INSERT INTO [nome_da_tabela]
+(coluna1, coluna2)
+VALUES
+('valor1', 'valor2'),
+('valor1', 'valor2'),
+('valor1', 'valor2'),
+('valor1', 'valor2'),
+('valor1', 'valor2');
+```
+
+**Exemplo:**
+
+```sql
+INSERT INTO users
+(name, email, password)
+VALUES
+("José Couves", "couves.jose@couves.com", "$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe"),
+("Ana Couves", "couves.ana@couves.com", "$2y$10$GexKU3b3xD48gEB0upptSOKQKj9fGHyB9v5A5U/jNDcC6ElpL9zDi"),
+("Carlos Couves", "couves.carlos@couves.com", "$2y$10$Jj8iD/6RgDCug6OgZqzRXOw5x0tx91/nx/2mQeRpbM65czYgJIoUy"),
+("Beatriz Couves", "couves.beatriz@couves.com", "$2y$10$9cfZIl/BDpdaC4l4qV6JHOGcGCrVfUMN8G2Sg97Zq2oSeVqMnx6dW");
+```
+
+### Consultar dados de uma tabela
+
+```sql
+SELECT * FROM [nome_da_tabela];
+```
+
+**Exemplo:**
+
+```sql
+SELECT name, email
+FROM users;
+```
+
+### Atualizar dados em uma tabela
+
+```sql
+UPDATE [nome_da_tabela]
+SET [coluna] = 'novo_valor'
+WHERE [condição];
+```
+
+**Exemplo:**
+
+```sql
+UPDATE users
+SET name = 'Antônio Carlos Couves',
+    email = "couves.antonio@couves.com"
+WHERE id = 4;
+```
+
+### Deletar dados de uma tabela
+
+```sql
+DELETE FROM [nome_da_tabela] WHERE [condição];
+```
+
+**Exemplo:**
+
+```sql
+DELETE FROM users WHERE id = 4;
+```
+
+## 4. Backup e Restauração
+
+### Exportar (dump) um banco de dados
 
 ```bash
-describe nome_tabela;
+mysqldump -u [usuário] -p [nome_do_banco] > backup.sql
 ```
 
-| Parâmetro     | Descrição                                         |
-|---------------|---------------------------------------------------|
-| `nome_tabela` | Nome da tabela de deseja visualizar sua estrutura |
+### Exportar (dump) apenas a estrutura do banco de dados
 
-**Exemplo de resultado**
+```sql
+mysqldump -u [usuário] -p [nome_do_banco] --no-data > backup.sql;
+```
+
+### Exportar todas as bases de dados
 
 ```bash
-+--------------------+---------------+------+-----+---------+----------------+
-| Field              | Type          | Null | Key | Default | Extra          |
-+--------------------+---------------+------+-----+---------+----------------+
-| id                 | int(11)       | NO   | PRI | NULL    | auto_increment |
-| nome               | varchar(100)  | NO   |     | NULL    |                |
-| data_de_lancamento | date          | NO   |     | NULL    |                |
-| autor_id           | int(11)       | NO   |     | NULL    |                |
-| preco              | decimal(10,2) | NO   |     | NULL    |                |
-+--------------------+---------------+------+-----+---------+----------------+
-5 rows in set (0,00 sec)
+mysqldump -u [usuário] -p --all-databases > todos_bancos.sql
 ```
 
-### Dump da base de dados
-
-Para criar uma cópia da base de dados desejados abara o terminal, acesse o diretório no qual deseja criar o arquivo em seguida digite o comando:
+### Importar um banco de dados
 
 ```bash
-mysqldump -u root -p nome_tabela > nome-tabela.sql;
+mysql -u [usuário] -p [nome_do_banco] < backup.sql
 ```
 
-| Parâmetro         | Descrição                                                      |
-|-------------------|----------------------------------------------------------------|
-| `nome_tabela`     | Nome da tabela de deseja visualizar sua estrutura              |
-| `>`               | Operador que indica o repasse do resultado para o arquivo      |
-| `nome-tabela.sql` | Nome do arquivo que receberá as informações contídas na tabela |
+> **Observação:** Esse comando importa qualquer conteúdo SQL presente no arquivo, não apenas a estrutura de um banco.
+> 
 
-Após executar o comando, será criado um arquivo .sql no local de desetino desejado. Caso você tenha o costume de utilizar por exemplo o PHPMyAdmin para gear o dump, recomendo que passe a utilizar o terminal, pois a interface gráfica em alguns casos pode gerar um arquivo .sql que ao ser importado por outro membro da sua equipe pode conter erros. Já o arquivo gerado pelo terminal as chances são mínimas, pois se o comando executado não apresentar erro seu resultado será correto e o arquivo gerado poderá ser importado sem maiores eventualidades.
+## 5. Gerenciamento de Usuários e Permissões
 
-### Dump somente da estrutura da base de dados
+### Criar um novo usuário
 
-Abra o terminal vá ao diretório onde deseja criar o arquivo de backup e digite:
+```sql
+CREATE USER 'novo_usuario'@'localhost' IDENTIFIED BY 'senha';
+```
+
+| **Parâmetro** | **Ação** |
+| --- | --- |
+| “localhost” | O usuário apenas se conecta por meio da máquina local |
+| “%” | O usuário pode se conectar de qualquer IP remoto |
+
+> **Obs.:** Ambos os tipos de conexão são válidas, a “localhost” seria mais restritiva, porém, tudo dependerá das suas necessidades.
+> 
+
+### Conceder privilégios a um usuário
+
+```sql
+GRANT ALL PRIVILEGES ON [nome_do_banco].* TO 'novo_usuario'@'localhost';
+```
+
+> **Atenção!** Privilégios devem ser concedidos apenas a usuários que realmente necessitam. Caso contrário, não!
+> 
+
+### Visualizar privilégios de um usuário
+
+```sql
+SHOW GRANTS FOR 'novo_usuario'@'localhost';
+```
+
+### Revogar privilégios de um usuário
+
+```sql
+REVOKE ALL PRIVILEGES ON [nome_do_banco].* FROM 'novo_usuario'@'localhost';
+```
+
+## 6. Comandos Úteis
+
+### Ver versão do MySQL
 
 ```bash
-mysqldump -u root -p database_name --no-data > database_name.sql;
+mysql -V
 ```
 
-* **Parâmetro**
-  * no-data
-    * Indica que desejamos criar uma cópia do bando de dados sem as informações contidas nas tabelas.
+### Limpar a tela do terminal
 
-Este comando é bem similar ao mencionado anteriormente, porém com a diferença que ele criar uma cópia da estrutura do banco de dados não realizando a exportação dos dados contidos nas tabelas.
+- No terminal: `Ctrl + L`;
+- No MySQL Shell: `\clear`.
 
-### Importar banco de dados
+### Sair do MySQL
 
-Abra o terminal vá ao diretório onde encontra-se o bando de dados que deseja importar e digite:
-
-```bash
-mysql -u root -p database_name < database_name.sql;
+```sql
+EXIT;
 ```
 
-Após execução do comando e o arquivo a ser importado não conter erros, sua importação será realizada com sucesso. Em casos de importação onde as tabelas do banco de dados contenham 100, 200, 300 mil (esse volume é até pequeno em comparação com banco de milhões de registros) ou mais registros isso acarretará em um tempo maior de processamento, basta aguardar até a finalização e liberação do terminal pelo processo.
+## Tabela de Referência Rápida
 
-### Dump de todos os bancos de dados
+| Ação | Comando |
+| --- | --- |
+| Listar bancos | `SHOW DATABASES;` |
+| Selecionar banco | `USE nome_do_banco;` |
+| Listar tabelas | `SHOW TABLES;` |
+| Ver estrutura da tabela | `DESCRIBE nome_da_tabela;` |
+| Inserir dados | `INSERT INTO ... VALUES (...);` |
+| Exportar banco | `mysqldump -u user -p db > backup.sql` |
+| Importar backup | `mysql -u user -p db < backup.sql` |
+| Criar usuário | `CREATE USER 'user'@'host' IDENTIFIED BY 'senha';` |
 
-Abra o terminal, entre no diretório desejado para armazenar o arquivo de backup e digite:
+## Considerações Finais
 
-```bash
-mysqldump -u user -p --all-databases > full_path_to\file.sql
-```
+Compreender os comandos básicos do MySQL permite atuar com mais autonomia, entender melhor o funcionamento de ORMs e resolver problemas rapidamente, mesmo sem interface gráfica.
 
-* **Parâmetro**
-  * all-databases
-    * Indica que desejamos exportar todas as bases de dados disponíveis no MySQL.
+## Referências
 
-Após término da execução, será gerado um arquivo conforme especificado contento todos os bancos de dados do MySQL.
-
-### Apagar tabela
-
-Abra o terminal acesse o MySQL em seguida o banco de dados desejado e digite:
-
-```bash
-drop table nome_da_tabela;
-```
-
-* **Parâmetro**
-  * drop table
-    * Responsável por apagar a tabela do banco de dados.
-  * nome_da_tabela
-    * Nome da tabela ao qual se deseja apagar.
-
-
-> **Utilize com muita cautela, pois após executar o comando a tabela será apagada do seu banco de dados!**
-
-### Apagar a base de dados
-
-Abra o terminal acesse o MySQL e digite:
-
-```bash
-drop database nome_do_banco_de_dados;
-```
-
-* **Parâmetro**
-  * drop database
-    * Responsável por apagar o banco de dados.
-  * nome_do_banco_de_dados
-    * Nome do banco de dados ao qual se deseja apagar.
-
-Utilize com muita cautela, pois após executar o comando o banco de dados será apagado!
-
-### Limpar o terminal
-
-Acesse o terminal e pressione o seguinte comando:
-
-```bash
-ctrl+l
-```
-
-Este é um comando do terminal, porém muito útil quando estamos trabalhando com o MySQL ou qualquer banco de dados ou atividade no terminal, pois o mesmo limpa a tela do terminal para que possamos utilizá-lo com mais clareza e sem poluição de informações na tela.
-
-Todos os comandos listados acima são recomendados para uso em _ambiente local_, não recomendo seu uso em ambiente de produção, caso vá utilizar tenha **MUITA CAUTELA e PARCIMÔNIA** com os comandos utilizados. Siga as boas práticas e com isso você verá que o uso do terminal irá maximizar sua performance.
-
-Não tenha medo do terminal, sabendo utilizá-lo é uma ferramenta poderosíssima, podendo abrir um leque de opções fantásticas.
-
-Espero que tenham apreciado este post e caso tenham alguma duvidas, sugestões ou crítica por favor deixe nos comentários e com isso podemos debater e aprender cada vez mais.
-
-Grande abraço e até a próxima! 🙂
+- [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)

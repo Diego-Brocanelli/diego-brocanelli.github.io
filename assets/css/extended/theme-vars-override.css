@@ -7,7 +7,7 @@
 :root {
     /* global */
     --font-sans: 'Inter', sans-serif;
-    /* --font-cursive: "Caveat Brush", cursive; */
+    --font-cursive: "Caveat Brush", cursive;
     /* dark */
     --color-accent-light: #3a4e6b;
     --color-bg-light: #f0f5fd;
@@ -36,7 +36,7 @@ body:not(.dark) {
     blockquote {
         background-color: var(--color-bg-light);
         border: 1px solid var(--color-bg-light) !important;
-        font-family: var(--font-sans) !important;
+        font-family: var(--font-cursive) !important;
         font-weight: 400 !important;
         font-style: normal !important;
         padding: 1.2rem !important;
@@ -57,7 +57,8 @@ body:not(.dark) {
 
     p a {
         box-shadow: none;
-        border-bottom: 0.1rem solid var(--color-border-light);
+        border-bottom: 0.1rem solid var(--color-border-light
+        );
     }
 
     .jumbotrom {
@@ -67,6 +68,15 @@ body:not(.dark) {
         margin-bottom: 1.5rem;
         background-color: var(--color-bg-light);
         border-radius: 1rem;
+    }
+
+    .post-content .highlight:not(table), .post-content pre,
+    .highlight, .highlight div, .post-content .highlight table {
+        background-color: var(--color-border-light) !important;
+    }
+
+    .post-content table thead {
+        background-color: var(--color-bg-light);
     }
 }
 
@@ -78,7 +88,7 @@ body.dark {
     blockquote {
         background-color: var(--color-bg-dark);
         border: 1px solid var(--color-bg-dark) !important;
-        font-family: var(--font-sans) !important;
+        font-family: var(--font-cursive) !important;
         font-weight: 400 !important;
         font-style: normal !important;
         padding: 1.2rem !important;
@@ -113,6 +123,10 @@ body.dark {
         background-color: var(--color-bg-dark);
         border-radius: 1rem;
     }
+
+    .post-content table thead {
+        background-color: var(--color-bg-dark);
+    }
 }
 
 p,
@@ -129,4 +143,22 @@ blockquote p {
 
 img {
     margin: 1rem auto !important;
+}
+
+.highlight,
+.highlight div,
+.post-content .highlight table {
+    border-radius: 1rem !important;
+}
+
+.post-content .highlight table {
+    border-radius: 1rem !important;
+}
+
+.post-content table {
+    width: 100% !important;
+}
+
+.post-content table thead tr th {
+    text-align: center;
 }
