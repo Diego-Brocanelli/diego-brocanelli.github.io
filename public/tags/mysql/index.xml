@@ -38,9 +38,7 @@ Para poder auxiliar da melhor maneira, separei o problema em partes, sendo:</des
       <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
       
       <guid>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</guid>
-      <description>Olá pessoal, tudo bem?!
-Não é nada fora do comum que nós desenvolvedores tenhamos que manipular/modificar/criar bancos de dados, com certeza isso é o pesadelo de qualquer DBA. Particularmente gosto de trabalhar com front, back e banco de dados pois isso me permite a ter acesso a conteúdos fantásticos aprendendo coisas novas sempre.
-Como podemos manipular o banco de dados? Bom, particularmente para atividades corriqueira utilizo o terminal, sim o terminal, é simples e rápido.</description>
+      <description>Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4.</description>
     </item>
     
   </channel>

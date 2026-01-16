@@ -14,9 +14,7 @@
       
       <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
       <description>Olá, tudo bem!
-O que é GIT? É uma ferramente para controle de versão descentralizada criada por Linus Torvalds, que possibilita a gestão do versionamento de códigos, alias, não necessariamente apenas códigos, sendo a ferramente mais utilizada para a finalidade a que se propõem.
-Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?
-Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas cada vez maiores, onde dezenas ou centenas de pessoas estão interagindo com o mesmo repositório de código mandando correções ou novas funcionalidades.</description>
+Sumário Introdução Comandos git config git init git clone git status git branch git checkout git add git commit git diff git log git merge git pull git push git reset git tag git mv git rebase git grep Atualizar fork Git por meio de interface gráfica Materiais complementares Considerações Introdução Git é um sistema de controle de versão descentralizado, criado por Linus Torvalds. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.</description>
     </item>
     
   </channel>

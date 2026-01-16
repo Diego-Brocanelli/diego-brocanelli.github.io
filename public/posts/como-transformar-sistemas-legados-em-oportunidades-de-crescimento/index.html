@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Como transformar sistemas legados em oportunidades de crescimento | Diego Brocanelli</title>
+<meta name="keywords" content="software, programação, legado, legados, oportunidade, crescimento" />
+<meta name="description" content="Sumário O que define um sistema como legado? Por que há tanto medo de sistemas legados? Não julgue quem nem o porquê Dívidas técnicas Para quem é essa melhoria? Regras de negócio no banco de dados Mapear as mudanças Planejando o quê e como será feito Qual o melhor momento para refatorar? Quando não devo aplicar melhorias? E a documentação? Opiniões da comunidade Encerramento Referências O que define um sistema como legado?">
+<meta name="author" content="">
+<link rel="canonical" href="https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c18f6860182e7002af473582222b37f9280d6e33be9205e2f8cf983993e44ff0.css" integrity="sha256-wY9oYBgucAKvRzWCIis3&#43;SgNbjO&#43;kgXi&#43;M&#43;YOZPkT/A=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://diegobrocanelli.com.br/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://diegobrocanelli.com.br/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://diegobrocanelli.com.br/apple-touch-icon.png">
+<link rel="mask-icon" href="https://diegobrocanelli.com.br/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.111.3">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://diegobrocanelli.com.br/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://diegobrocanelli.com.br/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://diegobrocanelli.com.br/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
+                    <span>Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://diegobrocanelli.com.br/about/" title="Sobre">
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://diegobrocanelli.com.br/">Home</a>&nbsp;»&nbsp;<a href="https://diegobrocanelli.com.br/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Como transformar sistemas legados em oportunidades de crescimento
+    </h1>
+    <div class="post-meta"><span title='2025-02-18 21:03:48 +0000 UTC'>2025-02-18</span>&nbsp;·&nbsp;13 min
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="sumário">Sumário<a hidden class="anchor" aria-hidden="true" href="#sumário">#</a></h2>
+<ol>
+<li><a href="#o-que-define-um-sistema-como-legado">O que define um sistema como legado?</a></li>
+<li><a href="#por-que-h%C3%A1-tanto-medo-de-sistemas-legados">Por que há tanto medo de sistemas legados?</a></li>
+<li><a href="#n%C3%A3o-julgue-quem-nem-o-porqu%C3%AA">Não julgue quem nem o porquê</a></li>
+<li><a href="#d%C3%ADvidas-t%C3%A9cnicas">Dívidas técnicas</a></li>
+<li><a href="#para-quem-%C3%A9-essa-melhoria">Para quem é essa melhoria?</a></li>
+<li><a href="#regras-de-neg%C3%B3cio-no-banco-de-dados">Regras de negócio no banco de dados</a></li>
+<li><a href="#mapear-as-mudan%C3%A7as">Mapear as mudanças</a></li>
+<li><a href="#planejando-o-qu%C3%AA-e-como-ser%C3%A1-feito">Planejando o quê e como será feito</a></li>
+<li><a href="/#qual-o-melhor-momento-para-refatorar">Qual o melhor momento para refatorar?</a></li>
+<li><a href="#quando-n%C3%A3o-devo-aplicar-melhorias">Quando não devo aplicar melhorias?</a></li>
+<li><a href="#e-a-documenta%C3%A7%C3%A3o">E a documentação?</a></li>
+<li><a href="#opini%C3%B5es-da-comunidade">Opiniões da comunidade</a></li>
+<li><a href="#encerramento">Encerramento</a></li>
+<li><a href="#refer%C3%AAncias">Referências</a></li>
+</ol>
+<h2 id="o-que-define-um-sistema-como-legado">O que define um sistema como legado?<a hidden class="anchor" aria-hidden="true" href="#o-que-define-um-sistema-como-legado">#</a></h2>
+<p>Um sistema é considerado legado não apenas pela sua idade, mas por uma combinação de fatores. Geralmente, um sistema é classificado como legado quando apresenta dificuldades em atender às demandas atuais da empresa ou tecnologia. Isso pode incluir:</p>
+<ul>
+<li>Tecnologias ultrapassadas ou descontinuadas;</li>
+<li>Falta de documentação clara e atualizada;</li>
+<li>Alto custo de manutenção;</li>
+<li>Dependência de especialistas que conhecem detalhes do sistema;</li>
+<li>Problemas de integração com sistemas modernos.</li>
+</ul>
+<p>É importante destacar que, em muitos casos, o termo &ldquo;legado&rdquo; não é necessariamente pejorativo. Sistemas legados muitas vezes são responsáveis por sustentar operações críticas de negócio.</p>
+<p>Um ponto importante a se destacar é que o novo software escrito hoje será o legado de amanhã, caso não se tenha cautela, planejamento, padrões e documentação.</p>
+<h2 id="por-que-há-tanto-medo-de-sistemas-legados">Por que há tanto medo de sistemas legados?<a hidden class="anchor" aria-hidden="true" href="#por-que-há-tanto-medo-de-sistemas-legados">#</a></h2>
+<p>O medo de lidar com sistemas legados geralmente está associado a fatores como:</p>
+<ul>
+<li><strong>Complexidade:</strong> A falta de padrões, sobreposição de soluções temporárias e dividas técnicas tornam o sistema difícil de entender;</li>
+<li><strong>Riscos:</strong> Alterar um sistema legado pode introduzir novos bugs ou até comprometer funcionalidades críticas;</li>
+<li><strong>Falta de testes:</strong> normalmente um sistema legado não tem testes ou está desatualizado;</li>
+<li><strong>Conhecimento limitado:</strong> Muitas vezes, quem desenvolveu o sistema não está mais na empresa, e o conhecimento acumulado foi perdido, somado a possível falta de documentação;</li>
+<li><strong>Custo:</strong> manutenção ou substituição de sistemas legados geralmente exige tempo e recursos significativos.</li>
+</ul>
+<p>Esses medos são compreensíveis, mas podem ser mitigados com planejamento adequado e uma abordagem colaborativa.</p>
+<h2 id="não-julgue-quem-nem-o-porquê">Não julgue quem nem o porquê<a hidden class="anchor" aria-hidden="true" href="#não-julgue-quem-nem-o-porquê">#</a></h2>
+<p>Antes de criticar um sistema legado, é essencial lembrar que ele foi provavelmente a melhor solução em determinado momento, podendo ter sido desenvolvido sob algumas condições como:</p>
+<ul>
+<li>Pressão de tempo;</li>
+<li>Recursos limitados;</li>
+<li>Restrições técnicas;</li>
+<li>Requisitos mal definidos ou quase inexistentes.</li>
+</ul>
+<p>Ter empatia pelo passado permite um entendimento mais justo e cria uma base para um trabalho de melhorias mais eficaz e respeitoso.</p>
+<p>Os itens descritos acima podem ocorrer tanto em um time interno, terceirizado ou freelancer. Uma maneira de mitigar ou atenuar é dispor de um profissional mais experiente, responsável por conduzir e manter a casa em ordem.</p>
+<h2 id="dívidas-técnicas">Dívidas técnicas<a hidden class="anchor" aria-hidden="true" href="#dívidas-técnicas">#</a></h2>
+<p>É o resultado das decisões tomadas durante o desenvolvimento, visando soluções rápidas em detrimento da qualidade ou manutenção futura, podendo ser intencional ou não, e acarretará retrabalho no futuro.</p>
+<p>Embora, em alguns casos, seja inevitável adquirir uma dívida técnica, é fundamental estar ciente do impacto e ter um planejament de como e quando essa dívida será paga.</p>
+<blockquote>
+<p><strong>OBSERVAÇÃO!</strong> Sempre trabalhe em equipe, pois a dívida que seu colega faz hoje, pode e será sua no futuro!</p>
+</blockquote>
+<p>O custo a longo prazo pode e irá aumentar os custos de manutenção e dificultar a inovação, criando riscos que podem levar a falhas críticas e pode comprometer a produtividade da equipe na totalidade.</p>
+<p>Sendo assim, somente devemos aceitar quando houver prazos críticos, com benefícios claros, porém, com um plano de pagamento. Dívidas técnicas devem sempre estar no topo da lista de melhorias.</p>
+<p>Idealmente os sêniores da equipe podem tomar essa decisão, pois analisaram os prós e contras, codificando da melhor maneira para que no processo de melhoria, ou seja, desfeito ou feito da maneira correta. Ou seja, saber exatamente o que está fazendo para no futuro refazer.</p>
+<p>Com o passar do tempo, o acúmulo de dívidas técnicas gerará &ldquo;juros&rdquo; que podem ser exponenciais! Onde facilmente perdemos o controle.</p>
+<blockquote>
+<p><strong>OBSERVAÇÃO:</strong> Não há nada pior do que algo provisório que se torna definitivo!</p>
+</blockquote>
+<p>Recomento a leitura do post escrito pelo amigo Willian Oliveira, que aborda o tema de <a href="https://woliveiras.com.br/posts/o-que-e-e-quando-pagar-uma-divida-tecnica">dívidas técnicas</a>.</p>
+<h2 id="para-quem-é-essa-melhoria">Para quem é essa melhoria?<a hidden class="anchor" aria-hidden="true" href="#para-quem-é-essa-melhoria">#</a></h2>
+<p>Antes de refatorar um sistema legado, é fundamental entender quem são os beneficiários dessa mudança:</p>
+<ul>
+<li>Os usuários finais, que poderão aproveitar uma melhor experiência.</li>
+<li>A equipe de desenvolvimento, que terá mais facilidade em manter o sistema.</li>
+<li>A empresa, que reduzirá custos e melhorará a escalabilidade do software.</li>
+</ul>
+<p>Perguntar &ldquo;por que refatorar?&rdquo; é tão importante quanto &ldquo;Para quem refatorar?&rdquo;. O foco deve ser atender às necessidades reais, não apenas seguir modismos tecnológicos, pois modismos normalmente são passageiros e quem adota essas tecnologias nem sempre permanecem no projeto ou empresa, deixando um problema para quem ficou.</p>
+<p>Para toda nova tecnologia que será utilizada devemos nos perguntar:</p>
+<ul>
+<li>Quais são os prós e contras?</li>
+<li>O porquê da adoção?</li>
+<li>Quais benefícios ou problemas resolverá no projeto?</li>
+<li>Qual o impacto no time?</li>
+<li>Há no time conhecimento para adotar?</li>
+<li>Teremos que elaborar treinamento?</li>
+<li>A tecnologia é madura o suficiente para ser utilizada?
+É fundamental que todos os membros do projeto tomem as decisões, para que assim busque a melhor possível.</li>
+</ul>
+<p>Sempre será mais fácil melhorar o sistema onde trará melhorias para o usuário e reduzirá custos para a empresa. Qualquer melhoria deve focar em trazer valor ao negócio ou produto, deve-se fazer sentido a sugestão proposta, para que assim seja viável e eficiente aplicá-la. Mudanças técnicas apenas por ego, achismo, opiniões sem embasamento ou modinha. Pois, são temporárias e irão adicionar mais complexidade ao dia a dia do time e produto.</p>
+<p>Um sistema legado, onde a mão de obra é escassa, pode ser uma excelente alternativa pensar em uma nova tecnologia, para que assim reduza o custo financeiro para contratação, auxilie na diminuição do turnover, tempo para correções e implementação de novas funcionalidades.</p>
+<blockquote>
+<p><strong>IMPORTANTE!</strong> Todos do time devem estar empenhados e engajados em sempre melhorar o software.</p>
+</blockquote>
+<h2 id="regras-de-negócio-no-banco-de-dados">Regras de negócio no banco de dados<a hidden class="anchor" aria-hidden="true" href="#regras-de-negócio-no-banco-de-dados">#</a></h2>
+<p>Uma das características mais comuns de sistemas legados é a presença de regras de negócio diretamente implementadas no banco de dados, como “triggers” e “procedures”.
+Defendo que toda regra de negócio permaneça no sistema, onde o banco de dados fique “apenas” responsável por armazenar os dados.</p>
+<p>Uma vez que a regra de negócio está no banco, é difícil (se não impossível) de debugar e localizar a origem de um bug. Podemos perder tempo vasculhando o bug no código, quando o mesmo encontra-se no banco de dados.</p>
+<p>Da mesma maneira que os códigos são evoluídos e melhorados, devemos sempre ponderar se o banco de dados não pode ser melhorado.
+Abaixo temos alguns pontos de atenção.</p>
+<ul>
+<li>Integridade dos Dados;</li>
+<li>Faça backups regulares;</li>
+<li>Impacto nas aplicações;</li>
+<li>Verifique se as mudanças não impactarão algum sistema;</li>
+<li>Atualize consultas;</li>
+<li>Índices;</li>
+<li>Compatibilidade com novas versões;</li>
+<li>Controle de acesso e segurança;</li>
+<li>Tamanho e crescimento;</li>
+<li>Documentação;</li>
+<li>Teste de regressão.</li>
+</ul>
+<p>Abaixo temos algumas melhorias que podem ser realizadas.</p>
+<ul>
+<li>Normalização;</li>
+<li>Desnormalização (se necessário);</li>
+<li>Otimização de Índices;</li>
+<li>Revisão de tipos de dados;</li>
+<li>Padronização de nomes;</li>
+<li>Uso de “constraints”;</li>
+<li>Particionamento;</li>
+<li>Implementação de logs e auditoria;</li>
+<li>Estratégias de backup e recuperação.</li>
+</ul>
+<h2 id="mapear-as-mudanças">Mapear as mudanças<a hidden class="anchor" aria-hidden="true" href="#mapear-as-mudanças">#</a></h2>
+<p>Nunca se deve melhorar qualquer parcela de código sem antes mapear o que será alterado, pois sem essas informações não saberemos a extensão das mudanças.</p>
+<p>A princípio, a melhoria pode parecer simples, mas, após o mapeamento, temos a real dimensão do impacto.</p>
+<p>Sendo assim, mapear o que será alterado é um passo crucial no processo de refatoramento. Isso inclui:</p>
+<ul>
+<li>Identificar os pontos críticos do sistema;</li>
+<li>Entender dependências internas e externas;</li>
+<li>Priorizar mudanças baseadas no impacto, custo e tempo;</li>
+<li>Planejar o roadmap, detalhando tarefas, responsabilidades e prazos.</li>
+</ul>
+<p>Todos do time são responsáveis por manter a saúde do projeto, independente se é júnior, pleno ou sênior, entretanto para cada nível se tem visões, ações, e expectativas distintas.</p>
+<h3 id="júnior">Júnior<a hidden class="anchor" aria-hidden="true" href="#júnior">#</a></h3>
+<ul>
+<li><strong>Esperado:</strong> aprender, executa tarefas simples e atualiza documentações.</li>
+<li><strong>Pontos de atenção:</strong> curva de aprendizado, dependência de orientação e falta de experiência.</li>
+<li><strong>O que se espera:</strong> Proatividade, sede por conhecimento e capaz de seguir orientações.</li>
+</ul>
+<h3 id="pleno">Pleno<a hidden class="anchor" aria-hidden="true" href="#pleno">#</a></h3>
+<ul>
+<li><strong>Esperado:</strong> maior autonomia, propõe melhorias moderadas e orienta os juniores.</li>
+<li><strong>Pontos de atenção:</strong> gestão de complexidade, tomada de decisão e lidar com dívida técnica.</li>
+<li><strong>O que se espera:</strong> maior autonomia em tarefas mais complexas, auxiliar em decisões mais complexas e contribuir com melhorias e mantenham a estabilidade do sistema.</li>
+</ul>
+<h3 id="sênior">Sênior<a hidden class="anchor" aria-hidden="true" href="#sênior">#</a></h3>
+<ul>
+<li><strong>Esperado:</strong> liderança, planeja mudanças estratégicas e toma decisões assertivas.</li>
+<li><strong>Pontos de atenção:</strong> equilíbrio entre qualidade e prazos, gestão de riscos e visão de longo prazo</li>
+<li><strong>O que se espera:</strong> tomada de decisões assertivas, contribuições estratégicas para o design e arquitetura do sistema, liderar o time em momentos críticos e garantir que o sistema melhorado seja escalável, manutenível e alinhado aos objetivos do negócio.</li>
+</ul>
+<h2 id="planejando-o-quê-e-como-será-feito">Planejando o quê e como será feito<a hidden class="anchor" aria-hidden="true" href="#planejando-o-quê-e-como-será-feito">#</a></h2>
+<blockquote>
+<p><strong>IMPORTANTE!</strong> Você não é o Rambo! Então não faça tudo sozinho nem por impulso!</p>
+</blockquote>
+<p>Refatorar um sistema legado é um trabalho colaborativo. Não tente fazer tudo sozinho. Uma equipe diversificada pode trazer novas perspectivas, identificar soluções mais eficazes e ajudar a compartilhar responsabilidades.</p>
+<p>Foi-se a época em que programadores não interagiam com outras pessoas, departamentos ou cliente, hoje essa comunicação é vital e fundamental!</p>
+<blockquote>
+<p><strong>IMPORTANTE!</strong> Sistemas mal projetados ou mal refatorados, trazem sempre pegadinhas, onde uma modificação simples em um módulo “X” pode quebrar o módulo “Y”.</p>
+</blockquote>
+<p>Foque na comunicação clara, no alinhamento de expectativas e no acompanhamento contínuo.</p>
+<p>Alguns pontos a serem seguidos para um bom planejamento:</p>
+<ul>
+<li>Entenda o contexto, reúna informações sobre o sistema, converse com membros veteranos e partes interessadas;</li>
+<li>Mapeie e defina claramente os resultados esperados, priorizando áreas críticas, levando em consideração segurança, desempenho e escalabilidade;</li>
+<li>Faça as mudanças em ciclos curtos;</li>
+<li>Monte um diagnóstico detalhado;</li>
+<li>Defina a melhoria, quem será responsável, estabeleça metas e tenha checkpoints para revisões e possíveis ajustes;</li>
+<li>Automatize os testes e execute com frequência, garantindo que tudo está correto;</li>
+<li>Mantenha sempre comunicação com o time, líderes e partes interessadas;</li>
+<li>Crie uma documentação confiável e mantenha atualizada;</li>
+<li>Revise e aprenda com o processo.</li>
+</ul>
+<p>É plenamente aceitável que para que uma grande mudança ocorrer serão necessárias diversas melhorias ao longo de anos.</p>
+<blockquote>
+<p><strong>DICA!</strong> É preferível um pequeno passo diariamente do que passo algum.</p>
+</blockquote>
+<p>O tamanho do projeto impacta diretamente no tempo das melhorias, pois é mais rápido convergir com uma lancha do que com o Titanic.</p>
+<h2 id="qual-o-melhor-momento-para-refatorar">Qual o melhor momento para refatorar?<a hidden class="anchor" aria-hidden="true" href="#qual-o-melhor-momento-para-refatorar">#</a></h2>
+<p>O melhor momento para refatorar é quando:</p>
+<ul>
+<li>O sistema está impedindo a evolução do negócio;</li>
+<li>O custo de manutenção está excessivamente alto;</li>
+<li>A equipe está gastando mais tempo corrigindo bugs do que implementando novas funcionalidades;</li>
+<li>O conhecimento ou mão de obra está escassa;</li>
+<li>Existe um momento favorável, como uma reestruturação do produto ou a adoção de novas tecnologias.</li>
+</ul>
+<blockquote>
+<p><strong>DICA!</strong> Aja como um escoteiro, sempre deixe o código melhor do que você o encontrou, por menor que seja a melhoria com o passar do tempo trará grandes benefícios.</p>
+</blockquote>
+<h2 id="quando-não-devo-aplicar-melhorias">Quando não devo aplicar melhorias?<a hidden class="anchor" aria-hidden="true" href="#quando-não-devo-aplicar-melhorias">#</a></h2>
+<p>Sempre devemos estar atentos para quando não se deve aplicar melhorarias, por exemplo:</p>
+<ul>
+<li>O sistema está prestes a ser descontinuado;</li>
+<li>O custo de melhoria supera os benefícios esperados;</li>
+<li>A equipe não tem o conhecimento ou os recursos necessários;</li>
+<li>Existem outras prioridades estratégicas mais urgentes.</li>
+</ul>
+<p>Toda ideia de melhoria deve ser apresentada ao líder, gerente e cliente, para poderem analisar com cautela tanto a parte técnica quando a de negócio. Muitas vezes o viés técnico pode se ressaltar e justificar a melhorias, porém ao nível de negócio não faz sentido, por exemplo:</p>
+<p>No sistema “XPTO corp” o relatório “XYZ” leva 15 segundos para ser gerado, e o programador quer melhorar o código para que esse tempo reduza pela metade o menos, para isso ele estima que levará 16 horas para a melhoria ficar pronta, porém, é um relatório extraído 1 vez por mês por poucos ou apenas um usuário.</p>
+<p>Como visto no exemplo acima, por mais que o resultado da melhoria pudesse trazer um salto em melhoria no tempo da extração do relatório, o mesmo não se justifica, pois não trará valor ao cliente e o tempo que será investido pode ser aproveitado em uma funcionalidade mais crítica e importante.</p>
+<h2 id="e-a-documentação">E a documentação?<a hidden class="anchor" aria-hidden="true" href="#e-a-documentação">#</a></h2>
+<p>Documentar não deve ser uma etapa esquecida. A documentação atualizada:</p>
+<ul>
+<li>Facilita a compreensão do sistema;</li>
+<li>Reduz a curva de aprendizado para novos desenvolvedores;</li>
+<li>Garante que as decisões tomadas durante o processo de melhoria sejam registradas.</li>
+</ul>
+<p>Crie documentações técnicas, manuais de usuário e diagramas de arquitetura para apoiar a equipe.</p>
+<blockquote>
+<p><strong>IMPORTANTE!</strong> Tão prejudicial quanto uma documentação inexistente é uma desatualizada.</p>
+</blockquote>
+<h2 id="opiniões-da-comunidade">Opiniões da comunidade<a hidden class="anchor" aria-hidden="true" href="#opiniões-da-comunidade">#</a></h2>
+<p>Abaixo, apresento as opiniões de grandes profissionais sobre sistemas legados.</p>
+<h3 id="elton-minettohttpseltonminettodev"><a href="https://eltonminetto.dev/">Elton Minetto</a><a hidden class="anchor" aria-hidden="true" href="#elton-minettohttpseltonminettodev">#</a></h3>
+<h4 id="para-você-o-que-caracteriza-um-sistema-legado">Para você, o que caracteriza um sistema legado?<a hidden class="anchor" aria-hidden="true" href="#para-você-o-que-caracteriza-um-sistema-legado">#</a></h4>
+<p>Qualquer sistema que está em produção automaticamente torna-se um sistema legado. Acho que temos uma conotação ruim quando usamos o termo “legado”, como se fosse algo que temos que carregar, um fardo. Se olharmos o dicionário, uma das definições é “o que é transmitido às gerações que se seguem”. E isso não é necessariamente ruim, é algo que foi desenvolvido, está gerando lucros e precisa ser mantido para continuar crescendo e gerando valor.</p>
+<h4 id="quais-são-os-maiores-desafios">Quais são os maiores desafios?<a hidden class="anchor" aria-hidden="true" href="#quais-são-os-maiores-desafios">#</a></h4>
+<p>Os desafios envolvem crescimento e evolução, para que o valor continue a ser gerado conforme a empresa cresce em usuários, funcionalidades, times.</p>
+<h4 id="quais-vantagens-você-vê-em-trabalhar-com-sistemas-legados">Quais vantagens você vê em trabalhar com sistemas legados?<a hidden class="anchor" aria-hidden="true" href="#quais-vantagens-você-vê-em-trabalhar-com-sistemas-legados">#</a></h4>
+<p>O aprendizado é muito grande pois é fácil colocar algo novo em produção, desafio é ver esse projeto evoluir, ganhar mais funcionalidades, novos usuários, novas abordagens.</p>
+<h4 id="no-seu-cargo-como-você-lida-com-sistemas-legados">No seu cargo, como você lida com sistemas legados?<a hidden class="anchor" aria-hidden="true" href="#no-seu-cargo-como-você-lida-com-sistemas-legados">#</a></h4>
+<p>O segredo é manter a regra do escoteiro: “deixar o código um pouco melhor do que estava quando você o encontrou”. Se todo mundo mantiver essa mentalidade, de sempre melhorar o projeto aos poucos ele não vai perdendo sua qualidade com o tempo.</p>
+<h4 id="espaço-livre">Espaço livre:<a hidden class="anchor" aria-hidden="true" href="#espaço-livre">#</a></h4>
+<p>Trabalhar em código legado é um grande aprendizado pois você pode observar o resultado de decisões passadas, suas ou de outras pessoas. Com isso você aprende muito sobre como um software evolui e envelhece, entende como uma decisão que as vezes parece simples pode se tornar um grande problema (ou vantagem) no futuro. Este tipo de experiência torna a pessoa uma melhor desenvolvedora e arquiteta.</p>
+<h3 id="ricardo-pereira-diashttpswwwricardopediascombr"><a href="https://www.ricardopedias.com.br/">Ricardo Pereira Dias</a><a hidden class="anchor" aria-hidden="true" href="#ricardo-pereira-diashttpswwwricardopediascombr">#</a></h3>
+<h4 id="para-você-o-que-caracteriza-um-sistema-legado-1">Para você, o que caracteriza um sistema legado?<a hidden class="anchor" aria-hidden="true" href="#para-você-o-que-caracteriza-um-sistema-legado-1">#</a></h4>
+<p>Em sistema legado possui código sem testes automatizados. A ausência dos testes inviabiliza a medição sobre a eficiência da manutenção. Sem os testes, podemos estar inserindo um bug ao invés de uma evolução e o sistema será sempre uma caixa preta. Mexe aqui estraga ali: isso é um sistema legado. Em um sistema “não-legado”, podemos alterar as coisas com confiança, sabendo o que está acontecendo.</p>
+<h4 id="quais-são-os-maiores-desafios-1">Quais são os maiores desafios?<a hidden class="anchor" aria-hidden="true" href="#quais-são-os-maiores-desafios-1">#</a></h4>
+<p>É preciso treinar um excelente espírito analítico. Conseguir interpretar os requisitos e a regra de negócio inerente ao código a ser alterado. Devotar muita atenção enquanto move-se o código antigo para novas estruturas. Certificar-se de implementar blocos de código organizados, reaproveitáveis e, principalmente, testáveis.</p>
+<h4 id="quais-vantagens-você-vê-em-trabalhar-com-sistemas-legados-1">Quais vantagens você vê em trabalhar com sistemas legados?<a hidden class="anchor" aria-hidden="true" href="#quais-vantagens-você-vê-em-trabalhar-com-sistemas-legados-1">#</a></h4>
+<p>O trabalho correto com código legado (criando reaproveitamento e testes) vai incrementar enormemente a experiência do programador. Aumentará também o campo de visão e a cognição para encontrar problemas com maior velocidade. A percepção de “como não fazer um código” irá aumentar bastante, e ajudará diretamente no momento de elaborar novos projetos.</p>
+<h4 id="no-seu-cargo-como-você-lida-com-sistemas-legados-1">No seu cargo, como você lida com sistemas legados?<a hidden class="anchor" aria-hidden="true" href="#no-seu-cargo-como-você-lida-com-sistemas-legados-1">#</a></h4>
+<p>Como Líder Técnico, faço periodicamente a revisão do código legado gerado pelos desenvolvedores. Todo o código que nasce sem testes, já nasce legado! Isso exige, muita vezes, uma atenção maior para assuntos que os testes já estariam cobrindo.</p>
+<h2 id="encerramento">Encerramento<a hidden class="anchor" aria-hidden="true" href="#encerramento">#</a></h2>
+<p>Trabalhar com sistema legado sempre é um desafio, porém é muito gratificante e enriquecedor, sendo uma oportunidade de aprendizado e crescimento, pois requer técnica, paciência e empatia.
+Mais do que um código melhor, o objetivo é criar um sistema que atenda às necessidades presentes e futuras, com uma base sólida para evoluir.</p>
+<h2 id="referências">Referências<a hidden class="anchor" aria-hidden="true" href="#referências">#</a></h2>
+<ul>
+<li>Refatoração: padrões para um código mais limpo e de fácil manutenção;</li>
+<li>Código limpo: habilidades práticas do Agile Software;</li>
+<li>Refatoração: Aperfeiçoando o design de códigos existentes.</li>
+<li><a href="https://pca.st/episode/dab220f9-4054-412a-acae-a9b604e3cde5;">https://pca.st/episode/dab220f9-4054-412a-acae-a9b604e3cde5;</a></li>
+<li><a href="https://woliveiras.com.br/posts/o-que-e-e-quando-pagar-uma-divida-tecnica">https://woliveiras.com.br/posts/o-que-e-e-quando-pagar-uma-divida-tecnica</a>.</li>
+</ul>
+
+
+  </div>
+
+  
+  <div id="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="Diego-Brocanelli/diego-brocanelli.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://diegobrocanelli.com.br/tags/software/">software</a></li>
+      <li><a href="https://diegobrocanelli.com.br/tags/programa%C3%A7%C3%A3o/">programação</a></li>
+      <li><a href="https://diegobrocanelli.com.br/tags/legado/">legado</a></li>
+      <li><a href="https://diegobrocanelli.com.br/tags/legados/">legados</a></li>
+      <li><a href="https://diegobrocanelli.com.br/tags/oportunidade/">oportunidade</a></li>
+      <li><a href="https://diegobrocanelli.com.br/tags/crescimento/">crescimento</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/">
+    <span class="title">« </span>
+    <br>
+    <span>Melhore a performance do seu sistema com um load balancer</span>
+  </a>
+  <a class="next" href="https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/">
+    <span class="title"> »</span>
+    <br>
+    <span>Como saber se estou indo bem? A importância de dar e receber feedbacks</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Como transformar sistemas legados em oportunidades de crescimento on twitter"
+        href="https://twitter.com/intent/tweet/?text=Como%20transformar%20sistemas%20legados%20em%20oportunidades%20de%20crescimento&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fposts%2fcomo-transformar-sistemas-legados-em-oportunidades-de-crescimento%2f&amp;hashtags=software%2cprograma%c3%a7%c3%a3o%2clegado%2clegados%2coportunidade%2ccrescimento">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Como transformar sistemas legados em oportunidades de crescimento on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fposts%2fcomo-transformar-sistemas-legados-em-oportunidades-de-crescimento%2f&amp;title=Como%20transformar%20sistemas%20legados%20em%20oportunidades%20de%20crescimento&amp;summary=Como%20transformar%20sistemas%20legados%20em%20oportunidades%20de%20crescimento&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fposts%2fcomo-transformar-sistemas-legados-em-oportunidades-de-crescimento%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

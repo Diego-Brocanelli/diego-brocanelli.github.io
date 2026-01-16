@@ -5,17 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Atualizando seu fork no GitHub | Diego Brocanelli</title>
+<title>Atualizando seu fork no GitHub - Um guia prático, fácil e rápido! | Diego Brocanelli</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Olá, tudo bem?!
-É comum atualizar o fork do projeto que contribuirmos no GitHub.
-Pois conforme contribuímos outros contribuidores também fazem o mesmo, com isso o fork fica desatualizado.
-Neste momento podemos ficar com receio de contribuir, por não dominar o Git e GitHub.
-Para atualizar o fork o processo é muito simples e iremos aprender neste post. Para realizar a atualização será utilizado o upstream.
-Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu fork.">
+Sumário Introdução Adicionando um repositório remoto Atualizando o upstream Realizando o commit das informações Enviando para o GitHub Considerações Introdução É comum atualizarmos o fork do projeto ao qual contribuímos no &ldquo;GitHub&rdquo;.
+Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &ldquo;fork&rdquo; pode ficar desatualizado.
+Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &ldquo;Git&rdquo; e o &ldquo;GitHub&rdquo;.
+Para realizar a atualização, utilizaremos o upstream.">
 <meta name="author" content="Diego Brocanelli">
 <link rel="canonical" href="https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c18f6860182e7002af473582222b37f9280d6e33be9205e2f8cf983993e44ff0.css" integrity="sha256-wY9oYBgucAKvRzWCIis3&#43;SgNbjO&#43;kgXi&#43;M&#43;YOZPkT/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
@@ -129,23 +128,32 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://diegobrocanelli.com.br/">Home</a>&nbsp;»&nbsp;<a href="https://diegobrocanelli.com.br/posts/">Posts</a></div>
     <h1 class="post-title">
-      Atualizando seu fork no GitHub
+      Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!
     </h1>
     <div class="post-meta"><span title='2017-11-17 18:02:27 +0000 UTC'>2017-11-17</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Diego Brocanelli
 
 </div>
   </header> 
   <div class="post-content"><p>Olá, tudo bem?!</p>
-<p>É  comum atualizar o fork do projeto que contribuirmos no GitHub.</p>
-<p>Pois conforme contribuímos outros contribuidores também fazem o mesmo, com isso o fork fica desatualizado.</p>
-<p>Neste momento podemos ficar com receio de contribuir, por não dominar o Git e GitHub.</p>
-<p>Para atualizar o fork o processo é muito simples e iremos aprender neste post. Para realizar a atualização será utilizado o <a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/"><em>upstream</em></a>.</p>
+<h2 id="sumário">Sumário<a hidden class="anchor" aria-hidden="true" href="#sumário">#</a></h2>
+<ol>
+<li><a href="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+<li><a href="#adicionando-um-reposit%C3%B3rio-remoto">Adicionando um repositório remoto</a></li>
+<li><a href="#atualizando-o-upstream">Atualizando o upstream</a></li>
+<li><a href="#realizando-o-commit-das-informa%C3%A7%C3%B5es">Realizando o commit das informações</a></li>
+<li><a href="#enviando-para-o-github">Enviando para o GitHub</a></li>
+<li><a href="#considera%C3%A7%C3%B5es">Considerações</a></li>
+</ol>
+<h2 id="introdução">Introdução<a hidden class="anchor" aria-hidden="true" href="#introdução">#</a></h2>
+<p>É comum atualizarmos o fork do projeto ao qual contribuímos no <em>&ldquo;GitHub&rdquo;</em>.</p>
+<p>Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o <em>&ldquo;fork&rdquo;</em> pode ficar desatualizado.</p>
+<p>Nesse momento, podemos ficar receosos em contribuir por não dominarmos o <em>&ldquo;Git&rdquo;</em> e o <em>&ldquo;GitHub&rdquo;</em>.</p>
+<p>Para realizar a atualização, utilizaremos o <a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/"><em>upstream</em></a>.</p>
 <blockquote>
-<p><strong>Obs:</strong> Todos os comandos abaixo devem ser executados via terminal na raiz do seu fork.</p>
+<p><strong>Obs.:</strong> Todos os comandos abaixo devem ser executados no terminal, na raiz do seu <em>&ldquo;fork&rdquo;</em>.</p>
 </blockquote>
-<p> </p>
-<h3 id="adicionando-um-repositório-remoto">Adicionando um repositório remoto<a hidden class="anchor" aria-hidden="true" href="#adicionando-um-repositório-remoto">#</a></h3>
-<p>Devemos adicionar um repositório remoto, no caso <strong>devemos adicionar o repositório base original</strong>!</p>
+<h2 id="adicionando-um-repositório-remoto">Adicionando um repositório remoto<a hidden class="anchor" aria-hidden="true" href="#adicionando-um-repositório-remoto">#</a></h2>
+<p>Precisamos adicionar um repositório remoto, no caso <em>devemos adicionar o repositório base original</em>!</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -154,8 +162,8 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="atualizando-o-upstream">Atualizando o upstream<a hidden class="anchor" aria-hidden="true" href="#atualizando-o-upstream">#</a></h3>
-<p>Após adicionarmos o repositório devemos atualizar o <em>upstream</em>. Para isso execute o comando abaixo.</p>
+</div><h2 id="atualizando-o-upstream">Atualizando o upstream<a hidden class="anchor" aria-hidden="true" href="#atualizando-o-upstream">#</a></h2>
+<p>Após adicionar o repositório, devemos atualizar o <em>&ldquo;upstream&rdquo;</em>. Para isso, execute o comando abaixo.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -164,21 +172,21 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git fetch upstream
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="realizando-o-commit-das-informações">Realizando o commit das informações<a hidden class="anchor" aria-hidden="true" href="#realizando-o-commit-das-informações">#</a></h3>
-<p>Com o <em>upstream</em> atualizado e supondo que estamos no <em>branch</em> <em>master</em>, devemos realizar o <em>merge</em> ou <em>rebase</em> das informações obtidas na atualização.</p>
+</div><h2 id="realizando-o-commit-das-informações">Realizando o commit das informações<a hidden class="anchor" aria-hidden="true" href="#realizando-o-commit-das-informações">#</a></h2>
+<p>Com o <em>&ldquo;upstream&rdquo;</em> atualizado e supondo que estamos na branch <em>&ldquo;main&rdquo;</em>, devemos fazer o <em>&ldquo;merge&rdquo;</em> ou o <em>&ldquo;rebase&rdquo;</em> das alterações.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git rebase upstream/master master
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git rebase upstream/main main
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>Aqui cabe uma nota, fiz uso do <em>rebase</em>, porém poderia ser utilizado o <em>merge</em>. Obviamente há diferenças entre o <em>rebase</em> e o <em>merge</em>, entretanto cabe em um post a parte para melhor detalhamento.</p>
+<p>IMPORTANTE: Vale ressaltar que utilizei o <em>&ldquo;rebase&rdquo;</em>, mas o <em>&ldquo;merge&rdquo;</em> também poderia ser uma opção.&quot;</p>
 </blockquote>
-<h3 id="enviando-para-o-github">Enviando para o GitHub<a hidden class="anchor" aria-hidden="true" href="#enviando-para-o-github">#</a></h3>
-<p>Para que possamos atualizar o GitHub basta executar o comando abaixo.</p>
+<h2 id="enviando-para-o-github">Enviando para o GitHub<a hidden class="anchor" aria-hidden="true" href="#enviando-para-o-github">#</a></h2>
+<p>Para atualizar o <em>&ldquo;fork&rdquo;</em> no <em>&ldquo;GitHub&rdquo;</em>, basta executar o comando abaixo.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -187,13 +195,23 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="considerações">Considerações<a hidden class="anchor" aria-hidden="true" href="#considerações">#</a></h3>
-<p>Viram como é simples atualizar o fork, com poucos comandos foi realizado todo o processo.</p>
-<p>Espero que tenham apreciado o conteúdo e que o mesmo agregue em seu dia a dia.</p>
-<p>Caso tenha alguma dúvida, dica, sugestão deixe nos comentários, para que possamos aprender cada vez mais.</p>
-<p>Grande abraço e sucesso nos projetos.</p>
+</div><h2 id="considerações">Considerações<a hidden class="anchor" aria-hidden="true" href="#considerações">#</a></h2>
+<p>Viu como é simples atualizar um fork? Com poucos comandos, conseguimos realizar todo o processo.</p>
+<p>Espero que tenha gostado do conteúdo e que ele seja útil no seu dia a dia.</p>
+<p>Se tiver alguma dúvida, dica ou sugestão, deixe nos comentários para aprendermos juntos!</p>
 
 
+  </div>
+
+  
+  <div id="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="Diego-Brocanelli/diego-brocanelli.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
   </div>
 
   <footer class="post-footer">
@@ -212,15 +230,15 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
 
 
 <div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Atualizando seu fork no GitHub on twitter"
-        href="https://twitter.com/intent/tweet/?text=Atualizando%20seu%20fork%20no%20GitHub&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f&amp;hashtags=">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Atualizando seu fork no GitHub - Um guia prático, fácil e rápido! on twitter"
+        href="https://twitter.com/intent/tweet/?text=Atualizando%20seu%20fork%20no%20GitHub%20-%20Um%20guia%20pr%c3%a1tico%2c%20f%c3%a1cil%20e%20r%c3%a1pido%21&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f&amp;hashtags=">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
         </svg>
     </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Atualizando seu fork no GitHub on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f&amp;title=Atualizando%20seu%20fork%20no%20GitHub&amp;summary=Atualizando%20seu%20fork%20no%20GitHub&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Atualizando seu fork no GitHub - Um guia prático, fácil e rápido! on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f&amp;title=Atualizando%20seu%20fork%20no%20GitHub%20-%20Um%20guia%20pr%c3%a1tico%2c%20f%c3%a1cil%20e%20r%c3%a1pido%21&amp;summary=Atualizando%20seu%20fork%20no%20GitHub%20-%20Um%20guia%20pr%c3%a1tico%2c%20f%c3%a1cil%20e%20r%c3%a1pido%21&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fgit%2fatualizando-seu-fork-no-github%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -233,7 +251,7 @@ Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu f
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
+    <span>&copy; 2026 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

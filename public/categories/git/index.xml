@@ -14,23 +14,20 @@
       
       <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
       <description>Olá, tudo bem!
-O que é GIT? É uma ferramente para controle de versão descentralizada criada por Linus Torvalds, que possibilita a gestão do versionamento de códigos, alias, não necessariamente apenas códigos, sendo a ferramente mais utilizada para a finalidade a que se propõem.
-Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?
-Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas cada vez maiores, onde dezenas ou centenas de pessoas estão interagindo com o mesmo repositório de código mandando correções ou novas funcionalidades.</description>
+Sumário Introdução Comandos git config git init git clone git status git branch git checkout git add git commit git diff git log git merge git pull git push git reset git tag git mv git rebase git grep Atualizar fork Git por meio de interface gráfica Materiais complementares Considerações Introdução Git é um sistema de controle de versão descentralizado, criado por Linus Torvalds. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.</description>
     </item>
     
     <item>
-      <title>Atualizando seu fork no GitHub</title>
+      <title>Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!</title>
       <link>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</link>
       <pubDate>Fri, 17 Nov 2017 18:02:27 +0000</pubDate>
       
       <guid>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</guid>
       <description>Olá, tudo bem?!
-É comum atualizar o fork do projeto que contribuirmos no GitHub.
-Pois conforme contribuímos outros contribuidores também fazem o mesmo, com isso o fork fica desatualizado.
-Neste momento podemos ficar com receio de contribuir, por não dominar o Git e GitHub.
-Para atualizar o fork o processo é muito simples e iremos aprender neste post. Para realizar a atualização será utilizado o upstream.
-Obs: Todos os comandos abaixo devem ser executados via terminal na raiz do seu fork.</description>
+Sumário Introdução Adicionando um repositório remoto Atualizando o upstream Realizando o commit das informações Enviando para o GitHub Considerações Introdução É comum atualizarmos o fork do projeto ao qual contribuímos no &amp;ldquo;GitHub&amp;rdquo;.
+Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &amp;ldquo;fork&amp;rdquo; pode ficar desatualizado.
+Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &amp;ldquo;Git&amp;rdquo; e o &amp;ldquo;GitHub&amp;rdquo;.
+Para realizar a atualização, utilizaremos o upstream.</description>
     </item>
     
   </channel>

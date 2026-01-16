@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>legado on Diego Brocanelli</title>
+    <link>https://diegobrocanelli.com.br/tags/legado/</link>
+    <description>Recent content in legado on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 18 Feb 2025 21:03:48 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/legado/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como transformar sistemas legados em oportunidades de crescimento</title>
+      <link>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
+      <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
+      
+      <guid>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
+      <description>Sumário O que define um sistema como legado? Por que há tanto medo de sistemas legados? Não julgue quem nem o porquê Dívidas técnicas Para quem é essa melhoria? Regras de negócio no banco de dados Mapear as mudanças Planejando o quê e como será feito Qual o melhor momento para refatorar? Quando não devo aplicar melhorias? E a documentação? Opiniões da comunidade Encerramento Referências O que define um sistema como legado?</description>
+    </item>
+    
+  </channel>
+</rss>

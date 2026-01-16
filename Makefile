@@ -9,3 +9,11 @@ server-all:
 
 sh:
 	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -p 1313:1313 --entrypoint="" -w /src klakegg/hugo:latest sh
+
+post:
+	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
+		echo "Erro: Você precisa fornecer um título para o post."; \
+		echo "Uso: make post \"Título do Post\""; \
+		exit 1; \
+	fi
+	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -w /src klakegg/hugo:latest new posts/$(shell echo "$(filter-out $@,$(MAKECMDGOALS))" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g').md

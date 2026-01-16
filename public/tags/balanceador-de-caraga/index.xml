@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>balanceador de caraga on Diego Brocanelli</title>
+    <link>https://diegobrocanelli.com.br/tags/balanceador-de-caraga/</link>
+    <description>Recent content in balanceador de caraga on Diego Brocanelli</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 26 Mar 2025 11:48:22 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/balanceador-de-caraga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Melhore a performance do seu sistema com um load balancer</title>
+      <link>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
+      <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
+      
+      <guid>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
+      <description>Sumário O que é load balancer? Para que serve? Quando usar? Quais tipos existem? Exemplo do problema Considerações finais Referências O que é load balancer? O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.
+Imagine um restaurante movimentado com vários atendentes.</description>
+    </item>
+    
+  </channel>
+</rss>
