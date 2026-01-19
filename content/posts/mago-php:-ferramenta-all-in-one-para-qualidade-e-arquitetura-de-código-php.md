@@ -14,7 +14,15 @@ tags:
   - Architectural Guard
 ---
 
-Durante minha navegação web, esbarrei com um projeto que me chamou minha atenção o [Mago PHP](https://mago.carthage.software/).
+## Sumário
+- [Introdução](#introdução)
+- [Exemplos](#exexmplos)
+- [Considerações](#considerações)
+- [Referências](#referências)
+
+## Introdução
+
+Durante minha navegação web, esbarrei com um projeto que chamou minha atenção o [Mago PHP](https://mago.carthage.software/).
 
 O projeto foi desenvolvido em Rust e visa centralizar funcionalidades essenciais para garantir, qualidade, padronização e arquitetura em projetos PHP.
 
@@ -28,6 +36,8 @@ A ferramenta reúne:
 Temos ferramentas individuais que fazem cada uma dessas tarefas, o que achei interessante é estar em uma ferramenta só e altamente configurável.
 
 O fato de ter tudo em um lugar, ajuda na gerência de dependências externas. Podemos configurar cada uma das ferramentas conforme a necessidade e padrões do time.
+
+## Exexmplos
 
 ### Instalação
 
@@ -44,8 +54,8 @@ vendor/bin/mago init
 Formata código automaticamente seguindo PER-CS.
 
 ```php
-mago format              # Formatar tudo
-mago format --check      # Apenas verificar (CI/CD)
+mago format         # Formatar tudo
+mago format --check # Apenas verificar (CI/CD)
 ```
 
 Antes
@@ -57,7 +67,6 @@ private $name;
 $this->name=$name;
     }
 }
-
 ```
 
 Depois
@@ -72,7 +81,6 @@ class User
         $this->name = $name;
     }
 }
-
 ```
 
 ### Linter
@@ -84,9 +92,9 @@ class OrderService
 {
     public function process(Order $order): void
     {
-        $items = $order->getItems();     // ❌ Nunca usado
+        $items = $order->getItems(); // ❌ Nunca usado
         $total = $order->getTotal();
-        
+
         // ❌ Pode simplificar
         if ($total > 0) {
             return true;
@@ -100,8 +108,8 @@ class OrderService
 **Resultado:**
 
 ```php
-mago lint           # Verificar
-mago lint --fix     # Corrigir automaticamente
+mago lint       # Verificar
+mago lint --fix # Corrigir automaticamente
 ```
 
 ```php
