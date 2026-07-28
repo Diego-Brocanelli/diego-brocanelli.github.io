@@ -2,19 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>MCP on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/mcp/</link>
+    <link>http://localhost:1313/categories/mcp/</link>
     <description>Recent content in MCP on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 14 May 2025 12:08:32 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/mcp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 May 2025 12:08:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/mcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introdução ao MCP (Model Context Protocol)</title>
-      <link>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</link>
+      <link>http://localhost:1313/posts/introducao-ao-mcp/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</guid>
-      <description>Sumário O quê é Para que serve? Como funciona? Componentes do MCP Server Formatos de Comunicação Exemplos de aplicação Exemplo: Análise de Texto Considerações Referências O quê é O Model Context Protocol (MCP) é um protocolo proposto pela Anthropic visando padronizar como sistemas podem prover contexto para modelos de linguagem (LLMs). Ele facilita a conexão desses modelos com diferentes fontes de dados e ferramentas externas, ampliando significativamente sua utilidade em aplicações reais.</description>
+      <guid>http://localhost:1313/posts/introducao-ao-mcp/</guid>
+      <description>&lt;h2 id=&#34;o-quê-é&#34;&gt;O quê é&lt;/h2&gt;
+&lt;p&gt;O Model Context Protocol (MCP) é um protocolo proposto pela Anthropic visando padronizar como sistemas podem prover contexto para modelos de linguagem (LLMs). Ele facilita a conexão desses modelos com diferentes fontes de dados e ferramentas externas, ampliando significativamente sua utilidade em aplicações reais.&lt;/p&gt;
+&lt;h2 id=&#34;para-que-serve&#34;&gt;Para que serve?&lt;/h2&gt;
+&lt;p&gt;Ajuda a criar agentes e fluxos de trabalho complexos com base em LLMs. Os LLMs frequentemente precisam se integrar a dados e ferramentas.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,38 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>soft-skills on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/soft-skills/</link>
-    <description>Recent content in soft-skills on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Soft-Skills on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/soft-skills/</link>
+    <description>Recent content in Soft-Skills on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 25 Apr 2025 20:06:37 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/soft-skills/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Apr 2025 20:06:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/soft-skills/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como analisar um problema</title>
-      <link>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</link>
+      <link>http://localhost:1313/posts/como-analisar-um-problema/</link>
       <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</guid>
-      <description>Como analisar um problema? Sumário O que motivou o post? O que caracteriza uma análise ser ruim? Consequências de uma má análise O que faz uma análise ser excelente? Exemplo prático Considerações finais O que motivou o post? Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.</description>
+      <guid>http://localhost:1313/posts/como-analisar-um-problema/</guid>
+      <description>&lt;h2 id=&#34;o-que-motivou-o-post&#34;&gt;O que motivou o post?&lt;/h2&gt;
+&lt;p&gt;Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.&lt;/p&gt;
+&lt;h2 id=&#34;por-que-analisar-bem-é-tão-importante&#34;&gt;Por que analisar bem é tão importante?&lt;/h2&gt;
+&lt;p&gt;Analisar bem significa reunir fatos e evidências para embasar nossas escolhas. Uma análise mal feita pode ter um impacto devastador, levando o time a seguir por caminhos equivocados e desperdiçar tempo e recursos.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como saber se estou indo bem? A importância de dar e receber feedbacks</title>
-      <link>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</link>
+      <link>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</link>
       <pubDate>Tue, 04 Feb 2025 22:21:55 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</guid>
-      <description>Sumário Introdução Por que feedback é importante? Feedback não é tudo igual? Como realizar um feedback de qualidade? Feedback positivo: reforçando comportamentos e motivando sua repetição Feedback corretivo: corrigindo comportamentos Pessoas são únicas Considerações Referencias Introdução Recentemente finalizei a leitura do livro “Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks” do autor Richard L. Willians, este livro foi uma indicação do meu amigo Davi já há alguns anos, obrigado pela recomendação!</description>
+      <guid>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Recentemente finalizei a leitura do livro &lt;em&gt;“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”&lt;/em&gt; do autor Richard L. Willians, este livro foi uma indicação do meu amigo &lt;a href=&#34;https://devdrops.github.io/about/&#34;&gt;Davi&lt;/a&gt; já há alguns anos, obrigado pela recomendação!&lt;/p&gt;
+&lt;p&gt;Uma das habilidades que está em foco para aperfeiçoamento este ano de 2025 é a comunicação, onde busco uma comunicação:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Assertiva:&lt;/strong&gt; conseguir transmitir as informações com clareza, dinâmica e respeito, para que assim obtenha o retorno esperado;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Não violenta:&lt;/strong&gt; foca em uma comunicação que promove empatia, conexão e respeito, voltada para melhorar os relacionamentos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sou programador e temos o péssimo hábito de nos isolar e quando nos comunicamos nem sempre fazemos de uma maneira que seja fácil para o interlocutor, usando uma alta carga de termos técnicos e muita complexidade. É necessário clareza e assertividade na comunicação quando estamos, por exemplo, auxiliando um programador menos experiente, em reunião com o cliente ou time, ou mesmo dando um feedback.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Priorizar com propósito: guia prático para iniciantes</title>
-      <link>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</link>
+      <link>http://localhost:1313/posts/priorizar-com-proposito/</link>
       <pubDate>Fri, 24 Jan 2025 22:36:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</guid>
-      <description>Sumário Introdução Priorização com cliente ou/e parte interessada Priorizando minhas demandas Priorização no meu dia a dia pessoal Ferramentas Considerações finais Referências Introdução Estou lendo o livro Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.</description>
+      <guid>http://localhost:1313/posts/priorizar-com-proposito/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Estou lendo o livro &lt;code&gt;Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso&lt;/code&gt; e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.&lt;/p&gt;
+&lt;p&gt;Um desses pontos aborda que toda nova ideia de funcionalidade nasce automaticamente com um não, e ela tem que brigar e valer a pena para receber um sim! Esse conceito é muito interessante, pois no dia a dia vemos uma ideia que parece boa e já incluirmos ela na lista para fazer e saímos implementando.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>code bar on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/code-bar/</link>
-    <description>Recent content in code bar on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Code Bar on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/code-bar/</link>
+    <description>Recent content in Code Bar on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 22 Jan 2016 20:57:53 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/code-bar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jan 2016 20:57:53 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/code-bar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Códigos de barra com Zend Framework 2</title>
-      <link>https://diegobrocanelli.com.br/php/codigos-de-barra-com-zend-framework-2/</link>
+      <link>http://localhost:1313/posts/codigos-de-barra-com-zend-framework-2/</link>
       <pubDate>Fri, 22 Jan 2016 20:57:53 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/codigos-de-barra-com-zend-framework-2/</guid>
-      <description>É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.
-O Zend Framework 2 dispõem de um poderoso componente Zenb\Barcode\Barcode que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode.</description>
+      <guid>http://localhost:1313/posts/codigos-de-barra-com-zend-framework-2/</guid>
+      <description>&lt;p&gt;É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.&lt;/p&gt;
+&lt;p&gt;O Zend Framework 2 dispõem de um poderoso componente &lt;a href=&#34;http://framework.zend.com/manual/current/en/modules/zend.barcode.creation.html&#34;&gt;Zenb\Barcode\Barcode&lt;/a&gt; que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode. Sendo assim deve-se levar em consideração o tipo de código de barra que deseja criar em sua aplicação.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>podcast on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/podcast/</link>
-    <description>Recent content in podcast on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Podcast on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/podcast/</link>
+    <description>Recent content in Podcast on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Participação no Podcast Fechatag</title>
-      <link>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</link>
+      <title>Participação no podcast Fechatag</title>
+      <link>http://localhost:1313/posts/participacao-no-podcast-fechatag/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</guid>
-      <description>Olá, tudo bem?
-Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
-Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
-Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos.</description>
+      <guid>http://localhost:1313/posts/participacao-no-podcast-fechatag/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?&lt;/p&gt;
+&lt;p&gt;Recentemente tive o enorme prazer em participar de um episódio do &lt;a href=&#34;https://fechatagpodcast.com.br/&#34;&gt;podcast Fechatag&lt;/a&gt;, do grande &lt;a href=&#34;https://twitter.com/femontanha&#34;&gt;Montanha&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Acompanho o Montanha desde a época em que era host do podcast &lt;a href=&#34;https://devnaestrada.com.br/&#34;&gt;Dev Na Estrada&lt;/a&gt;, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.&lt;/p&gt;
+&lt;p&gt;Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos. Acabamos conhecendo por outra ótica culturas e aprendizados  maravilhosos.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PHP Do Jeito Certo: Episódio VI – O Retorno do PODCAST</title>
-      <link>https://diegobrocanelli.com.br/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</link>
+      <link>http://localhost:1313/posts/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</link>
       <pubDate>Fri, 30 Sep 2016 00:43:18 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</guid>
-      <description>Olá pessoal tudo bem?!
-Após um tempo sem novos episódios lançamos mais um episódio do PHP Do Jeito Certo, um podcast que desde 2013 junto com meus amigos Davi, Jack e Marcelo tocamos e gostamos muito de fazer.
-Neste episódio, falamos o que se decorreu desde o último episódio gravado, e o que estamos envolvidos atualmente. Espero que apreciem, e acompanhem pois lançaremos mais episódios conforme o tempo nos permitir.</description>
+      <guid>http://localhost:1313/posts/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</guid>
+      <description>&lt;p&gt;Olá pessoal tudo bem?!&lt;/p&gt;
+&lt;p&gt;Após um tempo sem novos episódios lançamos mais um episódio do PHP Do Jeito Certo, um podcast que desde 2013 junto com meus amigos &lt;a href=&#34;https://twitter.com/devdrops&#34;&gt;Davi&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/JackMakiyama&#34;&gt;Jack&lt;/a&gt; e &lt;a href=&#34;https://twitter.com/marcelsud&#34;&gt;Marcelo&lt;/a&gt; tocamos e gostamos muito de fazer.&lt;/p&gt;
+&lt;p&gt;Neste episódio, falamos o que se decorreu desde o último episódio gravado, e o que estamos envolvidos atualmente. Espero que apreciem, e acompanhem pois lançaremos mais episódios conforme o tempo nos permitir.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=M7qo6NdUqGg&#34;&gt;o vídeo &lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,23 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>go on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/go/</link>
-    <description>Recent content in go on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Go on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/go/</link>
+    <description>Recent content in Go on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 01 Aug 2017 03:04:42 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2017 03:04:42 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 12 – Por que Golang? (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/por-que-golang-video/</link>
+      <link>http://localhost:1313/posts/por-que-golang-video/</link>
       <pubDate>Tue, 01 Aug 2017 03:04:42 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/por-que-golang-video/</guid>
-      <description>Go é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição ZeuCXB traz uma palestra robusta, recheado de exemplos para nós.
-Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema”Por que Golang?” Palestrante: Eliseu Codinhoto (@zeucxb) Canal: https://youtube.com/euprogramadoroficial Twitter: https://twitter.com/zeucxb GitHub: https://github.com/zeucxb LinkedIn: https://www.linkedin.com/in/zeucxb Slides: https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p Links Comentados Sites https://golang.</description>
+      <guid>http://localhost:1313/posts/por-que-golang-video/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;ZeuCXB&lt;/a&gt; traz uma palestra robusta, recheado de exemplos para nós.&lt;/p&gt;
+&lt;p&gt;Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=h_9UNH6pkyo&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema”Por que Golang?”&lt;/li&gt;
+&lt;li&gt;Palestrante: Eliseu Codinhoto (@zeucxb)&lt;/li&gt;
+&lt;li&gt;Canal: &lt;a href=&#34;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&#34;&gt;https://youtube.com/euprogramadoroficial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;https://twitter.com/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/zeucxb&#34;&gt;https://github.com/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/zeucxb&#34;&gt;https://www.linkedin.com/in/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p&#34;&gt;https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sites
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;https://golang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/&#34;&gt;https://gobyexample.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Empresas
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nuveo.com.br/&#34;&gt;https://nuveo.com.br/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://planrockr.com/pt-br/&#34;&gt;http://planrockr.com/pt-br/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Newsletter
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://asemanago.com.br&#34;&gt;http://asemanago.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Livros
+&lt;ul&gt;
+&lt;li&gt;Programando em Go Crie aplicações com a linguagem do Google: &lt;a href=&#34;https://www.casadocodigo.com.br/products/livro-google-go&#34;&gt;https://www.casadocodigo.com.br/products/livro-google-go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A Linguagem de Programação Go: &lt;a href=&#34;https://novatec.com.br/livros/linguagem-de-programacao-go/&#34;&gt;https://novatec.com.br/livros/linguagem-de-programacao-go/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introdução à linguagem Go: &lt;a href=&#34;https://novatec.com.br/livros/introducao-linguagem-go/&#34;&gt;https://novatec.com.br/livros/introducao-linguagem-go/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cursos
+&lt;ul&gt;
+&lt;li&gt;GoIniciando com a linguagem do Google: &lt;a href=&#34;https://www.alura.com.br/curso-online-golang&#34;&gt;https://www.alura.com.br/curso-online-golang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Canais Youtube
+&lt;ul&gt;
+&lt;li&gt;Eu Programador: &lt;a href=&#34;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&#34;&gt;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gopherconbrasil: &lt;a href=&#34;https://www.youtube.com/channel/UCGFVA_XvkUoMWpKVH0IrjUA&#34;&gt;https://www.youtube.com/channel/UCGFVA_XvkUoMWpKVH0IrjUA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cesar Gimenes: &lt;a href=&#34;https://www.youtube.com/channel/UCxRoRvJi7NbC2boKAV70t_g&#34;&gt;https://www.youtube.com/channel/UCxRoRvJi7NbC2boKAV70t_g&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Espero que tenham apreciado, até a próxima.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

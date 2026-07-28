@@ -3,7 +3,14 @@ title: "Filas e mensageria com RabbitMQ revolucione a comunicação do seu siste
 date: 2024-09-26T14:44:00Z
 author: Diego Brocanelli
 type: post
-draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - programação
 tags:
@@ -13,16 +20,6 @@ tags:
   - mensageria
   - arquitetura
 ---
-
-## Índice
-
-- [O que é RabbitMQ?](#o-que-é-rabbitmq)
-- [Como Exchanges e Filas funcionam no RabbitMQ](#como-exchanges-e-filas-funcionam-no-rabbitmq)
-- [Publicador e Consumidor: como funcionam no RabbitMQ](#publicador-e-consumidor-como-funcionam-no-rabbitmq)
-- [Vantagens e desvantagens das filas fanout](#vantagens-e-desvantagens-das-filas-fanout)
-- [Mas por que usar mensageria?](#mas-por-que-usar-mensageria)
-- [Conclusão](#conclusão)
-- [Links e referências](#referências)
 
 ## O que é RabbitMQ?
 

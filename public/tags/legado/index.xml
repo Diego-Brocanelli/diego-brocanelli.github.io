@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>legado on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/legado/</link>
-    <description>Recent content in legado on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Legado on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/legado/</link>
+    <description>Recent content in Legado on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 18 Feb 2025 21:03:48 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/legado/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 21:03:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/legado/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como transformar sistemas legados em oportunidades de crescimento</title>
-      <link>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
+      <link>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
       <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
-      <description>Sumário O que define um sistema como legado? Por que há tanto medo de sistemas legados? Não julgue quem nem o porquê Dívidas técnicas Para quem é essa melhoria? Regras de negócio no banco de dados Mapear as mudanças Planejando o quê e como será feito Qual o melhor momento para refatorar? Quando não devo aplicar melhorias? E a documentação? Opiniões da comunidade Encerramento Referências O que define um sistema como legado?</description>
+      <guid>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
+      <description>&lt;h2 id=&#34;o-que-define-um-sistema-como-legado&#34;&gt;O que define um sistema como legado?&lt;/h2&gt;
+&lt;p&gt;Um sistema é considerado legado não apenas pela sua idade, mas por uma combinação de fatores. Geralmente, um sistema é classificado como legado quando apresenta dificuldades em atender às demandas atuais da empresa ou tecnologia. Isso pode incluir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tecnologias ultrapassadas ou descontinuadas;&lt;/li&gt;
+&lt;li&gt;Falta de documentação clara e atualizada;&lt;/li&gt;
+&lt;li&gt;Alto custo de manutenção;&lt;/li&gt;
+&lt;li&gt;Dependência de especialistas que conhecem detalhes do sistema;&lt;/li&gt;
+&lt;li&gt;Problemas de integração com sistemas modernos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;É importante destacar que, em muitos casos, o termo &amp;ldquo;legado&amp;rdquo; não é necessariamente pejorativo. Sistemas legados muitas vezes são responsáveis por sustentar operações críticas de negócio.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

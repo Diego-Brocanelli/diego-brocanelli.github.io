@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>diretórios on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/diret%C3%B3rios/</link>
-    <description>Recent content in diretórios on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Diretórios on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/diret%C3%B3rios/</link>
+    <description>Recent content in Diretórios on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 04 Sep 2016 20:53:17 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/diret%C3%B3rios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2016 20:53:17 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/diret%C3%B3rios/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Manipulando  diretórios com PHP</title>
-      <link>https://diegobrocanelli.com.br/php/manipulando-diretorios-com-php/</link>
+      <title>Manipulando diretórios com PHP</title>
+      <link>http://localhost:1313/posts/manipulando-diretorios-com-php/</link>
       <pubDate>Sun, 04 Sep 2016 20:53:17 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/manipulando-diretorios-com-php/</guid>
-      <description>Olá pessoal, tudo bem?!
-Neste final de semana estive criando um pet project para praticar TDD, e foi direcionado a manipulação de diretórios.
-E com isso resolvi criar este post para mostrar um recurso muito bom do PHP, sendo a classe nativa RecursiveDirectoryIterator, onde dispõem de um leque de ferramentas bacanas que podem facilitar sua vida.
-Para realizarmos este post vamos criar um diretório ‘post_manipulando_diretorios_com_php’ e dentro dele vamos criar o arquivo index.</description>
+      <guid>http://localhost:1313/posts/manipulando-diretorios-com-php/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Neste final de semana estive criando um pet project para praticar TDD, e foi direcionado a &lt;a href=&#34;https://github.com/Diego-Brocanelli/FileSystem&#34;&gt;manipulação de diretórios&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;E com isso resolvi criar este post para mostrar um recurso muito bom do PHP, sendo a &lt;a href=&#34;http://php.net/manual/pt_BR/class.recursivedirectoryiterator.php&#34;&gt;classe nativa RecursiveDirectoryIterator&lt;/a&gt;, onde dispõem de um leque de ferramentas bacanas que podem facilitar sua vida.&lt;/p&gt;
+&lt;p&gt;Para realizarmos este post vamos criar um diretório ‘post_manipulando_diretorios_com_php’ e dentro dele vamos criar o arquivo index.php (onde iremos implementar nossos códigos) e mais 04 arquivos teste_01.txt, teste_02.txt, teste_03.txt e teste_04.txt. Após a criação da nossa estrutura básica vamos explorar o recurso.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>vue on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/vue/</link>
-    <description>Recent content in vue on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Vue on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/vue/</link>
+    <description>Recent content in Vue on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:42:33 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:42:33 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <link>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</guid>
-      <description>Olá, tudo bem?!
-Nesta edição de número 28 do hhbr tivemos uma mega palestra sobre Vue.js com o palestrante William Correa, que explanou em detalhes diversos pontos bacanas da renderização com Vue.
-Dados da palestra Tema: “Renderizando Componentes com Vue.js” Palestrante: William Correa Twitter: @wilcorrea Github: @wilcorrea Links Comentado https://vuejs.org/ https://br.vuejs.org/ https://template-explorer.vuejs.org </description>
+      <guid>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta edição de número 28 do &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; tivemos uma mega palestra sobre Vue.js com o palestrante &lt;a href=&#34;https://twitter.com/wilcorrea&#34;&gt;William Correa&lt;/a&gt;, que explanou em detalhes diversos pontos bacanas da renderização com Vue.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/14NovbQMukc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Renderizando Componentes com Vue.js”&lt;/li&gt;
+&lt;li&gt;Palestrante: William Correa&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://www.youtube.com/redirect?event=video_description&amp;amp;v=14NovbQMukc&amp;amp;q=https%3A%2F%2Ftwitter.com%2Fwilcorrea&amp;amp;redir_token=YUKsrVUb7n6wdO__OjmHsqlsu1R8MTU2MTI5NjMxN0AxNTYxMjA5OTE3&#34;&gt;@wilcorrea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github: &lt;a href=&#34;https://www.youtube.com/redirect?event=video_description&amp;amp;v=14NovbQMukc&amp;amp;q=https%3A%2F%2Fgithub.com%2Fwilcorrea&amp;amp;redir_token=YUKsrVUb7n6wdO__OjmHsqlsu1R8MTU2MTI5NjMxN0AxNTYxMjA5OTE3&#34;&gt;@wilcorrea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentado&#34;&gt;Links Comentado&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://vuejs.org/&#34;&gt;https://vuejs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://br.vuejs.org/&#34;&gt;https://br.vuejs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://template-explorer.vuejs.org&#34;&gt;https://template-explorer.vuejs.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 08 – Vue.js e Single Page Applications: O que saber antes de começar (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
+      <link>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
       <pubDate>Thu, 30 Mar 2017 02:04:18 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
-      <description>Olá, tudo bem?!
-Hoje tivemos a oitava edição do hhbr, uma edição recheada de muita informação, dicas e códigos!
-Nesta edição temos a honra de trazer o grande Fábio Vedovelli, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do Codecasts chamado SPA Started Kit onde facilita e muito o start inicial de uma SPA com Vuejs.</description>
+      <guid>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Hoje tivemos a oitava edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRG&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação, dicas e códigos!&lt;/p&gt;
+&lt;p&gt;Nesta edição temos a honra de trazer o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fábio Vedovelli&lt;/a&gt;, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do &lt;a href=&#34;ttps://codecasts.com.br/lesson&#34;&gt;Codecasts&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/codecasts/spa-starter-kit&#34;&gt;SPA Started Kit&lt;/a&gt; onde facilita e muito o start inicial de uma SPA com Vuejs.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

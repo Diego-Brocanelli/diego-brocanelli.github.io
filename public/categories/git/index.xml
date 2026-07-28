@@ -1,34 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>git on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/git/</link>
-    <description>Recent content in git on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Git on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/git/</link>
+    <description>Recent content in Git on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT – Seu guia de sobrevivência</title>
-      <link>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</link>
+      <link>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
-      <description>Olá, tudo bem!
-Sumário Introdução Comandos git config git init git clone git status git branch git checkout git add git commit git diff git log git merge git pull git push git reset git tag git mv git rebase git grep Atualizar fork Git por meio de interface gráfica Materiais complementares Considerações Introdução Git é um sistema de controle de versão descentralizado, criado por Linus Torvalds. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.</description>
+      <guid>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; é um sistema de controle de versão descentralizado, criado por &lt;a href=&#34;https://github.com/torvalds&#34;&gt;Linus Torvalds&lt;/a&gt;. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.
+Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?&lt;/p&gt;
+&lt;p&gt;Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas cada vez maiores, onde dezenas ou centenas de pessoas estão interagindo com o mesmo repositório de código mandando correções ou novas funcionalidades. &lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>Guia prático de comandos Git</title>
+      <link>http://localhost:1313/posts/guia-pratico-de-comandos-git/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/guia-pratico-de-comandos-git/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;p&gt;Atualmente desenvolver software sem utilizar controle de versão é impensável para muitos desenvolvedores, porém não é e está longe de ser a realidade de muitos outros devs.&lt;/p&gt;
+&lt;p&gt;Neste post tenho como objetivo listar os principais comandos para que qualquer pessoa possa iniciar seu controle de verão com Git.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 24pt;&#34;&gt;&lt;strong&gt;Problemática&lt;/p&gt;
+&lt;p&gt;Iniciar um projeto sem o controle de versão é a garantia de má organização e conteúdo duplicado ou até mesmo perdido. Quem nunca se deparou com o zip do projeto ‘projeto_final.zip’ ou ‘projeto_final_2.zip’, isso infelizmente ainda é comum e muito danoso ao projeto e ao processo de desenvolvimento.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!</title>
-      <link>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</link>
+      <link>http://localhost:1313/posts/atualizando-seu-fork-no-github/</link>
       <pubDate>Fri, 17 Nov 2017 18:02:27 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</guid>
-      <description>Olá, tudo bem?!
-Sumário Introdução Adicionando um repositório remoto Atualizando o upstream Realizando o commit das informações Enviando para o GitHub Considerações Introdução É comum atualizarmos o fork do projeto ao qual contribuímos no &amp;ldquo;GitHub&amp;rdquo;.
-Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &amp;ldquo;fork&amp;rdquo; pode ficar desatualizado.
-Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &amp;ldquo;Git&amp;rdquo; e o &amp;ldquo;GitHub&amp;rdquo;.
-Para realizar a atualização, utilizaremos o upstream.</description>
+      <guid>http://localhost:1313/posts/atualizando-seu-fork-no-github/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;h2 id=&#34;sumário&#34;&gt;Sumário&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#introdu%C3%A7%C3%A3o&#34;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adicionando-um-reposit%C3%B3rio-remoto&#34;&gt;Adicionando um repositório remoto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#atualizando-o-upstream&#34;&gt;Atualizando o upstream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#realizando-o-commit-das-informa%C3%A7%C3%B5es&#34;&gt;Realizando o commit das informações&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#enviando-para-o-github&#34;&gt;Enviando para o GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#considera%C3%A7%C3%B5es&#34;&gt;Considerações&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;É comum atualizarmos o fork do projeto ao qual contribuímos no &lt;em&gt;&amp;ldquo;GitHub&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &lt;em&gt;&amp;ldquo;fork&amp;rdquo;&lt;/em&gt; pode ficar desatualizado.&lt;/p&gt;
+&lt;p&gt;Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &lt;em&gt;&amp;ldquo;Git&amp;rdquo;&lt;/em&gt; e o &lt;em&gt;&amp;ldquo;GitHub&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para realizar a atualização, utilizaremos o &lt;a href=&#34;https://help.github.com/articles/configuring-a-remote-for-a-fork/&#34;&gt;&lt;em&gt;upstream&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

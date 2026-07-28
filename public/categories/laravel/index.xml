@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>laravel on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/laravel/</link>
-    <description>Recent content in laravel on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Laravel on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/laravel/</link>
+    <description>Recent content in Laravel on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 05 Sep 2018 13:34:32 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Sep 2018 13:34:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Modularizando Sua Aplicação Laravel</title>
-      <link>https://diegobrocanelli.com.br/php/laravel-module/</link>
+      <title>Modularizando sua aplicação Laravel</title>
+      <link>http://localhost:1313/posts/laravel-module/</link>
       <pubDate>Wed, 05 Sep 2018 13:34:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/laravel-module/</guid>
-      <description>Olá, tudo bem?!
-Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.
-Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.
-O Laravel é um grande framework, onde vem crescendo cada vez mais ao longo dos anos, em minhas pesquisas e estudos encontrei uma maneira de construir aplicações de forma modular no framework, e irei compartilhar com vocês os resultados dos estudos.</description>
+      <guid>http://localhost:1313/posts/laravel-module/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.&lt;/p&gt;
+&lt;p&gt;Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.&lt;/p&gt;
+&lt;p&gt;O Laravel é um grande framework, onde vem crescendo cada vez mais ao longo dos anos, em minhas pesquisas e estudos encontrei uma maneira de construir aplicações de forma modular no framework, e irei compartilhar com vocês os resultados dos estudos.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

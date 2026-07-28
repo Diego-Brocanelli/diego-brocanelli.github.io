@@ -1,7 +1,14 @@
 ---
 title: "Como transformar sistemas legados em oportunidades de crescimento"
 date: 2025-02-18T21:03:48Z
-draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - programação
 tags:
@@ -12,23 +19,6 @@ tags:
   - oportunidade
   - crescimento
 ---
-
-## Sumário
-
-1. [O que define um sistema como legado?](#o-que-define-um-sistema-como-legado)
-2. [Por que há tanto medo de sistemas legados?](#por-que-há-tanto-medo-de-sistemas-legados)
-3. [Não julgue quem nem o porquê](#não-julgue-quem-nem-o-porquê)
-4. [Dívidas técnicas](#dívidas-técnicas)
-5. [Para quem é essa melhoria?](#para-quem-é-essa-melhoria)
-6. [Regras de negócio no banco de dados](#regras-de-negócio-no-banco-de-dados)
-7. [Mapear as mudanças](#mapear-as-mudanças)
-8. [Planejando o quê e como será feito](#planejando-o-quê-e-como-será-feito)
-9. [Qual o melhor momento para refatorar?](/#qual-o-melhor-momento-para-refatorar)
-10. [Quando não devo aplicar melhorias?](#quando-não-devo-aplicar-melhorias)
-11. [E a documentação?](#e-a-documentação)
-12. [Opiniões da comunidade](#opiniões-da-comunidade)
-13. [Encerramento](#encerramento)
-14. [Referências](#referências)
 
 ## O que define um sistema como legado?
 

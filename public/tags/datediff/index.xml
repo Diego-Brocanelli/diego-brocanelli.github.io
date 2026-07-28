@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>datediff on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/datediff/</link>
-    <description>Recent content in datediff on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Datediff on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/datediff/</link>
+    <description>Recent content in Datediff on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/datediff/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/datediff/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
-      <link>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <link>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
       <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
-      <description>Olá, tudo bem?!
-O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
-Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
+      <guid>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;h3 id=&#34;o-problema&#34;&gt;O problema&lt;/h3&gt;
+&lt;p&gt;Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.&lt;/p&gt;
+&lt;h3 id=&#34;resolução-e-demonstração-prática&#34;&gt;Resolução e demonstração prática&lt;/h3&gt;
+&lt;p&gt;Para aplicação prática devemos inicialmente criar nosso banco de dados teste. Para a estrutura da tabela utilize o modelo abaixo.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

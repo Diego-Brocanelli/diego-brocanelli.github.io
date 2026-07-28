@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>gerenciar pacotes on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/gerenciar-pacotes/</link>
-    <description>Recent content in gerenciar pacotes on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Gerenciar Pacotes on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/gerenciar-pacotes/</link>
+    <description>Recent content in Gerenciar Pacotes on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 31 Oct 2017 13:17:36 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/gerenciar-pacotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2017 13:17:36 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/gerenciar-pacotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como controlar a versão do software like a boss com Semantic Version</title>
-      <link>https://diegobrocanelli.com.br/semantic-version/controlando-a-versao-do-software-like-a-boss/</link>
+      <link>http://localhost:1313/posts/controlando-a-versao-do-software-like-a-boss/</link>
       <pubDate>Tue, 31 Oct 2017 13:17:36 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/semantic-version/controlando-a-versao-do-software-like-a-boss/</guid>
-      <description>Olá, Tudo bem?!
-Quem nunca dedicou tempo para analisar como seria o controle da versão do seu sistema, ou teve problemas com “aquela solução infalível”, tem também quem nunca se preocupou com isso, porém, já deve ter sofrido pois aquela lib favorita que utiliza no projeto quebrou a compatibilidade após um simples update?!
-Ao desenvolvermos algum sistema/componente/lib/framework seja lá o que for, um ponto importante é, como será controlada a sua versão?</description>
+      <guid>http://localhost:1313/posts/controlando-a-versao-do-software-like-a-boss/</guid>
+      <description>&lt;p&gt;Olá, Tudo bem?!&lt;/p&gt;
+&lt;p&gt;Quem nunca dedicou tempo para analisar como seria o controle da versão do seu sistema, ou teve problemas com “aquela solução infalível”, tem também quem nunca se preocupou com isso, porém, já deve ter sofrido pois aquela lib favorita que utiliza no projeto quebrou a compatibilidade após um simples update?!&lt;/p&gt;
+&lt;p&gt;Ao desenvolvermos algum sistema/componente/lib/framework seja lá o que for, um ponto importante é, como será controlada a sua versão?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

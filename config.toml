@@ -1,21 +1,41 @@
-baseURL = 'https://diegobrocanelli.com.br/'
-languageCode = 'pt-br'
-title = 'Diego Brocanelli'
-theme = "hugo-PaperMod-6.0"
-enableRobotsTXT = true
-enableEmoji = true
-defaultContentLanguage = "pt-br"
-hasCJKLanguage = false
-paginate = 9
-rssLimit = 10
-searchHidden = true
-googleAnalytics = "G-724B54J2LY"
+# ─────────────────────────────────────────────────────────────
+# Configuração geral do site
+# ─────────────────────────────────────────────────────────────
+
+baseURL = 'https://diegobrocanelli.com.br/'        # URL final publicada. Usada para gerar links absolutos, RSS e sitemap.
+locale = 'pt-br'                                   # Código de idioma, usado na tag <html lang="...">.
+title = 'Diego Brocanelli'                         # Título do site (aba do navegador, metadados)
+theme = "hugo-PaperMod"                            # Nome da pasta do tema dentro de themes/
+
+enableRobotsTXT = true                             # Gera robots.txt automaticamente, permitindo indexação
+enableEmoji = true                                 # Permite usar :emoji: no Markdown
+
+defaultContentLanguage = "pt-br"                   # Idioma padrão do conteúdo (relevante em sites multilíngues)
+hasCJKLanguage = false                             # true = ativa contagem de palavras/tempo de leitura para chinês/japonês/coreano
+
+paginate = 9                                       # Posts por página nas listagens
+rssLimit = 10                                      # Itens máximos no feed RSS
+
+searchHidden = true                                # Oculta a página de busca das listagens de conteúdo (continua acessível por URL/menu)
+
+googleAnalytics = "G-724B54J2LY"                   # ID do GA4 — só é de fato injetado se params.env = "production" (ver abaixo)
+
+buildDrafts = false                                # Não publica posts com "draft: true"
+buildFuture = false                                # Não publica posts com data futura
+buildExpired = false                               # Não publica posts com data de expiração já vencida
+
+[minify]
+  disableXML = true                               # Evita minificar XML (RSS/sitemap), que pode quebrar alguns leitores de feed
+  minifyOutput = true                             # Minifica o HTML final gerado, reduzindo o tamanho dos arquivos
 
 [author]
   name = "Diego Brocanelli"
-  bio = "Engenheiro de Software e Arquiteto de Soluções com 10+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos! 🚀"
+  bio = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
   twitter = "diego_b2"
 
+# ─────────────────────────────────────────────────────────────
+# Menu principal (cabeçalho)
+# ─────────────────────────────────────────────────────────────
 [Menus]
   main = [
     {Name = "Home", Weight = 10, Identifier = "home", URL = "/"},
@@ -23,31 +43,55 @@ googleAnalytics = "G-724B54J2LY"
     {Name = "Sobre", Weight = 10, Identifier = "about", URL = "/about/"}
   ]
 
+# ─────────────────────────────────────────────────────────────
+# Parâmetros do tema PaperMod
+# ─────────────────────────────────────────────────────────────
 [Params]
+  env = "production"                                # CRÍTICO: sem isso o PaperMod NÃO injeta Google Analytics, Open Graph, Twitter Cards nem Schema.org, mesmo com googleAnalytics configurado acima
+  author = "Diego Brocanelli"                       # Vai para a tag <meta name="author">
   subtitle = ""
-  description = "Diego Brocanelli Full Stack Developer"
+  description = "Diego Brocanelli Full Stack Developer"   # Meta description padrão (SEO)
+  keywords = ["Engenharia de Software", "Arquitetura de Soluções", "Blog"]  # Ausente no original — ajuda no SEO
+  images = ["/images/social-card.png"]              # Imagem padrão usada em Open Graph/Twitter Card.
   copyright = "Diego Brocanelli - @diego_b2"
+  DateFormat = "2006-01-02"                          # Formato de exibição das datas (layout de referência do Go)
+
   authorbox = true
   post_navigation = true
   post_meta = ["date", "tags"]
-  dateformat = "2006-01-02"
-  languageCode = "pt-br"
   mainSections = ["post","posts"]
   comments = true
   rss = true
-  ShareButtons = ["linkedin", "twitter"]
+  ShareButtons = ["linkedin", "twitter", "github"]
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true            # Botão de copiar em blocos de código.
+  ShowWordCount = true                  # Mostra contagem de palavras junto ao tempo de leitura
+  ShowRssButtonInSectionTermList = true # Botão de RSS nas páginas de tags/categorias
 
 [Params.assets]
   disableHLJS = false
   customCSS = ["/css/custom.css"]
+  favicon = "/favicon.ico" # Sem isso o navegador usa o favicon padrão do Hugo
 
 [Params.homeInfoParams]
   Title = "Olá! Meu nome é Diego Brocanelli 👋"
-  Content = "Engenheiro de Software e Arquiteto de Soluções com 10+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
+  Content = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
+
+# sociais no cabeçalho
+[[Params.socialIcons]]
+  name = "x"
+  url = "https://x.com/diego_b2"
+
+[[Params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Diego-Brocanelli/"
+
+[[Params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
 
 [Params.cover]
   hidden = false
@@ -57,6 +101,7 @@ googleAnalytics = "G-724B54J2LY"
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
 
+# Configuração do motor de busca (Fuse.js)
 [params.fuseOpts]
   isCaseSensitive = false
   shouldSort = true
@@ -66,11 +111,25 @@ googleAnalytics = "G-724B54J2LY"
   minMatchCharLength = 0
   keys = [ "title", "permalink", "summary", "content" ]
 
+# ─────────────────────────────────────────────────────────────
+# Realce de sintaxe em blocos de código
+# ─────────────────────────────────────────────────────────────
 [markup.highlight]
   codeFences = true
   guessSyntax = true
   lineNos = true
   style = "monokai"
+  noClasses = false # Necessário para trocar o tema de highlight via CSS custom
 
+# ─────────────────────────────────────────────────────────────
+# Renderização de Markdown
+# ─────────────────────────────────────────────────────────────
 [markup.goldmark.renderer]
-  unsafe = true
+  unsafe = true # Permite HTML "cru" dentro do Markdown (necessário para embeds, iframes, etc.)
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[security]
+  allowContent = ['.*']

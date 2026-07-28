@@ -2,33 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SQL on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/sql/</link>
+    <link>http://localhost:1313/categories/sql/</link>
     <description>Recent content in SQL on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utilizando o MySQLTuner para gerar dados e métricas para tuning do MysqL</title>
+      <link>http://localhost:1313/posts/mysql-tuner/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mysql-tuner/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Analisar performance de banco de dados não é nada simples, principalmente para quem não é DBA .&lt;/p&gt;
+&lt;p&gt;Com base em minhas pesquisas encontrei uma ferramenta bacana que auxilia nessa tarefa chamada &lt;a href=&#34;https://github.com/major/MySQLTuner-perl&#34;&gt;MySQLTuner-perl&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Essa ferramenta gera um relatório com a análise de diversas métricas que podemos utilizar para o processo de tuning do MySQL. Onde no final é gerado algumas recomendações para serem executadas na busca dessa melhoria.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Observação:&lt;/strong&gt; Todas as etapas de execução foram realizadas em um ambiente Linux, mais precisamente no Ubuntu 18.04.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
-      <link>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <link>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
       <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
-      <description>Olá, tudo bem?!
-O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
-Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
+      <guid>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;h3 id=&#34;o-problema&#34;&gt;O problema&lt;/h3&gt;
+&lt;p&gt;Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.&lt;/p&gt;
+&lt;h3 id=&#34;resolução-e-demonstração-prática&#34;&gt;Resolução e demonstração prática&lt;/h3&gt;
+&lt;p&gt;Para aplicação prática devemos inicialmente criar nosso banco de dados teste. Para a estrutura da tabela utilize o modelo abaixo.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Defesa eficaz contra SQL Injection – Introdução</title>
-      <link>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-introducao/</link>
+      <link>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-introducao/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-introducao/</guid>
-      <description>Fala galera, tudo tranquilo?!
-Um tema muito bacana e recorrente no desenvolvimento web é SQL Injection e neste post irei abordar algumas boas práticas na defesa contra esses ataques.
-Teremos 3 posts relacionados ao tema, sendo:
-Introdução ao SQL Injection. Filtragem e validação de dados. Comunicação com o banco de dados. O que é SQL Injection? É um tipo de ameaça relacionado a segurança, que se aproveita de falhas em sistemas que interagem com bases de dados para inserir trechos de código SQL para realizar ações não desejadas e para manipular, roubar ou danificar a estrutura ou dados contidos no banco de dados.</description>
+      <guid>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-introducao/</guid>
+      <description>&lt;p&gt;Fala galera, tudo tranquilo?!&lt;/p&gt;
+&lt;p&gt;Um tema muito bacana e recorrente no desenvolvimento web é SQL Injection e neste post irei abordar algumas boas práticas na defesa contra esses ataques.&lt;/p&gt;
+&lt;p&gt;Teremos 3 posts relacionados ao tema, sendo:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Introdução ao SQL Injection.&lt;/li&gt;
+&lt;li&gt;Filtragem e validação de dados.&lt;/li&gt;
+&lt;li&gt;Comunicação com o banco de dados.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;o-que-é-sql-injection&#34;&gt;O que é SQL Injection?&lt;/h2&gt;
+&lt;p&gt;É um tipo de ameaça relacionado a segurança, que se aproveita de falhas em sistemas que interagem com bases de dados para inserir trechos de código SQL para realizar ações não desejadas e  para manipular, roubar ou danificar a estrutura ou dados contidos no banco de dados.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

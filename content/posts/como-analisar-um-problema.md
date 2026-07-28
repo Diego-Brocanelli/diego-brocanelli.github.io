@@ -2,6 +2,14 @@
 title: "Como analisar um problema"
 date: 2025-04-25T20:06:37Z
 draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - soft-skills
 tags:
@@ -10,17 +18,6 @@ tags:
   - soft skills
   - problema
 ---
-
-# Como analisar um problema?
-
-# Sumário
-
-- [O que motivou o post?](#o-que-motivou-o-post)
-- [O que caracteriza uma análise ser ruim?](#o-que-caracteriza-uma-análise-ser-ruim)
-- [Consequências de uma má análise](#consequências-de-uma-má-análise)
-- [O que faz uma análise ser excelente?](#o-que-faz-uma-análise-ser-excelente)
-- [Exemplo prático](#exemplo-prático)
-- [Considerações finais](#considerações-finais)
 
 ## O que motivou o post?
 

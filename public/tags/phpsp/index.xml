@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>phpsp on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/phpsp/</link>
-    <description>Recent content in phpsp on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Phpsp on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/phpsp/</link>
+    <description>Recent content in Phpsp on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 03 Dec 2016 12:57:16 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/phpsp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2016 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/phpsp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 04 – Por que PHP? (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/por-que-php-video/</link>
+      <link>http://localhost:1313/posts/por-que-php-video/</link>
       <pubDate>Sat, 03 Dec 2016 12:57:16 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/por-que-php-video/</guid>
-      <description>Fala galera, tudo bem?!
-Ocorreu o quarto encontro hhbr](https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos), e nesta edição temos o grande Anderson ‘Duodraco’ Casimiro nos presenteando com uma super palestra, como tema “Por que PHP?”.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Por que PHP?” Palestrante: Anderson ‘Duodraco’ Casimiro Twitter: https://twitter.com/duodraco Site: https://duodra.co/ GitHub: https://github.com/duodraco Comunidade: http://phpsp.org.br inks mencionados Documentação oficial do PHP: http://php.net/
-PHP Do Jeito Certo: http://br.</description>
+      <guid>http://localhost:1313/posts/por-que-php-video/</guid>
+      <description>&lt;p&gt;Fala galera, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Ocorreu o quarto encontro hhbr](&lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos)&#34;&gt;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos)&lt;/a&gt;, e nesta edição temos o grande &lt;a href=&#34;https://duodra.co/&#34;&gt;Anderson ‘Duodraco’ Casimiro&lt;/a&gt; nos presenteando com uma super palestra, como tema “Por que PHP?”.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=4KiWfnn8s-A&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Por que PHP?”&lt;/li&gt;
+&lt;li&gt;Palestrante: Anderson ‘Duodraco’ Casimiro&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/duodraco&#34;&gt;https://twitter.com/duodraco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://duodra.co/&#34;&gt;https://duodra.co/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/duodraco&#34;&gt;https://github.com/duodraco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comunidade: &lt;a href=&#34;http://phpsp.org.br&#34;&gt;http://phpsp.org.br&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;inks-mencionados&#34;&gt;inks mencionados&lt;/h2&gt;
+&lt;p&gt;Documentação oficial do PHP: &lt;a href=&#34;http://php.net/&#34;&gt;http://php.net/&lt;/a&gt;&lt;br&gt;
+PHP Do Jeito Certo: &lt;a href=&#34;http://br.phptherightway.com/&#34;&gt;http://br.phptherightway.com/&lt;/a&gt;&lt;br&gt;
+PHP FIG: &lt;a href=&#34;http://www.php-fig.org/&#34;&gt;http://www.php-fig.org/&lt;/a&gt;&lt;br&gt;
+PHP Do Jeito Certo (Podcast): &lt;a href=&#34;http://phpdojeitocerto.tumblr.com/&#34;&gt;http://phpdojeitocerto.tumblr.com/&lt;/a&gt;&lt;br&gt;
+A Semana PHP: &lt;a href=&#34;http://asemanaphp.com.br&#34;&gt;http://asemanaphp.com.br&lt;/a&gt;&lt;br&gt;
+PHP Conference Brasil: &lt;a href=&#34;http://www.phpconference.com.br/&#34;&gt;http://www.phpconference.com.br/&lt;/a&gt;&lt;br&gt;
+Zend Framework: &lt;a href=&#34;https://zendframework.com/&#34;&gt;https://zendframework.com/&lt;/a&gt;&lt;br&gt;
+Zend Expressive: &lt;a href=&#34;https://zendframework.github.io/zend-expressive/&#34;&gt;https://zendframework.github.io/zend-expressive/&lt;/a&gt;&lt;br&gt;
+Symfony: &lt;a href=&#34;https://symfony.com/&#34;&gt;https://symfony.com/&lt;/a&gt;&lt;br&gt;
+Silex: &lt;a href=&#34;http://silex.sensiolabs.org/&#34;&gt;http://silex.sensiolabs.org/&lt;/a&gt;&lt;br&gt;
+Laravel: &lt;a href=&#34;https://laravel.com/&#34;&gt;https://laravel.com/&lt;/a&gt;&lt;br&gt;
+Lumen: &lt;a href=&#34;https://lumen.laravel.com/&#34;&gt;https://lumen.laravel.com/&lt;/a&gt;&lt;br&gt;
+Slim: &lt;a href=&#34;https://www.slimframework.com/&#34;&gt;https://www.slimframework.com/&lt;/a&gt;&lt;br&gt;
+CakePHP: &lt;a href=&#34;https://cakephp.org/&#34;&gt;https://cakephp.org/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>event sourcing on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/event-sourcing/</link>
-    <description>Recent content in event sourcing on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Event Sourcing on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/event-sourcing/</link>
+    <description>Recent content in Event Sourcing on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:40:45 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:40:45 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 25 – Introdução a CQRS e Event Sourcing (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
+      <link>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
       <pubDate>Tue, 05 Nov 2019 16:40:45 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
-      <description>Olá, tudo bem?!
-Nesta 25º edição da comunidade hhbr tivemos uma incrível palestra sobre “Introdução a CQRS e Event Sourcing” com o monstro da programação Marcelo Santos, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Introdução a CQRS e Event Sourcing” Palestrante: Marcelo Santos Twitter: @marcelsud Site: http://marcelsud.</description>
+      <guid>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta 25º edição da comunidade &lt;a href=&#34;https://www.youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt;  tivemos uma incrível palestra sobre  “&lt;em&gt;Introdução a CQRS e Event Sourcing&lt;/em&gt;” com o monstro da programação &lt;a href=&#34;http://www.marcelsud.com/&#34;&gt;Marcelo Santos&lt;/a&gt;, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/wUlsQD9dnKI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=wUlsQD9dnKI&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

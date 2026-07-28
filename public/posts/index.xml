@@ -2,111 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 14 May 2025 12:08:32 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2026 02:47:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Código de barras para engenheiros de software: da etiqueta ao sistema</title>
+      <link>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</link>
+      <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Nós como engenheiros de software já nos deparamos com a necessidade de implementar a geração de código de barras, com isso instalamos uma biblioteca de terceiros sem nem parar para nos perguntar como que ela funciona, apenas instalamos e usamos.&lt;/p&gt;
+&lt;p&gt;Porém, aprofundar no entendimento é algo importante para que possamos saber o que estamos fazendo e como é feito, ajudando, por exemplo, a determinar qual o melhor tipo para o problema que estamos resolvendo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mago PHP: Ferramenta all-in-one para qualidade e arquitetura de código PHP</title>
+      <link>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Durante minha navegação web, esbarrei com um projeto que chamou minha atenção o &lt;a href=&#34;https://mago.carthage.software/&#34;&gt;Mago PHP&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O projeto foi desenvolvido em Rust e visa centralizar funcionalidades essenciais para garantir, qualidade, padronização e arquitetura em projetos PHP.&lt;/p&gt;
+&lt;p&gt;A ferramenta reúne:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Formatter;&lt;/li&gt;
+&lt;li&gt;Linter;&lt;/li&gt;
+&lt;li&gt;Static Analyzer;&lt;/li&gt;
+&lt;li&gt;Architectural Guard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Temos ferramentas individuais que fazem cada uma dessas tarefas, o que achei interessante é estar em uma ferramenta só e altamente configurável.&lt;/p&gt;
+&lt;p&gt;O fato de ter tudo em um lugar, ajuda na gerência de dependências externas. Podemos configurar cada uma das ferramentas conforme a necessidade e padrões do time.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Introdução ao MCP (Model Context Protocol)</title>
-      <link>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</link>
+      <link>http://localhost:1313/posts/introducao-ao-mcp/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</guid>
-      <description>Sumário O quê é Para que serve? Como funciona? Componentes do MCP Server Formatos de Comunicação Exemplos de aplicação Exemplo: Análise de Texto Considerações Referências O quê é O Model Context Protocol (MCP) é um protocolo proposto pela Anthropic visando padronizar como sistemas podem prover contexto para modelos de linguagem (LLMs). Ele facilita a conexão desses modelos com diferentes fontes de dados e ferramentas externas, ampliando significativamente sua utilidade em aplicações reais.</description>
+      <guid>http://localhost:1313/posts/introducao-ao-mcp/</guid>
+      <description>&lt;h2 id=&#34;o-quê-é&#34;&gt;O quê é&lt;/h2&gt;
+&lt;p&gt;O Model Context Protocol (MCP) é um protocolo proposto pela Anthropic visando padronizar como sistemas podem prover contexto para modelos de linguagem (LLMs). Ele facilita a conexão desses modelos com diferentes fontes de dados e ferramentas externas, ampliando significativamente sua utilidade em aplicações reais.&lt;/p&gt;
+&lt;h2 id=&#34;para-que-serve&#34;&gt;Para que serve?&lt;/h2&gt;
+&lt;p&gt;Ajuda a criar agentes e fluxos de trabalho complexos com base em LLMs. Os LLMs frequentemente precisam se integrar a dados e ferramentas.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como analisar um problema</title>
-      <link>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</link>
+      <link>http://localhost:1313/posts/como-analisar-um-problema/</link>
       <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</guid>
-      <description>Como analisar um problema? Sumário O que motivou o post? O que caracteriza uma análise ser ruim? Consequências de uma má análise O que faz uma análise ser excelente? Exemplo prático Considerações finais O que motivou o post? Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.</description>
+      <guid>http://localhost:1313/posts/como-analisar-um-problema/</guid>
+      <description>&lt;h2 id=&#34;o-que-motivou-o-post&#34;&gt;O que motivou o post?&lt;/h2&gt;
+&lt;p&gt;Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.&lt;/p&gt;
+&lt;h2 id=&#34;por-que-analisar-bem-é-tão-importante&#34;&gt;Por que analisar bem é tão importante?&lt;/h2&gt;
+&lt;p&gt;Analisar bem significa reunir fatos e evidências para embasar nossas escolhas. Uma análise mal feita pode ter um impacto devastador, levando o time a seguir por caminhos equivocados e desperdiçar tempo e recursos.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Melhore a performance do seu sistema com um load balancer</title>
-      <link>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
+      <link>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
       <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
-      <description>Sumário O que é load balancer? Para que serve? Quando usar? Quais tipos existem? Exemplo do problema Considerações finais Referências O que é load balancer? O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.
-Imagine um restaurante movimentado com vários atendentes.</description>
+      <guid>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
+      <description>&lt;h1 id=&#34;o-que-é-load-balancer&#34;&gt;O que é load balancer?&lt;/h1&gt;
+&lt;p&gt;O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.&lt;/p&gt;
+&lt;p&gt;Imagine um restaurante movimentado com vários atendentes. Se todos os clientes fossem direcionados apenas a um atendente, haveria filas enormes e insatisfação. O load balancer funciona como um gerente organizando os clientes para diferentes atendentes, garantindo um fluxo equilibrado e um atendimento mais eficiente.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como transformar sistemas legados em oportunidades de crescimento</title>
-      <link>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
+      <link>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
       <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
-      <description>Sumário O que define um sistema como legado? Por que há tanto medo de sistemas legados? Não julgue quem nem o porquê Dívidas técnicas Para quem é essa melhoria? Regras de negócio no banco de dados Mapear as mudanças Planejando o quê e como será feito Qual o melhor momento para refatorar? Quando não devo aplicar melhorias? E a documentação? Opiniões da comunidade Encerramento Referências O que define um sistema como legado?</description>
+      <guid>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
+      <description>&lt;h2 id=&#34;o-que-define-um-sistema-como-legado&#34;&gt;O que define um sistema como legado?&lt;/h2&gt;
+&lt;p&gt;Um sistema é considerado legado não apenas pela sua idade, mas por uma combinação de fatores. Geralmente, um sistema é classificado como legado quando apresenta dificuldades em atender às demandas atuais da empresa ou tecnologia. Isso pode incluir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tecnologias ultrapassadas ou descontinuadas;&lt;/li&gt;
+&lt;li&gt;Falta de documentação clara e atualizada;&lt;/li&gt;
+&lt;li&gt;Alto custo de manutenção;&lt;/li&gt;
+&lt;li&gt;Dependência de especialistas que conhecem detalhes do sistema;&lt;/li&gt;
+&lt;li&gt;Problemas de integração com sistemas modernos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;É importante destacar que, em muitos casos, o termo &amp;ldquo;legado&amp;rdquo; não é necessariamente pejorativo. Sistemas legados muitas vezes são responsáveis por sustentar operações críticas de negócio.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como saber se estou indo bem? A importância de dar e receber feedbacks</title>
-      <link>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</link>
+      <link>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</link>
       <pubDate>Tue, 04 Feb 2025 22:21:55 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</guid>
-      <description>Sumário Introdução Por que feedback é importante? Feedback não é tudo igual? Como realizar um feedback de qualidade? Feedback positivo: reforçando comportamentos e motivando sua repetição Feedback corretivo: corrigindo comportamentos Pessoas são únicas Considerações Referencias Introdução Recentemente finalizei a leitura do livro “Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks” do autor Richard L. Willians, este livro foi uma indicação do meu amigo Davi já há alguns anos, obrigado pela recomendação!</description>
+      <guid>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Recentemente finalizei a leitura do livro &lt;em&gt;“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”&lt;/em&gt; do autor Richard L. Willians, este livro foi uma indicação do meu amigo &lt;a href=&#34;https://devdrops.github.io/about/&#34;&gt;Davi&lt;/a&gt; já há alguns anos, obrigado pela recomendação!&lt;/p&gt;
+&lt;p&gt;Uma das habilidades que está em foco para aperfeiçoamento este ano de 2025 é a comunicação, onde busco uma comunicação:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Assertiva:&lt;/strong&gt; conseguir transmitir as informações com clareza, dinâmica e respeito, para que assim obtenha o retorno esperado;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Não violenta:&lt;/strong&gt; foca em uma comunicação que promove empatia, conexão e respeito, voltada para melhorar os relacionamentos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sou programador e temos o péssimo hábito de nos isolar e quando nos comunicamos nem sempre fazemos de uma maneira que seja fácil para o interlocutor, usando uma alta carga de termos técnicos e muita complexidade. É necessário clareza e assertividade na comunicação quando estamos, por exemplo, auxiliando um programador menos experiente, em reunião com o cliente ou time, ou mesmo dando um feedback.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Priorizar com propósito: guia prático para iniciantes</title>
-      <link>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</link>
+      <link>http://localhost:1313/posts/priorizar-com-proposito/</link>
       <pubDate>Fri, 24 Jan 2025 22:36:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</guid>
-      <description>Sumário Introdução Priorização com cliente ou/e parte interessada Priorizando minhas demandas Priorização no meu dia a dia pessoal Ferramentas Considerações finais Referências Introdução Estou lendo o livro Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.</description>
+      <guid>http://localhost:1313/posts/priorizar-com-proposito/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Estou lendo o livro &lt;code&gt;Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso&lt;/code&gt; e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.&lt;/p&gt;
+&lt;p&gt;Um desses pontos aborda que toda nova ideia de funcionalidade nasce automaticamente com um não, e ela tem que brigar e valer a pena para receber um sim! Esse conceito é muito interessante, pois no dia a dia vemos uma ideia que parece boa e já incluirmos ela na lista para fazer e saímos implementando.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
-      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
+      <link>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
       <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
-      <description>Índice O que é RabbitMQ? Como Exchanges e Filas funcionam no RabbitMQ Publicador e Consumidor: como funcionam no RabbitMQ Vantagens e desvantagens das filas fanout Mas por que usar mensageria? Conclusão Links e referências O que é RabbitMQ? De acordo com sua própria documentação, em tradução livre:
-&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.</description>
+      <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
+      <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
+&lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
+&lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Como programador, sou obrigado a usar Linux?</title>
-      <link>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</link>
-      <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</guid>
-      <description>Gostaria de bater um papo sobre uma pergunta bem interessante.
-“Como programador, sou obrigado a usar Linux?“
-Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉
-Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).
-Para determinadas atividades que deseja desempenhar, de fato o Windows se mostrará mais prático como jogos, alguns softwares como Photohop e etc.</description>
+      <title>PHP Docker – Tool kit</title>
+      <link>http://localhost:1313/posts/php-docker-tool-kit/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/php-docker-tool-kit/</guid>
+      <description>&lt;p&gt;Falar sobre o repositório php-docker&lt;/p&gt;
+&lt;p&gt;o pq ele existe&lt;/p&gt;
+&lt;p&gt;qual seu objetivo&lt;/p&gt;
+&lt;p&gt;como utilizar&lt;/p&gt;
+&lt;p&gt;Quais ferramentas temos disponíveis&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</description>
     </item>
-    
-    <item>
-      <title>Participação no Podcast Fechatag</title>
-      <link>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</link>
-      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</guid>
-      <description>Olá, tudo bem?
-Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
-Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
-Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos.</description>
-    </item>
-    
-    <item>
-      <title>Como estudo uma nova tecnologia?</title>
-      <link>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</link>
-      <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</guid>
-      <description>Olá, tudo bem?!
-É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.
-Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.</description>
-    </item>
-    
   </channel>
 </rss>

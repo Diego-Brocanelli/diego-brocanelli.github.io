@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>análise on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/an%C3%A1lise/</link>
-    <description>Recent content in análise on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Análise on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/an%C3%A1lise/</link>
+    <description>Recent content in Análise on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 25 Apr 2025 20:06:37 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/an%C3%A1lise/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Apr 2025 20:06:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/an%C3%A1lise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como analisar um problema</title>
-      <link>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</link>
+      <link>http://localhost:1313/posts/como-analisar-um-problema/</link>
       <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</guid>
-      <description>Como analisar um problema? Sumário O que motivou o post? O que caracteriza uma análise ser ruim? Consequências de uma má análise O que faz uma análise ser excelente? Exemplo prático Considerações finais O que motivou o post? Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.</description>
+      <guid>http://localhost:1313/posts/como-analisar-um-problema/</guid>
+      <description>&lt;h2 id=&#34;o-que-motivou-o-post&#34;&gt;O que motivou o post?&lt;/h2&gt;
+&lt;p&gt;Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.&lt;/p&gt;
+&lt;h2 id=&#34;por-que-analisar-bem-é-tão-importante&#34;&gt;Por que analisar bem é tão importante?&lt;/h2&gt;
+&lt;p&gt;Analisar bem significa reunir fatos e evidências para embasar nossas escolhas. Uma análise mal feita pode ter um impacto devastador, levando o time a seguir por caminhos equivocados e desperdiçar tempo e recursos.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

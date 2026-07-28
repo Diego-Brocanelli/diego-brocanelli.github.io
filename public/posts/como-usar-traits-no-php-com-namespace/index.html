@@ -1,0 +1,203 @@
+<!doctype html><html lang=pt-br dir=auto data-theme=auto><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Como usar Traits no PHP com namespace | Diego Brocanelli</title><meta name=keywords content="autoload,composer,namespace,php,traits"><meta name=description content="Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
+Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
+Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:"><meta name=author content="Diego Brocanelli"><link rel=canonical href=http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/><link crossorigin=anonymous href=/assets/css/stylesheet.e2fc0ac6072435d1d0d8c4c0cb0cab916f8eed974d281360440d713e01d9f10a.css integrity="sha256-4vwKxgckNdHQ2MTAywyrkW+O7ZdNKBNgRA1xPgHZ8Qo=" rel="preload stylesheet" as=style><link rel=icon href=http://localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png><link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=pt-br href=http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-724B54J2LY"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-724B54J2LY")}</script><meta property="og:url" content="http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/"><meta property="og:site_name" content="Diego Brocanelli"><meta property="og:title" content="Como usar Traits no PHP com namespace"><meta property="og:description" content="Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
+Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
+Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:"><meta property="og:locale" content="pt_br"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-08-08T23:10:42+00:00"><meta property="article:modified_time" content="2017-08-08T23:10:42+00:00"><meta property="article:tag" content="Autoload"><meta property="article:tag" content="Composer"><meta property="article:tag" content="Namespace"><meta property="article:tag" content="Php"><meta property="article:tag" content="Traits"><meta property="og:image" content="http://localhost:1313/images/social-card.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost:1313/images/social-card.png"><meta name=twitter:title content="Como usar Traits no PHP com namespace"><meta name=twitter:description content="Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
+Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
+Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Como usar Traits no PHP com namespace","item":"http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Como usar Traits no PHP com namespace","name":"Como usar Traits no PHP com namespace","description":"Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.\nNeste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.\nPara nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:\n","keywords":["autoload","composer","namespace","php","traits"],"articleBody":"Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.\nNeste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.\nPara nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:\n1 composer init Como observado acima, iremos utilizar o composer para que o mesmo faça o autoload do nosso projeto. Caso não conheça o composer recomendo a leitura do meu post Iniciando com composer.\nAo executar o comando, basta seguir o passo a passo solicitado pelo composer e gerar o arquivo composer.json.\nApós a finalização, abra o arquivo composer.json e vamos incluir nossa regra para autoload, veja o trecho de código abaixo.\n1 2 3 4 5 \"autoload\": { \"psr-4\":{ \"DiegoBrocanelli\\\\\":\"src//\" } } Devemos incluir o trecho de código no arquivo composer.json após a chave ‘minimum-stability’, como demonstrado abaixo.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 { \"name\": \"diego-brocanelli/traits-autoloader\", \"description\": \"Traits com autoloader\", \"license\": \"BSD-3-Clause\", \"authors\": [ { \"name\": \"Diego Brocanelli\", \"email\": \"diegod2@msn.com\" } ], \"minimum-stability\": \"dev\", \"autoload\": { \"psr-4\":{ \"DiegoBrocanelli\\\\\":\"src//\" } } } Vamos detalhar o que configuramos de autoload:\nEstamos utilizando PSR-4 e definimos que nossa namespace iniciará com ‘DiegoBrocanelli’ e nosso código ficará dentro do diretório src. Para que nosso autoload seja gerado devemos executar o seguinte comando pelo terminal:\n1 composer dumpautoload Ao finalizar a geranção do autoload será criado o diretório vnedor e teremos o seguinte retorno no terminal.\n1 Generating autoload files Devemos agora criar nossa estrutura de código, uma boa pratica é separar nossos códigos com isso vamos criar um diretório App dentro de src.\nPodemos agora criar a classe ShopCar.php dentro do diretório App e importar a implementação do post anterior, veja como ficou a implementação abaixo.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \u003c?php namespace DiegoBrocanelli\\App; /** * @author Diego Brocanelli */ class ShopCar { /** * Buy product */ public function Buy() { return \"Product purchase finish...\"; } } A implementação acima está 99.9% idêntica ao post anterior, porem, se repararmos na linha 3 foi definido a namespace, onde seguiu conforme configurações anteriores definindo a raiz DiegoBrocanelli seguido do diretório onde a classe encontra-se.\nVamos agora implementar nossa trait LogTrait.php dentro do diretório APP, veja abaixo a implementação.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 \u003c?php namespace DiegoBrocanelli\\App; /** * @author Diego Brocanelli */ trait LogTrait { /** * Log info. * * @return string */ public function info() { return 'Included a new log...'; } } Novamente o código acima está 99.9% idêntico ao do post original, porem, na linha 03 definimos a namespace da nossa trait. Que como encontra-se no mesmo diretório da classe ShopCar mantém-se o mesmo.\nPor fim, devemos atualizar nossa classe ShopCar para consumir nossa trait, veja implementação abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 \u003c?php namespace DiegoBrocanelli\\App; /** * @author Diego Brocanelli */ class ShopCar { use LogTrait; /** * Buy product */ public function Buy() { return \"Product purchase finish... {$this-\u003einfo()}\"; } } Viram como foi simples! Como ambos os códigos encontram-se na mesma namespace, apenas utilizamos o comando ‘use’ para chamar nossa trait e assim termos o acesso ao método info().\nPara validar nosso projeto vamos criar um arquivo index.php na raiz do projeto e implementar a chamada da classe ShopCar, veja resultado da implementação abaixo:\n1 2 3 4 5 6 7 8 9 \u003c?php require_once __DIR__.'/vendor/autoload.php'; use DiegoBrocanelli\\App\\ShopCar; $shopCar = new ShopCar(); echo $shopCar-\u003ebuy(); Podemos observar, logo no início do arquivo importamos o autoload do composer, para temos acesso as nossas classes.\nEm seguida importamos a classe ShopCar, utilizando o comando ‘use’.\nA partir deste momento podemos instanciar a classe ShopCar e acessar o método buy().\nAbra o terminal e acesse a raiz do projeto e execute o seguinte comando:\n1 php -S localhost:8080 index.php Abra seu navegador e acesse a url:\n1 localhost:8080 Como resultado, devemos obter o mesmo resultado obtido no post anterior, veja abaixo o retorno esperado.\n1 Product purchase finish... Included a new log... Com isso finalizamos nossa implementação. De forma simples e prática implementamos o mesmo conceito utilizando namespaces.\nFoi uma implementação sem uso de framework, porem, o conceito de namespace é aplicado em todos os frameworks do ecossistema PHP.\nEspero que este conteúdo tenha sanado a dúvida do nosso amigo Paulo Dias e todos que possam vir a utilizar e estão com dúvidas.\nCaso você tenha alguma dúvida faça como o Paulo, deixe nos comentários, com isso podemos ir gerando cada vez mais conteúdo com um debate saudável, ficarei muito feliz em poder ajudar na medida do possível.\nGrande abraço e até a próxima! 🙂\n","wordCount":"844","inLanguage":"pt-br","image":"http://localhost:1313/images/social-card.png","datePublished":"2017-08-08T23:10:42Z","dateModified":"2017-08-08T23:10:42Z","author":{"@type":"Person","name":"Diego Brocanelli"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/"},"publisher":{"@type":"Organization","name":"Diego Brocanelli","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=http://localhost:1313/ accesskey=h title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=http://localhost:1313/ title=Home><span>Home</span></a></li><li><a href=http://localhost:1313/search/ title="Pesquisar (Alt + /)" accesskey=/><span>Pesquisar</span></a></li><li><a href=http://localhost:1313/about/ title=Sobre><span>Sobre</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Início</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>Posts</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">Como usar Traits no PHP com namespace</h1><div class=post-meta><span title='2017-08-08 23:10:42 +0000 UTC'>2017-08-08</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>844 palavras</span>&nbsp;·&nbsp;<span>Diego Brocanelli</span></div></header><div class="post-content md-content"><p>Recentemente lancei um post <a href=/php/como-usar-traits-no-php/>Como usar Traits no PHP</a>, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.</p><p>Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.</p><p>Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>composer init
+</span></span></code></pre></td></tr></table></div></div><p>Como observado acima, iremos utilizar o composer para que o mesmo faça o autoload do nosso projeto. Caso não conheça o composer recomendo a leitura do meu post <a href=/php/iniciando-com-composer/>Iniciando com composer</a>.</p><p>Ao executar o comando, basta seguir o passo a passo solicitado pelo composer e gerar o arquivo composer.json.</p><p>Após  a finalização, abra o arquivo composer.json e vamos incluir nossa regra para autoload, veja o trecho de código abaixo.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=s2>&#34;autoload&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;psr-4&#34;</span>:<span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;DiegoBrocanelli\\&#34;</span>:<span class=s2>&#34;src//&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Devemos incluir o trecho de código no arquivo composer.json após a chave ‘minimum-stability’, como demonstrado abaixo.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;diego-brocanelli/traits-autoloader&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;description&#34;</span>: <span class=s2>&#34;Traits com autoloader&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;license&#34;</span>: <span class=s2>&#34;BSD-3-Clause&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;authors&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>        <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;Diego Brocanelli&#34;</span>,
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;email&#34;</span>: <span class=s2>&#34;diegod2@msn.com&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>]</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;minimum-stability&#34;</span>: <span class=s2>&#34;dev&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;autoload&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;psr-4&#34;</span>:<span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;DiegoBrocanelli\\&#34;</span>:<span class=s2>&#34;src//&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Vamos detalhar o que configuramos de autoload:</p><ul><li>Estamos utilizando PSR-4 e definimos que nossa namespace iniciará com ‘DiegoBrocanelli’  e nosso código ficará dentro do diretório src.</li></ul><p>Para que nosso autoload seja gerado devemos executar o seguinte comando pelo terminal:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>composer dumpautoload
+</span></span></code></pre></td></tr></table></div></div><p>Ao finalizar a geranção do autoload será criado o diretório vnedor e teremos o seguinte retorno no terminal.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=nx>Generating</span> <span class=nx>autoload</span> <span class=nx>files</span>
+</span></span></code></pre></td></tr></table></div></div><p>Devemos agora criar nossa estrutura de código, uma boa pratica é separar nossos códigos com isso vamos criar um diretório App dentro de src.</p><p>Podemos agora criar a classe ShopCar.php dentro do diretório App e importar a implementação do post anterior, veja como ficou a implementação abaixo.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>namespace</span> <span class=nx>DiegoBrocanelli\App</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd> * @author Diego Brocanelli &lt;diegod2@msn.com&gt;
+</span></span></span><span class=line><span class=cl><span class=sd> */</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>ShopCar</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * Buy product
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>Buy</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s2>&#34;Product purchase finish...&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>A implementação acima está 99.9% idêntica ao post anterior, porem, se repararmos na linha 3 foi definido a namespace, onde seguiu conforme configurações anteriores definindo a raiz DiegoBrocanelli seguido do diretório onde a classe encontra-se.</p><p>Vamos agora implementar nossa trait LogTrait.php dentro do diretório APP, veja abaixo a implementação.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>namespace</span> <span class=nx>DiegoBrocanelli\App</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd> * @author Diego Brocanelli &lt;diegod2@msn.com&gt;
+</span></span></span><span class=line><span class=cl><span class=sd> */</span>
+</span></span><span class=line><span class=cl><span class=k>trait</span> <span class=nx>LogTrait</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * Log info.
+</span></span></span><span class=line><span class=cl><span class=sd>     * 
+</span></span></span><span class=line><span class=cl><span class=sd>     * @return string
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>info</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s1>&#39;Included a new log...&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Novamente o código acima está 99.9% idêntico ao do post original, porem, na linha 03 definimos a namespace da nossa trait. Que como encontra-se no mesmo diretório da classe ShopCar mantém-se o mesmo.</p><p>Por fim, devemos atualizar nossa classe ShopCar para consumir nossa trait, veja implementação abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>namespace</span> <span class=nx>DiegoBrocanelli\App</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd> * @author Diego Brocanelli &lt;diegod2@msn.com&gt;
+</span></span></span><span class=line><span class=cl><span class=sd> */</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>ShopCar</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>use</span> <span class=nx>LogTrait</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * Buy product
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>Buy</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s2>&#34;Product purchase finish... </span><span class=si>{</span><span class=nv>$this</span><span class=o>-&gt;</span><span class=na>info</span><span class=p>()</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Viram como foi simples! Como ambos os códigos encontram-se na mesma namespace, apenas utilizamos o comando ‘use’ para chamar nossa trait e assim termos o  acesso ao método info().</p><p>Para validar nosso projeto vamos criar um arquivo index.php na raiz do projeto e implementar a chamada da classe ShopCar, veja resultado da implementação  abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/vendor/autoload.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>use</span> <span class=nx>DiegoBrocanelli\App\ShopCar</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=nv>$shopCar</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>ShopCar</span><span class=p>();</span>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>echo</span> <span class=nv>$shopCar</span><span class=o>-&gt;</span><span class=na>buy</span><span class=p>();</span>
+</span></span></code></pre></td></tr></table></div></div><p>Podemos observar, logo no início do arquivo importamos o autoload do composer, para temos acesso as nossas classes.</p><p>Em seguida importamos a classe ShopCar, utilizando o comando ‘use’.</p><p>A partir deste momento podemos instanciar a classe ShopCar  e acessar o método buy().</p><p>Abra o terminal e acesse a raiz do projeto e execute o seguinte comando:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>php -S localhost:8080 index.php
+</span></span></code></pre></td></tr></table></div></div><p>Abra seu navegador e acesse a url:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>localhost:8080
+</span></span></code></pre></td></tr></table></div></div><p>Como resultado, devemos obter o mesmo resultado obtido no post anterior, veja abaixo o retorno esperado.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Product purchase finish... Included a new log...
+</span></span></code></pre></td></tr></table></div></div><p>Com isso finalizamos nossa implementação. De forma simples e prática implementamos o mesmo conceito utilizando namespaces.</p><p>Foi uma implementação sem uso de framework, porem, o conceito de namespace é aplicado em todos os frameworks do ecossistema PHP.</p><p>Espero que este conteúdo tenha sanado a dúvida do nosso amigo Paulo Dias e todos que possam vir a utilizar e estão com dúvidas.</p><p>Caso você tenha alguma dúvida faça como o Paulo, deixe nos comentários, com isso podemos ir gerando cada vez mais conteúdo com um debate saudável, ficarei muito feliz em poder ajudar na medida do possível.</p><p>Grande abraço e até a próxima! 🙂</p></div><footer class=post-footer><ul class=post-tags><li><a href=http://localhost:1313/tags/autoload/>Autoload</a></li><li><a href=http://localhost:1313/tags/composer/>Composer</a></li><li><a href=http://localhost:1313/tags/namespace/>Namespace</a></li><li><a href=http://localhost:1313/tags/php/>Php</a></li><li><a href=http://localhost:1313/tags/traits/>Traits</a></li></ul><nav class=paginav><a class=prev href=http://localhost:1313/posts/qr-code-php/><span class=title>« Anterior</span>
+<span>QR Code com PHP</span>
+</a><a class=next href=http://localhost:1313/posts/como-usar-traits-no-php/><span class=title>Próximo »</span>
+<span>Como usar Traits no PHP</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Como usar Traits no PHP com namespace on x" href="https://x.com/intent/tweet/?text=Como%20usar%20Traits%20no%20PHP%20com%20namespace&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcomo-usar-traits-no-php-com-namespace%2f&amp;hashtags=autoload%2ccomposer%2cnamespace%2cphp%2ctraits"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Como usar Traits no PHP com namespace on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcomo-usar-traits-no-php-com-namespace%2f&amp;title=Como%20usar%20Traits%20no%20PHP%20com%20namespace&amp;summary=Como%20usar%20Traits%20no%20PHP%20com%20namespace&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fcomo-usar-traits-no-php-com-namespace%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=http://localhost:1313/>Diego Brocanelli</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copiar";function s(){t.innerHTML="copiado!",setTimeout(()=>{t.innerHTML="copiar"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

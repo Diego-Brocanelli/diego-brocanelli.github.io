@@ -1,1053 +1,547 @@
-<!DOCTYPE html>
-<html lang="pt-br" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Aprenda a construir um CRUD simples, fácil e rápido com Doctrine | Diego Brocanelli</title>
-<meta name="keywords" content="crud, doctrine, php" />
-<meta name="description" content="Olá, tudo bem?!
+<!doctype html><html lang=pt-br dir=auto data-theme=auto><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Aprenda a construir um CRUD simples, fácil e rápido com Doctrine | Diego Brocanelli</title><meta name=keywords content="crud,doctrine,php"><meta name=description content="Olá, tudo bem?!
 No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.
-O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.">
-<meta name="author" content="Diego Brocanelli">
-<link rel="canonical" href="https://diegobrocanelli.com.br/php/crud-simples-facil-e-rapido-com-doctrine/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c18f6860182e7002af473582222b37f9280d6e33be9205e2f8cf983993e44ff0.css" integrity="sha256-wY9oYBgucAKvRzWCIis3&#43;SgNbjO&#43;kgXi&#43;M&#43;YOZPkT/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://diegobrocanelli.com.br/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://diegobrocanelli.com.br/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://diegobrocanelli.com.br/apple-touch-icon.png">
-<link rel="mask-icon" href="https://diegobrocanelli.com.br/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.111.3">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://diegobrocanelli.com.br/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://diegobrocanelli.com.br/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
-                    <span>Pesquisar</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/about/" title="Sobre">
-                    <span>Sobre</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://diegobrocanelli.com.br/">Home</a>&nbsp;»&nbsp;<a href="https://diegobrocanelli.com.br/posts/">Posts</a></div>
-    <h1 class="post-title">
-      Aprenda a construir um CRUD simples, fácil e rápido com Doctrine
-    </h1>
-    <div class="post-meta"><span title='2017-05-17 22:24:53 +0000 UTC'>2017-05-17</span>&nbsp;·&nbsp;12 min&nbsp;·&nbsp;Diego Brocanelli
-
-</div>
-  </header> 
-  <div class="post-content"><p>Olá, tudo bem?!</p>
-<p>No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o <a href="http://www.doctrine-project.org/">Doctrine</a>, o mais popular projeto voltado para Database Storage e Object Mapping.</p>
-<p>O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.</p>
-<p>A partir do momento que você estrutura sua aplicação para utilizar o Doctrine nada o impedirá que no futuro você migre toda a lógica para outro projeto, essa facilidade vai lhe poupar muitas dores de cabeça quando chegar o momento de refatorar sua aplicação.</p>
-<p>Sem mais delongas, vamos analisar a estrutura que será utilizada neste post, abaixo segue estrutura de diretórios e arquivo.</p>
-<ul>
-<li><strong>exemplo-doctrine</strong>
-<ul>
-<li>config
-<ul>
-<li>Será armazenado toda a lógica de configuração da aplicação.</li>
-</ul>
-</li>
-<li>db
-<ul>
-<li>Responsável por armazenar o banco de dados (SQLite) e o dump que será gerado.</li>
-</ul>
-</li>
-<li>src
-<ul>
-<li>Responsável por conter toda a lógica da nossa aplicação.</li>
-</ul>
-</li>
-<li>composer.json
-<ul>
-<li>Configurações do composer para o projeto.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Conforme apresentado acima, crie a estrutura de diretórios necessários para a execução deste post.</p>
-<h3 id="instalando-as-dependências-necessárias">Instalando as dependências necessárias<a hidden class="anchor" aria-hidden="true" href="#instalando-as-dependências-necessárias">#</a></h3>
-<p>Abra o arquivo <em>composer.json</em> e insira o seguinte código:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;require&#34;</span>: {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;doctrine/orm&#34;</span>: <span style="color:#e6db74">&#34;^2.5&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;doctrine/dbal&#34;</span>: <span style="color:#e6db74">&#34;^2.5&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;symfony/yaml&#34;</span>: <span style="color:#e6db74">&#34;^3.2&#34;</span>
-</span></span><span style="display:flex;"><span>  },
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;autoload&#34;</span>:{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;psr-4&#34;</span>:{
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;DiegoBrocanelli\\&#34;</span>:<span style="color:#e6db74">&#34;src/&#34;</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, estamos utilizando os componentes do Doctrine e uma dependência  do Symfony. Após a inserção das configurações, acesse a raiz do projeto e execute o seguinte comando pelo terminal:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer install
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Aguarde o processo de instalação que pode levar alguns minutos dependendo da sua conexão de internet.</p>
-<h3 id="configurando-o-projeto">Configurando o projeto<a hidden class="anchor" aria-hidden="true" href="#configurando-o-projeto">#</a></h3>
-<p>Agora devemos criar nossas configurações necessárias para utilização do componente, acesse o diretório <em>‘exemplo-doctrine/config’</em> e crie o arquivo <em>‘bootstrap.php’</em> . Neste arquivo iremos centralizar as configurações necessárias para execução do Doctrine, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importação do autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../vendor/autoload.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importação dos pacotes necessários
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Doctrine\ORM\Tools\Setup</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Doctrine\ORM\EntityManager</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Criar uma configuração ORM do Doctrine simples &#34;default&#34; para utilizar Annotations
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$isDevMode <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>$configuration <span style="color:#f92672">=</span> <span style="color:#a6e22e">Setup</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createAnnotationMetadataConfiguration</span>(
-</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../src&#39;</span>], 
-</span></span><span style="display:flex;"><span>    $isDevMode
-</span></span><span style="display:flex;"><span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Configurações do banco de dados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Estamos utilizando o SQLite, para facilitar a reprodução do post
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$connection <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;driver&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;pdo_sqlite&#39;</span>, <span style="color:#75715e">// Vamos utilizar o drive pdo do sqlite
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#39;path&#39;</span>   <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../db/db.sqlite&#39;</span> <span style="color:#75715e">// caminho onde será armazenado o DB.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Obtemos o Entity Manager
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$entityManager <span style="color:#f92672">=</span> <span style="color:#a6e22e">EntityManager</span><span style="color:#f92672">::</span><span style="color:#a6e22e">create</span>($connection, $configuration);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Observação:</strong> O Doctrine suporta configurações por <em>Annontation</em>, <em>XML</em> ou <em>YAML</em>, porem na minha opinião as <em>annontations</em> é a forma mais clara e fácil de definir sua entidade, gerando o menor número de arquivos possível.</p>
-</blockquote>
-<p>Após a criação das configurações, devemos criar um arquivo que nos auxiliará nas execuções dos comandos pelo  terminal. Crie o arquivo <em>‘cli-config.php_no diretório ‘exemplo-doctrine/config’ , segue código abaixo:</em></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importação do autoloader do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Retorna o componente que nos auxilia na utilização do Schema tool
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Necessário para gerar Tabelas para trabalhar com metadados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">return</span> <span style="color:#a6e22e">\Doctrine\ORM\Tools\Console\ConsoleRunner</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createHelperSet</span>($entityManager);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="criação-da-entidade-products">Criação da entidade Products<a hidden class="anchor" aria-hidden="true" href="#criação-da-entidade-products">#</a></h3>
-<p>Com as devidas configurações realizadas, o próximo passo é criar a entidade que representara nossa tabela do banco de dados, para isso crie a classe <em>‘Products.php’</em> dentro do diretório <em>‘exemplo-doctrine/src’</em>, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">DiegoBrocanelli</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * @Entity @Table(name=&#34;products&#34;)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> 
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @Id @Column(type=&#34;integer&#34;) @GeneratedValue
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> $id;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @Column(type=&#34;string&#34;)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> $name;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @Column(type=&#34;datetime&#34;)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> $created;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getId</span>()
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">id</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getName</span>()
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setName</span>($name)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> $name;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setCreated</span>(<span style="color:#a6e22e">\DateTime</span> $created)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">created</span> <span style="color:#f92672">=</span> $created;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getCreated</span>()
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">created</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, o código acima é bem simples contendo apenas atributos e métodos <em>getters</em> e <em>setters</em>, atentando ao fato de não termos criado <em>PHPDoc</em>, para que assim foquemos apenas nos conceitos das <em>annontations</em> minimizando conflito de entendimento. É por meio dessas <em>annontations</em> que iremos ‘informar’ ao <em>doctrine</em> nossa entidade e suas especificações, segue abaixo maiores detalhes sobre as <em>annontations</em> utilizadas:</p>
-<ul>
-<li><strong>Class Products</strong>
-<ul>
-<li>@Entity
-<ul>
-<li>Responsável por informar ao Doctrine que esta nossa classe é nossa entidade.</li>
-</ul>
-</li>
-<li>@Table(name=”products”)
-<ul>
-<li>Informamos que nossa entidade representa a tabela <em>‘products’&lt;</em> contida no banco de dados.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Column id</strong>
-<ul>
-<li>@Id
-<ul>
-<li>Informa que essa coluna é primary key.</li>
-</ul>
-</li>
-<li>@Column(type=”integer”)
-<ul>
-<li>efine o tipo “inteiro” para a coluna.</li>
-</ul>
-</li>
-<li>@GeneratedValue
-<ul>
-<li>Informa o desejo de <em>auto increment&lt;</em> para os valores dessa coluna.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Column name</strong>
-<ul>
-<li>@Column(type=”string”)
-<ul>
-<li>Define o tipo ‘string’ para a coluna.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Column created</strong>
-<ul>
-<li>@Column(type=”datetime”)
-<ul>
-<li>Define o tipo <em>Datetime&lt;</em> para a coluna.</li>
-<li>Observação: Assim que implementarmos a pesquisa ficará mais claro a estrutura do objeto gerado pelo <em>Doctrine</em>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Após nossa entidade devidamente criada, podemos dar início a implementação dos nosso recursos.</p>
-<h3 id="criando-nosso-banco-de-dados">Criando nosso banco de dados<a hidden class="anchor" aria-hidden="true" href="#criando-nosso-banco-de-dados">#</a></h3>
-<p>Após a criação da entidade devemos realizar a criação do banco de dados, acesse a raiz do projeto e execute o seguinte comando:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vendor<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\d</span>octrine orm:schema-tool:create
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li><strong>vendor\bin\doctrine</strong>
-<ul>
-<li>Esta parcela do comando referencia a utilização do <em>Doctrine</em> que instalamos com o <a href="/php/iniciando-com-composer/">Composer</a>.</li>
-</ul>
-</li>
-<li><strong>orm:schema-tool:creat</strong>
-<ul>
-<li>Comando para criação do banco de dados, lembrando que o arquivo será armazenado em <em>‘exemplo-doctrine/db/db.sqlite’&lt;</em>.</li>
-</ul>
-</li>
-</ul>
-<p>Após execução do comando o retorno deve ser semelhante ao apresentado abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ATTENTION: This operation should not be executed in a production environment.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Creating database schema...
-</span></span><span style="display:flex;"><span>Database schema created successfully!
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como o próprio retorno nos informa, nunca devemos utilizar esta ação em produção, apenas em ambiente de desenvolvimento!</p>
-<h3 id="inserindo-registros-no-banco-de-dados">Inserindo registros no banco de dados<a hidden class="anchor" aria-hidden="true" href="#inserindo-registros-no-banco-de-dados">#</a></h3>
-<p>Para a implementação do recurso de <em>insert</em>,  crie a classe _‘CreateProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importamos o autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../config/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Como vamos trabalhar com envio de dados passados pelo terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// apenas garanto que haja valor para que seja processado a ação.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($argv)) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// coletamos o nome passado pelo usuário no terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $newProductName <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Instanciamos nossa entidade Products
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DiegoBrocanelli\Product</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Passamos o novo nome para a entidade
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setName</span>($newProductName);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Passamos a data de criação para a aentidade
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setCreated</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">\DateTime</span>(<span style="color:#a6e22e">date</span>(<span style="color:#e6db74">&#39;Y-m-d H:i:s&#39;</span>)));
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Persistimos seus dados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">persist</span>($product);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Descarregamos a ação
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">flush</span>();
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Para melhor visualização do resultado, retornamos uma mensagem 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// com o id do registro salvo no DB. 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Created Product with ID &#39;</span><span style="color:#f92672">.</span>$product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getId</span>()<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Para realizarmos a inserção de dados, execute o seguinte comando pelo terminal na raiz do projeto:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php src<span style="color:#ae81ff">\C</span>reateProduct.php produto_1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Resultado:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Created Product with ID <span style="color:#ae81ff">1</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, com poucas linhas de código criamos um recurso simples para inserção de registro no banco de dados. 🙂</p>
-<h3 id="pesquisando-todos-os-registros-cadastrados">Pesquisando todos os registros cadastrados<a hidden class="anchor" aria-hidden="true" href="#pesquisando-todos-os-registros-cadastrados">#</a></h3>
-<p>Para a implementação do recurso de <em>select</em>,  crie a classe _‘ListProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importamos o autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../config/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Como vamos trabalhar com envio de dados passados pelo terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// apenas garanto que haja valor para que seja processado a ação.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($entityManager)) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Importamos o repository que nos auxiliará com a pesquisa.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $productRepository <span style="color:#f92672">=</span> $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getRepository</span>(<span style="color:#e6db74">&#39;DiegoBrocanelli\Product&#39;</span>);
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Podemos acessar o método findAll() responsável por retornar todos os 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// registros cadastrados em nossa tabela products
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $products <span style="color:#f92672">=</span> $productRepository<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">findAll</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Realizamos uma iteração de dados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">foreach</span> ($products <span style="color:#66d9ef">as</span> $product) {
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Exibimos o resultado de cada registro encontrado
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">var_dump</span>($product);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Exemplo de retorno de pesquisa:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DiegoBrocanelli\Product</span><span style="color:#75715e">#64 (3) {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">protected</span> $id <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">protected</span> $name <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">string</span>(<span style="color:#ae81ff">8</span>) <span style="color:#e6db74">&#34;&#39;produto_1&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">protected</span> $created <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DateTime</span><span style="color:#75715e">#61 (3) {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> $date <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">string</span>(<span style="color:#ae81ff">26</span>) <span style="color:#e6db74">&#34;2017-05-16 23:53:49.000000&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $timezone_type <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">3</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $timezone <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">string</span>(<span style="color:#ae81ff">17</span>) <span style="color:#e6db74">&#34;America/Sao_Paulo&#34;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, com apenas a chamada do método <em>findAll()</em> obtemos todos os registros inseridos em nossa tabela no banco de dados, o atributo <em>‘created’</em> é um objeto do tipo <em>DateTime</em> conforme configurado na entidade.</p>
-<h3 id="pesquisando-um-produto-em-específico">Pesquisando um produto em específico<a hidden class="anchor" aria-hidden="true" href="#pesquisando-um-produto-em-específico">#</a></h3>
-<p>Para a implementação do recurso que irá pesquisar um produto em especifico crie a classe <em>‘ShowProduct.php’ dentro do diretório</em>‘exemplo-doctrine/src’, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importamos o autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../config/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Como vamos trabalhar com envio de dados passados pelo terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// apenas garanto que haja valor para que seja processado a ação.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($argv)) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Recebemos o id informado
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $id <span style="color:#f92672">=</span> (<span style="color:#a6e22e">int</span>)$argv[<span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Nosso entity manager nos fornece acesso ao método find()
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// no qual nos permite informar nossa entidade e o id para pesquisa
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product <span style="color:#f92672">=</span> $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;DiegoBrocanelli\Product&#39;</span>, $id);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Caso não seja encontrado nenhum produto com o id desejado
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// será retornado mensagem informando o usuário
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span>($product <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>){
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;No product found. </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Caso o produto seja encontrado exibimos seu nome e data de criação
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">sprintf</span>(<span style="color:#e6db74">&#39;-%s\n&#39;</span>, $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getName</span>() <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39; - &#39;</span> <span style="color:#f92672">.</span> $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getCreated</span>());
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, com o método <em>find()</em> podemos informar nossa entidade e o id do registro ao qual desejamos encontra na tabela.</p>
-<h3 id="atualizar-produtos">Atualizar produtos<a hidden class="anchor" aria-hidden="true" href="#atualizar-produtos">#</a></h3>
-<p>Para a implementação do recurso de <em>update&lt;</em> crie a classe <em>‘UpdateProduct.php’ dentro do diretório &lt;</em>‘exemplo-doctrine/src’, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importamos o autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../config/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Como vamos trabalhar com envio de dados passados pelo terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// apenas garanto que haja valor para que seja processado a ação.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($argv)) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Recebemos o id do registro a ser atualizado
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $id      <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Recebemos o novo nome do produto
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $newName <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">2</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Pesquisamos para valizar existência do produto no banco de dados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product <span style="color:#f92672">=</span> $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;DiegoBrocanelli\Product&#39;</span>, $id);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Caso produto não seja localizado, será retornado mensagem infromando o usuário
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ($product <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Product </span><span style="color:#e6db74">$id</span><span style="color:#e6db74"> does not exist.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Informamos o nome atual
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Old name: &#39;</span> <span style="color:#f92672">.</span> $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getName</span>() <span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Inserimos o novo nome desejado para o produto
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setName</span>($newName);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Executamos a ação de update
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">flush</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Retornamos para o usuário o produto com seu novo nome
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;New name: &#39;</span> <span style="color:#f92672">.</span> $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getName</span>() <span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, o processo de update ocorre sem mistérios de forma clara e fácil apenas manipulando o objeto e passando para que o <em>Doctrine&lt;</em> faça todo o trabalho.</p>
-<h3 id="remover-produtos">Remover produtos<a hidden class="anchor" aria-hidden="true" href="#remover-produtos">#</a></h3>
-<p>Para a implementação do recurso de _delete &lt;_crie a classe <em>‘DeleteProduct.php’ dentro do diretório &lt;</em>‘exemplo-doctrine/src’, segue código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Importamos o autoload do composer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../config/bootstrap.php&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Como vamos trabalhar com envio de dados passados pelo terminal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// apenas garanto que haja valor para que seja processado a ação.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($entityManager)) {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Recebemos o id do registro a ser atualizado
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $id <span style="color:#f92672">=</span> $argv[<span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Pesquisamos para valizar existência do produto no banco de dados
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $product <span style="color:#f92672">=</span> $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#39;DiegoBrocanelli\Product&#39;</span>, $id);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Caso produto não seja localizado, será retornado mensagem infromando o usuário
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ($product <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Product </span><span style="color:#e6db74">$id</span><span style="color:#e6db74"> does not exist.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">exit</span>(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Executamos a ação de remoção
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">remove</span>($product);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Efetiva a ação de remoção
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $entityManager<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">flush</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Retorna mensagem informativa de ação realizada com sucesso para o usuário
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Product remove successfully!&#39;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Como podemos observar, o processo de remoção é similar a todos os demais processo, o Doctrine tem métodos descritivos que facilitam sua utilização 🙂</p>
-<h3 id="remover-o-banco-de-dados-drop-database">Remover o banco de dados (Drop database)<a hidden class="anchor" aria-hidden="true" href="#remover-o-banco-de-dados-drop-database">#</a></h3>
-<p>No dia a dia temos a necessidade de apagar nosso banco de dados, para isso o <em>Doctrine&lt;</em> disponibiliza um recurso para nos auxiliar. Na raiz do nosso projeto execute o seguinte comando:</p>
-<blockquote>
-<p><strong>Execute este comando com parcimônia, após sua execução seu banco de dados será APAGADO!</strong></p>
-</blockquote>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>// Comando para APAGAR o banco de dados
-</span></span><span style="display:flex;"><span>vendor<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\d</span>octrine orm:schema:drop --force
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Após execução do comando será exibido uma mensagem de retorno semelhante a descrita abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Dropping database schema...
-</span></span><span style="display:flex;"><span>Database schema dropped successfully!
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="gerar-dump-da-nossa-base-de-dados">Gerar dump da nossa base de dados<a hidden class="anchor" aria-hidden="true" href="#gerar-dump-da-nossa-base-de-dados">#</a></h3>
-<p>Um dos inúmeros recursos bacanas que o D_octrine&lt;_ dispõem é a criação de um arquivo <em>dump&lt;</em> da base de dados,  arquivo que conterá toda estrutura da tabela <em>products&lt;</em>, para geramos nosso arquivo execute o seguinte comando na raiz do projeto:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>// Comando para geração de arquivo de dump da base de dados
-</span></span><span style="display:flex;"><span>vendor<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\d</span>octrine orm:schema-tool:create --dump-sql &gt; db/dump.sql
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Após execução com sucesso do comando, será criado nosso arquivo no diretório <em>‘exemplo-doctrine/db/dump.sql’&lt;</em>, contendo a seguinte estrutura:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> products (
-</span></span><span style="display:flex;"><span>  id INTEGER <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, 
-</span></span><span style="display:flex;"><span>  name VARCHAR(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, 
-</span></span><span style="display:flex;"><span>  created DATETIME <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(id)
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Observação:</strong> O retorno se dá um uma única linha, porém para que fique melhor sua visualização no post foi quebrado em linhas.</p>
-</blockquote>
-<p>No decorrer deste post podemos observar o quão fácil é a utilização do <em>Doctrine</em>, infelizmente apenas abordamos uma pequena fração de todo o potencial e recursos que ele nos fornece. Caso tenha interesse em seguir com seus estudos indico que adquira o livro escrito pelo <a href="http://eltonminetto.net/">Elton Minneto</a> “<a href="https://leanpub.com/doctrine-na-pratica">Doctrine na prática</a>” antes que alguém pense o contrário não estou ganhando nenhum centavo para indicar o livro, estou fazendo pois é o melhor livro de <em>Doctrine&lt;</em> em PT-BR escrito por um profissional que respeito e admiro.</p>
-<p>Espero que tenham apreciado o post, ficou um pouco maior do que eu desejava, porem para abordar todo o ciclo de utilização tentei ser o mais descritivo possível para auxiliar a máximo a compreensão das etapas, como dito anteriormente este post é introdutório onde existem uma infinidade de recursos não explorados que valem muito a pena serem estudados.</p>
-<p>Duvidas, sugestões, crítica ou elogios recomendo que deixe nos comentários para que assim possamos interagir e gerar mais conhecimento.</p>
-<p>Até a próxima, abraços! 🙂</p>
-
-
-  </div>
-
-  
-  <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="Diego-Brocanelli/diego-brocanelli.github.io"
-            issue-term="pathname"
-            theme="github-dark"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://diegobrocanelli.com.br/tags/crud/">crud</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/doctrine/">doctrine</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/php/">php</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://diegobrocanelli.com.br/php/criando-cache-com-zend-cache/">
-    <span class="title">« </span>
-    <br>
-    <span>Criando cache com o Zend-Cache</span>
-  </a>
-  <a class="next" href="https://diegobrocanelli.com.br/video/training-center-video/">
-    <span class="title"> »</span>
-    <br>
-    <span>hhbr : 10 – Training Center (Vídeo)</span>
-  </a>
-</nav>
-
-
-<div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Aprenda a construir um CRUD simples, fácil e rápido com Doctrine on twitter"
-        href="https://twitter.com/intent/tweet/?text=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f&amp;hashtags=crud%2cdoctrine%2cphp">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Aprenda a construir um CRUD simples, fácil e rápido com Doctrine on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f&amp;title=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;summary=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-        </svg>
-    </a>
-</div>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2026 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto."><meta name=author content="Diego Brocanelli"><link rel=canonical href=http://localhost:1313/php/crud-simples-facil-e-rapido-com-doctrine/><link crossorigin=anonymous href=/assets/css/stylesheet.e2fc0ac6072435d1d0d8c4c0cb0cab916f8eed974d281360440d713e01d9f10a.css integrity="sha256-4vwKxgckNdHQ2MTAywyrkW+O7ZdNKBNgRA1xPgHZ8Qo=" rel="preload stylesheet" as=style><link rel=icon href=http://localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png><link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=pt-br href=http://localhost:1313/php/crud-simples-facil-e-rapido-com-doctrine/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-724B54J2LY"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-724B54J2LY")}</script><meta property="og:url" content="http://localhost:1313/php/crud-simples-facil-e-rapido-com-doctrine/"><meta property="og:site_name" content="Diego Brocanelli"><meta property="og:title" content="Aprenda a construir um CRUD simples, fácil e rápido com Doctrine"><meta property="og:description" content="Olá, tudo bem?!
+No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.
+O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto."><meta property="og:locale" content="pt_br"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-05-17T22:24:53+00:00"><meta property="article:modified_time" content="2017-05-17T22:24:53+00:00"><meta property="article:tag" content="Crud"><meta property="article:tag" content="Doctrine"><meta property="article:tag" content="Php"><meta property="og:image" content="http://localhost:1313/images/social-card.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost:1313/images/social-card.png"><meta name=twitter:title content="Aprenda a construir um CRUD simples, fácil e rápido com Doctrine"><meta name=twitter:description content="Olá, tudo bem?!
+No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.
+O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Aprenda a construir um CRUD simples, fácil e rápido com Doctrine","item":"http://localhost:1313/php/crud-simples-facil-e-rapido-com-doctrine/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Aprenda a construir um CRUD simples, fácil e rápido com Doctrine","name":"Aprenda a construir um CRUD simples, fácil e rápido com Doctrine","description":"Olá, tudo bem?!\nNo ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.\nO que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.\n","keywords":["crud","doctrine","php"],"articleBody":"Olá, tudo bem?!\nNo ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.\nO que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.\nA partir do momento que você estrutura sua aplicação para utilizar o Doctrine nada o impedirá que no futuro você migre toda a lógica para outro projeto, essa facilidade vai lhe poupar muitas dores de cabeça quando chegar o momento de refatorar sua aplicação.\nSem mais delongas, vamos analisar a estrutura que será utilizada neste post, abaixo segue estrutura de diretórios e arquivo.\nexemplo-doctrine config Será armazenado toda a lógica de configuração da aplicação. db Responsável por armazenar o banco de dados (SQLite) e o dump que será gerado. src Responsável por conter toda a lógica da nossa aplicação. composer.json Configurações do composer para o projeto. Conforme apresentado acima, crie a estrutura de diretórios necessários para a execução deste post.\nInstalando as dependências necessárias Abra o arquivo composer.json e insira o seguinte código:\n1 2 3 4 5 6 7 8 9 10 11 12 { \"require\": { \"doctrine/orm\": \"^2.5\", \"doctrine/dbal\": \"^2.5\", \"symfony/yaml\": \"^3.2\" }, \"autoload\":{ \"psr-4\":{ \"DiegoBrocanelli\\\\\":\"src/\" } } } Como podemos observar, estamos utilizando os componentes do Doctrine e uma dependência do Symfony. Após a inserção das configurações, acesse a raiz do projeto e execute o seguinte comando pelo terminal:\n1 composer install Aguarde o processo de instalação que pode levar alguns minutos dependendo da sua conexão de internet.\nConfigurando o projeto Agora devemos criar nossas configurações necessárias para utilização do componente, acesse o diretório ‘exemplo-doctrine/config’ e crie o arquivo ‘bootstrap.php’ . Neste arquivo iremos centralizar as configurações necessárias para execução do Doctrine, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 \u003c?php // Importação do autoload do composer require_once __DIR__.'/../vendor/autoload.php'; // Importação dos pacotes necessários use Doctrine\\ORM\\Tools\\Setup; use Doctrine\\ORM\\EntityManager; // Criar uma configuração ORM do Doctrine simples \"default\" para utilizar Annotations $isDevMode = true; $configuration = Setup::createAnnotationMetadataConfiguration( [__DIR__.'/../src'], $isDevMode ); // Configurações do banco de dados // Estamos utilizando o SQLite, para facilitar a reprodução do post $connection = [ 'driver' =\u003e 'pdo_sqlite', // Vamos utilizar o drive pdo do sqlite 'path' =\u003e __DIR__.'/../db/db.sqlite' // caminho onde será armazenado o DB. ]; // Obtemos o Entity Manager $entityManager = EntityManager::create($connection, $configuration); Observação: O Doctrine suporta configurações por Annontation, XML ou YAML, porem na minha opinião as annontations é a forma mais clara e fácil de definir sua entidade, gerando o menor número de arquivos possível.\nApós a criação das configurações, devemos criar um arquivo que nos auxiliará nas execuções dos comandos pelo terminal. Crie o arquivo ‘cli-config.php_no diretório ‘exemplo-doctrine/config’ , segue código abaixo:\n1 2 3 4 5 6 7 \u003c?php // Importação do autoloader do composer require __DIR__.'/bootstrap.php'; // Retorna o componente que nos auxilia na utilização do Schema tool // Necessário para gerar Tabelas para trabalhar com metadados return \\Doctrine\\ORM\\Tools\\Console\\ConsoleRunner::createHelperSet($entityManager); Criação da entidade Products Com as devidas configurações realizadas, o próximo passo é criar a entidade que representara nossa tabela do banco de dados, para isso crie a classe ‘Products.php’ dentro do diretório ‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 \u003c?php namespace DiegoBrocanelli; /** * @Entity @Table(name=\"products\") */ class Product { /** * @Id @Column(type=\"integer\") @GeneratedValue */ protected $id; /** * @Column(type=\"string\") */ protected $name; /** * @Column(type=\"datetime\") */ protected $created; public function getId() { return $this-\u003eid; } public function getName() { return $this-\u003ename; } public function setName($name) { $this-\u003ename = $name; } public function setCreated(\\DateTime $created) { $this-\u003ecreated = $created; } public function getCreated() { return $this-\u003ecreated; } } Como podemos observar, o código acima é bem simples contendo apenas atributos e métodos getters e setters, atentando ao fato de não termos criado PHPDoc, para que assim foquemos apenas nos conceitos das annontations minimizando conflito de entendimento. É por meio dessas annontations que iremos ‘informar’ ao doctrine nossa entidade e suas especificações, segue abaixo maiores detalhes sobre as annontations utilizadas:\nClass Products @Entity Responsável por informar ao Doctrine que esta nossa classe é nossa entidade. @Table(name=”products”) Informamos que nossa entidade representa a tabela ‘products’\u003c contida no banco de dados. Column id @Id Informa que essa coluna é primary key. @Column(type=”integer”) efine o tipo “inteiro” para a coluna. @GeneratedValue Informa o desejo de auto increment\u003c para os valores dessa coluna. Column name @Column(type=”string”) Define o tipo ‘string’ para a coluna. Column created @Column(type=”datetime”) Define o tipo Datetime\u003c para a coluna. Observação: Assim que implementarmos a pesquisa ficará mais claro a estrutura do objeto gerado pelo Doctrine. Após nossa entidade devidamente criada, podemos dar início a implementação dos nosso recursos.\nCriando nosso banco de dados Após a criação da entidade devemos realizar a criação do banco de dados, acesse a raiz do projeto e execute o seguinte comando:\n1 vendor\\bin\\doctrine orm:schema-tool:create vendor\\bin\\doctrine Esta parcela do comando referencia a utilização do Doctrine que instalamos com o Composer. orm:schema-tool:creat Comando para criação do banco de dados, lembrando que o arquivo será armazenado em ‘exemplo-doctrine/db/db.sqlite’\u003c. Após execução do comando o retorno deve ser semelhante ao apresentado abaixo:\n1 2 3 4 ATTENTION: This operation should not be executed in a production environment. Creating database schema... Database schema created successfully! Como o próprio retorno nos informa, nunca devemos utilizar esta ação em produção, apenas em ambiente de desenvolvimento!\nInserindo registros no banco de dados Para a implementação do recurso de insert, crie a classe _‘CreateProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 \u003c?php // Importamos o autoload do composer require_once __DIR__.'/../config/bootstrap.php'; // Como vamos trabalhar com envio de dados passados pelo terminal // apenas garanto que haja valor para que seja processado a ação. if (isset($argv)) { // coletamos o nome passado pelo usuário no terminal $newProductName = $argv[1]; // Instanciamos nossa entidade Products $product = new DiegoBrocanelli\\Product(); // Passamos o novo nome para a entidade $product-\u003esetName($newProductName); // Passamos a data de criação para a aentidade $product-\u003esetCreated(new \\DateTime(date('Y-m-d H:i:s'))); // Persistimos seus dados $entityManager-\u003epersist($product); // Descarregamos a ação $entityManager-\u003eflush(); // Para melhor visualização do resultado, retornamos uma mensagem // com o id do registro salvo no DB. echo 'Created Product with ID '.$product-\u003egetId().\"\\n\"; } Para realizarmos a inserção de dados, execute o seguinte comando pelo terminal na raiz do projeto:\n1 php src\\CreateProduct.php produto_1 Resultado:\n1 Created Product with ID 1 Como podemos observar, com poucas linhas de código criamos um recurso simples para inserção de registro no banco de dados. 🙂\nPesquisando todos os registros cadastrados Para a implementação do recurso de select, crie a classe _‘ListProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 \u003c?php // Importamos o autoload do composer require_once __DIR__.'/../config/bootstrap.php'; // Como vamos trabalhar com envio de dados passados pelo terminal // apenas garanto que haja valor para que seja processado a ação. if (isset($entityManager)) { //Importamos o repository que nos auxiliará com a pesquisa. $productRepository = $entityManager-\u003egetRepository('DiegoBrocanelli\\Product'); // Podemos acessar o método findAll() responsável por retornar todos os // registros cadastrados em nossa tabela products $products = $productRepository-\u003efindAll(); // Realizamos uma iteração de dados foreach ($products as $product) { // Exibimos o resultado de cada registro encontrado var_dump($product); } } Exemplo de retorno de pesquisa:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class DiegoBrocanelli\\Product#64 (3) { protected $id =\u003e int(1) protected $name =\u003e string(8) \"'produto_1\" protected $created =\u003e class DateTime#61 (3) { public $date =\u003e string(26) \"2017-05-16 23:53:49.000000\" public $timezone_type =\u003e int(3) public $timezone =\u003e string(17) \"America/Sao_Paulo\" } } Como podemos observar, com apenas a chamada do método findAll() obtemos todos os registros inseridos em nossa tabela no banco de dados, o atributo ‘created’ é um objeto do tipo DateTime conforme configurado na entidade.\nPesquisando um produto em específico Para a implementação do recurso que irá pesquisar um produto em especifico crie a classe ‘ShowProduct.php’ dentro do diretório‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 \u003c?php // Importamos o autoload do composer require_once __DIR__.'/../config/bootstrap.php'; // Como vamos trabalhar com envio de dados passados pelo terminal // apenas garanto que haja valor para que seja processado a ação. if (isset($argv)) { // Recebemos o id informado $id = (int)$argv[1]; // Nosso entity manager nos fornece acesso ao método find() // no qual nos permite informar nossa entidade e o id para pesquisa $product = $entityManager-\u003efind('DiegoBrocanelli\\Product', $id); // Caso não seja encontrado nenhum produto com o id desejado // será retornado mensagem informando o usuário if($product === null){ echo \"No product found. \\n\"; exit(1); } // Caso o produto seja encontrado exibimos seu nome e data de criação echo sprintf('-%s\\n', $product-\u003egetName() . ' - ' . $product-\u003egetCreated()); } Como podemos observar, com o método find() podemos informar nossa entidade e o id do registro ao qual desejamos encontra na tabela.\nAtualizar produtos Para a implementação do recurso de update\u003c crie a classe ‘UpdateProduct.php’ dentro do diretório \u003c‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 \u003c?php // Importamos o autoload do composer require_once __DIR__.'/../config/bootstrap.php'; // Como vamos trabalhar com envio de dados passados pelo terminal // apenas garanto que haja valor para que seja processado a ação. if (isset($argv)) { // Recebemos o id do registro a ser atualizado $id = $argv[1]; // Recebemos o novo nome do produto $newName = $argv[2]; // Pesquisamos para valizar existência do produto no banco de dados $product = $entityManager-\u003efind('DiegoBrocanelli\\Product', $id); // Caso produto não seja localizado, será retornado mensagem infromando o usuário if ($product === null) { echo \"Product $id does not exist.\\n\"; exit(1); } // Informamos o nome atual echo 'Old name: ' . $product-\u003egetName() .\"\\n\"; // Inserimos o novo nome desejado para o produto $product-\u003esetName($newName); // Executamos a ação de update $entityManager-\u003eflush(); // Retornamos para o usuário o produto com seu novo nome echo 'New name: ' . $product-\u003egetName() .\"\\n\"; } Como podemos observar, o processo de update ocorre sem mistérios de forma clara e fácil apenas manipulando o objeto e passando para que o Doctrine\u003c faça todo o trabalho.\nRemover produtos Para a implementação do recurso de _delete \u003c_crie a classe ‘DeleteProduct.php’ dentro do diretório \u003c‘exemplo-doctrine/src’, segue código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 \u003c?php // Importamos o autoload do composer require_once __DIR__.'/../config/bootstrap.php'; // Como vamos trabalhar com envio de dados passados pelo terminal // apenas garanto que haja valor para que seja processado a ação. if (isset($entityManager)) { // Recebemos o id do registro a ser atualizado $id = $argv[1]; // Pesquisamos para valizar existência do produto no banco de dados $product = $entityManager-\u003efind('DiegoBrocanelli\\Product', $id); // Caso produto não seja localizado, será retornado mensagem infromando o usuário if ($product === null) { echo \"Product $id does not exist.\\n\"; exit(1); } // Executamos a ação de remoção $entityManager-\u003eremove($product); // Efetiva a ação de remoção $entityManager-\u003eflush(); // Retorna mensagem informativa de ação realizada com sucesso para o usuário echo 'Product remove successfully!'; } Como podemos observar, o processo de remoção é similar a todos os demais processo, o Doctrine tem métodos descritivos que facilitam sua utilização 🙂\nRemover o banco de dados (Drop database) No dia a dia temos a necessidade de apagar nosso banco de dados, para isso o Doctrine\u003c disponibiliza um recurso para nos auxiliar. Na raiz do nosso projeto execute o seguinte comando:\nExecute este comando com parcimônia, após sua execução seu banco de dados será APAGADO!\n1 2 // Comando para APAGAR o banco de dados vendor\\bin\\doctrine orm:schema:drop --force Após execução do comando será exibido uma mensagem de retorno semelhante a descrita abaixo:\n1 2 Dropping database schema... Database schema dropped successfully! Gerar dump da nossa base de dados Um dos inúmeros recursos bacanas que o D_octrine\u003c_ dispõem é a criação de um arquivo dump\u003c da base de dados, arquivo que conterá toda estrutura da tabela products\u003c, para geramos nosso arquivo execute o seguinte comando na raiz do projeto:\n1 2 // Comando para geração de arquivo de dump da base de dados vendor\\bin\\doctrine orm:schema-tool:create --dump-sql \u003e db/dump.sql Após execução com sucesso do comando, será criado nosso arquivo no diretório ‘exemplo-doctrine/db/dump.sql’\u003c, contendo a seguinte estrutura:\n1 2 3 4 5 CREATE TABLE products ( id INTEGER NOT NULL, name VARCHAR(255) NOT NULL, created DATETIME NOT NULL, PRIMARY KEY(id) ); Observação: O retorno se dá um uma única linha, porém para que fique melhor sua visualização no post foi quebrado em linhas.\nNo decorrer deste post podemos observar o quão fácil é a utilização do Doctrine, infelizmente apenas abordamos uma pequena fração de todo o potencial e recursos que ele nos fornece. Caso tenha interesse em seguir com seus estudos indico que adquira o livro escrito pelo Elton Minneto “Doctrine na prática” antes que alguém pense o contrário não estou ganhando nenhum centavo para indicar o livro, estou fazendo pois é o melhor livro de Doctrine\u003c em PT-BR escrito por um profissional que respeito e admiro.\nEspero que tenham apreciado o post, ficou um pouco maior do que eu desejava, porem para abordar todo o ciclo de utilização tentei ser o mais descritivo possível para auxiliar a máximo a compreensão das etapas, como dito anteriormente este post é introdutório onde existem uma infinidade de recursos não explorados que valem muito a pena serem estudados.\nDuvidas, sugestões, crítica ou elogios recomendo que deixe nos comentários para que assim possamos interagir e gerar mais conhecimento.\nAté a próxima, abraços! 🙂\n","wordCount":"2431","inLanguage":"pt-br","image":"http://localhost:1313/images/social-card.png","datePublished":"2017-05-17T22:24:53Z","dateModified":"2017-05-17T22:24:53Z","author":{"@type":"Person","name":"Diego Brocanelli"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/php/crud-simples-facil-e-rapido-com-doctrine/"},"publisher":{"@type":"Organization","name":"Diego Brocanelli","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=http://localhost:1313/ accesskey=h title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=http://localhost:1313/ title=Home><span>Home</span></a></li><li><a href=http://localhost:1313/search/ title="Pesquisar (Alt + /)" accesskey=/><span>Pesquisar</span></a></li><li><a href=http://localhost:1313/about/ title=Sobre><span>Sobre</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Início</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>Posts</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">Aprenda a construir um CRUD simples, fácil e rápido com Doctrine</h1><div class=post-meta><span title='2017-05-17 22:24:53 +0000 UTC'>2017-05-17</span>&nbsp;·&nbsp;<span>12 min</span>&nbsp;·&nbsp;<span>2431 palavras</span>&nbsp;·&nbsp;<span>Diego Brocanelli</span></div></header><div class="post-content md-content"><p>Olá, tudo bem?!</p><p>No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o <a href=http://www.doctrine-project.org/>Doctrine</a>, o mais popular projeto voltado para Database Storage e Object Mapping.</p><p>O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.</p><p>A partir do momento que você estrutura sua aplicação para utilizar o Doctrine nada o impedirá que no futuro você migre toda a lógica para outro projeto, essa facilidade vai lhe poupar muitas dores de cabeça quando chegar o momento de refatorar sua aplicação.</p><p>Sem mais delongas, vamos analisar a estrutura que será utilizada neste post, abaixo segue estrutura de diretórios e arquivo.</p><ul><li><strong>exemplo-doctrine</strong><ul><li>config<ul><li>Será armazenado toda a lógica de configuração da aplicação.</li></ul></li><li>db<ul><li>Responsável por armazenar o banco de dados (SQLite) e o dump que será gerado.</li></ul></li><li>src<ul><li>Responsável por conter toda a lógica da nossa aplicação.</li></ul></li><li>composer.json<ul><li>Configurações do composer para o projeto.</li></ul></li></ul></li></ul><p>Conforme apresentado acima, crie a estrutura de diretórios necessários para a execução deste post.</p><h3 id=instalando-as-dependências-necessárias>Instalando as dependências necessárias<a hidden class=anchor aria-hidden=true href=#instalando-as-dependências-necessárias>#</a></h3><p>Abra o arquivo <em>composer.json</em> e insira o seguinte código:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;require&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;doctrine/orm&#34;</span><span class=p>:</span> <span class=s2>&#34;^2.5&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;doctrine/dbal&#34;</span><span class=p>:</span> <span class=s2>&#34;^2.5&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;symfony/yaml&#34;</span><span class=p>:</span> <span class=s2>&#34;^3.2&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;autoload&#34;</span><span class=p>:{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;psr-4&#34;</span><span class=p>:{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;DiegoBrocanelli\\&#34;</span><span class=p>:</span><span class=s2>&#34;src/&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, estamos utilizando os componentes do Doctrine e uma dependência  do Symfony. Após a inserção das configurações, acesse a raiz do projeto e execute o seguinte comando pelo terminal:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>composer install
+</span></span></code></pre></td></tr></table></div></div><p>Aguarde o processo de instalação que pode levar alguns minutos dependendo da sua conexão de internet.</p><h3 id=configurando-o-projeto>Configurando o projeto<a hidden class=anchor aria-hidden=true href=#configurando-o-projeto>#</a></h3><p>Agora devemos criar nossas configurações necessárias para utilização do componente, acesse o diretório <em>‘exemplo-doctrine/config’</em> e crie o arquivo <em>‘bootstrap.php’</em> . Neste arquivo iremos centralizar as configurações necessárias para execução do Doctrine, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Importação do autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../vendor/autoload.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Importação dos pacotes necessários
+</span></span></span><span class=line><span class=cl><span class=k>use</span> <span class=nx>Doctrine\ORM\Tools\Setup</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>use</span> <span class=nx>Doctrine\ORM\EntityManager</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Criar uma configuração ORM do Doctrine simples &#34;default&#34; para utilizar Annotations
+</span></span></span><span class=line><span class=cl><span class=nv>$isDevMode</span> <span class=o>=</span> <span class=k>true</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nv>$configuration</span> <span class=o>=</span> <span class=nx>Setup</span><span class=o>::</span><span class=na>createAnnotationMetadataConfiguration</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>[</span><span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../src&#39;</span><span class=p>],</span> 
+</span></span><span class=line><span class=cl>    <span class=nv>$isDevMode</span>
+</span></span><span class=line><span class=cl><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Configurações do banco de dados
+</span></span></span><span class=line><span class=cl><span class=c1>// Estamos utilizando o SQLite, para facilitar a reprodução do post
+</span></span></span><span class=line><span class=cl><span class=nv>$connection</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=s1>&#39;driver&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;pdo_sqlite&#39;</span><span class=p>,</span> <span class=c1>// Vamos utilizar o drive pdo do sqlite
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;path&#39;</span>   <span class=o>=&gt;</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../db/db.sqlite&#39;</span> <span class=c1>// caminho onde será armazenado o DB.
+</span></span></span><span class=line><span class=cl><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Obtemos o Entity Manager
+</span></span></span><span class=line><span class=cl><span class=nv>$entityManager</span> <span class=o>=</span> <span class=nx>EntityManager</span><span class=o>::</span><span class=na>create</span><span class=p>(</span><span class=nv>$connection</span><span class=p>,</span> <span class=nv>$configuration</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Observação:</strong> O Doctrine suporta configurações por <em>Annontation</em>, <em>XML</em> ou <em>YAML</em>, porem na minha opinião as <em>annontations</em> é a forma mais clara e fácil de definir sua entidade, gerando o menor número de arquivos possível.</p></blockquote><p>Após a criação das configurações, devemos criar um arquivo que nos auxiliará nas execuções dos comandos pelo  terminal. Crie o arquivo <em>‘cli-config.php_no diretório ‘exemplo-doctrine/config’ , segue código abaixo:</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl><span class=c1>// Importação do autoloader do composer
+</span></span></span><span class=line><span class=cl><span class=k>require</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Retorna o componente que nos auxilia na utilização do Schema tool
+</span></span></span><span class=line><span class=cl><span class=c1>// Necessário para gerar Tabelas para trabalhar com metadados
+</span></span></span><span class=line><span class=cl><span class=k>return</span> <span class=nx>\Doctrine\ORM\Tools\Console\ConsoleRunner</span><span class=o>::</span><span class=na>createHelperSet</span><span class=p>(</span><span class=nv>$entityManager</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=criação-da-entidade-products>Criação da entidade Products<a hidden class=anchor aria-hidden=true href=#criação-da-entidade-products>#</a></h3><p>Com as devidas configurações realizadas, o próximo passo é criar a entidade que representara nossa tabela do banco de dados, para isso crie a classe <em>‘Products.php’</em> dentro do diretório <em>‘exemplo-doctrine/src’</em>, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>namespace</span> <span class=nx>DiegoBrocanelli</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd> * @Entity @Table(name=&#34;products&#34;)
+</span></span></span><span class=line><span class=cl><span class=sd> */</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Product</span> 
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * @Id @Column(type=&#34;integer&#34;) @GeneratedValue
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>protected</span> <span class=nv>$id</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * @Column(type=&#34;string&#34;)
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>protected</span> <span class=nv>$name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=sd>/**
+</span></span></span><span class=line><span class=cl><span class=sd>     * @Column(type=&#34;datetime&#34;)
+</span></span></span><span class=line><span class=cl><span class=sd>     */</span>
+</span></span><span class=line><span class=cl>    <span class=k>protected</span> <span class=nv>$created</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>getId</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>id</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>getName</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>setName</span><span class=p>(</span><span class=nv>$name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>name</span> <span class=o>=</span> <span class=nv>$name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>setCreated</span><span class=p>(</span><span class=nx>\DateTime</span> <span class=nv>$created</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>created</span> <span class=o>=</span> <span class=nv>$created</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>function</span> <span class=nf>getCreated</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nv>$this</span><span class=o>-&gt;</span><span class=na>created</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, o código acima é bem simples contendo apenas atributos e métodos <em>getters</em> e <em>setters</em>, atentando ao fato de não termos criado <em>PHPDoc</em>, para que assim foquemos apenas nos conceitos das <em>annontations</em> minimizando conflito de entendimento. É por meio dessas <em>annontations</em> que iremos ‘informar’ ao <em>doctrine</em> nossa entidade e suas especificações, segue abaixo maiores detalhes sobre as <em>annontations</em> utilizadas:</p><ul><li><strong>Class Products</strong><ul><li>@Entity<ul><li>Responsável por informar ao Doctrine que esta nossa classe é nossa entidade.</li></ul></li><li>@Table(name=”products”)<ul><li>Informamos que nossa entidade representa a tabela <em>‘products’&lt;</em> contida no banco de dados.</li></ul></li></ul></li><li><strong>Column id</strong><ul><li>@Id<ul><li>Informa que essa coluna é primary key.</li></ul></li><li>@Column(type=”integer”)<ul><li>efine o tipo “inteiro” para a coluna.</li></ul></li><li>@GeneratedValue<ul><li>Informa o desejo de <em>auto increment&lt;</em> para os valores dessa coluna.</li></ul></li></ul></li><li><strong>Column name</strong><ul><li>@Column(type=”string”)<ul><li>Define o tipo ‘string’ para a coluna.</li></ul></li></ul></li><li><strong>Column created</strong><ul><li>@Column(type=”datetime”)<ul><li>Define o tipo <em>Datetime&lt;</em> para a coluna.</li><li>Observação: Assim que implementarmos a pesquisa ficará mais claro a estrutura do objeto gerado pelo <em>Doctrine</em>.</li></ul></li></ul></li></ul><p>Após nossa entidade devidamente criada, podemos dar início a implementação dos nosso recursos.</p><h3 id=criando-nosso-banco-de-dados>Criando nosso banco de dados<a hidden class=anchor aria-hidden=true href=#criando-nosso-banco-de-dados>#</a></h3><p>Após a criação da entidade devemos realizar a criação do banco de dados, acesse a raiz do projeto e execute o seguinte comando:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>vendor<span class=se>\b</span>in<span class=se>\d</span>octrine orm:schema-tool:create
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>vendor\bin\doctrine</strong><ul><li>Esta parcela do comando referencia a utilização do <em>Doctrine</em> que instalamos com o <a href=/php/iniciando-com-composer/>Composer</a>.</li></ul></li><li><strong>orm:schema-tool:creat</strong><ul><li>Comando para criação do banco de dados, lembrando que o arquivo será armazenado em <em>‘exemplo-doctrine/db/db.sqlite’&lt;</em>.</li></ul></li></ul><p>Após execução do comando o retorno deve ser semelhante ao apresentado abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ATTENTION: This operation should not be executed in a production environment.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Creating database schema...
+</span></span><span class=line><span class=cl>Database schema created successfully!
+</span></span></code></pre></td></tr></table></div></div><p>Como o próprio retorno nos informa, nunca devemos utilizar esta ação em produção, apenas em ambiente de desenvolvimento!</p><h3 id=inserindo-registros-no-banco-de-dados>Inserindo registros no banco de dados<a hidden class=anchor aria-hidden=true href=#inserindo-registros-no-banco-de-dados>#</a></h3><p>Para a implementação do recurso de <em>insert</em>,  crie a classe _‘CreateProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl><span class=c1>// Importamos o autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../config/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Como vamos trabalhar com envio de dados passados pelo terminal
+</span></span></span><span class=line><span class=cl><span class=c1>// apenas garanto que haja valor para que seja processado a ação.
+</span></span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>isset</span><span class=p>(</span><span class=nv>$argv</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// coletamos o nome passado pelo usuário no terminal
+</span></span></span><span class=line><span class=cl>  <span class=nv>$newProductName</span> <span class=o>=</span> <span class=nv>$argv</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Instanciamos nossa entidade Products
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DiegoBrocanelli\Product</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Passamos o novo nome para a entidade
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>setName</span><span class=p>(</span><span class=nv>$newProductName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Passamos a data de criação para a aentidade
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>setCreated</span><span class=p>(</span><span class=k>new</span> <span class=nx>\DateTime</span><span class=p>(</span><span class=nx>date</span><span class=p>(</span><span class=s1>&#39;Y-m-d H:i:s&#39;</span><span class=p>)));</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Persistimos seus dados
+</span></span></span><span class=line><span class=cl>  <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>persist</span><span class=p>(</span><span class=nv>$product</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Descarregamos a ação
+</span></span></span><span class=line><span class=cl>  <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>flush</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Para melhor visualização do resultado, retornamos uma mensagem 
+</span></span></span><span class=line><span class=cl>  <span class=c1>// com o id do registro salvo no DB. 
+</span></span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s1>&#39;Created Product with ID &#39;</span><span class=o>.</span><span class=nv>$product</span><span class=o>-&gt;</span><span class=na>getId</span><span class=p>()</span><span class=o>.</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Para realizarmos a inserção de dados, execute o seguinte comando pelo terminal na raiz do projeto:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>php src<span class=se>\C</span>reateProduct.php produto_1
+</span></span></code></pre></td></tr></table></div></div><p><strong>Resultado:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Created Product with ID <span class=m>1</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, com poucas linhas de código criamos um recurso simples para inserção de registro no banco de dados. 🙂</p><h3 id=pesquisando-todos-os-registros-cadastrados>Pesquisando todos os registros cadastrados<a hidden class=anchor aria-hidden=true href=#pesquisando-todos-os-registros-cadastrados>#</a></h3><p>Para a implementação do recurso de <em>select</em>,  crie a classe _‘ListProduct.php’ dentro do diretório _‘exemplo-doctrine/src’, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl><span class=c1>// Importamos o autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../config/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Como vamos trabalhar com envio de dados passados pelo terminal
+</span></span></span><span class=line><span class=cl><span class=c1>// apenas garanto que haja valor para que seja processado a ação.
+</span></span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>isset</span><span class=p>(</span><span class=nv>$entityManager</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>//Importamos o repository que nos auxiliará com a pesquisa.
+</span></span></span><span class=line><span class=cl>  <span class=nv>$productRepository</span> <span class=o>=</span> <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>getRepository</span><span class=p>(</span><span class=s1>&#39;DiegoBrocanelli\Product&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Podemos acessar o método findAll() responsável por retornar todos os 
+</span></span></span><span class=line><span class=cl>  <span class=c1>// registros cadastrados em nossa tabela products
+</span></span></span><span class=line><span class=cl>  <span class=nv>$products</span> <span class=o>=</span> <span class=nv>$productRepository</span><span class=o>-&gt;</span><span class=na>findAll</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Realizamos uma iteração de dados
+</span></span></span><span class=line><span class=cl>  <span class=k>foreach</span> <span class=p>(</span><span class=nv>$products</span> <span class=k>as</span> <span class=nv>$product</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=c1>// Exibimos o resultado de cada registro encontrado
+</span></span></span><span class=line><span class=cl>      <span class=nx>var_dump</span><span class=p>(</span><span class=nv>$product</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Exemplo de retorno de pesquisa:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=k>class</span> <span class=nc>DiegoBrocanelli\Product</span><span class=c1>#64 (3) {
+</span></span></span><span class=line><span class=cl>  <span class=k>protected</span> <span class=nv>$id</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>int</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>protected</span> <span class=nv>$name</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>string</span><span class=p>(</span><span class=mi>8</span><span class=p>)</span> <span class=s2>&#34;&#39;produto_1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=k>protected</span> <span class=nv>$created</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=k>class</span> <span class=nc>DateTime</span><span class=c1>#61 (3) {
+</span></span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=nv>$date</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>string</span><span class=p>(</span><span class=mi>26</span><span class=p>)</span> <span class=s2>&#34;2017-05-16 23:53:49.000000&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=nv>$timezone_type</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>int</span><span class=p>(</span><span class=mi>3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=nv>$timezone</span> <span class=o>=&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=nx>string</span><span class=p>(</span><span class=mi>17</span><span class=p>)</span> <span class=s2>&#34;America/Sao_Paulo&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, com apenas a chamada do método <em>findAll()</em> obtemos todos os registros inseridos em nossa tabela no banco de dados, o atributo <em>‘created’</em> é um objeto do tipo <em>DateTime</em> conforme configurado na entidade.</p><h3 id=pesquisando-um-produto-em-específico>Pesquisando um produto em específico<a hidden class=anchor aria-hidden=true href=#pesquisando-um-produto-em-específico>#</a></h3><p>Para a implementação do recurso que irá pesquisar um produto em especifico crie a classe <em>‘ShowProduct.php’ dentro do diretório</em>‘exemplo-doctrine/src’, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Importamos o autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../config/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Como vamos trabalhar com envio de dados passados pelo terminal
+</span></span></span><span class=line><span class=cl><span class=c1>// apenas garanto que haja valor para que seja processado a ação.
+</span></span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>isset</span><span class=p>(</span><span class=nv>$argv</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Recebemos o id informado
+</span></span></span><span class=line><span class=cl>  <span class=nv>$id</span> <span class=o>=</span> <span class=p>(</span><span class=nx>int</span><span class=p>)</span><span class=nv>$argv</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1>// Nosso entity manager nos fornece acesso ao método find()
+</span></span></span><span class=line><span class=cl>  <span class=c1>// no qual nos permite informar nossa entidade e o id para pesquisa
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span> <span class=o>=</span> <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>find</span><span class=p>(</span><span class=s1>&#39;DiegoBrocanelli\Product&#39;</span><span class=p>,</span> <span class=nv>$id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Caso não seja encontrado nenhum produto com o id desejado
+</span></span></span><span class=line><span class=cl>  <span class=c1>// será retornado mensagem informando o usuário
+</span></span></span><span class=line><span class=cl>  <span class=k>if</span><span class=p>(</span><span class=nv>$product</span> <span class=o>===</span> <span class=k>null</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;No product found. </span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Caso o produto seja encontrado exibimos seu nome e data de criação
+</span></span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=nx>sprintf</span><span class=p>(</span><span class=s1>&#39;-%s\n&#39;</span><span class=p>,</span> <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>getName</span><span class=p>()</span> <span class=o>.</span> <span class=s1>&#39; - &#39;</span> <span class=o>.</span> <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>getCreated</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, com o método <em>find()</em> podemos informar nossa entidade e o id do registro ao qual desejamos encontra na tabela.</p><h3 id=atualizar-produtos>Atualizar produtos<a hidden class=anchor aria-hidden=true href=#atualizar-produtos>#</a></h3><p>Para a implementação do recurso de <em>update&lt;</em> crie a classe <em>‘UpdateProduct.php’ dentro do diretório &lt;</em>‘exemplo-doctrine/src’, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Importamos o autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../config/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Como vamos trabalhar com envio de dados passados pelo terminal
+</span></span></span><span class=line><span class=cl><span class=c1>// apenas garanto que haja valor para que seja processado a ação.
+</span></span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>isset</span><span class=p>(</span><span class=nv>$argv</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Recebemos o id do registro a ser atualizado
+</span></span></span><span class=line><span class=cl>  <span class=nv>$id</span>      <span class=o>=</span> <span class=nv>$argv</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Recebemos o novo nome do produto
+</span></span></span><span class=line><span class=cl>  <span class=nv>$newName</span> <span class=o>=</span> <span class=nv>$argv</span><span class=p>[</span><span class=mi>2</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Pesquisamos para valizar existência do produto no banco de dados
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span> <span class=o>=</span> <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>find</span><span class=p>(</span><span class=s1>&#39;DiegoBrocanelli\Product&#39;</span><span class=p>,</span> <span class=nv>$id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Caso produto não seja localizado, será retornado mensagem infromando o usuário
+</span></span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nv>$product</span> <span class=o>===</span> <span class=k>null</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;Product </span><span class=si>$id</span><span class=s2> does not exist.</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Informamos o nome atual
+</span></span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s1>&#39;Old name: &#39;</span> <span class=o>.</span> <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>getName</span><span class=p>()</span> <span class=o>.</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Inserimos o novo nome desejado para o produto
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>setName</span><span class=p>(</span><span class=nv>$newName</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Executamos a ação de update
+</span></span></span><span class=line><span class=cl>  <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>flush</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Retornamos para o usuário o produto com seu novo nome
+</span></span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s1>&#39;New name: &#39;</span> <span class=o>.</span> <span class=nv>$product</span><span class=o>-&gt;</span><span class=na>getName</span><span class=p>()</span> <span class=o>.</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, o processo de update ocorre sem mistérios de forma clara e fácil apenas manipulando o objeto e passando para que o <em>Doctrine&lt;</em> faça todo o trabalho.</p><h3 id=remover-produtos>Remover produtos<a hidden class=anchor aria-hidden=true href=#remover-produtos>#</a></h3><p>Para a implementação do recurso de _delete &lt;_crie a classe <em>‘DeleteProduct.php’ dentro do diretório &lt;</em>‘exemplo-doctrine/src’, segue código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span> 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Importamos o autoload do composer
+</span></span></span><span class=line><span class=cl><span class=k>require_once</span> <span class=no>__DIR__</span><span class=o>.</span><span class=s1>&#39;/../config/bootstrap.php&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Como vamos trabalhar com envio de dados passados pelo terminal
+</span></span></span><span class=line><span class=cl><span class=c1>// apenas garanto que haja valor para que seja processado a ação.
+</span></span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=nx>isset</span><span class=p>(</span><span class=nv>$entityManager</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Recebemos o id do registro a ser atualizado
+</span></span></span><span class=line><span class=cl>  <span class=nv>$id</span> <span class=o>=</span> <span class=nv>$argv</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Pesquisamos para valizar existência do produto no banco de dados
+</span></span></span><span class=line><span class=cl>  <span class=nv>$product</span> <span class=o>=</span> <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>find</span><span class=p>(</span><span class=s1>&#39;DiegoBrocanelli\Product&#39;</span><span class=p>,</span> <span class=nv>$id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Caso produto não seja localizado, será retornado mensagem infromando o usuário
+</span></span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nv>$product</span> <span class=o>===</span> <span class=k>null</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>echo</span> <span class=s2>&#34;Product </span><span class=si>$id</span><span class=s2> does not exist.</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>exit</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Executamos a ação de remoção
+</span></span></span><span class=line><span class=cl>  <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>remove</span><span class=p>(</span><span class=nv>$product</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Efetiva a ação de remoção
+</span></span></span><span class=line><span class=cl>  <span class=nv>$entityManager</span><span class=o>-&gt;</span><span class=na>flush</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Retorna mensagem informativa de ação realizada com sucesso para o usuário
+</span></span></span><span class=line><span class=cl>  <span class=k>echo</span> <span class=s1>&#39;Product remove successfully!&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Como podemos observar, o processo de remoção é similar a todos os demais processo, o Doctrine tem métodos descritivos que facilitam sua utilização 🙂</p><h3 id=remover-o-banco-de-dados-drop-database>Remover o banco de dados (Drop database)<a hidden class=anchor aria-hidden=true href=#remover-o-banco-de-dados-drop-database>#</a></h3><p>No dia a dia temos a necessidade de apagar nosso banco de dados, para isso o <em>Doctrine&lt;</em> disponibiliza um recurso para nos auxiliar. Na raiz do nosso projeto execute o seguinte comando:</p><blockquote><p><strong>Execute este comando com parcimônia, após sua execução seu banco de dados será APAGADO!</strong></p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>// Comando para APAGAR o banco de dados
+</span></span><span class=line><span class=cl>vendor<span class=se>\b</span>in<span class=se>\d</span>octrine orm:schema:drop --force
+</span></span></code></pre></td></tr></table></div></div><p>Após execução do comando será exibido uma mensagem de retorno semelhante a descrita abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Dropping database schema...
+</span></span><span class=line><span class=cl>Database schema dropped successfully!
+</span></span></code></pre></td></tr></table></div></div><h3 id=gerar-dump-da-nossa-base-de-dados>Gerar dump da nossa base de dados<a hidden class=anchor aria-hidden=true href=#gerar-dump-da-nossa-base-de-dados>#</a></h3><p>Um dos inúmeros recursos bacanas que o D_octrine&lt;_ dispõem é a criação de um arquivo <em>dump&lt;</em> da base de dados,  arquivo que conterá toda estrutura da tabela <em>products&lt;</em>, para geramos nosso arquivo execute o seguinte comando na raiz do projeto:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>// Comando para geração de arquivo de dump da base de dados
+</span></span><span class=line><span class=cl>vendor<span class=se>\b</span>in<span class=se>\d</span>octrine orm:schema-tool:create --dump-sql &gt; db/dump.sql
+</span></span></code></pre></td></tr></table></div></div><p>Após execução com sucesso do comando, será criado nosso arquivo no diretório <em>‘exemplo-doctrine/db/dump.sql’&lt;</em>, contendo a seguinte estrutura:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>TABLE</span><span class=w> </span><span class=n>products</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>id</span><span class=w> </span><span class=nb>INTEGER</span><span class=w> </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=p>,</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>name</span><span class=w> </span><span class=nb>VARCHAR</span><span class=p>(</span><span class=mi>255</span><span class=p>)</span><span class=w> </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=p>,</span><span class=w> 
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>created</span><span class=w> </span><span class=n>DATETIME</span><span class=w> </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=p>,</span><span class=w> </span><span class=k>PRIMARY</span><span class=w> </span><span class=k>KEY</span><span class=p>(</span><span class=n>id</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Observação:</strong> O retorno se dá um uma única linha, porém para que fique melhor sua visualização no post foi quebrado em linhas.</p></blockquote><p>No decorrer deste post podemos observar o quão fácil é a utilização do <em>Doctrine</em>, infelizmente apenas abordamos uma pequena fração de todo o potencial e recursos que ele nos fornece. Caso tenha interesse em seguir com seus estudos indico que adquira o livro escrito pelo <a href=http://eltonminetto.net/>Elton Minneto</a> “<a href=https://leanpub.com/doctrine-na-pratica>Doctrine na prática</a>” antes que alguém pense o contrário não estou ganhando nenhum centavo para indicar o livro, estou fazendo pois é o melhor livro de <em>Doctrine&lt;</em> em PT-BR escrito por um profissional que respeito e admiro.</p><p>Espero que tenham apreciado o post, ficou um pouco maior do que eu desejava, porem para abordar todo o ciclo de utilização tentei ser o mais descritivo possível para auxiliar a máximo a compreensão das etapas, como dito anteriormente este post é introdutório onde existem uma infinidade de recursos não explorados que valem muito a pena serem estudados.</p><p>Duvidas, sugestões, crítica ou elogios recomendo que deixe nos comentários para que assim possamos interagir e gerar mais conhecimento.</p><p>Até a próxima, abraços! 🙂</p></div><footer class=post-footer><ul class=post-tags><li><a href=http://localhost:1313/tags/crud/>Crud</a></li><li><a href=http://localhost:1313/tags/doctrine/>Doctrine</a></li><li><a href=http://localhost:1313/tags/php/>Php</a></li></ul><nav class=paginav><a class=prev href=http://localhost:1313/posts/criando-cache-com-zend-cache/><span class=title>« Anterior</span>
+<span>Criando cache com o Zend-Cache</span>
+</a><a class=next href=http://localhost:1313/video/training-center-video/><span class=title>Próximo »</span>
+<span>hhbr : 10 – Training Center (Vídeo)</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Aprenda a construir um CRUD simples, fácil e rápido com Doctrine on x" href="https://x.com/intent/tweet/?text=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;url=http%3a%2f%2flocalhost%3a1313%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f&amp;hashtags=crud%2cdoctrine%2cphp"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Aprenda a construir um CRUD simples, fácil e rápido com Doctrine on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f&amp;title=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;summary=Aprenda%20a%20construir%20um%20CRUD%20simples%2c%20f%c3%a1cil%20e%20r%c3%a1pido%20com%20Doctrine&amp;source=http%3a%2f%2flocalhost%3a1313%2fphp%2fcrud-simples-facil-e-rapido-com-doctrine%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=http://localhost:1313/>Diego Brocanelli</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copiar";function s(){t.innerHTML="copiado!",setTimeout(()=>{t.innerHTML="copiar"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>priorização on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/prioriza%C3%A7%C3%A3o/</link>
-    <description>Recent content in priorização on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Priorização on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/prioriza%C3%A7%C3%A3o/</link>
+    <description>Recent content in Priorização on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 24 Jan 2025 22:36:32 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/prioriza%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2025 22:36:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/prioriza%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Priorizar com propósito: guia prático para iniciantes</title>
-      <link>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</link>
+      <link>http://localhost:1313/posts/priorizar-com-proposito/</link>
       <pubDate>Fri, 24 Jan 2025 22:36:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</guid>
-      <description>Sumário Introdução Priorização com cliente ou/e parte interessada Priorizando minhas demandas Priorização no meu dia a dia pessoal Ferramentas Considerações finais Referências Introdução Estou lendo o livro Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.</description>
+      <guid>http://localhost:1313/posts/priorizar-com-proposito/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Estou lendo o livro &lt;code&gt;Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso&lt;/code&gt; e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.&lt;/p&gt;
+&lt;p&gt;Um desses pontos aborda que toda nova ideia de funcionalidade nasce automaticamente com um não, e ela tem que brigar e valer a pena para receber um sim! Esse conceito é muito interessante, pois no dia a dia vemos uma ideia que parece boa e já incluirmos ela na lista para fazer e saímos implementando.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

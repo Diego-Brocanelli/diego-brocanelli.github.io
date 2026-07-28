@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>controle de versão on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/controle-de-vers%C3%A3o/</link>
-    <description>Recent content in controle de versão on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Controle De Versão on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/controle-de-vers%C3%A3o/</link>
+    <description>Recent content in Controle De Versão on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT – Seu guia de sobrevivência</title>
-      <link>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</link>
+      <link>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</guid>
-      <description>Olá, tudo bem!
-Sumário Introdução Comandos git config git init git clone git status git branch git checkout git add git commit git diff git log git merge git pull git push git reset git tag git mv git rebase git grep Atualizar fork Git por meio de interface gráfica Materiais complementares Considerações Introdução Git é um sistema de controle de versão descentralizado, criado por Linus Torvalds. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.</description>
+      <guid>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; é um sistema de controle de versão descentralizado, criado por &lt;a href=&#34;https://github.com/torvalds&#34;&gt;Linus Torvalds&lt;/a&gt;. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.
+Entretanto, por que sempre é frisado que para desenvolver software é fundamental usar uma ferramenta para controle de versão?&lt;/p&gt;
+&lt;p&gt;Os projetos estão cada vez mais complexos com equipes mais numerosas e entregas cada vez maiores, onde dezenas ou centenas de pessoas estão interagindo com o mesmo repositório de código mandando correções ou novas funcionalidades. &lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

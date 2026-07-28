@@ -1,7 +1,14 @@
 ---
 title: "Introdução ao MCP (Model Context Protocol)"
 date: 2025-05-14T12:08:32Z
-draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - IA
   - MCP
@@ -12,18 +19,6 @@ tags:
   - Context
   - Protocol
 ---
-
-## Sumário
-
-- [O quê é](#o-quê-é)
-- [Para que serve?](#para-que-serve)
-- [Como funciona?](#como-funciona)
-- [Componentes do MCP Server](#componentes-do-mcp-server)
-- [Formatos de Comunicação](#formatos-de-comunicação)
-- [Exemplos de aplicação](#exemplos-de-aplicação)
-- [Exemplo: Análise de Texto](#exemplo-análise-de-texto)
-- [Considerações](#considerações)
-- [Referências](#referências)
 
 ## O quê é
 

@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>library on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/library/</link>
-    <description>Recent content in library on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Library on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/library/</link>
+    <description>Recent content in Library on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 27 Feb 2017 15:34:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/library/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2017 15:34:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/library/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obtendo imagens do Gravatar</title>
-      <link>https://diegobrocanelli.com.br/php/obtendo-imagens-do-gravatar/</link>
+      <link>http://localhost:1313/posts/obtendo-imagens-do-gravatar/</link>
       <pubDate>Mon, 27 Feb 2017 15:34:47 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/obtendo-imagens-do-gravatar/</guid>
-      <description>Olá, tudo bem?!
-Um serviço muito bacana é o Gravatar, onde você pode vincular uma imagem ao e-mail desejado e com isso ao comentar em um blog ou serviço que disponibiliza o recurso o mesmo exibirá automaticamente a imagem configurada.
-E para manipular o serviço com maior facilidade construí uma biblioteca para executar esta tarefa, vamos ao seu uso!
-Para isso vamos criar a estrutura do nosso projeto, crie um diretório com o seguinte nome ‘post-imagem-gravatar’.</description>
+      <guid>http://localhost:1313/posts/obtendo-imagens-do-gravatar/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Um serviço muito bacana é o Gravatar, onde você pode vincular uma imagem ao e-mail desejado e com isso ao comentar em um blog ou serviço que disponibiliza o recurso o mesmo exibirá automaticamente a imagem configurada.&lt;/p&gt;
+&lt;p&gt;E para manipular o serviço com maior facilidade construí uma biblioteca para executar esta tarefa, vamos ao seu uso!&lt;/p&gt;
+&lt;p&gt;Para isso vamos criar a estrutura do nosso projeto, crie um diretório com o seguinte nome ‘post-imagem-gravatar’.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

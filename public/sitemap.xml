@@ -2,1126 +2,1223 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://diegobrocanelli.com.br/categories/</loc>
+    <loc>http://localhost:1313/tags/barras/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/c%C3%B3digo/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/c%C3%B3digo-barras/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/hard-skills/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-07-28T02:47:37+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/analyser/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/architectural-guard/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linter/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mago/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/php/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/php/</loc>
+    <lastmod>2026-01-16T20:00:53+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/context/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/context/</loc>
+    <loc>http://localhost:1313/categories/ia/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/</loc>
+    <loc>http://localhost:1313/tags/ia/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ia/</loc>
+    <loc>http://localhost:1313/posts/introducao-ao-mcp/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/ia/</loc>
+    <loc>http://localhost:1313/categories/mcp/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</loc>
+    <loc>http://localhost:1313/tags/mcp/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/mcp/</loc>
+    <loc>http://localhost:1313/tags/model/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/mcp/</loc>
+    <loc>http://localhost:1313/tags/protocol/</loc>
     <lastmod>2025-05-14T12:08:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/model/</loc>
-    <lastmod>2025-05-14T12:08:32+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/</loc>
-    <lastmod>2025-05-14T12:08:32+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/protocol/</loc>
-    <lastmod>2025-05-14T12:08:32+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/</loc>
-    <lastmod>2025-05-14T12:08:32+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/analisar/</loc>
+    <loc>http://localhost:1313/tags/analisar/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/an%C3%A1lise/</loc>
+    <loc>http://localhost:1313/tags/an%C3%A1lise/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</loc>
+    <loc>http://localhost:1313/posts/como-analisar-um-problema/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/problema/</loc>
+    <loc>http://localhost:1313/tags/problema/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/soft-skills/</loc>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/soft-skills/</loc>
+    <loc>http://localhost:1313/categories/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/arquitetura/</loc>
+    <loc>http://localhost:1313/categories/arquitetura/</loc>
     <lastmod>2025-03-26T11:48:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/balanceador-de-caraga/</loc>
+    <loc>http://localhost:1313/tags/balanceador-de-caraga/</loc>
     <lastmod>2025-03-26T11:48:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/load-balancer/</loc>
+    <loc>http://localhost:1313/tags/load-balancer/</loc>
     <lastmod>2025-03-26T11:48:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</loc>
+    <loc>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</loc>
     <lastmod>2025-03-26T11:48:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</loc>
+    <loc>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/crescimento/</loc>
+    <loc>http://localhost:1313/tags/crescimento/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/legado/</loc>
+    <loc>http://localhost:1313/tags/legado/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/legados/</loc>
+    <loc>http://localhost:1313/tags/legados/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/oportunidade/</loc>
+    <loc>http://localhost:1313/tags/oportunidade/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/programa%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/categories/programa%C3%A7%C3%A3o/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/programa%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/programa%C3%A7%C3%A3o/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/software/</loc>
+    <loc>http://localhost:1313/tags/software/</loc>
     <lastmod>2025-02-18T21:03:48+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</loc>
+    <loc>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</loc>
     <lastmod>2025-02-04T22:21:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/feedback/</loc>
+    <loc>http://localhost:1313/tags/feedback/</loc>
     <lastmod>2025-02-04T22:21:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/soft-skill/</loc>
+    <loc>http://localhost:1313/tags/soft-skill/</loc>
     <lastmod>2025-02-04T22:21:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/iniciante/</loc>
+    <loc>http://localhost:1313/tags/iniciante/</loc>
     <lastmod>2025-01-24T22:36:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/iniciantes/</loc>
+    <loc>http://localhost:1313/tags/iniciantes/</loc>
     <lastmod>2025-01-24T22:36:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/prioriza%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/prioriza%C3%A7%C3%A3o/</loc>
     <lastmod>2025-01-24T22:36:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</loc>
+    <loc>http://localhost:1313/posts/priorizar-com-proposito/</loc>
     <lastmod>2025-01-24T22:36:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/arquitetura/</loc>
+    <loc>http://localhost:1313/tags/arquitetura/</loc>
     <lastmod>2024-09-26T14:44:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</loc>
+    <loc>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</loc>
     <lastmod>2024-09-26T14:44:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/mensageria/</loc>
+    <loc>http://localhost:1313/tags/mensageria/</loc>
     <lastmod>2024-09-26T14:44:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/rabbitmq/</loc>
+    <loc>http://localhost:1313/tags/pub/sub/</loc>
     <lastmod>2024-09-26T14:44:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</loc>
+    <loc>http://localhost:1313/tags/rabbitmq/</loc>
+    <lastmod>2024-09-26T14:44:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/php-docker-tool-kit/</loc>
+    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/como-programador-sou-obrigado-a-usar-linux/</loc>
     <lastmod>2023-04-28T19:50:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/linux/</loc>
+    <loc>http://localhost:1313/categories/linux/</loc>
     <lastmod>2023-04-28T19:50:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/linux/</loc>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2023-04-28T19:50:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/wsl/</loc>
+    <loc>http://localhost:1313/tags/wsl/</loc>
     <lastmod>2023-04-28T19:50:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/wsl2/</loc>
+    <loc>http://localhost:1313/tags/wsl2/</loc>
     <lastmod>2023-04-28T19:50:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/brocanelli/</loc>
+    <loc>http://localhost:1313/tags/boas-pr%C3%A1ticas/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/password/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/seguran%C3%A7a/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/seguran%C3%A7a/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/senhas/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/um-bate-papo-sobre-senhas/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/brocanelli/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/diego/</loc>
+    <loc>http://localhost:1313/tags/diego/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/fechatag/</loc>
+    <loc>http://localhost:1313/tags/fechatag/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</loc>
+    <loc>http://localhost:1313/posts/participacao-no-podcast-fechatag/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/podcast/</loc>
+    <loc>http://localhost:1313/categories/podcast/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/podcast/</loc>
+    <loc>http://localhost:1313/tags/podcast/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/v%C3%ADdeo/</loc>
+    <loc>http://localhost:1313/categories/v%C3%ADdeo/</loc>
     <lastmod>2021-11-03T14:38:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</loc>
+    <loc>http://localhost:1313/categories/http/</loc>
+    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/http/</loc>
+    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/https/</loc>
+    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/introducao-ao-protocolo-http/</loc>
+    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/protocolo/</loc>
+    <lastmod>2021-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/como-converter-decimal-para-tempo-com-php/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/convert/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/converter/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/float/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tempo/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/time/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</loc>
     <lastmod>2021-05-13T11:17:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/comunidade/</loc>
+    <loc>http://localhost:1313/categories/comunidade/</loc>
     <lastmod>2021-05-13T11:17:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/estudos/</loc>
+    <loc>http://localhost:1313/tags/estudos/</loc>
     <lastmod>2021-05-13T11:17:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/iniciante/</loc>
+    <loc>http://localhost:1313/categories/iniciante/</loc>
     <lastmod>2021-05-13T11:17:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/controle-de-vers%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/controle-de-vers%C3%A3o/</loc>
     <lastmod>2021-02-27T13:09:10+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/git/</loc>
+    <loc>http://localhost:1313/categories/git/</loc>
     <lastmod>2021-02-27T13:09:10+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/git/</loc>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2021-02-27T13:09:10+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/git/git-seu-guia-de-sobrevivencia/</loc>
+    <loc>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</loc>
     <lastmod>2021-02-27T13:09:10+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/github/</loc>
+    <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/github/</loc>
+    <loc>http://localhost:1313/categories/github/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ideias/</loc>
+    <loc>http://localhost:1313/tags/ideias/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/laborat%C3%B3rio/</loc>
+    <loc>http://localhost:1313/tags/laborat%C3%B3rio/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</loc>
+    <loc>http://localhost:1313/posts/laboratorio-de-ideias/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/open-source/</loc>
+    <loc>http://localhost:1313/categories/open-source/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/open-source/</loc>
+    <loc>http://localhost:1313/tags/open-source/</loc>
     <lastmod>2021-01-25T10:30:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/fun%C3%A7%C3%B5es/</loc>
+    <loc>http://localhost:1313/tags/fun%C3%A7%C3%B5es/</loc>
     <lastmod>2020-01-03T10:55:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</loc>
+    <loc>http://localhost:1313/posts/funcoes-nativas-php-str_getcsv/</loc>
     <lastmod>2020-01-03T10:55:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/nativas/</loc>
+    <loc>http://localhost:1313/tags/nativas/</loc>
     <lastmod>2020-01-03T10:55:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/php/</loc>
+    <loc>http://localhost:1313/tags/str_getcsv/</loc>
     <lastmod>2020-01-03T10:55:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/php/</loc>
-    <lastmod>2020-01-03T10:55:13+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/str_getcsv/</loc>
-    <lastmod>2020-01-03T10:55:13+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/backend/</loc>
+    <loc>http://localhost:1313/tags/backend/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</loc>
+    <loc>http://localhost:1313/posts/configuracao-automatica-de-estacao-de-trabalho/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/configuration/</loc>
+    <loc>http://localhost:1313/tags/configuration/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/debian-family/</loc>
+    <loc>http://localhost:1313/tags/debian-family/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/desenvolvimento/</loc>
+    <loc>http://localhost:1313/categories/desenvolvimento/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/devops/</loc>
+    <loc>http://localhost:1313/tags/devops/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/frontend/</loc>
+    <loc>http://localhost:1313/tags/frontend/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/full-stack/</loc>
+    <loc>http://localhost:1313/tags/full-stack/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/infra/</loc>
+    <loc>http://localhost:1313/tags/infra/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/infraestrutura/</loc>
+    <loc>http://localhost:1313/categories/infraestrutura/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/infraestrutura/</loc>
+    <loc>http://localhost:1313/tags/infraestrutura/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/shell/</loc>
+    <loc>http://localhost:1313/tags/shell/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/terminal/</loc>
+    <loc>http://localhost:1313/categories/terminal/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ubuntu/</loc>
+    <loc>http://localhost:1313/tags/ubuntu/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/workstation/</loc>
+    <loc>http://localhost:1313/tags/workstation/</loc>
     <lastmod>2019-12-28T17:21:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/coponentes/</loc>
+    <loc>http://localhost:1313/tags/coponentes/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/front-end/</loc>
+    <loc>http://localhost:1313/tags/front-end/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/hhbr/</loc>
+    <loc>http://localhost:1313/categories/hhbr/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-28-renderizando-componentes-com-vue-js/</loc>
+    <loc>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/renderizando/</loc>
+    <loc>http://localhost:1313/tags/renderizando/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/vue/</loc>
+    <loc>http://localhost:1313/tags/vue/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/vue.js/</loc>
+    <loc>http://localhost:1313/tags/vue.js/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/vuejs/</loc>
+    <loc>http://localhost:1313/tags/vuejs/</loc>
     <lastmod>2019-11-05T16:42:33+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/docker/</loc>
+    <loc>http://localhost:1313/tags/docker/</loc>
     <lastmod>2019-11-05T16:42:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/hhbr/</loc>
+    <loc>http://localhost:1313/tags/hhbr/</loc>
     <lastmod>2019-11-05T16:42:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-27-refactoring-calculadora-de-imc/</loc>
+    <loc>http://localhost:1313/posts/hhbr-27-refactoring-calculadora-de-imc/</loc>
     <lastmod>2019-11-05T16:42:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/refactoring/</loc>
+    <loc>http://localhost:1313/tags/refactoring/</loc>
     <lastmod>2019-11-05T16:42:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ecosistema/</loc>
+    <loc>http://localhost:1313/tags/ecosistema/</loc>
     <lastmod>2019-11-05T16:41:34+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/frontend/</loc>
+    <loc>http://localhost:1313/categories/frontend/</loc>
     <lastmod>2019-11-05T16:41:34+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</loc>
+    <loc>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</loc>
     <lastmod>2019-11-05T16:41:34+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/javascript/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2019-11-05T16:41:34+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/back-end/</loc>
+    <loc>http://localhost:1313/tags/back-end/</loc>
     <lastmod>2019-11-05T16:40:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/cqrs/</loc>
+    <loc>http://localhost:1313/tags/cqrs/</loc>
     <lastmod>2019-11-05T16:40:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/event-sourcing/</loc>
+    <loc>http://localhost:1313/tags/event-sourcing/</loc>
     <lastmod>2019-11-05T16:40:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</loc>
+    <loc>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</loc>
     <lastmod>2019-11-05T16:40:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/bate-papo/</loc>
+    <loc>http://localhost:1313/tags/bate-papo/</loc>
     <lastmod>2019-11-05T16:39:06+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-24-um-bate-papo-sobre-ti/</loc>
+    <loc>http://localhost:1313/posts/hhbr-24-um-bate-papo-sobre-ti/</loc>
     <lastmod>2019-11-05T16:39:06+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ti/</loc>
+    <loc>http://localhost:1313/tags/ti/</loc>
     <lastmod>2019-11-05T16:39:06+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/aprender/</loc>
+    <loc>http://localhost:1313/tags/aprender/</loc>
     <lastmod>2019-11-05T16:38:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/como/</loc>
+    <loc>http://localhost:1313/tags/como/</loc>
     <lastmod>2019-11-05T16:38:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/hhbr/hhbr-23-como-aprender-a-aprender/</loc>
+    <loc>http://localhost:1313/posts/hhbr-23-como-aprender-a-aprender/</loc>
     <lastmod>2019-11-05T16:38:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/dev-trabalho-remoto/</loc>
+    <loc>http://localhost:1313/tags/dev---trabalho-remoto/</loc>
     <lastmod>2019-11-05T16:37:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-22-trabalho-remoto-na-vida-real/</loc>
+    <loc>http://localhost:1313/posts/hhbr-22-trabalho-remoto-na-vida-real/</loc>
     <lastmod>2019-11-05T16:37:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-20-faculdade-na-area-de-ti/</loc>
+    <loc>http://localhost:1313/posts/hhbr-20-faculdade-na-area-de-ti/</loc>
     <lastmod>2019-11-05T16:35:46+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/devs/</loc>
+    <loc>http://localhost:1313/tags/devs/</loc>
     <lastmod>2019-11-05T16:34:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/hhbr-19-soft-skills-para-devs-video/</loc>
+    <loc>http://localhost:1313/posts/hhbr-19-soft-skills-para-devs-video/</loc>
     <lastmod>2019-11-05T16:34:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/sof-skills/</loc>
+    <loc>http://localhost:1313/tags/sof-skills/</loc>
     <lastmod>2019-11-05T16:34:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/docker/</loc>
+    <loc>http://localhost:1313/categories/docker/</loc>
     <lastmod>2019-11-05T16:33:20+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/docker/hhbr-18-docker-kubernetes-minikube/</loc>
+    <loc>http://localhost:1313/posts/hhbr-18-docker-kubernetes-minikube/</loc>
     <lastmod>2019-11-05T16:33:20+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/kubernetes/</loc>
+    <loc>http://localhost:1313/tags/kubernetes/</loc>
     <lastmod>2019-11-05T16:33:20+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/minikube/</loc>
+    <loc>http://localhost:1313/tags/minikube/</loc>
     <lastmod>2019-11-05T16:33:20+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/servidor/</loc>
+    <loc>http://localhost:1313/tags/servidor/</loc>
     <lastmod>2019-11-05T16:33:20+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-17-primeiros-passos-com-integracao-continua/</loc>
+    <loc>http://localhost:1313/posts/hhbr-17-primeiros-passos-com-integracao-continua/</loc>
     <lastmod>2019-11-05T16:32:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/infraestrutura-ti/</loc>
+    <loc>http://localhost:1313/tags/infraestrutura-ti/</loc>
     <lastmod>2019-11-05T16:32:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/jenkins/</loc>
+    <loc>http://localhost:1313/tags/jenkins/</loc>
     <lastmod>2019-11-05T16:32:13+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/comunidade/</loc>
+    <loc>http://localhost:1313/tags/comunidade/</loc>
     <lastmod>2019-11-05T16:30:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</loc>
+    <loc>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</loc>
     <lastmod>2019-11-05T16:30:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/phptestfest/</loc>
+    <loc>http://localhost:1313/tags/phptestfest/</loc>
     <lastmod>2019-11-05T16:30:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-01-docker-para-iniciantes/</loc>
+    <loc>http://localhost:1313/posts/hhbr-01-docker-para-iniciantes/</loc>
     <lastmod>2019-11-05T16:26:41+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/7.4/</loc>
+    <loc>http://localhost:1313/posts/melhorando-seu-processo-de-deploy-com-deployer-php/</loc>
+    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/7.4/</loc>
     <lastmod>2019-05-05T11:41:17+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/novidades-do-php-7-4/</loc>
+    <loc>http://localhost:1313/posts/novidades-do-php-7-4/</loc>
     <lastmod>2019-05-05T11:41:17+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ajuda/</loc>
+    <loc>http://localhost:1313/tags/ajuda/</loc>
     <lastmod>2019-02-17T13:40:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/comunidade/como-pedir-ajuda-em-comunidade-de-ti/</loc>
+    <loc>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</loc>
     <lastmod>2019-02-17T13:40:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/pedir/</loc>
+    <loc>http://localhost:1313/tags/pedir/</loc>
     <lastmod>2019-02-17T13:40:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/c%C3%B3digo/</loc>
+    <loc>http://localhost:1313/categories/mysql/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mysql/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mysql-tunner/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/perl/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/sql/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tuner/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tuning/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/mysql-tuner/</loc>
+    <lastmod>2018-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/engenharia-de-software/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/engenharia-de-software/</loc>
+    <loc>http://localhost:1313/tags/qualidade/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/qualidade/</loc>
+    <loc>http://localhost:1313/tags/query/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/query/</loc>
+    <loc>http://localhost:1313/categories/refactoring/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/refactoring/</loc>
+    <loc>http://localhost:1313/posts/refactoring-replace-temp-with-query/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/refactoring-replace-temp-with-query/</loc>
+    <loc>http://localhost:1313/tags/replace/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/replace/</loc>
+    <loc>http://localhost:1313/tags/template/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/template/</loc>
+    <loc>http://localhost:1313/tags/with/</loc>
     <lastmod>2018-09-17T12:37:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/with/</loc>
-    <lastmod>2018-09-17T12:37:37+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/laravel/</loc>
+    <loc>http://localhost:1313/categories/laravel/</loc>
     <lastmod>2018-09-05T13:34:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/laravel/</loc>
+    <loc>http://localhost:1313/tags/laravel/</loc>
     <lastmod>2018-09-05T13:34:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/laravel-module/</loc>
+    <loc>http://localhost:1313/posts/laravel-module/</loc>
     <lastmod>2018-09-05T13:34:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/modules/</loc>
+    <loc>http://localhost:1313/tags/modules/</loc>
     <lastmod>2018-09-05T13:34:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/m%C3%B3dulo/</loc>
+    <loc>http://localhost:1313/tags/m%C3%B3dulo/</loc>
     <lastmod>2018-09-05T13:34:32+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/clean-code/</loc>
+    <loc>http://localhost:1313/tags/clean-code/</loc>
     <lastmod>2018-08-27T16:17:28+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/engenharia/</loc>
+    <loc>http://localhost:1313/tags/engenharia/</loc>
     <lastmod>2018-08-27T16:17:28+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/extract/</loc>
+    <loc>http://localhost:1313/tags/extract/</loc>
     <lastmod>2018-08-27T16:17:28+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/method/</loc>
+    <loc>http://localhost:1313/tags/method/</loc>
     <lastmod>2018-08-27T16:17:28+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/refactoring-extract-method/</loc>
+    <loc>http://localhost:1313/posts/refactoring-extract-method/</loc>
     <lastmod>2018-08-27T16:17:28+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/engenharia-de-software/refactoring-extract-variable/</loc>
+    <loc>http://localhost:1313/posts/refactoring-extract-variable/</loc>
     <lastmod>2018-08-20T17:21:01+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/variable/</loc>
+    <loc>http://localhost:1313/tags/variable/</loc>
     <lastmod>2018-08-20T17:21:01+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/dev/</loc>
+    <loc>http://localhost:1313/tags/dev/</loc>
     <lastmod>2018-08-16T16:37:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-21-projeto-statik-stack/</loc>
+    <loc>http://localhost:1313/posts/hhbr-21-projeto-statik-stack/</loc>
     <lastmod>2018-08-16T16:37:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</loc>
+    <loc>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/date/</loc>
+    <loc>http://localhost:1313/tags/date/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/datediff/</loc>
+    <loc>http://localhost:1313/tags/datediff/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/diff/</loc>
+    <loc>http://localhost:1313/tags/diff/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/excluir/</loc>
+    <loc>http://localhost:1313/tags/excluir/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/finais-de-semana/</loc>
+    <loc>http://localhost:1313/tags/finais-de-semana/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/mysql/</loc>
+    <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2018-06-14T22:44:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/mysql/</loc>
-    <lastmod>2018-06-14T22:44:07+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/sql/</loc>
-    <lastmod>2018-06-14T22:44:07+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/sql/</loc>
-    <lastmod>2018-06-14T22:44:07+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/open-source/projeto-statik-stack/</loc>
+    <loc>http://localhost:1313/posts/projeto-statik-stack/</loc>
     <lastmod>2018-06-14T22:30:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/stack/</loc>
+    <loc>http://localhost:1313/tags/stack/</loc>
     <lastmod>2018-06-14T22:30:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/statik/</loc>
+    <loc>http://localhost:1313/tags/statik/</loc>
     <lastmod>2018-06-14T22:30:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/b%C3%A1sico/</loc>
+    <loc>http://localhost:1313/tags/b%C3%A1sico/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/html/</loc>
+    <loc>http://localhost:1313/tags/html/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/htmlentities/</loc>
+    <loc>http://localhost:1313/tags/htmlentities/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/string/</loc>
+    <loc>http://localhost:1313/tags/string/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/tratamento/</loc>
+    <loc>http://localhost:1313/tags/tratamento/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/tratamento-de-html-dentro-de-uma-string-com-php/</loc>
+    <loc>http://localhost:1313/posts/tratamento-de-html-dentro-de-uma-string-com-php/</loc>
     <lastmod>2018-05-03T20:10:54+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ajax/</loc>
+    <loc>http://localhost:1313/tags/ajax/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ecmascript/</loc>
+    <loc>http://localhost:1313/tags/ecmascript/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/javascript/</loc>
+    <loc>http://localhost:1313/categories/javascript/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/js/</loc>
+    <loc>http://localhost:1313/tags/js/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/javascript/realizando-um-request-ajax-sem-framework-javascript/</loc>
+    <loc>http://localhost:1313/posts/realizando-um-request-ajax-sem-framework-javascript/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/request/</loc>
+    <loc>http://localhost:1313/tags/request/</loc>
     <lastmod>2018-04-30T10:59:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/queryselector/</loc>
+    <loc>http://localhost:1313/tags/queryselector/</loc>
     <lastmod>2018-04-28T15:40:25+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/selector/</loc>
+    <loc>http://localhost:1313/tags/selector/</loc>
     <lastmod>2018-04-28T15:40:25+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/javascript/utilizando-queryselector-do-javascript/</loc>
+    <loc>http://localhost:1313/posts/utilizando-queryselector-do-javascript/</loc>
     <lastmod>2018-04-28T15:40:25+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/inputfilter/</loc>
+    <loc>http://localhost:1313/tags/inputfilter/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/validando-os-dados-do-formulario-com-zend-validator/</loc>
+    <loc>http://localhost:1313/posts/validando-os-dados-do-formulario-com-zend-validator/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/validar/</loc>
+    <loc>http://localhost:1313/tags/validar/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/validator/</loc>
+    <loc>http://localhost:1313/tags/validator/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/zend/</loc>
+    <loc>http://localhost:1313/categories/zend/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend/</loc>
+    <loc>http://localhost:1313/tags/zend/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend-inputfilter/</loc>
+    <loc>http://localhost:1313/tags/zend-inputfilter/</loc>
     <lastmod>2018-04-22T12:45:21+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/automatiza%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/posts/guia-pratico-de-comandos-git/</loc>
+    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/versionamento/</loc>
+    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/automatiza%C3%A7%C3%A3o/</loc>
     <lastmod>2018-01-21T15:36:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/composer/</loc>
+    <loc>http://localhost:1313/tags/composer/</loc>
     <lastmod>2018-01-21T15:36:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/composer-automatizando-tarefas-com-scripts/</loc>
+    <loc>http://localhost:1313/posts/composer-automatizando-tarefas-com-scripts/</loc>
     <lastmod>2018-01-21T15:36:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/scripts/</loc>
+    <loc>http://localhost:1313/tags/scripts/</loc>
     <lastmod>2018-01-21T15:36:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/gerando-qr-codes-com-php-mysql-php-qr-code/</loc>
+    <loc>http://localhost:1313/posts/gerando-qr-codes-com-php-mysql-php-qr-code/</loc>
     <lastmod>2018-01-14T12:14:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/qr-code/</loc>
+    <loc>http://localhost:1313/tags/qr-code/</loc>
     <lastmod>2018-01-14T12:14:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</loc>
+    <loc>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</loc>
     <lastmod>2018-01-05T21:05:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/parse/</loc>
+    <loc>http://localhost:1313/tags/parse/</loc>
     <lastmod>2018-01-05T21:05:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/extreme-programing/</loc>
+    <loc>http://localhost:1313/tags/extreme-programing/</loc>
     <lastmod>2018-01-01T02:35:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/princ%C3%ADpio/</loc>
+    <loc>http://localhost:1313/tags/princ%C3%ADpio/</loc>
     <lastmod>2018-01-01T02:35:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/xp/</loc>
+    <loc>http://localhost:1313/tags/xp/</loc>
     <lastmod>2018-01-01T02:35:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/yagni/</loc>
+    <loc>http://localhost:1313/tags/yagni/</loc>
     <lastmod>2018-01-01T02:35:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/yagni-voce-nao-vai-precisar-disso/</loc>
+    <loc>http://localhost:1313/posts/yagni-voce-nao-vai-precisar-disso/</loc>
     <lastmod>2018-01-01T02:35:55+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</loc>
+    <loc>http://localhost:1313/posts/atualizando-seu-fork-no-github/</loc>
     <lastmod>2017-11-17T18:02:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/atualizar-fork/</loc>
+    <loc>http://localhost:1313/categories/atualizar-fork/</loc>
     <lastmod>2017-11-17T18:02:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/fork/</loc>
+    <loc>http://localhost:1313/categories/fork/</loc>
     <lastmod>2017-11-17T18:02:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/semantic-version/controlando-a-versao-do-software-like-a-boss/</loc>
+    <loc>http://localhost:1313/posts/controlando-a-versao-do-software-like-a-boss/</loc>
     <lastmod>2017-10-31T13:17:36+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/controle-de-vers%C3%A3o/</loc>
+    <loc>http://localhost:1313/categories/controle-de-vers%C3%A3o/</loc>
     <lastmod>2017-10-31T13:17:36+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/gerenciar-pacotes/</loc>
+    <loc>http://localhost:1313/categories/gerenciar-pacotes/</loc>
     <lastmod>2017-10-31T13:17:36+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/semantic-version/</loc>
+    <loc>http://localhost:1313/categories/semantic-version/</loc>
     <lastmod>2017-10-31T13:17:36+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-15-spl-e-estruturas-de-dados/</loc>
+    <loc>http://localhost:1313/posts/hhbr-15-spl-e-estruturas-de-dados/</loc>
     <lastmod>2017-10-26T10:47:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/composer/</loc>
+    <loc>http://localhost:1313/categories/composer/</loc>
     <lastmod>2017-09-28T12:15:24+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</loc>
+    <loc>http://localhost:1313/posts/hhbr-14-iniciando-com-composer-video/</loc>
     <lastmod>2017-09-28T12:15:24+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/henrique-bastos/</loc>
+    <loc>http://localhost:1313/posts/henrique-bastos/</loc>
     <lastmod>2017-09-07T14:00:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/python/</loc>
+    <loc>http://localhost:1313/categories/python/</loc>
     <lastmod>2017-09-07T14:00:11+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/qr-code-php/</loc>
+    <loc>http://localhost:1313/posts/qr-code-php/</loc>
     <lastmod>2017-08-26T15:03:46+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/autoload/</loc>
+    <loc>http://localhost:1313/tags/autoload/</loc>
     <lastmod>2017-08-08T23:10:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</loc>
+    <loc>http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/</loc>
     <lastmod>2017-08-08T23:10:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/namespace/</loc>
+    <loc>http://localhost:1313/tags/namespace/</loc>
     <lastmod>2017-08-08T23:10:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/traits/</loc>
+    <loc>http://localhost:1313/tags/traits/</loc>
     <lastmod>2017-08-08T23:10:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/como-usar-traits-no-php/</loc>
+    <loc>http://localhost:1313/posts/como-usar-traits-no-php/</loc>
     <lastmod>2017-08-07T14:58:50+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/open-source/a-licenca-mit/</loc>
+    <loc>http://localhost:1313/posts/a-licenca-mit/</loc>
     <lastmod>2017-08-03T11:53:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/licen%C3%A7a/</loc>
+    <loc>http://localhost:1313/tags/licen%C3%A7a/</loc>
     <lastmod>2017-08-03T11:53:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/mit/</loc>
+    <loc>http://localhost:1313/tags/mit/</loc>
     <lastmod>2017-08-03T11:53:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/go/</loc>
+    <loc>http://localhost:1313/tags/go/</loc>
     <lastmod>2017-08-01T03:04:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/golang/</loc>
+    <loc>http://localhost:1313/categories/golang/</loc>
     <lastmod>2017-08-01T03:04:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/golang/</loc>
+    <loc>http://localhost:1313/tags/golang/</loc>
     <lastmod>2017-08-01T03:04:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/por-que-golang-video/</loc>
+    <loc>http://localhost:1313/posts/por-que-golang-video/</loc>
     <lastmod>2017-08-01T03:04:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/bolt/</loc>
+    <loc>http://localhost:1313/tags/bolt/</loc>
     <lastmod>2017-06-21T02:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/cms/</loc>
+    <loc>http://localhost:1313/tags/cms/</loc>
     <lastmod>2017-06-21T02:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/bolt-uma-alternativa-ao-wordpress-video/</loc>
+    <loc>http://localhost:1313/posts/bolt-uma-alternativa-ao-wordpress-video/</loc>
     <lastmod>2017-06-21T02:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/wordpress/</loc>
+    <loc>http://localhost:1313/tags/wordpress/</loc>
     <lastmod>2017-06-21T02:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/dbal/</loc>
+    <loc>http://localhost:1313/tags/dbal/</loc>
     <lastmod>2017-06-08T23:05:35+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/doctrine/</loc>
+    <loc>http://localhost:1313/categories/doctrine/</loc>
     <lastmod>2017-06-08T23:05:35+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/doctrine/</loc>
+    <loc>http://localhost:1313/tags/doctrine/</loc>
     <lastmod>2017-06-08T23:05:35+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/orm/</loc>
+    <loc>http://localhost:1313/tags/orm/</loc>
     <lastmod>2017-06-08T23:05:35+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/relacionando-entidades-com-doctrine/</loc>
+    <loc>http://localhost:1313/posts/relacionando-entidades-com-doctrine/</loc>
     <lastmod>2017-06-08T23:05:35+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/cache/</loc>
+    <loc>http://localhost:1313/tags/cache/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/criando-cache-com-zend-cache/</loc>
+    <loc>http://localhost:1313/posts/criando-cache-com-zend-cache/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend-cache/</loc>
+    <loc>http://localhost:1313/tags/zend-cache/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend-framework/</loc>
+    <loc>http://localhost:1313/categories/zend-framework/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/zend-framework/</loc>
+    <loc>http://localhost:1313/tags/zend-framework/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zf2/</loc>
+    <loc>http://localhost:1313/tags/zf2/</loc>
     <lastmod>2017-05-19T22:50:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/crud-simples-facil-e-rapido-com-doctrine/</loc>
+    <loc>http://localhost:1313/posts/crud-simples-facil-e-rapido-com-doctrine/</loc>
     <lastmod>2017-05-17T22:24:53+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/crud/</loc>
+    <loc>http://localhost:1313/tags/crud/</loc>
     <lastmod>2017-05-17T22:24:53+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/training-center-video/</loc>
+    <loc>http://localhost:1313/posts/training-center-video/</loc>
     <lastmod>2017-05-16T13:37:50+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/training-center/</loc>
+    <loc>http://localhost:1313/tags/training-center/</loc>
     <lastmod>2017-05-16T13:37:50+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/code-quality/</loc>
+    <loc>http://localhost:1313/tags/code-quality/</loc>
     <lastmod>2017-05-10T22:20:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/code-review/</loc>
+    <loc>http://localhost:1313/categories/code-review/</loc>
     <lastmod>2017-05-10T22:20:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/code-review/</loc>
+    <loc>http://localhost:1313/tags/code-review/</loc>
     <lastmod>2017-05-10T22:20:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</loc>
+    <loc>http://localhost:1313/posts/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</loc>
     <lastmod>2017-05-10T22:20:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/qualidade-de-c%C3%B3digo/</loc>
+    <loc>http://localhost:1313/tags/qualidade-de-c%C3%B3digo/</loc>
     <lastmod>2017-05-10T22:20:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/time/</loc>
-    <lastmod>2017-05-10T22:20:12+00:00</lastmod>
+    <loc>http://localhost:1313/posts/normalizando-seu-banco-de-dados-mysql/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ember/</loc>
+    <loc>http://localhost:1313/tags/ember/</loc>
     <lastmod>2017-05-04T14:55:09+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/emberjs/</loc>
+    <loc>http://localhost:1313/categories/emberjs/</loc>
     <lastmod>2017-05-04T14:55:09+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/emberjs/</loc>
+    <loc>http://localhost:1313/tags/emberjs/</loc>
     <lastmod>2017-05-04T14:55:09+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</loc>
+    <loc>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</loc>
     <lastmod>2017-05-04T14:55:09+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/code/</loc>
+    <loc>http://localhost:1313/tags/code/</loc>
     <lastmod>2017-05-02T18:15:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/documentacao/</loc>
+    <loc>http://localhost:1313/categories/documentacao/</loc>
     <lastmod>2017-05-02T18:15:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/documenta%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/documenta%C3%A7%C3%A3o/</loc>
     <lastmod>2017-05-02T18:15:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/phpdoc/</loc>
+    <loc>http://localhost:1313/tags/phpdoc/</loc>
     <lastmod>2017-05-02T18:15:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/phpdoc-para-que-server-e-onde-devo-usar/</loc>
+    <loc>http://localhost:1313/posts/phpdoc-para-que-server-e-onde-devo-usar/</loc>
     <lastmod>2017-05-02T18:15:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</loc>
+    <loc>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</loc>
     <lastmod>2017-04-21T16:27:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/command-line/</loc>
+    <loc>http://localhost:1313/tags/command-line/</loc>
     <lastmod>2017-04-21T16:27:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/prompt/</loc>
+    <loc>http://localhost:1313/tags/prompt/</loc>
     <lastmod>2017-04-21T16:27:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/terminal/</loc>
+    <loc>http://localhost:1313/tags/terminal/</loc>
     <lastmod>2017-04-21T16:27:37+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/editor-de-text/</loc>
+    <loc>http://localhost:1313/tags/editor-de-text/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/editores/</loc>
+    <loc>http://localhost:1313/categories/editores/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/ide/</loc>
+    <loc>http://localhost:1313/categories/ide/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/ide/</loc>
+    <loc>http://localhost:1313/tags/ide/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</loc>
+    <loc>http://localhost:1313/posts/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/sou-dev/</loc>
+    <loc>http://localhost:1313/tags/sou-dev/</loc>
     <lastmod>2017-04-19T14:03:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</loc>
+    <loc>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</loc>
     <lastmod>2017-03-30T02:04:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/single-page-application/</loc>
+    <loc>http://localhost:1313/tags/single-page-application/</loc>
     <lastmod>2017-03-30T02:04:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/v%C3%ADdeo/</loc>
+    <loc>http://localhost:1313/tags/v%C3%ADdeo/</loc>
     <lastmod>2017-03-30T02:04:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/vuejs/</loc>
+    <loc>http://localhost:1313/categories/vuejs/</loc>
     <lastmod>2017-03-30T02:04:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/iniciando-com-composer/</loc>
+    <loc>http://localhost:1313/posts/iniciando-com-composer/</loc>
     <lastmod>2017-03-24T19:05:05+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/gravatar/</loc>
+    <loc>http://localhost:1313/tags/gravatar/</loc>
     <lastmod>2017-02-27T15:34:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/library/</loc>
+    <loc>http://localhost:1313/tags/library/</loc>
     <lastmod>2017-02-27T15:34:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/obtendo-imagens-do-gravatar/</loc>
+    <loc>http://localhost:1313/posts/obtendo-imagens-do-gravatar/</loc>
     <lastmod>2017-02-27T15:34:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/mercado-de-trabalho-video/</loc>
+    <loc>http://localhost:1313/posts/mercado-de-trabalho-video/</loc>
     <lastmod>2017-02-24T11:48:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/mercado-de-trabalho/</loc>
+    <loc>http://localhost:1313/tags/mercado-de-trabalho/</loc>
     <lastmod>2017-02-24T11:48:45+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/calculando-diferenca-entre-duas-datas-com-php/</loc>
+    <loc>http://localhost:1313/posts/calculando-diferenca-entre-duas-datas-com-php/</loc>
     <lastmod>2017-02-09T09:25:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/datas/</loc>
+    <loc>http://localhost:1313/tags/datas/</loc>
     <lastmod>2017-02-09T09:25:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</loc>
+    <loc>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</loc>
     <lastmod>2017-02-06T22:08:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/sql-injection/</loc>
+    <loc>http://localhost:1313/tags/sql-injection/</loc>
     <lastmod>2017-02-06T22:08:22+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</loc>
+    <loc>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</loc>
     <lastmod>2017-02-06T22:08:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/valida%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/valida%C3%A7%C3%A3o/</loc>
     <lastmod>2017-02-06T22:08:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-introducao/</loc>
+    <loc>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-introducao/</loc>
     <lastmod>2017-02-06T22:08:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/descobrindo-quantidade-de-quebra-de-linhas-de-um-texto-com-php/</loc>
+    <loc>http://localhost:1313/posts/descobrindo-quantidade-de-quebra-de-linhas-de-um-texto-com-php/</loc>
     <lastmod>2017-02-02T23:20:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/converter-data-para-pt-br-com-php/</loc>
+    <loc>http://localhost:1313/posts/converter-data-para-pt-br-com-php/</loc>
     <lastmod>2017-02-01T19:37:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/data/</loc>
+    <loc>http://localhost:1313/tags/data/</loc>
     <lastmod>2017-02-01T19:37:42+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/codecasts/</loc>
+    <loc>http://localhost:1313/tags/codecasts/</loc>
     <lastmod>2017-01-30T10:42:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/criptografia/</loc>
+    <loc>http://localhost:1313/tags/criptografia/</loc>
     <lastmod>2017-01-30T10:42:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/criptografia-entendendo-o-https-video/</loc>
+    <loc>http://localhost:1313/posts/criptografia-entendendo-o-https-video/</loc>
     <lastmod>2017-01-30T10:42:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/https/</loc>
+    <loc>http://localhost:1313/categories/https/</loc>
     <lastmod>2017-01-30T10:42:59+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/https/</loc>
-    <lastmod>2017-01-30T10:42:59+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/password/</loc>
+    <loc>http://localhost:1313/posts/senhas-mais-seguras-com-zend-crypt/</loc>
     <lastmod>2016-12-28T17:37:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/senhas/</loc>
+    <loc>http://localhost:1313/tags/zend-crypt/</loc>
     <lastmod>2016-12-28T17:37:47+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/senhas-mais-seguras-com-zend-crypt/</loc>
-    <lastmod>2016-12-28T17:37:47+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend-crypt/</loc>
-    <lastmod>2016-12-28T17:37:47+00:00</lastmod>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/php/refatoracao-video/</loc>
+    <loc>http://localhost:1313/posts/refatoracao-video/</loc>
     <lastmod>2016-12-10T21:06:31+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/phpunit/</loc>
+    <loc>http://localhost:1313/categories/phpunit/</loc>
     <lastmod>2016-12-10T21:06:31+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/refatora%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/tags/refatora%C3%A7%C3%A3o/</loc>
     <lastmod>2016-12-10T21:06:31+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/phpunit/</loc>
+    <loc>http://localhost:1313/tags/phpunit/</loc>
     <lastmod>2016-12-06T02:09:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/tdd/</loc>
+    <loc>http://localhost:1313/tags/tdd/</loc>
     <lastmod>2016-12-06T02:09:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/testes/</loc>
+    <loc>http://localhost:1313/tags/testes/</loc>
     <lastmod>2016-12-06T02:09:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</loc>
+    <loc>http://localhost:1313/posts/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</loc>
     <lastmod>2016-12-06T02:09:40+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/por-que-php-video/</loc>
+    <loc>http://localhost:1313/posts/por-que-php-video/</loc>
     <lastmod>2016-12-03T12:57:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/phpsp/</loc>
+    <loc>http://localhost:1313/tags/phpsp/</loc>
     <lastmod>2016-12-03T12:57:16+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/manipulando-e-validando-uri-com-zend-uri/</loc>
+    <loc>http://localhost:1313/posts/manipulando-e-validando-uri-com-zend-uri/</loc>
     <lastmod>2016-10-29T01:08:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/uri/</loc>
+    <loc>http://localhost:1313/tags/uri/</loc>
     <lastmod>2016-10-29T01:08:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/flask/</loc>
+    <loc>http://localhost:1313/categories/flask/</loc>
     <lastmod>2016-10-25T23:53:51+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/flask/</loc>
+    <loc>http://localhost:1313/tags/flask/</loc>
     <lastmod>2016-10-25T23:53:51+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/resolvendo-os-seus-problemas-web-com-flask-video/</loc>
+    <loc>http://localhost:1313/posts/resolvendo-os-seus-problemas-web-com-flask-video/</loc>
     <lastmod>2016-10-25T23:53:51+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2016-10-25T23:53:51+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/breadcrumbs/</loc>
+    <loc>http://localhost:1313/tags/breadcrumbs/</loc>
     <lastmod>2016-10-19T00:48:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/gerando-breadcrumbs-no-zend-framework/</loc>
+    <loc>http://localhost:1313/posts/gerando-breadcrumbs-no-zend-framework/</loc>
     <lastmod>2016-10-19T00:48:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/css/</loc>
+    <loc>http://localhost:1313/tags/css/</loc>
     <lastmod>2016-10-18T23:17:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/flexbox/</loc>
+    <loc>http://localhost:1313/tags/flexbox/</loc>
     <lastmod>2016-10-18T23:17:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/video/flexbox-interfaces-modernas-video/</loc>
+    <loc>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</loc>
     <lastmod>2016-10-18T23:17:07+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/template-engine/</loc>
+    <loc>http://localhost:1313/tags/template-engine/</loc>
     <lastmod>2016-10-04T13:46:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/twig/</loc>
+    <loc>http://localhost:1313/tags/twig/</loc>
     <lastmod>2016-10-04T13:46:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/twig-a-super-engine-template-para-php/</loc>
+    <loc>http://localhost:1313/posts/twig-a-super-engine-template-para-php/</loc>
     <lastmod>2016-10-04T13:46:38+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/php-do-jeito-certo/</loc>
+    <loc>http://localhost:1313/tags/php-do-jeito-certo/</loc>
     <lastmod>2016-09-30T00:43:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</loc>
+    <loc>http://localhost:1313/posts/php-do-jeito-certo-episodio-vi-o-retorno-do-podcast/</loc>
     <lastmod>2016-09-30T00:43:18+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/evento/</loc>
+    <loc>http://localhost:1313/tags/evento/</loc>
     <lastmod>2016-09-12T02:58:58+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/categories/eventos/</loc>
+    <loc>http://localhost:1313/categories/eventos/</loc>
     <lastmod>2016-09-12T02:58:58+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/front-in-vale/</loc>
+    <loc>http://localhost:1313/tags/front-in-vale/</loc>
     <lastmod>2016-09-12T02:58:58+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/eventos/um-sabado-fantastico-evento-front-in-vale-2016/</loc>
+    <loc>http://localhost:1313/posts/um-sabado-fantastico-evento-front-in-vale-2016/</loc>
     <lastmod>2016-09-12T02:58:58+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/diret%C3%B3rios/</loc>
+    <loc>http://localhost:1313/tags/diret%C3%B3rios/</loc>
     <lastmod>2016-09-04T20:53:17+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/manipulando-diretorios-com-php/</loc>
+    <loc>http://localhost:1313/posts/manipulando-diretorios-com-php/</loc>
     <lastmod>2016-09-04T20:53:17+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/docker/docker-para-iniciantes/</loc>
+    <loc>http://localhost:1313/posts/docker-para-iniciantes/</loc>
     <lastmod>2016-08-27T01:41:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/criando-e-baixando-arquivos-zip-com-php/</loc>
+    <loc>http://localhost:1313/posts/criando-e-baixando-arquivos-zip-com-php/</loc>
     <lastmod>2016-08-25T01:52:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/download/</loc>
+    <loc>http://localhost:1313/tags/download/</loc>
     <lastmod>2016-08-25T01:52:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zip/</loc>
+    <loc>http://localhost:1313/tags/zip/</loc>
     <lastmod>2016-08-25T01:52:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/c%C3%B3digo-aberto/</loc>
+    <loc>http://localhost:1313/tags/c%C3%B3digo-aberto/</loc>
     <lastmod>2016-07-09T16:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/software-livre/</loc>
+    <loc>http://localhost:1313/tags/software-livre/</loc>
     <lastmod>2016-07-09T16:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/open-source/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</loc>
+    <loc>http://localhost:1313/posts/software-livre-de-codigo-aberto-e-software-gratuito-quais-sao-suas-diferencas/</loc>
     <lastmod>2016-07-09T16:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/um-grande-passo-zend-framework-3-released/</loc>
+    <loc>http://localhost:1313/posts/um-grande-passo-zend-framework-3-released/</loc>
     <lastmod>2016-06-30T00:29:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zend-framework-3/</loc>
+    <loc>http://localhost:1313/tags/zend-framework-3/</loc>
     <lastmod>2016-06-30T00:29:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/zf3/</loc>
+    <loc>http://localhost:1313/tags/zf3/</loc>
     <lastmod>2016-06-30T00:29:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/coding/</loc>
+    <loc>http://localhost:1313/tags/coding/</loc>
     <lastmod>2016-06-07T01:54:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-coding-standards-fixer/</loc>
+    <loc>http://localhost:1313/posts/php-coding-standards-fixer/</loc>
     <lastmod>2016-06-07T01:54:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/standards-fixer/</loc>
+    <loc>http://localhost:1313/tags/standards-fixer/</loc>
     <lastmod>2016-06-07T01:54:02+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/generators/</loc>
+    <loc>http://localhost:1313/tags/generators/</loc>
     <lastmod>2016-06-02T23:24:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/generators-no-php/</loc>
+    <loc>http://localhost:1313/posts/generators-no-php/</loc>
     <lastmod>2016-06-02T23:24:19+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/application/</loc>
+    <loc>http://localhost:1313/tags/application/</loc>
     <lastmod>2016-05-18T00:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/construindo-um-silex-skeleton-application/</loc>
+    <loc>http://localhost:1313/posts/construindo-um-silex-skeleton-application/</loc>
     <lastmod>2016-05-18T00:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/silex/</loc>
+    <loc>http://localhost:1313/tags/silex/</loc>
     <lastmod>2016-05-18T00:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/skeleton/</loc>
+    <loc>http://localhost:1313/tags/skeleton/</loc>
     <lastmod>2016-05-18T00:17:43+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/codesniffer/</loc>
+    <loc>http://localhost:1313/tags/codesniffer/</loc>
     <lastmod>2016-05-14T00:29:49+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-codesniffer/</loc>
+    <loc>http://localhost:1313/posts/php-codesniffer/</loc>
     <lastmod>2016-05-14T00:29:49+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</loc>
+    <loc>http://localhost:1313/posts/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</loc>
     <lastmod>2016-05-12T01:57:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/sami/</loc>
+    <loc>http://localhost:1313/tags/sami/</loc>
     <lastmod>2016-05-12T01:57:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/como-manter-se-atualizado/</loc>
+    <loc>http://localhost:1313/posts/como-manter-se-atualizado/</loc>
     <lastmod>2016-04-26T01:40:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/life/</loc>
+    <loc>http://localhost:1313/tags/life/</loc>
     <lastmod>2016-04-26T01:40:15+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-7-scalar-type/</loc>
+    <loc>http://localhost:1313/posts/php-7-scalar-type/</loc>
     <lastmod>2016-03-22T04:03:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/php7/</loc>
+    <loc>http://localhost:1313/tags/php7/</loc>
     <lastmod>2016-03-22T04:03:26+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/padr%C3%B5es/</loc>
+    <loc>http://localhost:1313/tags/padr%C3%B5es/</loc>
     <lastmod>2016-03-20T21:07:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-segue-padroes-sim/</loc>
+    <loc>http://localhost:1313/posts/php-segue-padroes-sim/</loc>
     <lastmod>2016-03-20T21:07:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/psr/</loc>
+    <loc>http://localhost:1313/tags/psr/</loc>
     <lastmod>2016-03-20T21:07:27+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/</loc>
+    <loc>http://localhost:1313/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</loc>
     <lastmod>2016-02-11T00:59:12+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/code-bar/</loc>
+    <loc>http://localhost:1313/tags/code-bar/</loc>
     <lastmod>2016-01-22T20:57:53+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/c%C3%B3digo-de-barra/</loc>
+    <loc>http://localhost:1313/tags/c%C3%B3digo-de-barra/</loc>
     <lastmod>2016-01-22T20:57:53+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/php/codigos-de-barra-com-zend-framework-2/</loc>
+    <loc>http://localhost:1313/posts/codigos-de-barra-com-zend-framework-2/</loc>
     <lastmod>2016-01-22T20:57:53+00:00</lastmod>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/tags/pub/sub/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>https://diegobrocanelli.com.br/search/</loc>
-  </url><url>
-    <loc>https://diegobrocanelli.com.br/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url>
 </urlset>

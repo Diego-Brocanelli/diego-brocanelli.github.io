@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>phptestfest on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/phptestfest/</link>
-    <description>Recent content in phptestfest on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Phptestfest on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/phptestfest/</link>
+    <description>Recent content in Phptestfest on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:30:38 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/phptestfest/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:30:38 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/phptestfest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <link>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
       <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
-      <description>Olá, tudo bem?!
-Nesta décima sexta edição da comunidade hhbr trazemos uma grande palestra com o tema “Contribuindo com o PHP e o PHP TestFest 2017”, ministrado pelo grande Rogerio Prado de Jesus.
-Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Palestrante: Rogerio Prado de Jesus Site: https://rogeriopradoj.com/ Twitter: https://twitter.com/RogerioPradoJ GitHub: https://github.com/RogerioPradoJ Comunidade: https://t.me/PHPTestFestBrasil Link dos slides: https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16 Links Comentados https://phptestfest.org/&amp;gt; https://3v4l.org/ http://pensandonaweb.com.br/ https://externals.io/ https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ https://qa.</description>
+      <guid>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta décima sexta edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; trazemos uma grande palestra com o tema “&lt;em&gt;Contribuindo com o PHP e o PHP TestFest 2017&lt;/em&gt;”, ministrado pelo grande &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;Rogerio Prado de Jesus&lt;/a&gt;.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/XazncfYacPc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Contribuindo com o PHP e o PHP TestFest 2017”&lt;/li&gt;
+&lt;li&gt;Palestrante: Rogerio Prado de Jesus&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;https://rogeriopradoj.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/RogerioPradoJ&#34;&gt;https://twitter.com/RogerioPradoJ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/RogerioPradoJ&#34;&gt;https://github.com/RogerioPradoJ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comunidade: &lt;a href=&#34;https://t.me/PHPTestFestBrasil&#34;&gt;https://t.me/PHPTestFestBrasil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Link dos slides: &lt;a href=&#34;https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16&#34;&gt;https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://phptestfest.org/%3E&#34;&gt;https://phptestfest.org/&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3v4l.org/&#34;&gt;https://3v4l.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pensandonaweb.com.br/&#34;&gt;http://pensandonaweb.com.br/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://externals.io/&#34;&gt;https://externals.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ&#34;&gt;https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qa.php.net/phpt_details.php&#34;&gt;https://qa.php.net/phpt_details.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gcov.php.net/PHP&#34;&gt;http://gcov.php.net/PHP&lt;/a&gt;_HEAD/lcov_html&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chat.stackoverflow.com/rooms/11/php&#34;&gt;https://chat.stackoverflow.com/rooms/11/php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=DyDCz1qYQGU&amp;amp;feature=youtu.be&#34;&gt;https://www.youtube.com/watch?v=DyDCz1qYQGU&amp;amp;feature=youtu.be&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>mensageria on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/mensageria/</link>
-    <description>Recent content in mensageria on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Mensageria on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/mensageria/</link>
+    <description>Recent content in Mensageria on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 26 Sep 2024 14:44:00 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/mensageria/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Sep 2024 14:44:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mensageria/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
-      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
+      <link>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
       <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
-      <description>Índice O que é RabbitMQ? Como Exchanges e Filas funcionam no RabbitMQ Publicador e Consumidor: como funcionam no RabbitMQ Vantagens e desvantagens das filas fanout Mas por que usar mensageria? Conclusão Links e referências O que é RabbitMQ? De acordo com sua própria documentação, em tradução livre:
-&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.</description>
+      <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
+      <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
+&lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
+&lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

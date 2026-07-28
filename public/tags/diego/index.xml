@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>diego on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/diego/</link>
-    <description>Recent content in diego on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Diego on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/diego/</link>
+    <description>Recent content in Diego on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/diego/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Nov 2021 14:38:47 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/diego/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Participação no Podcast Fechatag</title>
-      <link>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</link>
+      <title>Participação no podcast Fechatag</title>
+      <link>http://localhost:1313/posts/participacao-no-podcast-fechatag/</link>
       <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/participacao-no-podcast-fechatag/</guid>
-      <description>Olá, tudo bem?
-Recentemente tive o enorme prazer em participar de um episódio do podcast Fechatag, do grande Montanha.
-Acompanho o Montanha desde a época em que era host do podcast Dev Na Estrada, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.
-Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos.</description>
+      <guid>http://localhost:1313/posts/participacao-no-podcast-fechatag/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?&lt;/p&gt;
+&lt;p&gt;Recentemente tive o enorme prazer em participar de um episódio do &lt;a href=&#34;https://fechatagpodcast.com.br/&#34;&gt;podcast Fechatag&lt;/a&gt;, do grande &lt;a href=&#34;https://twitter.com/femontanha&#34;&gt;Montanha&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Acompanho o Montanha desde a época em que era host do podcast &lt;a href=&#34;https://devnaestrada.com.br/&#34;&gt;Dev Na Estrada&lt;/a&gt;, e quando ele anunciou a criação do fechatag fiquei muito feliz, pois é um material muito rico, diferenciado e prazeroso de acompanhar.&lt;/p&gt;
+&lt;p&gt;Adoro o fechatag, pois conecta pessoas por meio da tecnologia que compartilham suas histórias, aprendizados e sucessos. Acabamos conhecendo por outra ótica culturas e aprendizados  maravilhosos.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

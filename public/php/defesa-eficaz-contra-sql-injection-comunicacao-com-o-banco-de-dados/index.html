@@ -1,338 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-br" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Defesa eficaz contra SQL Injection – Comunicação com o banco de dados | Diego Brocanelli</title>
-<meta name="keywords" content="sql, SQL Injection" />
-<meta name="description" content="Fala galera, tudo tranquilo?!
+<!doctype html><html lang=pt-br dir=auto data-theme=auto><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Defesa eficaz contra SQL Injection – Comunicação com o banco de dados | Diego Brocanelli</title><meta name=keywords content="sql,SQL Injection"><meta name=description content="Fala galera, tudo tranquilo?!
+Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados)  recomendo a leitura para maior compreensão do tema.
+Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados."><meta name=author content="Diego Brocanelli"><link rel=canonical href=http://localhost:1313/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/><link crossorigin=anonymous href=/assets/css/stylesheet.e2fc0ac6072435d1d0d8c4c0cb0cab916f8eed974d281360440d713e01d9f10a.css integrity="sha256-4vwKxgckNdHQ2MTAywyrkW+O7ZdNKBNgRA1xPgHZ8Qo=" rel="preload stylesheet" as=style><link rel=icon href=http://localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png><link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=pt-br href=http://localhost:1313/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-724B54J2LY"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-724B54J2LY")}</script><meta property="og:url" content="http://localhost:1313/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/"><meta property="og:site_name" content="Diego Brocanelli"><meta property="og:title" content="Defesa eficaz contra SQL Injection – Comunicação com o banco de dados"><meta property="og:description" content="Fala galera, tudo tranquilo?!
 Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados) recomendo a leitura para maior compreensão do tema.
-Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.">
-<meta name="author" content="Diego Brocanelli">
-<link rel="canonical" href="https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c18f6860182e7002af473582222b37f9280d6e33be9205e2f8cf983993e44ff0.css" integrity="sha256-wY9oYBgucAKvRzWCIis3&#43;SgNbjO&#43;kgXi&#43;M&#43;YOZPkT/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://diegobrocanelli.com.br/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://diegobrocanelli.com.br/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://diegobrocanelli.com.br/apple-touch-icon.png">
-<link rel="mask-icon" href="https://diegobrocanelli.com.br/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.111.3">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://diegobrocanelli.com.br/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://diegobrocanelli.com.br/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
-                    <span>Pesquisar</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/about/" title="Sobre">
-                    <span>Sobre</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://diegobrocanelli.com.br/">Home</a>&nbsp;»&nbsp;<a href="https://diegobrocanelli.com.br/posts/">Posts</a></div>
-    <h1 class="post-title">
-      Defesa eficaz contra SQL Injection – Comunicação com o banco de dados
-    </h1>
-    <div class="post-meta"><span title='2017-02-06 22:08:22 +0000 UTC'>2017-02-06</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Diego Brocanelli
-
-</div>
-  </header> 
-  <div class="post-content"><p>Fala galera, tudo tranquilo?!</p>
-<p>Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (<a href="http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6ction-introducao/">Defesa eficaz contra SQL Injection – Introdução</a> e <a href="http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6idacao-dos-dados/">Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</a>)  recomendo a leitura para maior compreensão do tema.</p>
-<p>Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.</p>
-<p>Lembrando que um processo de login é mais complexo e elaborado, porem estou simplificando para que os tópicos de SQL Injection seja mais destacado.</p>
-<p>O PHP disponibiliza diversas maneiras para se conectar no banco de dados, como por exemplo as funções “mysql_*”, mysqli_* e PDO. Vale salientar que caso você utilize as funções “mysql_*” recomendo que pare agora pois elas foram depreciadas e não fazem mais parte do PHP desde o lançamento do PHP 7.</p>
-<p>Eu particularmente não sou adepto de utilizar a função “mysqli_”, prefiro o uso do PDO, pois é mais robusto e disponibiliza uma gama de opções que atendem todas as necessidades.</p>
-<p>Para nosso caso de estudo vamos analisar o código abaixo:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$querySQL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SELECT email FROM users WHERE email = :email AND senha = :senha&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>{
-</span></span><span style="display:flex;"><span>    $email  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;meu_email@teste.com.br&#39;</span>;
-</span></span><span style="display:flex;"><span>    $senha  <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;m1nh@ s3nh@ sup3r s3gur@ 1234&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    $pdo <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">\PDO</span>(<span style="color:#e6db74">&#34;mysql:host=DB_LOCAL;dbname=DB_NAME&#34;</span>, <span style="color:#e6db74">&#39;DB_USER&#39;</span>, <span style="color:#e6db74">&#39;DB_PASSWORD&#39;</span>);
-</span></span><span style="display:flex;"><span>    $statement <span style="color:#f92672">=</span> $pdo<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">prepare</span>($querySQL);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    $statement<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bindParam</span>(<span style="color:#e6db74">&#39;:email&#39;</span> , $email);
-</span></span><span style="display:flex;"><span>    $statement<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bindParam</span>(<span style="color:#e6db74">&#39;:senha&#39;</span> , $senha);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    $statement<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">execute</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    $result <span style="color:#f92672">=</span> $statement<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">\Exception</span> $exc){
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// tratamento da exceção
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Primeiro temos nossa variável contendo nossa string sql e nela informamos os valores que serão substituímos por meio do símbolo “:”.</p>
-<p>As variáveis “$email” e “$senha” são meramente didáticas, apenas simbolizando a passagem de parâmetro posteriormente para a consulta SQL.</p>
-<p>Inicialmente instanciamos nossa Classe PDO e passamos os parâmetros de conexão, cabe salientar que todas e qualquer informação de credencial de acesso ao banco de dados nunca devem ser armazenadas em arquivos de acesso pelo usuário, sempre devemos zelar pela sua integridade onde somente o sistema deve ter acesso a estas informações.</p>
-<p>Logo em seguida realizamos o “prepare” dos dados da consulta e armazenamos o prepare em nossa variável “$statement”.</p>
-<p>Em seguida realizamos o “bind” das informações recebidas com as declaradas na strgin SQL.</p>
-<p>Executamos nossa query SQL e podemos retornar a consulta com o método “fetchAll”;</p>
-<p>Como podemos notar, em poucas linhas de código fomos capazes de realizar uma consulta no banco de dados e receber seu resultado sem muito esforço.</p>
-<p>E se nós empregarmos as boas práticas que discutimos nesses últimos post, onde todo input e output de dados será validado e tratado e ao realizar uma ação no banco de dados podendo ser um SELECT, INSERT ou qualquer outra ação por meio do PDO, nossas consultas no banco de dados serão muito mais seguras e nossas aplicações terão uma cama ainda maior de proteção dos dados.</p>
-<p>Infelizmente, não é possível abordar todo o tema em apenas 3 post, pois é um tema vasto e que sempre devemos pesquisar cada vez mais como melhorar nossa segurança e proteger ainda mais nossas aplicações.</p>
-<p>Não recomendo que você crie seu framrwork do zero para manipulação de banco de dados, pois existem hoje no mercado diversas ferramentas que fazem isso com maestria como por exemplo:</p>
-<ul>
-<li><a href="http://www.doctrine-project.org/">Doctrine</a></li>
-<li><a href="https://docs.zendframework.com/zend-db/">Zend-DB</a></li>
-<li><a href="https://laravel.com/docs/5.0/eloquent">Eloquent</a></li>
-</ul>
-<p>As ferramentas citadas acima são poderosas e contem um vasto arsenal de recursos que irão facilitar e auxiliar no processo para trabalhar com banco de dados, pois dispõem de uma grande comunidade que trabalha para melhorar, corrigir bugs e implementar novas features.</p>
-<p>Caso você tenha interesse em construir um componente com propósitos acadêmicos, eu acho perfeitamente normal e aconselho, pois assim você ampliará seus conhecimentos na área.</p>
-<p>Lembrando também que nada o impede de contribuir com os projetos, pois todos os três são open sources 🙂</p>
-<p>E assim chegamos ao fim da nossa saga para melhorar nossas aplicações e proteger ainda mais contra SQL Injection, nada que mencionei aqui é escrito em pedra e será fantástico discutirmos mais sobre o assunto, por favor deixe suas perguntas e sugestões nos comentários.</p>
-<p>Lembre sempre que segurança de aplicações não é negociável, pois o usuário deposita sua confiança nos sistemas que construímos e devemos contribuir protegendo os dados que eles fornecem.</p>
-<p>Caso você conheça alguém que discorde e acha desnecessário validar e filtrar os dados recebidos pela aplicação e que para fazer uma consulta no banco não é nada de mais, basta executar e ter o retorno, mostre para ele essa série de posts e vamos juntos melhorar a qualidade das aplicações desenvolvidas, pois com isso  podemos demonstrar que os tópicos que abordamos aqui são de extrema importância e todos nós devemos utilizar no desenvolvimento de sistemas.</p>
-<p>E caso você se depare com uma aplicação que não siga essas regras de boas práticas ou até mesmo tenha desenvolvido o sistema, isso não é ruim, o ruim é saber que está errado e não fazer nada para concertar ou melhorar, sempre teremos algo para implementar que trará maior segurança para nossas aplicações.</p>
-<p>Espero que tenham apreciado e até a próxima 🙂</p>
-
-
-  </div>
-
-  
-  <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="Diego-Brocanelli/diego-brocanelli.github.io"
-            issue-term="pathname"
-            theme="github-dark"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://diegobrocanelli.com.br/tags/sql/">sql</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/sql-injection/">SQL Injection</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://diegobrocanelli.com.br/php/calculando-diferenca-entre-duas-datas-com-php/">
-    <span class="title">« </span>
-    <br>
-    <span>Calculando a diferença entre duas datas com PHP</span>
-  </a>
-  <a class="next" href="https://diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/">
-    <span class="title"> »</span>
-    <br>
-    <span>Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</span>
-  </a>
-</nav>
-
-
-<div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Defesa eficaz contra SQL Injection – Comunicação com o banco de dados on twitter"
-        href="https://twitter.com/intent/tweet/?text=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f&amp;hashtags=sql%2cSQLInjection">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Defesa eficaz contra SQL Injection – Comunicação com o banco de dados on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f&amp;title=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;summary=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-        </svg>
-    </a>
-</div>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2026 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados."><meta property="og:locale" content="pt_br"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-02-06T22:08:22+00:00"><meta property="article:modified_time" content="2017-02-06T22:08:22+00:00"><meta property="article:tag" content="Sql"><meta property="article:tag" content="SQL Injection"><meta property="og:image" content="http://localhost:1313/images/social-card.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost:1313/images/social-card.png"><meta name=twitter:title content="Defesa eficaz contra SQL Injection – Comunicação com o banco de dados"><meta name=twitter:description content="Fala galera, tudo tranquilo?!
+Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados) recomendo a leitura para maior compreensão do tema.
+Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Defesa eficaz contra SQL Injection – Comunicação com o banco de dados","item":"http://localhost:1313/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Defesa eficaz contra SQL Injection – Comunicação com o banco de dados","name":"Defesa eficaz contra SQL Injection – Comunicação com o banco de dados","description":"Fala galera, tudo tranquilo?!\nChegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados) recomendo a leitura para maior compreensão do tema.\nNós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.\n","keywords":["sql","SQL Injection"],"articleBody":"Fala galera, tudo tranquilo?!\nChegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (Defesa eficaz contra SQL Injection – Introdução e Defesa eficaz contra SQL Injection – Filtragem e validação dos dados) recomendo a leitura para maior compreensão do tema.\nNós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.\nLembrando que um processo de login é mais complexo e elaborado, porem estou simplificando para que os tópicos de SQL Injection seja mais destacado.\nO PHP disponibiliza diversas maneiras para se conectar no banco de dados, como por exemplo as funções “mysql_*”, mysqli_* e PDO. Vale salientar que caso você utilize as funções “mysql_*” recomendo que pare agora pois elas foram depreciadas e não fazem mais parte do PHP desde o lançamento do PHP 7.\nEu particularmente não sou adepto de utilizar a função “mysqli_”, prefiro o uso do PDO, pois é mais robusto e disponibiliza uma gama de opções que atendem todas as necessidades.\nPara nosso caso de estudo vamos analisar o código abaixo:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 \u003c?php $querySQL = 'SELECT email FROM users WHERE email = :email AND senha = :senha'; try{ $email = 'meu_email@teste.com.br'; $senha = 'm1nh@ s3nh@ sup3r s3gur@ 1234'; $pdo = new \\PDO(\"mysql:host=DB_LOCAL;dbname=DB_NAME\", 'DB_USER', 'DB_PASSWORD'); $statement = $pdo-\u003eprepare($querySQL); $statement-\u003ebindParam(':email' , $email); $statement-\u003ebindParam(':senha' , $senha); $statement-\u003eexecute(); $result = $statement-\u003efetchAll(); }catch(\\Exception $exc){ // tratamento da exceção } Primeiro temos nossa variável contendo nossa string sql e nela informamos os valores que serão substituímos por meio do símbolo “:”.\nAs variáveis “$email” e “$senha” são meramente didáticas, apenas simbolizando a passagem de parâmetro posteriormente para a consulta SQL.\nInicialmente instanciamos nossa Classe PDO e passamos os parâmetros de conexão, cabe salientar que todas e qualquer informação de credencial de acesso ao banco de dados nunca devem ser armazenadas em arquivos de acesso pelo usuário, sempre devemos zelar pela sua integridade onde somente o sistema deve ter acesso a estas informações.\nLogo em seguida realizamos o “prepare” dos dados da consulta e armazenamos o prepare em nossa variável “$statement”.\nEm seguida realizamos o “bind” das informações recebidas com as declaradas na strgin SQL.\nExecutamos nossa query SQL e podemos retornar a consulta com o método “fetchAll”;\nComo podemos notar, em poucas linhas de código fomos capazes de realizar uma consulta no banco de dados e receber seu resultado sem muito esforço.\nE se nós empregarmos as boas práticas que discutimos nesses últimos post, onde todo input e output de dados será validado e tratado e ao realizar uma ação no banco de dados podendo ser um SELECT, INSERT ou qualquer outra ação por meio do PDO, nossas consultas no banco de dados serão muito mais seguras e nossas aplicações terão uma cama ainda maior de proteção dos dados.\nInfelizmente, não é possível abordar todo o tema em apenas 3 post, pois é um tema vasto e que sempre devemos pesquisar cada vez mais como melhorar nossa segurança e proteger ainda mais nossas aplicações.\nNão recomendo que você crie seu framrwork do zero para manipulação de banco de dados, pois existem hoje no mercado diversas ferramentas que fazem isso com maestria como por exemplo:\nDoctrine Zend-DB Eloquent As ferramentas citadas acima são poderosas e contem um vasto arsenal de recursos que irão facilitar e auxiliar no processo para trabalhar com banco de dados, pois dispõem de uma grande comunidade que trabalha para melhorar, corrigir bugs e implementar novas features.\nCaso você tenha interesse em construir um componente com propósitos acadêmicos, eu acho perfeitamente normal e aconselho, pois assim você ampliará seus conhecimentos na área.\nLembrando também que nada o impede de contribuir com os projetos, pois todos os três são open sources 🙂\nE assim chegamos ao fim da nossa saga para melhorar nossas aplicações e proteger ainda mais contra SQL Injection, nada que mencionei aqui é escrito em pedra e será fantástico discutirmos mais sobre o assunto, por favor deixe suas perguntas e sugestões nos comentários.\nLembre sempre que segurança de aplicações não é negociável, pois o usuário deposita sua confiança nos sistemas que construímos e devemos contribuir protegendo os dados que eles fornecem.\nCaso você conheça alguém que discorde e acha desnecessário validar e filtrar os dados recebidos pela aplicação e que para fazer uma consulta no banco não é nada de mais, basta executar e ter o retorno, mostre para ele essa série de posts e vamos juntos melhorar a qualidade das aplicações desenvolvidas, pois com isso podemos demonstrar que os tópicos que abordamos aqui são de extrema importância e todos nós devemos utilizar no desenvolvimento de sistemas.\nE caso você se depare com uma aplicação que não siga essas regras de boas práticas ou até mesmo tenha desenvolvido o sistema, isso não é ruim, o ruim é saber que está errado e não fazer nada para concertar ou melhorar, sempre teremos algo para implementar que trará maior segurança para nossas aplicações.\nEspero que tenham apreciado e até a próxima 🙂\n","wordCount":"892","inLanguage":"pt-br","image":"http://localhost:1313/images/social-card.png","datePublished":"2017-02-06T22:08:22Z","dateModified":"2017-02-06T22:08:22Z","author":{"@type":"Person","name":"Diego Brocanelli"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/php/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/"},"publisher":{"@type":"Organization","name":"Diego Brocanelli","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=http://localhost:1313/ accesskey=h title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=http://localhost:1313/ title=Home><span>Home</span></a></li><li><a href=http://localhost:1313/search/ title="Pesquisar (Alt + /)" accesskey=/><span>Pesquisar</span></a></li><li><a href=http://localhost:1313/about/ title=Sobre><span>Sobre</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Início</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>Posts</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">Defesa eficaz contra SQL Injection – Comunicação com o banco de dados</h1><div class=post-meta><span title='2017-02-06 22:08:22 +0000 UTC'>2017-02-06</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>892 palavras</span>&nbsp;·&nbsp;<span>Diego Brocanelli</span></div></header><div class="post-content md-content"><p>Fala galera, tudo tranquilo?!</p><p>Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (<a href=http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6ction-introducao/>Defesa eficaz contra SQL Injection – Introdução</a> e <a href=http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6idacao-dos-dados/>Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</a>)  recomendo a leitura para maior compreensão do tema.</p><p>Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.</p><p>Lembrando que um processo de login é mais complexo e elaborado, porem estou simplificando para que os tópicos de SQL Injection seja mais destacado.</p><p>O PHP disponibiliza diversas maneiras para se conectar no banco de dados, como por exemplo as funções “mysql_*”, mysqli_* e PDO. Vale salientar que caso você utilize as funções “mysql_*” recomendo que pare agora pois elas foram depreciadas e não fazem mais parte do PHP desde o lançamento do PHP 7.</p><p>Eu particularmente não sou adepto de utilizar a função “mysqli_”, prefiro o uso do PDO, pois é mais robusto e disponibiliza uma gama de opções que atendem todas as necessidades.</p><p>Para nosso caso de estudo vamos analisar o código abaixo:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=line><span class=cl><span class=o>&lt;?</span><span class=nx>php</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>$querySQL</span> <span class=o>=</span> <span class=s1>&#39;SELECT email FROM users WHERE email = :email AND senha = :senha&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>try</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$email</span>  <span class=o>=</span> <span class=s1>&#39;meu_email@teste.com.br&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$senha</span>  <span class=o>=</span> <span class=s1>&#39;m1nh@ s3nh@ sup3r s3gur@ 1234&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>$pdo</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>\PDO</span><span class=p>(</span><span class=s2>&#34;mysql:host=DB_LOCAL;dbname=DB_NAME&#34;</span><span class=p>,</span> <span class=s1>&#39;DB_USER&#39;</span><span class=p>,</span> <span class=s1>&#39;DB_PASSWORD&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$statement</span> <span class=o>=</span> <span class=nv>$pdo</span><span class=o>-&gt;</span><span class=na>prepare</span><span class=p>(</span><span class=nv>$querySQL</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>$statement</span><span class=o>-&gt;</span><span class=na>bindParam</span><span class=p>(</span><span class=s1>&#39;:email&#39;</span> <span class=p>,</span> <span class=nv>$email</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$statement</span><span class=o>-&gt;</span><span class=na>bindParam</span><span class=p>(</span><span class=s1>&#39;:senha&#39;</span> <span class=p>,</span> <span class=nv>$senha</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nv>$statement</span><span class=o>-&gt;</span><span class=na>execute</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nv>$result</span> <span class=o>=</span> <span class=nv>$statement</span><span class=o>-&gt;</span><span class=na>fetchAll</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=nx>\Exception</span> <span class=nv>$exc</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// tratamento da exceção
+</span></span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Primeiro temos nossa variável contendo nossa string sql e nela informamos os valores que serão substituímos por meio do símbolo “:”.</p><p>As variáveis “$email” e “$senha” são meramente didáticas, apenas simbolizando a passagem de parâmetro posteriormente para a consulta SQL.</p><p>Inicialmente instanciamos nossa Classe PDO e passamos os parâmetros de conexão, cabe salientar que todas e qualquer informação de credencial de acesso ao banco de dados nunca devem ser armazenadas em arquivos de acesso pelo usuário, sempre devemos zelar pela sua integridade onde somente o sistema deve ter acesso a estas informações.</p><p>Logo em seguida realizamos o “prepare” dos dados da consulta e armazenamos o prepare em nossa variável “$statement”.</p><p>Em seguida realizamos o “bind” das informações recebidas com as declaradas na strgin SQL.</p><p>Executamos nossa query SQL e podemos retornar a consulta com o método “fetchAll”;</p><p>Como podemos notar, em poucas linhas de código fomos capazes de realizar uma consulta no banco de dados e receber seu resultado sem muito esforço.</p><p>E se nós empregarmos as boas práticas que discutimos nesses últimos post, onde todo input e output de dados será validado e tratado e ao realizar uma ação no banco de dados podendo ser um SELECT, INSERT ou qualquer outra ação por meio do PDO, nossas consultas no banco de dados serão muito mais seguras e nossas aplicações terão uma cama ainda maior de proteção dos dados.</p><p>Infelizmente, não é possível abordar todo o tema em apenas 3 post, pois é um tema vasto e que sempre devemos pesquisar cada vez mais como melhorar nossa segurança e proteger ainda mais nossas aplicações.</p><p>Não recomendo que você crie seu framrwork do zero para manipulação de banco de dados, pois existem hoje no mercado diversas ferramentas que fazem isso com maestria como por exemplo:</p><ul><li><a href=http://www.doctrine-project.org/>Doctrine</a></li><li><a href=https://docs.zendframework.com/zend-db/>Zend-DB</a></li><li><a href=https://laravel.com/docs/5.0/eloquent>Eloquent</a></li></ul><p>As ferramentas citadas acima são poderosas e contem um vasto arsenal de recursos que irão facilitar e auxiliar no processo para trabalhar com banco de dados, pois dispõem de uma grande comunidade que trabalha para melhorar, corrigir bugs e implementar novas features.</p><p>Caso você tenha interesse em construir um componente com propósitos acadêmicos, eu acho perfeitamente normal e aconselho, pois assim você ampliará seus conhecimentos na área.</p><p>Lembrando também que nada o impede de contribuir com os projetos, pois todos os três são open sources 🙂</p><p>E assim chegamos ao fim da nossa saga para melhorar nossas aplicações e proteger ainda mais contra SQL Injection, nada que mencionei aqui é escrito em pedra e será fantástico discutirmos mais sobre o assunto, por favor deixe suas perguntas e sugestões nos comentários.</p><p>Lembre sempre que segurança de aplicações não é negociável, pois o usuário deposita sua confiança nos sistemas que construímos e devemos contribuir protegendo os dados que eles fornecem.</p><p>Caso você conheça alguém que discorde e acha desnecessário validar e filtrar os dados recebidos pela aplicação e que para fazer uma consulta no banco não é nada de mais, basta executar e ter o retorno, mostre para ele essa série de posts e vamos juntos melhorar a qualidade das aplicações desenvolvidas, pois com isso  podemos demonstrar que os tópicos que abordamos aqui são de extrema importância e todos nós devemos utilizar no desenvolvimento de sistemas.</p><p>E caso você se depare com uma aplicação que não siga essas regras de boas práticas ou até mesmo tenha desenvolvido o sistema, isso não é ruim, o ruim é saber que está errado e não fazer nada para concertar ou melhorar, sempre teremos algo para implementar que trará maior segurança para nossas aplicações.</p><p>Espero que tenham apreciado e até a próxima 🙂</p></div><footer class=post-footer><ul class=post-tags><li><a href=http://localhost:1313/tags/sql/>Sql</a></li><li><a href=http://localhost:1313/tags/sql-injection/>SQL Injection</a></li></ul><nav class=paginav><a class=prev href=http://localhost:1313/posts/calculando-diferenca-entre-duas-datas-com-php/><span class=title>« Anterior</span>
+<span>Calculando a diferença entre duas datas com PHP</span>
+</a><a class=next href=http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/><span class=title>Próximo »</span>
+<span>Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Defesa eficaz contra SQL Injection – Comunicação com o banco de dados on x" href="https://x.com/intent/tweet/?text=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;url=http%3a%2f%2flocalhost%3a1313%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f&amp;hashtags=sql%2cSQLInjection"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Defesa eficaz contra SQL Injection – Comunicação com o banco de dados on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f&amp;title=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;summary=Defesa%20eficaz%20contra%20SQL%20Injection%20%e2%80%93%20Comunica%c3%a7%c3%a3o%20com%20o%20banco%20de%20dados&amp;source=http%3a%2f%2flocalhost%3a1313%2fphp%2fdefesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=http://localhost:1313/>Diego Brocanelli</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copiar";function s(){t.innerHTML="copiado!",setTimeout(()=>{t.innerHTML="copiar"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

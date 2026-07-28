@@ -1,54 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>programação on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/programa%C3%A7%C3%A3o/</link>
-    <description>Recent content in programação on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Programação on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/programa%C3%A7%C3%A3o/</link>
+    <description>Recent content in Programação on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 18 Feb 2025 21:03:48 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/programa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 21:03:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como transformar sistemas legados em oportunidades de crescimento</title>
-      <link>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
+      <link>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
       <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
-      <description>Sumário O que define um sistema como legado? Por que há tanto medo de sistemas legados? Não julgue quem nem o porquê Dívidas técnicas Para quem é essa melhoria? Regras de negócio no banco de dados Mapear as mudanças Planejando o quê e como será feito Qual o melhor momento para refatorar? Quando não devo aplicar melhorias? E a documentação? Opiniões da comunidade Encerramento Referências O que define um sistema como legado?</description>
+      <guid>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
+      <description>&lt;h2 id=&#34;o-que-define-um-sistema-como-legado&#34;&gt;O que define um sistema como legado?&lt;/h2&gt;
+&lt;p&gt;Um sistema é considerado legado não apenas pela sua idade, mas por uma combinação de fatores. Geralmente, um sistema é classificado como legado quando apresenta dificuldades em atender às demandas atuais da empresa ou tecnologia. Isso pode incluir:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tecnologias ultrapassadas ou descontinuadas;&lt;/li&gt;
+&lt;li&gt;Falta de documentação clara e atualizada;&lt;/li&gt;
+&lt;li&gt;Alto custo de manutenção;&lt;/li&gt;
+&lt;li&gt;Dependência de especialistas que conhecem detalhes do sistema;&lt;/li&gt;
+&lt;li&gt;Problemas de integração com sistemas modernos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;É importante destacar que, em muitos casos, o termo &amp;ldquo;legado&amp;rdquo; não é necessariamente pejorativo. Sistemas legados muitas vezes são responsáveis por sustentar operações críticas de negócio.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
-      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
+      <link>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
       <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
-      <description>Índice O que é RabbitMQ? Como Exchanges e Filas funcionam no RabbitMQ Publicador e Consumidor: como funcionam no RabbitMQ Vantagens e desvantagens das filas fanout Mas por que usar mensageria? Conclusão Links e referências O que é RabbitMQ? De acordo com sua própria documentação, em tradução livre:
-&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.</description>
+      <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
+      <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
+&lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
+&lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como programador, sou obrigado a usar Linux?</title>
-      <link>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</link>
+      <link>http://localhost:1313/posts/como-programador-sou-obrigado-a-usar-linux/</link>
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/linux/como-programador-sou-obrigado-a-usar-linux/</guid>
-      <description>Gostaria de bater um papo sobre uma pergunta bem interessante.
-“Como programador, sou obrigado a usar Linux?“
-Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉
-Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).
-Para determinadas atividades que deseja desempenhar, de fato o Windows se mostrará mais prático como jogos, alguns softwares como Photohop e etc.</description>
+      <guid>http://localhost:1313/posts/como-programador-sou-obrigado-a-usar-linux/</guid>
+      <description>&lt;p&gt;Gostaria de bater um papo sobre uma pergunta bem interessante.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Como programador, sou obrigado a usar Linux?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉&lt;/p&gt;
+&lt;p&gt;Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Lista das distribuições Linux na loja de aplicativos do Windows.&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/assets/images/linux_no_windows.png#center&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</link>
+      <link>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</guid>
-      <description>Olá, tudo bem?!
-É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.
-Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.</description>
+      <guid>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.&lt;/p&gt;
+&lt;p&gt;Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

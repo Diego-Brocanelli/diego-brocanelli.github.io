@@ -2,22 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kubernetes on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/kubernetes/</link>
+    <link>http://localhost:1313/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:33:20 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:33:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 18 – Docker &#43; Kubernetes &#43; Minikube (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/docker/hhbr-18-docker-kubernetes-minikube/</link>
+      <link>http://localhost:1313/posts/hhbr-18-docker-kubernetes-minikube/</link>
       <pubDate>Tue, 05 Nov 2019 16:33:20 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/docker/hhbr-18-docker-kubernetes-minikube/</guid>
-      <description>Olá, tudo bem?!
-Nesta 18º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Docker + Kubernetes + Minikube” ministrado pelo grande Roberto Achar.
-Palestra com conteúdo prático e ótimos exemplos e dicas somados a grande didática do palestrante que consegue prender nossa atenção do início ao fim da Palestra. Sem mais delongas, abaixo temos o vídeo com todo do conteúdo.
-Dados da palestra Tema: “Docker + Kubernetes + Minikube” Palestrante: Roberto Achar Site: https://showmethecode.</description>
+      <guid>http://localhost:1313/posts/hhbr-18-docker-kubernetes-minikube/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta 18º edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; pudemos apreciar uma fantástica palestra sobre “&lt;em&gt;Docker + Kubernetes + Minikube&lt;/em&gt;” ministrado pelo grande &lt;a href=&#34;https://github.com/robertoachar&#34;&gt;Roberto Achar&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Palestra com conteúdo prático e ótimos exemplos e dicas somados a grande didática do palestrante que consegue prender nossa atenção do início ao fim da Palestra. Sem mais delongas, abaixo temos o vídeo com todo do conteúdo.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/CjDXFsaUCVM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Docker + Kubernetes + Minikube”&lt;/li&gt;
+&lt;li&gt;Palestrante: Roberto Achar&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://showmethecode.com.br&#34;&gt;https://showmethecode.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:robertoachar@showmethecode.com.br&#34;&gt;robertoachar@showmethecode.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/robertoachar&#34;&gt;https://twitter.com/robertoachar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/roberto-achar/&#34;&gt;https://www.linkedin.com/in/roberto-achar/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook: &lt;a href=&#34;https://www.facebook.com/showmethecode&#34;&gt;https://www.facebook.com/showmethecode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;YouTube: &lt;a href=&#34;https://www.youtube.com/user/robertoachar&#34;&gt;https://www.youtube.com/user/robertoachar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/robertoachar&#34;&gt;https://github.com/robertoachar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Perfil iMasters: &lt;a href=&#34;https://imasters.com.br/perfil/robertoachar/&#34;&gt;https://imasters.com.br/perfil/robertoachar/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-mencionados&#34;&gt;Links Mencionados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.docker.com/&#34;&gt;https://www.docker.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/&#34;&gt;https://kubernetes.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/docs/getting-started-guides/minikube/&#34;&gt;https://kubernetes.io/docs/getting-started-guides/minikube/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-python-flask&#34;&gt;https://github.com/robertoachar/docker-python-flask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-go&#34;&gt;https://github.com/robertoachar/docker-go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-react&#34;&gt;https://github.com/robertoachar/docker-react&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-angular&#34;&gt;https://github.com/robertoachar/docker-angular&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-python&#34;&gt;https://github.com/robertoachar/docker-python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-express-mongodb&#34;&gt;https://github.com/robertoachar/docker-express-mongodb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-react-webpack&#34;&gt;https://github.com/robertoachar/docker-react-webpack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-node&#34;&gt;https://github.com/robertoachar/docker-node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-express&#34;&gt;https://github.com/robertoachar/docker-express&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/kubernetes-express&#34;&gt;https://github.com/robertoachar/kubernetes-express&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-mean&#34;&gt;https://github.com/robertoachar/docker-mean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/robertoachar/docker-rabbitmq-node&#34;&gt;https://github.com/robertoachar/docker-rabbitmq-node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

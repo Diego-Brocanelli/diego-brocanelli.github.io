@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>zend framework on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/zend-framework/</link>
-    <description>Recent content in zend framework on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Zend Framework on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/zend-framework/</link>
+    <description>Recent content in Zend Framework on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 19 May 2017 22:50:12 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/zend-framework/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 May 2017 22:50:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/zend-framework/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Criando cache com o Zend-Cache</title>
-      <link>https://diegobrocanelli.com.br/php/criando-cache-com-zend-cache/</link>
+      <link>http://localhost:1313/posts/criando-cache-com-zend-cache/</link>
       <pubDate>Fri, 19 May 2017 22:50:12 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/criando-cache-com-zend-cache/</guid>
-      <description>Olá, tudo bem?!
-Em nossas aplicações com frequência trabalhamos com informações/dados que não sofrem alteração com muita frequência, porem ela é carregada e processada o tempo todo em que o recurso é requisitado, acarretando em perda de performance e processamento desnecessário (maior custo para manter o sistema $$$) e uma experiência não muito agradável para o usuário.
-Umas das possíveis formas de resolver esse nosso problema é armazenando essa informações em cache, para isso vamos utilizar o componente Zend-Cache, componente robusto e que nos fornece um leque de possibilidades muito bacana para nossa caixa de ferramenta.</description>
+      <guid>http://localhost:1313/posts/criando-cache-com-zend-cache/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Em nossas aplicações com frequência trabalhamos com informações/dados que não sofrem alteração com muita frequência, porem ela é carregada e processada o tempo todo em que o recurso é requisitado, acarretando em perda de performance e processamento desnecessário (maior custo para manter o sistema $$$) e uma experiência não muito agradável para o usuário.&lt;/p&gt;
+&lt;p&gt;Umas das possíveis formas de resolver esse nosso problema é armazenando essa informações em cache, para isso vamos utilizar o componente &lt;a href=&#34;https://docs.zendframework.com/zend-cache/&#34;&gt;Zend-Cache&lt;/a&gt;, componente robusto e que nos fornece um leque de possibilidades muito bacana para nossa caixa de ferramenta.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Manipulando e validando URI com Zend-URI</title>
-      <link>https://diegobrocanelli.com.br/php/manipulando-e-validando-uri-com-zend-uri/</link>
+      <link>http://localhost:1313/posts/manipulando-e-validando-uri-com-zend-uri/</link>
       <pubDate>Sat, 29 Oct 2016 01:08:43 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/manipulando-e-validando-uri-com-zend-uri/</guid>
-      <description>Olá pessoal, tudo bem?!
-Para um programador é uma tarefa muito corriqueira manipular ou validar URI. E para facilitar essa tarefa iremos aprender a utilizar o componente Zend-URI, ferramenta fantástica e simples, que irá agilizar nosso dia a dia.
-Uma breve descrição do que é URI (Uniform Resource Identifier), sendo uma cadeia de caracteres utilizada para identificar ou denominar um recurso na internet.
-Não vamos utilizar um ZF Skeleton, vamos aprender utilizando somente o componente, porem a implementação é a mesma para quem está em um projeto construído com Zend Framework, e também mostra o quão modular é o framework.</description>
+      <guid>http://localhost:1313/posts/manipulando-e-validando-uri-com-zend-uri/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Para um programador é uma tarefa muito corriqueira manipular ou validar URI. E para facilitar essa tarefa iremos aprender a utilizar o componente Zend-URI,  ferramenta fantástica e simples, que irá agilizar nosso dia a dia.&lt;/p&gt;
+&lt;p&gt;Uma breve descrição do que é URI (Uniform Resource Identifier), sendo uma cadeia de caracteres utilizada para identificar ou denominar um recurso na internet.&lt;/p&gt;
+&lt;p&gt;Não vamos utilizar um ZF Skeleton, vamos aprender utilizando somente o componente, porem a implementação é a mesma para quem está em um projeto construído com Zend Framework, e também mostra o quão modular é o framework.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Gerando Breadcrumbs no Zend Framework</title>
-      <link>https://diegobrocanelli.com.br/php/gerando-breadcrumbs-no-zend-framework/</link>
+      <link>http://localhost:1313/posts/gerando-breadcrumbs-no-zend-framework/</link>
       <pubDate>Wed, 19 Oct 2016 00:48:43 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/gerando-breadcrumbs-no-zend-framework/</guid>
-      <description>Fala galera, tudo tranquilo?!
-Recentemente um amigo me questionou como ele poderia criar breadcrumbs no Zend Framework, e com base nessa conversa vou demonstra o quão simples é este processo.
-Para quem nunca se deparou com este termo, breadcrumb é um padrão implementado pela Yahoo para indicar ao usuário onde ele se encontra no site, como podemos observar na imagem abaixo.
-Após essa breve e rápida introdução, SHOW ME THE CODE!</description>
+      <guid>http://localhost:1313/posts/gerando-breadcrumbs-no-zend-framework/</guid>
+      <description>&lt;p&gt;Fala galera, tudo tranquilo?!&lt;/p&gt;
+&lt;p&gt;Recentemente um amigo me questionou como ele poderia criar breadcrumbs no Zend Framework, e com base nessa conversa vou demonstra o quão simples é este processo.&lt;/p&gt;
+&lt;p&gt;Para quem nunca se deparou com este termo, breadcrumb é um &lt;a href=&#34;http://fe.ydn.g03.yahoodns.net/ypatterns/navigation/breadcrumbs.htm&#34;&gt;padrão implementado pela Yahoo&lt;/a&gt; para indicar ao usuário onde ele se encontra no site, como podemos observar na imagem abaixo.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Exemplo breadcrumb&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2016/10/breadcrumbs_exemplo.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Após essa breve e rápida introdução, SHOW ME THE CODE!!!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Códigos de barra com Zend Framework 2</title>
-      <link>https://diegobrocanelli.com.br/php/codigos-de-barra-com-zend-framework-2/</link>
+      <link>http://localhost:1313/posts/codigos-de-barra-com-zend-framework-2/</link>
       <pubDate>Fri, 22 Jan 2016 20:57:53 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/codigos-de-barra-com-zend-framework-2/</guid>
-      <description>É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.
-O Zend Framework 2 dispõem de um poderoso componente Zenb\Barcode\Barcode que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode.</description>
+      <guid>http://localhost:1313/posts/codigos-de-barra-com-zend-framework-2/</guid>
+      <description>&lt;p&gt;É possível nos depararmos com a necessidade de implementar código de barra numa aplicação, podendo ser por diversos motivos, por exemplo na criação de boletos, para produtos ou identificadores.&lt;/p&gt;
+&lt;p&gt;O Zend Framework 2 dispõem de um poderoso componente &lt;a href=&#34;http://framework.zend.com/manual/current/en/modules/zend.barcode.creation.html&#34;&gt;Zenb\Barcode\Barcode&lt;/a&gt; que nos auxilia na execução desta tarefa, de forma simples e rápida. Vale lembrar que existem diversos tipos de códigos de barras e cada um tem sua regra a ser seguida para compor de forma correta o barcode. Sendo assim deve-se levar em consideração o tipo de código de barra que deseja criar em sua aplicação.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

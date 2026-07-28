@@ -1,31 +1,152 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>mysql on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/mysql/</link>
-    <description>Recent content in mysql on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Mysql on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/mysql/</link>
+    <description>Recent content in Mysql on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 14 Jun 2018 22:44:07 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utilizando o MySQLTuner para gerar dados e métricas para tuning do MysqL</title>
+      <link>http://localhost:1313/posts/mysql-tuner/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mysql-tuner/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Analisar performance de banco de dados não é nada simples, principalmente para quem não é DBA .&lt;/p&gt;
+&lt;p&gt;Com base em minhas pesquisas encontrei uma ferramenta bacana que auxilia nessa tarefa chamada &lt;a href=&#34;https://github.com/major/MySQLTuner-perl&#34;&gt;MySQLTuner-perl&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Essa ferramenta gera um relatório com a análise de diversas métricas que podemos utilizar para o processo de tuning do MySQL. Onde no final é gerado algumas recomendações para serem executadas na busca dessa melhoria.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Observação:&lt;/strong&gt; Todas as etapas de execução foram realizadas em um ambiente Linux, mais precisamente no Ubuntu 18.04.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Calculando intervalo entre datas excluindo os finais de semana – MySQL</title>
-      <link>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
+      <link>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</link>
       <pubDate>Thu, 14 Jun 2018 22:44:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/sql/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
-      <description>Olá, tudo bem?!
-O problema Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.
-Resolução e demonstração prática Para aplicação prática devemos inicialmente criar nosso banco de dados teste.</description>
+      <guid>http://localhost:1313/posts/calculando-intervalo-entre-datas-excluindo-os-finais-de-semana-mysql/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;h3 id=&#34;o-problema&#34;&gt;O problema&lt;/h3&gt;
+&lt;p&gt;Calcular a diferença entre duas datas no MySQL é algo muito simples e fácil de se aplicar, recentemente tive a necessidade de realizar esta task, porém excluindo do total de dias os finais de semana. Após algumas horas de pesquisa e testes, cheguei ao resultado desejado e irei compartilhar com vocês.&lt;/p&gt;
+&lt;h3 id=&#34;resolução-e-demonstração-prática&#34;&gt;Resolução e demonstração prática&lt;/h3&gt;
+&lt;p&gt;Para aplicação prática devemos inicialmente criar nosso banco de dados teste. Para a estrutura da tabela utilize o modelo abaixo.&lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>Normalizando seu banco de dados MySQL</title>
+      <link>http://localhost:1313/posts/normalizando-seu-banco-de-dados-mysql/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/normalizando-seu-banco-de-dados-mysql/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Trabalhar com banco de dados é uma atividade que por mais que você não seja DBA poderá vir a executar em algum momento da sua vida. Eu por exemplo manipulo com certa frequência  bancos de dados e assim como no desenvolvimento fico pensando na melhor maneira para executar essa atividade,  pois uma coisa é criar um banco por diversão ou aprendizado outra é ter que arquitetar e modelar um banco para um sistema corporativo, onde será base para o retorno financeiro da empresa.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Comandos básicos do MySQL no terminal</title>
-      <link>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</link>
+      <link>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</link>
       <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</guid>
-      <description>Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4.</description>
+      <guid>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.&lt;/p&gt;
+&lt;p&gt;Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.&lt;/p&gt;
+&lt;h2 id=&#34;1-conexão-e-navegação&#34;&gt;1. Conexão e Navegação&lt;/h2&gt;
+&lt;h3 id=&#34;conectar-ao-mysql&#34;&gt;Conectar ao MySQL&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;strong&gt;Parâmetro&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Propósito&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;-u&lt;/td&gt;
+					&lt;td&gt;Informar qual o nome de usuário deseja usar para se conectar ao MySQL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;-p&lt;/td&gt;
+					&lt;td&gt;Exige que a senha seja informada&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;conectar-diretamente-a-um-banco-de-dados&#34;&gt;Conectar diretamente a um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nome_do_banco&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;listar-todos-os-bancos-de-dados&#34;&gt;Listar todos os bancos de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;selecionar-um-banco-de-dados&#34;&gt;Selecionar um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;USE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;listar-tabelas-do-banco-selecionado&#34;&gt;Listar tabelas do banco selecionado&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ver-estrutura-de-uma-tabela&#34;&gt;Ver estrutura de uma tabela&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_da_tabela&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;2-gerenciamento-de-bancos-e-tabelas&#34;&gt;2. Gerenciamento de Bancos e Tabelas&lt;/h2&gt;
+&lt;h3 id=&#34;criar-um-novo-banco-de-dados&#34;&gt;Criar um novo banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;apagar-um-banco-de-dados&#34;&gt;Apagar um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt; Use com cautela, pois o banco de dados será APAGADO!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

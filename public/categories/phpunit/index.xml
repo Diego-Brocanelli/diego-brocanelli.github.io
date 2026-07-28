@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>phpUnit on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/phpunit/</link>
-    <description>Recent content in phpUnit on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>PhpUnit on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/phpunit/</link>
+    <description>Recent content in PhpUnit on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 10 Dec 2016 21:06:31 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/phpunit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Dec 2016 21:06:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/phpunit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 05 – Refatoração (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/refatoracao-video/</link>
+      <link>http://localhost:1313/posts/refatoracao-video/</link>
       <pubDate>Sat, 10 Dec 2016 21:06:31 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/refatoracao-video/</guid>
-      <description>Olá pessoal, tudo bem?!
-Ocorreu hoje a quinta edição do hhbr, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka @devdrops.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Refatoração” Palestrante: Davi Marcondes Moreira Twitter: https://twitter.com/devdrops Site: devdrops.me GitHub: https://github.com/devdrops Comunidade: http://phpdojeitocerto.tumblr.com/ Slides: https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45 Links mencionados PHPMD: https://phpmd.org/ Blackfire: https://blackfire.io/ CorgiBytes: http://corgibytes.com/ PHPUnit: https://phpunit.de/ SensiolabsInsight: https://insight.</description>
+      <guid>http://localhost:1313/posts/refatoracao-video/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Ocorreu hoje a quinta edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt;, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka &lt;a href=&#34;https://github.com/devdrops&#34;&gt;@devdrops.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=CtiLfuVW7MQ&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Refatoração”&lt;/li&gt;
+&lt;li&gt;Palestrante: Davi Marcondes Moreira&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/devdrops&#34;&gt;https://twitter.com/devdrops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;http://www.devdrops.me/&#34;&gt;devdrops.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/devdrops&#34;&gt;https://github.com/devdrops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comunidade: &lt;a href=&#34;http://phpdojeitocerto.tumblr.com/&#34;&gt;http://phpdojeitocerto.tumblr.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45&#34;&gt;https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-mencionados&#34;&gt;Links mencionados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PHPMD: &lt;a href=&#34;https://phpmd.org/&#34;&gt;https://phpmd.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blackfire: &lt;a href=&#34;https://blackfire.io/&#34;&gt;https://blackfire.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CorgiBytes: &lt;a href=&#34;http://corgibytes.com/&#34;&gt;http://corgibytes.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PHPUnit: &lt;a href=&#34;https://phpunit.de/&#34;&gt;https://phpunit.de/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SensiolabsInsight: &lt;a href=&#34;https://insight.sensiolabs.com&#34;&gt;https://insight.sensiolabs.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Até a próxima, abraços!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Testes de forma simples, fácil e robusto em sistemas PHP com PHPUnit!</title>
-      <link>https://diegobrocanelli.com.br/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</link>
+      <link>http://localhost:1313/posts/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</link>
       <pubDate>Tue, 06 Dec 2016 02:09:40 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</guid>
-      <description>Olá pessoal, tudo bem?!
-Construir sistemas robustos, seguros e livres bugs (ou pelo menos o menor número possível 🙂 ) está presente em nosso dia a dia, e com isso temos diversas metodologias, ferramentas e recursos para que nossos códigos tenham qualidade e garantia de sua eficácia.
-Para o ecossistema PHP não é diferente, temos disponível uma ferramenta fantástica para executarmos testes unitários, e hoje vamos aprender um pouco sobre ela, seu nome é PHPUnit.</description>
+      <guid>http://localhost:1313/posts/testes-de-forma-simples-facil-e-robusta-em-sistemas-php-com-phpunit/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Construir sistemas robustos, seguros e livres bugs (ou pelo menos o menor número possível 🙂 ) está presente em nosso dia a dia, e com isso temos diversas metodologias, ferramentas e recursos para que nossos códigos tenham qualidade e garantia de sua eficácia.&lt;/p&gt;
+&lt;p&gt;Para o ecossistema PHP não é diferente, temos disponível uma ferramenta fantástica para executarmos testes unitários, e hoje vamos aprender um pouco sobre ela, seu nome é &lt;a href=&#34;https://phpunit.de/&#34;&gt;PHPUnit&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

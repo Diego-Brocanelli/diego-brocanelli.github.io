@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>arquitetura on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/arquitetura/</link>
-    <description>Recent content in arquitetura on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Arquitetura on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/arquitetura/</link>
+    <description>Recent content in Arquitetura on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 26 Mar 2025 11:48:22 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/arquitetura/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Mar 2025 11:48:22 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/arquitetura/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Melhore a performance do seu sistema com um load balancer</title>
-      <link>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
+      <link>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
       <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
-      <description>Sumário O que é load balancer? Para que serve? Quando usar? Quais tipos existem? Exemplo do problema Considerações finais Referências O que é load balancer? O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.
-Imagine um restaurante movimentado com vários atendentes.</description>
+      <guid>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
+      <description>&lt;h1 id=&#34;o-que-é-load-balancer&#34;&gt;O que é load balancer?&lt;/h1&gt;
+&lt;p&gt;O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.&lt;/p&gt;
+&lt;p&gt;Imagine um restaurante movimentado com vários atendentes. Se todos os clientes fossem direcionados apenas a um atendente, haveria filas enormes e insatisfação. O load balancer funciona como um gerente organizando os clientes para diferentes atendentes, garantindo um fluxo equilibrado e um atendimento mais eficiente.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

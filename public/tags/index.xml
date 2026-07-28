@@ -2,100 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 14 May 2025 12:08:32 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2026 02:47:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Barras</title>
+      <link>http://localhost:1313/tags/barras/</link>
+      <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/tags/barras/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Código</title>
+      <link>http://localhost:1313/tags/c%C3%B3digo/</link>
+      <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/tags/c%C3%B3digo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Código Barras</title>
+      <link>http://localhost:1313/tags/c%C3%B3digo-barras/</link>
+      <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/tags/c%C3%B3digo-barras/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analyser</title>
+      <link>http://localhost:1313/tags/analyser/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/tags/analyser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architectural Guard</title>
+      <link>http://localhost:1313/tags/architectural-guard/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/tags/architectural-guard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linter</title>
+      <link>http://localhost:1313/tags/linter/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mago</title>
+      <link>http://localhost:1313/tags/mago/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mago/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Php</title>
+      <link>http://localhost:1313/tags/php/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/tags/php/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Context</title>
-      <link>https://diegobrocanelli.com.br/tags/context/</link>
+      <link>http://localhost:1313/tags/context/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/context/</guid>
+      <guid>http://localhost:1313/tags/context/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>IA</title>
-      <link>https://diegobrocanelli.com.br/tags/ia/</link>
+      <link>http://localhost:1313/tags/ia/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/ia/</guid>
+      <guid>http://localhost:1313/tags/ia/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>MCP</title>
-      <link>https://diegobrocanelli.com.br/tags/mcp/</link>
-      <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/mcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Model</title>
-      <link>https://diegobrocanelli.com.br/tags/model/</link>
-      <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/model/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Protocol</title>
-      <link>https://diegobrocanelli.com.br/tags/protocol/</link>
-      <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/protocol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>analisar</title>
-      <link>https://diegobrocanelli.com.br/tags/analisar/</link>
-      <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/analisar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>análise</title>
-      <link>https://diegobrocanelli.com.br/tags/an%C3%A1lise/</link>
-      <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/an%C3%A1lise/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>problema</title>
-      <link>https://diegobrocanelli.com.br/tags/problema/</link>
-      <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/problema/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>soft skills</title>
-      <link>https://diegobrocanelli.com.br/tags/soft-skills/</link>
-      <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/soft-skills/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>balanceador de caraga</title>
-      <link>https://diegobrocanelli.com.br/tags/balanceador-de-caraga/</link>
-      <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/tags/balanceador-de-caraga/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

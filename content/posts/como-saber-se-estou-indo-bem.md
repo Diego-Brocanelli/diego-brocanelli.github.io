@@ -1,7 +1,14 @@
 ---
 title: "Como saber se estou indo bem? A importância de dar e receber feedbacks"
 date: 2025-02-04T22:21:55Z
-draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - soft-skills
 tags:
@@ -9,18 +16,6 @@ tags:
   - soft skill
   - soft skills
 ---
-
-## Sumário
-
-1. [Introdução](#introdução)
-2. [Por que feedback é importante?](#por-que-feedback-é-importante)
-3. [Feedback não é tudo igual?](#feedback-não-é-tudo-igual)
-4. [Como realizar um feedback de qualidade?](#como-realizar-um-feedback-de-qualidade)
-    - [Feedback positivo: reforçando comportamentos e motivando sua repetição](#feedback-positivo-reforçando-comportamentos-e-motivando-sua-repetição)
-    - [Feedback corretivo: corrigindo comportamentos](#feedback-corretivo-corrigindo-comportamentos)
-5. [Pessoas são únicas](#pessoas-são-únicas)
-6. [Considerações](#considerações)
-7. [Referencias](#referencias)
 
 ## Introdução
 

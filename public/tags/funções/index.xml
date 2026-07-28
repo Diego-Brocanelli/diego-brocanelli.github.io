@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>funções on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/fun%C3%A7%C3%B5es/</link>
-    <description>Recent content in funções on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Funções on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/fun%C3%A7%C3%B5es/</link>
+    <description>Recent content in Funções on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/fun%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fun%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Funções nativas PHP – str_getcsv</title>
-      <link>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</link>
+      <link>http://localhost:1313/posts/funcoes-nativas-php-str_getcsv/</link>
       <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/funcoes-nativas-php-str_getcsv/</guid>
-      <description>Olá!
-PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.
-Uma dessas funções é a str_getcsv, responsável por ler um arquivo csv e converter seus valores em um array.
-Versões do PHP suportadas: PHP 5 &amp;gt;= 5.3.0 e PHP 7
-Assinatura da função: 1 str_getcsv ( string $input [, string $delimiter = &amp;#34;,&amp;#34; [, string $enclosure = &amp;#39;&amp;#34;&amp;#39; [, string $escape = &amp;#34;\\&amp;#34; ]]] ) Retorno da função: array</description>
+      <guid>http://localhost:1313/posts/funcoes-nativas-php-str_getcsv/</guid>
+      <description>&lt;p&gt;Olá!&lt;/p&gt;
+&lt;p&gt;PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.&lt;/p&gt;
+&lt;p&gt;Uma dessas funções é a &lt;a href=&#34;https://www.php.net/manual/pt_BR/function.str-getcsv.ph&#34;&gt;str_getcsv&lt;/a&gt;, responsável por ler um arquivo csv e converter seus valores em um array.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versões do PHP suportadas: PHP 5 &amp;gt;= 5.3.0 e PHP 7&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;assinatura-da-função&#34;&gt;Assinatura da função:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;str_getcsv&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$input&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$delimiter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$enclosure&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$escape&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]]]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;retorno-da-função&#34;&gt;Retorno da função:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;array&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;parâmetros-da-função&#34;&gt;Parâmetros da função:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;input:&lt;/strong&gt; Srting a ser analisada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delimiter:&lt;/strong&gt; Define o delimitador (somente um caractere).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;enclosure:&lt;/strong&gt; Define o enclosure (somente um caractere).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;escape:&lt;/strong&gt; Define o caractere de escape (no máximo um caractere). O valor padrão é a barra invertida () Uma string vazia (“”) desabilita o mecanismo de escape.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exemplo-de-uso&#34;&gt;Exemplo de uso:&lt;/h2&gt;
+&lt;p&gt;Para seguir com o exemplo, é necessário criar um arquivo chamado &lt;strong&gt;example.csv&lt;/strong&gt; na raiz do projeto e inserir o conteúdo:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PHP e seu vasto arsenal de funções nativas</title>
-      <link>https://diegobrocanelli.com.br/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/</link>
+      <link>http://localhost:1313/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</link>
       <pubDate>Thu, 11 Feb 2016 00:59:12 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/php-e-seu-vasto-arsenal-de-funcoes-nativas/</guid>
-      <description>Fala pessoal tudo certinho.
-Todos sabemos da grande capacidade e poder que o PHP dispõem para o desenvolvimento web, porem o que muitos deixam escapar é sua vasta lista de funções nativas que ele fornece.
-Com isso segue abaixo uma pequena demonstração de funções que podem auxiliar e muito no dia a dia.
-filter_input Esta função irá lhe ajudar pra abolir da sua vida as chamadas diretas as variáveis $_POST e $_GET e seus derivados, pois com esta função podemos obter uma variável específica e realizar um tratamento automaticamente.</description>
+      <guid>http://localhost:1313/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</guid>
+      <description>&lt;p&gt;Fala pessoal tudo certinho.&lt;/p&gt;
+&lt;p&gt;Todos sabemos da grande capacidade  e poder que o PHP dispõem para o desenvolvimento web, porem o que muitos deixam escapar é sua vasta lista de funções nativas que ele fornece.&lt;/p&gt;
+&lt;p&gt;Com isso segue abaixo uma pequena demonstração de funções que podem auxiliar e muito no dia a dia.&lt;/p&gt;
+&lt;h2 id=&#34;filter_&#34;&gt;&lt;a href=&#34;http://php.net/manual/pt_BR/function.filter-input.php&#34;&gt;filter_input&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Esta função irá lhe ajudar pra abolir da sua vida as chamadas diretas as variáveis $_POST e $_GET e seus derivados, pois  com esta função podemos obter uma variável específica e realizar um tratamento automaticamente.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

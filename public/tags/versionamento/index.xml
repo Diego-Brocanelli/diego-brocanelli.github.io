@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Versionamento on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/versionamento/</link>
+    <description>Recent content in Versionamento on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 29 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/versionamento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guia prático de comandos Git</title>
+      <link>http://localhost:1313/posts/guia-pratico-de-comandos-git/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/guia-pratico-de-comandos-git/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;p&gt;Atualmente desenvolver software sem utilizar controle de versão é impensável para muitos desenvolvedores, porém não é e está longe de ser a realidade de muitos outros devs.&lt;/p&gt;
+&lt;p&gt;Neste post tenho como objetivo listar os principais comandos para que qualquer pessoa possa iniciar seu controle de verão com Git.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 24pt;&#34;&gt;&lt;strong&gt;Problemática&lt;/p&gt;
+&lt;p&gt;Iniciar um projeto sem o controle de versão é a garantia de má organização e conteúdo duplicado ou até mesmo perdido. Quem nunca se deparou com o zip do projeto ‘projeto_final.zip’ ou ‘projeto_final_2.zip’, isso infelizmente ainda é comum e muito danoso ao projeto e ao processo de desenvolvimento.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>wordpress on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/wordpress/</link>
-    <description>Recent content in wordpress on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Wordpress on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/wordpress/</link>
+    <description>Recent content in Wordpress on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 21 Jun 2017 02:17:43 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jun 2017 02:17:43 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 11 – Bolt uma alternativa ao WordPress (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/bolt-uma-alternativa-ao-wordpress-video/</link>
+      <link>http://localhost:1313/posts/bolt-uma-alternativa-ao-wordpress-video/</link>
       <pubDate>Wed, 21 Jun 2017 02:17:43 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/bolt-uma-alternativa-ao-wordpress-video/</guid>
-      <description>Bolt é um CMS muito poderoso e amigo do desenvolvedor, adotando as melhores práticas e tecnologias em sua estrutura como por exemplo o Silex, twig (caso tenha interesse, disponho de um post explorando a engine “Twig – A Super engine template para PHP “), doctrine entre outros.
-Nesta décima primeira edição do canal hhbr temos o provilégio de aprecia uma super palestra do grane Jack Makiyama, onde ele apresenta os conceitos e arquitetura do Bolt, bem como uma bela dose de live code com muita mão na massa para apresentar as diversas features bacanas que o CMS dispõem.</description>
+      <guid>http://localhost:1313/posts/bolt-uma-alternativa-ao-wordpress-video/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://boltcms.io&#34;&gt;Bolt&lt;/a&gt; é um CMS muito poderoso e amigo do desenvolvedor, adotando as melhores  práticas e tecnologias em sua estrutura como por exemplo o Silex, &lt;a href=&#34;https://twig.sensiolabs.org/&#34;&gt;twig&lt;/a&gt; (caso tenha interesse, disponho de um post explorando a engine “&lt;a href=&#34;http://localhost:1313/php/twig-a-super-engine-template-para-php/&#34;&gt;Twig – A Super engine template para PHP&lt;/a&gt; “), &lt;a href=&#34;http://www.doctrine-project.org/&#34;&gt;doctrine&lt;/a&gt; entre outros.&lt;/p&gt;
+&lt;p&gt;Nesta décima primeira edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; temos o provilégio de aprecia uma super palestra do grane &lt;a href=&#34;http://github.com/jackmakiyama&#34;&gt;Jack Makiyama&lt;/a&gt;, onde ele apresenta os conceitos e arquitetura do Bolt, bem  como uma bela dose de live code com muita mão na massa para apresentar as diversas features bacanas que o CMS dispõem.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

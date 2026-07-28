@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>doctrine on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/doctrine/</link>
-    <description>Recent content in doctrine on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Doctrine on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/doctrine/</link>
+    <description>Recent content in Doctrine on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 08 Jun 2017 23:05:35 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/doctrine/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jun 2017 23:05:35 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/doctrine/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Relacionando entidades com Doctrine</title>
-      <link>https://diegobrocanelli.com.br/php/relacionando-entidades-com-doctrine/</link>
+      <link>http://localhost:1313/posts/relacionando-entidades-com-doctrine/</link>
       <pubDate>Thu, 08 Jun 2017 23:05:35 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/relacionando-entidades-com-doctrine/</guid>
-      <description>Relacionamento de entidade com Doctrine é um recurso poderoso e que facilita e muito nosso trabalho com a manipulação de entidades.
-Este post é uma continuação do Aprenda a construir um CRUD simples, fácil e rápido com Doctrine onde sua leitura é fundamental, pois é a base para este post.
-Em nosso projeto temos todo o CRUD de produtos implementado, porem é natural que um produto seje ligado a uma categoria.</description>
+      <guid>http://localhost:1313/posts/relacionando-entidades-com-doctrine/</guid>
+      <description>&lt;p&gt;Relacionamento de entidade com &lt;em&gt;Doctrine&lt;/em&gt; é um recurso poderoso e que facilita e muito nosso trabalho com a manipulação de entidades.&lt;/p&gt;
+&lt;p&gt;Este post é uma continuação do &lt;a href=&#34;http://localhost:1313/doctrine/crud-simples-facil-e-rapido-com-doctrine/&#34;&gt;Aprenda a construir um CRUD simples, fácil e rápido com Doctrine&lt;/a&gt; onde sua leitura é fundamental, pois é a base para este post.&lt;/p&gt;
+&lt;p&gt;Em nosso projeto temos todo o &lt;em&gt;CRUD&lt;/em&gt; de produtos implementado, porem é natural que um produto seje ligado a  uma categoria.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Aprenda a construir um CRUD simples, fácil e rápido com Doctrine</title>
-      <link>https://diegobrocanelli.com.br/php/crud-simples-facil-e-rapido-com-doctrine/</link>
+      <link>http://localhost:1313/posts/crud-simples-facil-e-rapido-com-doctrine/</link>
       <pubDate>Wed, 17 May 2017 22:24:53 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/crud-simples-facil-e-rapido-com-doctrine/</guid>
-      <description>Olá, tudo bem?!
-No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o Doctrine, o mais popular projeto voltado para Database Storage e Object Mapping.
-O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.</description>
+      <guid>http://localhost:1313/posts/crud-simples-facil-e-rapido-com-doctrine/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;No ecossistema PHP temos disponíveis diversos projetos super bacanas, e para trabalhar na camada de banco de dados temos a nossa disposição o &lt;a href=&#34;http://www.doctrine-project.org/&#34;&gt;Doctrine&lt;/a&gt;, o mais popular projeto voltado para Database Storage e Object Mapping.&lt;/p&gt;
+&lt;p&gt;O que você pode estar pensando é “Meu Framework X já tem implementações para isso”, sim de fato todos os grandes frameworks de mercado tem disponível componentes para abstração de banco de dados, porem uma das grandes vantagens do Doctrine é justamente ele poder ser utilizado em praticamente qualquer framework ou estrutura de projeto.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

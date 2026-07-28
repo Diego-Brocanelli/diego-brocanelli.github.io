@@ -1,0 +1,10 @@
+services:
+  hugo:
+    image: ghcr.io/gohugoio/hugo:v0.164.0
+    container_name: blog-pessoal-hugo
+    working_dir: /project
+    volumes:
+      - .:/project
+      - ~/.cache/hugo:/cache
+    ports:
+      - "1313:1313"

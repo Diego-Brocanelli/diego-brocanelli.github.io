@@ -2,35 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GitHub on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/github/</link>
+    <link>http://localhost:1313/categories/github/</link>
     <description>Recent content in GitHub on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratório de ideias</title>
-      <link>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</link>
+      <link>http://localhost:1313/posts/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/open-source/laboratorio-de-ideias/</guid>
-      <description>Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.
-Tendo isso em mente, criei o projeto Laboratório de ideias, focado em evitar desperdício de tempo e trazer maior foco nos estudos.
-Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.
-Para enviar sua ideia é bem simples, acesse as issues do projeto, analise se a sua ideia não consta na lista, caso não tenha, prossiga criando sua ideia.</description>
+      <guid>http://localhost:1313/posts/laboratorio-de-ideias/</guid>
+      <description>&lt;p&gt;Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.&lt;/p&gt;
+&lt;p&gt;Tendo isso em mente, criei o projeto &lt;a href=&#34;https://github.com/Diego-Brocanelli/laboratorio-de-ideias&#34;&gt;Laboratório de ideias&lt;/a&gt;, focado em evitar desperdício de tempo e trazer maior foco nos estudos.&lt;/p&gt;
+&lt;p&gt;Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.&lt;/p&gt;
+&lt;p&gt;Para enviar sua ideia é bem simples, acesse as &lt;a href=&#34;https://github.com/Diego-Brocanelli/laboratorio-de-ideias/issues&#34;&gt;issues do projeto&lt;/a&gt;, analise se a sua ideia não consta na lista, caso não tenha, prossiga criando sua ideia.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!</title>
-      <link>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</link>
+      <link>http://localhost:1313/posts/atualizando-seu-fork-no-github/</link>
       <pubDate>Fri, 17 Nov 2017 18:02:27 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/git/atualizando-seu-fork-no-github/</guid>
-      <description>Olá, tudo bem?!
-Sumário Introdução Adicionando um repositório remoto Atualizando o upstream Realizando o commit das informações Enviando para o GitHub Considerações Introdução É comum atualizarmos o fork do projeto ao qual contribuímos no &amp;ldquo;GitHub&amp;rdquo;.
-Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &amp;ldquo;fork&amp;rdquo; pode ficar desatualizado.
-Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &amp;ldquo;Git&amp;rdquo; e o &amp;ldquo;GitHub&amp;rdquo;.
-Para realizar a atualização, utilizaremos o upstream.</description>
+      <guid>http://localhost:1313/posts/atualizando-seu-fork-no-github/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;h2 id=&#34;sumário&#34;&gt;Sumário&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#introdu%C3%A7%C3%A3o&#34;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adicionando-um-reposit%C3%B3rio-remoto&#34;&gt;Adicionando um repositório remoto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#atualizando-o-upstream&#34;&gt;Atualizando o upstream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#realizando-o-commit-das-informa%C3%A7%C3%B5es&#34;&gt;Realizando o commit das informações&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#enviando-para-o-github&#34;&gt;Enviando para o GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#considera%C3%A7%C3%B5es&#34;&gt;Considerações&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;É comum atualizarmos o fork do projeto ao qual contribuímos no &lt;em&gt;&amp;ldquo;GitHub&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Conforme contribuímos, outros desenvolvedores também fazem o mesmo. Com isso, o &lt;em&gt;&amp;ldquo;fork&amp;rdquo;&lt;/em&gt; pode ficar desatualizado.&lt;/p&gt;
+&lt;p&gt;Nesse momento, podemos ficar receosos em contribuir por não dominarmos o &lt;em&gt;&amp;ldquo;Git&amp;rdquo;&lt;/em&gt; e o &lt;em&gt;&amp;ldquo;GitHub&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para realizar a atualização, utilizaremos o &lt;a href=&#34;https://help.github.com/articles/configuring-a-remote-for-a-fork/&#34;&gt;&lt;em&gt;upstream&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

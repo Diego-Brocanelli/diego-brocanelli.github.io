@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>editores on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/editores/</link>
-    <description>Recent content in editores on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Editores on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/editores/</link>
+    <description>Recent content in Editores on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 19 Apr 2017 14:03:59 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/editores/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2017 14:03:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/editores/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Meu dia a dia como desenvolvedor: IDE’s e Editores de texto</title>
-      <link>https://diegobrocanelli.com.br/php/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</link>
+      <link>http://localhost:1313/posts/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</link>
       <pubDate>Wed, 19 Apr 2017 14:03:59 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</guid>
-      <description>Olá pessoal, tudo bem?!
-Como desenvolvedores/programadores fazemos uso de IDE’s e editores de texto, para que possamos codificar nossas soluções para os problemas do nossos clientes.
-Lembro-me de ter iniciado com o clássico bloco de notas, e obviamente é insustentável se manter utilizando ele, visando maximizar meus resultados parti em busca de uma ferramenta que me auxilia-se no processo de escrita de código.
-Nesta período nem me passava pela cabeça o que era uma IDE, apenas queria encontrar uma ferramenta melhor que o bloco de notas, com isso encontrei o tão famoso Notepad++ e foi fantástico pois ele abriu o leque de opções a um nível que eu não imaginava, fiz uso dele por um bom período e gostei da ferramenta e dos recursos que fornecia.</description>
+      <guid>http://localhost:1313/posts/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Como desenvolvedores/programadores fazemos uso de IDE’s e editores de texto, para que possamos codificar nossas soluções para os problemas do nossos clientes.&lt;/p&gt;
+&lt;p&gt;Lembro-me de ter iniciado com o clássico bloco de notas, e obviamente é insustentável se manter utilizando ele, visando maximizar meus resultados parti em busca de uma ferramenta que me auxilia-se no processo de escrita de código.&lt;/p&gt;
+&lt;p&gt;Nesta período nem me passava pela cabeça o que era uma IDE, apenas queria encontrar uma ferramenta melhor que o bloco de notas, com isso encontrei o tão famoso &lt;a href=&#34;https://notepad-plus-plus.org&#34;&gt;Notepad++&lt;/a&gt; e foi fantástico pois ele abriu o leque de opções a um nível que eu não imaginava, fiz uso dele por um bom período e gostei da ferramenta e dos recursos que fornecia.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

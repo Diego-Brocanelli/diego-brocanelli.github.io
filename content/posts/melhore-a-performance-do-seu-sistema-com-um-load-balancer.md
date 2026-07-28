@@ -1,23 +1,23 @@
 ---
 title: "Melhore a performance do seu sistema com um load balancer"
+author: Diego Brocanelli
+type: post
 date: 2025-03-26T11:48:22Z
 draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - arquitetura
 tags:
   - Load balancer
   - balanceador de caraga
 ---
-
-# Sumário
-
-1. [O que é load balancer?](#o-que-é-load-balancer)
-2. [Para que serve?](#para-que-serve)
-3. [Quando usar?](#quando-usar)
-4. [Quais tipos existem?](#quais-tipos-existem)
-5. [Exemplo do problema](#exemplo-do-problema)
-6. [Considerações finais](#considerações-finais)
-7. [Referências](#referências)
 
 # O que é load balancer?
 
@@ -49,7 +49,7 @@ Se o seu site ou aplicação enfrenta lentidão frequente, ou risco de downtime,
 
 # Quais tipos existem?
 
-### Load balancers na Nuvem (Cloud-based)
+## Load balancers na Nuvem (Cloud-based)
 
 - AWS Elastic Load Balancing (ELB);
 - Google Cloud Load Balancing;
@@ -57,7 +57,7 @@ Se o seu site ou aplicação enfrenta lentidão frequente, ou risco de downtime,
 - Cloudflare Load Balancing;
 - Alibaba Cloud SLB (Server Load Balancer).
 
-### Softwares Self-Hosted (On-Premise ou em Servidores Próprios)
+## Softwares Self-Hosted (On-Premise ou em Servidores Próprios)
 
 - NGINX;
 - HAProxy;
@@ -65,7 +65,7 @@ Se o seu site ou aplicação enfrenta lentidão frequente, ou risco de downtime,
 - Envoy;
 - F5 BIG-IP.
 
-### **Qual escolher?**
+## **Qual escolher?**
 
 - **Se você está na nuvem:** AWS ELB, Google Load Balancer, Azure Load Balancer ou Cloudflare;
 - **Se precisa de um Load balancer self-hosted:** NGINX, HAProxy ou Traefik;

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>vuejs on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/vuejs/</link>
-    <description>Recent content in vuejs on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Vuejs on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/vuejs/</link>
+    <description>Recent content in Vuejs on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 30 Mar 2017 02:04:18 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/vuejs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Mar 2017 02:04:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/vuejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 08 – Vue.js e Single Page Applications: O que saber antes de começar (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
+      <link>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
       <pubDate>Thu, 30 Mar 2017 02:04:18 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
-      <description>Olá, tudo bem?!
-Hoje tivemos a oitava edição do hhbr, uma edição recheada de muita informação, dicas e códigos!
-Nesta edição temos a honra de trazer o grande Fábio Vedovelli, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do Codecasts chamado SPA Started Kit onde facilita e muito o start inicial de uma SPA com Vuejs.</description>
+      <guid>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Hoje tivemos a oitava edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRG&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação, dicas e códigos!&lt;/p&gt;
+&lt;p&gt;Nesta edição temos a honra de trazer o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fábio Vedovelli&lt;/a&gt;, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do &lt;a href=&#34;ttps://codecasts.com.br/lesson&#34;&gt;Codecasts&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/codecasts/spa-starter-kit&#34;&gt;SPA Started Kit&lt;/a&gt; onde facilita e muito o start inicial de uma SPA com Vuejs.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>emberjs on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/emberjs/</link>
-    <description>Recent content in emberjs on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Emberjs on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/emberjs/</link>
+    <description>Recent content in Emberjs on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 04 May 2017 14:55:09 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/emberjs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 May 2017 14:55:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/emberjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 09 – Ember.js: Por que você ainda não está usando? (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
+      <link>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
       <pubDate>Thu, 04 May 2017 14:55:09 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
-      <description>Olá, tudo bem?!
-É com alegria que apresento o vídeo da nona edição do canal hhbr e nesta edição tivemos a honra de prestigiar uma super palestra do grande Danilo Vaz, nesta edição foi abordado o tema “Ember.js: Por que você ainda não está usando?”, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade.</description>
+      <guid>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;É com alegria que apresento o vídeo da nona edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; e nesta edição tivemos a honra de prestigiar uma super palestra do grande &lt;a href=&#34;tp://danilovaz.github.io/&#34;&gt;Danilo Vaz&lt;/a&gt;, nesta edição foi abordado o tema &lt;strong&gt;“Ember.js: Por que você ainda não está usando?”&lt;/strong&gt;, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade. Sem mais delongas espero que apreciem o vídeo.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

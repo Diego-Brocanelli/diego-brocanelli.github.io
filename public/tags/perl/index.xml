@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Perl on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/perl/</link>
+    <description>Recent content in Perl on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 06 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utilizando o MySQLTuner para gerar dados e métricas para tuning do MysqL</title>
+      <link>http://localhost:1313/posts/mysql-tuner/</link>
+      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mysql-tuner/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Analisar performance de banco de dados não é nada simples, principalmente para quem não é DBA .&lt;/p&gt;
+&lt;p&gt;Com base em minhas pesquisas encontrei uma ferramenta bacana que auxilia nessa tarefa chamada &lt;a href=&#34;https://github.com/major/MySQLTuner-perl&#34;&gt;MySQLTuner-perl&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Essa ferramenta gera um relatório com a análise de diversas métricas que podemos utilizar para o processo de tuning do MySQL. Onde no final é gerado algumas recomendações para serem executadas na busca dessa melhoria.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Observação:&lt;/strong&gt; Todas as etapas de execução foram realizadas em um ambiente Linux, mais precisamente no Ubuntu 18.04.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,47 +1,152 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>desenvolvimento on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/desenvolvimento/</link>
-    <description>Recent content in desenvolvimento on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Desenvolvimento on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/desenvolvimento/</link>
+    <description>Recent content in Desenvolvimento on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuração automática de estação de trabalho</title>
-      <link>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</link>
+      <link>http://localhost:1313/posts/configuracao-automatica-de-estacao-de-trabalho/</link>
       <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/desenvolvimento/configuracao-automatica-de-estacao-de-trabalho/</guid>
-      <description>Olá, tudo bem!
-Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado workstation_configuration, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.
-Requisitos Distribuição Linux baseado em Debian. Como funciona Consiste em scripts shell que fazem todo o trabalho de instalação e configuração conforme informações contidas no arquivo setup.</description>
+      <guid>http://localhost:1313/posts/configuracao-automatica-de-estacao-de-trabalho/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;p&gt;Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado &lt;a href=&#34;https://github.com/Diego-Brocanelli/workstation_configuration&#34;&gt;workstation_configuration&lt;/a&gt;, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.&lt;/p&gt;
+&lt;h2 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Distribuição Linux baseado em Debian.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;como-funciona&#34;&gt;Como funciona&lt;/h2&gt;
+&lt;p&gt;Consiste em scripts shell que fazem todo o  trabalho de instalação e configuração conforme informações contidas no arquivo setup.sh.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Melhore a qualidade do código da sua equipe com Code Review</title>
-      <link>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
+      <link>http://localhost:1313/posts/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
       <pubDate>Wed, 10 May 2017 22:20:12 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
-      <description>Olá, tudo bem?!
-Um dos métodos que podemos utilizar para melhorar nosso source code é adotar a pratica de code review.
-Ao realizar este processo, teremos a oportunidade de compartilhar conhecimento, melhorar o código e diminuir a quantidade de bugs que possivelmente existem no sistema.
-Mas o que é code review? Alguém (técnico) que não seja você, que irá analisar o seu código.
-Regras para um bom code review De 200 à 400 linhas de código no máximo.</description>
+      <guid>http://localhost:1313/posts/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Um dos métodos que podemos utilizar para melhorar nosso source code é adotar a pratica de code review.&lt;/p&gt;
+&lt;p&gt;Ao realizar este processo, teremos a oportunidade de compartilhar conhecimento, melhorar o código e diminuir a quantidade de bugs que possivelmente existem no sistema.&lt;/p&gt;
+&lt;h2 id=&#34;mas-o-que-é-code-review&#34;&gt;Mas o que é code review?&lt;/h2&gt;
+&lt;p&gt;Alguém (técnico) que não seja você, que irá analisar o seu código.&lt;/p&gt;
+&lt;h3 id=&#34;regras-para-um-bom-code-review&#34;&gt;Regras para um bom code review&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;De 200 à 400 linhas de código no máximo.&lt;/li&gt;
+&lt;li&gt;Sem pressa.&lt;/li&gt;
+&lt;li&gt;Limite de até 1hora.&lt;/li&gt;
+&lt;li&gt;Use:
+&lt;ul&gt;
+&lt;li&gt;Checklist.&lt;/li&gt;
+&lt;li&gt;Ferramentas para automatizar o processo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Não faça o processo de code review em seu próprio código.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;o-que-avaliar&#34;&gt;O que avaliar?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A implementação atende os requisitos da task?&lt;/li&gt;
+&lt;li&gt;Análise de bug.&lt;/li&gt;
+&lt;li&gt;Segue code standarts?
+&lt;ul&gt;
+&lt;li&gt;Exemplo:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.php-fig.org/psr/psr-1/&#34;&gt;PSR-1&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Contém código duplicado?&lt;/li&gt;
+&lt;li&gt;O código é legível?&lt;/li&gt;
+&lt;li&gt;Deixou o código melhor do que quando você o pegou?&lt;/li&gt;
+&lt;li&gt;Buscar por erros.&lt;/li&gt;
+&lt;li&gt;Indentação de código.&lt;/li&gt;
+&lt;li&gt;Nomes de variáveis/métodos/classes.&lt;/li&gt;
+&lt;li&gt;Testes:
+&lt;ul&gt;
+&lt;li&gt;Cobrem as partes que deveriam cobrir?&lt;/li&gt;
+&lt;li&gt;São legíveis?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Segue boas práticas de desenvolvimento?
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://eltonminetto.net/2016/06/24/como-melhorar-seus-codigos-usando-object-calisthenics/&#34;&gt;Object Calisthenics&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;S.O.L.I.D.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Otimização de rotinas.&lt;/li&gt;
+&lt;li&gt;Execução das ferramentas:
+&lt;ul&gt;
+&lt;li&gt;Por exemplo:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/FriendsOfPHP/PHP-CS-Fixer&#34;&gt;PHP-CS-Fixer&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://phpmd.org/&#34;&gt;PHPMD&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/squizlabs/PHP_CodeSniffer&#34;&gt;CodeSniffer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remover código comentado.&lt;/li&gt;
+&lt;li&gt;Sugerir melhorias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;o-que-não-executar-ou-avaliar&#34;&gt;O que não  executar ou avaliar?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Emitir opinião sobre a forma que o indivíduo trabalha.&lt;/li&gt;
+&lt;li&gt;Forçar que o desenvolvedor siga o seu processo de desenvolvimento.&lt;/li&gt;
+&lt;li&gt;Seja imparcial, avalie o código não a pessoa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quais-as-vantagens-de-se-ter-um-code-review&#34;&gt;Quais as vantagens de se ter um code review?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Aumento de produtividade.&lt;/li&gt;
+&lt;li&gt;Auto aperfeiçoamento.&lt;/li&gt;
+&lt;li&gt;Compartilhar conhecimento:
+&lt;ul&gt;
+&lt;li&gt;Técnico.&lt;/li&gt;
+&lt;li&gt;Do produto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Economia para a empresa.&lt;/li&gt;
+&lt;li&gt;Melhor base code.&lt;/li&gt;
+&lt;li&gt;Redução de bugs nos sistemas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;como-realizar-um-code-review&#34;&gt;Como realizar um code review?&lt;/h3&gt;
+&lt;p&gt;Pode ser realizado de duas maneiras, sendo:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 05 – Refatoração (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/refatoracao-video/</link>
+      <link>http://localhost:1313/posts/refatoracao-video/</link>
       <pubDate>Sat, 10 Dec 2016 21:06:31 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/refatoracao-video/</guid>
-      <description>Olá pessoal, tudo bem?!
-Ocorreu hoje a quinta edição do hhbr, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka @devdrops.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Refatoração” Palestrante: Davi Marcondes Moreira Twitter: https://twitter.com/devdrops Site: devdrops.me GitHub: https://github.com/devdrops Comunidade: http://phpdojeitocerto.tumblr.com/ Slides: https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45 Links mencionados PHPMD: https://phpmd.org/ Blackfire: https://blackfire.io/ CorgiBytes: http://corgibytes.com/ PHPUnit: https://phpunit.de/ SensiolabsInsight: https://insight.</description>
+      <guid>http://localhost:1313/posts/refatoracao-video/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Ocorreu hoje a quinta edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt;, e nesta edição tivemos uma super palestra sobre refatoração, conteúdo apresentado pelo mestre Davi Marcondes Moreira aka &lt;a href=&#34;https://github.com/devdrops&#34;&gt;@devdrops.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=CtiLfuVW7MQ&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Refatoração”&lt;/li&gt;
+&lt;li&gt;Palestrante: Davi Marcondes Moreira&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/devdrops&#34;&gt;https://twitter.com/devdrops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;http://www.devdrops.me/&#34;&gt;devdrops.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/devdrops&#34;&gt;https://github.com/devdrops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comunidade: &lt;a href=&#34;http://phpdojeitocerto.tumblr.com/&#34;&gt;http://phpdojeitocerto.tumblr.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45&#34;&gt;https://docs.google.com/presentation/d/1myN5bMo_RSPeUWT6vW1XM0HHamWq4HnHAReA80gMuJ4/edit#slide=id.g18ddc55d07_2_45&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-mencionados&#34;&gt;Links mencionados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PHPMD: &lt;a href=&#34;https://phpmd.org/&#34;&gt;https://phpmd.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blackfire: &lt;a href=&#34;https://blackfire.io/&#34;&gt;https://blackfire.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CorgiBytes: &lt;a href=&#34;http://corgibytes.com/&#34;&gt;http://corgibytes.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PHPUnit: &lt;a href=&#34;https://phpunit.de/&#34;&gt;https://phpunit.de/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SensiolabsInsight: &lt;a href=&#34;https://insight.sensiolabs.com&#34;&gt;https://insight.sensiolabs.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Até a próxima, abraços!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

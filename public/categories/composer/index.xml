@@ -1,47 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>composer on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/composer/</link>
-    <description>Recent content in composer on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Composer on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/composer/</link>
+    <description>Recent content in Composer on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 28 Sep 2017 12:15:24 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/composer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2017 12:15:24 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HHBR: 14 – Iniciando com Composer (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</link>
+      <link>http://localhost:1313/posts/hhbr-14-iniciando-com-composer-video/</link>
       <pubDate>Thu, 28 Sep 2017 12:15:24 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-14-iniciando-com-composer-video/</guid>
-      <description>Olá, tudo bem?!
-Rolou a 14 edição do hhbr, nesta edição trago para vocês uma talk bacana que produzi apresentando o Composer, a ferramenta de gestão de dependências do PHP.
-Uma talk voltada para o público iniciante, porém, focado em incentivar a adoção da ferramentas pelos desenvolvedores PHP, demonstrando os principais recursos da ferramenta.
-Dados da palestra Tema: &amp;ldquo;Iniciando com Composer&amp;rdquo; Palestrante: Diego Brocanelli Site: http://diegobrocanelli.com.br Twitter: https://twitter.com/diego_b2 GitHub: https://github.com/Diego-Brocanelli Links comentados https://getcomposer.</description>
+      <guid>http://localhost:1313/posts/hhbr-14-iniciando-com-composer-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Rolou a 14 edição do &lt;a href=&#34;https://www.youtube.com/hhbrtech&#34;&gt;hhbr&lt;/a&gt;, nesta edição trago para vocês uma talk bacana que produzi apresentando o &lt;a href=&#34;https://getcomposer.org/&#34;&gt;Composer&lt;/a&gt;, a ferramenta de gestão de dependências do PHP.&lt;/p&gt;
+&lt;p&gt;Uma talk voltada para o público iniciante, porém, focado em incentivar a adoção da ferramentas pelos desenvolvedores PHP, demonstrando os principais recursos da ferramenta.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/9-uYwJzT18I?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dados da palestra&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: &amp;ldquo;Iniciando com Composer&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Palestrante: Diego Brocanelli&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;http://diegobrocanelli.com.br&#34;&gt;http://diegobrocanelli.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/diego_b2&#34;&gt;https://twitter.com/diego_b2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Diego-Brocanelli&#34;&gt;https://github.com/Diego-Brocanelli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links comentados&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://getcomposer.org/&#34;&gt;https://getcomposer.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.php-fig.org/&#34;&gt;http://www.php-fig.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Espero que tenham apreciado, lembrando que todo mês temos uma nova edição com uma super palestra com temas diversos sobre o mundo da TI.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como usar Traits no PHP com namespace</title>
-      <link>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</link>
+      <link>http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/</link>
       <pubDate>Tue, 08 Aug 2017 23:10:42 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/como-usar-traits-no-php-com-namespace/</guid>
-      <description>Recentemente lancei um post Como usar Traits no PHP, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.
-Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.
-Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:</description>
+      <guid>http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/</guid>
+      <description>&lt;p&gt;Recentemente lancei um post &lt;a href=&#34;http://localhost:1313/php/como-usar-traits-no-php/&#34;&gt;Como usar Traits no PHP&lt;/a&gt;, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.&lt;/p&gt;
+&lt;p&gt;Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.&lt;/p&gt;
+&lt;p&gt;Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Iniciando com Composer</title>
-      <link>https://diegobrocanelli.com.br/php/iniciando-com-composer/</link>
+      <link>http://localhost:1313/posts/iniciando-com-composer/</link>
       <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/iniciando-com-composer/</guid>
-      <description>Olá, tudo bem?
-Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
-O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.
-Citando o amigo Elton Minetto:
-“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.</description>
+      <guid>http://localhost:1313/posts/iniciando-com-composer/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?&lt;/p&gt;
+&lt;p&gt;Em diversos posts aqui no blog faço uso do &lt;a href=&#34;https://getcomposer.org/&#34;&gt;Composer&lt;/a&gt;, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-o-composer&#34;&gt;O que é o composer?&lt;/h2&gt;
+&lt;p&gt;Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.&lt;/p&gt;
+&lt;p&gt;Citando o amigo &lt;a href=&#34;http://eltonminetto.net/&#34;&gt;Elton Minetto&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>iniciante on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/iniciante/</link>
-    <description>Recent content in iniciante on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Iniciante on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/iniciante/</link>
+    <description>Recent content in Iniciante on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/iniciante/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/iniciante/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</link>
+      <link>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/comunidade/como-estudo-uma-nova-tecnologia/</guid>
-      <description>Olá, tudo bem?!
-É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.
-Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.</description>
+      <guid>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.&lt;/p&gt;
+&lt;p&gt;Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Como realizar parse da query string de forma simples com PHP</title>
-      <link>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</link>
+      <link>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</link>
       <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/realizar-parse-da-query-string-de-forma-simples/</guid>
-      <description>Olá, tudo bem!
-Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?
-Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.
-Vou lhe demostrar que não precisamos de nada disso para realizar essa tarefa!
-O que é query String? É parte da URL, onde contém dados sendo transmitidos.
-Exemplo: 1 http://meusite.com.br/produto?chave=valor&amp;amp;outraChave=outroValor Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘?</description>
+      <guid>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
+&lt;p&gt;Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?&lt;/p&gt;
+&lt;p&gt;Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.&lt;/p&gt;
+&lt;p&gt;Vou lhe demostrar que não precisamos de nada disso para realizar essa tarefa!&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-query-string&#34;&gt;O que é query String?&lt;/h2&gt;
+&lt;p&gt;É parte da URL, onde contém dados sendo transmitidos.&lt;/p&gt;
+&lt;h3 id=&#34;exemplo&#34;&gt;Exemplo:&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://meusite.com.br/produto?chave&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;valor&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;outraChave&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;outroValor
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘? ‘ seguido de chave e seu valor.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

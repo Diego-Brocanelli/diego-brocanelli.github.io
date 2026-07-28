@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Architectural Guard on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/architectural-guard/</link>
+    <description>Recent content in Architectural Guard on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 16 Jan 2026 20:00:53 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/architectural-guard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mago PHP: Ferramenta all-in-one para qualidade e arquitetura de código PHP</title>
+      <link>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</link>
+      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Durante minha navegação web, esbarrei com um projeto que chamou minha atenção o &lt;a href=&#34;https://mago.carthage.software/&#34;&gt;Mago PHP&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O projeto foi desenvolvido em Rust e visa centralizar funcionalidades essenciais para garantir, qualidade, padronização e arquitetura em projetos PHP.&lt;/p&gt;
+&lt;p&gt;A ferramenta reúne:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Formatter;&lt;/li&gt;
+&lt;li&gt;Linter;&lt;/li&gt;
+&lt;li&gt;Static Analyzer;&lt;/li&gt;
+&lt;li&gt;Architectural Guard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Temos ferramentas individuais que fazem cada uma dessas tarefas, o que achei interessante é estar em uma ferramenta só e altamente configurável.&lt;/p&gt;
+&lt;p&gt;O fato de ter tudo em um lugar, ajuda na gerência de dependências externas. Podemos configurar cada uma das ferramentas conforme a necessidade e padrões do time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

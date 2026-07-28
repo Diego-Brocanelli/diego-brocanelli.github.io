@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>css on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/css/</link>
-    <description>Recent content in css on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Css on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/css/</link>
+    <description>Recent content in Css on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 18 Oct 2016 23:17:07 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2016 23:17:07 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 02 Flexbox – Interfaces Modernas (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/flexbox-interfaces-modernas-video/</link>
+      <link>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</link>
       <pubDate>Tue, 18 Oct 2016 23:17:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/flexbox-interfaces-modernas-video/</guid>
-      <description>Fala galera tudo bem?!
-Ontem dia 05/10/2016 ocorreu a segunda palestra do canal hhbr, e foi explorado o mundo do Flexbox.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Palestrante: Danilo Vaz; Twitter: ttps://twitter.com/_danilovaz Site: ttp://danilovaz.github.io GitHub: https://github.com/danilovaz Slides: https://speakerdeck.com/danilovaz/flexbox Links mencionados na palestra: A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ http://flexboxfroggy.com/ http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility </description>
+      <guid>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</guid>
+      <description>&lt;p&gt;Fala galera tudo bem?!&lt;/p&gt;
+&lt;p&gt;Ontem dia 05/10/2016 ocorreu a segunda palestra do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, e foi explorado o mundo do Flexbox.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=GdT6aNYE_TE&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Palestrante: Danilo Vaz;&lt;/li&gt;
+&lt;li&gt;Twitter: ttps://twitter.com/_danilovaz&lt;/li&gt;
+&lt;li&gt;Site: ttp://danilovaz.github.io&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/danilovaz&#34;&gt;https://github.com/danilovaz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://speakerdeck.com/danilovaz/flexbox&#34;&gt;https://speakerdeck.com/danilovaz/flexbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-mencionados-na-palestra&#34;&gt;Links mencionados na palestra:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Complete Guide to Flexbox: &lt;a href=&#34;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&#34;&gt;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://flexboxfroggy.com/&#34;&gt;http://flexboxfroggy.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility&#34;&gt;http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

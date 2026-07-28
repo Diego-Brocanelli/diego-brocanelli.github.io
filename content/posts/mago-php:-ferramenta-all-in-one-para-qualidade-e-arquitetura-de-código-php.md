@@ -4,6 +4,14 @@ date: 2026-01-16T20:00:53Z
 author: Diego Brocanelli
 type: post
 draft: true
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - php
 tags:
@@ -13,12 +21,6 @@ tags:
   - linter
   - Architectural Guard
 ---
-
-## Sumário
-- [Introdução](#introdução)
-- [Exemplos](#exexmplos)
-- [Considerações](#considerações)
-- [Referências](#referências)
 
 ## Introdução
 

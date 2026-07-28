@@ -1,85 +1,179 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>back end on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/back-end/</link>
-    <description>Recent content in back end on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Back End on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/back-end/</link>
+    <description>Recent content in Back End on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:40:45 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/back-end/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:40:45 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/back-end/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 25 – Introdução a CQRS e Event Sourcing (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
+      <link>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
       <pubDate>Tue, 05 Nov 2019 16:40:45 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
-      <description>Olá, tudo bem?!
-Nesta 25º edição da comunidade hhbr tivemos uma incrível palestra sobre “Introdução a CQRS e Event Sourcing” com o monstro da programação Marcelo Santos, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Introdução a CQRS e Event Sourcing” Palestrante: Marcelo Santos Twitter: @marcelsud Site: http://marcelsud.</description>
+      <guid>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta 25º edição da comunidade &lt;a href=&#34;https://www.youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt;  tivemos uma incrível palestra sobre  “&lt;em&gt;Introdução a CQRS e Event Sourcing&lt;/em&gt;” com o monstro da programação &lt;a href=&#34;http://www.marcelsud.com/&#34;&gt;Marcelo Santos&lt;/a&gt;, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/wUlsQD9dnKI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=wUlsQD9dnKI&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr: 17 – Primeiros passos com integração contínua (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-17-primeiros-passos-com-integracao-continua/</link>
+      <link>http://localhost:1313/posts/hhbr-17-primeiros-passos-com-integracao-continua/</link>
       <pubDate>Tue, 05 Nov 2019 16:32:13 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-17-primeiros-passos-com-integracao-continua/</guid>
-      <description>Olá, tudo bem?!
-Nesta 17º edição da comunidade hhbr pudemos apreciar uma fantástica palestra sobre “Primeiros passos com integração contínua” ministrado pelo grande Iury Alves.
-Demonstrado na prática as principais técnicas e conceitos para iniciar com a integração contínua, abordando ferramentas que facilitam nossa vida. Sem mais delongas, segue abaixo a gravação da palestra.
-Dados da palestra Tema: “Primeiros passos com integração contínua” Palestrante: Iury Alves Site: https://medium.com/@iurysouza/ Twitter: https://twitter.com/yorix20 GitHub: https://github.</description>
+      <guid>http://localhost:1313/posts/hhbr-17-primeiros-passos-com-integracao-continua/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta 17º edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; pudemos apreciar uma fantástica palestra sobre “&lt;em&gt;Primeiros passos com integração contínua&lt;/em&gt;” ministrado pelo grande &lt;a href=&#34;https://github.com/IuryAlves&#34;&gt;Iury Alves&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Demonstrado na prática as principais técnicas e conceitos para iniciar com a integração contínua, abordando ferramentas que facilitam nossa vida. Sem mais delongas, segue abaixo a gravação da palestra.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/m_qINEurj2g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Primeiros passos com integração contínua”&lt;/li&gt;
+&lt;li&gt;Palestrante: Iury Alves&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://medium.com/@iurysouza/&#34;&gt;https://medium.com/@iurysouza/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/yorix20&#34;&gt;https://twitter.com/yorix20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/IuryAlves&#34;&gt;https://github.com/IuryAlves&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links Comentados&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <link>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
       <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
-      <description>Olá, tudo bem?!
-Nesta décima sexta edição da comunidade hhbr trazemos uma grande palestra com o tema “Contribuindo com o PHP e o PHP TestFest 2017”, ministrado pelo grande Rogerio Prado de Jesus.
-Dados da palestra Tema: “Contribuindo com o PHP e o PHP TestFest 2017” Palestrante: Rogerio Prado de Jesus Site: https://rogeriopradoj.com/ Twitter: https://twitter.com/RogerioPradoJ GitHub: https://github.com/RogerioPradoJ Comunidade: https://t.me/PHPTestFestBrasil Link dos slides: https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16 Links Comentados https://phptestfest.org/&amp;gt; https://3v4l.org/ http://pensandonaweb.com.br/ https://externals.io/ https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ https://qa.</description>
+      <guid>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Nesta décima sexta edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; trazemos uma grande palestra com o tema “&lt;em&gt;Contribuindo com o PHP e o PHP TestFest 2017&lt;/em&gt;”, ministrado pelo grande &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;Rogerio Prado de Jesus&lt;/a&gt;.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/XazncfYacPc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Contribuindo com o PHP e o PHP TestFest 2017”&lt;/li&gt;
+&lt;li&gt;Palestrante: Rogerio Prado de Jesus&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;https://rogeriopradoj.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/RogerioPradoJ&#34;&gt;https://twitter.com/RogerioPradoJ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/RogerioPradoJ&#34;&gt;https://github.com/RogerioPradoJ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comunidade: &lt;a href=&#34;https://t.me/PHPTestFestBrasil&#34;&gt;https://t.me/PHPTestFestBrasil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Link dos slides: &lt;a href=&#34;https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16&#34;&gt;https://speakerdeck.com/rogeriopradoj/contribuindo-com-o-php-e-o-php-testfest-2017-hhbr-hackers-house-br-number-16&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://phptestfest.org/%3E&#34;&gt;https://phptestfest.org/&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3v4l.org/&#34;&gt;https://3v4l.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pensandonaweb.com.br/&#34;&gt;http://pensandonaweb.com.br/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://externals.io/&#34;&gt;https://externals.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ&#34;&gt;https://www.youtube.com/channel/UCZDace9Yohbdbncpj9Wf_mQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qa.php.net/phpt_details.php&#34;&gt;https://qa.php.net/phpt_details.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gcov.php.net/PHP&#34;&gt;http://gcov.php.net/PHP&lt;/a&gt;_HEAD/lcov_html&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chat.stackoverflow.com/rooms/11/php&#34;&gt;https://chat.stackoverflow.com/rooms/11/php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=DyDCz1qYQGU&amp;amp;feature=youtu.be&#34;&gt;https://www.youtube.com/watch?v=DyDCz1qYQGU&amp;amp;feature=youtu.be&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
-      <title>Modularizando Sua Aplicação Laravel</title>
-      <link>https://diegobrocanelli.com.br/php/laravel-module/</link>
+      <title>Modularizando sua aplicação Laravel</title>
+      <link>http://localhost:1313/posts/laravel-module/</link>
       <pubDate>Wed, 05 Sep 2018 13:34:32 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/laravel-module/</guid>
-      <description>Olá, tudo bem?!
-Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.
-Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.
-O Laravel é um grande framework, onde vem crescendo cada vez mais ao longo dos anos, em minhas pesquisas e estudos encontrei uma maneira de construir aplicações de forma modular no framework, e irei compartilhar com vocês os resultados dos estudos.</description>
+      <guid>http://localhost:1313/posts/laravel-module/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.&lt;/p&gt;
+&lt;p&gt;Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.&lt;/p&gt;
+&lt;p&gt;O Laravel é um grande framework, onde vem crescendo cada vez mais ao longo dos anos, em minhas pesquisas e estudos encontrei uma maneira de construir aplicações de forma modular no framework, e irei compartilhar com vocês os resultados dos estudos.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 12 – Por que Golang? (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/por-que-golang-video/</link>
+      <link>http://localhost:1313/posts/por-que-golang-video/</link>
       <pubDate>Tue, 01 Aug 2017 03:04:42 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/por-que-golang-video/</guid>
-      <description>Go é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição ZeuCXB traz uma palestra robusta, recheado de exemplos para nós.
-Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema”Por que Golang?” Palestrante: Eliseu Codinhoto (@zeucxb) Canal: https://youtube.com/euprogramadoroficial Twitter: https://twitter.com/zeucxb GitHub: https://github.com/zeucxb LinkedIn: https://www.linkedin.com/in/zeucxb Slides: https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p Links Comentados Sites https://golang.</description>
+      <guid>http://localhost:1313/posts/por-que-golang-video/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;ZeuCXB&lt;/a&gt; traz uma palestra robusta, recheado de exemplos para nós.&lt;/p&gt;
+&lt;p&gt;Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=h_9UNH6pkyo&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema”Por que Golang?”&lt;/li&gt;
+&lt;li&gt;Palestrante: Eliseu Codinhoto (@zeucxb)&lt;/li&gt;
+&lt;li&gt;Canal: &lt;a href=&#34;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&#34;&gt;https://youtube.com/euprogramadoroficial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;https://twitter.com/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/zeucxb&#34;&gt;https://github.com/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/zeucxb&#34;&gt;https://www.linkedin.com/in/zeucxb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p&#34;&gt;https://docs.google.com/presentation/d/1AHAvXOgkLBZuTmVMP574nXEcO0Dw-DHG2O7AZG-qf5s/edit#slide=id.p&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sites
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;https://golang.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/&#34;&gt;https://gobyexample.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Empresas
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nuveo.com.br/&#34;&gt;https://nuveo.com.br/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://planrockr.com/pt-br/&#34;&gt;http://planrockr.com/pt-br/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Newsletter
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://asemanago.com.br&#34;&gt;http://asemanago.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Livros
+&lt;ul&gt;
+&lt;li&gt;Programando em Go Crie aplicações com a linguagem do Google: &lt;a href=&#34;https://www.casadocodigo.com.br/products/livro-google-go&#34;&gt;https://www.casadocodigo.com.br/products/livro-google-go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A Linguagem de Programação Go: &lt;a href=&#34;https://novatec.com.br/livros/linguagem-de-programacao-go/&#34;&gt;https://novatec.com.br/livros/linguagem-de-programacao-go/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introdução à linguagem Go: &lt;a href=&#34;https://novatec.com.br/livros/introducao-linguagem-go/&#34;&gt;https://novatec.com.br/livros/introducao-linguagem-go/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cursos
+&lt;ul&gt;
+&lt;li&gt;GoIniciando com a linguagem do Google: &lt;a href=&#34;https://www.alura.com.br/curso-online-golang&#34;&gt;https://www.alura.com.br/curso-online-golang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Canais Youtube
+&lt;ul&gt;
+&lt;li&gt;Eu Programador: &lt;a href=&#34;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&#34;&gt;https://www.youtube.com/channel/UC7c2c7E1L9xhCinShl8-iZA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gopherconbrasil: &lt;a href=&#34;https://www.youtube.com/channel/UCGFVA_XvkUoMWpKVH0IrjUA&#34;&gt;https://www.youtube.com/channel/UCGFVA_XvkUoMWpKVH0IrjUA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cesar Gimenes: &lt;a href=&#34;https://www.youtube.com/channel/UCxRoRvJi7NbC2boKAV70t_g&#34;&gt;https://www.youtube.com/channel/UCxRoRvJi7NbC2boKAV70t_g&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Espero que tenham apreciado, até a próxima.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 03 – Resolvendo os seus problemas web com Flask  (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/resolvendo-os-seus-problemas-web-com-flask-video/</link>
+      <link>http://localhost:1313/posts/resolvendo-os-seus-problemas-web-com-flask-video/</link>
       <pubDate>Tue, 25 Oct 2016 23:53:51 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
-      <description>Olá pessoal, tudo bem?!
-Hoje tivemos a terceira edição do hhbr, o tema da palestra deste mês foi “Resolvendo os seus problemas web com Flask”.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Resolvendo os seus problemas web com Flask”
-Palestrante: Iury Alves
-Twitter: https://twitter.com/IuryAlvesdeSouz site: https://medium.com/@iurysouza/ GitHub: https://github.com/IuryAlves
-Links comentados durante o vídeo Curso de Flask: &amp;ldquo;https://www.youtube.com/shared?ci=3e0oiNYKMDYci=3e0&amp;amp;#8230; Quokka Project: http://quokkaproject.org/ Espero que gostem, até a próxima!</description>
+      <guid>http://localhost:1313/posts/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Hoje tivemos a terceira edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, o tema da palestra deste mês foi “Resolvendo os seus problemas web com Flask”.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=ObLZZsGr_6s&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;p&gt;Tema: “Resolvendo os seus problemas web com Flask”&lt;/p&gt;
+&lt;p&gt;Palestrante: Iury Alves&lt;br&gt;
+Twitter: &lt;a href=&#34;https://twitter.com/IuryAlvesdeSouz&#34;&gt;https://twitter.com/IuryAlvesdeSouz&lt;/a&gt;
+site: &lt;a href=&#34;https://medium.com/@iurysouza/&#34;&gt;https://medium.com/@iurysouza/&lt;/a&gt;
+GitHub: &lt;a href=&#34;https://github.com/IuryAlves&#34;&gt;https://github.com/IuryAlves&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links-comentados-durante-o-vídeo&#34;&gt;Links comentados durante o vídeo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Curso de Flask: &amp;ldquo;&lt;a href=&#34;https://www.youtube.com/shared?ci=3e0oiNYKMDYci=3e0&amp;amp;#8230;&#34;&gt;https://www.youtube.com/shared?ci=3e0oiNYKMDYci=3e0&amp;amp;#8230;&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quokka Project: &lt;a href=&#34;http://quokkaproject.org/&#34;&gt;http://quokkaproject.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Espero que gostem, até a próxima!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

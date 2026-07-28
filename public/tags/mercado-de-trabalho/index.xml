@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>mercado de trabalho on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/mercado-de-trabalho/</link>
-    <description>Recent content in mercado de trabalho on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Mercado De Trabalho on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/mercado-de-trabalho/</link>
+    <description>Recent content in Mercado De Trabalho on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 24 Feb 2017 11:48:45 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/mercado-de-trabalho/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2017 11:48:45 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mercado-de-trabalho/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 07 – Mercado de Trabalho (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/php/mercado-de-trabalho-video/</link>
+      <link>http://localhost:1313/posts/mercado-de-trabalho-video/</link>
       <pubDate>Fri, 24 Feb 2017 11:48:45 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/mercado-de-trabalho-video/</guid>
-      <description>Olá, tudo bem?!
-É com alegria que apresento o vídeo da sétima edição do canal hhbr e nesta edição tivemos a honra de prestigiar um bate papo excepcional com o grande Fabio Vedovelli, neste bate papo falamos sobre o mercado de trabalho para desenvolvedores, foi uma experiência muito enriquecedora onde nosso convidado compartilhou suas experiências como empreendedor e desenvolvedor para o mercado estrangeiro (Estados Unidos e Alemanha) sem mais delongas espero que apreciem o vídeo.</description>
+      <guid>http://localhost:1313/posts/mercado-de-trabalho-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;É com alegria que apresento o vídeo da sétima edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; e nesta edição tivemos a honra de prestigiar um bate papo excepcional com o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fabio Vedovelli&lt;/a&gt;, neste bate papo falamos sobre o mercado de trabalho para desenvolvedores, foi uma experiência muito enriquecedora onde nosso convidado compartilhou suas experiências como empreendedor e desenvolvedor para o mercado estrangeiro (Estados Unidos e Alemanha) sem mais delongas espero que apreciem o vídeo.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -28,12 +28,11 @@ h3 {
 }
 
 blockquote {
-    color: var(--blue);
-    background-color: var(--blue-light);
-    padding: 15px !important;
+    /* color: var(--blue-code); */
+    /* background-color: var(--blue-light); */
+    /* padding: 15px !important;
     margin-top: 10px;
-    border-inline-start: 3px solid var(--blue) !important;
-    font-style: italic;
+    border-inline-start: 3px solid var(--blue) !important; */
 }
 
 p code {

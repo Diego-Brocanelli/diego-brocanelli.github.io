@@ -1,19 +1,25 @@
+COMPOSE := docker compose run --rm
+
 build:
-	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -w /src -p 1313:1313 klakegg/hugo:latest
+	$(COMPOSE) hugo --minify
 
 server:
-	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -p 1313:1313 klakegg/hugo:latest server
+	$(COMPOSE) --service-ports hugo server --bind=0.0.0.0
 
 server-all:
-	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -p 1313:1313 klakegg/hugo:latest server -D
+	$(COMPOSE) --service-ports hugo server -D --bind=0.0.0.0
 
 sh:
-	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -p 1313:1313 --entrypoint="" -w /src klakegg/hugo:latest sh
+	$(COMPOSE) --entrypoint sh hugo
 
-post:
+new-post:
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
 		echo "Erro: Você precisa fornecer um título para o post."; \
-		echo "Uso: make post \"Título do Post\""; \
+		echo "Uso: make new-post \"Título do Post\""; \
 		exit 1; \
 	fi
-	docker run --rm -ti -v ~/projects/diego-brocanelli.github.io:/src -w /src klakegg/hugo:latest new posts/$(shell echo "$(filter-out $@,$(MAKECMDGOALS))" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g').md
+	$(COMPOSE) hugo new posts/$(shell echo "$(filter-out $@,$(MAKECMDGOALS))" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g').md
+
+# Necessário para o Make não tentar interpretar o título do post como um target
+%:
+	@:

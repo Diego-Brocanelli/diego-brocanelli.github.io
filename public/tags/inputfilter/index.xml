@@ -2,22 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Inputfilter on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/inputfilter/</link>
+    <link>http://localhost:1313/tags/inputfilter/</link>
     <description>Recent content in Inputfilter on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 22 Apr 2018 12:45:21 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/inputfilter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Apr 2018 12:45:21 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/inputfilter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Validando os dados do formulário com Zend-Validator</title>
-      <link>https://diegobrocanelli.com.br/php/validando-os-dados-do-formulario-com-zend-validator/</link>
+      <link>http://localhost:1313/posts/validando-os-dados-do-formulario-com-zend-validator/</link>
       <pubDate>Sun, 22 Apr 2018 12:45:21 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/validando-os-dados-do-formulario-com-zend-validator/</guid>
-      <description>Olá, tudo bem?!
-Todas aplicações que desenvolvemos necessita de entradas e saídas de dados, isso é muito comum, porém cada desenvolvedor acaba implementando a “sua solução” para esse problema. Definitivamente essa não é uma boa prática por diversos motivos.
-O mais recomendado é a utilização de componentes criados pela comunidade, porque devo usar um componente? Simples, irei listar algumas das principais vantagens, sendo:
-Grande volume de contribuidores. Maior correção de bugs.</description>
+      <guid>http://localhost:1313/posts/validando-os-dados-do-formulario-com-zend-validator/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Todas aplicações que desenvolvemos necessita de entradas e saídas de dados, isso é muito comum, porém cada desenvolvedor acaba implementando a “sua solução” para esse problema. Definitivamente essa não é uma boa prática por diversos motivos.&lt;/p&gt;
+&lt;p&gt;O mais recomendado é a utilização de componentes criados pela comunidade, porque devo usar um componente? Simples, irei listar algumas das principais vantagens, sendo:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Grande volume de contribuidores.&lt;/li&gt;
+&lt;li&gt;Maior correção de bugs.&lt;/li&gt;
+&lt;li&gt;Implementações de melhorias contantes.&lt;/li&gt;
+&lt;li&gt;Solução robusta.&lt;/li&gt;
+&lt;li&gt;Testada por diversos usuários (programadores).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;o-componente-zend-validator&#34;&gt;O componente zend-validator&lt;/h2&gt;
+&lt;p&gt;Neste post irei apresentar um poderoso componente criado pela Zend e mantido pela comunidade, seu nome é &lt;a href=&#34;https://docs.zendframework.com/zend-validator/&#34;&gt;zend-validator&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

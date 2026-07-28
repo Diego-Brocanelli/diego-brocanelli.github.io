@@ -1,33 +1,134 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>terminal on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/terminal/</link>
-    <description>Recent content in terminal on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Terminal on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/terminal/</link>
+    <description>Recent content in Terminal on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 21 Apr 2017 16:27:37 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Apr 2017 16:27:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comandos básicos do MySQL no terminal</title>
-      <link>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</link>
+      <link>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</link>
       <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/</guid>
-      <description>Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4.</description>
+      <guid>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.&lt;/p&gt;
+&lt;p&gt;Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.&lt;/p&gt;
+&lt;h2 id=&#34;1-conexão-e-navegação&#34;&gt;1. Conexão e Navegação&lt;/h2&gt;
+&lt;h3 id=&#34;conectar-ao-mysql&#34;&gt;Conectar ao MySQL&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;strong&gt;Parâmetro&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Propósito&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;-u&lt;/td&gt;
+					&lt;td&gt;Informar qual o nome de usuário deseja usar para se conectar ao MySQL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;-p&lt;/td&gt;
+					&lt;td&gt;Exige que a senha seja informada&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;conectar-diretamente-a-um-banco-de-dados&#34;&gt;Conectar diretamente a um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nome_do_banco&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;listar-todos-os-bancos-de-dados&#34;&gt;Listar todos os bancos de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;selecionar-um-banco-de-dados&#34;&gt;Selecionar um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;USE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;listar-tabelas-do-banco-selecionado&#34;&gt;Listar tabelas do banco selecionado&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ver-estrutura-de-uma-tabela&#34;&gt;Ver estrutura de uma tabela&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_da_tabela&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;2-gerenciamento-de-bancos-e-tabelas&#34;&gt;2. Gerenciamento de Bancos e Tabelas&lt;/h2&gt;
+&lt;h3 id=&#34;criar-um-novo-banco-de-dados&#34;&gt;Criar um novo banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;apagar-um-banco-de-dados&#34;&gt;Apagar um banco de dados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt; Use com cautela, pois o banco de dados será APAGADO!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Iniciando com Composer</title>
-      <link>https://diegobrocanelli.com.br/php/iniciando-com-composer/</link>
+      <link>http://localhost:1313/posts/iniciando-com-composer/</link>
       <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/iniciando-com-composer/</guid>
-      <description>Olá, tudo bem?
-Em diversos posts aqui no blog faço uso do Composer, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.
-O que é o composer? Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.
-Citando o amigo Elton Minetto:
-“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.</description>
+      <guid>http://localhost:1313/posts/iniciando-com-composer/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?&lt;/p&gt;
+&lt;p&gt;Em diversos posts aqui no blog faço uso do &lt;a href=&#34;https://getcomposer.org/&#34;&gt;Composer&lt;/a&gt;, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-o-composer&#34;&gt;O que é o composer?&lt;/h2&gt;
+&lt;p&gt;Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.&lt;/p&gt;
+&lt;p&gt;Citando o amigo &lt;a href=&#34;http://eltonminetto.net/&#34;&gt;Elton Minetto&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

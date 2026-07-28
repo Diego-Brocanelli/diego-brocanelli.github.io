@@ -1,782 +1,204 @@
-<!DOCTYPE html>
-<html lang="pt-br" dir="auto">
+<!doctype html><html lang=pt-br dir=auto data-theme=auto><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Comandos básicos do MySQL no terminal | Diego Brocanelli</title><meta name=keywords content="command line,mysql,prompt,terminal"><meta name=description content="Sumário
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Comandos básicos do MySQL no terminal | Diego Brocanelli</title>
-<meta name="keywords" content="command line, mysql, prompt, terminal" />
-<meta name="description" content="Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4.">
-<meta name="author" content="Diego Brocanelli">
-<link rel="canonical" href="https://diegobrocanelli.com.br/mysql/comandos-basicos-mysql-no-terminal/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c18f6860182e7002af473582222b37f9280d6e33be9205e2f8cf983993e44ff0.css" integrity="sha256-wY9oYBgucAKvRzWCIis3&#43;SgNbjO&#43;kgXi&#43;M&#43;YOZPkT/A=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://diegobrocanelli.com.br/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://diegobrocanelli.com.br/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://diegobrocanelli.com.br/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://diegobrocanelli.com.br/apple-touch-icon.png">
-<link rel="mask-icon" href="https://diegobrocanelli.com.br/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.111.3">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+Introdução
+1. Conexão e Navegação
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://diegobrocanelli.com.br/" accesskey="h" title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://diegobrocanelli.com.br/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/search/" title="Pesquisar (Alt &#43; /)" accesskey=/>
-                    <span>Pesquisar</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://diegobrocanelli.com.br/about/" title="Sobre">
-                    <span>Sobre</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://diegobrocanelli.com.br/">Home</a>&nbsp;»&nbsp;<a href="https://diegobrocanelli.com.br/posts/">Posts</a></div>
-    <h1 class="post-title">
-      Comandos básicos do MySQL no terminal
-    </h1>
-    <div class="post-meta"><span title='2017-04-21 16:27:37 +0000 UTC'>2017-04-21</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Diego Brocanelli
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="sumário">Sumário<a hidden class="anchor" aria-hidden="true" href="#sumário">#</a></h2>
-<ul>
-<li><a href="#introdu%C3%A7%C3%A3o">Introdução</a></li>
-<li><a href="#1-conex%C3%A3o-e-navega%C3%A7%C3%A3o">1. Conexão e Navegação</a>
-<ul>
-<li><a href="#conectar-ao-mysql">Conectar ao MySQL</a></li>
-<li><a href="#conectar-diretamente-a-um-banco-de-dados">Conectar diretamente a um banco de dados</a></li>
-<li><a href="#listar-todos-os-bancos-de-dados">Listar todos os bancos de dados</a></li>
-<li><a href="#selecionar-um-banco-de-dados">Selecionar um banco de dados</a></li>
-<li><a href="#listar-tabelas-do-banco-selecionado">Listar tabelas do banco selecionado</a></li>
-<li><a href="#ver-estrutura-de-uma-tabela">Ver estrutura de uma tabela</a></li>
-</ul>
-</li>
-<li><a href="#2-gerenciamento-de-bancos-e-tabelas">2. Gerenciamento de Bancos e Tabelas</a>
-<ul>
-<li><a href="#criar-um-novo-banco-de-dados">Criar um novo banco de dados</a></li>
-<li><a href="#apagar-um-banco-de-dados">Apagar um banco de dados</a></li>
-<li><a href="#criar-uma-nova-tabela">Criar uma nova tabela</a></li>
-<li><a href="#apagar-uma-tabela">Apagar uma tabela</a></li>
-</ul>
-</li>
-<li><a href="#3-manipula%C3%A7%C3%A3o-de-dados">3. Manipulação de Dados</a>
-<ul>
-<li><a href="#inserir-dados-em-uma-tabela">Inserir dados em uma tabela</a></li>
-<li><a href="#inserir-de-m%C3%BAltiplos-dados-em-uma-tabela">Inserir de múltiplos dados em uma tabela</a></li>
-<li><a href="#consultar-dados-de-uma-tabela">Consultar dados de uma tabela</a></li>
-<li><a href="#atualizar-dados-em-uma-tabela">Atualizar dados em uma tabela</a></li>
-<li><a href="#deletar-dados-de-uma-tabela">Deletar dados de uma tabela</a></li>
-</ul>
-</li>
-<li><a href="#4-backup-e-restaura%C3%A7%C3%A3o">4. Backup e Restauração</a>
-<ul>
-<li><a href="#exportar-dump-um-banco-de-dados">Exportar (dump) um banco de dados</a></li>
-<li><a href="#exportar-dump-apenas-a-estrutura-do-banco-de-dados">Exportar (dump) apenas a estrutura do banco de dados</a></li>
-<li><a href="#exportar-todas-as-bases-de-dados">Exportar todas as bases de dados</a></li>
-<li><a href="#importar-um-banco-de-dados">Importar um banco de dados</a></li>
-</ul>
-</li>
-<li><a href="#5-gerenciamento-de-usu%C3%A1rios-e-permiss%C3%B5es">5. Gerenciamento de Usuários e Permissões</a>
-<ul>
-<li><a href="#criar-um-novo-usu%C3%A1rio">Criar um novo usuário</a></li>
-<li><a href="#conceder-privil%C3%A9gios-a-um-usu%C3%A1rio">Conceder privilégios a um usuário</a></li>
-<li><a href="#visualizar-privil%C3%A9gios-de-um-usu%C3%A1rio">Visualizar privilégios de um usuário</a></li>
-<li><a href="#revogar-privil%C3%A9gios-de-um-usu%C3%A1rio">Revogar privilégios de um usuário</a></li>
-</ul>
-</li>
-<li><a href="#6-comandos-%C3%BAteis">6. Comandos Úteis</a>
-<ul>
-<li><a href="#ver-vers%C3%A3o-do-mysql">Ver versão do MySQL</a></li>
-<li><a href="#limpar-a-tela-do-terminal">Limpar a tela do terminal</a></li>
-<li><a href="#sair-do-mysql">Sair do MySQL</a></li>
-</ul>
-</li>
-<li><a href="#tabela-de-refer%C3%AAncia-r%C3%A1pida">Tabela de Referência Rápida</a></li>
-<li><a href="#considera%C3%A7%C3%B5es-finais">Considerações Finais</a></li>
-</ul>
-<h2 id="introdução">Introdução<a hidden class="anchor" aria-hidden="true" href="#introdução">#</a></h2>
-<p>Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.</p>
-<p>Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.</p>
-<h2 id="1-conexão-e-navegação">1. Conexão e Navegação<a hidden class="anchor" aria-hidden="true" href="#1-conexão-e-navegação">#</a></h2>
-<h3 id="conectar-ao-mysql">Conectar ao MySQL<a hidden class="anchor" aria-hidden="true" href="#conectar-ao-mysql">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u <span style="color:#f92672">[</span>usuário<span style="color:#f92672">]</span> -p
-</span></span></code></pre></td></tr></table>
-</div>
-</div><table>
-<thead>
-<tr>
-<th><strong>Parâmetro</strong></th>
-<th><strong>Propósito</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-u</td>
-<td>Informar qual o nome de usuário deseja usar para se conectar ao MySQL</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>Exige que a senha seja informada</td>
-</tr>
-</tbody>
-</table>
-<h3 id="conectar-diretamente-a-um-banco-de-dados">Conectar diretamente a um banco de dados<a hidden class="anchor" aria-hidden="true" href="#conectar-diretamente-a-um-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u <span style="color:#f92672">[</span>usuário<span style="color:#f92672">]</span> -p <span style="color:#f92672">[</span>nome_do_banco<span style="color:#f92672">]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="listar-todos-os-bancos-de-dados">Listar todos os bancos de dados<a hidden class="anchor" aria-hidden="true" href="#listar-todos-os-bancos-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> <span style="color:#66d9ef">DATABASE</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="selecionar-um-banco-de-dados">Selecionar um banco de dados<a hidden class="anchor" aria-hidden="true" href="#selecionar-um-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE [nome_do_banco];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="listar-tabelas-do-banco-selecionado">Listar tabelas do banco selecionado<a hidden class="anchor" aria-hidden="true" href="#listar-tabelas-do-banco-selecionado">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> TABLES;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="ver-estrutura-de-uma-tabela">Ver estrutura de uma tabela<a hidden class="anchor" aria-hidden="true" href="#ver-estrutura-de-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DESCRIBE</span> [nome_da_tabela];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<h2 id="2-gerenciamento-de-bancos-e-tabelas">2. Gerenciamento de Bancos e Tabelas<a hidden class="anchor" aria-hidden="true" href="#2-gerenciamento-de-bancos-e-tabelas">#</a></h2>
-<h3 id="criar-um-novo-banco-de-dados">Criar um novo banco de dados<a hidden class="anchor" aria-hidden="true" href="#criar-um-novo-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> [nome_do_banco];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="apagar-um-banco-de-dados">Apagar um banco de dados<a hidden class="anchor" aria-hidden="true" href="#apagar-um-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> [nome_do_banco];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Atenção!</strong> Use com cautela, pois o banco de dados será APAGADO!</p>
-</blockquote>
-<h3 id="criar-uma-nova-tabela">Criar uma nova tabela<a hidden class="anchor" aria-hidden="true" href="#criar-uma-nova-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [nome_da_tabela] (
-</span></span><span style="display:flex;"><span>  id INT AUTO_INCREMENT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
-</span></span><span style="display:flex;"><span>  nome VARCHAR(<span style="color:#ae81ff">100</span>),
-</span></span><span style="display:flex;"><span>  data_criacao DATE
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> users (
-</span></span><span style="display:flex;"><span>  id INT AUTO_INCREMENT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
-</span></span><span style="display:flex;"><span>  name VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>  email VARCHAR(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">UNIQUE</span>,
-</span></span><span style="display:flex;"><span>  password VARCHAR(<span style="color:#ae81ff">255</span>)  <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>  created_at DATETIME
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="apagar-uma-tabela">Apagar uma tabela<a hidden class="anchor" aria-hidden="true" href="#apagar-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> [nome_da_tabela];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Atenção!</strong> Use com cautela, pois a tabela e seus dados serão APAGADOS!</p>
-</blockquote>
-<h2 id="3-manipulação-de-dados">3. Manipulação de Dados<a hidden class="anchor" aria-hidden="true" href="#3-manipulação-de-dados">#</a></h2>
-<h3 id="inserir-dados-em-uma-tabela">Inserir dados em uma tabela<a hidden class="anchor" aria-hidden="true" href="#inserir-dados-em-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> [nome_da_tabela]
-</span></span><span style="display:flex;"><span>(coluna1, coluna2)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users
-</span></span><span style="display:flex;"><span>(name, email, password)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#34;José Couves&#34;</span>, <span style="color:#e6db74">&#34;couves.jose@couves.com&#34;</span>, <span style="color:#e6db74">&#34;$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="inserir-de-múltiplos-dados-em-uma-tabela">Inserir de múltiplos dados em uma tabela<a hidden class="anchor" aria-hidden="true" href="#inserir-de-múltiplos-dados-em-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> [nome_da_tabela]
-</span></span><span style="display:flex;"><span>(coluna1, coluna2)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;valor1&#39;</span>, <span style="color:#e6db74">&#39;valor2&#39;</span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users
-</span></span><span style="display:flex;"><span>(name, email, password)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span>
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#34;José Couves&#34;</span>, <span style="color:#e6db74">&#34;couves.jose@couves.com&#34;</span>, <span style="color:#e6db74">&#34;$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe&#34;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#34;Ana Couves&#34;</span>, <span style="color:#e6db74">&#34;couves.ana@couves.com&#34;</span>, <span style="color:#e6db74">&#34;$2y$10$GexKU3b3xD48gEB0upptSOKQKj9fGHyB9v5A5U/jNDcC6ElpL9zDi&#34;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#34;Carlos Couves&#34;</span>, <span style="color:#e6db74">&#34;couves.carlos@couves.com&#34;</span>, <span style="color:#e6db74">&#34;$2y$10$Jj8iD/6RgDCug6OgZqzRXOw5x0tx91/nx/2mQeRpbM65czYgJIoUy&#34;</span>),
-</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#34;Beatriz Couves&#34;</span>, <span style="color:#e6db74">&#34;couves.beatriz@couves.com&#34;</span>, <span style="color:#e6db74">&#34;$2y$10$9cfZIl/BDpdaC4l4qV6JHOGcGCrVfUMN8G2Sg97Zq2oSeVqMnx6dW&#34;</span>);
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="consultar-dados-de-uma-tabela">Consultar dados de uma tabela<a hidden class="anchor" aria-hidden="true" href="#consultar-dados-de-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> [nome_da_tabela];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> name, email
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> users;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="atualizar-dados-em-uma-tabela">Atualizar dados em uma tabela<a hidden class="anchor" aria-hidden="true" href="#atualizar-dados-em-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> [nome_da_tabela]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> [coluna] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;novo_valor&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> [condi<span style="color:#960050;background-color:#1e0010">çã</span>o];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> users
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Antônio Carlos Couves&#39;</span>,
-</span></span><span style="display:flex;"><span>    email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;couves.antonio@couves.com&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="deletar-dados-de-uma-tabela">Deletar dados de uma tabela<a hidden class="anchor" aria-hidden="true" href="#deletar-dados-de-uma-tabela">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> [nome_da_tabela] <span style="color:#66d9ef">WHERE</span> [condi<span style="color:#960050;background-color:#1e0010">çã</span>o];
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>Exemplo:</strong></p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> users <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="4-backup-e-restauração">4. Backup e Restauração<a hidden class="anchor" aria-hidden="true" href="#4-backup-e-restauração">#</a></h2>
-<h3 id="exportar-dump-um-banco-de-dados">Exportar (dump) um banco de dados<a hidden class="anchor" aria-hidden="true" href="#exportar-dump-um-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u <span style="color:#f92672">[</span>usuário<span style="color:#f92672">]</span> -p <span style="color:#f92672">[</span>nome_do_banco<span style="color:#f92672">]</span> &gt; backup.sql
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="exportar-dump-apenas-a-estrutura-do-banco-de-dados">Exportar (dump) apenas a estrutura do banco de dados<a hidden class="anchor" aria-hidden="true" href="#exportar-dump-apenas-a-estrutura-do-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>mysqldump <span style="color:#f92672">-</span>u [usu<span style="color:#960050;background-color:#1e0010">á</span>rio] <span style="color:#f92672">-</span>p [nome_do_banco] <span style="color:#75715e">--no-data &gt; backup.sql;
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="exportar-todas-as-bases-de-dados">Exportar todas as bases de dados<a hidden class="anchor" aria-hidden="true" href="#exportar-todas-as-bases-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqldump -u <span style="color:#f92672">[</span>usuário<span style="color:#f92672">]</span> -p --all-databases &gt; todos_bancos.sql
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="importar-um-banco-de-dados">Importar um banco de dados<a hidden class="anchor" aria-hidden="true" href="#importar-um-banco-de-dados">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u <span style="color:#f92672">[</span>usuário<span style="color:#f92672">]</span> -p <span style="color:#f92672">[</span>nome_do_banco<span style="color:#f92672">]</span> &lt; backup.sql
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Observação:</strong> Esse comando importa qualquer conteúdo SQL presente no arquivo, não apenas a estrutura de um banco.</p>
-</blockquote>
-<h2 id="5-gerenciamento-de-usuários-e-permissões">5. Gerenciamento de Usuários e Permissões<a hidden class="anchor" aria-hidden="true" href="#5-gerenciamento-de-usuários-e-permissões">#</a></h2>
-<h3 id="criar-um-novo-usuário">Criar um novo usuário<a hidden class="anchor" aria-hidden="true" href="#criar-um-novo-usuário">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;novo_usuario&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;senha&#39;</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><table>
-<thead>
-<tr>
-<th><strong>Parâmetro</strong></th>
-<th><strong>Ação</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>“localhost”</td>
-<td>O usuário apenas se conecta por meio da máquina local</td>
-</tr>
-<tr>
-<td>“%”</td>
-<td>O usuário pode se conectar de qualquer IP remoto</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Obs.:</strong> Ambos os tipos de conexão são válidas, a “localhost” seria mais restritiva, porém, tudo dependerá das suas necessidades.</p>
-</blockquote>
-<h3 id="conceder-privilégios-a-um-usuário">Conceder privilégios a um usuário<a hidden class="anchor" aria-hidden="true" href="#conceder-privilégios-a-um-usuário">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> [nome_do_banco].<span style="color:#f92672">*</span> <span style="color:#66d9ef">TO</span> <span style="color:#e6db74">&#39;novo_usuario&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>Atenção!</strong> Privilégios devem ser concedidos apenas a usuários que realmente necessitam. Caso contrário, não!</p>
-</blockquote>
-<h3 id="visualizar-privilégios-de-um-usuário">Visualizar privilégios de um usuário<a hidden class="anchor" aria-hidden="true" href="#visualizar-privilégios-de-um-usuário">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> GRANTS <span style="color:#66d9ef">FOR</span> <span style="color:#e6db74">&#39;novo_usuario&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="revogar-privilégios-de-um-usuário">Revogar privilégios de um usuário<a hidden class="anchor" aria-hidden="true" href="#revogar-privilégios-de-um-usuário">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">REVOKE</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> [nome_do_banco].<span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#39;novo_usuario&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span>;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="6-comandos-úteis">6. Comandos Úteis<a hidden class="anchor" aria-hidden="true" href="#6-comandos-úteis">#</a></h2>
-<h3 id="ver-versão-do-mysql">Ver versão do MySQL<a hidden class="anchor" aria-hidden="true" href="#ver-versão-do-mysql">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -V
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="limpar-a-tela-do-terminal">Limpar a tela do terminal<a hidden class="anchor" aria-hidden="true" href="#limpar-a-tela-do-terminal">#</a></h3>
-<ul>
-<li>No terminal: <code>Ctrl + L</code>;</li>
-<li>No MySQL Shell: <code>\clear</code>.</li>
-</ul>
-<h3 id="sair-do-mysql">Sair do MySQL<a hidden class="anchor" aria-hidden="true" href="#sair-do-mysql">#</a></h3>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>EXIT;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="tabela-de-referência-rápida">Tabela de Referência Rápida<a hidden class="anchor" aria-hidden="true" href="#tabela-de-referência-rápida">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Ação</th>
-<th>Comando</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Listar bancos</td>
-<td><code>SHOW DATABASES;</code></td>
-</tr>
-<tr>
-<td>Selecionar banco</td>
-<td><code>USE nome_do_banco;</code></td>
-</tr>
-<tr>
-<td>Listar tabelas</td>
-<td><code>SHOW TABLES;</code></td>
-</tr>
-<tr>
-<td>Ver estrutura da tabela</td>
-<td><code>DESCRIBE nome_da_tabela;</code></td>
-</tr>
-<tr>
-<td>Inserir dados</td>
-<td><code>INSERT INTO ... VALUES (...);</code></td>
-</tr>
-<tr>
-<td>Exportar banco</td>
-<td><code>mysqldump -u user -p db &gt; backup.sql</code></td>
-</tr>
-<tr>
-<td>Importar backup</td>
-<td><code>mysql -u user -p db &lt; backup.sql</code></td>
-</tr>
-<tr>
-<td>Criar usuário</td>
-<td><code>CREATE USER 'user'@'host' IDENTIFIED BY 'senha';</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="considerações-finais">Considerações Finais<a hidden class="anchor" aria-hidden="true" href="#considerações-finais">#</a></h2>
-<p>Compreender os comandos básicos do MySQL permite atuar com mais autonomia, entender melhor o funcionamento de ORMs e resolver problemas rapidamente, mesmo sem interface gráfica.</p>
-<h2 id="referências">Referências<a hidden class="anchor" aria-hidden="true" href="#referências">#</a></h2>
-<ul>
-<li><a href="https://dev.mysql.com/doc/">https://dev.mysql.com/doc/</a></li>
-</ul>
+Conectar ao MySQL
+Conectar diretamente a um banco de dados
+Listar todos os bancos de dados
+Selecionar um banco de dados
+Listar tabelas do banco selecionado
+Ver estrutura de uma tabela
 
 
-  </div>
+2. Gerenciamento de Bancos e Tabelas
 
-  
-  <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="Diego-Brocanelli/diego-brocanelli.github.io"
-            issue-term="pathname"
-            theme="github-dark"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://diegobrocanelli.com.br/tags/command-line/">command line</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/mysql/">mysql</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/prompt/">prompt</a></li>
-      <li><a href="https://diegobrocanelli.com.br/tags/terminal/">terminal</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://diegobrocanelli.com.br/php/phpdoc-para-que-server-e-onde-devo-usar/">
-    <span class="title">« </span>
-    <br>
-    <span>PHPDoc, para que server e onde devo usar?</span>
-  </a>
-  <a class="next" href="https://diegobrocanelli.com.br/php/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/">
-    <span class="title"> »</span>
-    <br>
-    <span>Meu dia a dia como desenvolvedor: IDE’s e Editores de texto</span>
-  </a>
-</nav>
+Criar um novo banco de dados
+Apagar um banco de dados
+Criar uma nova tabela
+Apagar uma tabela
 
 
-<div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Comandos básicos do MySQL no terminal on twitter"
-        href="https://twitter.com/intent/tweet/?text=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f&amp;hashtags=commandline%2cmysql%2cprompt%2cterminal">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Comandos básicos do MySQL no terminal on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdiegobrocanelli.com.br%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f&amp;title=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;summary=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;source=https%3a%2f%2fdiegobrocanelli.com.br%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-        </svg>
-    </a>
-</div>
+3. Manipulação de Dados
 
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2026 <a href="https://diegobrocanelli.com.br/">Diego Brocanelli</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+Inserir dados em uma tabela
+Inserir de múltiplos dados em uma tabela
+Consultar dados de uma tabela
+Atualizar dados em uma tabela
+Deletar dados de uma tabela
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+4. Backup e Restauração
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+Exportar (dump) um banco de dados
+Exportar (dump) apenas a estrutura do banco de dados
+Exportar todas as bases de dados
+Importar um banco de dados
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
-</script>
-</body>
+5. Gerenciamento de Usuários e Permissões
 
-</html>
+Criar um novo usuário
+Conceder privilégios a um usuário
+Visualizar privilégios de um usuário
+Revogar privilégios de um usuário
+
+
+6. Comandos Úteis
+
+Ver versão do MySQL
+Limpar a tela do terminal
+Sair do MySQL
+
+
+Tabela de Referência Rápida
+Considerações Finais
+
+Introdução
+Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia."><meta name=author content="Diego Brocanelli"><link rel=canonical href=http://localhost:1313/mysql/comandos-basicos-mysql-no-terminal/><link crossorigin=anonymous href=/assets/css/stylesheet.e2fc0ac6072435d1d0d8c4c0cb0cab916f8eed974d281360440d713e01d9f10a.css integrity="sha256-4vwKxgckNdHQ2MTAywyrkW+O7ZdNKBNgRA1xPgHZ8Qo=" rel="preload stylesheet" as=style><link rel=icon href=http://localhost:1313/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://localhost:1313/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://localhost:1313/favicon-32x32.png><link rel=apple-touch-icon href=http://localhost:1313/apple-touch-icon.png><link rel=mask-icon href=http://localhost:1313/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=pt-br href=http://localhost:1313/mysql/comandos-basicos-mysql-no-terminal/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-724B54J2LY"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-724B54J2LY")}</script><meta property="og:url" content="http://localhost:1313/mysql/comandos-basicos-mysql-no-terminal/"><meta property="og:site_name" content="Diego Brocanelli"><meta property="og:title" content="Comandos básicos do MySQL no terminal"><meta property="og:description" content="Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4. Backup e Restauração Exportar (dump) um banco de dados Exportar (dump) apenas a estrutura do banco de dados Exportar todas as bases de dados Importar um banco de dados 5. Gerenciamento de Usuários e Permissões Criar um novo usuário Conceder privilégios a um usuário Visualizar privilégios de um usuário Revogar privilégios de um usuário 6. Comandos Úteis Ver versão do MySQL Limpar a tela do terminal Sair do MySQL Tabela de Referência Rápida Considerações Finais Introdução Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia."><meta property="og:locale" content="pt_br"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-04-21T16:27:37+00:00"><meta property="article:modified_time" content="2017-04-21T16:27:37+00:00"><meta property="article:tag" content="Command Line"><meta property="article:tag" content="Mysql"><meta property="article:tag" content="Prompt"><meta property="article:tag" content="Terminal"><meta property="og:image" content="http://localhost:1313/images/social-card.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost:1313/images/social-card.png"><meta name=twitter:title content="Comandos básicos do MySQL no terminal"><meta name=twitter:description content="Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4. Backup e Restauração Exportar (dump) um banco de dados Exportar (dump) apenas a estrutura do banco de dados Exportar todas as bases de dados Importar um banco de dados 5. Gerenciamento de Usuários e Permissões Criar um novo usuário Conceder privilégios a um usuário Visualizar privilégios de um usuário Revogar privilégios de um usuário 6. Comandos Úteis Ver versão do MySQL Limpar a tela do terminal Sair do MySQL Tabela de Referência Rápida Considerações Finais Introdução Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"http://localhost:1313/posts/"},{"@type":"ListItem","position":2,"name":"Comandos básicos do MySQL no terminal","item":"http://localhost:1313/mysql/comandos-basicos-mysql-no-terminal/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Comandos básicos do MySQL no terminal","name":"Comandos básicos do MySQL no terminal","description":"Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4. Backup e Restauração Exportar (dump) um banco de dados Exportar (dump) apenas a estrutura do banco de dados Exportar todas as bases de dados Importar um banco de dados 5. Gerenciamento de Usuários e Permissões Criar um novo usuário Conceder privilégios a um usuário Visualizar privilégios de um usuário Revogar privilégios de um usuário 6. Comandos Úteis Ver versão do MySQL Limpar a tela do terminal Sair do MySQL Tabela de Referência Rápida Considerações Finais Introdução Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.\n","keywords":["command line","mysql","prompt","terminal"],"articleBody":"Sumário Introdução 1. Conexão e Navegação Conectar ao MySQL Conectar diretamente a um banco de dados Listar todos os bancos de dados Selecionar um banco de dados Listar tabelas do banco selecionado Ver estrutura de uma tabela 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados Apagar um banco de dados Criar uma nova tabela Apagar uma tabela 3. Manipulação de Dados Inserir dados em uma tabela Inserir de múltiplos dados em uma tabela Consultar dados de uma tabela Atualizar dados em uma tabela Deletar dados de uma tabela 4. Backup e Restauração Exportar (dump) um banco de dados Exportar (dump) apenas a estrutura do banco de dados Exportar todas as bases de dados Importar um banco de dados 5. Gerenciamento de Usuários e Permissões Criar um novo usuário Conceder privilégios a um usuário Visualizar privilégios de um usuário Revogar privilégios de um usuário 6. Comandos Úteis Ver versão do MySQL Limpar a tela do terminal Sair do MySQL Tabela de Referência Rápida Considerações Finais Introdução Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.\nTodos os comandos apresentados neste post podem ser executados no terminal de sua preferência.\n1. Conexão e Navegação Conectar ao MySQL 1 mysql -u [usuário] -p Parâmetro Propósito -u Informar qual o nome de usuário deseja usar para se conectar ao MySQL -p Exige que a senha seja informada Conectar diretamente a um banco de dados 1 mysql -u [usuário] -p [nome_do_banco] Listar todos os bancos de dados 1 SHOW DATABASE; Selecionar um banco de dados 1 USE [nome_do_banco]; Listar tabelas do banco selecionado 1 SHOW TABLES; Ver estrutura de uma tabela 1 DESCRIBE [nome_da_tabela]; 2. Gerenciamento de Bancos e Tabelas Criar um novo banco de dados 1 CREATE DATABASE [nome_do_banco]; Apagar um banco de dados 1 DROP DATABASE [nome_do_banco]; Atenção! Use com cautela, pois o banco de dados será APAGADO!\nCriar uma nova tabela 1 2 3 4 5 CREATE TABLE [nome_da_tabela] ( id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(100), data_criacao DATE ); Exemplo:\n1 2 3 4 5 6 7 CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, email VARCHAR(255) NOT NULL UNIQUE, password VARCHAR(255) NOT NULL, created_at DATETIME ); Apagar uma tabela 1 DROP TABLE [nome_da_tabela]; Atenção! Use com cautela, pois a tabela e seus dados serão APAGADOS!\n3. Manipulação de Dados Inserir dados em uma tabela 1 2 3 4 INSERT INTO [nome_da_tabela] (coluna1, coluna2) VALUES ('valor1', 'valor2'); Exemplo:\n1 2 3 4 5 INSERT INTO users (name, email, password) VALUES (\"José Couves\", \"couves.jose@couves.com\", \"$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe \"); Inserir de múltiplos dados em uma tabela 1 2 3 4 5 6 7 8 INSERT INTO [nome_da_tabela] (coluna1, coluna2) VALUES ('valor1', 'valor2'), ('valor1', 'valor2'), ('valor1', 'valor2'), ('valor1', 'valor2'), ('valor1', 'valor2'); Exemplo:\n1 2 3 4 5 6 7 INSERT INTO users (name, email, password) VALUES (\"José Couves\", \"couves.jose@couves.com\", \"$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe\"), (\"Ana Couves\", \"couves.ana@couves.com\", \"$2y$10$GexKU3b3xD48gEB0upptSOKQKj9fGHyB9v5A5U/jNDcC6ElpL9zDi\"), (\"Carlos Couves\", \"couves.carlos@couves.com\", \"$2y$10$Jj8iD/6RgDCug6OgZqzRXOw5x0tx91/nx/2mQeRpbM65czYgJIoUy\"), (\"Beatriz Couves\", \"couves.beatriz@couves.com\", \"$2y$10$9cfZIl/BDpdaC4l4qV6JHOGcGCrVfUMN8G2Sg97Zq2oSeVqMnx6dW\"); Consultar dados de uma tabela 1 SELECT * FROM [nome_da_tabela]; Exemplo:\n1 2 SELECT name, email FROM users; Atualizar dados em uma tabela 1 2 3 UPDATE [nome_da_tabela] SET [coluna] = 'novo_valor' WHERE [condição]; Exemplo:\n1 2 3 4 UPDATE users SET name = 'Antônio Carlos Couves', email = \"couves.antonio@couves.com\" WHERE id = 4; Deletar dados de uma tabela 1 DELETE FROM [nome_da_tabela] WHERE [condição]; Exemplo:\n1 DELETE FROM users WHERE id = 4; 4. Backup e Restauração Exportar (dump) um banco de dados 1 mysqldump -u [usuário] -p [nome_do_banco] \u003e backup.sql Exportar (dump) apenas a estrutura do banco de dados 1 mysqldump -u [usuário] -p [nome_do_banco] --no-data \u003e backup.sql; Exportar todas as bases de dados 1 mysqldump -u [usuário] -p --all-databases \u003e todos_bancos.sql Importar um banco de dados 1 mysql -u [usuário] -p [nome_do_banco] \u003c backup.sql Observação: Esse comando importa qualquer conteúdo SQL presente no arquivo, não apenas a estrutura de um banco.\n5. Gerenciamento de Usuários e Permissões Criar um novo usuário 1 CREATE USER 'novo_usuario'@'localhost' IDENTIFIED BY 'senha'; Parâmetro Ação “localhost” O usuário apenas se conecta por meio da máquina local “%” O usuário pode se conectar de qualquer IP remoto Obs.: Ambos os tipos de conexão são válidas, a “localhost” seria mais restritiva, porém, tudo dependerá das suas necessidades.\nConceder privilégios a um usuário 1 GRANT ALL PRIVILEGES ON [nome_do_banco].* TO 'novo_usuario'@'localhost'; Atenção! Privilégios devem ser concedidos apenas a usuários que realmente necessitam. Caso contrário, não!\nVisualizar privilégios de um usuário 1 SHOW GRANTS FOR 'novo_usuario'@'localhost'; Revogar privilégios de um usuário 1 REVOKE ALL PRIVILEGES ON [nome_do_banco].* FROM 'novo_usuario'@'localhost'; 6. Comandos Úteis Ver versão do MySQL 1 mysql -V Limpar a tela do terminal No terminal: Ctrl + L; No MySQL Shell: \\clear. Sair do MySQL 1 EXIT; Tabela de Referência Rápida Ação Comando Listar bancos SHOW DATABASES; Selecionar banco USE nome_do_banco; Listar tabelas SHOW TABLES; Ver estrutura da tabela DESCRIBE nome_da_tabela; Inserir dados INSERT INTO ... VALUES (...); Exportar banco mysqldump -u user -p db \u003e backup.sql Importar backup mysql -u user -p db \u003c backup.sql Criar usuário CREATE USER 'user'@'host' IDENTIFIED BY 'senha'; Considerações Finais Compreender os comandos básicos do MySQL permite atuar com mais autonomia, entender melhor o funcionamento de ORMs e resolver problemas rapidamente, mesmo sem interface gráfica.\nReferências https://dev.mysql.com/doc/ ","wordCount":"895","inLanguage":"pt-br","image":"http://localhost:1313/images/social-card.png","datePublished":"2017-04-21T16:27:37Z","dateModified":"2017-04-21T16:27:37Z","author":{"@type":"Person","name":"Diego Brocanelli"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:1313/mysql/comandos-basicos-mysql-no-terminal/"},"publisher":{"@type":"Organization","name":"Diego Brocanelli","logo":{"@type":"ImageObject","url":"http://localhost:1313/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=http://localhost:1313/ accesskey=h title="Diego Brocanelli (Alt + H)">Diego Brocanelli</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=http://localhost:1313/ title=Home><span>Home</span></a></li><li><a href=http://localhost:1313/search/ title="Pesquisar (Alt + /)" accesskey=/><span>Pesquisar</span></a></li><li><a href=http://localhost:1313/about/ title=Sobre><span>Sobre</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Início</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>Posts</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">Comandos básicos do MySQL no terminal</h1><div class=post-meta><span title='2017-04-21 16:27:37 +0000 UTC'>2017-04-21</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>895 palavras</span>&nbsp;·&nbsp;<span>Diego Brocanelli</span></div></header><div class="post-content md-content"><h2 id=sumário>Sumário<a hidden class=anchor aria-hidden=true href=#sumário>#</a></h2><ul><li><a href=#introdu%C3%A7%C3%A3o>Introdução</a></li><li><a href=#1-conex%C3%A3o-e-navega%C3%A7%C3%A3o>1. Conexão e Navegação</a><ul><li><a href=#conectar-ao-mysql>Conectar ao MySQL</a></li><li><a href=#conectar-diretamente-a-um-banco-de-dados>Conectar diretamente a um banco de dados</a></li><li><a href=#listar-todos-os-bancos-de-dados>Listar todos os bancos de dados</a></li><li><a href=#selecionar-um-banco-de-dados>Selecionar um banco de dados</a></li><li><a href=#listar-tabelas-do-banco-selecionado>Listar tabelas do banco selecionado</a></li><li><a href=#ver-estrutura-de-uma-tabela>Ver estrutura de uma tabela</a></li></ul></li><li><a href=#2-gerenciamento-de-bancos-e-tabelas>2. Gerenciamento de Bancos e Tabelas</a><ul><li><a href=#criar-um-novo-banco-de-dados>Criar um novo banco de dados</a></li><li><a href=#apagar-um-banco-de-dados>Apagar um banco de dados</a></li><li><a href=#criar-uma-nova-tabela>Criar uma nova tabela</a></li><li><a href=#apagar-uma-tabela>Apagar uma tabela</a></li></ul></li><li><a href=#3-manipula%C3%A7%C3%A3o-de-dados>3. Manipulação de Dados</a><ul><li><a href=#inserir-dados-em-uma-tabela>Inserir dados em uma tabela</a></li><li><a href=#inserir-de-m%C3%BAltiplos-dados-em-uma-tabela>Inserir de múltiplos dados em uma tabela</a></li><li><a href=#consultar-dados-de-uma-tabela>Consultar dados de uma tabela</a></li><li><a href=#atualizar-dados-em-uma-tabela>Atualizar dados em uma tabela</a></li><li><a href=#deletar-dados-de-uma-tabela>Deletar dados de uma tabela</a></li></ul></li><li><a href=#4-backup-e-restaura%C3%A7%C3%A3o>4. Backup e Restauração</a><ul><li><a href=#exportar-dump-um-banco-de-dados>Exportar (dump) um banco de dados</a></li><li><a href=#exportar-dump-apenas-a-estrutura-do-banco-de-dados>Exportar (dump) apenas a estrutura do banco de dados</a></li><li><a href=#exportar-todas-as-bases-de-dados>Exportar todas as bases de dados</a></li><li><a href=#importar-um-banco-de-dados>Importar um banco de dados</a></li></ul></li><li><a href=#5-gerenciamento-de-usu%C3%A1rios-e-permiss%C3%B5es>5. Gerenciamento de Usuários e Permissões</a><ul><li><a href=#criar-um-novo-usu%C3%A1rio>Criar um novo usuário</a></li><li><a href=#conceder-privil%C3%A9gios-a-um-usu%C3%A1rio>Conceder privilégios a um usuário</a></li><li><a href=#visualizar-privil%C3%A9gios-de-um-usu%C3%A1rio>Visualizar privilégios de um usuário</a></li><li><a href=#revogar-privil%C3%A9gios-de-um-usu%C3%A1rio>Revogar privilégios de um usuário</a></li></ul></li><li><a href=#6-comandos-%C3%BAteis>6. Comandos Úteis</a><ul><li><a href=#ver-vers%C3%A3o-do-mysql>Ver versão do MySQL</a></li><li><a href=#limpar-a-tela-do-terminal>Limpar a tela do terminal</a></li><li><a href=#sair-do-mysql>Sair do MySQL</a></li></ul></li><li><a href=#tabela-de-refer%C3%AAncia-r%C3%A1pida>Tabela de Referência Rápida</a></li><li><a href=#considera%C3%A7%C3%B5es-finais>Considerações Finais</a></li></ul><h2 id=introdução>Introdução<a hidden class=anchor aria-hidden=true href=#introdução>#</a></h2><p>Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.</p><p>Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.</p><h2 id=1-conexão-e-navegação>1. Conexão e Navegação<a hidden class=anchor aria-hidden=true href=#1-conexão-e-navegação>#</a></h2><h3 id=conectar-ao-mysql>Conectar ao MySQL<a hidden class=anchor aria-hidden=true href=#conectar-ao-mysql>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysql -u <span class=o>[</span>usuário<span class=o>]</span> -p
+</span></span></code></pre></td></tr></table></div></div><table><thead><tr><th><strong>Parâmetro</strong></th><th><strong>Propósito</strong></th></tr></thead><tbody><tr><td>-u</td><td>Informar qual o nome de usuário deseja usar para se conectar ao MySQL</td></tr><tr><td>-p</td><td>Exige que a senha seja informada</td></tr></tbody></table><h3 id=conectar-diretamente-a-um-banco-de-dados>Conectar diretamente a um banco de dados<a hidden class=anchor aria-hidden=true href=#conectar-diretamente-a-um-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysql -u <span class=o>[</span>usuário<span class=o>]</span> -p <span class=o>[</span>nome_do_banco<span class=o>]</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=listar-todos-os-bancos-de-dados>Listar todos os bancos de dados<a hidden class=anchor aria-hidden=true href=#listar-todos-os-bancos-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SHOW</span><span class=w> </span><span class=k>DATABASE</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=selecionar-um-banco-de-dados>Selecionar um banco de dados<a hidden class=anchor aria-hidden=true href=#selecionar-um-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=n>USE</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=listar-tabelas-do-banco-selecionado>Listar tabelas do banco selecionado<a hidden class=anchor aria-hidden=true href=#listar-tabelas-do-banco-selecionado>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SHOW</span><span class=w> </span><span class=n>TABLES</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=ver-estrutura-de-uma-tabela>Ver estrutura de uma tabela<a hidden class=anchor aria-hidden=true href=#ver-estrutura-de-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>DESCRIBE</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><hr><h2 id=2-gerenciamento-de-bancos-e-tabelas>2. Gerenciamento de Bancos e Tabelas<a hidden class=anchor aria-hidden=true href=#2-gerenciamento-de-bancos-e-tabelas>#</a></h2><h3 id=criar-um-novo-banco-de-dados>Criar um novo banco de dados<a hidden class=anchor aria-hidden=true href=#criar-um-novo-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>DATABASE</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=apagar-um-banco-de-dados>Apagar um banco de dados<a hidden class=anchor aria-hidden=true href=#apagar-um-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>DROP</span><span class=w> </span><span class=k>DATABASE</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Atenção!</strong> Use com cautela, pois o banco de dados será APAGADO!</p></blockquote><h3 id=criar-uma-nova-tabela>Criar uma nova tabela<a hidden class=anchor aria-hidden=true href=#criar-uma-nova-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>TABLE</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>]</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>id</span><span class=w> </span><span class=nb>INT</span><span class=w> </span><span class=n>AUTO_INCREMENT</span><span class=w> </span><span class=k>PRIMARY</span><span class=w> </span><span class=k>KEY</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>nome</span><span class=w> </span><span class=nb>VARCHAR</span><span class=p>(</span><span class=mi>100</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>data_criacao</span><span class=w> </span><span class=nb>DATE</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>TABLE</span><span class=w> </span><span class=n>users</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>id</span><span class=w> </span><span class=nb>INT</span><span class=w> </span><span class=n>AUTO_INCREMENT</span><span class=w> </span><span class=k>PRIMARY</span><span class=w> </span><span class=k>KEY</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>name</span><span class=w> </span><span class=nb>VARCHAR</span><span class=p>(</span><span class=mi>100</span><span class=p>)</span><span class=w> </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>email</span><span class=w> </span><span class=nb>VARCHAR</span><span class=p>(</span><span class=mi>255</span><span class=p>)</span><span class=w> </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=w> </span><span class=k>UNIQUE</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>password</span><span class=w> </span><span class=nb>VARCHAR</span><span class=p>(</span><span class=mi>255</span><span class=p>)</span><span class=w>  </span><span class=k>NOT</span><span class=w> </span><span class=k>NULL</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=n>created_at</span><span class=w> </span><span class=n>DATETIME</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=apagar-uma-tabela>Apagar uma tabela<a hidden class=anchor aria-hidden=true href=#apagar-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>DROP</span><span class=w> </span><span class=k>TABLE</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Atenção!</strong> Use com cautela, pois a tabela e seus dados serão APAGADOS!</p></blockquote><h2 id=3-manipulação-de-dados>3. Manipulação de Dados<a hidden class=anchor aria-hidden=true href=#3-manipulação-de-dados>#</a></h2><h3 id=inserir-dados-em-uma-tabela>Inserir dados em uma tabela<a hidden class=anchor aria-hidden=true href=#inserir-dados-em-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>INSERT</span><span class=w> </span><span class=k>INTO</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=n>coluna1</span><span class=p>,</span><span class=w> </span><span class=n>coluna2</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>VALUES</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>INSERT</span><span class=w> </span><span class=k>INTO</span><span class=w> </span><span class=n>users</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=n>name</span><span class=p>,</span><span class=w> </span><span class=n>email</span><span class=p>,</span><span class=w> </span><span class=n>password</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>VALUES</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s2>&#34;José Couves&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;couves.jose@couves.com&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe
+</span></span></span><span class=line><span class=cl><span class=s2>&#34;</span><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=inserir-de-múltiplos-dados-em-uma-tabela>Inserir de múltiplos dados em uma tabela<a hidden class=anchor aria-hidden=true href=#inserir-de-múltiplos-dados-em-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>INSERT</span><span class=w> </span><span class=k>INTO</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=n>coluna1</span><span class=p>,</span><span class=w> </span><span class=n>coluna2</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>VALUES</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s1>&#39;valor1&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;valor2&#39;</span><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>INSERT</span><span class=w> </span><span class=k>INTO</span><span class=w> </span><span class=n>users</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=n>name</span><span class=p>,</span><span class=w> </span><span class=n>email</span><span class=p>,</span><span class=w> </span><span class=n>password</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>VALUES</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s2>&#34;José Couves&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;couves.jose@couves.com&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;$2y$10$uZs5/2rONn8vn1zSGMybDO2p0G9qz9jLddqbQNE2TNLQaRPb9PyNe&#34;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s2>&#34;Ana Couves&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;couves.ana@couves.com&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;$2y$10$GexKU3b3xD48gEB0upptSOKQKj9fGHyB9v5A5U/jNDcC6ElpL9zDi&#34;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s2>&#34;Carlos Couves&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;couves.carlos@couves.com&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;$2y$10$Jj8iD/6RgDCug6OgZqzRXOw5x0tx91/nx/2mQeRpbM65czYgJIoUy&#34;</span><span class=p>),</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=p>(</span><span class=s2>&#34;Beatriz Couves&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;couves.beatriz@couves.com&#34;</span><span class=p>,</span><span class=w> </span><span class=s2>&#34;$2y$10$9cfZIl/BDpdaC4l4qV6JHOGcGCrVfUMN8G2Sg97Zq2oSeVqMnx6dW&#34;</span><span class=p>);</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=consultar-dados-de-uma-tabela>Consultar dados de uma tabela<a hidden class=anchor aria-hidden=true href=#consultar-dados-de-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SELECT</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SELECT</span><span class=w> </span><span class=n>name</span><span class=p>,</span><span class=w> </span><span class=n>email</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>FROM</span><span class=w> </span><span class=n>users</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=atualizar-dados-em-uma-tabela>Atualizar dados em uma tabela<a hidden class=anchor aria-hidden=true href=#atualizar-dados-em-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>UPDATE</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>SET</span><span class=w> </span><span class=p>[</span><span class=n>coluna</span><span class=p>]</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;novo_valor&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>WHERE</span><span class=w> </span><span class=p>[</span><span class=n>condição</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>UPDATE</span><span class=w> </span><span class=n>users</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>SET</span><span class=w> </span><span class=n>name</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s1>&#39;Antônio Carlos Couves&#39;</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=n>email</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=s2>&#34;couves.antonio@couves.com&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=k>WHERE</span><span class=w> </span><span class=n>id</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=mi>4</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=deletar-dados-de-uma-tabela>Deletar dados de uma tabela<a hidden class=anchor aria-hidden=true href=#deletar-dados-de-uma-tabela>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>DELETE</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=p>[</span><span class=n>nome_da_tabela</span><span class=p>]</span><span class=w> </span><span class=k>WHERE</span><span class=w> </span><span class=p>[</span><span class=n>condição</span><span class=p>];</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Exemplo:</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>DELETE</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=n>users</span><span class=w> </span><span class=k>WHERE</span><span class=w> </span><span class=n>id</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=mi>4</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=4-backup-e-restauração>4. Backup e Restauração<a hidden class=anchor aria-hidden=true href=#4-backup-e-restauração>#</a></h2><h3 id=exportar-dump-um-banco-de-dados>Exportar (dump) um banco de dados<a hidden class=anchor aria-hidden=true href=#exportar-dump-um-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysqldump -u <span class=o>[</span>usuário<span class=o>]</span> -p <span class=o>[</span>nome_do_banco<span class=o>]</span> &gt; backup.sql
+</span></span></code></pre></td></tr></table></div></div><h3 id=exportar-dump-apenas-a-estrutura-do-banco-de-dados>Exportar (dump) apenas a estrutura do banco de dados<a hidden class=anchor aria-hidden=true href=#exportar-dump-apenas-a-estrutura-do-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=n>mysqldump</span><span class=w> </span><span class=o>-</span><span class=n>u</span><span class=w> </span><span class=p>[</span><span class=n>usuário</span><span class=p>]</span><span class=w> </span><span class=o>-</span><span class=n>p</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>]</span><span class=w> </span><span class=c1>--no-data &gt; backup.sql;
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=exportar-todas-as-bases-de-dados>Exportar todas as bases de dados<a hidden class=anchor aria-hidden=true href=#exportar-todas-as-bases-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysqldump -u <span class=o>[</span>usuário<span class=o>]</span> -p --all-databases &gt; todos_bancos.sql
+</span></span></code></pre></td></tr></table></div></div><h3 id=importar-um-banco-de-dados>Importar um banco de dados<a hidden class=anchor aria-hidden=true href=#importar-um-banco-de-dados>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysql -u <span class=o>[</span>usuário<span class=o>]</span> -p <span class=o>[</span>nome_do_banco<span class=o>]</span> &lt; backup.sql
+</span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Observação:</strong> Esse comando importa qualquer conteúdo SQL presente no arquivo, não apenas a estrutura de um banco.</p></blockquote><h2 id=5-gerenciamento-de-usuários-e-permissões>5. Gerenciamento de Usuários e Permissões<a hidden class=anchor aria-hidden=true href=#5-gerenciamento-de-usuários-e-permissões>#</a></h2><h3 id=criar-um-novo-usuário>Criar um novo usuário<a hidden class=anchor aria-hidden=true href=#criar-um-novo-usuário>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>CREATE</span><span class=w> </span><span class=k>USER</span><span class=w> </span><span class=s1>&#39;novo_usuario&#39;</span><span class=o>@</span><span class=s1>&#39;localhost&#39;</span><span class=w> </span><span class=n>IDENTIFIED</span><span class=w> </span><span class=k>BY</span><span class=w> </span><span class=s1>&#39;senha&#39;</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><table><thead><tr><th><strong>Parâmetro</strong></th><th><strong>Ação</strong></th></tr></thead><tbody><tr><td>“localhost”</td><td>O usuário apenas se conecta por meio da máquina local</td></tr><tr><td>“%”</td><td>O usuário pode se conectar de qualquer IP remoto</td></tr></tbody></table><blockquote><p><strong>Obs.:</strong> Ambos os tipos de conexão são válidas, a “localhost” seria mais restritiva, porém, tudo dependerá das suas necessidades.</p></blockquote><h3 id=conceder-privilégios-a-um-usuário>Conceder privilégios a um usuário<a hidden class=anchor aria-hidden=true href=#conceder-privilégios-a-um-usuário>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>GRANT</span><span class=w> </span><span class=k>ALL</span><span class=w> </span><span class=k>PRIVILEGES</span><span class=w> </span><span class=k>ON</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>].</span><span class=o>*</span><span class=w> </span><span class=k>TO</span><span class=w> </span><span class=s1>&#39;novo_usuario&#39;</span><span class=o>@</span><span class=s1>&#39;localhost&#39;</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><blockquote><p><strong>Atenção!</strong> Privilégios devem ser concedidos apenas a usuários que realmente necessitam. Caso contrário, não!</p></blockquote><h3 id=visualizar-privilégios-de-um-usuário>Visualizar privilégios de um usuário<a hidden class=anchor aria-hidden=true href=#visualizar-privilégios-de-um-usuário>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>SHOW</span><span class=w> </span><span class=n>GRANTS</span><span class=w> </span><span class=k>FOR</span><span class=w> </span><span class=s1>&#39;novo_usuario&#39;</span><span class=o>@</span><span class=s1>&#39;localhost&#39;</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=revogar-privilégios-de-um-usuário>Revogar privilégios de um usuário<a hidden class=anchor aria-hidden=true href=#revogar-privilégios-de-um-usuário>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=k>REVOKE</span><span class=w> </span><span class=k>ALL</span><span class=w> </span><span class=k>PRIVILEGES</span><span class=w> </span><span class=k>ON</span><span class=w> </span><span class=p>[</span><span class=n>nome_do_banco</span><span class=p>].</span><span class=o>*</span><span class=w> </span><span class=k>FROM</span><span class=w> </span><span class=s1>&#39;novo_usuario&#39;</span><span class=o>@</span><span class=s1>&#39;localhost&#39;</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=6-comandos-úteis>6. Comandos Úteis<a hidden class=anchor aria-hidden=true href=#6-comandos-úteis>#</a></h2><h3 id=ver-versão-do-mysql>Ver versão do MySQL<a hidden class=anchor aria-hidden=true href=#ver-versão-do-mysql>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mysql -V
+</span></span></code></pre></td></tr></table></div></div><h3 id=limpar-a-tela-do-terminal>Limpar a tela do terminal<a hidden class=anchor aria-hidden=true href=#limpar-a-tela-do-terminal>#</a></h3><ul><li>No terminal: <code>Ctrl + L</code>;</li><li>No MySQL Shell: <code>\clear</code>.</li></ul><h3 id=sair-do-mysql>Sair do MySQL<a hidden class=anchor aria-hidden=true href=#sair-do-mysql>#</a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sql data-lang=sql><span class=line><span class=cl><span class=n>EXIT</span><span class=p>;</span><span class=w>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=tabela-de-referência-rápida>Tabela de Referência Rápida<a hidden class=anchor aria-hidden=true href=#tabela-de-referência-rápida>#</a></h2><table><thead><tr><th>Ação</th><th>Comando</th></tr></thead><tbody><tr><td>Listar bancos</td><td><code>SHOW DATABASES;</code></td></tr><tr><td>Selecionar banco</td><td><code>USE nome_do_banco;</code></td></tr><tr><td>Listar tabelas</td><td><code>SHOW TABLES;</code></td></tr><tr><td>Ver estrutura da tabela</td><td><code>DESCRIBE nome_da_tabela;</code></td></tr><tr><td>Inserir dados</td><td><code>INSERT INTO ... VALUES (...);</code></td></tr><tr><td>Exportar banco</td><td><code>mysqldump -u user -p db > backup.sql</code></td></tr><tr><td>Importar backup</td><td><code>mysql -u user -p db &lt; backup.sql</code></td></tr><tr><td>Criar usuário</td><td><code>CREATE USER 'user'@'host' IDENTIFIED BY 'senha';</code></td></tr></tbody></table><h2 id=considerações-finais>Considerações Finais<a hidden class=anchor aria-hidden=true href=#considerações-finais>#</a></h2><p>Compreender os comandos básicos do MySQL permite atuar com mais autonomia, entender melhor o funcionamento de ORMs e resolver problemas rapidamente, mesmo sem interface gráfica.</p><h2 id=referências>Referências<a hidden class=anchor aria-hidden=true href=#referências>#</a></h2><ul><li><a href=https://dev.mysql.com/doc/>https://dev.mysql.com/doc/</a></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=http://localhost:1313/tags/command-line/>Command Line</a></li><li><a href=http://localhost:1313/tags/mysql/>Mysql</a></li><li><a href=http://localhost:1313/tags/prompt/>Prompt</a></li><li><a href=http://localhost:1313/tags/terminal/>Terminal</a></li></ul><nav class=paginav><a class=prev href=http://localhost:1313/posts/phpdoc-para-que-server-e-onde-devo-usar/><span class=title>« Anterior</span>
+<span>PHPDoc, para que server e onde devo usar?</span>
+</a><a class=next href=http://localhost:1313/php/meu-dia-dia-como-desenvolvedor-ides-e-editores-de-texto/><span class=title>Próximo »</span>
+<span>Meu dia a dia como desenvolvedor: IDE’s e Editores de texto</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Comandos básicos do MySQL no terminal on x" href="https://x.com/intent/tweet/?text=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;url=http%3a%2f%2flocalhost%3a1313%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f&amp;hashtags=commandline%2cmysql%2cprompt%2cterminal"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Comandos básicos do MySQL no terminal on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f&amp;title=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;summary=Comandos%20b%c3%a1sicos%20do%20MySQL%20no%20terminal&amp;source=http%3a%2f%2flocalhost%3a1313%2fmysql%2fcomandos-basicos-mysql-no-terminal%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=http://localhost:1313/>Diego Brocanelli</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copiar";function s(){t.innerHTML="copiado!",setTimeout(()=>{t.innerHTML="copiar"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

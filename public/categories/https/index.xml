@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>https on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/https/</link>
-    <description>Recent content in https on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Https on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/https/</link>
+    <description>Recent content in Https on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 30 Jan 2017 10:42:59 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/https/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2017 10:42:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/https/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 06 – Criptografia: Entendendo o HTTPS (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/criptografia-entendendo-o-https-video/</link>
+      <link>http://localhost:1313/posts/criptografia-entendendo-o-https-video/</link>
       <pubDate>Mon, 30 Jan 2017 10:42:59 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/criptografia-entendendo-o-https-video/</guid>
-      <description>Fala galera, tudo bem?!
-Tivemos a sexta edição do hhbr a primeira edição de 2017, e nesta fantástica edição foi abordado o tema de criptografia no HTTPS, conteúdo apresentado pelo grande Diego Hernandes.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Tema: “Criptografia: Entendendo o HTTPS” Palestrante: Diego Hernandes Twitter: ttps://twitter.com/_hernande Site: https://codecasts.com.br GitHub: https://github.com/hernande Slides: https://speakerdeck.com/hernandev/criptografia-como-funciona-o-http — Contatos Canal ——————————————————————————-
-Até a próxima, abraços!</description>
+      <guid>http://localhost:1313/posts/criptografia-entendendo-o-https-video/</guid>
+      <description>&lt;p&gt;Fala galera, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Tivemos a sexta edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; a primeira edição de 2017, e nesta fantástica edição foi abordado o tema de criptografia no HTTPS, conteúdo apresentado pelo grande &lt;a href=&#34;https://twitter.com/_hernandev&#34;&gt;Diego Hernandes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=ecM7k1OhTwA&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Criptografia: Entendendo o HTTPS”&lt;/li&gt;
+&lt;li&gt;Palestrante: Diego Hernandes&lt;/li&gt;
+&lt;li&gt;Twitter: ttps://twitter.com/_hernande&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://codecasts.com.br&#34;&gt;https://codecasts.com.br&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/hernande&#34;&gt;https://github.com/hernande&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://speakerdeck.com/hernandev/criptografia-como-funciona-o-http&#34;&gt;https://speakerdeck.com/hernandev/criptografia-como-funciona-o-http&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;— Contatos Canal ——————————————————————————-&lt;/p&gt;
+&lt;p&gt;Até a próxima, abraços!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

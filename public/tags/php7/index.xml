@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>php7 on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/php7/</link>
-    <description>Recent content in php7 on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Php7 on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/php7/</link>
+    <description>Recent content in Php7 on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 22 Mar 2016 04:03:26 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/php7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Mar 2016 04:03:26 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/php7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP 7 – Scalar Type</title>
-      <link>https://diegobrocanelli.com.br/php/php-7-scalar-type/</link>
+      <link>http://localhost:1313/posts/php-7-scalar-type/</link>
       <pubDate>Tue, 22 Mar 2016 04:03:26 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/php-7-scalar-type/</guid>
-      <description>Como bem sabemos o PHP tem uma tipagem fraca, e ele continua com esta característica. Porem na nova versão PHP 7 lançada dia 03/12/2015, trazendo novos tipos para o Scalar Type declarations.
-Os novos tipos implementados são:
-int; float; string; bool. Temos dois tipos de declaração, a coercive ( sendo default) e a strict (rigorosa), para acessar a strict é necessário informar no incio do arquivo PHP. Para isso devemos utilizar a função declare() para definir diretivas de execução para um bloco de código.</description>
+      <guid>http://localhost:1313/posts/php-7-scalar-type/</guid>
+      <description>&lt;p&gt;Como bem sabemos o PHP tem uma tipagem fraca, e ele continua com esta característica. Porem na nova versão &lt;a href=&#34;http://php.net/archive/2015.php#id2015-12-03-1&#34;&gt;PHP 7&lt;/a&gt; lançada dia 03/12/2015, trazendo novos tipos para o &lt;a href=&#34;http://php.net/manual/pt_BR/migration70.new-features.php&#34;&gt;Scalar Type declarations&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Os novos tipos implementados são:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;int;&lt;/li&gt;
+&lt;li&gt;float;&lt;/li&gt;
+&lt;li&gt;string;&lt;/li&gt;
+&lt;li&gt;bool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Temos dois tipos de declaração, a coercive ( sendo default) e a strict (rigorosa), para acessar a strict é necessário informar no incio do arquivo PHP. Para isso devemos utilizar a função declare() para definir diretivas de execução para um bloco de código.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

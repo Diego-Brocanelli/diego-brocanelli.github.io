@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>sami on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/sami/</link>
-    <description>Recent content in sami on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Sami on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/sami/</link>
+    <description>Recent content in Sami on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 12 May 2016 01:57:27 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/sami/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2016 01:57:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sami/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gerando documentação do seu sistema utilizando a API SAMI</title>
-      <link>https://diegobrocanelli.com.br/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</link>
+      <link>http://localhost:1313/posts/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</link>
       <pubDate>Thu, 12 May 2016 01:57:27 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</guid>
-      <description>Fala pessoal tudo tranquilo?
-Quem nunca se deparou com a necessidade de documentar o sistema que está desenvolvendo, para que outros programadores consigam realizar novas implementações, correções ou até mesmo consumir a API.
-Sabemos que a documentação é algo essencial e indispensável no desenvolvimento de softwares para garantir a longevidade de nossos sistemas. O PHP não fica para trás neste quesito, atualmente no PHP-FIG está em processo de “Draft” a PSR-5 visando um padrão para PHPDoc para comunidade PHP.</description>
+      <guid>http://localhost:1313/posts/gerando-documentacao-do-seu-sistema-utilizando-a-api-sami/</guid>
+      <description>&lt;p&gt;Fala pessoal tudo tranquilo?&lt;/p&gt;
+&lt;p&gt;Quem nunca se deparou com a necessidade de documentar o sistema que está desenvolvendo, para que outros programadores consigam realizar novas implementações, correções ou até mesmo consumir a API.&lt;/p&gt;
+&lt;p&gt;Sabemos que a documentação é algo essencial e indispensável no desenvolvimento de softwares para garantir a longevidade de nossos sistemas. O PHP não fica para trás neste quesito, atualmente no &lt;a href=&#34;http://www.php-fig.org&#34;&gt;PHP-FIG&lt;/a&gt; está em processo de “Draft” a &lt;a href=&#34;http://www.php-fig.org/psr/&#34;&gt;PSR-5&lt;/a&gt; visando um padrão para PHPDoc para comunidade PHP. Este post não visa analisar nem menos discutir sobre a PSR, e sim demostrar a criação de forma simples a documentação do nosso sistema.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

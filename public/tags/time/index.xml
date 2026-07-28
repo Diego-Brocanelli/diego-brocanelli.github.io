@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>time on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/time/</link>
-    <description>Recent content in time on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Time on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/time/</link>
+    <description>Recent content in Time on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 10 May 2017 22:20:12 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/time/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como converter decimal para tempo com PHP</title>
+      <link>http://localhost:1313/posts/como-converter-decimal-para-tempo-com-php/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/como-converter-decimal-para-tempo-com-php/</guid>
+      <description>&lt;h2 id=&#34;fazer-post-para-converter-decimal-para-time&#34;&gt;fazer post para converter decimal para time&lt;/h2&gt;
+&lt;p&gt;echo gmdate(‘H:i’, floor(1.67 * 3600));&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Melhore a qualidade do código da sua equipe com Code Review</title>
-      <link>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
+      <link>http://localhost:1313/posts/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</link>
       <pubDate>Wed, 10 May 2017 22:20:12 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
-      <description>Olá, tudo bem?!
-Um dos métodos que podemos utilizar para melhorar nosso source code é adotar a pratica de code review.
-Ao realizar este processo, teremos a oportunidade de compartilhar conhecimento, melhorar o código e diminuir a quantidade de bugs que possivelmente existem no sistema.
-Mas o que é code review? Alguém (técnico) que não seja você, que irá analisar o seu código.
-Regras para um bom code review De 200 à 400 linhas de código no máximo.</description>
+      <guid>http://localhost:1313/posts/melhore-qualidade-codigo-da-sua-equipe-com-code-review/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Um dos métodos que podemos utilizar para melhorar nosso source code é adotar a pratica de code review.&lt;/p&gt;
+&lt;p&gt;Ao realizar este processo, teremos a oportunidade de compartilhar conhecimento, melhorar o código e diminuir a quantidade de bugs que possivelmente existem no sistema.&lt;/p&gt;
+&lt;h2 id=&#34;mas-o-que-é-code-review&#34;&gt;Mas o que é code review?&lt;/h2&gt;
+&lt;p&gt;Alguém (técnico) que não seja você, que irá analisar o seu código.&lt;/p&gt;
+&lt;h3 id=&#34;regras-para-um-bom-code-review&#34;&gt;Regras para um bom code review&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;De 200 à 400 linhas de código no máximo.&lt;/li&gt;
+&lt;li&gt;Sem pressa.&lt;/li&gt;
+&lt;li&gt;Limite de até 1hora.&lt;/li&gt;
+&lt;li&gt;Use:
+&lt;ul&gt;
+&lt;li&gt;Checklist.&lt;/li&gt;
+&lt;li&gt;Ferramentas para automatizar o processo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Não faça o processo de code review em seu próprio código.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;o-que-avaliar&#34;&gt;O que avaliar?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A implementação atende os requisitos da task?&lt;/li&gt;
+&lt;li&gt;Análise de bug.&lt;/li&gt;
+&lt;li&gt;Segue code standarts?
+&lt;ul&gt;
+&lt;li&gt;Exemplo:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.php-fig.org/psr/psr-1/&#34;&gt;PSR-1&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Contém código duplicado?&lt;/li&gt;
+&lt;li&gt;O código é legível?&lt;/li&gt;
+&lt;li&gt;Deixou o código melhor do que quando você o pegou?&lt;/li&gt;
+&lt;li&gt;Buscar por erros.&lt;/li&gt;
+&lt;li&gt;Indentação de código.&lt;/li&gt;
+&lt;li&gt;Nomes de variáveis/métodos/classes.&lt;/li&gt;
+&lt;li&gt;Testes:
+&lt;ul&gt;
+&lt;li&gt;Cobrem as partes que deveriam cobrir?&lt;/li&gt;
+&lt;li&gt;São legíveis?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Segue boas práticas de desenvolvimento?
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://eltonminetto.net/2016/06/24/como-melhorar-seus-codigos-usando-object-calisthenics/&#34;&gt;Object Calisthenics&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;S.O.L.I.D.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Otimização de rotinas.&lt;/li&gt;
+&lt;li&gt;Execução das ferramentas:
+&lt;ul&gt;
+&lt;li&gt;Por exemplo:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/FriendsOfPHP/PHP-CS-Fixer&#34;&gt;PHP-CS-Fixer&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://phpmd.org/&#34;&gt;PHPMD&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/squizlabs/PHP_CodeSniffer&#34;&gt;CodeSniffer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remover código comentado.&lt;/li&gt;
+&lt;li&gt;Sugerir melhorias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;o-que-não-executar-ou-avaliar&#34;&gt;O que não  executar ou avaliar?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Emitir opinião sobre a forma que o indivíduo trabalha.&lt;/li&gt;
+&lt;li&gt;Forçar que o desenvolvedor siga o seu processo de desenvolvimento.&lt;/li&gt;
+&lt;li&gt;Seja imparcial, avalie o código não a pessoa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quais-as-vantagens-de-se-ter-um-code-review&#34;&gt;Quais as vantagens de se ter um code review?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Aumento de produtividade.&lt;/li&gt;
+&lt;li&gt;Auto aperfeiçoamento.&lt;/li&gt;
+&lt;li&gt;Compartilhar conhecimento:
+&lt;ul&gt;
+&lt;li&gt;Técnico.&lt;/li&gt;
+&lt;li&gt;Do produto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Economia para a empresa.&lt;/li&gt;
+&lt;li&gt;Melhor base code.&lt;/li&gt;
+&lt;li&gt;Redução de bugs nos sistemas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;como-realizar-um-code-review&#34;&gt;Como realizar um code review?&lt;/h3&gt;
+&lt;p&gt;Pode ser realizado de duas maneiras, sendo:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

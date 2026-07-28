@@ -2,21 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Coding on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/coding/</link>
+    <link>http://localhost:1313/tags/coding/</link>
     <description>Recent content in Coding on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 07 Jun 2016 01:54:02 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2016 01:54:02 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP Coding Standards Fixer</title>
-      <link>https://diegobrocanelli.com.br/php/php-coding-standards-fixer/</link>
+      <link>http://localhost:1313/posts/php-coding-standards-fixer/</link>
       <pubDate>Tue, 07 Jun 2016 01:54:02 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/php/php-coding-standards-fixer/</guid>
-      <description>Olá pessoal tudo bem?
-Anteriormente fiz um post para demonstrar o uso do PHPCodeSniffer, uma ferramenta muito útil para verificar possíveis erros em nossos códigos, e com isso nos auxiliar a melhora-los. Pois bem hoje vou lhes mostrar outra ferramenta PHP Coding Standards Fixer ou mais conhecido como PHP-CS-Fixer (repositório Github).
-Com esta ferramenta poderemos realizar o processo de correção automática para as violações por exemplo da PSR-2, isso mesmo de forma automática!</description>
+      <guid>http://localhost:1313/posts/php-coding-standards-fixer/</guid>
+      <description>&lt;p&gt;Olá pessoal tudo bem?&lt;/p&gt;
+&lt;p&gt;Anteriormente fiz um post para demonstrar o uso do &lt;a href=&#34;https://www.diegobrocanelli.com.br/php/php-codesniffer/&#34;&gt;PHPCodeSniffer&lt;/a&gt;, uma ferramenta muito útil para verificar possíveis erros em nossos códigos, e com isso nos auxiliar a melhora-los. Pois bem hoje vou lhes mostrar outra ferramenta &lt;a href=&#34;http://cs.sensiolabs.org/&#34;&gt;PHP Coding Standards Fixer&lt;/a&gt; ou mais conhecido como PHP-CS-Fixer (&lt;a href=&#34;https://github.com/FriendsOfPHP/PHP-CS-Fixer&#34;&gt;repositório Github&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Com esta ferramenta poderemos realizar o processo de correção automática para as violações por exemplo da PSR-2, isso mesmo de forma automática!!!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

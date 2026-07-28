@@ -3,7 +3,14 @@ title: "Priorizar com propósito: guia prático para iniciantes"
 date: 2025-01-24T22:36:32Z
 author: Diego Brocanelli
 type: post
-draft: false
+showtoc: true         # Sumário automático do PaperMod
+tocopen: true         # true = sumário já vem expandido ao abrir a página
+ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
+ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
+ShowReadingTime: true
+ShowWordCount: true
+ShowShareButtons: true
+ShowPostNavLinks: true
 categories:
   - soft skills
 tags:
@@ -11,17 +18,6 @@ tags:
   - iniciante
   - iniciantes
 ---
-
-
-## Sumário
-
-- [Introdução](#introdução)
-- [Priorização com cliente ou/e parte interessada](#priorização-com-cliente-oue-parte-interessada)
-- [Priorizando minhas demandas](#priorizando-minhas-demandas)
-- [Priorização no meu dia a dia pessoal](#priorização-no-meu-dia-a-dia-pessoal)
-- [Ferramentas](#ferramentas)
-- [Considerações finais](#considerações-finais)
-- [Referências](#referências)
 
 ## Introdução
 

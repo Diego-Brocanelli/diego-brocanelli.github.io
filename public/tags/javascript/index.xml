@@ -1,69 +1,102 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>javascript on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/javascript/</link>
-    <description>Recent content in javascript on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Javascript on Diego Brocanelli</title>
+    <link>http://localhost:1313/tags/javascript/</link>
+    <description>Recent content in Javascript on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
+      <link>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
-      <description>Olá!
-Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
-Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.
-Dados da palestra Tema: “Ecossistema javascript” Palestrante: Marco Bruno Twitter: @marcobrunobr Twitter: @collabcodetech Facebook: collabcode Youtube: collabcode Site: medium.</description>
+      <guid>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</guid>
+      <description>&lt;p&gt;Olá!&lt;/p&gt;
+&lt;p&gt;Nesta 26º edição da comunidade [hhbr][1]  tivemos um super bate papo sobre  “Ecossistema Javascript” com o grande &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;Marco Bruno&lt;/a&gt; do &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;CollabCode&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/COpW2NZEHqc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Ecossistema javascript”&lt;/li&gt;
+&lt;li&gt;Palestrante: Marco Bruno&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;@marcobrunobr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/collabcodetech&#34;&gt;@collabcodetech&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook: &lt;a href=&#34;https://www.facebook.com/collabcode&#34;&gt;collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/c/collabcode&#34;&gt;collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;medium.com/collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/MarcoBrunoBR&#34;&gt;@MarcoBrunoBR&lt;/a&gt; e &lt;a href=&#34;https://github.com/CollabCodeTech&#34;&gt;@CollabCodeTech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tc39/proposals&#34;&gt;https://github.com/tc39/proposals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.da2k.com.br/curso-javascript-ninja/&#34;&gt;https://blog.da2k.com.br/curso-javascript-ninja/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://prettier.io/&#34;&gt;https://prettier.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyper.is/&#34;&gt;https://hyper.is/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mochajs.org/&#34;&gt;https://mochajs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/casperjs/casperjs&#34;&gt;https://github.com/casperjs/casperjs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/pt-BR/&#34;&gt;https://developer.mozilla.org/pt-BR/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tc39&#34;&gt;https://github.com/tc39&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;https://www.npmjs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://modernizr.com/&#34;&gt;https://modernizr.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yarnpkg.com/pt-BR/&#34;&gt;https://yarnpkg.com/pt-BR/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mozilla.org/pt-BR/firefox/new/&#34;&gt;https://www.mozilla.org/pt-BR/firefox/new/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kangax.github.io/compat-table/esnext/&#34;&gt;https://kangax.github.io/compat-table/esnext/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://test262.report/&#34;&gt;https://test262.report/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://app.impulso.network&#34;&gt;https://app.impulso.network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dofrontaoend.collabcode.training/&#34;&gt;http://dofrontaoend.collabcode.training/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.saraiva.com.br/abundancia-o-futuro-e-melhor-do-que-voce-imagina-4706194.html&#34;&gt;https://www.saraiva.com.br/abundancia-o-futuro-e-melhor-do-que-voce-imagina-4706194.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Realizando uma requisição AJAX sem framework Javascript</title>
-      <link>https://diegobrocanelli.com.br/javascript/realizando-um-request-ajax-sem-framework-javascript/</link>
+      <link>http://localhost:1313/posts/realizando-um-request-ajax-sem-framework-javascript/</link>
       <pubDate>Mon, 30 Apr 2018 10:59:26 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/javascript/realizando-um-request-ajax-sem-framework-javascript/</guid>
-      <description>Olá, tudo bem?!
-Realizar uma requisição AJAX não precisa ser uma coisa de outro mundo, muito pelo contrário é algo bem comum e amplamente utilizado.
-Normalmente é realizado a implementação fazendo uso de alguma biblioteca Javascript.
-Neste post irei demonstrar de forma simples uma requisição AJAX para a API SWAPI (Star Wars API) e consumir seu retorno na página HTML.
-Crie um arquivo HTML com o nome ajax-javascript.html, dentro do mesmo insira a seguinte estrutura de código.</description>
+      <guid>http://localhost:1313/posts/realizando-um-request-ajax-sem-framework-javascript/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Realizar uma requisição AJAX não precisa ser uma coisa de outro mundo, muito pelo contrário é algo bem comum e amplamente utilizado.&lt;/p&gt;
+&lt;p&gt;Normalmente é realizado a implementação fazendo uso de alguma biblioteca Javascript.&lt;/p&gt;
+&lt;p&gt;Neste post irei demonstrar de forma simples uma requisição AJAX para a API &lt;a href=&#34;https://swapi.co&#34;&gt;SWAPI&lt;/a&gt; (Star Wars API) e consumir seu retorno na página HTML.&lt;/p&gt;
+&lt;p&gt;Crie um arquivo HTML com o nome ajax-javascript.html, dentro do mesmo insira a seguinte estrutura de código.&lt;/p&gt;</description>
     </item>
-    
     <item>
-      <title>Utilizando query Selector do Javascript</title>
-      <link>https://diegobrocanelli.com.br/javascript/utilizando-queryselector-do-javascript/</link>
+      <title>Utilizando query selector do Javascript</title>
+      <link>http://localhost:1313/posts/utilizando-queryselector-do-javascript/</link>
       <pubDate>Sat, 28 Apr 2018 15:40:25 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/javascript/utilizando-queryselector-do-javascript/</guid>
-      <description>Olá, tudo bem?!
-Quantas vezes utilizamos bibliotecas como JQuery para ações básicas com Javascript? Eu mesmo por diversas vezes, acabamos tomando essa ação por falta de conhecimento.
-Por exemplo, para selecionar algum elemento no HTML um exemplo prático seria utilizar o $(‘elemento’) do JQuery e a partir disso manipular o elemento. Entretanto, podemos fazer esta ação de forma nativa utilizando document.querySelector(‘elemento’).
-Vamos para um exemplo prático, abaixo temos um página HTML com um botão, no qual desejamos inserir um atributo data-value=”Valor do atributo”.</description>
+      <guid>http://localhost:1313/posts/utilizando-queryselector-do-javascript/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Quantas vezes utilizamos bibliotecas como JQuery para ações básicas com Javascript? Eu mesmo por diversas vezes, acabamos tomando essa ação por falta de conhecimento.&lt;/p&gt;
+&lt;p&gt;Por exemplo, para selecionar algum elemento no HTML um exemplo prático seria utilizar o &lt;code&gt;$(‘elemento’)&lt;/code&gt; do JQuery e a partir disso manipular o elemento. Entretanto, podemos fazer esta ação de forma nativa utilizando &lt;code&gt;document.querySelector(‘elemento’)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Vamos para um exemplo prático, abaixo temos um página HTML com um botão, no qual desejamos inserir um atributo &lt;code&gt;data-value=”Valor do atributo”&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 09 – Ember.js: Por que você ainda não está usando? (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
+      <link>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
       <pubDate>Thu, 04 May 2017 14:55:09 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
-      <description>Olá, tudo bem?!
-É com alegria que apresento o vídeo da nona edição do canal hhbr e nesta edição tivemos a honra de prestigiar uma super palestra do grande Danilo Vaz, nesta edição foi abordado o tema “Ember.js: Por que você ainda não está usando?”, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade.</description>
+      <guid>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;É com alegria que apresento o vídeo da nona edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; e nesta edição tivemos a honra de prestigiar uma super palestra do grande &lt;a href=&#34;tp://danilovaz.github.io/&#34;&gt;Danilo Vaz&lt;/a&gt;, nesta edição foi abordado o tema &lt;strong&gt;“Ember.js: Por que você ainda não está usando?”&lt;/strong&gt;, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade. Sem mais delongas espero que apreciem o vídeo.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 08 – Vue.js e Single Page Applications: O que saber antes de começar (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
+      <link>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
       <pubDate>Thu, 30 Mar 2017 02:04:18 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/vuejs/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
-      <description>Olá, tudo bem?!
-Hoje tivemos a oitava edição do hhbr, uma edição recheada de muita informação, dicas e códigos!
-Nesta edição temos a honra de trazer o grande Fábio Vedovelli, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do Codecasts chamado SPA Started Kit onde facilita e muito o start inicial de uma SPA com Vuejs.</description>
+      <guid>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
+      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
+&lt;p&gt;Hoje tivemos a oitava edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRG&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação, dicas e códigos!&lt;/p&gt;
+&lt;p&gt;Nesta edição temos a honra de trazer o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fábio Vedovelli&lt;/a&gt;, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do &lt;a href=&#34;ttps://codecasts.com.br/lesson&#34;&gt;Codecasts&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/codecasts/spa-starter-kit&#34;&gt;SPA Started Kit&lt;/a&gt; onde facilita e muito o start inicial de uma SPA com Vuejs.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

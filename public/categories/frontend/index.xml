@@ -1,35 +1,87 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>frontend on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/frontend/</link>
-    <description>Recent content in frontend on Diego Brocanelli</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Frontend on Diego Brocanelli</title>
+    <link>http://localhost:1313/categories/frontend/</link>
+    <description>Recent content in Frontend on Diego Brocanelli</description>
+    <image>
+      <title>Diego Brocanelli</title>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
+    </image>
+    <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate><atom:link href="https://diegobrocanelli.com.br/categories/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</link>
+      <link>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/hhbr-26-ecossistema-javascript/</guid>
-      <description>Olá!
-Nesta 26º edição da comunidade [hhbr][1] tivemos um super bate papo sobre “Ecossistema Javascript” com o grande Marco Bruno do CollabCode.
-Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.
-Dados da palestra Tema: “Ecossistema javascript” Palestrante: Marco Bruno Twitter: @marcobrunobr Twitter: @collabcodetech Facebook: collabcode Youtube: collabcode Site: medium.</description>
+      <guid>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</guid>
+      <description>&lt;p&gt;Olá!&lt;/p&gt;
+&lt;p&gt;Nesta 26º edição da comunidade [hhbr][1]  tivemos um super bate papo sobre  “Ecossistema Javascript” com o grande &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;Marco Bruno&lt;/a&gt; do &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;CollabCode&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/COpW2NZEHqc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+		&lt;/div&gt;
+
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tema: “Ecossistema javascript”&lt;/li&gt;
+&lt;li&gt;Palestrante: Marco Bruno&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;@marcobrunobr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/collabcodetech&#34;&gt;@collabcodetech&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebook: &lt;a href=&#34;https://www.facebook.com/collabcode&#34;&gt;collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Youtube: &lt;a href=&#34;https://www.youtube.com/c/collabcode&#34;&gt;collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site: &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;medium.com/collabcode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/MarcoBrunoBR&#34;&gt;@MarcoBrunoBR&lt;/a&gt; e &lt;a href=&#34;https://github.com/CollabCodeTech&#34;&gt;@CollabCodeTech&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-comentados&#34;&gt;Links Comentados&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tc39/proposals&#34;&gt;https://github.com/tc39/proposals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.da2k.com.br/curso-javascript-ninja/&#34;&gt;https://blog.da2k.com.br/curso-javascript-ninja/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://prettier.io/&#34;&gt;https://prettier.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyper.is/&#34;&gt;https://hyper.is/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mochajs.org/&#34;&gt;https://mochajs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/casperjs/casperjs&#34;&gt;https://github.com/casperjs/casperjs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/pt-BR/&#34;&gt;https://developer.mozilla.org/pt-BR/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tc39&#34;&gt;https://github.com/tc39&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/en/&#34;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;https://www.npmjs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://modernizr.com/&#34;&gt;https://modernizr.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://yarnpkg.com/pt-BR/&#34;&gt;https://yarnpkg.com/pt-BR/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mozilla.org/pt-BR/firefox/new/&#34;&gt;https://www.mozilla.org/pt-BR/firefox/new/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kangax.github.io/compat-table/esnext/&#34;&gt;https://kangax.github.io/compat-table/esnext/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://test262.report/&#34;&gt;https://test262.report/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://app.impulso.network&#34;&gt;https://app.impulso.network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dofrontaoend.collabcode.training/&#34;&gt;http://dofrontaoend.collabcode.training/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.saraiva.com.br/abundancia-o-futuro-e-melhor-do-que-voce-imagina-4706194.html&#34;&gt;https://www.saraiva.com.br/abundancia-o-futuro-e-melhor-do-que-voce-imagina-4706194.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>hhbr : 02 Flexbox – Interfaces Modernas (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/video/flexbox-interfaces-modernas-video/</link>
+      <link>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</link>
       <pubDate>Tue, 18 Oct 2016 23:17:07 +0000</pubDate>
-      
-      <guid>https://diegobrocanelli.com.br/video/flexbox-interfaces-modernas-video/</guid>
-      <description>Fala galera tudo bem?!
-Ontem dia 05/10/2016 ocorreu a segunda palestra do canal hhbr, e foi explorado o mundo do Flexbox.
-Acesse o vídeo da palestra e espero que aprecie o conteúdo!
-Dados da palestra Palestrante: Danilo Vaz; Twitter: ttps://twitter.com/_danilovaz Site: ttp://danilovaz.github.io GitHub: https://github.com/danilovaz Slides: https://speakerdeck.com/danilovaz/flexbox Links mencionados na palestra: A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ http://flexboxfroggy.com/ http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility </description>
+      <guid>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</guid>
+      <description>&lt;p&gt;Fala galera tudo bem?!&lt;/p&gt;
+&lt;p&gt;Ontem dia 05/10/2016 ocorreu a segunda palestra do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, e foi explorado o mundo do Flexbox.&lt;/p&gt;
+&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=GdT6aNYE_TE&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+&lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Palestrante: Danilo Vaz;&lt;/li&gt;
+&lt;li&gt;Twitter: ttps://twitter.com/_danilovaz&lt;/li&gt;
+&lt;li&gt;Site: ttp://danilovaz.github.io&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/danilovaz&#34;&gt;https://github.com/danilovaz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slides: &lt;a href=&#34;https://speakerdeck.com/danilovaz/flexbox&#34;&gt;https://speakerdeck.com/danilovaz/flexbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links-mencionados-na-palestra&#34;&gt;Links mencionados na palestra:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A Complete Guide to Flexbox: &lt;a href=&#34;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&#34;&gt;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://flexboxfroggy.com/&#34;&gt;http://flexboxfroggy.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility&#34;&gt;http://caniuse.com/#feat=flexboxhttps://github.com/jonathantneal/flexibility&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>
