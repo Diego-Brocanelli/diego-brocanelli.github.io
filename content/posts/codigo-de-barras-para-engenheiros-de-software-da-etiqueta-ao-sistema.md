@@ -1,7 +1,7 @@
 ---
 title: "Código de barras para engenheiros de software: da etiqueta ao sistema"
 date: 2026-07-28T02:47:37Z
-draft: true
+draft: false
 showtoc: true         # Sumário automático do PaperMod
 tocopen: true         # true = sumário já vem expandido ao abrir a página
 ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
