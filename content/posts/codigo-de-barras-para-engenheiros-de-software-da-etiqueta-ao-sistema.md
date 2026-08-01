@@ -49,7 +49,7 @@ Os engenheiros Norman Joseph e Bernard Silver patentearam a primeira versão do 
 
 A patente original descrevia um código de barras circular. Posteriormente a equipe da IBM, liderada pelo engenheiro George Laurer, desenvolveram o formato retangular que conhecemos atualmente.
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 >
 > O primeiro produto escaneado comercialmente foi um pacote de chicletes Wrigley's Juicy Fruit em 26 de junho de 1974. A embalagem original encontra-se preservada no Smithsonian Institution, nos Estados Unidos.
 
@@ -63,7 +63,7 @@ Empresa → Identificador → Código de barras → Leitor → sistema
 
 E nesse momento temos uma dúvida muito interessante.
 
-> ❓ Quem define esses identificadores?
+> <span>❓</span> Quem define esses identificadores?
 
 A resposta nos leva à GS1.
 
@@ -124,7 +124,7 @@ Sendo a entidade responsável pela administração dos padrões GS1 no Brasil, o
 4. **Emissão do código GTIN:** a cada produto cadastrado, é gerado um número exclusivo;
 5. **Uso do GTIN:** o código pode ser aplicado em embalagens, cadastros de marketplaces e documentos fiscais.
 
-> ⚠️ **Observação**
+> <span>⚠️</span> **Observação**
 >
 > Deve-se pagar anuidade para se manter sócio, e esse valor também varia de acordo com o perfil da empresa!
 
@@ -218,7 +218,7 @@ O fluxo é:
 
 ![Como um leitor funciona](/assets/images/codigo-barras/como-um-leitor-funciona.webp)
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 >
 > Apesar de enxergarmos números abaixo do código de barras, o leitor não os utiliza. Ele trabalha exclusivamente com o padrão óptico formado por barras e espaços.
 
@@ -230,7 +230,7 @@ O fluxo é:
 
 ![Os três tipos de leitores de códigos de barras](/assets/images/codigo-barras/tipos-de-leitores-de-codigo-de-barras.webp)
 
-> ⚠️ **Observação**
+> <span>⚠️</span> **Observação**
 >
 > Atualmente leitores CCD e Linear Imager utilizam uma matriz de sensores ópticos para capturar toda a largura do código de barras simultaneamente.
 
@@ -257,7 +257,7 @@ O último dígito é calculado matematicamente e seu objetivo é detectar erros 
 
 O algoritmo utiliza multiplicações alternadas por 1 e 3, seguidas por uma soma e cálculo complementar para múltiplos de 10.
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 >
 > O primeiro dígito do EAN-13 não possui barras próprias. Ele é representado indiretamente pelo padrão de codificação utilizado nos seis dígitos seguintes do lado esquerdo do código.
 
@@ -440,7 +440,7 @@ Um dos padrões mais populares para controle patrimonial, sendo utilizados:
 - Almoxarifado;
 - Indústria.
 
-> ⚠️ **Observação**
+> <span>⚠️</span> **Observação**
 >
 > O nome “Code 39” vem do fato de suportar originalmente 26 letras, 10 números e 3 símbolos.Totalizando 39 caracteres.
 
@@ -474,7 +474,7 @@ Diferente do EAN-13, no Code 39 cada caractere é composto por:
 - 3 elementos largos (wide);
 - 6 elementos estreitos (narrow).
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 >
 > Por isso, que o nome original da simbologia era 3 of 9.
 
@@ -547,7 +547,7 @@ Para identificar início e fim é utilizado o caractere especial `*` e seu padr�
 
 ![Exemplo do padrão Code 39](/assets/images/codigo-barras/exemplo-code-39.webp)
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 > 
 > | Característica | EAN-13 | Code 39 |
 > | --- | --- | --- |
@@ -566,7 +566,7 @@ O padrão preferido da logística, sendo utilizado:
 - Sistemas WMS (Warehouse Management System);
 - Etiquetas de expedição.
 
-> ⚠️ **Observação**
+> <span>⚠️</span> **Observação**
 >
 > O Code 128 consegue representar a mesma informação utilizando menos espaço físico que o Code 39, tornando-o ideal para etiquetas pequenas e operações logísticas de alta densidade.
 
@@ -586,7 +586,7 @@ Diferente do EAN-13, o Code 128 utiliza um caractere de verificação calculado 
 - **Conjunto B:** números, letras maiúsculas e minúsculas;
 - **Conjunto C:** codifica pares de dígitos numéricos, aumentando significativamente a densidade.
 
-> 💡 **Curiosidade**
+> <span>💡</span> **Curiosidade**
 >
 > Essa capacidade de alernar entre conjuntos durante a codificação que permite ao Code 128 representar grandes volumes de informação ocupando menos espaços que outros padrões.
 
@@ -626,7 +626,7 @@ Agora sabemos que as bibliotecas não “geram” código de barras, geram repre
 
 Para botarmos a mão na massa, vamos implementar o código para validar e gerar a imagem de um código EAN-13 em Dart.
 
-> ⚠️ **Atenção**
+> <span>⚠️</span> **Atenção**
 >
 > O objetivo deste exemplo é demonstrar a lógica de construção do EAN-13. Ele não implementa todos os requisitos de impressão definidos pela GS1, como zonas de silêncio (quiet zones), dimensões mínimas, proporções de barras e texto legível ao ser humano (HRI).
 

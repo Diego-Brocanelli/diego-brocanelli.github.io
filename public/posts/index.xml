@@ -11,8 +11,19 @@
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 28 Jul 2026 02:47:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 14:42:49 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autenticação: indo além do simples usuário e senha</title>
+      <link>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</link>
+      <pubDate>Wed, 29 Jul 2026 14:42:49 +0000</pubDate>
+      <guid>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</guid>
+      <description>&lt;h1 id=&#34;formas-de-autenticação&#34;&gt;Formas de autenticação&lt;/h1&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Realizar a autenticação do usuário é uma das tarefas mais corriqueiras na vida de um engenheiro de software. Porém, às vezes, acabamos sempre fazendo da mesma maneira, no máximo atualizando o algoritmo. Será que não vale a pena analisar alternativas que possam até simplificar as coisas dentro do seu sistema?&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-autenticação&#34;&gt;O que é autenticação?&lt;/h2&gt;
+&lt;p&gt;Antes de aprofundarmos no assunto, vale a pausa para compreendermos o que é autenticação.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Código de barras para engenheiros de software: da etiqueta ao sistema</title>
       <link>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</link>
@@ -121,18 +132,6 @@
 &lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
 &lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
 &lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PHP Docker – Tool kit</title>
-      <link>http://localhost:1313/posts/php-docker-tool-kit/</link>
-      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/php-docker-tool-kit/</guid>
-      <description>&lt;p&gt;Falar sobre o repositório php-docker&lt;/p&gt;
-&lt;p&gt;o pq ele existe&lt;/p&gt;
-&lt;p&gt;qual seu objetivo&lt;/p&gt;
-&lt;p&gt;como utilizar&lt;/p&gt;
-&lt;p&gt;Quais ferramentas temos disponíveis&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
