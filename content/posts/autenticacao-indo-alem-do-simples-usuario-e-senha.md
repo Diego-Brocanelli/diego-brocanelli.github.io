@@ -33,6 +33,8 @@ Antes de aprofundarmos no assunto, vale a pausa para compreendermos o que é aut
 
 Em termos simples, é a resposta à pergunta: **"Você é realmente quem diz ser?"**
 
+![Imagem representando uma autenticação de usuário](/assets/images/autenticacao-indo-alem-do-simples-usuario-e-senha/o-que-e-autenticacao.webp)
+
 ### Analogia do mundo real
 
 Imagine que você está chegando em um prédio de escritórios. O segurança pede seu documento de identidade para conferir a foto, o nome e a validade do documento. Em caso de sucesso, ele libera sua entrada.
@@ -158,6 +160,8 @@ Quando o usuário clica em "Entrar com Google", o fluxo acontece assim:
 2. O usuário se autentica lá
 3. O provedor devolve um **ID Token** (documento assinado digitalmente com informações confiáveis sobre o usuário)
 4. Nosso sistema valida o token e considera o usuário autenticado
+
+![Exemplo de como o login com redes sociais funcionam](/assets/images/autenticacao-indo-alem-do-simples-usuario-e-senha/openid-connect-e-social-login.webp)
 
 ### ✅ Principais vantagens
 

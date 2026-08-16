@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/autentica%C3%A7%C3%A3o-indo-al%C3%A9m-do-simples-usu%C3%A1rio-e-senha/</loc>
+    <loc>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</loc>
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/boas-pr%C3%A1ticas/</loc>
@@ -104,10 +104,10 @@
     <loc>http://localhost:1313/tags/problema/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/soft-skills/</loc>
+    <loc>http://localhost:1313/categories/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/soft-skills/</loc>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/arquitetura/</loc>
