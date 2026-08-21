@@ -8,8 +8,8 @@ showtoc: true         # Sumário automático do PaperMod
 tocopen: true         # true = sumário já vem expandido ao abrir a página
 ShowToc: true         # (equivalente a showtoc, PaperMod aceita as duas grafias)
 ShowBreadCrumbs: true # Sobrescreve por post o valor global do config.toml, se precisar
-ShowReadingTime: true
-ShowWordCount: true
+ShowReadingTime: false
+ShowWordCount: false
 ShowShareButtons: true
 ShowPostNavLinks: true
 categories:

@@ -1,12 +1,19 @@
 COMPOSE := docker compose run --rm
+THEME_DIR := themes/hugo-PaperMod
 
-build:
+theme:
+	@if [ ! -d "$(THEME_DIR)" ] || [ -z "$$(ls -A $(THEME_DIR) 2>/dev/null)" ]; then \
+		echo "Tema não encontrado, clonando hugo-PaperMod..."; \
+		git clone https://github.com/adityatelange/hugo-PaperMod.git $(THEME_DIR) --depth=1; \
+	fi
+
+build: theme
 	$(COMPOSE) hugo --minify
 
-server:
+server: theme
 	$(COMPOSE) --service-ports hugo server --bind=0.0.0.0
 
-server-all:
+server-all: theme
 	$(COMPOSE) --service-ports hugo server -D --bind=0.0.0.0
 
 sh:

@@ -20,7 +20,8 @@
       <guid>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</guid>
       <description>&lt;h1 id=&#34;formas-de-autenticação&#34;&gt;Formas de autenticação&lt;/h1&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
-&lt;p&gt;Realizar a autenticação do usuário é uma das tarefas mais corriqueiras na vida de um engenheiro de software. Porém, às vezes, acabamos sempre fazendo da mesma maneira, no máximo atualizando o algoritmo. Será que não vale a pena analisar alternativas que possam até simplificar as coisas dentro do seu sistema?&lt;/p&gt;
+&lt;p&gt;Realizar a autenticação do usuário é uma das tarefas mais corriqueiras na vida de um engenheiro de software. Porém, às vezes, acabamos sempre fazendo da mesma maneira, no máximo atualizando o algoritmo.&lt;/p&gt;
+&lt;p&gt;Será que não vale a pena analisar alternativas que possam até simplificar as coisas dentro do sistema?&lt;/p&gt;
 &lt;h2 id=&#34;o-que-é-autenticação&#34;&gt;O que é autenticação?&lt;/h2&gt;
 &lt;p&gt;Antes de aprofundarmos no assunto, vale a pausa para compreendermos o que é autenticação.&lt;/p&gt;</description>
     </item>

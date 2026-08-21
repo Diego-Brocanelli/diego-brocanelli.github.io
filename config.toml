@@ -63,12 +63,13 @@ buildExpired = false                               # Não publica posts com data
   comments = true
   rss = true
   ShareButtons = ["linkedin", "twitter", "github"]
-  ShowReadingTime = true
+  ShowReadingTime = false
+  ReadingTime = false
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true            # Botão de copiar em blocos de código.
-  ShowWordCount = true                  # Mostra contagem de palavras junto ao tempo de leitura
+  ShowWordCount = false                  # Mostra contagem de palavras junto ao tempo de leitura
   ShowRssButtonInSectionTermList = true # Botão de RSS nas páginas de tags/categorias
 
 [Params.assets]
