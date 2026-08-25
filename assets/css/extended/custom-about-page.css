@@ -1,0 +1,66 @@
+/* ==========================================================================
+   custom-about-page.css
+
+   Estilos exclusivos da página /about. Reaproveita os componentes visuais
+   já existentes (.home-hero, .home-label, .social-icons, .home-topic,
+   .post-content) definidos em custom.css — aqui ficam só os ajustes
+   específicos dessa página.
+   ========================================================================== */
+
+
+.about-hero .home-hero-main {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.about-photo {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.5rem auto;
+}
+
+
+.about-hero .home-label {
+    text-transform: uppercase;
+}
+
+
+.about-content {
+    padding: 1rem 0 6rem;
+}
+
+
+.about-skills-list {
+    list-style: none;
+
+    margin: 1rem 0 2rem;
+    padding: 0;
+}
+
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .about-photo {
+        width: 96px;
+        height: 96px;
+    }
+
+}
+
+.home-topic {
+    /* font-size: 1rem !important; */
+}
+
+.about-skills-list {
+    padding-inline-start: 0 !important;
+}

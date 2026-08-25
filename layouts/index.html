@@ -1,0 +1,192 @@
+{{- define "main" }}
+
+<main class="home">
+
+    <!-- Hero -->
+
+    <section class="home-hero">
+
+        <div class="home-hero-main">
+
+            <span class="home-label">
+                SOFTWARE ENGINEER / SOLUTION ARCHITECT
+            </span>
+
+            <h1>
+                Olá! Meu nome é
+                <span>Diego Brocanelli</span>
+            </h1>
+
+            <p>
+                Engenheiro de Software e Arquiteto de Soluções com
+                13+ anos de experiência em sistemas escaláveis.
+                Compartilho conteúdos para todos os níveis.
+                Fique à vontade para explorar os conteúdos!
+            </p>
+
+            <!-- social icons -->
+            <div class="social-icons">
+                {{- range site.Params.socialIcons }}
+                    <a
+                        href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                        title="{{ (.title | default .name) | title }}">
+                        {{ partial "svg.html" . }}
+                    </a>
+                {{- end }}
+
+                <a
+                    href="{{ "posts/" | relURL }}"
+                    class="social-icons-posts-link"
+                >
+                    Ver todos os posts →
+                </a>
+            </div>
+            <!-- social icons -->
+        </div>
+
+    </section>
+
+
+    <!-- Últimas publicações -->
+
+    <section class="home-featured">
+
+        <div class="home-section-heading">
+            <h2>Últimas publicações</h2>
+
+            <a href="{{ "posts/" | relURL }}" class="home-section-link">
+                Ver todos →
+            </a>
+        </div>
+
+
+        <div class="home-article-list">
+
+            {{- $paginator := .Paginate (where site.RegularPages "Type" "posts") 6 }}
+
+            {{- range $paginator.Pages }}
+
+            <article class="home-article">
+
+                <div class="home-article-body">
+
+                    <div class="home-article-meta">
+
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ .Date.Format "02 Jan 2006" }}
+                        </time>
+
+                        <span>·</span>
+
+                        <span>
+                            {{ .Params.author | default "Diego Brocanelli" }}
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        <a href="{{ .RelPermalink }}">
+                            {{ .Title }}
+                        </a>
+                    </h3>
+
+
+                    <p>
+                        {{ .Description | default (.Summary | plainify | truncate 180) }}
+                    </p>
+
+                </div>
+
+
+                <a
+                    class="home-article-book"
+                    href="{{ .RelPermalink }}"
+                    aria-label="Ler {{ .Title }}"
+                >
+                    <span aria-hidden="true">
+                        »
+                    </span>
+                </a>
+
+            </article>
+
+            {{- end }}
+
+        </div>
+
+        <div class="home-section-footer">
+            <a href="{{ "posts/" | relURL }}" class="home-section-link">
+                Ver todos os posts →
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Tópicos -->
+
+    <!-- <section class="home-topics">
+
+        <div class="home-section-heading">
+            <h2>Explore por tópico</h2>
+        </div>
+
+
+        <div class="home-topic-list">
+
+            {{- range site.Taxonomies.categories }}
+
+            <a
+                href="{{ .Page.RelPermalink }}"
+                class="home-topic"
+            >
+                <span>{{ .Page.Title }}</span>
+                <small>{{ .Count }}</small>
+            </a>
+
+            {{- end }}
+
+        </div>
+
+    </section> -->
+
+
+    <!-- Sobre -->
+
+    <section class="home-about">
+
+        <div>
+
+            <span class="home-label">
+                SOBRE O BLOG
+            </span>
+
+            <h2>
+                Software é sobre
+                <span>resolver problemas.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="home-about-content">
+
+            <p>
+                Por trás de cada linha de código existe uma decisão.
+                Este espaço é onde compartilho o que venho aprendendo
+                sobre construir software, projetar sistemas e lidar
+                com os desafios que aparecem pelo caminho.
+            </p>
+
+            <a href="{{ "about/" | relURL }}">
+                Conheça minha história →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{{- end }}

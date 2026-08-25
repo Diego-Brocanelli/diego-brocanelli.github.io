@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Tags
+   ========================================================================== */
+
+.post-tags li a {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    line-height: 28px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--primary);
+    font-size: .65rem;
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.post-tags li a:hover {
+    border-color: var(--blog-accent);
+
+    background: var(--blog-accent);
+
+    color: #ffffff;
+}
+
+.inner, #sumário {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}

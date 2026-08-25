@@ -62,7 +62,7 @@ buildExpired = false                               # Não publica posts com data
   mainSections = ["post","posts"]
   comments = true
   rss = true
-  ShareButtons = ["linkedin", "twitter", "github"]
+  ShareButtons = ["linkedin", "twitter", "telegram", "whatsapp"]
   ShowReadingTime = false
   ReadingTime = false
   ShowShareButtons = true
@@ -83,12 +83,20 @@ buildExpired = false                               # Não publica posts com data
 
 # sociais no cabeçalho
 [[Params.socialIcons]]
-  name = "x"
-  url = "https://x.com/diego_b2"
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/diego-brocanelli/"
+
+[[Params.socialIcons]]
+  name = "instagram"
+  url = "https://www.instagram.com/diegobrocanelli/"
 
 [[Params.socialIcons]]
   name = "github"
   url = "https://github.com/Diego-Brocanelli/"
+
+[[Params.socialIcons]]
+  name = "x"
+  url = "https://x.com/diego_b2"
 
 [[Params.socialIcons]]
   name = "rss"
