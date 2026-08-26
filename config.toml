@@ -54,13 +54,13 @@ buildExpired = false                               # Não publica posts com data
   keywords = ["Engenharia de Software", "Arquitetura de Soluções", "Blog"]  # Ausente no original — ajuda no SEO
   images = ["/images/social-card.png"]              # Imagem padrão usada em Open Graph/Twitter Card.
   copyright = "Diego Brocanelli - @diego_b2"
-  DateFormat = "2006-01-02"                          # Formato de exibição das datas (layout de referência do Go)
+  DateFormat = "02 Jan 2006"                          # Formato de exibição das datas (layout de referência do Go)
 
   authorbox = true
   post_navigation = true
   post_meta = ["date", "tags"]
   mainSections = ["post","posts"]
-  comments = true
+  Comments = true
   rss = true
   ShareButtons = ["linkedin", "twitter", "telegram", "whatsapp"]
   ShowReadingTime = false
@@ -128,7 +128,7 @@ buildExpired = false                               # Não publica posts com data
   guessSyntax = true
   lineNos = true
   style = "monokai"
-  noClasses = false # Necessário para trocar o tema de highlight via CSS custom
+  noClasses = true # Necessário para trocar o tema de highlight via CSS custom
 
 # ─────────────────────────────────────────────────────────────
 # Renderização de Markdown

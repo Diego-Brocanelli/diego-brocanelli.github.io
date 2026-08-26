@@ -22,8 +22,20 @@
     color: #ffffff;
 }
 
+#sumário {
+    font-size: 2.5rem !important;
+    font-family: var(--font-body);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
 .inner, #sumário {
     max-width: 760px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.inner ol li {
+    font-size: 1.2rem !important;
+    line-height: 1.75 !important;
 }
