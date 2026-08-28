@@ -175,13 +175,19 @@
     line-height: 1.6;
 }
 
+.post-content ul li::marker,
+.post-content ol li::marker{
+    color: var(--blog-accent);
+    font-weight: 650;
+}
+
 
 /* ==========================================================================
    Seta (equivalente ao .home-article-book)
    ========================================================================== */
 
 .post-entry::after {
-    content: "«";
+    content: "»";
 
     grid-column: 2;
     grid-row: 1 / span 3;

@@ -16,10 +16,8 @@
 
 .post-tags li a:hover {
     border-color: var(--blog-accent);
-
     background: var(--blog-accent);
-
-    color: #ffffff;
+    color: var(--blog-bg);
 }
 
 #sumário {
