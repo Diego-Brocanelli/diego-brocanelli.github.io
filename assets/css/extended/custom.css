@@ -177,11 +177,7 @@ body {
    ========================================================================== */
 
 blockquote {
-    border-inline-start: .1rem solid var(--content) !important;
-    padding: 1.5rem;
-    border:1px solid var(--pcode-bg) !important;
-    border-radius: 16px !important;
-    border-radius: 0 2px 2px 0;
+    border-inline-start: .3rem solid var(--blog-accent) !important;
 }
 
 blockquote p span {

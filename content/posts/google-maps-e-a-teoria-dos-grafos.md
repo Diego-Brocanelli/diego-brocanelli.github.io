@@ -21,7 +21,7 @@ draft: true
 
 # Google Maps e a teoria dos grafos
 
-## 1. Introdução
+## Introdução
 
 Abrimos o Google Maps, preenchemos nosso destino e, em pouco tempo, temos a melhor rota dentre as possíveis, pois foram analisadas e calculadas diversas informações para o melhor resultado.
 
@@ -31,7 +31,7 @@ Isso nos traz uma dúvida:
 
 A resposta começa com uma estrutura de dados que parece simples, porém, é uma das mais poderosas da computação: **o grafo**.
 
-## 2. A história da teoria dos grafos
+## A história da teoria dos grafos
 
 A teoria dos grafos não nasceu na computação, ela é bem mais antiga. Sua origem é atribuída ao matemático suíço Leonhard Euler, em 1736, quase 200 anos antes de existir o primeiro computador.
 
@@ -54,7 +54,7 @@ Euler provou que não era possível — e o mais importante não foi a resposta 
 
 Ao simplificar o mapa da cidade para pontos (as regiões de terra) e linhas (as pontes), Euler criou, sem nomear formalmente, o primeiro grafo da história. Esse raciocínio — abstrair um problema até restar apenas nós e conexões — é exatamente o que torna a teoria dos grafos tão versátil hoje: ela não descreve o que é conectado, apenas que existe conexão, o que permite aplicá-la a mapas, redes sociais, moléculas ou circuitos elétricos, usando a mesma estrutura matemática.
 
-## 3. O que de fato é um grafo?
+## O que de fato é um grafo?
 
 Um grafo é uma estrutura formada por dois elementos:
 
@@ -118,7 +118,7 @@ Alguns termos vão aparecer com frequência ao longo do post, então vale já de
 
 Com essa base de vocabulário, já conseguimos avançar para o problema que motivou este post: como um grafo vira, na prática, o mecanismo que escolhe a melhor rota no Google Maps.
 
-## 4. Maps: como definir a melhor rota
+## Maps: como definir a melhor rota
 
 Pense em um cruzamento de ruas: ele é um ponto onde você pode tomar decisões: virar à esquerda, seguir em frente, virar à direita. Em termos de grafo, cada cruzamento é um nó, e cada trecho de rua que liga dois cruzamentos é uma aresta. A cidade inteira, com todos os seus cruzamentos e ruas, pode ser representada como um grafo gigante.
 
@@ -146,7 +146,7 @@ A limitação da BFS aparece quando as arestas têm custos diferentes, como no m
 
 DFS e BFS são estratégias de exploração, elas decidem em que ordem visitar os nós de um grafo, porém, sozinhas, não sabem nada sobre distância real, tempo de trajeto ou trânsito.
 
-O próximo passo natural é dar "peso" a essa exploração. Em vez de visitar vizinhos em ordem arbitrária (DFS) ou por proximidade em número de trechos (BFS), passamos a visitar sempre o nó que está mais barato de alcançar até aquele momento. Essa mudança de critério, de "ordem de descoberta" para "custo acumulado", é exatamente o que transforma a busca em largura da seção 4.2 no algoritmo de Dijkstra, que veremos na seção 5.
+O próximo passo natural é dar "peso" a essa exploração. Em vez de visitar vizinhos em ordem arbitrária (DFS) ou por proximidade em número de trechos (BFS), passamos a visitar sempre o nó que está mais barato de alcançar até aquele momento. Essa mudança de critério, de "ordem de descoberta" para "custo acumulado", é exatamente o que transforma a busca em largura da seção 4.2 no algoritmo de Dijkstra, que veremos na seção ["O algoritmo de Dijkstra"](#o-algoritmo-de-dijkstra).
 
 É esse tipo de evolução, aliás, que caracteriza boa parte da história dos algoritmos em grafos: ideias simples de exploração (DFS, BFS) servindo de base para versões mais refinadas, adaptadas a problemas específicos como encontrar o caminho mais rápido, e não apenas o mais curto.
 
@@ -156,10 +156,10 @@ Toda vez que uma busca (DFS ou BFS) percorre um grafo, ela implicitamente constr
 
 Formalmente, uma árvore é um grafo com duas propriedades:
 
-1. É conectado (existe caminho entre quaisquer dois nós);
-2. É acíclico* (não existe nenhum ciclo).
+1. **É conectado** (existe caminho entre quaisquer dois nós);
+2. **É acíclico*** (não existe nenhum ciclo).
 
-*Significa algo que não tem ciclo, ou seja, que não forma um anel fechado ou uma volta repetitiva.
+> *Significa algo que não tem ciclo, ou seja, que não forma um anel fechado ou uma volta repetitiva.
 
 Isso significa que, entre dois nós quaisquer de uma árvore, existe exatamente um caminho possível e não há atalhos nem voltas.
 
@@ -179,11 +179,11 @@ Pense em uma cidade com dezenas de cruzamentos e ruas redundantes (várias forma
 
 Quando cada aresta tem um peso (como distância ou trânsito), o problema natural é encontrar a árvore geradora mínima, aquela cuja soma dos pesos das arestas usadas é a menor possível.
 
-Isso não é exatamente o problema do Google Maps (que busca o menor caminho entre dois pontos específicos, não conectar a cidade inteira), mas é a base teórica por trás de problemas de infraestrutura, como decidir o traçado mais barato para conectar todos os bairros de uma cidade com fibra óptica, ou todas as casas de uma região com a rede elétrica. Guarde essa ideia — vamos usá-la diretamente na seção 7, com o algoritmo de Prim.
+Isso não é exatamente o problema do Google Maps (que busca o menor caminho entre dois pontos específicos, não conectar a cidade inteira), mas é a base teórica por trás de problemas de infraestrutura, como decidir o traçado mais barato para conectar todos os bairros de uma cidade com fibra óptica, ou todas as casas de uma região com a rede elétrica. Guarde essa ideia, vamos usá-la diretamente na seção ["O algoritmo de Prim"](#o-algoritmo-de-prim).
 
 ### 4.6. Direções e valores
 
-Falta um último ingrediente para o grafo de ruas ficar completo: direção e peso.
+Falta dois ingrediente para o grafo de ruas ficar completo: **direção** e **peso**.
 
 Uma rua de mão única vira uma aresta direcionada e só pode ser percorrida em um sentido. Uma avenida de mão dupla vira duas arestas direcionadas, uma para cada sentido, ou uma única aresta não-direcionada, dependendo da modelagem.
 
@@ -191,15 +191,15 @@ O peso de cada aresta não é simplesmente a distância em metros, é, principal
 
 Ou seja, a cidade inteira pode ser representada como um grafo ponderado* e direcionado. É sobre essa estrutura, já enriquecida com as noções de busca, árvore e árvore geradora das seções anteriores, que os algoritmos de navegação de fato trabalham.
 
-> *Um grafo ponderado é um grafo em que cada aresta possui um valor (peso), como distância, custo ou tempo.
+> *Um **grafo ponderado** é um grafo em que cada aresta possui um valor (peso), como distância, custo ou tempo.
 
-## 5. O algoritmo de Dijkstra
+## O algoritmo de Dijkstra
 
 Com o mapa transformado em grafo ponderado, o problema do Google Maps se resume a uma pergunta clássica:
 
 > Dado um grafo com pesos nas arestas, qual é o caminho de menor custo total entre dois "nós"?
 
-O algoritmo de Dijkstra, concebido por Edsger Dijkstra em 1956 e publicado por ele em 1959, é a referência histórica para resolver exatamente esse problema. Ele é, na prática, a evolução da busca em largura descrita na seção 4.2, onde, ao invés de visitar nós na ordem em que são descobertos, ele sempre visita o nó com o menor custo acumulado até aquele momento.
+O algoritmo de Dijkstra, concebido por Edsger Dijkstra em 1956 e publicado por ele em 1959, é a referência histórica para resolver exatamente esse problema. Ele é, na prática, a evolução da busca em largura descrita na seção ["Busca em largura"](#42-busca-em-largura), onde, ao invés de visitar nós na ordem em que são descobertos, ele sempre visita o nó com o menor custo acumulado até aquele momento.
 
 De forma resumida, o algoritmo:
 
@@ -227,7 +227,7 @@ Abaixo temos um exemplo do funcionamento do algoritmo.
     </tr>
 </table>
 
-## 6. O algoritmo de Floyd-Warshall
+## O algoritmo de Floyd-Warshall
 
 O Dijkstra resolve o problema do caminho mais curto a partir de uma única origem. Mas existe uma pergunta diferente, igualmente importante:
 
@@ -240,7 +240,7 @@ A ideia central pode ser resumida em uma pergunta repetida para cada trio de nó
 <table class="table-img">
     <tr>
         <td>
-            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-05-exemplo-foyd-warshall.jpg">
+            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-06-exemplo-foyd-warshall.jpg">
         </td>
     </tr>
     <tr>
@@ -254,7 +254,7 @@ O custo dessa abordagem é a complexidade: enquanto o Dijkstra escala relativame
 
 Por isso, ele não é o algoritmo (acredito eu) usado para calcular sua rota individual no Google Maps. Porém, é esse princípio que possibilita pré-calcular rotas em grafos de bilhões de nós ao invés de recalcular tudo do zero a cada busca. Sistemas de navegação mantêm tabelas de distâncias pré-processadas entre regiões, algo conceitualmente próximo do que o Floyd-Warshall calcula.
 
-## 7. O algoritmo de Prim
+## O algoritmo de Prim
 
 Voltando ao problema das árvores geradoras mínimas, apresentado na seção 4.5, dado um grafo conectado e ponderado temos a pergunta:
 
@@ -281,7 +281,7 @@ Abaixo temos um exemplo, onde precisa ser identificado qual o melhor caminho par
     </tr>
 </table>
 
-## 8. Onde mais grafos são utilizados?
+## Onde mais grafos são utilizados?
 
 O Google Maps é só um exemplo, provavelmente o mais visual, de um padrão que se repete em boa parte da computação: sempre que um problema envolve entidades conectadas por relações, um grafo é candidato natural para modelá-lo.
 
@@ -308,18 +308,18 @@ Para fechar a parte técnica, um resumo rápido do que cada algoritmo resolve:
 
 Vale reforçar: sistemas de navegação reais, como o próprio Google Maps, provavelmente não usam nenhum desses algoritmos "puros" como aparecem nos livros-texto. Eles combinam pré-processamento offline (estruturas como *contraction hierarchies*, que simplificam o grafo antecipadamente, "pulando" cruzamentos pouco relevantes) com buscas guiadas online, do tipo A*. O que vimos aqui é a base conceitual sobre a qual essas técnicas mais sofisticadas são construídas.
 
-## 9. Considerações finais
+## Considerações finais
 
 Obviamente o que abordei neste post está a anos-luz de distância da complexidade real por trás do Google Maps, porém, o meu objetivo foi explorar as possibilidades de usar grafos e os algoritmos que, somados, potencializam os resultados.
 
 Imaginar essa solução aplicada em um produto que auxilia milhões de pessoas na locomoção diária é, no mínimo, fascinante — e é um bom lembrete de que, por trás de uma interface simples como "digite seu destino", existe décadas de teoria matemática trabalhando silenciosamente.
 
-## 10. Referências
+## Referências
 
 - [Algoritmo de Floyd-Warshall](https://pt.wikipedia.org/wiki/Algoritmo_de_Floyd-Warshall)
-- Conceitos Básicos Sobre a Teoria dos Grafos
-- Grafos, teoria e aplicações
-- Introdução à Teoria dos Grafos
-- Leonhard Euler
-- Robert C Prim
-- Teoria dos Grafos para Computação
+- [Conceitos Básicos Sobre a Teoria dos Grafos](https://sites.icmc.usp.br/sandra/14/CapIII.html)
+- [Grafos, teoria e aplicações](https://medium.com/xp-inc/grafos-teoria-e-aplica%C3%A7%C3%B5es-2a87444df855)
+- [Introdução à Teoria dos Grafos](https://portaldaobmep.impa.br/index.php/modulo/ver?modulo=84)
+- [Leonhard Euler](https://pt.wikipedia.org/wiki/Leonhard_Euler)
+- [Robert C. Prim](https://en.wikipedia.org/wiki/Robert_C._Prim)
+- [Teoria dos Grafos para Computação](https://www.researchgate.net/publication/359175613_Teoria_dos_Grafos_para_Computacao)
