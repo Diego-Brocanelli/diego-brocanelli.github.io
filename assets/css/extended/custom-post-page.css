@@ -181,6 +181,18 @@
     font-weight: 650;
 }
 
+.table-img td {
+  border: none !important;
+  outline: none; /* caso a "borda" seja um outline, não border */
+  padding: 0px !important;
+}
+.table-img-footer {
+    font-size: 12pt;
+}
+
+.table-img-footer span {
+    font-weight: 800;
+}
 
 /* ==========================================================================
    Seta (equivalente ao .home-article-book)

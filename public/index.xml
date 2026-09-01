@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 29 Jul 2026 14:42:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 20:46:44 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Maps e a teoria dos grafos</title>
+      <link>http://localhost:1313/posts/google-maps-e-a-teoria-dos-grafos/</link>
+      <pubDate>Mon, 31 Aug 2026 20:46:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/google-maps-e-a-teoria-dos-grafos/</guid>
+      <description>&lt;h1 id=&#34;google-maps-e-a-teoria-dos-grafos&#34;&gt;Google Maps e a teoria dos grafos&lt;/h1&gt;
+&lt;h2 id=&#34;1-introdução&#34;&gt;1. Introdução&lt;/h2&gt;
+&lt;p&gt;Abrimos o Google Maps, preenchemos nosso destino e, em pouco tempo, temos a melhor rota dentre as possíveis, pois foram analisadas e calculadas diversas informações para o melhor resultado.&lt;/p&gt;
+&lt;p&gt;Isso nos traz uma dúvida:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Como um sistema consegue tomar essa decisão tão rápido e considerando ruas, cruzamentos, sentido do tráfego e até o trânsito em tempo real?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A resposta começa com uma estrutura de dados que parece simples, porém, é uma das mais poderosas da computação: &lt;strong&gt;o grafo&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Autenticação: indo além do simples usuário e senha</title>
       <link>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</link>
@@ -119,20 +133,6 @@
       <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Estou lendo o livro &lt;code&gt;Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso&lt;/code&gt; e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.&lt;/p&gt;
 &lt;p&gt;Um desses pontos aborda que toda nova ideia de funcionalidade nasce automaticamente com um não, e ela tem que brigar e valer a pena para receber um sim! Esse conceito é muito interessante, pois no dia a dia vemos uma ideia que parece boa e já incluirmos ela na lista para fazer e saímos implementando.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
-      <link>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
-      <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
-      <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
-&lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
-&lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
-&lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
