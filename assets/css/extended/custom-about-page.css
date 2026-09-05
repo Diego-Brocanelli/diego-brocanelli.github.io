@@ -14,22 +14,16 @@
     margin-right: auto;
 }
 
-
 .about-photo {
-    display: block;
-    width: 120px;
-    height: 120px;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 1.5rem auto;
+    margin:1.5rem auto;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    width:40%;
 }
-
 
 .about-hero .home-label {
     text-transform: uppercase;
 }
-
 
 .about-content {
     padding: 1rem 0 6rem;
@@ -49,12 +43,9 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-
     .about-photo {
-        width: 96px;
-        height: 96px;
+        width: 60%;
     }
-
 }
 
 .about-skills-list {

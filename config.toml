@@ -72,6 +72,11 @@ buildExpired = false                               # Não publica posts com data
   ShowWordCount = false                  # Mostra contagem de palavras junto ao tempo de leitura
   ShowRssButtonInSectionTermList = true # Botão de RSS nas páginas de tags/categorias
 
+[params.label]
+  text = "Diego Brocanelli"
+  icon = "images/logo-diego-brocanelli.png"   # SEM barra no início
+  iconHeight = 70
+
 [Params.assets]
   disableHLJS = false
   customCSS = ["/css/custom.css"]

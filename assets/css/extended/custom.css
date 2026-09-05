@@ -46,6 +46,8 @@
     --content: var(--blog-text);
     --tertiary: var(--blog-border);
     --border: var(--blog-border);
+
+    --nav-logo-img: url("/assets/images/logo-diego-brocanelli.png");
 }
 
 [data-theme="dark"] {
@@ -69,8 +71,9 @@
     --content: var(--blog-text);
     --tertiary: var(--blog-border);
     --border: var(--blog-border);
-}
 
+    --nav-logo-img: url("/assets/images/logo-diego-brocanelli-dark.png");
+}
 
 /* ==========================================================================
    Base
@@ -88,6 +91,19 @@ body {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+.header-nav {
+    padding-top: 1rem;
+}
+
+.nav-logo {
+  width: 150px;
+}
+
+/* .header-nav .logo{
+} */
 
 /* ==========================================================================
    Article
@@ -509,63 +525,6 @@ p code {
     background: var(--blog-accent);
     color: var(--blog-bg);
 }
-
-/* .home-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-
-.home-pagination-pages {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-
-.home-pagination a {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-width: 32px;
-    height: 32px;
-
-    padding: 0 0.5rem;
-
-    color: var(--secondary);
-
-    font-size: 0.85rem;
-
-    border-radius: 6px;
-
-    transition:
-        color 0.2s ease,
-        background-color 0.2s ease;
-}
-
-
-.home-pagination a:hover {
-    color: var(--primary);
-    background: var(--pcode-bg);
-}
-
-
-.home-pagination-pages a.active {
-    background: var(--blog-accent);
-    color: #ffffff;
-}
-
-
-.home-pagination-prev,
-.home-pagination-next {
-    font-size: 0.8rem !important;
-} */
-
 
 /* ==========================================================================
    Topics

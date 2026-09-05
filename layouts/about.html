@@ -9,13 +9,11 @@
         <div class="home-hero-main">
 
             {{- with .Params.photo }}
-            <img
-                class="about-photo"
-                src="{{ . }}"
-                alt="Foto de {{ $.Params.name | default $.Site.Title }}"
-                width="120"
-                height="120"
-            >
+                <img
+                    class="about-photo"
+                    src="{{ . }}"
+                    alt="Foto de {{ $.Params.name | default $.Site.Title }}"
+                >
             {{- end }}
 
             {{- with .Params.role }}
