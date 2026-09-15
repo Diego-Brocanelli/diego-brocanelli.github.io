@@ -1,0 +1,13 @@
+{{- if not .IsHome -}}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ "/" | relURL }}">Home</a>
+
+    {{- with .Section }}
+        <span aria-hidden="true"> / </span>
+        <a href="{{ . | absURL }}">{{ . }}</a>
+    {{- end }}
+
+    <span aria-hidden="true"> / </span>
+    <span>{{ .Title }}</span>
+</nav>
+{{- end -}}

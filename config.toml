@@ -30,7 +30,7 @@ buildExpired = false                               # Não publica posts com data
 
 [author]
   name = "Diego Brocanelli"
-  bio = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
+  bio = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas reais. Escrevo sobre engenharia, arquitetura e as decisões por trás de software que precisa evoluir."
   twitter = "diego_b2"
 
 # ─────────────────────────────────────────────────────────────
@@ -54,15 +54,15 @@ buildExpired = false                               # Não publica posts com data
   keywords = ["Engenharia de Software", "Arquitetura de Soluções", "Blog"]  # Ausente no original — ajuda no SEO
   images = ["/images/social-card.png"]              # Imagem padrão usada em Open Graph/Twitter Card.
   copyright = "Diego Brocanelli - @diego_b2"
-  DateFormat = "2006-01-02"                          # Formato de exibição das datas (layout de referência do Go)
+  DateFormat = "02 Jan 2006"                          # Formato de exibição das datas (layout de referência do Go)
 
   authorbox = true
   post_navigation = true
   post_meta = ["date", "tags"]
   mainSections = ["post","posts"]
-  comments = true
+  Comments = true
   rss = true
-  ShareButtons = ["linkedin", "twitter", "github"]
+  ShareButtons = ["linkedin", "twitter", "telegram", "whatsapp"]
   ShowReadingTime = false
   ReadingTime = false
   ShowShareButtons = true
@@ -72,23 +72,36 @@ buildExpired = false                               # Não publica posts com data
   ShowWordCount = false                  # Mostra contagem de palavras junto ao tempo de leitura
   ShowRssButtonInSectionTermList = true # Botão de RSS nas páginas de tags/categorias
 
+[params.label]
+  text = "Diego Brocanelli"
+  icon = "images/logo-diego-brocanelli.png"   # SEM barra no início
+  iconHeight = 70
+
 [Params.assets]
   disableHLJS = false
   customCSS = ["/css/custom.css"]
   favicon = "/favicon.ico" # Sem isso o navegador usa o favicon padrão do Hugo
 
 [Params.homeInfoParams]
-  Title = "Olá! Meu nome é Diego Brocanelli 👋"
-  Content = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas escaláveis. Compartilho conteúdos para todos os níveis. Fique à vontade para explorar os conteúdos!"
+  Title = "Olá, eu sou Diego Brocanelli."
+  Content = "Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas reais. Escrevo sobre engenharia, arquitetura e as decisões por trás de software que precisa evoluir."
 
 # sociais no cabeçalho
 [[Params.socialIcons]]
-  name = "x"
-  url = "https://x.com/diego_b2"
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/diego-brocanelli/"
+
+[[Params.socialIcons]]
+  name = "instagram"
+  url = "https://www.instagram.com/diegobrocanelli/"
 
 [[Params.socialIcons]]
   name = "github"
   url = "https://github.com/Diego-Brocanelli/"
+
+[[Params.socialIcons]]
+  name = "x"
+  url = "https://x.com/diego_b2"
 
 [[Params.socialIcons]]
   name = "rss"
@@ -120,7 +133,7 @@ buildExpired = false                               # Não publica posts com data
   guessSyntax = true
   lineNos = true
   style = "monokai"
-  noClasses = false # Necessário para trocar o tema de highlight via CSS custom
+  noClasses = true # Necessário para trocar o tema de highlight via CSS custom
 
 # ─────────────────────────────────────────────────────────────
 # Renderização de Markdown

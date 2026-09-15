@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dijkstra/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/floyd-warshall/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/google-maps-e-a-teoria-dos-grafos/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/grafos/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/grafos/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/prim/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-08-31T20:46:44+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</loc>
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/boas-pr%C3%A1ticas/</loc>
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-07-29T14:42:49+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-07-29T14:42:49+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/password/</loc>
-    <lastmod>2026-07-29T14:42:49+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/seguran%C3%A7a/</loc>
@@ -27,9 +48,6 @@
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/senhas/</loc>
-    <lastmod>2026-07-29T14:42:49+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-07-29T14:42:49+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/barras/</loc>
@@ -104,10 +122,10 @@
     <loc>http://localhost:1313/tags/problema/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/soft-skills/</loc>
+    <loc>http://localhost:1313/categories/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/soft-skills/</loc>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
     <lastmod>2025-04-25T20:06:37+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/arquitetura/</loc>

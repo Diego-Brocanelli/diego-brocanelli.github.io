@@ -60,7 +60,7 @@ A fim de evitarmos ambiguidades comuns de arquitetura, vale separar conceitos.
 
 ## O modelo tradicional: Login e senha
 
-Esta abordagem ainda é predominante nos sistemas: o usuário preenche sua `identidade ` e sua `senha` para se autenticar.
+Esta abordagem ainda é predominante nos sistemas: o usuário preenche sua `identidade` e sua `senha` para se autenticar.
 
 > <span>⚠️</span> Nunca se deve armazenar a senha em texto puro, em nenhum lugar. Em caso de vazamento de dados, o atacante teria acesso direto às informações, com zero atrito.
 
