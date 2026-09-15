@@ -56,11 +56,18 @@
 
             {{- range $paginator.Pages }}
 
-            <article class="home-article">
+            <article class="home-article{{ if .Draft }} is-draft{{ end }}">
 
                 <div class="home-article-body">
 
                     <div class="home-article-meta">
+                        {{- if .Draft }}
+                            <span class="home-article-badge home-article-badge--draft">
+                                Rascunho
+                            </span>
+
+                            <span>·</span>
+                        {{- end }}
 
                         <time datetime="{{ .Date.Format "2006-01-02" }}">
                             {{ .Date.Format "02 Jan 2006" }}
