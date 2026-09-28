@@ -98,7 +98,7 @@ Uma árvore genealógica, onde cada pessoa é um nó e cada relação de parente
 <table class="table-img">
     <tr>
         <td>
-            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/exemplo-04-arvore-genalogica.jpg">
+            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/exemplo-04-arvore-genealogica.jpg">
         </td>
     </tr>
     <tr>
@@ -124,7 +124,7 @@ Pense em um cruzamento de ruas: ele é um ponto onde você pode tomar decisões:
 
 Mas ter o grafo pronto é só o começo. O problema real é: como percorrer esse grafo de forma inteligente até encontrar o destino? É aqui que entram as estratégias de busca, a base sobre a qual algoritmos mais sofisticados, como o Dijkstra, são construídos.
 
-### 4.1. Busca em profundidade
+### Busca em profundidade
 
 A busca em profundidade (DFS - depth-first search) explora um grafo seguindo um único caminho o mais longe possível, antes de voltar atrás (backtrack) e tentar outra alternativa.
 
@@ -132,7 +132,7 @@ A busca em profundidade (DFS - depth-first search) explora um grafo seguindo um 
 
 O problema da DFS é que ela não garante o caminho mais curto: pode muito bem encontrar o destino depois de um longo desvio, antes de considerar uma rota mais direta.
 
-### 4.2. Busca em largura
+### Busca em largura
 
 A busca em largura (BFS - breadth-first search) segue uma lógica oposta: em vez de seguir um único caminho até o fim, ela explora todos os vizinhos do nó atual antes de avançar para o próximo nível.
 
@@ -142,24 +142,22 @@ Aplicada a um mapa sem pesos nas arestas (ou seja, assumindo que toda rua tem o 
 
 A limitação da BFS aparece quando as arestas têm custos diferentes, como no mundo real, em que uma rua pode ser muito mais rápida de percorrer do que outra, mesmo sendo mais longa em número de cruzamentos.
 
-### 4.3. Dando vida às buscas
+### Dando vida às buscas
 
 DFS e BFS são estratégias de exploração, elas decidem em que ordem visitar os nós de um grafo, porém, sozinhas, não sabem nada sobre distância real, tempo de trajeto ou trânsito.
 
-O próximo passo natural é dar "peso" a essa exploração. Em vez de visitar vizinhos em ordem arbitrária (DFS) ou por proximidade em número de trechos (BFS), passamos a visitar sempre o nó que está mais barato de alcançar até aquele momento. Essa mudança de critério, de "ordem de descoberta" para "custo acumulado", é exatamente o que transforma a busca em largura da seção 4.2 no algoritmo de Dijkstra, que veremos na seção ["O algoritmo de Dijkstra"](#o-algoritmo-de-dijkstra).
+O próximo passo natural é dar "peso" a essa exploração. Em vez de visitar vizinhos em ordem arbitrária (DFS) ou por proximidade em número de trechos (BFS), passamos a visitar sempre o nó que está mais barato de alcançar até aquele momento. Essa mudança de critério, de "ordem de descoberta" para "custo acumulado", é exatamente o que transforma a busca em largura no algoritmo de Dijkstra, que veremos na seção ["O algoritmo de Dijkstra"](#o-algoritmo-de-dijkstra).
 
 É esse tipo de evolução, aliás, que caracteriza boa parte da história dos algoritmos em grafos: ideias simples de exploração (DFS, BFS) servindo de base para versões mais refinadas, adaptadas a problemas específicos como encontrar o caminho mais rápido, e não apenas o mais curto.
 
-### 4.4. Árvores
+### Árvores
 
 Toda vez que uma busca (DFS ou BFS) percorre um grafo, ela implicitamente constrói uma árvore: uma estrutura em que cada nó, exceto o de origem, tem exatamente um "pai", que é o nó a partir do qual ele foi descoberto.
 
 Formalmente, uma árvore é um grafo com duas propriedades:
 
 1. **É conectado** (existe caminho entre quaisquer dois nós);
-2. **É acíclico*** (não existe nenhum ciclo).
-
-> *Significa algo que não tem ciclo, ou seja, que não forma um anel fechado ou uma volta repetitiva.
+2. **É acíclico** (não possui ciclos, ou seja, não forma um anel fechado ou uma volta repetitiva).
 
 Isso significa que, entre dois nós quaisquer de uma árvore, existe exatamente um caminho possível e não há atalhos nem voltas.
 
@@ -171,7 +169,7 @@ Essa estrutura aparece o tempo todo em computação:
 
 No contexto de rotas, a árvore de busca gerada por um algoritmo é justamente o que permite reconstruir o caminho percorrido até o destino, voltando nó por nó até a origem.
 
-### 4.5. Árvores geradoras
+### Árvores geradoras
 
 Uma árvore geradora (spanning tree) de um grafo é uma árvore que conecta todos os nós do grafo original, usando apenas um subconjunto das arestas, sem formar ciclos.
 
@@ -181,17 +179,17 @@ Quando cada aresta tem um peso (como distância ou trânsito), o problema natura
 
 Isso não é exatamente o problema do Google Maps (que busca o menor caminho entre dois pontos específicos, não conectar a cidade inteira), mas é a base teórica por trás de problemas de infraestrutura, como decidir o traçado mais barato para conectar todos os bairros de uma cidade com fibra óptica, ou todas as casas de uma região com a rede elétrica. Guarde essa ideia, vamos usá-la diretamente na seção ["O algoritmo de Prim"](#o-algoritmo-de-prim).
 
-### 4.6. Direções e valores
+### Direções e valores
 
-Falta dois ingrediente para o grafo de ruas ficar completo: **direção** e **peso**.
+Faltam dois ingredientes para o grafo de ruas ficar completo: **direção** e **peso**.
 
 Uma rua de mão única vira uma aresta direcionada e só pode ser percorrida em um sentido. Uma avenida de mão dupla vira duas arestas direcionadas, uma para cada sentido, ou uma única aresta não-direcionada, dependendo da modelagem.
 
 O peso de cada aresta não é simplesmente a distância em metros, é, principalmente, o tempo estimado para percorrer aquele trecho, que muda de acordo com limite de velocidade, sinais de trânsito, condições da via e, claro, trânsito em tempo real.
 
-Ou seja, a cidade inteira pode ser representada como um grafo ponderado* e direcionado. É sobre essa estrutura, já enriquecida com as noções de busca, árvore e árvore geradora das seções anteriores, que os algoritmos de navegação de fato trabalham.
+Ou seja, a cidade inteira pode ser representada como um grafo ponderado e direcionado. É sobre essa estrutura, já enriquecida com as noções de busca, árvore e árvore geradora das seções anteriores, que os algoritmos de navegação de fato trabalham.
 
-> *Um **grafo ponderado** é um grafo em que cada aresta possui um valor (peso), como distância, custo ou tempo.
+> Um **grafo ponderado** é um grafo em que cada aresta possui um valor (peso), como distância, custo ou tempo.
 
 ## O algoritmo de Dijkstra
 
@@ -199,7 +197,7 @@ Com o mapa transformado em grafo ponderado, o problema do Google Maps se resume 
 
 > Dado um grafo com pesos nas arestas, qual é o caminho de menor custo total entre dois "nós"?
 
-O algoritmo de Dijkstra, concebido por Edsger Dijkstra em 1956 e publicado por ele em 1959, é a referência histórica para resolver exatamente esse problema. Ele é, na prática, a evolução da busca em largura descrita na seção ["Busca em largura"](#42-busca-em-largura), onde, ao invés de visitar nós na ordem em que são descobertos, ele sempre visita o nó com o menor custo acumulado até aquele momento.
+O algoritmo de Dijkstra, concebido por Edsger Dijkstra em 1956 e publicado por ele em 1959, é a referência histórica para resolver exatamente esse problema. Ele é, na prática, a evolução da busca em largura descrita na seção ["Busca em largura"](#busca-em-largura), onde, ao invés de visitar nós na ordem em que são descobertos, ele sempre visita o nó com o menor custo acumulado até aquele momento.
 
 De forma resumida, o algoritmo:
 
@@ -217,12 +215,12 @@ Abaixo temos um exemplo do funcionamento do algoritmo.
 <table class="table-img">
     <tr>
         <td>
-            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-05-exemplo-djikstra.png">
+            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-05-exemplo-dijkstra.png">
         </td>
     </tr>
     <tr>
         <td class="table-img-footer">
-            <span>Imagem 05:</span> Exemplo do algoritmo de Djikstra.
+            <span>Imagem 05:</span> Exemplo do algoritmo de Dijkstra.
         </td>
     </tr>
 </table>
@@ -240,7 +238,7 @@ A ideia central pode ser resumida em uma pergunta repetida para cada trio de nó
 <table class="table-img">
     <tr>
         <td>
-            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-06-exemplo-foyd-warshall.jpg">
+            <img src="/assets/images/google-maps-e-a-teoria-dos-grafos/imagem-06-exemplo-floyd-warshall.jpg">
         </td>
     </tr>
     <tr>
@@ -252,11 +250,11 @@ A ideia central pode ser resumida em uma pergunta repetida para cada trio de nó
 
 O custo dessa abordagem é a complexidade: enquanto o Dijkstra escala relativamente bem para encontrar uma única rota, o Floyd-Warshall recalcula distâncias entre todos os pares de nós, o que custa **O(V³)** — computacionalmente caro em grafos muito grandes, como o mapa de um país inteiro. Para efeito de comparação, um grafo com apenas mil nós já gera um bilhão de operações.
 
-Por isso, ele não é o algoritmo (acredito eu) usado para calcular sua rota individual no Google Maps. Porém, é esse princípio que possibilita pré-calcular rotas em grafos de bilhões de nós ao invés de recalcular tudo do zero a cada busca. Sistemas de navegação mantêm tabelas de distâncias pré-processadas entre regiões, algo conceitualmente próximo do que o Floyd-Warshall calcula.
+Por isso, ele não é o algoritmo usado diretamente para calcular sua rota individual no Google Maps. Porém, é esse princípio que possibilita pré-calcular rotas em grafos de bilhões de nós ao invés de recalcular tudo do zero a cada busca. Sistemas de navegação mantêm tabelas de distâncias pré-processadas entre regiões, algo conceitualmente próximo do que o Floyd-Warshall calcula.
 
 ## O algoritmo de Prim
 
-Voltando ao problema das árvores geradoras mínimas, apresentado na seção 4.5, dado um grafo conectado e ponderado temos a pergunta:
+Voltando ao problema das árvores geradoras mínimas, apresentado na seção de árvores geradoras, dado um grafo conectado e ponderado temos a pergunta:
 
 > Como encontrar o subconjunto de arestas que conecta todos os nós com o menor custo total possível, sem formar ciclos?
 
@@ -323,3 +321,4 @@ Imaginar essa solução aplicada em um produto que auxilia milhões de pessoas n
 - [Leonhard Euler](https://pt.wikipedia.org/wiki/Leonhard_Euler)
 - [Robert C. Prim](https://en.wikipedia.org/wiki/Robert_C._Prim)
 - [Teoria dos Grafos para Computação](https://www.researchgate.net/publication/359175613_Teoria_dos_Grafos_para_Computacao)
+
