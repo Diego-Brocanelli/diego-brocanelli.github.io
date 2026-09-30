@@ -16,7 +16,7 @@ tags:
   - dijkstra
   - floyd-warshall
   - prim
-draft: true
+draft: false
 ---
 
 # Google Maps e a teoria dos grafos
