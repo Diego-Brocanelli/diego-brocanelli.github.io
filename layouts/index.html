@@ -14,12 +14,14 @@
 
             <h1>
                 Olá, eu sou
-                <span>Diego Brocanelli.</span>
+                <span>{{ site.Params.author }}.</span>
             </h1>
 
+            {{- with site.Params.homeInfoParams.Content }}
             <p>
-                Engenheiro de Software e Arquiteto de Soluções com 13+ anos de experiência em sistemas reais. Escrevo sobre engenharia, arquitetura e as decisões por trás de software que precisa evoluir.
+                {{ . }}
             </p>
+            {{- end }}
 
             <!-- social icons -->
             <div class="social-icons">
@@ -43,10 +45,6 @@
 
         <div class="home-section-heading">
             <h2>Últimas publicações</h2>
-
-            <a href="{{ "posts/" | relURL }}" class="home-section-link">
-                Ver todos →
-            </a>
         </div>
 
 
@@ -96,15 +94,9 @@
                 </div>
 
 
-                <a
-                    class="home-article-book"
-                    href="{{ .RelPermalink }}"
-                    aria-label="Ler {{ .Title }}"
-                >
-                    <span aria-hidden="true">
-                        »
-                    </span>
-                </a>
+                <span class="home-article-book" aria-hidden="true">
+                    <span>»</span>
+                </span>
 
             </article>
 
@@ -113,7 +105,7 @@
         </div>
 
         <div class="home-section-footer">
-            <a href="{{ "posts/" | relURL }}" class="home-section-link">
+            <a href="{{ "posts/" | relURL }}" class="home-button">
                 Ver todos os posts →
             </a>
         </div>
@@ -156,7 +148,7 @@
         <div>
 
             <span class="home-label">
-                SOBRE O BLOG
+                Sobre o blog
             </span>
 
             <h2>

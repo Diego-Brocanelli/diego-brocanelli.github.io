@@ -5,35 +5,59 @@
 .post-tags li a {
     display: inline-flex;
     align-items: center;
-    gap: .3rem;
-    line-height: 28px;
+    gap: var(--space-1);
+    line-height: 32px;
     border: 1px solid var(--border);
     border-radius: 999px;
     color: var(--primary);
-    font-size: .65rem;
+    font-size: var(--text-small);
     transition: color .2s ease, background-color .2s ease, border-color .2s ease;
 }
 
 .post-tags li a:hover {
     border-color: var(--blog-accent);
     background: var(--blog-accent);
-    color: var(--blog-bg);
+    color: var(--blog-selection-text);
 }
 
-#sumário {
-    font-size: 2.5rem !important;
-    font-family: var(--font-body);
-    font-weight: 600;
-    line-height: 1.25;
-}
+/* ==========================================================================
+   Sumário (TOC) — rótulo discreto, abaixo dos h2 do post na hierarquia
+   ========================================================================== */
 
-.inner, #sumário {
+.toc-title,
+.toc {
     max-width: 760px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.inner ol li {
-    font-size: 1.2rem !important;
-    line-height: 1.75 !important;
+.toc-title {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.toc ol {
+    margin: 0 0 var(--space-6);
+    padding-inline-start: var(--space-5);
+}
+
+.toc ol li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.toc ol li a {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.toc ol li a:hover {
+    color: var(--blog-accent);
 }

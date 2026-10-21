@@ -34,7 +34,7 @@
 .page-header {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 3rem 0 1rem;
+    padding: var(--space-7) 0 var(--space-4);
 }
 
 
@@ -54,17 +54,17 @@
 
 .post-entry {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 45px;
+    grid-template-columns: minmax(0, 1fr) 44px;
     grid-template-rows: auto auto auto;
 
-    column-gap: 2rem;
+    column-gap: var(--space-6);
     row-gap: 0;
 
     align-items: center;
 
     position: relative;
 
-    padding: 2rem 0;
+    padding: var(--space-6) 0;
     margin: 0;
 
     background: transparent;
@@ -103,14 +103,13 @@
     display: flex;
     align-items: center;
 
-    gap: 0.5rem;
+    gap: var(--space-2);
 
-    margin: 0 0 0.5rem;
+    margin: 0 0 var(--space-2);
 
     color: var(--secondary);
 
-    font-family: var(--font-code);
-    font-size: 0.68rem;
+    font-size: var(--text-small);
 }
 
 
@@ -167,11 +166,11 @@
 .post-entry .entry-content p {
     max-width: 700px;
 
-    margin: 0.65rem 0 0;
+    margin: var(--space-3) 0 0;
 
     color: var(--secondary);
 
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
@@ -187,11 +186,12 @@
   padding: 0px !important;
 }
 .table-img-footer {
-    font-size: 12pt;
+    font-size: 0.875rem;
+    color: var(--secondary);
 }
 
 .table-img-footer span {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 /* ==========================================================================
@@ -208,8 +208,8 @@
     align-items: center;
     justify-content: center;
 
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
 
     border: 1px solid var(--border);
     border-radius: 50%;
@@ -246,7 +246,7 @@
 .page-footer {
     max-width: 1100px;
 
-    margin: 3rem auto 0;
+    margin: var(--space-7) auto 0;
 }
 
 
@@ -256,7 +256,7 @@
     align-items: center;
     justify-content: center;
 
-    gap: 1.5rem;
+    gap: var(--space-5);
 }
 
 
@@ -266,14 +266,14 @@
     align-items: center;
     justify-content: center;
 
-    min-width: 32px;
-    height: 32px;
+    min-width: 44px;
+    height: 44px;
 
-    padding: 0 0.75rem;
+    padding: 0 var(--space-4);
 
     color: var(--secondary);
 
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
 
     border-radius: 6px;
 
@@ -299,7 +299,7 @@
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto auto auto;
 
-        gap: 1rem;
+        gap: var(--space-4);
     }
 
 
@@ -314,7 +314,7 @@
 
 
     .pagination {
-        gap: 0.75rem;
+        gap: var(--space-3);
     }
 
 }

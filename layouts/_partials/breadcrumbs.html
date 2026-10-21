@@ -3,8 +3,10 @@
     <a href="{{ "/" | relURL }}">Home</a>
 
     {{- with .Section }}
+    {{- with site.GetPage . }}
         <span aria-hidden="true"> / </span>
-        <a href="{{ . | absURL }}">{{ . }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- end }}
     {{- end }}
 
     <span aria-hidden="true"> / </span>

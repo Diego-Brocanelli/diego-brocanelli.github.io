@@ -1,6 +1,6 @@
 .searchResults li {
     list-style: none;
-    padding: 1rem 0;
+    padding: var(--space-4) 0;
     background-color: transparent;
     position: relative;
     display: flex;
@@ -9,7 +9,7 @@
     transition: transform .25s ease;
     border: 0;
     border-top: 1px solid var(--border);
-    font-size: 14pt;
+    font-size: 1.1rem;
     line-height: 1.6;
     border-radius: 0;
 }

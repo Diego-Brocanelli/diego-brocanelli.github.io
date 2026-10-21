@@ -15,26 +15,14 @@
 }
 
 .about-photo {
-    margin:1.5rem auto;
-    border-radius: 2rem;
-    margin-bottom: 4rem;
-    width:40%;
-}
-
-.about-hero .home-label {
-    text-transform: uppercase;
+    display: block;
+    width: 40%;
+    margin: var(--space-5) auto var(--space-8);
+    border-radius: var(--space-6);
 }
 
 .about-content {
-    padding: 1rem 0 6rem;
-}
-
-
-.about-skills-list {
-    list-style: none;
-
-    margin: 1rem 0 2rem;
-    padding: 0;
+    padding: var(--space-4) 0 var(--space-9);
 }
 
 
@@ -46,8 +34,4 @@
     .about-photo {
         width: 60%;
     }
-}
-
-.about-skills-list {
-    padding-inline-start: 0 !important;
 }

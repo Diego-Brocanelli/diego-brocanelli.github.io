@@ -39,8 +39,8 @@ buildExpired = false                               # Não publica posts com data
 [Menus]
   main = [
     {Name = "Home", Weight = 10, Identifier = "home", URL = "/"},
-    {Name = "Pesquisar", Weight = 10, Identifier = "search", URL = "/search/"},
-    {Name = "Sobre", Weight = 10, Identifier = "about", URL = "/about/"}
+    {Name = "Pesquisar", Weight = 20, Identifier = "search", URL = "/search/"},
+    {Name = "Sobre", Weight = 30, Identifier = "about", URL = "/about/"}
   ]
 
 # ─────────────────────────────────────────────────────────────
@@ -50,7 +50,7 @@ buildExpired = false                               # Não publica posts com data
   env = "production"                                # CRÍTICO: sem isso o PaperMod NÃO injeta Google Analytics, Open Graph, Twitter Cards nem Schema.org, mesmo com googleAnalytics configurado acima
   author = "Diego Brocanelli"                       # Vai para a tag <meta name="author">
   subtitle = ""
-  description = "Diego Brocanelli Full Stack Developer"   # Meta description padrão (SEO)
+  description = "Diego Brocanelli — Engenheiro de Software e Arquiteto de Soluções. Escrevo sobre engenharia, arquitetura e as decisões por trás de software que precisa evoluir."   # Meta description padrão (SEO)
   keywords = ["Engenharia de Software", "Arquitetura de Soluções", "Blog"]  # Ausente no original — ajuda no SEO
   images = ["/images/social-card.png"]              # Imagem padrão usada em Open Graph/Twitter Card.
   copyright = "Diego Brocanelli - @diego_b2"
@@ -79,7 +79,6 @@ buildExpired = false                               # Não publica posts com data
 
 [Params.assets]
   disableHLJS = false
-  customCSS = ["/css/custom.css"]
   favicon = "/favicon.ico" # Sem isso o navegador usa o favicon padrão do Hugo
 
 [Params.homeInfoParams]
