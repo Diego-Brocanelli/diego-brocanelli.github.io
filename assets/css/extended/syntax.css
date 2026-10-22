@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Realce de sintaxe (One Light no tema claro, One Dark no escuro)
+   Sobrescreve o chroma-styles.css do PaperMod; requer
+   markup.highlight.noClasses = false no config.toml.
+   ========================================================================== */
+
+/* paleta One Light escurecida para contraste >= 4.5:1 sobre branco */
+:root {
+    --syntax-text: #383a42;
+    --syntax-comment: #6a737d;
+    --syntax-keyword: #a626a4;
+    --syntax-function: #2f63d4;
+    --syntax-string: #3c7d3b;
+    --syntax-number: #8a5d00;
+    --syntax-builtin: #946200;
+    --syntax-variable: #c4392d;
+    --syntax-punctuation: #4b5563;
+}
+
+[data-theme="dark"] {
+    --syntax-text: #d4d7dd;
+    --syntax-comment: #7d8590;
+    --syntax-keyword: #c678dd;
+    --syntax-function: #61afef;
+    --syntax-string: #98c379;
+    --syntax-number: #d19a66;
+    --syntax-builtin: #e5c07b;
+    --syntax-variable: #e06c75;
+    --syntax-punctuation: #abb2bf;
+}
+
+.post-content .chroma {
+    color: var(--syntax-text);
+}
+
+/* zera as cores do tema base antes de aplicar a paleta */
+.post-content .chroma span {
+    color: inherit;
+    font-style: normal;
+    font-weight: normal;
+    background: none;
+}
+
+.post-content .chroma .c,
+.post-content .chroma .ch,
+.post-content .chroma .cm,
+.post-content .chroma .c1,
+.post-content .chroma .cs,
+.post-content .chroma .cp,
+.post-content .chroma .cpf {
+    color: var(--syntax-comment);
+    font-style: italic;
+}
+
+.post-content .chroma .k,
+.post-content .chroma .kd,
+.post-content .chroma .kn,
+.post-content .chroma .kp,
+.post-content .chroma .kr,
+.post-content .chroma .kt,
+.post-content .chroma .ow {
+    color: var(--syntax-keyword);
+}
+
+.post-content .chroma .nf,
+.post-content .chroma .fm,
+.post-content .chroma .nx {
+    color: var(--syntax-function);
+}
+
+.post-content .chroma .s,
+.post-content .chroma .sa,
+.post-content .chroma .sb,
+.post-content .chroma .sc,
+.post-content .chroma .dl,
+.post-content .chroma .sd,
+.post-content .chroma .s1,
+.post-content .chroma .s2,
+.post-content .chroma .sh,
+.post-content .chroma .sx,
+.post-content .chroma .sr,
+.post-content .chroma .ss {
+    color: var(--syntax-string);
+}
+
+.post-content .chroma .si,
+.post-content .chroma .se {
+    color: var(--syntax-builtin);
+}
+
+.post-content .chroma .kc,
+.post-content .chroma .m,
+.post-content .chroma .mb,
+.post-content .chroma .mf,
+.post-content .chroma .mh,
+.post-content .chroma .mi,
+.post-content .chroma .il,
+.post-content .chroma .mo {
+    color: var(--syntax-number);
+}
+
+.post-content .chroma .nb,
+.post-content .chroma .bp,
+.post-content .chroma .nc,
+.post-content .chroma .nn,
+.post-content .chroma .no,
+.post-content .chroma .nt {
+    color: var(--syntax-builtin);
+}
+
+.post-content .chroma .nv,
+.post-content .chroma .vc,
+.post-content .chroma .vg,
+.post-content .chroma .vi,
+.post-content .chroma .na {
+    color: var(--syntax-variable);
+}
+
+.post-content .chroma .o,
+.post-content .chroma .p {
+    color: var(--syntax-punctuation);
+}

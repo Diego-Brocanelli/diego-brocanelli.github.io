@@ -51,8 +51,18 @@
     --blog-accent-hover: #1d4ed8;
     --blog-selection-text: #ffffff;
 
-    --blog-code-bg: #1e2026;
-    --blog-code-bar: #272a31;
+    /* janela de código estilo macOS claro */
+    --blog-code-bg: #ffffff;
+    --code-bar-bg: #f3f4f6;
+    --code-border: var(--blog-border);
+    --code-divider: #e5e7eb;
+    --code-dot-1: #ff5f57;
+    --code-dot-2: #febc2e;
+    --code-dot-3: #28c840;
+    --code-shadow: 0 8px 24px rgba(31, 35, 41, 0.06);
+    --code-copy: #5b6371;
+    --code-copy-hover: #1f2329;
+    --code-copy-hover-bg: rgba(31, 35, 41, 0.06);
 
     --blog-badge-draft-bg: #fdf0d5;
     --blog-badge-draft-text: #8a5100;
@@ -80,8 +90,17 @@
     --blog-accent-hover: #93c5fd;
     --blog-selection-text: var(--blog-bg);
 
-    --blog-code-bg: #16191f;
-    --blog-code-bar: #1d2027;
+    --blog-code-bg: #0d0f12;
+    --code-bar-bg: transparent;
+    --code-border: rgba(255, 255, 255, 0.08);
+    --code-divider: rgba(255, 255, 255, 0.06);
+    --code-dot-1: rgba(255, 255, 255, 0.2);
+    --code-dot-2: rgba(255, 255, 255, 0.2);
+    --code-dot-3: rgba(255, 255, 255, 0.2);
+    --code-shadow: none;
+    --code-copy: rgba(255, 255, 255, 0.55);
+    --code-copy-hover: rgba(255, 255, 255, 0.9);
+    --code-copy-hover-bg: rgba(255, 255, 255, 0.08);
 
     --blog-badge-draft-bg: #3a2a0c;
     --blog-badge-draft-text: #fbbf24;
@@ -777,43 +796,45 @@ p code {
     margin: var(--space-6) 0;
 
     background: var(--blog-code-bg);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border: 1px solid var(--code-border);
+    border-radius: 12px;
+    box-shadow: var(--code-shadow);
 
     overflow: hidden;
 }
 
 
-/* barra superior com as "bolinhas" */
+/* barra superior: cinza-clara no light, mesmo fundo do código no dark */
 .post-content .highlight::before {
     content: "";
 
     display: block;
 
-    height: 2.75rem;
+    height: 2.5rem;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--code-divider);
 
-    background-color: var(--blog-code-bar);
+    background: var(--code-bar-bg);
 }
 
 
+/* três "bolinhas": semáforo do macOS no light, discretas no dark */
 .post-content .highlight::after {
     content: "";
 
     position: absolute;
-    top: 1.25rem;
-    left: 1.5rem;
+    top: calc(1.25rem - 4px);
+    left: var(--space-5);
 
     width: 8px;
     height: 8px;
 
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
+    background: var(--code-dot-1);
 
     box-shadow:
-        16px 0 0 rgba(255, 255, 255, 0.35),
-        32px 0 0 rgba(255, 255, 255, 0.35);
+        16px 0 0 var(--code-dot-2),
+        32px 0 0 var(--code-dot-3);
 }
 
 .post-content .highlight pre {
@@ -822,28 +843,55 @@ p code {
     background-color: var(--blog-code-bg) !important;
 }
 
-.highlight table {
-    border-radius: 0 !important;
-    padding-top: var(--space-4) !important;
-    padding-bottom: var(--space-4) !important;
-    background-color: var(--blog-code-bg) !important;
-}
-
 .post-content .highlight code {
+    padding: var(--space-5) !important;
+    border-radius: 0 !important;
     background: transparent !important;
 }
 
-/* linhas longas rolam na horizontal em vez de serem cortadas */
-.post-content .highlight pre,
-.post-content .highlight code,
-.post-content .highlight table {
-    overflow-x: auto !important;
+.post-content .highlight .line .cl {
+    padding: 0;
 }
 
-/* mantém o botão de copiar no lugar certo dentro da barra */
+/* linhas longas quebram dentro do container em vez de rolar */
+.post-content .highlight pre,
+.post-content .highlight code {
+    overflow-x: hidden !important;
+    white-space: pre-wrap !important;
+}
+
+.post-content .highlight .line {
+    min-width: 0; /* item do grid de <code>: permite encolher */
+    flex-wrap: wrap;
+}
+
+.post-content .highlight .line .cl {
+    min-width: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere; /* quebra até strings sem espaço, como hashes */
+}
+
+/* botão de copiar discreto, centrado na barra */
 .post-content .highlight .copy-code {
-    top: 0.7rem !important;
-    right: var(--space-4) !important;
+    top: var(--space-2) !important;
+    right: var(--space-3) !important;
+
+    height: 1.5rem;
+    padding: 0 var(--space-2);
+
+    line-height: 1.5rem;
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+
+    color: var(--code-copy);
+    background: transparent;
+    border-radius: 6px;
+}
+
+.post-content .highlight .copy-code:hover,
+.post-content .highlight .copy-code:focus-visible {
+    color: var(--code-copy-hover);
+    background: var(--code-copy-hover-bg);
 }
 
 /* ==========================================================================

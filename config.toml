@@ -130,9 +130,9 @@ buildExpired = false                               # Não publica posts com data
 [markup.highlight]
   codeFences = true
   guessSyntax = true
-  lineNos = true
-  style = "monokai"
-  noClasses = true # Necessário para trocar o tema de highlight via CSS custom
+  lineNos = false
+  style = "onedark"
+  noClasses = false # Cores via classes .chroma (ver assets/css/extended/syntax.css)
 
 # ─────────────────────────────────────────────────────────────
 # Renderização de Markdown
