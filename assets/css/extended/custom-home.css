@@ -1,0 +1,526 @@
+/* ==========================================================================
+   custom-home.css
+
+   Estilos exclusivos da home (layouts/index.html), direção "editorial":
+   tipografia de display, faixa de números, post em destaque com capa e
+   lista numerada. Reaproveita tokens e componentes de custom.css
+   (.home-label, .social-icons).
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+    padding: var(--space-9) 0 var(--space-8);
+}
+
+
+.hero-title {
+    margin: 0;
+
+    font-size: clamp(3rem, 9.5vw, 8rem);
+    font-weight: 700;
+
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+
+.hero-title span {
+    display: block;
+    color: var(--blog-accent);
+}
+
+
+.hero-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) auto;
+    align-items: end;
+
+    gap: var(--space-6);
+
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.hero-lead {
+    max-width: 620px;
+    margin: 0;
+
+    color: var(--secondary);
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+
+.hero .social-icons {
+    margin-top: var(--space-5);
+    margin-left: calc(-1 * var(--space-3)); /* alinha o ícone ao texto (compensa o padding do link) */
+}
+
+
+/* ==========================================================================
+   Botões (área de toque >= 44px)
+   ========================================================================== */
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    min-height: 48px;
+    padding: 0 var(--space-5);
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.home-button:hover {
+    color: var(--blog-accent);
+    border-color: var(--blog-accent);
+}
+
+
+.home-button--primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--theme);
+}
+
+
+.home-button--primary:hover {
+    background: var(--blog-accent);
+    border-color: var(--blog-accent);
+    color: var(--blog-selection-text);
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================================
+   Números
+   ========================================================================== */
+
+.stats-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    margin: 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.stat {
+    display: flex;
+    flex-direction: column-reverse; /* número em cima, rótulo embaixo — sem quebrar a ordem dt/dd */
+
+    padding: var(--space-6) var(--space-5);
+}
+
+
+.stat + .stat {
+    border-inline-start: 1px solid var(--border);
+}
+
+
+.stat dd {
+    margin: 0;
+
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+.stat dt {
+    margin-top: var(--space-2);
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+/* ==========================================================================
+   Cabeçalho das seções
+   ========================================================================== */
+
+.latest {
+    padding: var(--space-8) 0 0;
+}
+
+
+.home-section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+
+    margin-bottom: var(--space-6);
+}
+
+
+.home-section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+.home-section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+
+    min-height: 44px;
+
+    color: var(--blog-accent);
+
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.home-section-link:hover {
+    color: var(--blog-accent-hover);
+}
+
+
+/* linha de metadados (categoria · data) reutilizada pelo destaque e pela lista */
+.post-meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+}
+
+
+/* ==========================================================================
+   Últimas publicações: destaque + lista numerada
+   ========================================================================== */
+
+.latest-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--space-7);
+}
+
+
+/* o link do título cobre o card inteiro (mesmo padrão do .entry-link do tema) */
+.featured,
+.recent {
+    position: relative;
+}
+
+.featured h3 a::after,
+.recent h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+
+.featured-cover {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+
+    margin-bottom: var(--space-5);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+
+.featured-cover img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.featured:hover .featured-cover img,
+.featured:focus-within .featured-cover img {
+    transform: scale(1.03);
+}
+
+
+/* sem imagem: bloco tipográfico com a cor de destaque, para não ficar "vazio" */
+.featured--no-cover .featured-body {
+    padding: var(--space-6);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--blog-accent);
+    border-radius: 16px;
+}
+
+
+.featured-badge {
+    padding: 0.15em 0.7em;
+
+    border-radius: 999px;
+
+    background: var(--blog-accent);
+    color: var(--blog-selection-text);
+
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+
+.featured-title {
+    margin: var(--space-3) 0 0;
+
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+
+    text-wrap: balance;
+}
+
+
+.featured-title a,
+.recent h3 a {
+    color: var(--primary);
+    transition: color 0.2s ease;
+}
+
+
+.featured:hover .featured-title a,
+.featured:focus-within .featured-title a,
+.recent:hover h3 a,
+.recent:focus-within h3 a {
+    color: var(--blog-accent);
+}
+
+
+.featured-body p {
+    max-width: 620px;
+    margin: var(--space-4) 0 0;
+
+    color: var(--secondary);
+
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.recent-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.recent {
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: var(--space-4);
+
+    margin: 0;
+    padding: var(--space-5) 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.recent:first-child {
+    padding-top: 0;
+}
+
+
+.recent-index {
+    color: var(--secondary);
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+
+    font-variant-numeric: tabular-nums;
+
+    transition: color 0.2s ease;
+}
+
+
+.recent:hover .recent-index,
+.recent:focus-within .recent-index {
+    color: var(--blog-accent);
+}
+
+
+.recent h3 {
+    margin: var(--space-2) 0 0;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.home-article-badge--draft {
+    display: inline-block;
+    padding: 0.1em 0.6em;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    background: var(--blog-badge-draft-bg);
+    color: var(--blog-badge-draft-text);
+}
+
+
+/* ==========================================================================
+   Sobre
+   ========================================================================== */
+
+.home-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+
+    margin-top: var(--space-9);
+    padding: var(--space-8) 0 var(--space-9);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.home-about h2 {
+    max-width: 520px;
+    margin: 0;
+
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+.home-about h2 span {
+    color: var(--secondary);
+}
+
+
+.home-about-content {
+    align-self: end;
+}
+
+
+.home-about-content p {
+    max-width: 500px;
+    margin: 0 0 var(--space-5);
+
+    color: var(--secondary);
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .hero-footer,
+    .latest-grid,
+    .home-about {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-footer {
+        align-items: start;
+    }
+
+    .latest-grid {
+        gap: var(--space-6);
+    }
+
+    .home-about {
+        gap: var(--space-5);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: var(--space-8) 0 var(--space-7);
+    }
+
+    .hero-lead {
+        font-size: 1.05rem;
+    }
+
+    .hero-actions .home-button {
+        flex: 1 1 auto;
+    }
+
+    .stat {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .home-about {
+        margin-top: var(--space-8);
+        padding: var(--space-7) 0 var(--space-8);
+    }
+}

@@ -1,0 +1,16 @@
+{{- /*
+  Bloco de código (```lang). Envolve o realce do Chroma numa "janela" com
+  barra de título só com as bolinhas decorativas (sem rótulo).
+  Blocos de saída (text/txt/output/console) ganham a classe
+  .code-block--output, que quebra linhas longas (ver custom.css,
+  "Blocos de código").
+*/ -}}
+{{- $lang := .Type | lower | strings.TrimSpace }}
+{{- $isOutput := in (slice "text" "txt" "output" "console") $lang }}
+
+<figure class="code-block{{ if $isOutput }} code-block--output{{ end }}"{{ with $lang }} data-lang="{{ . }}"{{ end }}>
+    <div class="code-block-bar" aria-hidden="true">
+        <span class="code-block-dots"></span>
+    </div>
+    {{- transform.Highlight .Inner $lang .Options }}
+</figure>

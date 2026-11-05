@@ -20,8 +20,10 @@
       <guid>http://localhost:1313/posts/por-que-golang-video/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;ZeuCXB&lt;/a&gt; traz uma palestra robusta, recheado de exemplos para nós.&lt;/p&gt;
 &lt;p&gt;Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=h_9UNH6pkyo&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+    &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=h_9UNH6pkyo&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;dados-da-palestra&#34;&gt;Dados da palestra&lt;/h2&gt;
 &lt;ul&gt;

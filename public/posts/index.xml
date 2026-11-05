@@ -22,8 +22,10 @@
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Abrimos o Google Maps, preenchemos nosso destino e, em pouco tempo, temos a melhor rota dentre as possíveis, pois foram analisadas e calculadas diversas informações para o melhor resultado.&lt;/p&gt;
 &lt;p&gt;Isso nos traz uma dúvida:&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;Como um sistema consegue tomar essa decisão tão rápido e considerando ruas, cruzamentos, sentido do tráfego e até o trânsito em tempo real?&lt;/p&gt;
+    &lt;p&gt;Como um sistema consegue tomar essa decisão tão rápido e considerando ruas, cruzamentos, sentido do tráfego e até o trânsito em tempo real?&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;p&gt;A resposta começa com uma estrutura de dados que parece simples, porém, é uma das mais poderosas da computação: &lt;strong&gt;o grafo&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>

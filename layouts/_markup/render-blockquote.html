@@ -1,0 +1,89 @@
+{{- /*
+  Blockquote (>). Dois resultados:
+
+  1. Caixa de aviso (aside.callout), quando:
+     - o post usa a sintaxe padrão  > [!NOTE] / [!TIP] / [!IMPORTANT] / [!WARNING] / [!CAUTION]
+     - ou o texto começa com um dos marcadores já usados nos posts antigos
+       (💡, ⚠️, ❓, **Nota:**, **Atenção!**, **IMPORTANTE!**, **DICA!**...).
+       O marcador é removido e vira o título da caixa.
+  2. Citação (blockquote) em todos os outros casos.
+
+  Estilos: assets/css/extended/custom-single.css ("Citações e avisos").
+*/ -}}
+
+{{- $type := "" }}
+{{- $title := "" }}
+{{- $icon := "" }}
+{{- $text := .Text }}
+
+{{- $titles := dict "note" "Nota" "tip" "Dica" "important" "Importante" "warning" "Atenção" "caution" "Cuidado" }}
+
+{{- if eq .Type "alert" }}
+    {{- $type = .AlertType | lower }}
+    {{- $title = .AlertTitle | default (index $titles $type) | default "Nota" }}
+{{- else }}
+    {{- /* Marcadores antigos: emoji no início, ou palavra-chave seguida de ":", "!" ou "."
+           (em negrito ou não). Ordem importa: o primeiro que casar vence. */}}
+    {{- $prefix := `^\s*<p>\s*` }}
+    {{- $suffix := `(?:\s|&nbsp;)*` }}
+    {{- $word := `(?i:<strong>\s*(?:%s)\s*[:!.]*\s*</strong>\s*[:!]?|(?:%s)\s*[:!])` }}
+    {{- $markers := slice
+        (dict "re" `<span>\x{1F4A1}</span>`                          "type" "tip"       "title" "Dica")
+        (dict "re" `<span>\x{26A0}\x{FE0F}?</span>`                  "type" "warning"   "title" "Atenção")
+        (dict "re" `<span>\x{2753}</span>`                           "type" "note"      "title" "Pergunta" "icon" "question")
+        (dict "re" (printf $word "dica|lembre-se" "dica|lembre-se")  "type" "tip"       "title" "Dica")
+        (dict "re" (printf $word "atenção" "atenção")                "type" "warning"   "title" "Atenção")
+        (dict "re" (printf $word "importante" "importante")          "type" "important" "title" "Importante")
+        (dict "re" (printf $word "observação|obs" "observação|obs")  "type" "note"      "title" "Observação")
+        (dict "re" (printf $word "nota" "nota")                      "type" "note"      "title" "Nota")
+        (dict "re" (printf $word "ps|p\\.s" "ps|p\\.s")              "type" "note"      "title" "P.S.")
+    }}
+    {{- range $markers }}
+        {{- if not $type }}
+            {{- $re := printf "%s%s%s" $prefix .re $suffix }}
+            {{- if findRE $re $text 1 }}
+                {{- $type = .type }}
+                {{- $title = .title }}
+                {{- $icon = .icon | default "" }}
+                {{- $text = replaceRE $re "<p>" $text 1 | safeHTML }}
+            {{- end }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+
+{{- if $type }}
+    {{- /* parágrafo que sobrou vazio depois de tirar o marcador */}}
+    {{- $text = replaceRE `^\s*<p>\s*</p>` "" $text 1 | safeHTML }}
+    {{- /* subtítulo em negrito isolado no 1º parágrafo (ex.: "💡 **Curiosidade**")
+           vira o título da caixa */}}
+    {{- with findRESubmatch `^\s*<p>\s*<strong>\s*([^<]+?)\s*[:!.]*\s*</strong>\s*</p>` $text 1 }}
+        {{- $title = index (index . 0) 1 }}
+        {{- $text = replaceRE `^\s*<p>\s*<strong>[^<]+</strong>\s*</p>` "" $text 1 | safeHTML }}
+    {{- end }}
+{{- end }}
+
+{{- $icons := dict
+    "note"      `<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>`
+    "tip"       `<path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>`
+    "important" `<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="12" y1="7" x2="12" y2="11"/><line x1="12" y1="14" x2="12.01" y2="14"/>`
+    "warning"   `<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>`
+    "caution"   `<polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>`
+    "question"  `<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>`
+}}
+
+{{- if $type }}
+<aside class="callout callout--{{ $type }}" role="note">
+    <p class="callout-title">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            {{- index $icons ($icon | default $type) | default (index $icons "note") | safeHTML -}}
+        </svg>
+        {{- /* $title vem de texto fixo ou de HTML já renderizado sem tags ([^<]+) */}}
+        {{ $title | safeHTML }}
+    </p>
+    {{ $text }}
+</aside>
+{{- else }}
+<blockquote {{- range $k, $v := .Attributes }} {{ $k }}="{{ $v }}"{{ end }}>
+    {{ $text }}
+</blockquote>
+{{- end }}

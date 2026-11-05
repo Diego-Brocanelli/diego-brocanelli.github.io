@@ -1,0 +1,51 @@
+{{- define "main" }}
+
+<div class="search-page">
+
+    <header class="search-hero">
+        <span class="home-label">Pesquisar</span>
+
+        <h1 class="search-title">
+            O que você quer
+            <span>aprender hoje?</span>
+        </h1>
+
+        <p class="search-lead">
+            Busque entre +100 artigos
+            sobre engenharia de software, arquitetura e tecnologia.
+        </p>
+    </header>
+
+
+    <div id="searchbox" class="searchbox" role="search">
+
+        <label for="searchInput" class="visually-hidden">Pesquisar no blog</label>
+
+        <div class="search-field">
+            <svg class="search-field-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+
+            <input id="searchInput" disabled
+                placeholder="{{ .Params.placeholder | default "Pesquisar…" }}"
+                type="search" autocomplete="off" spellcheck="false" maxlength="64"
+                aria-describedby="searchHint" aria-controls="searchResults">
+
+            <kbd class="search-field-kbd" aria-hidden="true">/</kbd>
+        </div>
+
+        <p id="searchHint" class="search-hint">
+            Use <kbd>↑</kbd> <kbd>↓</kbd> para navegar, <kbd>Enter</kbd> para abrir e <kbd>Esc</kbd> para limpar.
+        </p>
+
+        <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+
+        <ul id="searchResults" class="searchResults" aria-label="Resultados da pesquisa"></ul>
+
+    </div>
+
+</div>
+
+{{- end }}{{/* end main */}}

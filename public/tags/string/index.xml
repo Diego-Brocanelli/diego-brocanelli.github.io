@@ -35,8 +35,14 @@
 &lt;h2 id=&#34;o-que-é-query-string&#34;&gt;O que é query String?&lt;/h2&gt;
 &lt;p&gt;É parte da URL, onde contém dados sendo transmitidos.&lt;/p&gt;
 &lt;h3 id=&#34;exemplo&#34;&gt;Exemplo:&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://meusite.com.br/produto?chave&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;valor&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;outraChave&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;outroValor
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘? ‘ seguido de chave e seu valor.&lt;/p&gt;</description>
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;bash&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://meusite.com.br/produto?chave&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;valor&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;outraChave&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;outroValor&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;Como podemos analisar no exemplo acima, para que possamos informar os valores desejados na URL iniciamos com o caractere ‘? ‘ seguido de chave e seu valor.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

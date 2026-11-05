@@ -1,0 +1,20 @@
+{{- /* Faixa de números (home e /about). Estilos em assets/css/extended/custom-home.css (.stats). */ -}}
+{{- $oldest := index (where site.RegularPages "Section" "posts").ByDate 0 }}
+<section class="stats" aria-label="O blog em números">
+    <dl class="stats-list">
+        <div class="stat">
+            <dt>anos de experiência</dt>
+            <dd>13+</dd>
+        </div>
+        <div class="stat">
+            <dt>artigos publicados</dt>
+            <dd>+100</dd>
+        </div>
+        {{- with $oldest }}
+        <div class="stat">
+            <dt>escrevendo desde</dt>
+            <dd>{{ .Date.Year }}</dd>
+        </div>
+        {{- end }}
+    </dl>
+</section>

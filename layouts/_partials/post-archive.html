@@ -1,0 +1,56 @@
+{{- /*
+  Arquivo de posts agrupado por ano: atalhos por ano + uma lista por ano.
+  Uso: {{ partial "post-archive.html" (dict "pages" $pages) }}
+  Usado por layouts/posts/section.html e layouts/term.html.
+  Estilos: assets/css/extended/custom-archive.css
+*/ -}}
+{{- $groups := .pages.GroupByDate "2006" }}
+
+{{- if gt (len $groups) 1 }}
+<nav class="archive-years" aria-label="Ir para o ano">
+    <ul>
+        {{- range $groups }}
+        <li>
+            <a href="#ano-{{ .Key }}">
+                {{ .Key }} <small>{{ len .Pages }}</small>
+            </a>
+        </li>
+        {{- end }}
+    </ul>
+</nav>
+{{- end }}
+
+<div class="archive">
+    {{- range $groups }}
+    {{- $count := len .Pages }}
+    <section class="archive-group" aria-labelledby="ano-{{ .Key }}">
+
+        <h2 id="ano-{{ .Key }}" class="archive-group-title">
+            {{ .Key }}
+            <small>{{ $count }} {{ cond (eq $count 1) "artigo" "artigos" }}</small>
+        </h2>
+
+        <ol class="archive-list">
+            {{- range .Pages }}
+            <li class="archive-item">
+                <time class="archive-date" datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ time.Format "02 Jan" .Date }}
+                </time>
+
+                <h3 class="archive-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{- if .Draft }}
+                    <span class="home-article-badge--draft">Rascunho</span>
+                    {{- end }}
+                </h3>
+
+                {{- with .Params.categories }}
+                <span class="archive-category">{{ index . 0 | title }}</span>
+                {{- end }}
+            </li>
+            {{- end }}
+        </ol>
+
+    </section>
+    {{- end }}
+</div>

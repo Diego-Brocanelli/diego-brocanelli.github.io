@@ -1,0 +1,19 @@
+{{- /*
+  Índice da busca (/index.json), lido por assets/js/fastsearch.js.
+  Sobrescreve o do PaperMod para indexar só os posts, incluir data e
+  categorias, e mandar um resumo curto já sem HTML (o card usa direto).
+*/ -}}
+{{- $index := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) -}}
+        {{- $index = $index | append (dict
+            "title" .Title
+            "permalink" .RelPermalink
+            "date" (cond .Date.IsZero "" (time.Format "02 Jan 2006" .Date))
+            "categories" (.Params.categories | default slice)
+            "summary" (partial "post-summary.html" (dict "page" . "length" 180))
+            "content" .Plain
+        ) -}}
+    {{- end -}}
+{{- end -}}
+{{- $index | jsonify -}}

@@ -114,15 +114,8 @@ buildExpired = false                               # Não publica posts com data
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
 
-# Configuração do motor de busca (Fuse.js)
-[params.fuseOpts]
-  isCaseSensitive = false
-  shouldSort = true
-  location = 0
-  distance = 1_000
-  threshold = 0.4
-  minMatchCharLength = 0
-  keys = [ "title", "permalink", "summary", "content" ]
+# Configuração do motor de busca (Fuse.js): fica em assets/js/fastsearch.js
+# (FUSE_OPTIONS), porque usa pesos por campo, que params.fuseOpts não suporta.
 
 # ─────────────────────────────────────────────────────────────
 # Realce de sintaxe em blocos de código

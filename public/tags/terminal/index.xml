@@ -23,8 +23,14 @@
 &lt;p&gt;Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.&lt;/p&gt;
 &lt;h2 id=&#34;1-conexão-e-navegação&#34;&gt;1. Conexão e Navegação&lt;/h2&gt;
 &lt;h3 id=&#34;conectar-ao-mysql&#34;&gt;Conectar ao MySQL&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;bash&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
 					&lt;th&gt;&lt;strong&gt;Parâmetro&lt;/strong&gt;&lt;/th&gt;
@@ -43,23 +49,69 @@
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;conectar-diretamente-a-um-banco-de-dados&#34;&gt;Conectar diretamente a um banco de dados&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nome_do_banco&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listar-todos-os-bancos-de-dados&#34;&gt;Listar todos os bancos de dados&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;selecionar-um-banco-de-dados&#34;&gt;Selecionar um banco de dados&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;USE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;listar-tabelas-do-banco-selecionado&#34;&gt;Listar tabelas do banco selecionado&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ver-estrutura-de-uma-tabela&#34;&gt;Ver estrutura de uma tabela&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_da_tabela&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;bash&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;usuário&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -p &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nome_do_banco&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;listar-todos-os-bancos-de-dados&#34;&gt;Listar todos os bancos de dados&lt;/h3&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;selecionar-um-banco-de-dados&#34;&gt;Selecionar um banco de dados&lt;/h3&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;USE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;listar-tabelas-do-banco-selecionado&#34;&gt;Listar tabelas do banco selecionado&lt;/h3&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;ver-estrutura-de-uma-tabela&#34;&gt;Ver estrutura de uma tabela&lt;/h3&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_da_tabela&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;2-gerenciamento-de-bancos-e-tabelas&#34;&gt;2. Gerenciamento de Bancos e Tabelas&lt;/h2&gt;
 &lt;h3 id=&#34;criar-um-novo-banco-de-dados&#34;&gt;Criar um novo banco de dados&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;apagar-um-banco-de-dados&#34;&gt;Apagar um banco de dados&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt; Use com cautela, pois o banco de dados será APAGADO!&lt;/p&gt;</description>
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;apagar-um-banco-de-dados&#34;&gt;Apagar um banco de dados&lt;/h3&gt;
+
+
+&lt;figure class=&#34;code-block&#34; data-lang=&#34;sql&#34;&gt;
+    &lt;div class=&#34;code-block-bar&#34; aria-hidden=&#34;true&#34;&gt;
+        &lt;span class=&#34;code-block-dots&#34;&gt;&lt;/span&gt;
+    &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nome_do_banco&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/figure&gt;
+
+&lt;aside class=&#34;callout callout--warning&#34; role=&#34;note&#34;&gt;
+    &lt;p class=&#34;callout-title&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;path d=&#34;M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;9&#34; x2=&#34;12&#34; y2=&#34;13&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;17&#34; x2=&#34;12.01&#34; y2=&#34;17&#34;/&gt;&lt;/svg&gt;
+        Atenção
+    &lt;/p&gt;</description>
     </item>
     <item>
       <title>Iniciando com Composer</title>
@@ -71,8 +123,9 @@
 &lt;h2 id=&#34;o-que-é-o-composer&#34;&gt;O que é o composer?&lt;/h2&gt;
 &lt;p&gt;Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.&lt;/p&gt;
 &lt;p&gt;Citando o amigo &lt;a href=&#34;http://eltonminetto.net/&#34;&gt;Elton Minetto&lt;/a&gt;:&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
+    &lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,37 +1,424 @@
 /* ==========================================================================
    custom-about-page.css
 
-   Estilos exclusivos da página /about. Reaproveita os componentes visuais
-   já existentes (.home-hero, .home-label, .social-icons, .home-topic,
-   .post-content) definidos em custom.css — aqui ficam só os ajustes
-   específicos dessa página.
+   Estilos exclusivos da página /about (layouts/about.html), mesma direção
+   "editorial" da home. Reaproveita de custom.css (.home-label, .social-icons)
+   e de custom-home.css (.home-button, .hero-actions, .stats).
+
+   O conteúdo vem de content/about.html: cada <section> com <h2> vira um
+   capítulo numerado (título fixo à esquerda, texto à direita); a primeira
+   <section>, sem <h2>, é a introdução em destaque.
    ========================================================================== */
 
 
-.about-hero .home-hero-main {
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.about-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: center;
+    gap: var(--space-8);
+
+    padding: var(--space-8) 0;
 }
 
-.about-photo {
+
+.about-title {
+    margin: 0;
+
+    font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+    font-weight: 700;
+
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+
+.about-title span {
     display: block;
-    width: 40%;
-    margin: var(--space-5) auto var(--space-8);
-    border-radius: var(--space-6);
+    color: var(--blog-accent);
 }
 
-.about-content {
-    padding: var(--space-4) 0 var(--space-9);
+
+.about-lead {
+    max-width: 560px;
+    margin: var(--space-6) 0 var(--space-6);
+
+    color: var(--secondary);
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+.about-hero .social-icons {
+    margin-top: var(--space-5);
+    margin-left: calc(-1 * var(--space-3)); /* alinha o ícone ao texto (compensa o padding do link) */
+}
+
+
+/* foto com moldura deslocada na cor de destaque */
+.about-photo {
+    position: relative;
+    margin: 0;
+}
+
+
+.about-photo::before {
+    content: "";
+    position: absolute;
+    inset: var(--space-5) calc(-1 * var(--space-5)) calc(-1 * var(--space-5)) var(--space-5);
+
+    border: 2px solid var(--blog-accent);
+    border-radius: 24px;
+}
+
+
+.about-photo img {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1122 / 1402;
+    margin: 0;
+
+    object-fit: cover;
+
+    border-radius: 24px;
 }
 
 
 /* ==========================================================================
-   Mobile
+   Conteúdo: introdução + capítulos numerados
    ========================================================================== */
 
-@media (max-width: 768px) {
+.about-content {
+    counter-reset: chapter;
+
+    padding: var(--space-8) 0 0;
+
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+
+.about-content section {
+    padding: var(--space-8) 0;
+}
+
+
+.about-content section + section {
+    border-top: 1px solid var(--border);
+}
+
+
+.about-content p {
+    max-width: 680px;
+    margin: 0 0 var(--space-4);
+
+    color: var(--secondary);
+}
+
+
+.about-content strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+
+/* introdução (primeira seção, sem título) */
+.about-content section:first-child {
+    padding-top: 0;
+}
+
+
+.about-content section:first-child p {
+    max-width: 900px;
+
+    color: var(--primary);
+
+    font-size: clamp(1.35rem, 2.6vw, 1.875rem);
+    font-weight: 500;
+
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+}
+
+
+.about-content section:first-child strong {
+    color: var(--blog-accent);
+}
+
+
+/* capítulo: título fixo à esquerda, texto à direita */
+.about-content section:has(> h2) {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--space-8);
+
+    counter-increment: chapter;
+}
+
+
+.about-content section:has(> h2) > * {
+    grid-column: 2;
+}
+
+
+.about-content section > h2 {
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    align-self: start;
+
+    position: sticky;
+    top: var(--space-6);
+
+    margin: 0;
+
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 700;
+
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+
+    text-wrap: balance;
+}
+
+
+.about-content section > h2::before {
+    content: counter(chapter, decimal-leading-zero);
+
+    display: block;
+    margin-bottom: var(--space-3);
+
+    color: var(--blog-accent);
+
+    font-size: var(--text-small);
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* âncora "#" do tema ao lado do título: some no capítulo */
+.about-content h2 .anchor {
+    display: none;
+}
+
+
+/* ==========================================================================
+   Cards: princípios e atuação
+   ========================================================================== */
+
+.about-principles,
+.about-work {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+
+    margin: 0 0 var(--space-6);
+}
+
+
+.about-principle,
+.about-work > div {
+    padding: var(--space-5);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.about-principle:hover,
+.about-work > div:hover {
+    border-color: var(--blog-accent);
+    transform: translateY(-2px);
+}
+
+
+.about-principle strong,
+.about-work h3 {
+    display: block;
+    margin: 0 0 var(--space-2);
+
+    color: var(--primary);
+
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.about-principle p,
+.about-work p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* "O que faço": número de cada item */
+.about-work {
+    counter-reset: work;
+}
+
+
+.about-work > div {
+    counter-increment: work;
+}
+
+
+.about-work > div::before {
+    content: counter(work, decimal-leading-zero);
+
+    display: block;
+    margin-bottom: var(--space-3);
+
+    color: var(--blog-accent);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+
+/* 5 itens: o último ocupa a linha inteira */
+.about-work > div:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================================
+   Fechamento
+   ========================================================================== */
+
+.about-cta {
+    margin: var(--space-6) 0 var(--space-9);
+    padding: var(--space-8) var(--space-7);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--blog-accent);
+    border-radius: 24px;
+
+    text-align: center;
+}
+
+
+.about-cta-text {
+    max-width: 620px;
+    margin: 0 auto;
+
+    color: var(--secondary);
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+.about-cta h2 {
+    margin: var(--space-4) 0 var(--space-6);
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+
+.about-cta .hero-actions {
+    justify-content: center;
+}
+
+
+.about-cta .home-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .about-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-7);
+    }
+
+    /* foto primeiro no mobile, menor */
     .about-photo {
-        width: 60%;
+        order: -1;
+        width: min(70%, 360px);
+    }
+
+    .about-content section:has(> h2) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-content section:has(> h2) > *,
+    .about-content section > h2 {
+        grid-column: 1;
+    }
+
+    .about-content section > h2 {
+        grid-row: auto;
+        position: static;
+        margin-bottom: var(--space-5);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding: var(--space-6) 0 var(--space-7);
+    }
+
+    .about-lead {
+        font-size: 1.05rem;
+    }
+
+    .about-content section {
+        padding: var(--space-7) 0;
+    }
+
+    .about-principles,
+    .about-work {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-cta {
+        padding: var(--space-7) var(--space-5);
+    }
+
+    .about-cta .home-button {
+        flex: 1 1 100%;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-principle:hover,
+    .about-work > div:hover {
+        transform: none;
     }
 }

@@ -1,0 +1,16 @@
+{{- /*
+  Resumo curto de um post, em texto puro:
+  description do front matter → 1º parágrafo do conteúdo (sem títulos,
+  diferente de .Summary, que começa pelos títulos do texto) → .Summary.
+  Uso: {{ partial "post-summary.html" (dict "page" . "length" 160) }}
+*/ -}}
+{{- $p := .page }}
+{{- $text := $p.Description }}
+{{- if not $text }}
+    {{- range findRE `(?s)<p>.*?</p>` $p.Content 5 }}
+        {{- $t := . | plainify | htmlUnescape | strings.TrimSpace }}
+        {{- if and (not $text) (gt (len $t) 40) }}{{ $text = $t }}{{ end }}
+    {{- end }}
+{{- end }}
+{{- $text = $text | default ($p.Summary | plainify | htmlUnescape) }}
+{{- return ($text | truncate (.length | default 160)) }}

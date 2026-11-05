@@ -63,8 +63,9 @@
 &lt;h2 id=&#34;o-que-é-o-composer&#34;&gt;O que é o composer?&lt;/h2&gt;
 &lt;p&gt;Uma ferramenta para gerenciamento de pacotes PHP. Caso você seja usuário Linux, podemos comparar (com as devidas resalvas) o composer com o apt-get.&lt;/p&gt;
 &lt;p&gt;Citando o amigo &lt;a href=&#34;http://eltonminetto.net/&#34;&gt;Elton Minetto&lt;/a&gt;:&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
+    &lt;p&gt;“O composer é a melhor invensão depois do pão de forma” - Minetto, Elton.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

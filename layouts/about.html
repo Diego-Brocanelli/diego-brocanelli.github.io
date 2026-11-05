@@ -1,38 +1,50 @@
 {{- define "main" }}
 
+{{- $name := .Params.name | default .Title }}
+{{- $linkedin := "" }}
+{{- range site.Params.socialIcons }}
+    {{- if eq (lower .name) "linkedin" }}{{ $linkedin = .url }}{{ end }}
+{{- end }}
+
 <main class="home about-page">
 
-    <!-- Hero -->
+    <!-- Hero: texto + foto -->
 
-    <section class="home-hero about-hero">
+    <section class="about-hero" aria-labelledby="about-title">
 
-        <div class="home-hero-main">
-
-            {{- with .Params.photo }}
-                <img
-                    class="about-photo"
-                    src="{{ . }}"
-                    alt="Foto de {{ $.Params.name | default $.Site.Title }}"
-                >
-            {{- end }}
+        <div class="about-hero-text">
 
             {{- with .Params.role }}
-            <span class="home-label">
-                {{ . }}
-            </span>
+            <span class="home-label">{{ . }}</span>
             {{- end }}
 
-            <h1>
+            <h1 id="about-title" class="about-title">
                 Olá, eu sou
-                <span>{{ .Params.name | default .Title }}.</span>
+                <span>{{ $name }}.</span>
             </h1>
+
+            {{- with .Params.lead }}
+            <p class="about-lead">{{ . }}</p>
+            {{- end }}
+
+            <div class="hero-actions">
+                {{- with $linkedin }}
+                <a href="{{ . | safeURL }}" class="home-button home-button--primary" target="_blank" rel="noopener noreferrer me">
+                    Vamos conversar <span aria-hidden="true">→</span>
+                </a>
+                {{- end }}
+                <a href="{{ "posts/" | relURL }}" class="home-button">
+                    Ler o blog
+                </a>
+            </div>
 
             <!-- social icons -->
             <div class="social-icons">
                 {{- range site.Params.socialIcons }}
                     <a
                         href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
-                        title="{{ (.title | default .name) | title }}">
+                        title="{{ (.title | default .name) | title }}"
+                        aria-label="{{ (.title | default .name) | title }}">
                         {{ partial "svg.html" . }}
                     </a>
                 {{- end }}
@@ -41,20 +53,57 @@
 
         </div>
 
+        {{- with .Params.photo }}
+        <figure class="about-photo">
+            <img
+                src="{{ . }}"
+                alt="Foto de {{ $name }}"
+                width="1122" height="1402"
+                loading="eager" decoding="async"
+            >
+        </figure>
+        {{- end }}
+
     </section>
 
 
-    <!-- Conteúdo -->
+    {{- partial "stats.html" . }}
 
-    <section class="about-content">
 
-        {{- if .Content }}
-        <div class="post-content md-content">
-            {{- if not (.Param "disableAnchoredHeadings") }}
-            {{- partial "anchored_headings.html" .Content -}}
-            {{- else }}{{ .Content }}{{ end }}
+    <!-- Conteúdo (content/about.html) -->
+
+    {{- if .Content }}
+    <div class="about-content">
+        {{- if not (.Param "disableAnchoredHeadings") }}
+        {{- partial "anchored_headings.html" .Content -}}
+        {{- else }}{{ .Content }}{{ end }}
+    </div>
+    {{- end }}
+
+
+    <!-- Fechamento -->
+
+    <section class="about-cta" aria-labelledby="about-cta-title">
+
+        <p class="about-cta-text">
+            Se você gosta de software, arquitetura e das decisões por trás
+            do código, provavelmente temos bastante assunto para conversar.
+        </p>
+
+        <h2 id="about-cta-title">Vamos conversar.</h2>
+
+        <div class="hero-actions">
+            {{- range site.Params.socialIcons }}
+                {{- if ne (lower .name) "rss" }}
+                <a
+                    href="{{ trim .url " " | safeURL }}" class="home-button{{ if eq (lower .name) "linkedin" }} home-button--primary{{ end }}"
+                    target="_blank" rel="noopener noreferrer me">
+                    {{ partial "svg.html" . }}
+                    {{ (.title | default .name) | title }}
+                </a>
+                {{- end }}
+            {{- end }}
         </div>
-        {{- end }}
 
     </section>
 

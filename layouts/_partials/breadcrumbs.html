@@ -4,8 +4,11 @@
 
     {{- with .Section }}
     {{- with site.GetPage . }}
+    {{- /* na própria página da seção (/posts/) não repete o nome */}}
+    {{- if ne .RelPermalink $.RelPermalink }}
         <span aria-hidden="true"> / </span>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- end }}
     {{- end }}
     {{- end }}
 

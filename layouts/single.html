@@ -1,0 +1,152 @@
+{{- define "main" }}
+
+{{- /*
+  Página do post. Sobrescreve themes/hugo-PaperMod/layouts/single.html.
+  Foco em leitura: coluna de texto com ~75 caracteres por linha, sumário
+  lateral fixo em telas largas (recolhível no mobile), barra de progresso
+  e, no fim, autor + próximo post para continuar lendo.
+  Estilos: assets/css/extended/custom-single.css · JS: assets/js/post.js
+*/ -}}
+
+{{- $about := site.GetPage "/about" }}
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $isPost := eq .Section "posts" }}
+
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+
+<article class="post-single">
+
+    <header class="post-header">
+
+        {{ partial "breadcrumbs.html" . }}
+
+        {{- with .Params.categories }}
+        <span class="home-label post-kicker">{{ index . 0 | title }}</span>
+        {{- end }}
+
+        <h1 class="post-title">
+            {{ .Title }}
+            {{- if .Draft }}
+            <span class="home-article-badge--draft">Rascunho</span>
+            {{- end }}
+        </h1>
+
+        {{- with .Description }}
+        <p class="post-description">{{ . }}</p>
+        {{- end }}
+
+        {{- if not (.Param "hideMeta") }}
+        <div class="post-byline">
+            {{- with $about }}{{ with .Params.photo }}
+            <img class="post-byline-photo" src="{{ . }}" alt="" width="44" height="44" loading="lazy" decoding="async">
+            {{- end }}{{ end }}
+
+            <div class="post-byline-text">
+                <span class="post-byline-author">{{ .Params.author | default site.Params.author }}</span>
+                <span class="post-meta-line">
+                    {{- if not .Date.IsZero }}
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
+                    <span aria-hidden="true">·</span>
+                    {{- end }}
+                    <span>{{ .ReadingTime }} min de leitura</span>
+                </span>
+            </div>
+        </div>
+        {{- end }}
+
+    </header>
+
+    {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+
+    <div class="post-body">
+
+        {{- if (.Param "ShowToc") }}
+        {{- partial "toc.html" . }}
+        {{- end }}
+
+        {{- if .Content }}
+        <div class="post-content md-content">
+            {{- if not (.Param "disableAnchoredHeadings") }}
+            {{- partial "anchored_headings.html" .Content -}}
+            {{- else }}{{ .Content }}{{ end }}
+        </div>
+        {{- end }}
+
+    </div>
+
+    {{- partial "extend_post_content.html" . }}
+
+
+    <footer class="post-footer">
+
+        {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+        {{- with ($.GetTerms $tags) }}
+        <ul class="post-tags" aria-label="Tags">
+            {{- range . }}
+            <li><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>
+            {{- end }}
+        </ul>
+        {{- end }}
+
+        {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+        <div class="post-share">
+            <span class="post-share-label">Compartilhe</span>
+            {{- partial "share_icons.html" . -}}
+        </div>
+        {{- end }}
+
+        <!-- Autor -->
+        <aside class="author-card" aria-label="Sobre o autor">
+            {{- with $about }}{{ with .Params.photo }}
+            <img class="author-card-photo" src="{{ . }}" alt="" width="96" height="96" loading="lazy" decoding="async">
+            {{- end }}{{ end }}
+            <div>
+                <span class="home-label">Escrito por</span>
+                <p class="author-card-name">{{ .Params.author | default site.Params.author }}</p>
+                {{- with $about }}
+                {{- with .Params.lead }}<p class="author-card-bio">{{ . }}</p>{{ end }}
+                <a href="{{ .RelPermalink }}" class="home-section-link">Conheça minha história <span aria-hidden="true">→</span></a>
+                {{- end }}
+            </div>
+        </aside>
+
+        <!-- Continue lendo: anterior / próximo (por data) -->
+        {{- if and (.Param "ShowPostNavLinks") $isPost }}
+        {{- /* coleção em ordem de data decrescente: Next = mais novo, Prev = mais antigo */}}
+        {{- $newer := $posts.Next . }}
+        {{- $older := $posts.Prev . }}
+        {{- if or $newer $older }}
+        <nav class="post-nav" aria-label="Continue lendo">
+            {{- with $older }}
+            <a class="post-nav-item post-nav-item--prev" href="{{ .RelPermalink }}">
+                <span class="post-nav-label"><span aria-hidden="true">←</span> Post anterior</span>
+                <span class="post-nav-title">{{ .Title }}</span>
+            </a>
+            {{- end }}
+            {{- with $newer }}
+            <a class="post-nav-item post-nav-item--next" href="{{ .RelPermalink }}">
+                <span class="post-nav-label">Próximo post <span aria-hidden="true">→</span></span>
+                <span class="post-nav-title">{{ .Title }}</span>
+            </a>
+            {{- end }}
+        </nav>
+        {{- end }}
+        {{- end }}
+
+    </footer>
+
+    {{- if (.Param "comments") }}
+    <section class="post-comments" aria-label="Comentários">
+        <h2 class="post-comments-title">Comentários</h2>
+        {{- partial "comments.html" . }}
+    </section>
+    {{- end }}
+
+</article>
+
+{{- $js := resources.Get "js/post.js" | resources.Minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+{{- end }}{{/* end main */}}

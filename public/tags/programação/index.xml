@@ -36,8 +36,10 @@
       <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
       <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
 &lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+    &lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
 &lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
@@ -49,8 +51,10 @@
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
       <guid>http://localhost:1313/posts/como-programador-sou-obrigado-a-usar-linux/</guid>
       <description>&lt;p&gt;Gostaria de bater um papo sobre uma pergunta bem interessante.&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;Como programador, sou obrigado a usar Linux?&lt;/p&gt;
+    &lt;p&gt;Como programador, sou obrigado a usar Linux?&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;p&gt;Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉&lt;/p&gt;
 &lt;p&gt;Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).&lt;/p&gt;

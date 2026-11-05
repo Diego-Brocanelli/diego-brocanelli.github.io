@@ -89,21 +89,21 @@ $passwordHash = password_hash(
 echo $passwordHash;
 ```
 
-**Resulado**
+**Resultado**
 
-```bash
+```text
 $argon2id$v=19$m=65536,t=4,p=1$U2FsdF9yYW5kb21fMThkNQ$y1v7YQ8G8rN9qK5x2Wm4aZ7pLcF3hT6sV9dE0bR
 ```
 
 Executando o mesmo processo novamente com a mesma senha, o resultado é diferente:
 
-```bash
+```text
 $argon2id$v=19$m=65536,t=4,p=1$QzR6bF9zYWx0XzY5N2E$k8M2pX6vN1sQ4rT9aB5cD7eF0gH3iJ6lP
 ```
 
 Isso acontece por causa do **salt**: um valor aleatório único gerado para cada senha. Ele garante que a mesma senha nunca produza o mesmo hash.
 
-> <span>💡</span> No exemplo acima, a função password_hash gera  automáticamente o salt.
+> <span>💡</span> No exemplo acima, a função `password_hash` gera automaticamente o salt.
 
 Além do salt, existe o **pepper**: um segredo global (geralmente o mesmo para todas as senhas) armazenado fora do banco de dados. Ele adiciona uma camada extra de proteção.
 

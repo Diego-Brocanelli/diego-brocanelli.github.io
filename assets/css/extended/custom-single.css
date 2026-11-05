@@ -1,0 +1,1030 @@
+/* ==========================================================================
+   custom-single.css
+
+   Página do post (layouts/single.html + assets/js/post.js). Prioridade é a
+   leitura:
+     - coluna de texto com --measure (~75 caracteres por linha);
+     - corpo 19px / altura de linha 1.75, hierarquia clara de títulos;
+     - sumário lateral fixo em telas >= 1200px, recolhível abaixo disso;
+     - barra de progresso discreta no topo;
+     - no fim: tags, compartilhar, autor e anterior/próximo.
+   Os blocos de código ficam em custom.css ("Blocos de código") e syntax.css.
+   ========================================================================== */
+
+.post-single {
+    --measure: 40rem;          /* 640px ≈ 75 caracteres em Source Sans 19px */
+    --toc-width: 15rem;
+}
+
+
+/* o post usa um container mais largo para o sumário caber na lateral,
+   sem tirar o texto do centro */
+body:has(.post-single) .main {
+    max-width: 1320px;
+}
+
+
+.post-header,
+.post-single > .entry-cover,
+.post-footer,
+.post-comments {
+    max-width: var(--measure);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================================================
+   Barra de progresso
+   ========================================================================== */
+
+.reading-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+
+    height: 3px;
+
+    pointer-events: none;
+}
+
+
+.reading-progress span {
+    display: block;
+    height: 100%;
+
+    background: var(--blog-accent);
+
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+}
+
+
+/* ==========================================================================
+   Cabeçalho do post
+   ========================================================================== */
+
+.post-header {
+    padding: var(--space-6) 0 var(--space-7);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.post-header .breadcrumbs {
+    margin-bottom: var(--space-6);
+}
+
+
+.post-header .breadcrumbs,
+.post-header .breadcrumbs a {
+    font-size: var(--text-small);
+}
+
+
+.post-header .breadcrumbs > span:last-child {
+    /* título repetido no breadcrumb: corta em 1 linha */
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* .post-header na frente: custom.css (.home-label) carrega depois deste arquivo */
+.post-header .post-kicker {
+    margin-bottom: var(--space-3);
+    color: var(--blog-accent);
+}
+
+
+.post-title {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+
+    text-wrap: balance;
+}
+
+
+.post-description {
+    margin: var(--space-5) 0 0;
+
+    color: var(--secondary);
+
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+
+.post-byline {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.post-byline-photo {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+
+.post-byline-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+
+.post-byline-author {
+    font-weight: 600;
+}
+
+
+.post-single > .entry-cover {
+    margin-bottom: var(--space-7);
+}
+
+
+.post-single > .entry-cover img {
+    border-radius: 16px;
+}
+
+
+/* ==========================================================================
+   Corpo: texto central + sumário lateral
+   ========================================================================== */
+
+.post-body {
+    max-width: var(--measure);
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   Tipografia do conteúdo
+   ========================================================================== */
+
+.post-content {
+    color: var(--content);
+
+    font-family: var(--font-body);
+    font-size: 1.1875rem;      /* 19px */
+    line-height: 1.75;
+
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+
+.post-content > * + * {
+    margin-top: 1.4em;
+}
+
+
+.post-content p {
+    margin: 0;
+}
+
+
+/* parágrafo depois de qualquer bloco (texto, imagem, aviso, código);
+   precisa vir depois de ".post-content p", que zera a margem */
+.post-content > * + p {
+    margin-top: 1.2em;
+}
+
+
+.post-content strong {
+    font-weight: 650;
+}
+
+
+/* títulos: espaço maior acima (abre a seção) que abaixo (cola no texto) */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin: 2.2em 0 0;
+
+    color: var(--primary);
+
+    font-family: var(--font-body);
+    font-weight: 700;
+
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+
+    text-wrap: balance;
+    scroll-margin-top: var(--space-6);
+}
+
+
+.post-content h1 { font-size: 2rem; }
+.post-content h2 { font-size: 1.75rem; }
+.post-content h3 { font-size: 1.35rem; margin-top: 1.8em; }
+.post-content h4,
+.post-content h5,
+.post-content h6 { font-size: 1.15rem; margin-top: 1.6em; }
+
+
+.post-content :is(h1, h2, h3, h4, h5, h6) + * {
+    margin-top: 0.6em;
+}
+
+
+/* primeiro elemento do texto não precisa do respiro de seção */
+.post-content > :first-child {
+    margin-top: 0;
+}
+
+
+/* âncora "#" ao lado do título (anchored_headings do tema) */
+.post-content .anchor {
+    margin-inline-start: 0.3em;
+
+    color: var(--secondary);
+
+    font-weight: 400;
+    text-decoration: none;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+
+.post-content :is(h1, h2, h3, h4):hover .anchor,
+.post-content .anchor:focus-visible {
+    opacity: 1;
+}
+
+
+/* listas */
+.post-content ul,
+.post-content ol {
+    padding-inline-start: 1.4em;
+}
+
+
+.post-content li {
+    margin-top: 0.5em;
+    padding-inline-start: 0.2em;
+}
+
+
+.post-content li > ul,
+.post-content li > ol {
+    margin-top: 0.5em;
+}
+
+
+.post-content ul li::marker,
+.post-content ol li::marker {
+    color: var(--blog-accent);
+    font-weight: 650;
+}
+
+
+/* links */
+.post-content a {
+    color: var(--blog-accent);
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+
+.post-content a:hover {
+    color: var(--blog-accent-hover);
+    text-decoration-thickness: 2px;
+}
+
+
+/* ==========================================================================
+   Citações e avisos (layouts/_markup/render-blockquote.html)
+   ========================================================================== */
+
+/* citação: mesmo tamanho do texto, mais discreta que o conteúdo do autor */
+.post-content blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: var(--space-1) 0 var(--space-1) var(--space-5);
+
+    border-inline-start: 3px solid var(--border);
+
+    color: var(--secondary);
+
+    font-size: 1em;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+
+.post-content blockquote > * + * {
+    margin-top: 0.8em;
+}
+
+
+.post-content blockquote :is(strong, a, code) {
+    font-style: normal;
+}
+
+
+.post-content blockquote p span {
+    font-style: normal;
+}
+
+
+/* caixa de aviso: Nota, Dica, Importante, Atenção, Cuidado */
+.post-content .callout {
+    --callout-color: var(--callout-note);
+
+    padding: var(--space-4) var(--space-5);
+
+    background: color-mix(in srgb, var(--callout-color) 6%, var(--blog-bg));
+    border: 1px solid color-mix(in srgb, var(--callout-color) 25%, var(--border));
+    border-inline-start: 4px solid var(--callout-color);
+    border-radius: 12px;
+
+    color: var(--primary);
+
+    font-size: 1.0625rem;
+    line-height: 1.65;
+}
+
+
+.post-content .callout--tip       { --callout-color: var(--callout-tip); }
+.post-content .callout--important { --callout-color: var(--callout-important); }
+.post-content .callout--warning   { --callout-color: var(--callout-warning); }
+.post-content .callout--caution   { --callout-color: var(--callout-caution); }
+
+
+.post-content .callout > * + * {
+    margin-top: 0.75em;
+}
+
+
+.post-content .callout .callout-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    margin: 0;
+
+    color: var(--callout-color);
+
+    font-size: var(--text-small);
+    font-weight: 700;
+
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.post-content .callout-title svg {
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+
+/* tabelas, listas e código dentro da caixa ou da citação */
+.post-content :is(.callout, blockquote) :is(ul, ol) {
+    margin-bottom: 0;
+}
+
+
+.post-content .callout table {
+    font-size: 0.9375rem;
+}
+
+
+/* imagens */
+.post-content img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    border-radius: 12px;
+}
+
+
+.post-content figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.post-content figcaption {
+    margin-top: var(--space-2);
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    text-align: center;
+}
+
+
+/* legenda das imagens em tabela (padrão usado nos posts) */
+.table-img td {
+    border: none !important;
+    outline: none; /* caso a "borda" seja um outline, não border */
+    padding: 0 !important;
+}
+
+
+.table-img-footer {
+    margin-top: var(--space-2);
+
+    color: var(--secondary);
+
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+
+.table-img-footer span {
+    font-weight: 600;
+}
+
+
+/* tabelas: rolam na horizontal em telas estreitas em vez de estourar */
+.post-content table:not(.table-img) {
+    display: block;
+    overflow-x: auto;
+
+    width: max-content;
+    max-width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.post-content table:not(.table-img) th,
+.post-content table:not(.table-img) td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+
+.post-content table:not(.table-img) th {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+
+/* separador */
+.post-content hr {
+    width: 4rem;
+    height: 0;
+    margin: 3em auto;
+
+    border: 0;
+    border-top: 2px solid var(--border);
+}
+
+
+/* vídeos e embeds */
+.post-content iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+
+    border: 0;
+    border-radius: 12px;
+}
+
+
+/* ==========================================================================
+   Sumário
+   ========================================================================== */
+
+.post-body .toc {
+    margin: 0 0 var(--space-7);
+    padding: 0;
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+
+.toc-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 52px;
+    padding: 0 var(--space-5);
+
+    color: var(--primary);
+
+    font-size: var(--text-small);
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+
+.toc-title::-webkit-details-marker {
+    display: none;
+}
+
+
+.toc-title::after {
+    content: "";
+
+    width: 0.55em;
+    height: 0.55em;
+
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+
+.toc[open] .toc-title::after {
+    transform: rotate(-135deg) translateY(-2px);
+}
+
+
+.toc-nav ol {
+    counter-reset: toc;
+
+    margin: 0;
+    padding: 0 var(--space-5) var(--space-5);
+
+    list-style: none;
+}
+
+
+.toc-nav li {
+    counter-increment: toc;
+    margin: 0;
+}
+
+
+.toc-nav a {
+    display: grid;
+    grid-template-columns: 2em minmax(0, 1fr);
+
+    padding: var(--space-2) 0;
+
+    color: var(--secondary);
+
+    font-size: 1rem;
+    line-height: 1.4;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.toc-nav a::before {
+    content: counter(toc, decimal-leading-zero);
+
+    color: var(--secondary);
+
+    font-size: 0.8em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.75;
+
+    opacity: 0.7;
+}
+
+
+.toc-nav a:hover,
+.toc-nav a[aria-current] {
+    color: var(--blog-accent);
+    text-decoration: none;
+}
+
+
+.toc-nav a[aria-current] {
+    font-weight: 600;
+}
+
+
+/* telas largas: sumário vira coluna lateral fixa à direita do texto */
+@media (min-width: 1200px) {
+
+    .post-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) var(--measure) minmax(0, 1fr);
+        column-gap: var(--space-7);
+
+        max-width: none;
+    }
+
+    .post-body > * {
+        grid-column: 2;
+    }
+
+    .post-body .toc {
+        grid-column: 3;
+        grid-row: 1;
+        align-self: start;
+
+        position: sticky;
+        top: var(--space-6);
+
+        max-width: var(--toc-width);
+        max-height: calc(100vh - var(--space-8));
+        overflow-y: auto;
+        margin: 0;
+
+        background: transparent;
+        border: 0;
+        border-inline-start: 1px solid var(--border);
+        border-radius: 0;
+    }
+
+    .post-body .post-content {
+        grid-row: 1;
+    }
+
+    .toc-title {
+        min-height: 0;
+        padding: 0 var(--space-4) var(--space-3);
+
+        color: var(--secondary);
+    }
+
+    .toc-nav ol {
+        padding: 0;
+    }
+
+    .toc-nav a {
+        grid-template-columns: minmax(0, 1fr);
+
+        margin-inline-start: -1px;
+        padding: var(--space-2) var(--space-4);
+
+        border-inline-start: 2px solid transparent;
+
+        font-size: 0.9375rem;
+    }
+
+    .toc-nav a::before {
+        display: none;
+    }
+
+    .toc-nav a[aria-current] {
+        border-inline-start-color: var(--blog-accent);
+    }
+}
+
+
+/* ==========================================================================
+   Rodapé do post
+   ========================================================================== */
+
+.post-footer {
+    margin-top: var(--space-8);
+}
+
+
+.post-footer > * {
+    margin-bottom: 0;
+}
+
+
+.post-footer > * + * {
+    margin-top: var(--space-6);
+}
+
+
+/* tags */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.post-tags li a {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 36px;
+    padding: 0 var(--space-4);
+
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    line-height: 1;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.post-tags li a:hover {
+    border-color: var(--blog-accent);
+    background: var(--blog-accent);
+    color: var(--blog-selection-text);
+}
+
+
+/* compartilhar */
+.post-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+
+    padding: var(--space-4) 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.post-share-label {
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+.post-share .share-buttons {
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+}
+
+
+.post-share .share-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--secondary);
+
+    transition: color 0.2s ease;
+}
+
+
+.post-share .share-buttons a:not(:last-of-type) {
+    margin-inline-end: 0;
+}
+
+
+.post-share .share-buttons a:hover {
+    color: var(--blog-accent);
+}
+
+
+.post-share .share-buttons svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* autor */
+.author-card {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-5);
+
+    padding: var(--space-6);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+
+.author-card-photo {
+    width: 96px;
+    height: 96px;
+    margin: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+
+.author-card .home-label {
+    margin-bottom: var(--space-1);
+}
+
+
+.author-card-name {
+    margin: 0;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+
+.author-card-bio {
+    margin: var(--space-2) 0 var(--space-1);
+
+    color: var(--secondary);
+
+    line-height: 1.6;
+}
+
+
+/* anterior / próximo */
+.post-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+}
+
+
+.post-nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
+    padding: var(--space-5);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.post-nav-item--next {
+    grid-column: 2;
+    text-align: right;
+}
+
+
+.post-nav-item:hover {
+    border-color: var(--blog-accent);
+    transform: translateY(-2px);
+}
+
+
+.post-nav-label {
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.post-nav-title {
+    color: var(--primary);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    transition: color 0.2s ease;
+}
+
+
+.post-nav-item:hover .post-nav-title {
+    color: var(--blog-accent);
+}
+
+
+/* comentários */
+.post-comments {
+    margin-top: var(--space-8);
+    padding-bottom: var(--space-8);
+}
+
+
+.post-comments-title {
+    margin: 0 0 var(--space-4);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .post-header {
+        padding: var(--space-4) 0 var(--space-6);
+    }
+
+    .post-header .breadcrumbs {
+        margin-bottom: var(--space-5);
+    }
+
+    .post-description {
+        font-size: 1.15rem;
+    }
+
+    .post-content {
+        font-size: 1.0625rem;  /* 17px */
+        line-height: 1.7;
+    }
+
+    .post-content h1 { font-size: 1.6rem; }
+    .post-content h2 { font-size: 1.45rem; }
+    .post-content h3 { font-size: 1.2rem; }
+
+    .post-content .callout {
+        padding: var(--space-4);
+        font-size: 1rem;
+    }
+
+    .author-card {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: var(--space-4);
+        padding: var(--space-5);
+    }
+
+    .author-card-photo {
+        width: 64px;
+        height: 64px;
+        align-self: start;
+    }
+
+    .post-nav {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .post-nav-item--next {
+        grid-column: 1;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .post-nav-item:hover {
+        transform: none;
+    }
+}

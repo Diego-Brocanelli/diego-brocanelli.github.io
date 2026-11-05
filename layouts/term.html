@@ -1,0 +1,40 @@
+{{- define "main" }}
+
+{{- /*
+  Página de categoria ou tag (/categories/php/, /tags/docker/).
+  Mesmo visual do /posts, sem destaques: partial post-archive.html.
+  Estilos: assets/css/extended/custom-archive.css
+*/ -}}
+{{- $pages := .Pages.ByDate.Reverse }}
+{{- $count := len $pages }}
+{{- $kind := cond (eq .Data.Plural "tags") "Tag" "Categoria" }}
+
+<div class="archive-page">
+
+    <header class="archive-hero archive-hero--term">
+        {{ partial "breadcrumbs.html" . }}
+
+        <span class="home-label">{{ $kind }}</span>
+
+        <h1 class="archive-hero-title">{{ .Title }}</h1>
+
+        <div class="archive-hero-footer">
+            <p class="archive-lead">
+                {{ $count }} {{ cond (eq $count 1) "artigo" "artigos" }}
+                {{- with index $pages.ByDate 0 }} desde {{ .Date.Year }}{{ end }}.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ "posts/" | relURL }}" class="home-button">Todos os artigos</a>
+                {{- with .OutputFormats.Get "rss" }}
+                <a href="{{ .RelPermalink }}" class="home-button">RSS</a>
+                {{- end }}
+            </div>
+        </div>
+    </header>
+
+    {{ partial "post-archive.html" (dict "pages" $pages) }}
+
+</div>
+
+{{- end }}{{/* end main */}}

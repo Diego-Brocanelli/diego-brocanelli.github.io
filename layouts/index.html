@@ -1,163 +1,158 @@
 {{- define "main" }}
 
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $featured := index $posts 0 }}
+{{- $recent := first 4 (after 1 $posts) }}
+
 <main class="home">
 
     <!-- Hero -->
 
-    <section class="home-hero">
+    <section class="hero" aria-labelledby="hero-title">
 
-        <div class="home-hero-main">
+        <span class="home-label">
+            {{ site.Params.author }} · Engenheiro de Software
+        </span>
 
-            <span class="home-label">
-                Engenheiro de Software | Arquitetura | Tecnologia
-            </span>
+        <h1 id="hero-title" class="hero-title">
+            Software que
+            <span>precisa evoluir.</span>
+        </h1>
 
-            <h1>
-                Olá, eu sou
-                <span>{{ site.Params.author }}.</span>
-            </h1>
+        <div class="hero-footer">
 
             {{- with site.Params.homeInfoParams.Content }}
-            <p>
-                {{ . }}
-            </p>
+            <p class="hero-lead">{{ . }}</p>
             {{- end }}
 
-            <!-- social icons -->
-            <div class="social-icons">
-                {{- range site.Params.socialIcons }}
-                    <a
-                        href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
-                        title="{{ (.title | default .name) | title }}">
-                        {{ partial "svg.html" . }}
-                    </a>
+            <div class="hero-actions">
+                {{- with $featured }}
+                <a href="{{ .RelPermalink }}" class="home-button home-button--primary">
+                    Ler o último post <span aria-hidden="true">→</span>
+                </a>
                 {{- end }}
+                <a href="{{ "about/" | relURL }}" class="home-button">
+                    Sobre mim
+                </a>
             </div>
-            <!-- social icons -->
+
         </div>
 
+        <!-- social icons -->
+        <div class="social-icons">
+            {{- range site.Params.socialIcons }}
+                <a
+                    href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                    title="{{ (.title | default .name) | title }}"
+                    aria-label="{{ (.title | default .name) | title }}">
+                    {{ partial "svg.html" . }}
+                </a>
+            {{- end }}
+        </div>
+        <!-- social icons -->
+
     </section>
+
+
+    <!-- Números -->
+
+    {{- partial "stats.html" . }}
 
 
     <!-- Últimas publicações -->
 
-    <section class="home-featured">
+    {{- with $featured }}
+    <section class="latest" aria-labelledby="latest-title">
 
         <div class="home-section-heading">
-            <h2>Últimas publicações</h2>
+            <h2 id="latest-title">Últimas publicações</h2>
+            <a href="{{ "posts/" | relURL }}" class="home-section-link">
+                Ver todos <span aria-hidden="true">→</span>
+            </a>
         </div>
 
+        <div class="latest-grid">
 
-        <div class="home-article-list">
+            <!-- Post em destaque: capa = cover.image do front matter ou 1ª imagem do conteúdo -->
+            {{- $cover := partial "post-cover.html" . }}
 
-            {{- $paginator := .Paginate (where site.RegularPages "Type" "posts") 6 }}
+            <article class="featured{{ if not $cover }} featured--no-cover{{ end }}">
 
-            {{- range $paginator.Pages }}
+                {{- with $cover }}
+                <div class="featured-cover">
+                    <img src="{{ . | relURL }}" alt="" loading="eager" decoding="async">
+                </div>
+                {{- end }}
 
-            <article class="home-article{{ if .Draft }} is-draft{{ end }}">
+                <div class="featured-body">
 
-                <div class="home-article-body">
-
-                    <div class="home-article-meta">
-                        {{- if .Draft }}
-                            <span class="home-article-badge home-article-badge--draft">
-                                Rascunho
-                            </span>
-
-                            <span>·</span>
+                    <div class="post-meta-line">
+                        <span class="featured-badge">Mais recente</span>
+                        {{- with .Params.categories }}
+                        <span>{{ index . 0 | title }}</span>
+                        <span aria-hidden="true">·</span>
                         {{- end }}
-
                         <time datetime="{{ .Date.Format "2006-01-02" }}">
-                            {{ .Date.Format "02 Jan 2006" }}
+                            {{ time.Format "02 Jan 2006" .Date }}
                         </time>
-
-                        <span>·</span>
-
-                        <span>
-                            {{ .Params.author | default "Diego Brocanelli" }}
-                        </span>
-
                     </div>
 
-
-                    <h3>
-                        <a href="{{ .RelPermalink }}">
-                            {{ .Title }}
-                        </a>
+                    <h3 class="featured-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </h3>
 
-
-                    <p>
-                        {{ .Description | default (.Summary | plainify | truncate 180) }}
-                    </p>
+                    <p>{{ partial "post-summary.html" (dict "page" . "length" 200) }}</p>
 
                 </div>
 
-
-                <span class="home-article-book" aria-hidden="true">
-                    <span>»</span>
-                </span>
-
             </article>
 
-            {{- end }}
 
-        </div>
+            <ol class="recent-list">
+                {{- range $i, $p := $recent }}
+                <li class="recent{{ if .Draft }} is-draft{{ end }}">
 
-        <div class="home-section-footer">
-            <a href="{{ "posts/" | relURL }}" class="home-button">
-                Ver todos os posts →
-            </a>
+                    <span class="recent-index" aria-hidden="true">
+                        {{ printf "%02d" (add $i 2) }}
+                    </span>
+
+                    <div class="recent-body">
+                        <div class="post-meta-line">
+                            {{- if .Draft }}
+                            <span class="home-article-badge--draft">Rascunho</span>
+                            {{- end }}
+                            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                                {{ time.Format "02 Jan 2006" .Date }}
+                            </time>
+                        </div>
+
+                        <h3>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </h3>
+                    </div>
+
+                </li>
+                {{- end }}
+            </ol>
+
         </div>
 
     </section>
-
-
-    <!-- Tópicos -->
-
-    <!-- <section class="home-topics">
-
-        <div class="home-section-heading">
-            <h2>Explore por tópico</h2>
-        </div>
-
-
-        <div class="home-topic-list">
-
-            {{- range site.Taxonomies.categories }}
-
-            <a
-                href="{{ .Page.RelPermalink }}"
-                class="home-topic"
-            >
-                <span>{{ .Page.Title }}</span>
-                <small>{{ .Count }}</small>
-            </a>
-
-            {{- end }}
-
-        </div>
-
-    </section> -->
+    {{- end }}
 
 
     <!-- Sobre -->
 
-    <section class="home-about">
+    <section class="home-about" aria-labelledby="about-title">
 
         <div>
+            <span class="home-label">Sobre o blog</span>
 
-            <span class="home-label">
-                Sobre o blog
-            </span>
-
-            <h2>
+            <h2 id="about-title">
                 Software é sobre
                 <span>resolver problemas.</span>
             </h2>
-
         </div>
-
 
         <div class="home-about-content">
 
@@ -168,8 +163,8 @@
                 com os desafios que aparecem pelo caminho.
             </p>
 
-            <a href="{{ "about/" | relURL }}">
-                Conheça minha história →
+            <a href="{{ "about/" | relURL }}" class="home-button home-button--primary">
+                Conheça minha história <span aria-hidden="true">→</span>
             </a>
 
         </div>

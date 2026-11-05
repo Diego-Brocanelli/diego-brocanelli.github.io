@@ -1,6 +1,6 @@
 ---
-title: "Search" # in any language you want
+title: "Pesquisar"
 layout: "search" # is necessary
 summary: "search"
-placeholder: "Pesquisar...."
+placeholder: "Ex.: arquitetura, docker, php…"
 ---

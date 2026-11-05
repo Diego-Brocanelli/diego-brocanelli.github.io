@@ -1,0 +1,74 @@
+{{- define "main" }}
+
+{{- /*
+  /posts: arquivo completo, sem paginação.
+  Destaques (3 mais recentes) + partial post-archive.html (todos, por ano).
+  Estilos: assets/css/extended/custom-archive.css
+*/ -}}
+{{- $posts := .RegularPages.ByDate.Reverse }}
+{{- $oldest := index $posts.ByDate 0 }}
+
+<div class="archive-page">
+
+    <header class="archive-hero">
+        {{ partial "breadcrumbs.html" . }}
+
+        <span class="home-label">Arquivo</span>
+
+        <h1 class="archive-hero-title">
+            Todos os
+            <span>artigos.</span>
+        </h1>
+
+        <div class="archive-hero-footer">
+            <p class="archive-lead">
+                +100 artigos{{ with $oldest }} desde {{ .Date.Year }}{{ end }} sobre engenharia
+                de software, arquitetura e tecnologia.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ "search/" | relURL }}" class="home-button">Pesquisar</a>
+                {{- with .OutputFormats.Get "rss" }}
+                <a href="{{ .RelPermalink }}" class="home-button">RSS</a>
+                {{- end }}
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Destaques -->
+    <section class="archive-featured" aria-label="Mais recentes">
+        {{- range first 3 $posts }}
+        {{- $cover := partial "post-cover.html" . }}
+        <article class="archive-card{{ if not $cover }} archive-card--no-cover{{ end }}">
+
+            {{- with $cover }}
+            <div class="archive-card-cover">
+                <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+            </div>
+            {{- end }}
+
+            <div class="post-meta-line">
+                {{- with .Params.categories }}
+                <span class="archive-category">{{ index . 0 | title }}</span>
+                <span aria-hidden="true">·</span>
+                {{- end }}
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
+            </div>
+
+            <h2 class="archive-card-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+
+            <p>{{ partial "post-summary.html" (dict "page" . "length" 140) }}</p>
+
+        </article>
+        {{- end }}
+    </section>
+
+
+    {{ partial "post-archive.html" (dict "pages" $posts) }}
+
+</div>
+
+{{- end }}{{/* end main */}}

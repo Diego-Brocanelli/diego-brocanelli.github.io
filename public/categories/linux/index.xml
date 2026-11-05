@@ -19,8 +19,10 @@
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
       <guid>http://localhost:1313/posts/como-programador-sou-obrigado-a-usar-linux/</guid>
       <description>&lt;p&gt;Gostaria de bater um papo sobre uma pergunta bem interessante.&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;Como programador, sou obrigado a usar Linux?&lt;/p&gt;
+    &lt;p&gt;Como programador, sou obrigado a usar Linux?&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;p&gt;Obrigado não, porém, saber Linux lhe ajudará e muito em sua carreira. 😉&lt;/p&gt;
 &lt;p&gt;Linux está muito ligado ao desenvolvimento de software, e podemos afirmar que, hoje em dia, está muito mais fácil utilizá-lo. Mesmo você utilizando Windows em sua máquina, pode recorrer ao WSL (Linux no Windows).&lt;/p&gt;
@@ -49,8 +51,12 @@
 &lt;p&gt;Analisar performance de banco de dados não é nada simples, principalmente para quem não é DBA .&lt;/p&gt;
 &lt;p&gt;Com base em minhas pesquisas encontrei uma ferramenta bacana que auxilia nessa tarefa chamada &lt;a href=&#34;https://github.com/major/MySQLTuner-perl&#34;&gt;MySQLTuner-perl&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Essa ferramenta gera um relatório com a análise de diversas métricas que podemos utilizar para o processo de tuning do MySQL. Onde no final é gerado algumas recomendações para serem executadas na busca dessa melhoria.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Observação:&lt;/strong&gt; Todas as etapas de execução foram realizadas em um ambiente Linux, mais precisamente no Ubuntu 18.04.&lt;/p&gt;</description>
+
+&lt;aside class=&#34;callout callout--note&#34; role=&#34;note&#34;&gt;
+    &lt;p class=&#34;callout-title&#34;&gt;
+        &lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;10&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;16&#34; x2=&#34;12&#34; y2=&#34;12&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;8&#34; x2=&#34;12.01&#34; y2=&#34;8&#34;/&gt;&lt;/svg&gt;
+        Observação
+    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
