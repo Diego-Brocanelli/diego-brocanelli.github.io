@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Gravatar on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/gravatar/</link>
+    <link>https://diegobrocanelli.com.br/tags/gravatar/</link>
     <description>Recent content in Gravatar on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 27 Feb 2017 15:34:47 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gravatar/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/gravatar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obtendo imagens do Gravatar</title>
-      <link>http://localhost:1313/posts/obtendo-imagens-do-gravatar/</link>
+      <link>https://diegobrocanelli.com.br/posts/obtendo-imagens-do-gravatar/</link>
       <pubDate>Mon, 27 Feb 2017 15:34:47 +0000</pubDate>
-      <guid>http://localhost:1313/posts/obtendo-imagens-do-gravatar/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/obtendo-imagens-do-gravatar/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Um serviço muito bacana é o Gravatar, onde você pode vincular uma imagem ao e-mail desejado e com isso ao comentar em um blog ou serviço que disponibiliza o recurso o mesmo exibirá automaticamente a imagem configurada.&lt;/p&gt;
 &lt;p&gt;E para manipular o serviço com maior facilidade construí uma biblioteca para executar esta tarefa, vamos ao seu uso!&lt;/p&gt;

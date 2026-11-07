@@ -2,72 +2,134 @@
 
 {{- /*
   /posts: arquivo completo, sem paginação.
-  Destaques (3 mais recentes) + partial post-archive.html (todos, por ano).
+  Hero com números + linha do tempo por ano, destaques (3 mais recentes)
+  e o partial post-archive.html (todos, por ano) com filtro instantâneo.
   Estilos: assets/css/extended/custom-archive.css
 */ -}}
 {{- $posts := .RegularPages.ByDate.Reverse }}
 {{- $oldest := index $posts.ByDate 0 }}
+{{- $latest := index $posts 0 }}
+{{- $years := $posts.ByDate.GroupByDate "2006" "asc" }}
+{{- $max := 1 }}
+{{- range $years }}{{ $max = math.Max $max (len .Pages) }}{{ end }}
 
-<div class="archive-page">
+<div class="archive-page archive-page--posts">
 
-    <header class="archive-hero">
+    <header class="archive-hero archive-hero--posts">
         {{ partial "breadcrumbs.html" . }}
 
-        <span class="home-label">Arquivo</span>
+        <span class="home-label">Arquivo completo</span>
 
         <h1 class="archive-hero-title">
             Todos os
             <span>artigos.</span>
         </h1>
 
+        <dl class="archive-stats">
+            <div>
+                <dt>artigos</dt>
+                <dd>{{ len $posts }}</dd>
+            </div>
+            {{- with $oldest }}
+            <div>
+                <dt>desde</dt>
+                <dd>{{ .Date.Year }}</dd>
+            </div>
+            {{- end }}
+            <div>
+                <dt>temas</dt>
+                <dd>{{ len site.Taxonomies.categories }}</dd>
+            </div>
+            {{- with $latest }}
+            <div>
+                <dt>último post</dt>
+                <dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan" .Date }}</time></dd>
+            </div>
+            {{- end }}
+        </dl>
+
         <div class="archive-hero-footer">
             <p class="archive-lead">
-                +100 artigos{{ with $oldest }} desde {{ .Date.Year }}{{ end }} sobre engenharia
-                de software, arquitetura e tecnologia.
+                Engenharia de software, arquitetura e tecnologia: tudo o que já
+                escrevi, do mais recente ao primeiro.
             </p>
 
             <div class="hero-actions">
-                <a href="{{ "search/" | relURL }}" class="home-button">Pesquisar</a>
+                <a href="#arquivo" class="home-button home-button--primary">
+                    Explorar o arquivo <span aria-hidden="true">↓</span>
+                </a>
                 {{- with .OutputFormats.Get "rss" }}
                 <a href="{{ .RelPermalink }}" class="home-button">RSS</a>
                 {{- end }}
             </div>
         </div>
+
+        <!-- linha do tempo: uma barra por ano, altura proporcional ao nº de posts -->
+        {{- if gt (len $years) 1 }}
+        <nav class="archive-timeline" aria-label="Artigos por ano">
+            <ol>
+                {{- range $i, $y := $years }}
+                {{- $n := len .Pages }}
+                <li>
+                    <a href="#ano-{{ .Key }}" style="--h: {{ div (float $n) $max }}; --i: {{ $i }}"
+                       aria-label="{{ .Key }}: {{ $n }} {{ cond (eq $n 1) "artigo" "artigos" }}">
+                        <span class="archive-timeline-count" aria-hidden="true">{{ $n }}</span>
+                        <span class="archive-timeline-bar" aria-hidden="true"></span>
+                        <span class="archive-timeline-year" aria-hidden="true">{{ slicestr .Key 2 }}</span>
+                    </a>
+                </li>
+                {{- end }}
+            </ol>
+        </nav>
+        {{- end }}
     </header>
 
 
-    <!-- Destaques -->
+    <!-- Destaques: 1 grande + 2 empilhados -->
     <section class="archive-featured" aria-label="Mais recentes">
-        {{- range first 3 $posts }}
+        {{- range $i, $p := first 3 $posts }}
         {{- $cover := partial "post-cover.html" . }}
-        <article class="archive-card{{ if not $cover }} archive-card--no-cover{{ end }}">
+        <article class="archive-card{{ if eq $i 0 }} archive-card--lead{{ end }}{{ if not $cover }} archive-card--no-cover{{ end }}">
 
             {{- with $cover }}
             <div class="archive-card-cover">
-                <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+                <img src="{{ . | relURL }}" alt="" loading="{{ cond (eq $i 0) "eager" "lazy" }}" decoding="async">
             </div>
+            {{- else }}
+            <span class="archive-card-index" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
             {{- end }}
 
-            <div class="post-meta-line">
-                {{- with .Params.categories }}
-                <span class="archive-category">{{ index . 0 | title }}</span>
-                <span aria-hidden="true">·</span>
+            <div class="archive-card-body">
+                <div class="post-meta-line">
+                    {{- if eq $i 0 }}
+                    <span class="archive-card-badge">Novo</span>
+                    {{- end }}
+                    {{- with .Params.categories }}
+                    <span class="archive-category">{{ index . 0 | title }}</span>
+                    <span aria-hidden="true">·</span>
+                    {{- end }}
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
+                </div>
+
+                <h2 class="archive-card-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+
+                {{- if eq $i 0 }}
+                <p>{{ partial "post-summary.html" (dict "page" . "length" 160) }}</p>
                 {{- end }}
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "02 Jan 2006" .Date }}</time>
             </div>
 
-            <h2 class="archive-card-title">
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </h2>
-
-            <p>{{ partial "post-summary.html" (dict "page" . "length" 140) }}</p>
+            <span class="archive-card-arrow" aria-hidden="true">↗</span>
 
         </article>
         {{- end }}
     </section>
 
 
-    {{ partial "post-archive.html" (dict "pages" $posts) }}
+    <div id="arquivo" class="archive-anchor">
+        {{ partial "post-archive.html" (dict "pages" $posts "filter" true) }}
+    </div>
 
 </div>
 

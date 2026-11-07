@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Front End on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/front-end/</link>
+    <link>https://diegobrocanelli.com.br/tags/front-end/</link>
     <description>Recent content in Front End on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:42:33 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
-      <link>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <link>https://diegobrocanelli.com.br/posts/hhbr-28-renderizando-componentes-com-vue-js/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/hhbr-28-renderizando-componentes-com-vue-js/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta edição de número 28 do &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; tivemos uma mega palestra sobre Vue.js com o palestrante &lt;a href=&#34;https://twitter.com/wilcorrea&#34;&gt;William Correa&lt;/a&gt;, que explanou em detalhes diversos pontos bacanas da renderização com Vue.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -40,9 +40,9 @@
     </item>
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</link>
+      <link>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</guid>
       <description>&lt;p&gt;Olá!&lt;/p&gt;
 &lt;p&gt;Nesta 26º edição da comunidade [hhbr][1]  tivemos um super bate papo sobre  “Ecossistema Javascript” com o grande &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;Marco Bruno&lt;/a&gt; do &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;CollabCode&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.&lt;/p&gt;
@@ -87,26 +87,26 @@
     </item>
     <item>
       <title>hhbr : 09 – Ember.js: Por que você ainda não está usando? (vídeo)</title>
-      <link>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
+      <link>https://diegobrocanelli.com.br/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</link>
       <pubDate>Thu, 04 May 2017 14:55:09 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/ember-js-por-que-voce-ainda-nao-esta-usando-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;É com alegria que apresento o vídeo da nona edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; e nesta edição tivemos a honra de prestigiar uma super palestra do grande &lt;a href=&#34;tp://danilovaz.github.io/&#34;&gt;Danilo Vaz&lt;/a&gt;, nesta edição foi abordado o tema &lt;strong&gt;“Ember.js: Por que você ainda não está usando?”&lt;/strong&gt;, uma edição fantástica recheada de conteúdo e aprendizado de alta qualidade o Danilo não poupou informações compartilhando muito conhecimento com a comunidade, agradeço muito a ele por ter compartilhado seu tempo e conhecimento com a comunidade. Sem mais delongas espero que apreciem o vídeo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr : 08 – Vue.js e Single Page Applications: O que saber antes de começar (Vídeo)</title>
-      <link>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
+      <link>https://diegobrocanelli.com.br/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</link>
       <pubDate>Thu, 30 Mar 2017 02:04:18 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/vue-js-e-single-page-applications-o-que-saber-antes-de-comecar-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Hoje tivemos a oitava edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRG&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação, dicas e códigos!&lt;/p&gt;
 &lt;p&gt;Nesta edição temos a honra de trazer o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fábio Vedovelli&lt;/a&gt;, onde ele nos guiou no mundo Vuejs apresentando todos os requisitos para iniciarmos uma Single Page Application (SPA), foram apresentados conceitos muitos valiosos que vai lhe ajudar e poupar muito tempo! Foi apresentado pelo Vedovelli um repositório no GitHub criado por ele e seus colegas do &lt;a href=&#34;ttps://codecasts.com.br/lesson&#34;&gt;Codecasts&lt;/a&gt; chamado &lt;a href=&#34;https://github.com/codecasts/spa-starter-kit&#34;&gt;SPA Started Kit&lt;/a&gt; onde facilita e muito o start inicial de uma SPA com Vuejs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr : 02 Flexbox – Interfaces Modernas (Vídeo)</title>
-      <link>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</link>
+      <link>https://diegobrocanelli.com.br/posts/flexbox-interfaces-modernas-video/</link>
       <pubDate>Tue, 18 Oct 2016 23:17:07 +0000</pubDate>
-      <guid>http://localhost:1313/posts/flexbox-interfaces-modernas-video/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/flexbox-interfaces-modernas-video/</guid>
       <description>&lt;p&gt;Fala galera tudo bem?!&lt;/p&gt;
 &lt;p&gt;Ontem dia 05/10/2016 ocorreu a segunda palestra do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, e foi explorado o mundo do Flexbox.&lt;/p&gt;
 &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=GdT6aNYE_TE&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;

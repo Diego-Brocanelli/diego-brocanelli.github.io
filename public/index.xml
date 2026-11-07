@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Diego Brocanelli</title>
-    <link>http://localhost:1313/</link>
+    <link>https://diegobrocanelli.com.br/</link>
     <description>Recent content on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 31 Aug 2026 20:46:44 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Maps e a teoria dos grafos</title>
-      <link>http://localhost:1313/posts/google-maps-e-a-teoria-dos-grafos/</link>
+      <link>https://diegobrocanelli.com.br/posts/google-maps-e-a-teoria-dos-grafos/</link>
       <pubDate>Mon, 31 Aug 2026 20:46:44 +0000</pubDate>
-      <guid>http://localhost:1313/posts/google-maps-e-a-teoria-dos-grafos/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/google-maps-e-a-teoria-dos-grafos/</guid>
       <description>&lt;h1 id=&#34;google-maps-e-a-teoria-dos-grafos&#34;&gt;Google Maps e a teoria dos grafos&lt;/h1&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Abrimos o Google Maps, preenchemos nosso destino e, em pouco tempo, temos a melhor rota dentre as possíveis, pois foram analisadas e calculadas diversas informações para o melhor resultado.&lt;/p&gt;
@@ -31,9 +31,9 @@
     </item>
     <item>
       <title>Autenticação: indo além do simples usuário e senha</title>
-      <link>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</link>
+      <link>https://diegobrocanelli.com.br/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</link>
       <pubDate>Wed, 29 Jul 2026 14:42:49 +0000</pubDate>
-      <guid>http://localhost:1313/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/autenticacao-indo-alem-do-simples-usuario-e-senha/</guid>
       <description>&lt;h1 id=&#34;formas-de-autenticação&#34;&gt;Formas de autenticação&lt;/h1&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Realizar a autenticação do usuário é uma das tarefas mais corriqueiras na vida de um engenheiro de software. Porém, às vezes, acabamos sempre fazendo da mesma maneira, no máximo atualizando o algoritmo.&lt;/p&gt;
@@ -43,36 +43,18 @@
     </item>
     <item>
       <title>Código de barras para engenheiros de software: da etiqueta ao sistema</title>
-      <link>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</link>
+      <link>https://diegobrocanelli.com.br/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</link>
       <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
-      <guid>http://localhost:1313/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/codigo-de-barras-para-engenheiros-de-software-da-etiqueta-ao-sistema/</guid>
       <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Nós como engenheiros de software já nos deparamos com a necessidade de implementar a geração de código de barras, com isso instalamos uma biblioteca de terceiros sem nem parar para nos perguntar como que ela funciona, apenas instalamos e usamos.&lt;/p&gt;
 &lt;p&gt;Porém, aprofundar no entendimento é algo importante para que possamos saber o que estamos fazendo e como é feito, ajudando, por exemplo, a determinar qual o melhor tipo para o problema que estamos resolvendo.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Mago PHP: Ferramenta all-in-one para qualidade e arquitetura de código PHP</title>
-      <link>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</link>
-      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mago-php-ferramenta-all-in-one-para-qualidade-e-arquitetura-de-c%C3%B3digo-php/</guid>
-      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
-&lt;p&gt;Durante minha navegação web, esbarrei com um projeto que chamou minha atenção o &lt;a href=&#34;https://mago.carthage.software/&#34;&gt;Mago PHP&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;O projeto foi desenvolvido em Rust e visa centralizar funcionalidades essenciais para garantir, qualidade, padronização e arquitetura em projetos PHP.&lt;/p&gt;
-&lt;p&gt;A ferramenta reúne:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Formatter;&lt;/li&gt;
-&lt;li&gt;Linter;&lt;/li&gt;
-&lt;li&gt;Static Analyzer;&lt;/li&gt;
-&lt;li&gt;Architectural Guard.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Temos ferramentas individuais que fazem cada uma dessas tarefas, o que achei interessante é estar em uma ferramenta só e altamente configurável.&lt;/p&gt;
-&lt;p&gt;O fato de ter tudo em um lugar, ajuda na gerência de dependências externas. Podemos configurar cada uma das ferramentas conforme a necessidade e padrões do time.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Introdução ao MCP (Model Context Protocol)</title>
-      <link>http://localhost:1313/posts/introducao-ao-mcp/</link>
+      <link>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      <guid>http://localhost:1313/posts/introducao-ao-mcp/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/introducao-ao-mcp/</guid>
       <description>&lt;h2 id=&#34;o-quê-é&#34;&gt;O quê é&lt;/h2&gt;
 &lt;p&gt;O Model Context Protocol (MCP) é um protocolo proposto pela Anthropic visando padronizar como sistemas podem prover contexto para modelos de linguagem (LLMs). Ele facilita a conexão desses modelos com diferentes fontes de dados e ferramentas externas, ampliando significativamente sua utilidade em aplicações reais.&lt;/p&gt;
 &lt;h2 id=&#34;para-que-serve&#34;&gt;Para que serve?&lt;/h2&gt;
@@ -80,9 +62,9 @@
     </item>
     <item>
       <title>Como analisar um problema</title>
-      <link>http://localhost:1313/posts/como-analisar-um-problema/</link>
+      <link>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</link>
       <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      <guid>http://localhost:1313/posts/como-analisar-um-problema/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/como-analisar-um-problema/</guid>
       <description>&lt;h2 id=&#34;o-que-motivou-o-post&#34;&gt;O que motivou o post?&lt;/h2&gt;
 &lt;p&gt;Somos programadores e analisar faz parte do nosso dia a dia, seja para resolver problemas, criar novas funcionalidades ou implementar melhorias. Fazer uma excelente análise é essencial para garantir boas decisões e evitar retrabalho.&lt;/p&gt;
 &lt;h2 id=&#34;por-que-analisar-bem-é-tão-importante&#34;&gt;Por que analisar bem é tão importante?&lt;/h2&gt;
@@ -90,18 +72,18 @@
     </item>
     <item>
       <title>Melhore a performance do seu sistema com um load balancer</title>
-      <link>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
+      <link>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</link>
       <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
-      <guid>http://localhost:1313/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/melhore-a-performance-do-seu-sistema-com-um-load-balancer/</guid>
       <description>&lt;h1 id=&#34;o-que-é-load-balancer&#34;&gt;O que é load balancer?&lt;/h1&gt;
 &lt;p&gt;O load balancer (balanceamento de carga) é uma técnica utilizada para distribuir o tráfego de rede entre vários servidores, garantindo que nenhum deles fique sobrecarregado. Isso melhora o desempenho, a escalabilidade e a disponibilidade de sistemas web e aplicativos.&lt;/p&gt;
 &lt;p&gt;Imagine um restaurante movimentado com vários atendentes. Se todos os clientes fossem direcionados apenas a um atendente, haveria filas enormes e insatisfação. O load balancer funciona como um gerente organizando os clientes para diferentes atendentes, garantindo um fluxo equilibrado e um atendimento mais eficiente.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Como transformar sistemas legados em oportunidades de crescimento</title>
-      <link>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
+      <link>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</link>
       <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
-      <guid>http://localhost:1313/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/como-transformar-sistemas-legados-em-oportunidades-de-crescimento/</guid>
       <description>&lt;h2 id=&#34;o-que-define-um-sistema-como-legado&#34;&gt;O que define um sistema como legado?&lt;/h2&gt;
 &lt;p&gt;Um sistema é considerado legado não apenas pela sua idade, mas por uma combinação de fatores. Geralmente, um sistema é classificado como legado quando apresenta dificuldades em atender às demandas atuais da empresa ou tecnologia. Isso pode incluir:&lt;/p&gt;
 &lt;ul&gt;
@@ -115,9 +97,9 @@
     </item>
     <item>
       <title>Como saber se estou indo bem? A importância de dar e receber feedbacks</title>
-      <link>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</link>
+      <link>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</link>
       <pubDate>Tue, 04 Feb 2025 22:21:55 +0000</pubDate>
-      <guid>http://localhost:1313/posts/como-saber-se-estou-indo-bem/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/como-saber-se-estou-indo-bem/</guid>
       <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Recentemente finalizei a leitura do livro &lt;em&gt;“Preciso saber se estou indo bem! Uma história sobre a importância de dar e receber feedbacks”&lt;/em&gt; do autor Richard L. Willians, este livro foi uma indicação do meu amigo &lt;a href=&#34;https://devdrops.github.io/about/&#34;&gt;Davi&lt;/a&gt; já há alguns anos, obrigado pela recomendação!&lt;/p&gt;
 &lt;p&gt;Uma das habilidades que está em foco para aperfeiçoamento este ano de 2025 é a comunicação, onde busco uma comunicação:&lt;/p&gt;
@@ -129,12 +111,28 @@
     </item>
     <item>
       <title>Priorizar com propósito: guia prático para iniciantes</title>
-      <link>http://localhost:1313/posts/priorizar-com-proposito/</link>
+      <link>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</link>
       <pubDate>Fri, 24 Jan 2025 22:36:32 +0000</pubDate>
-      <guid>http://localhost:1313/posts/priorizar-com-proposito/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/priorizar-com-proposito/</guid>
       <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Estou lendo o livro &lt;code&gt;Getting Real: A forma mais inteligente, rápida e fácil de se construir uma aplicação web de sucesso&lt;/code&gt; e está bem interessante, acredito que para quem já esteja há um tempo em papéis de liderança ele será bem raso e repetitivo, porém, tendo a visão de um programador ele traz pontos bem interessantes e valem a reflexão.&lt;/p&gt;
 &lt;p&gt;Um desses pontos aborda que toda nova ideia de funcionalidade nasce automaticamente com um não, e ela tem que brigar e valer a pena para receber um sim! Esse conceito é muito interessante, pois no dia a dia vemos uma ideia que parece boa e já incluirmos ela na lista para fazer e saímos implementando.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
+      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
+      <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
+      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
+      <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
+&lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;&amp;ldquo;RabbitMQ é um broker de mensagens e streaming confiável e maduro, que é fácil de implementar em ambientes de nuvem, no local e na máquina local.&amp;rdquo;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+&lt;p&gt;Mas o que é um &amp;ldquo;broker&amp;rdquo; ou &amp;ldquo;message broker&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;É a camada responsável por intermediar o envio e recebimento de mensagens entre produtores (publisher) e consumidores (subscriber).&lt;/p&gt;
+&lt;p&gt;O broker gerencia as &lt;em&gt;queues&lt;/em&gt; (filas) de mensagens, garantindo que sejam entregues de forma eficiente e segura.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

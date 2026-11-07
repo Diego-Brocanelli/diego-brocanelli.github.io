@@ -3,23 +3,32 @@
 {{- $posts := where site.RegularPages "Section" "posts" }}
 {{- $featured := index $posts 0 }}
 {{- $recent := first 4 (after 1 $posts) }}
+{{- $oldest := index $posts.ByDate 0 }}
+{{- $topics := first 8 site.Taxonomies.categories.ByCount }}
 
 <main class="home">
 
-    <!-- Hero -->
+    <!-- Hero: texto + cartão "terminal" com o perfil -->
 
     <section class="hero" aria-labelledby="hero-title">
 
-        <span class="home-label">
-            {{ site.Params.author }} · Engenheiro de Software
-        </span>
+        <div class="hero-head">
+            {{- with $featured }}
+            <a href="{{ .RelPermalink }}" class="hero-pill">
+                <span class="hero-pill-dot" aria-hidden="true"></span>
+                <span class="hero-pill-label">Novo</span>
+                <span class="hero-pill-title">{{ .Title }}</span>
+                <span aria-hidden="true">→</span>
+            </a>
+            {{- end }}
 
-        <h1 id="hero-title" class="hero-title">
-            Software que
-            <span>precisa evoluir.</span>
-        </h1>
+            <h1 id="hero-title" class="hero-title">
+                Software que
+                <span>precisa evoluir.</span>
+            </h1>
+        </div>
 
-        <div class="hero-footer">
+        <div class="hero-text">
 
             {{- with site.Params.homeInfoParams.Content }}
             <p class="hero-lead">{{ . }}</p>
@@ -31,63 +40,81 @@
                     Ler o último post <span aria-hidden="true">→</span>
                 </a>
                 {{- end }}
-                <a href="{{ "about/" | relURL }}" class="home-button">
-                    Sobre mim
+                <a href="{{ "posts/" | relURL }}" class="home-button">
+                    Explorar artigos
                 </a>
+            </div>
+
+            <div class="social-icons">
+                {{- range site.Params.socialIcons }}
+                    <a
+                        href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+                        title="{{ (.title | default .name) | title }}"
+                        aria-label="{{ (.title | default .name) | title }}">
+                        {{ partial "svg.html" . }}
+                    </a>
+                {{- end }}
             </div>
 
         </div>
 
-        <!-- social icons -->
-        <div class="social-icons">
-            {{- range site.Params.socialIcons }}
-                <a
-                    href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
-                    title="{{ (.title | default .name) | title }}"
-                    aria-label="{{ (.title | default .name) | title }}">
-                    {{ partial "svg.html" . }}
-                </a>
-            {{- end }}
-        </div>
-        <!-- social icons -->
+        <!-- os números do blog ficam aqui, no formato de um arquivo de configuração -->
+        <figure class="hero-terminal" aria-label="Perfil em números">
+            <div class="hero-terminal-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <code>perfil.yml</code>
+            </div>
+            <pre class="hero-terminal-body"><code><span class="t-prompt">~/diego $</span> cat perfil.yml
+
+<span class="t-key">nome</span>: <span class="t-str">{{ site.Params.author }}</span>
+<span class="t-key">cargo</span>: <span class="t-str">Engenheiro de Software</span>
+<span class="t-key">experiencia</span>: <span class="t-num">13+</span> <span class="t-comment"># anos</span>
+<span class="t-key">artigos</span>: <span class="t-num">{{ len $posts }}</span>
+{{- with $oldest }}
+<span class="t-key">desde</span>: <span class="t-num">{{ .Date.Year }}</span>
+{{- end }}
+<span class="t-key">temas</span>:
+{{- range first 3 $topics }}
+  - <span class="t-str">{{ .Page.Title | lower }}</span>
+{{- end }}
+
+<span class="t-prompt">~/diego $</span> <span class="t-cursor" aria-hidden="true"></span></code></pre>
+        </figure>
 
     </section>
 
 
-    <!-- Números -->
-
-    {{- partial "stats.html" . }}
-
-
-    <!-- Últimas publicações -->
+    <!-- Últimas publicações: bento (destaque grande + 4 cards) -->
 
     {{- with $featured }}
-    <section class="latest" aria-labelledby="latest-title">
+    <section class="latest reveal" aria-labelledby="latest-title">
 
         <div class="home-section-heading">
-            <h2 id="latest-title">Últimas publicações</h2>
+            <div>
+                <span class="home-label">Escritos recentes</span>
+                <h2 id="latest-title">Últimas publicações</h2>
+            </div>
             <a href="{{ "posts/" | relURL }}" class="home-section-link">
                 Ver todos <span aria-hidden="true">→</span>
             </a>
         </div>
 
-        <div class="latest-grid">
+        <div class="bento">
 
-            <!-- Post em destaque: capa = cover.image do front matter ou 1ª imagem do conteúdo -->
+            <!-- capa = cover.image do front matter ou 1ª imagem do conteúdo -->
             {{- $cover := partial "post-cover.html" . }}
 
-            <article class="featured{{ if not $cover }} featured--no-cover{{ end }}">
+            <article class="card card--featured{{ if not $cover }} card--no-cover{{ end }}">
 
                 {{- with $cover }}
-                <div class="featured-cover">
+                <div class="card-cover">
                     <img src="{{ . | relURL }}" alt="" loading="eager" decoding="async">
                 </div>
                 {{- end }}
 
-                <div class="featured-body">
-
+                <div class="card-body">
                     <div class="post-meta-line">
-                        <span class="featured-badge">Mais recente</span>
+                        <span class="card-badge">Mais recente</span>
                         {{- with .Params.categories }}
                         <span>{{ index . 0 | title }}</span>
                         <span aria-hidden="true">·</span>
@@ -97,43 +124,43 @@
                         </time>
                     </div>
 
-                    <h3 class="featured-title">
+                    <h3 class="card-title">
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </h3>
 
-                    <p>{{ partial "post-summary.html" (dict "page" . "length" 200) }}</p>
-
+                    <p>{{ partial "post-summary.html" (dict "page" . "length" 180) }}</p>
                 </div>
 
             </article>
 
+            {{- range $i, $p := $recent }}
+            <article class="card{{ if .Draft }} is-draft{{ end }}">
 
-            <ol class="recent-list">
-                {{- range $i, $p := $recent }}
-                <li class="recent{{ if .Draft }} is-draft{{ end }}">
+                <span class="card-index" aria-hidden="true">{{ printf "%02d" (add $i 2) }}</span>
 
-                    <span class="recent-index" aria-hidden="true">
-                        {{ printf "%02d" (add $i 2) }}
-                    </span>
-
-                    <div class="recent-body">
-                        <div class="post-meta-line">
-                            {{- if .Draft }}
-                            <span class="home-article-badge--draft">Rascunho</span>
-                            {{- end }}
-                            <time datetime="{{ .Date.Format "2006-01-02" }}">
-                                {{ time.Format "02 Jan 2006" .Date }}
-                            </time>
-                        </div>
-
-                        <h3>
-                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        </h3>
+                <div class="card-body">
+                    <div class="post-meta-line">
+                        {{- if .Draft }}
+                        <span class="home-article-badge--draft">Rascunho</span>
+                        {{- end }}
+                        {{- with .Params.categories }}
+                        <span>{{ index . 0 | title }}</span>
+                        <span aria-hidden="true">·</span>
+                        {{- end }}
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">
+                            {{ time.Format "02 Jan 2006" .Date }}
+                        </time>
                     </div>
 
-                </li>
-                {{- end }}
-            </ol>
+                    <h3 class="card-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h3>
+                </div>
+
+                <span class="card-arrow" aria-hidden="true">↗</span>
+
+            </article>
+            {{- end }}
 
         </div>
 
@@ -141,32 +168,57 @@
     {{- end }}
 
 
-    <!-- Sobre -->
+    <!-- Temas -->
 
-    <section class="home-about" aria-labelledby="about-title">
+    {{- with $topics }}
+    <section class="topics reveal" aria-labelledby="topics-title">
 
-        <div>
-            <span class="home-label">Sobre o blog</span>
-
-            <h2 id="about-title">
-                Software é sobre
-                <span>resolver problemas.</span>
-            </h2>
+        <div class="home-section-heading">
+            <div>
+                <span class="home-label">Navegue por assunto</span>
+                <h2 id="topics-title">Temas</h2>
+            </div>
+            <a href="{{ "categories/" | relURL }}" class="home-section-link">
+                Todas as categorias <span aria-hidden="true">→</span>
+            </a>
         </div>
 
-        <div class="home-about-content">
+        <ul class="topics-list">
+            {{- range . }}
+            <li>
+                <a href="{{ .Page.RelPermalink }}" class="topic">
+                    <span class="topic-name">{{ .Page.Title }}</span>
+                    <span class="topic-count">{{ .Count }}</span>
+                </a>
+            </li>
+            {{- end }}
+        </ul>
 
+    </section>
+    {{- end }}
+
+
+    <!-- Sobre: faixa invertida -->
+
+    <section class="home-about reveal" aria-labelledby="about-title">
+
+        <span class="home-label">Sobre o blog</span>
+
+        <h2 id="about-title">
+            Por trás de cada linha de código
+            <span>existe uma decisão.</span>
+        </h2>
+
+        <div class="home-about-footer">
             <p>
-                Por trás de cada linha de código existe uma decisão.
                 Este espaço é onde compartilho o que venho aprendendo
                 sobre construir software, projetar sistemas e lidar
                 com os desafios que aparecem pelo caminho.
             </p>
 
-            <a href="{{ "about/" | relURL }}" class="home-button home-button--primary">
+            <a href="{{ "about/" | relURL }}" class="home-button home-button--invert">
                 Conheça minha história <span aria-hidden="true">→</span>
             </a>
-
         </div>
 
     </section>

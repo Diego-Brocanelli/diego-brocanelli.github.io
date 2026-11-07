@@ -5,22 +5,30 @@
 {{- range site.Params.socialIcons }}
     {{- if eq (lower .name) "linkedin" }}{{ $linkedin = .url }}{{ end }}
 {{- end }}
+{{- $oldest := index (where site.RegularPages "Section" "posts").ByDate 0 }}
+{{- $topics := first 12 site.Taxonomies.categories.ByCount }}
 
 <main class="home about-page">
 
-    <!-- Hero: texto + foto -->
+    <!-- Hero: nome em escala de pôster + foto em cartão com selos -->
 
     <section class="about-hero" aria-labelledby="about-title">
+
+        <div class="about-aurora" aria-hidden="true"></div>
 
         <div class="about-hero-text">
 
             {{- with .Params.role }}
-            <span class="home-label">{{ . }}</span>
+            <ul class="about-roles" aria-label="Áreas de atuação">
+                {{- range split . "|" }}
+                <li>{{ trim . " " }}</li>
+                {{- end }}
+            </ul>
             {{- end }}
 
             <h1 id="about-title" class="about-title">
-                Olá, eu sou
-                <span>{{ $name }}.</span>
+                <span class="about-title-hello">Olá, eu sou</span>
+                <span class="about-title-name">{{ $name }}.</span>
             </h1>
 
             {{- with .Params.lead }}
@@ -38,7 +46,6 @@
                 </a>
             </div>
 
-            <!-- social icons -->
             <div class="social-icons">
                 {{- range site.Params.socialIcons }}
                     <a
@@ -49,28 +56,55 @@
                     </a>
                 {{- end }}
             </div>
-            <!-- social icons -->
 
         </div>
 
         {{- with .Params.photo }}
         <figure class="about-photo">
-            <img
-                src="{{ . }}"
-                alt="Foto de {{ $name }}"
-                width="1122" height="1402"
-                loading="eager" decoding="async"
-            >
+            <div class="about-photo-frame">
+                <img
+                    src="{{ . }}"
+                    alt="Foto de {{ $name }}"
+                    width="1122" height="1402"
+                    loading="eager" decoding="async"
+                >
+            </div>
+            <figcaption class="about-badge about-badge--top">
+                <strong>13+</strong> anos construindo software
+            </figcaption>
+            {{- with $oldest }}
+            <span class="about-badge about-badge--bottom" aria-hidden="true">
+                <span class="about-badge-dot"></span> escrevendo desde {{ .Date.Year }}
+            </span>
+            {{- end }}
         </figure>
         {{- end }}
 
     </section>
 
 
+    <!-- Faixa de temas em movimento (2ª cópia só para o loop contínuo) -->
+
+    {{- with $topics }}
+    <nav class="about-marquee" aria-label="Temas sobre os quais escrevo">
+        <div class="about-marquee-track">
+            {{- range seq 2 }}
+            {{- $copy := . }}
+            <ul{{ if eq $copy 2 }} aria-hidden="true"{{ end }}>
+                {{- range $topics }}
+                <li><a href="{{ .Page.RelPermalink }}"{{ if eq $copy 2 }} tabindex="-1"{{ end }}>{{ .Page.Title | lower }}</a></li>
+                {{- end }}
+            </ul>
+            {{- end }}
+        </div>
+    </nav>
+    {{- end }}
+
+
     {{- partial "stats.html" . }}
 
 
-    <!-- Conteúdo (content/about.html) -->
+    <!-- Conteúdo (content/about.html): manifesto + capítulos -->
 
     {{- if .Content }}
     <div class="about-content">
@@ -81,22 +115,24 @@
     {{- end }}
 
 
-    <!-- Fechamento -->
+    <!-- Fechamento: faixa invertida -->
 
     <section class="about-cta" aria-labelledby="about-cta-title">
+
+        <span class="home-label">Próximo passo</span>
+
+        <h2 id="about-cta-title">Vamos <span>conversar.</span></h2>
 
         <p class="about-cta-text">
             Se você gosta de software, arquitetura e das decisões por trás
             do código, provavelmente temos bastante assunto para conversar.
         </p>
 
-        <h2 id="about-cta-title">Vamos conversar.</h2>
-
         <div class="hero-actions">
             {{- range site.Params.socialIcons }}
                 {{- if ne (lower .name) "rss" }}
                 <a
-                    href="{{ trim .url " " | safeURL }}" class="home-button{{ if eq (lower .name) "linkedin" }} home-button--primary{{ end }}"
+                    href="{{ trim .url " " | safeURL }}" class="home-button{{ if eq (lower .name) "linkedin" }} home-button--invert{{ end }}"
                     target="_blank" rel="noopener noreferrer me">
                     {{ partial "svg.html" . }}
                     {{ (.title | default .name) | title }}

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Terminal on Diego Brocanelli</title>
-    <link>http://localhost:1313/categories/terminal/</link>
+    <link>https://diegobrocanelli.com.br/categories/terminal/</link>
     <description>Recent content in Terminal on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 28 Dec 2019 17:21:19 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuração automática de estação de trabalho</title>
-      <link>http://localhost:1313/posts/configuracao-automatica-de-estacao-de-trabalho/</link>
+      <link>https://diegobrocanelli.com.br/posts/configuracao-automatica-de-estacao-de-trabalho/</link>
       <pubDate>Sat, 28 Dec 2019 17:21:19 +0000</pubDate>
-      <guid>http://localhost:1313/posts/configuracao-automatica-de-estacao-de-trabalho/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/configuracao-automatica-de-estacao-de-trabalho/</guid>
       <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
 &lt;p&gt;Para facilitar o processo de configuração de uma estação de trabalho, criei um projeto open soucer chamado &lt;a href=&#34;https://github.com/Diego-Brocanelli/workstation_configuration&#34;&gt;workstation_configuration&lt;/a&gt;, responsável por realiza todo o trabalho pesado de download, instalação e configurações necessárias para deixar redondo a nova estação que utilizará para desenvolvimento web.&lt;/p&gt;
 &lt;h2 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h2&gt;
@@ -28,26 +28,10 @@
 &lt;p&gt;Consiste em scripts shell que fazem todo o  trabalho de instalação e configuração conforme informações contidas no arquivo setup.sh.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Utilizando o MySQLTuner para gerar dados e métricas para tuning do MysqL</title>
-      <link>http://localhost:1313/posts/mysql-tuner/</link>
-      <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mysql-tuner/</guid>
-      <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
-&lt;p&gt;Analisar performance de banco de dados não é nada simples, principalmente para quem não é DBA .&lt;/p&gt;
-&lt;p&gt;Com base em minhas pesquisas encontrei uma ferramenta bacana que auxilia nessa tarefa chamada &lt;a href=&#34;https://github.com/major/MySQLTuner-perl&#34;&gt;MySQLTuner-perl&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Essa ferramenta gera um relatório com a análise de diversas métricas que podemos utilizar para o processo de tuning do MySQL. Onde no final é gerado algumas recomendações para serem executadas na busca dessa melhoria.&lt;/p&gt;
-
-&lt;aside class=&#34;callout callout--note&#34; role=&#34;note&#34;&gt;
-    &lt;p class=&#34;callout-title&#34;&gt;
-        &lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;&gt;&lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;10&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;16&#34; x2=&#34;12&#34; y2=&#34;12&#34;/&gt;&lt;line x1=&#34;12&#34; y1=&#34;8&#34; x2=&#34;12.01&#34; y2=&#34;8&#34;/&gt;&lt;/svg&gt;
-        Observação
-    &lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Comandos básicos do MySQL no terminal</title>
-      <link>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</link>
+      <link>https://diegobrocanelli.com.br/posts/comandos-basicos-mysql-no-terminal/</link>
       <pubDate>Fri, 21 Apr 2017 16:27:37 +0000</pubDate>
-      <guid>http://localhost:1313/posts/comandos-basicos-mysql-no-terminal/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/comandos-basicos-mysql-no-terminal/</guid>
       <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Manipular bancos de dados via terminal é uma habilidade essencial para desenvolvedores. O terminal oferece rapidez e eficiência para tarefas cotidianas. A seguir, apresento uma lista de comandos básicos do MySQL, organizados por categoria, para auxiliar no seu dia a dia.&lt;/p&gt;
 &lt;p&gt;Todos os comandos apresentados neste post podem ser executados no terminal de sua preferência.&lt;/p&gt;

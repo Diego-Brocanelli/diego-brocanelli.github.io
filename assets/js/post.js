@@ -1,21 +1,26 @@
-// Página do post (layouts/single.html): barra de progresso de leitura e
-// sumário lateral com a seção atual destacada.
+// Página do post (layouts/single.html): progresso de leitura (barra no topo
+// e anel do trilho lateral), copiar link e sumário com a seção atual.
 
 (() => {
     const content = document.querySelector('.post-content');
-    const bar = document.querySelector('.reading-progress span');
+    const article = document.querySelector('.post-single');
+    const percent = document.querySelector('.post-rail-percent');
     const toc = document.querySelector('.toc');
     const wide = window.matchMedia('(min-width: 1200px)');
 
-    // ---- Barra de progresso: mede só o texto do post (não comentários/rodapé)
-    if (content && bar) {
+    // ---- Progresso: mede só o texto do post (não comentários/rodapé).
+    // Grava em --progress (0..1) na <article>; barra e anel leem via CSS.
+    if (content && article) {
         let ticking = false;
 
         const update = () => {
             const rect = content.getBoundingClientRect();
             const total = rect.height - window.innerHeight;
             const progress = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : 1;
-            bar.style.transform = `scaleX(${progress})`;
+            article.style.setProperty('--progress', progress.toFixed(4));
+            if (percent) {
+                percent.textContent = `${Math.round(progress * 100)}%`;
+            }
             ticking = false;
         };
 
@@ -29,6 +34,27 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onScroll);
         update();
+    }
+
+    // ---- Copiar link
+    const copy = document.querySelector('[data-copy-link]');
+    if (copy && navigator.clipboard) {
+        const status = copy.querySelector('.post-rail-copy-status');
+        copy.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(location.href.split('#')[0]);
+                status.textContent = 'Link copiado';
+                copy.dataset.copied = '';
+            } catch {
+                status.textContent = 'Não foi possível copiar';
+            }
+            setTimeout(() => {
+                status.textContent = '';
+                delete copy.dataset.copied;
+            }, 2000);
+        });
+    } else if (copy) {
+        copy.hidden = true;
     }
 
     if (!toc || !content) {

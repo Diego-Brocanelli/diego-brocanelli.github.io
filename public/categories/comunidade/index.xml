@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Comunidade on Diego Brocanelli</title>
-    <link>http://localhost:1313/categories/comunidade/</link>
+    <link>https://diegobrocanelli.com.br/categories/comunidade/</link>
     <description>Recent content in Comunidade on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/comunidade/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/categories/comunidade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</link>
+      <link>https://diegobrocanelli.com.br/posts/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
-      <guid>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/como-estudo-uma-nova-tecnologia/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.&lt;/p&gt;
 &lt;p&gt;Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Laboratório de ideias</title>
-      <link>http://localhost:1313/posts/laboratorio-de-ideias/</link>
+      <link>https://diegobrocanelli.com.br/posts/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
-      <guid>http://localhost:1313/posts/laboratorio-de-ideias/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/laboratorio-de-ideias/</guid>
       <description>&lt;p&gt;Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.&lt;/p&gt;
 &lt;p&gt;Tendo isso em mente, criei o projeto &lt;a href=&#34;https://github.com/Diego-Brocanelli/laboratorio-de-ideias&#34;&gt;Laboratório de ideias&lt;/a&gt;, focado em evitar desperdício de tempo e trazer maior foco nos estudos.&lt;/p&gt;
 &lt;p&gt;Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.&lt;/p&gt;
@@ -34,9 +34,9 @@
     </item>
     <item>
       <title>hhbr: 20 – Faculdade na área de TI (vídeo)</title>
-      <link>http://localhost:1313/posts/hhbr-20-faculdade-na-area-de-ti/</link>
+      <link>https://diegobrocanelli.com.br/posts/hhbr-20-faculdade-na-area-de-ti/</link>
       <pubDate>Tue, 05 Nov 2019 16:35:46 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hhbr-20-faculdade-na-area-de-ti/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/hhbr-20-faculdade-na-area-de-ti/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta 20º edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; pudemos apreciar um fantástico bate papo sobre faculdade na área da TI.&lt;/p&gt;
 &lt;p&gt;Debatemos sobre os pontos positivos, negativos, oportunidades, desafios e respondemos perguntas dos participantes, para que assim de alguma maneira podermos auxiliar quem está na dúvida sobre fazer ou não uma faculdade.&lt;/p&gt;
@@ -67,9 +67,9 @@
     </item>
     <item>
       <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
-      <link>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <link>https://diegobrocanelli.com.br/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
       <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta décima sexta edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; trazemos uma grande palestra com o tema “&lt;em&gt;Contribuindo com o PHP e o PHP TestFest 2017&lt;/em&gt;”, ministrado pelo grande &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;Rogerio Prado de Jesus&lt;/a&gt;.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -101,18 +101,18 @@
     </item>
     <item>
       <title>Como pedir ajuda?</title>
-      <link>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
+      <link>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
       <pubDate>Sun, 17 Feb 2019 13:40:54 +0000</pubDate>
-      <guid>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;A comunidade de TI é maravilhosa, muitos profissionais trocando conhecimento e informações, comumente também utilizamos dessa rede para pedir auxílio em algum problema que estamos enfrentando e a comunidade é maravilhosa nesse ponto, a colaboração é fantástica.&lt;/p&gt;
 &lt;p&gt;Entretanto é comum depararmos com um grande problema pessoas pedindo ajuda, porém não sabem como fazer ou pedindo de forma muito ruim, para exemplificar situações em que eu já presenciei e vivencie.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr : 10 – Training Center (Vídeo)</title>
-      <link>http://localhost:1313/posts/training-center-video/</link>
+      <link>https://diegobrocanelli.com.br/posts/training-center-video/</link>
       <pubDate>Tue, 16 May 2017 13:37:50 +0000</pubDate>
-      <guid>http://localhost:1313/posts/training-center-video/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/training-center-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Tivemos a décima edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRGE&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação!&lt;/p&gt;
 &lt;p&gt;Nesta edição temos a honra de trazer um projeto open source fantástico o &lt;a href=&#34;https://github.com/training-center&#34;&gt;Training Center&lt;/a&gt;. Projeto no qual visa auxiliar e fomenta conteúdo para a comunidade de TI, trazendo excelentes iniciativas como os projetos &lt;a href=&#34;ttps://github.com/training-center/mentoria&#34;&gt;Mentoria&lt;/a&gt; e &lt;a href=&#34;https://github.com/training-center/study-groups&#34;&gt;Study Groups&lt;/a&gt;.&lt;/p&gt;

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Flask on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/flask/</link>
+    <link>https://diegobrocanelli.com.br/tags/flask/</link>
     <description>Recent content in Flask on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 25 Oct 2016 23:53:51 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/flask/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 03 – Resolvendo os seus problemas web com Flask  (Vídeo)</title>
-      <link>http://localhost:1313/posts/resolvendo-os-seus-problemas-web-com-flask-video/</link>
+      <link>https://diegobrocanelli.com.br/posts/resolvendo-os-seus-problemas-web-com-flask-video/</link>
       <pubDate>Tue, 25 Oct 2016 23:53:51 +0000</pubDate>
-      <guid>http://localhost:1313/posts/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/resolvendo-os-seus-problemas-web-com-flask-video/</guid>
       <description>&lt;p&gt;Olá pessoal, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Hoje tivemos a terceira edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, o tema da palestra deste mês foi “Resolvendo os seus problemas web com Flask”.&lt;/p&gt;
 &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=ObLZZsGr_6s&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;

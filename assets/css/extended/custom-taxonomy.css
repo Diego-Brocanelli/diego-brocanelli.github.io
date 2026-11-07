@@ -1,0 +1,663 @@
+/* ==========================================================================
+   custom-taxonomy.css
+
+   Índice de categorias/tags (layouts/taxonomy.html): topo editorial,
+   ranking em bento e índice A–Z com filtro. Reaproveita .home-label,
+   .home-button, .hero-actions, .archive-hero-footer e .archive-lead.
+   --w (0–100%) vem do HTML: peso do tema em relação ao maior.
+   ========================================================================== */
+
+.taxonomy-page {
+    padding-bottom: var(--space-9);
+}
+
+
+/* ==========================================================================
+   Topo
+   ========================================================================== */
+
+.taxonomy-hero {
+    padding: var(--space-6) 0 var(--space-8);
+}
+
+
+.taxonomy-hero .breadcrumbs {
+    margin-bottom: var(--space-7);
+    font-size: var(--text-small);
+}
+
+
+.taxonomy-hero-title {
+    margin: 0;
+
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 700;
+
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+
+.taxonomy-hero-title span {
+    display: block;
+    margin-top: var(--space-3);
+
+    color: var(--blog-accent);
+
+    font-size: 0.5em;
+    letter-spacing: -0.035em;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ==========================================================================
+   Medidor (ranking e índice)
+   ========================================================================== */
+
+.taxonomy-meter {
+    display: block;
+    height: 4px;
+
+    background: var(--border);
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.taxonomy-meter::before {
+    content: "";
+    display: block;
+
+    width: var(--w, 0%);
+    height: 100%;
+
+    background: var(--blog-accent);
+    border-radius: inherit;
+
+    transform-origin: left;
+    animation: taxonomy-grow 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+
+@keyframes taxonomy-grow {
+    from { transform: scaleX(0); }
+}
+
+
+/* ==========================================================================
+   Ranking (bento)
+   ========================================================================== */
+
+.taxonomy-top {
+    padding-bottom: var(--space-8);
+}
+
+
+.taxonomy-top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.taxonomy-card {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+
+    min-height: 13rem;
+    margin: 0;
+    padding: var(--space-5);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* 1º lugar: ocupa 2×2 e inverte as cores */
+.taxonomy-card--lead {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    padding: var(--space-6);
+
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--theme);
+}
+
+
+.taxonomy-card:hover,
+.taxonomy-card:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--blog-accent);
+    box-shadow: 0 18px 40px -20px color-mix(in srgb, var(--blog-accent) 55%, transparent);
+}
+
+
+.taxonomy-card:has(a:focus-visible) {
+    outline: 2px solid var(--blog-accent);
+    outline-offset: 3px;
+}
+
+
+.taxonomy-card a:focus-visible {
+    outline: none;
+}
+
+
+/* número do ranking em marca d'água */
+.taxonomy-card-rank {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-4);
+    z-index: -1;
+
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+
+    font-size: 4.5rem;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-variant-numeric: tabular-nums;
+
+    transition: -webkit-text-stroke-color 0.25s ease;
+}
+
+
+.taxonomy-card--lead .taxonomy-card-rank {
+    top: auto;
+    bottom: -0.15em;
+    -webkit-text-stroke-color: color-mix(in srgb, var(--theme) 22%, transparent);
+    font-size: clamp(10rem, 22vw, 16rem);
+}
+
+
+.taxonomy-card:hover .taxonomy-card-rank {
+    -webkit-text-stroke-color: var(--blog-accent);
+}
+
+
+.taxonomy-card-count {
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.taxonomy-card-count strong {
+    display: block;
+
+    color: var(--blog-accent);
+
+    font-size: 2.75rem;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-transform: none;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.taxonomy-card--lead .taxonomy-card-count {
+    color: color-mix(in srgb, var(--theme) 70%, transparent);
+}
+
+
+.taxonomy-card--lead .taxonomy-card-count strong {
+    font-size: clamp(4rem, 9vw, 6.5rem);
+}
+
+
+.taxonomy-card-title {
+    margin: auto 0 0;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+
+    text-wrap: balance;
+}
+
+
+.taxonomy-card--lead .taxonomy-card-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.035em;
+}
+
+
+.taxonomy-card-title a {
+    color: var(--primary);
+}
+
+
+.taxonomy-card--lead .taxonomy-card-title a {
+    color: var(--theme);
+}
+
+
+/* o link do título cobre o card inteiro */
+.taxonomy-card-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+
+.taxonomy-card--lead .taxonomy-meter {
+    background: color-mix(in srgb, var(--theme) 18%, transparent);
+}
+
+
+.taxonomy-card-latest {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--secondary);
+
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+
+/* nos cards pequenos o último post é ruído; fica só o período */
+.taxonomy-card:not(.taxonomy-card--lead) .taxonomy-card-latest {
+    -webkit-line-clamp: 1;
+    font-size: var(--text-small);
+}
+
+
+.taxonomy-card-latest span {
+    margin-inline-end: var(--space-2);
+
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.taxonomy-card--lead .taxonomy-card-latest {
+    max-width: 32rem;
+    color: color-mix(in srgb, var(--theme) 75%, transparent);
+    font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   Índice A–Z
+   ========================================================================== */
+
+.taxonomy-index-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--space-4);
+
+    padding-top: var(--space-6);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.taxonomy-index-title {
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+
+.taxonomy-filter {
+    position: relative;
+    flex: 0 1 22rem;
+}
+
+
+.taxonomy-filter[hidden] {
+    display: none;
+}
+
+
+.taxonomy-filter input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 6rem 0 var(--space-5);
+
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font: inherit;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.taxonomy-filter input:focus {
+    outline: none;
+    border-color: var(--blog-accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--blog-accent) 20%, transparent);
+}
+
+
+.taxonomy-filter-count {
+    position: absolute;
+    top: 50%;
+    right: var(--space-5);
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-variant-numeric: tabular-nums;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+/* atalhos de letra: mesmo comportamento da barra de anos do arquivo */
+.taxonomy-letters {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    margin: var(--space-5) 0 var(--space-3);
+    padding: var(--space-3) 0;
+
+    background: var(--blog-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+
+.taxonomy-letters ul {
+    display: flex;
+    gap: var(--space-1);
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    list-style: none;
+}
+
+
+.taxonomy-letters ul::-webkit-scrollbar {
+    display: none;
+}
+
+
+.taxonomy-letters a {
+    display: grid;
+    place-items: center;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    border-radius: 12px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+
+.taxonomy-letters a:hover {
+    background: var(--blog-accent);
+    color: var(--blog-selection-text);
+}
+
+
+.taxonomy-group {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: var(--space-5);
+
+    padding: var(--space-5) 0;
+
+    border-bottom: 1px solid var(--border);
+
+    scroll-margin-top: 5rem;
+}
+
+
+.taxonomy-group[hidden] {
+    display: none;
+}
+
+
+.taxonomy-group-letter {
+    align-self: start;
+
+    position: sticky;
+    top: 5.5rem;
+
+    margin: 0;
+
+    color: var(--blog-accent);
+
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+
+.taxonomy-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 var(--space-6);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.taxonomy-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-3);
+
+    margin: 0;
+    padding: var(--space-3) var(--space-3);
+
+    border-radius: 10px;
+
+    transition: background-color 0.2s ease;
+}
+
+
+.taxonomy-item[hidden] {
+    display: none;
+}
+
+
+.taxonomy-item a {
+    color: var(--primary);
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+
+.taxonomy-item a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+
+.taxonomy-item a:focus-visible {
+    outline: none;
+}
+
+
+.taxonomy-item:has(a:focus-visible) {
+    outline: 2px solid var(--blog-accent);
+    outline-offset: -2px;
+}
+
+
+.taxonomy-item:hover,
+.taxonomy-item:focus-within {
+    background: var(--entry);
+}
+
+
+.taxonomy-item:hover a,
+.taxonomy-item:focus-within a {
+    color: var(--blog-accent);
+}
+
+
+.taxonomy-item-count {
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    text-align: end;
+}
+
+
+.taxonomy-empty {
+    padding: var(--space-7) 0;
+
+    color: var(--secondary);
+
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+    .taxonomy-top-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .taxonomy-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .taxonomy-hero {
+        padding-bottom: var(--space-7);
+    }
+
+    .taxonomy-hero .breadcrumbs {
+        margin-bottom: var(--space-5);
+    }
+
+    .taxonomy-card {
+        min-height: 11rem;
+        padding: var(--space-4);
+    }
+
+    .taxonomy-card--lead {
+        padding: var(--space-5);
+    }
+
+    .taxonomy-card-count strong {
+        font-size: 2.25rem;
+    }
+
+    .taxonomy-filter {
+        flex-basis: 100%;
+    }
+
+    .taxonomy-group {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-2);
+    }
+
+    .taxonomy-group-letter {
+        position: static;
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .taxonomy-top-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .taxonomy-card--lead {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .taxonomy-meter::before {
+        animation: none;
+    }
+
+    .taxonomy-card,
+    .taxonomy-card:hover,
+    .taxonomy-card:focus-within {
+        transform: none;
+    }
+}

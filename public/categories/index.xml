@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on Diego Brocanelli</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Diego Brocanelli</description>
+    <title>Categorias on Diego Brocanelli</title>
+    <link>https://diegobrocanelli.com.br/categories/</link>
+    <description>Recent content in Categorias on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 31 Aug 2026 20:46:44 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grafos</title>
-      <link>http://localhost:1313/categories/grafos/</link>
+      <link>https://diegobrocanelli.com.br/categories/grafos/</link>
       <pubDate>Mon, 31 Aug 2026 20:46:44 +0000</pubDate>
-      <guid>http://localhost:1313/categories/grafos/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/grafos/</guid>
       <description></description>
     </item>
     <item>
       <title>Segurança</title>
-      <link>http://localhost:1313/categories/seguran%C3%A7a/</link>
+      <link>https://diegobrocanelli.com.br/categories/seguran%C3%A7a/</link>
       <pubDate>Wed, 29 Jul 2026 14:42:49 +0000</pubDate>
-      <guid>http://localhost:1313/categories/seguran%C3%A7a/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/seguran%C3%A7a/</guid>
       <description></description>
     </item>
     <item>
       <title>Hard-Skills</title>
-      <link>http://localhost:1313/categories/hard-skills/</link>
+      <link>https://diegobrocanelli.com.br/categories/hard-skills/</link>
       <pubDate>Tue, 28 Jul 2026 02:47:37 +0000</pubDate>
-      <guid>http://localhost:1313/categories/hard-skills/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Php</title>
-      <link>http://localhost:1313/categories/php/</link>
-      <pubDate>Fri, 16 Jan 2026 20:00:53 +0000</pubDate>
-      <guid>http://localhost:1313/categories/php/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/hard-skills/</guid>
       <description></description>
     </item>
     <item>
       <title>IA</title>
-      <link>http://localhost:1313/categories/ia/</link>
+      <link>https://diegobrocanelli.com.br/categories/ia/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      <guid>http://localhost:1313/categories/ia/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/ia/</guid>
       <description></description>
     </item>
     <item>
       <title>MCP</title>
-      <link>http://localhost:1313/categories/mcp/</link>
+      <link>https://diegobrocanelli.com.br/categories/mcp/</link>
       <pubDate>Wed, 14 May 2025 12:08:32 +0000</pubDate>
-      <guid>http://localhost:1313/categories/mcp/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/mcp/</guid>
       <description></description>
     </item>
     <item>
-      <title>Soft Skills</title>
-      <link>http://localhost:1313/categories/soft-skills/</link>
+      <title>Soft-Skills</title>
+      <link>https://diegobrocanelli.com.br/categories/soft-skills/</link>
       <pubDate>Fri, 25 Apr 2025 20:06:37 +0000</pubDate>
-      <guid>http://localhost:1313/categories/soft-skills/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/soft-skills/</guid>
       <description></description>
     </item>
     <item>
       <title>Arquitetura</title>
-      <link>http://localhost:1313/categories/arquitetura/</link>
+      <link>https://diegobrocanelli.com.br/categories/arquitetura/</link>
       <pubDate>Wed, 26 Mar 2025 11:48:22 +0000</pubDate>
-      <guid>http://localhost:1313/categories/arquitetura/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/arquitetura/</guid>
       <description></description>
     </item>
     <item>
       <title>Programação</title>
-      <link>http://localhost:1313/categories/programa%C3%A7%C3%A3o/</link>
+      <link>https://diegobrocanelli.com.br/categories/programa%C3%A7%C3%A3o/</link>
       <pubDate>Tue, 18 Feb 2025 21:03:48 +0000</pubDate>
-      <guid>http://localhost:1313/categories/programa%C3%A7%C3%A3o/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/programa%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
+      <link>https://diegobrocanelli.com.br/categories/linux/</link>
       <pubDate>Fri, 28 Apr 2023 19:50:55 +0000</pubDate>
-      <guid>http://localhost:1313/categories/linux/</guid>
+      <guid>https://diegobrocanelli.com.br/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>https://diegobrocanelli.com.br/categories/podcast/</link>
+      <pubDate>Wed, 03 Nov 2021 14:38:47 +0000</pubDate>
+      <guid>https://diegobrocanelli.com.br/categories/podcast/</guid>
       <description></description>
     </item>
   </channel>

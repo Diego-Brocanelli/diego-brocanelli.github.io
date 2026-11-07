@@ -1,19 +1,27 @@
 /* ==========================================================================
    custom-single.css
 
-   Página do post (layouts/single.html + assets/js/post.js). Prioridade é a
-   leitura:
-     - coluna de texto com --measure (~75 caracteres por linha);
-     - corpo 19px / altura de linha 1.75, hierarquia clara de títulos;
-     - sumário lateral fixo em telas >= 1200px, recolhível abaixo disso;
-     - barra de progresso discreta no topo;
+   Página do post (layouts/single.html + assets/js/post.js).
+     - hero centralizado com malha de pontos e brilho (tokens --home-* de
+       custom-home.css, compartilhados com .post-single);
+     - capa larga com moldura e brilho;
+     - coluna de texto com --measure (~75 caracteres por linha), 19px / 1.75;
+     - telas >= 1200px: trilho à esquerda (anel de progresso, compartilhar,
+       copiar link) e sumário fixo à direita; abaixo disso, sumário recolhível;
+     - seções (h2) numeradas quando o post tem sumário;
+     - barra de progresso em gradiente no topo;
      - no fim: tags, compartilhar, autor e anterior/próximo.
+   O progresso (0..1) vem do post.js em --progress na <article>.
    Os blocos de código ficam em custom.css ("Blocos de código") e syntax.css.
    ========================================================================== */
 
 .post-single {
     --measure: 40rem;          /* 640px ≈ 75 caracteres em Source Sans 19px */
+    --hero-width: 54rem;
+    --cover-width: 66rem;
     --toc-width: 15rem;
+    --rail-width: 3rem;
+    --progress: 0;
 }
 
 
@@ -24,8 +32,12 @@ body:has(.post-single) .main {
 }
 
 
-.post-header,
-.post-single > .entry-cover,
+/* o brilho do hero vaza para as laterais da tela; clip não quebra o sticky */
+body:has(.post-single) {
+    overflow-x: clip;
+}
+
+
 .post-footer,
 .post-comments {
     max-width: var(--measure);
@@ -53,26 +65,53 @@ body:has(.post-single) .main {
     display: block;
     height: 100%;
 
-    background: var(--blog-accent);
+    background: var(--home-gradient);
+    box-shadow: 0 0 12px var(--blog-accent);
 
-    transform: scaleX(0);
+    transform: scaleX(var(--progress));
     transform-origin: 0 50%;
 }
 
 
 /* ==========================================================================
-   Cabeçalho do post
+   Hero do post
    ========================================================================== */
 
 .post-header {
-    padding: var(--space-6) 0 var(--space-7);
-    margin-top: 0;
-    margin-bottom: 0;
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: var(--hero-width);
+    margin: 0 auto;
+    padding: var(--space-6) 0 var(--space-8);
+
+    text-align: center;
+}
+
+
+/* malha de pontos + brilho, esmaecidos nas bordas (mesmo recurso do hero da home) */
+.post-header::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -50vw 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(ellipse 35% 55% at 50% 40%, var(--home-glow), transparent 70%),
+        radial-gradient(circle, var(--home-grid-dot) 1px, transparent 1.5px) 0 0 / 24px 24px;
+
+    mask-image: radial-gradient(ellipse 55% 75% at 50% 40%, #000 25%, transparent 75%);
+    pointer-events: none;
 }
 
 
 .post-header .breadcrumbs {
-    margin-bottom: var(--space-6);
+    max-width: 100%;
+    margin-bottom: var(--space-7);
 }
 
 
@@ -91,10 +130,69 @@ body:has(.post-single) .main {
 }
 
 
-/* .post-header na frente: custom.css (.home-label) carrega depois deste arquivo */
-.post-header .post-kicker {
-    margin-bottom: var(--space-3);
+/* categoria · data · tempo de leitura, em monoespaçada como um "spec" */
+.post-facts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2) var(--space-4);
+
+    margin: 0 0 var(--space-6);
+    padding: 0;
+
+    color: var(--secondary);
+
+    font-family: var(--font-code);
+    font-size: var(--text-small);
+    line-height: 1.4;
+
+    list-style: none;
+}
+
+
+.post-facts li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+
+.post-facts li + li::before {
+    content: "";
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    background: var(--border);
+}
+
+
+.post-facts-category {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 32px;
+    padding: 0 var(--space-3);
+
+    border: 1px solid color-mix(in srgb, var(--blog-accent) 35%, var(--border));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--blog-accent) 8%, var(--entry));
+
     color: var(--blog-accent);
+
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.post-facts-category:hover {
+    background: var(--blog-accent);
+    color: var(--blog-selection-text);
 }
 
 
@@ -102,44 +200,53 @@ body:has(.post-single) .main {
     margin: 0;
 
     font-family: var(--font-body);
-    font-size: clamp(2.25rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 800;
 
-    line-height: 1.08;
-    letter-spacing: -0.035em;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
 
     text-wrap: balance;
 }
 
 
 .post-description {
+    max-width: 42rem;
     margin: var(--space-5) 0 0;
 
     color: var(--secondary);
 
     font-size: 1.3rem;
-    line-height: 1.5;
+    line-height: 1.55;
+
+    text-wrap: pretty;
 }
 
 
 .post-byline {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--space-3);
 
-    margin-top: var(--space-6);
-    padding-top: var(--space-5);
+    margin-top: var(--space-7);
+    padding: var(--space-2) var(--space-5) var(--space-2) var(--space-2);
 
-    border-top: 1px solid var(--border);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--entry) 75%, transparent);
+    backdrop-filter: blur(8px);
+
+    text-align: left;
 }
 
 
 .post-byline-photo {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     margin: 0;
 
     border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--entry), 0 0 0 4px color-mix(in srgb, var(--blog-accent) 45%, transparent);
 
     object-fit: cover;
     object-position: 50% 20%;
@@ -154,27 +261,84 @@ body:has(.post-single) .main {
 
 
 .post-byline-author {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
+.post-meta-line {
+    color: var(--secondary);
+    font-size: var(--text-small);
+}
+
+
+/* capa: mais larga que o texto, com brilho por trás */
 .post-single > .entry-cover {
-    margin-bottom: var(--space-7);
+    position: relative;
+
+    max-width: var(--cover-width);
+    margin: 0 auto var(--space-8);
+}
+
+
+.post-single > .entry-cover::before {
+    content: "";
+    position: absolute;
+    inset: 8% 6% -4%;
+    z-index: -1;
+
+    background: var(--home-gradient);
+    border-radius: 32px;
+    filter: blur(48px);
+    opacity: 0.25;
 }
 
 
 .post-single > .entry-cover img {
-    border-radius: 16px;
+    width: 100%;
+
+    border: 1px solid var(--border);
+    border-radius: var(--home-radius);
+    box-shadow: var(--home-card-shadow);
+}
+
+
+/* entrada suave do hero e da capa */
+@media (prefers-reduced-motion: no-preference) {
+
+    .post-header > *,
+    .post-single > .entry-cover {
+        animation: post-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .post-header > :nth-child(2) { animation-delay: 0.05s; }
+    .post-header > :nth-child(3) { animation-delay: 0.1s; }
+    .post-header > :nth-child(4) { animation-delay: 0.15s; }
+    .post-header > :nth-child(5) { animation-delay: 0.2s; }
+    .post-single > .entry-cover  { animation-delay: 0.25s; }
+}
+
+
+@keyframes post-rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
 }
 
 
 /* ==========================================================================
-   Corpo: texto central + sumário lateral
+   Corpo: texto central + trilho e sumário laterais
    ========================================================================== */
 
 .post-body {
     max-width: var(--measure);
     margin: 0 auto;
+}
+
+
+/* trilho só existe em telas largas (no mobile o compartilhar fica no rodapé) */
+.post-rail {
+    display: none;
 }
 
 
@@ -211,6 +375,15 @@ body:has(.post-single) .main {
 }
 
 
+/* parágrafo de abertura um pouco maior, como lead */
+.post-content > p:first-child {
+    color: var(--primary);
+
+    font-size: 1.15em;
+    line-height: 1.65;
+}
+
+
 .post-content strong {
     font-weight: 650;
 }
@@ -239,7 +412,7 @@ body:has(.post-single) .main {
 
 
 .post-content h1 { font-size: 2rem; }
-.post-content h2 { font-size: 1.75rem; }
+.post-content h2 { font-size: 1.85rem; font-weight: 800; letter-spacing: -0.03em; margin-top: 2.6em; }
 .post-content h3 { font-size: 1.35rem; margin-top: 1.8em; }
 .post-content h4,
 .post-content h5,
@@ -248,6 +421,39 @@ body:has(.post-single) .main {
 
 .post-content :is(h1, h2, h3, h4, h5, h6) + * {
     margin-top: 0.6em;
+}
+
+
+/* seções numeradas (01, 02...) quando o post tem sumário, casando com o sumário */
+.post-body:has(.toc) .post-content {
+    counter-reset: section;
+}
+
+
+.post-body:has(.toc) .post-content h2 {
+    counter-increment: section;
+}
+
+
+.post-body:has(.toc) .post-content h2::before {
+    content: counter(section, decimal-leading-zero);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    margin-bottom: var(--space-2);
+
+    background: var(--home-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    font-family: var(--font-code);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
 }
 
 
@@ -303,18 +509,22 @@ body:has(.post-single) .main {
 }
 
 
-/* links */
+/* links: sublinhado que ganha cor no hover */
 .post-content a {
     color: var(--blog-accent);
 
     text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--blog-accent) 40%, transparent);
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+
+    transition: text-decoration-color 0.2s ease;
 }
 
 
 .post-content a:hover {
     color: var(--blog-accent-hover);
+    text-decoration-color: currentColor;
     text-decoration-thickness: 2px;
 }
 
@@ -325,17 +535,31 @@ body:has(.post-single) .main {
 
 /* citação: mesmo tamanho do texto, mais discreta que o conteúdo do autor */
 .post-content blockquote {
+    position: relative;
+
     margin-left: 0;
     margin-right: 0;
     padding: var(--space-1) 0 var(--space-1) var(--space-5);
 
-    border-inline-start: 3px solid var(--border);
+    border: 0;
 
     color: var(--secondary);
 
     font-size: 1em;
     font-style: italic;
     line-height: 1.7;
+}
+
+
+.post-content blockquote::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+
+    width: 3px;
+
+    background: var(--home-gradient);
+    border-radius: 3px;
 }
 
 
@@ -369,6 +593,12 @@ body:has(.post-single) .main {
 
     font-size: 1.0625rem;
     line-height: 1.65;
+}
+
+
+/* a caixa usa a borda própria, não o traço de gradiente da citação */
+.post-content .callout::before {
+    display: none;
 }
 
 
@@ -427,7 +657,8 @@ body:has(.post-single) .main {
     height: auto;
     margin: 0 auto;
 
-    border-radius: 12px;
+    border-radius: 14px;
+    box-shadow: var(--home-card-shadow);
 }
 
 
@@ -499,14 +730,15 @@ body:has(.post-single) .main {
 }
 
 
-/* separador */
+/* separador: três pontos em gradiente */
 .post-content hr {
-    width: 4rem;
-    height: 0;
-    margin: 3em auto;
+    width: 4.5rem;
+    height: 6px;
+    margin: 3.5em auto;
 
     border: 0;
-    border-top: 2px solid var(--border);
+    background: var(--home-gradient);
+    mask: radial-gradient(circle, #000 2.5px, transparent 3px) 0 0 / 1.5rem 6px;
 }
 
 
@@ -520,7 +752,7 @@ body:has(.post-single) .main {
     aspect-ratio: 16 / 9;
 
     border: 0;
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
 
@@ -528,13 +760,14 @@ body:has(.post-single) .main {
    Sumário
    ========================================================================== */
 
-.post-body .toc {
+.post-body details.toc {
     margin: 0 0 var(--space-7);
     padding: 0;
 
     background: var(--entry);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
+    box-shadow: var(--home-card-shadow);
 }
 
 
@@ -601,7 +834,7 @@ body:has(.post-single) .main {
 
 .toc-nav a {
     display: grid;
-    grid-template-columns: 2em minmax(0, 1fr);
+    grid-template-columns: 2.25em minmax(0, 1fr);
 
     padding: var(--space-2) 0;
 
@@ -620,9 +853,10 @@ body:has(.post-single) .main {
 
     color: var(--secondary);
 
-    font-size: 0.8em;
+    font-family: var(--font-code);
+    font-size: 0.75em;
     font-variant-numeric: tabular-nums;
-    line-height: 1.75;
+    line-height: 1.9;
 
     opacity: 0.7;
 }
@@ -640,7 +874,15 @@ body:has(.post-single) .main {
 }
 
 
-/* telas largas: sumário vira coluna lateral fixa à direita do texto */
+.toc-nav a[aria-current]::before {
+    color: var(--blog-accent);
+    opacity: 1;
+}
+
+
+/* details.toc: vence o "[data-theme=dark] details.toc" do PaperMod */
+
+/* telas largas: trilho à esquerda, texto no centro, sumário à direita */
 @media (min-width: 1200px) {
 
     .post-body {
@@ -655,42 +897,180 @@ body:has(.post-single) .main {
         grid-column: 2;
     }
 
-    .post-body .toc {
+    .post-body .post-content {
+        grid-row: 1;
+    }
+
+    /* ---- trilho */
+    .post-rail {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+
+        position: sticky;
+        top: var(--space-7);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2);
+
+        width: var(--rail-width);
+    }
+
+    .post-rail-progress {
+        position: relative;
+
+        display: grid;
+        place-items: center;
+
+        width: var(--rail-width);
+        height: var(--rail-width);
+        margin-bottom: var(--space-3);
+    }
+
+    .post-rail-progress svg {
+        position: absolute;
+        inset: 0;
+
+        transform: rotate(-90deg);
+    }
+
+    .post-rail-progress circle {
+        fill: none;
+        stroke: var(--border);
+        stroke-width: 3;
+    }
+
+    .post-rail-progress .post-rail-progress-fill {
+        stroke: var(--blog-accent);
+        stroke-linecap: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: calc(100 - var(--progress) * 100);
+    }
+
+    .post-rail-percent {
+        color: var(--secondary);
+
+        font-family: var(--font-code);
+        font-size: 0.6875rem;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .post-rail .share-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+
+        margin: 0;
+        padding: 0;
+
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+
+        list-style: none;
+    }
+
+    .post-rail .share-buttons a:not(:last-of-type) {
+        margin: 0;
+    }
+
+    .post-rail .share-buttons a,
+    .post-rail-copy {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+        padding: 0;
+
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: var(--entry);
+
+        color: var(--secondary);
+
+        cursor: pointer;
+
+        transition:
+            color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .post-rail .share-buttons a:hover,
+    .post-rail-copy:hover,
+    .post-rail-copy[data-copied] {
+        border-color: var(--blog-accent);
+        color: var(--blog-accent);
+        transform: translateY(-2px);
+    }
+
+    .post-rail .share-buttons svg,
+    .post-rail-copy svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* "Link copiado" aparece ao lado do botão */
+    .post-rail-copy-status {
+        position: absolute;
+        left: calc(100% + var(--space-2));
+
+        white-space: nowrap;
+
+        color: var(--blog-accent);
+
+        font-size: var(--text-small);
+        font-weight: 600;
+    }
+
+    /* ---- sumário */
+    .post-body details.toc {
         grid-column: 3;
         grid-row: 1;
         align-self: start;
 
         position: sticky;
-        top: var(--space-6);
+        top: var(--space-7);
 
         max-width: var(--toc-width);
-        max-height: calc(100vh - var(--space-8));
+        max-height: calc(100vh - var(--space-8) - var(--space-6));
         overflow-y: auto;
         margin: 0;
 
         background: transparent;
         border: 0;
-        border-inline-start: 1px solid var(--border);
         border-radius: 0;
-    }
-
-    .post-body .post-content {
-        grid-row: 1;
+        box-shadow: none;
     }
 
     .toc-title {
         min-height: 0;
-        padding: 0 var(--space-4) var(--space-3);
+        padding: 0 0 var(--space-3) var(--space-4);
 
         color: var(--secondary);
+
+        pointer-events: none;
+    }
+
+    .toc-title::after {
+        display: none;
     }
 
     .toc-nav ol {
         padding: 0;
+
+        border-inline-start: 1px solid var(--border);
     }
 
     .toc-nav a {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 2em minmax(0, 1fr);
 
         margin-inline-start: -1px;
         padding: var(--space-2) var(--space-4);
@@ -700,11 +1080,8 @@ body:has(.post-single) .main {
         font-size: 0.9375rem;
     }
 
-    .toc-nav a::before {
-        display: none;
-    }
-
     .toc-nav a[aria-current] {
+        border-image: var(--home-gradient) 1;
         border-inline-start-color: var(--blog-accent);
     }
 }
@@ -715,7 +1092,7 @@ body:has(.post-single) .main {
    ========================================================================== */
 
 .post-footer {
-    margin-top: var(--space-8);
+    margin-top: var(--space-9);
 }
 
 
@@ -755,6 +1132,7 @@ body:has(.post-single) .main {
 
     color: var(--secondary);
 
+    font-family: var(--font-code);
     font-size: var(--text-small);
     line-height: 1;
 
@@ -836,8 +1214,12 @@ body:has(.post-single) .main {
 }
 
 
-/* autor */
+/* autor: borda em gradiente + brilho no canto */
 .author-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
     display: grid;
     grid-template-columns: 96px minmax(0, 1fr);
     align-items: center;
@@ -845,9 +1227,22 @@ body:has(.post-single) .main {
 
     padding: var(--space-6);
 
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    background:
+        linear-gradient(var(--entry), var(--entry)) padding-box,
+        var(--home-gradient) border-box;
+    border: 1px solid transparent;
+    border-radius: var(--home-radius);
+    box-shadow: var(--home-card-shadow);
+}
+
+
+.author-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: radial-gradient(circle at 100% 0%, var(--home-glow), transparent 60%);
 }
 
 
@@ -857,6 +1252,7 @@ body:has(.post-single) .main {
     margin: 0;
 
     border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--entry), 0 0 0 5px color-mix(in srgb, var(--blog-accent) 45%, transparent);
 
     object-fit: cover;
     object-position: 50% 20%;
@@ -902,11 +1298,13 @@ body:has(.post-single) .main {
 
     padding: var(--space-5);
 
+    background: var(--entry);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
 
     transition:
         border-color 0.2s ease,
+        box-shadow 0.2s ease,
         transform 0.2s ease;
 }
 
@@ -919,28 +1317,40 @@ body:has(.post-single) .main {
 
 .post-nav-item:hover {
     border-color: var(--blog-accent);
-    transform: translateY(-2px);
+    box-shadow: 0 16px 40px -20px var(--blog-accent);
+    transform: translateY(-3px);
 }
 
 
 .post-nav-label {
     color: var(--secondary);
 
+    font-family: var(--font-code);
     font-size: var(--text-small);
-    font-weight: 600;
 
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
 
 
+.post-nav-label span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+
+.post-nav-item--prev:hover .post-nav-label span { transform: translateX(-4px); }
+.post-nav-item--next:hover .post-nav-label span { transform: translateX(4px); }
+
+
 .post-nav-title {
     color: var(--primary);
 
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
 
     line-height: 1.35;
+    letter-spacing: -0.01em;
 
     transition: color 0.2s ease;
 }
@@ -975,15 +1385,27 @@ body:has(.post-single) .main {
 @media (max-width: 768px) {
 
     .post-header {
-        padding: var(--space-4) 0 var(--space-6);
+        padding: var(--space-4) 0 var(--space-7);
     }
 
     .post-header .breadcrumbs {
+        margin-bottom: var(--space-6);
+    }
+
+    .post-facts {
         margin-bottom: var(--space-5);
     }
 
     .post-description {
         font-size: 1.15rem;
+    }
+
+    .post-byline {
+        margin-top: var(--space-6);
+    }
+
+    .post-single > .entry-cover {
+        margin-bottom: var(--space-7);
     }
 
     .post-content {
@@ -992,12 +1414,16 @@ body:has(.post-single) .main {
     }
 
     .post-content h1 { font-size: 1.6rem; }
-    .post-content h2 { font-size: 1.45rem; }
+    .post-content h2 { font-size: 1.5rem; }
     .post-content h3 { font-size: 1.2rem; }
 
     .post-content .callout {
         padding: var(--space-4);
         font-size: 1rem;
+    }
+
+    .post-footer {
+        margin-top: var(--space-8);
     }
 
     .author-card {
@@ -1024,7 +1450,10 @@ body:has(.post-single) .main {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .post-nav-item:hover {
+    .post-nav-item:hover,
+    .post-rail .share-buttons a:hover,
+    .post-rail-copy:hover,
+    .post-nav-item:hover .post-nav-label span {
         transform: none;
     }
 }

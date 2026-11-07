@@ -1,0 +1,152 @@
+{{- define "main" }}
+
+{{- /*
+  Índice de taxonomia (/categories/, /tags/).
+  Topo editorial, ranking dos temas mais escritos e índice A–Z com filtro.
+  Estilos: assets/css/extended/custom-taxonomy.css
+*/ -}}
+{{- $terms := .Data.Terms.ByCount }}
+{{- $total := len $terms }}
+{{- $max := 1 }}
+{{- with index $terms 0 }}{{ $max = .Count }}{{ end }}
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $isTags := eq .Data.Plural "tags" }}
+{{- $noun := cond $isTags "tags" "temas" }}
+
+<div class="taxonomy-page">
+
+    <header class="taxonomy-hero">
+        {{ partial "breadcrumbs.html" . }}
+
+        <span class="home-label">Índice</span>
+
+        <h1 class="taxonomy-hero-title">
+            {{ .Title }}
+            <span>{{ $total }} {{ $noun }}, {{ len $posts }} artigos.</span>
+        </h1>
+
+        <div class="archive-hero-footer">
+            <p class="archive-lead">
+                Um mapa do que escrevo: engenharia, arquitetura e as ferramentas do dia a dia.
+                Escolha um tema e leia na ordem que fizer sentido.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ "posts/" | relURL }}" class="home-button">Todos os artigos</a>
+                <a href="{{ "search/" | relURL }}" class="home-button">Pesquisar</a>
+            </div>
+        </div>
+    </header>
+
+    {{- /* ranking: 5 temas = card 2×2 + 4 cards, fecha a grade de 4 colunas */}}
+    <section class="taxonomy-top" aria-labelledby="taxonomy-top-title">
+        <h2 id="taxonomy-top-title" class="home-label">Mais escritos</h2>
+
+        <ol class="taxonomy-top-grid">
+            {{- range $i, $t := first 5 $terms }}
+            {{- $latest := index $t.Pages.ByDate.Reverse 0 }}
+            {{- $first := index $t.Pages.ByDate 0 }}
+            <li class="taxonomy-card{{ if eq $i 0 }} taxonomy-card--lead{{ end }}"
+                style="--w: {{ div (mul $t.Count 100) $max }}%">
+                <span class="taxonomy-card-rank" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+
+                <span class="taxonomy-card-count">
+                    <strong>{{ $t.Count }}</strong>
+                    {{ cond (eq $t.Count 1) "artigo" "artigos" }}
+                </span>
+
+                <h3 class="taxonomy-card-title">
+                    <a href="{{ $t.Page.RelPermalink }}">{{ $t.Page.LinkTitle }}</a>
+                </h3>
+
+                <span class="taxonomy-meter" aria-hidden="true"></span>
+
+                <p class="taxonomy-card-latest">
+                    <span>
+                        {{- if eq $first.Date.Year $latest.Date.Year }}{{ $latest.Date.Year }}
+                        {{- else }}{{ $first.Date.Year }}–{{ $latest.Date.Year }}{{ end -}}
+                    </span>
+                    Último: {{ $latest.Title }}
+                </p>
+            </li>
+            {{- end }}
+        </ol>
+    </section>
+
+    {{- /* índice A–Z com filtro (o filtro só aparece com JS) */}}
+    <section class="taxonomy-index" aria-labelledby="taxonomy-index-title">
+        <div class="taxonomy-index-bar">
+            <h2 id="taxonomy-index-title" class="taxonomy-index-title">De A a Z</h2>
+
+            <div class="taxonomy-filter" hidden>
+                <label for="taxonomy-filter-input" class="visually-hidden">Filtrar {{ $noun }}</label>
+                <input id="taxonomy-filter-input" type="search" placeholder="Filtrar {{ $noun }}…" autocomplete="off">
+                <output class="taxonomy-filter-count" for="taxonomy-filter-input" aria-live="polite"></output>
+            </div>
+        </div>
+
+        {{- $groups := slice }}
+        {{- range .Data.Terms.Alphabetical }}
+        {{- $groups = $groups | append (upper (substr .Page.LinkTitle 0 1)) }}
+        {{- end }}
+        {{- $letters := uniq $groups }}
+
+        <nav class="taxonomy-letters" aria-label="Ir para a letra">
+            <ul>
+                {{- range $letters }}
+                <li><a href="#letra-{{ . | anchorize }}">{{ . }}</a></li>
+                {{- end }}
+            </ul>
+        </nav>
+
+        {{- range $letter := $letters }}
+        <div class="taxonomy-group" id="letra-{{ $letter | anchorize }}">
+            <h3 class="taxonomy-group-letter" aria-hidden="true">{{ $letter }}</h3>
+
+            <ul class="taxonomy-list" aria-label="{{ $letter }}">
+                {{- range $.Data.Terms.Alphabetical }}
+                {{- if eq (upper (substr .Page.LinkTitle 0 1)) $letter }}
+                <li class="taxonomy-item" data-name="{{ lower .Page.LinkTitle }}">
+                    <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+                    <span class="taxonomy-item-count">{{ .Count }}</span>
+                </li>
+                {{- end }}
+                {{- end }}
+            </ul>
+        </div>
+        {{- end }}
+
+        <p class="taxonomy-empty" hidden>Nenhum tema com esse nome. <a href="{{ "search/" | relURL }}">Pesquisar nos artigos</a></p>
+    </section>
+
+</div>
+
+<script>
+(() => {
+    const box = document.querySelector('.taxonomy-filter');
+    const input = document.getElementById('taxonomy-filter-input');
+    const out = box.querySelector('output');
+    const empty = document.querySelector('.taxonomy-empty');
+    const items = [...document.querySelectorAll('.taxonomy-item')];
+    const groups = [...document.querySelectorAll('.taxonomy-group')];
+    // compara sem acento: "versao" encontra "versão"
+    const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+    const names = items.map(li => norm(li.dataset.name));
+
+    box.hidden = false;
+
+    input.addEventListener('input', () => {
+        const q = norm(input.value);
+        let shown = 0;
+        items.forEach((li, i) => {
+            li.hidden = !names[i].includes(q);
+            if (!li.hidden) shown++;
+        });
+        groups.forEach(g => { g.hidden = !g.querySelector('.taxonomy-item:not([hidden])'); });
+        empty.hidden = shown > 0;
+        out.textContent = q ? `${shown} de ${items.length}` : '';
+    });
+})();
+</script>
+
+{{- end }}{{/* end main */}}

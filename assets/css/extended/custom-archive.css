@@ -3,6 +3,7 @@
 
    /posts (layouts/posts/section.html) e páginas de categoria/tag
    (layouts/term.html). A lista por ano vem de _partials/post-archive.html.
+   Tokens --home-* vêm de custom-home.css (.home, .archive-page).
    Reaproveita .home-label (custom.css), .home-button, .hero-actions e
    .post-meta-line (custom-home.css).
    ========================================================================== */
@@ -12,12 +13,37 @@
 }
 
 
+/* filtro: [hidden] precisa vencer os display: grid/flex abaixo */
+.archive-page [hidden] {
+    display: none !important;
+}
+
+
 /* ==========================================================================
    Topo
    ========================================================================== */
 
 .archive-hero {
+    position: relative;
+    isolation: isolate;
+
     padding: var(--space-6) 0 var(--space-7);
+}
+
+
+/* malha de pontos + brilho, mesmo fundo do hero da home */
+.archive-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 -50vw;
+    z-index: -1;
+
+    background:
+        radial-gradient(ellipse 35% 45% at 80% 30%, var(--home-glow), transparent 70%),
+        radial-gradient(circle, var(--home-grid-dot) 1px, transparent 1.5px) 0 0 / 24px 24px;
+
+    mask-image: radial-gradient(ellipse 60% 70% at 50% 35%, #000 30%, transparent 75%);
+    pointer-events: none;
 }
 
 
@@ -30,11 +56,11 @@
 .archive-hero-title {
     margin: 0;
 
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    font-weight: 700;
+    font-size: clamp(3.25rem, 11vw, 8.5rem);
+    font-weight: 800;
 
-    line-height: 0.95;
-    letter-spacing: -0.045em;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
 
     text-wrap: balance;
 }
@@ -42,14 +68,24 @@
 
 .archive-hero-title span {
     display: block;
-    color: var(--blog-accent);
+
+    background: var(--home-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    padding-bottom: 0.08em; /* descendentes não são cortados pelo background-clip */
 }
 
 
 /* categoria/tag: título é o nome do termo, menor que o do /posts */
 .archive-hero--term .archive-hero-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    color: var(--blog-accent);
+
+    background: var(--home-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
@@ -79,13 +115,165 @@
 
 
 /* ==========================================================================
-   Destaques (3 mais recentes)
+   Números do arquivo
+   ========================================================================== */
+
+.archive-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin: var(--space-7) 0 0;
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--home-radius);
+
+    background: color-mix(in srgb, var(--entry) 70%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--home-card-shadow);
+}
+
+
+.archive-stats > div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-1);
+
+    padding: var(--space-5);
+}
+
+
+.archive-stats > div + div {
+    border-left: 1px solid var(--border);
+}
+
+
+.archive-stats dd {
+    margin: 0;
+
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+.archive-stats dt {
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   Linha do tempo (posts por ano)
+   ========================================================================== */
+
+.archive-timeline {
+    margin-top: var(--space-7);
+}
+
+
+.archive-timeline ol {
+    display: flex;
+    align-items: end;
+    gap: var(--space-2);
+
+    height: 160px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.archive-timeline li {
+    flex: 1 1 0;
+    height: 100%;
+    min-width: 0;
+}
+
+
+.archive-timeline a {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: var(--space-1);
+
+    height: 100%;
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    font-variant-numeric: tabular-nums;
+}
+
+
+.archive-timeline-bar {
+    width: 100%;
+    flex: none;
+    height: max(4px, calc((100% - 3rem) * var(--h)));
+
+    border-radius: 6px 6px 2px 2px;
+
+    background: var(--home-gradient);
+    background-attachment: fixed; /* gradiente contínuo ao longo de todas as barras */
+    opacity: 0.35;
+
+    transform-origin: bottom;
+    transition: opacity 0.2s ease;
+}
+
+
+.archive-timeline-count {
+    font-weight: 700;
+    color: var(--primary);
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+
+.archive-timeline-year::before {
+    content: "’";
+}
+
+
+.archive-timeline a:hover .archive-timeline-bar,
+.archive-timeline a:focus-visible .archive-timeline-bar {
+    opacity: 1;
+}
+
+
+.archive-timeline a:hover .archive-timeline-count,
+.archive-timeline a:focus-visible .archive-timeline-count {
+    opacity: 1;
+}
+
+
+.archive-timeline a:hover,
+.archive-timeline a:focus-visible {
+    color: var(--primary);
+}
+
+
+/* ==========================================================================
+   Destaques: 1 grande + 2 empilhados
    ========================================================================== */
 
 .archive-featured {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-6);
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--space-4);
 
     padding: var(--space-5) 0 var(--space-8);
 }
@@ -93,20 +281,58 @@
 
 .archive-card {
     position: relative;
+    isolation: isolate;
+
     display: flex;
     flex-direction: column;
+    justify-content: end;
+
+    min-height: 240px;
+    padding: var(--space-5);
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--home-radius);
+
+    background: var(--entry);
+    box-shadow: var(--home-card-shadow);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
+.archive-card:hover,
+.archive-card:focus-within {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--blog-accent) 45%, var(--border));
+}
+
+
+.archive-card--lead {
+    grid-row: span 2;
+    min-height: 520px;
+    padding: var(--space-7);
+}
+
+
+/* capa ocupa o card inteiro, com véu escuro para o texto */
 .archive-card-cover {
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 
-    margin-bottom: var(--space-4);
+    background: #0d0f12;
+}
 
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: 14px;
+
+.archive-card-cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(180deg, rgba(13, 15, 18, 0.25) 0%, rgba(13, 15, 18, 0.7) 45%, rgba(13, 15, 18, 0.95) 100%);
 }
 
 
@@ -117,64 +343,167 @@
 
     object-fit: cover;
 
-    transition: transform 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 
-/* sem imagem: faixa de cor no topo, para manter o ritmo da grade */
-.archive-card--no-cover {
-    padding-top: var(--space-5);
-    border-top: 4px solid var(--blog-accent);
+.archive-card:hover .archive-card-cover img,
+.archive-card:focus-within .archive-card-cover img {
+    transform: scale(1.05);
+}
+
+
+/* com capa: texto claro nos dois temas (fundo é sempre escuro) */
+.archive-card:not(.archive-card--no-cover) {
+    border-color: transparent;
+}
+
+.archive-card:not(.archive-card--no-cover) .archive-card-title a,
+.archive-card:not(.archive-card--no-cover) .archive-card-arrow {
+    color: #ffffff;
+}
+
+.archive-card:not(.archive-card--no-cover) .post-meta-line,
+.archive-card:not(.archive-card--no-cover) p {
+    color: #d5d9e0;
+}
+
+.archive-card:not(.archive-card--no-cover) .archive-category {
+    color: #93c5fd;
+}
+
+
+/* sem capa: brilho no canto + número gigante */
+.archive-card--no-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: radial-gradient(circle at 100% 0%, var(--home-glow), transparent 65%);
+}
+
+
+.archive-card-index {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-5);
+
+    font-size: 4rem;
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: -0.05em;
+
+    background: var(--home-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    opacity: 0.5;
+}
+
+
+.archive-card-badge {
+    padding: 2px var(--space-2);
+
+    border-radius: 999px;
+
+    background: var(--blog-accent);
+    color: #ffffff;
+
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 
 .archive-card-title {
     margin: var(--space-2) 0 0;
 
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
 
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: -0.02em;
 
     text-wrap: balance;
 }
 
 
-.archive-card-title a {
-    color: var(--primary);
-    transition: color 0.2s ease;
+.archive-card--lead .archive-card-title {
+    max-width: 22ch;
+
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
 }
 
 
-/* o link do título cobre o card inteiro */
+.archive-card-title a {
+    color: var(--primary);
+}
+
+
+/* o link do título cobre o card/linha inteira */
 .archive-card-title a::after,
 .archive-title a::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
 }
 
 
 .archive-card p {
-    margin: var(--space-2) 0 0;
+    max-width: 60ch;
+    margin: var(--space-3) 0 0;
 
     color: var(--secondary);
 
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
 
-.archive-card:hover .archive-card-title a,
-.archive-card:focus-within .archive-card-title a {
-    color: var(--blog-accent);
+.archive-card-arrow {
+    position: absolute;
+    top: var(--space-5);
+    right: var(--space-5);
+
+    display: grid;
+    place-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    font-size: 1.1rem;
+
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 
-.archive-card:hover .archive-card-cover img,
-.archive-card:focus-within .archive-card-cover img {
-    transform: scale(1.03);
+.archive-card:hover .archive-card-arrow,
+.archive-card:focus-within .archive-card-arrow {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+
+.archive-card:has(a:focus-visible) {
+    outline: 2px solid var(--blog-accent);
+    outline-offset: 3px;
+}
+
+.archive-card-title a:focus-visible {
+    outline: none;
 }
 
 
@@ -185,19 +514,130 @@
 
 
 /* ==========================================================================
-   Atalhos por ano
+   Barra fixa: filtro + atalhos por ano
    ========================================================================== */
 
-.archive-years {
+.archive-anchor {
+    scroll-margin-top: var(--space-4);
+}
+
+
+.archive-bar {
     position: sticky;
     top: 0;
     z-index: 10;
 
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+
     margin: 0 0 var(--space-5);
     padding: var(--space-3) 0;
 
-    background: var(--blog-bg); /* --theme vira cinza nas listas do tema (.list) */
+    /* --theme vira cinza nas listas do tema (.list) */
+    background: color-mix(in srgb, var(--blog-bg) 85%, transparent);
+    backdrop-filter: blur(12px) saturate(1.4);
     border-bottom: 1px solid var(--border);
+}
+
+
+.archive-filter {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex: 0 1 380px;
+    min-width: 0;
+}
+
+
+.archive-filter-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+.archive-filter svg {
+    position: absolute;
+    left: var(--space-4);
+
+    color: var(--secondary);
+    pointer-events: none;
+}
+
+
+.archive-filter input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 7.5rem 0 2.75rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: var(--entry);
+    color: var(--primary);
+
+    font: inherit;
+    font-size: 1rem;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.archive-filter input::placeholder {
+    color: var(--secondary);
+}
+
+
+.archive-filter input:focus {
+    outline: none;
+    border-color: var(--blog-accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--blog-accent) 20%, transparent);
+}
+
+
+.archive-filter kbd,
+.archive-filter-status {
+    position: absolute;
+
+    color: var(--secondary);
+
+    font-size: var(--text-small);
+    pointer-events: none;
+}
+
+
+.archive-filter-status {
+    right: 3rem;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.archive-filter kbd {
+    right: var(--space-4);
+
+    padding: 0 0.45em;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    font-family: var(--font-code);
+    line-height: 1.6;
+}
+
+
+.archive-filter input:focus ~ kbd {
+    opacity: 0;
+}
+
+
+.archive-years {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 
@@ -212,11 +652,23 @@
     scrollbar-width: none;
 
     list-style: none;
+
+    /* esmaece as bordas quando há rolagem horizontal */
+    mask-image: linear-gradient(90deg, transparent, #000 var(--space-4), #000 calc(100% - var(--space-6)), transparent);
 }
 
 
 .archive-years ul::-webkit-scrollbar {
     display: none;
+}
+
+
+.archive-years li:first-child {
+    padding-left: var(--space-4);
+}
+
+.archive-years li:last-child {
+    padding-right: var(--space-6);
 }
 
 
@@ -269,15 +721,15 @@
 
 .archive-group {
     display: grid;
-    grid-template-columns: 9rem minmax(0, 1fr);
+    grid-template-columns: 12rem minmax(0, 1fr);
     gap: var(--space-6);
 
-    padding: var(--space-6) 0;
+    padding: var(--space-7) 0;
 
     border-top: 1px solid var(--border);
 
     /* ao clicar no atalho, o ano não fica escondido sob a barra fixa */
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 6rem;
 }
 
 
@@ -290,35 +742,49 @@
     align-self: start;
 
     position: sticky;
-    top: 5.5rem;
+    top: 6.5rem;
 
     margin: 0;
+}
 
-    font-size: 2.5rem;
-    font-weight: 700;
 
-    line-height: 1;
-    letter-spacing: -0.04em;
+/* ano gigante com o gradiente da marca */
+.archive-group-year {
+    display: block;
+
+    font-size: 4.5rem;
+    font-weight: 800;
+
+    line-height: 0.9;
+    letter-spacing: -0.06em;
 
     font-variant-numeric: tabular-nums;
+
+    background: var(--home-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
 .archive-group-title small {
     display: block;
-    margin-top: var(--space-2);
+    margin-top: var(--space-3);
 
     color: var(--secondary);
 
     font-size: var(--text-small);
     font-weight: 600;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 
+/* lista em linha do tempo: trilho vertical + um ponto por artigo */
 .archive-list {
+    position: relative;
+
     margin: 0;
     padding: 0;
 
@@ -326,32 +792,68 @@
 }
 
 
+.archive-list::before {
+    content: "";
+    position: absolute;
+    top: var(--space-5);
+    bottom: var(--space-5);
+    left: 0.4rem;
+
+    width: 2px;
+
+    background: linear-gradient(180deg, var(--border), var(--border) 85%, transparent);
+}
+
+
 .archive-item {
     position: relative;
 
     display: grid;
-    grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+    grid-template-columns: 4.5rem minmax(0, 1fr) auto auto;
     align-items: baseline;
     gap: var(--space-4);
 
     margin: 0;
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-7);
 
-    border-bottom: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
 
-    transition: background-color 0.2s ease;
+    transition: background-color 0.25s ease;
 }
 
 
-.archive-item:last-child {
-    border-bottom: 0;
+.archive-item::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--space-4) + 0.55em);
+    left: calc(0.4rem - 4px);
+
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--blog-bg);
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
 .archive-item:hover,
 .archive-item:focus-within {
     background: var(--entry);
+}
+
+
+.archive-item:hover::before,
+.archive-item:focus-within::before {
+    border-color: var(--blog-accent);
+    background: var(--blog-accent);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--blog-accent) 22%, transparent);
 }
 
 
@@ -367,10 +869,11 @@
 .archive-title {
     margin: 0;
 
-    font-size: 1.125rem;
+    font-size: 1.15rem;
     font-weight: 600;
 
     line-height: 1.4;
+    letter-spacing: -0.01em;
 }
 
 
@@ -398,8 +901,30 @@
 
 
 .archive-item .archive-category {
+    padding: 2px var(--space-3);
+
+    border: 1px solid color-mix(in srgb, var(--blog-accent) 30%, var(--border));
+    border-radius: 999px;
+
     font-size: var(--text-small);
     white-space: nowrap;
+}
+
+
+.archive-arrow {
+    color: var(--blog-accent);
+
+    opacity: 0;
+    transform: translateX(-8px);
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+
+.archive-item:hover .archive-arrow,
+.archive-item:focus-within .archive-arrow {
+    opacity: 1;
+    transform: none;
 }
 
 
@@ -407,6 +932,67 @@
     margin-inline-start: var(--space-2);
     font-size: 0.7rem;
     vertical-align: middle;
+}
+
+
+.archive-empty {
+    padding: var(--space-8) 0;
+
+    color: var(--secondary);
+
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.archive-empty a {
+    color: var(--blog-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* ==========================================================================
+   Movimento (só sem reduced-motion)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .archive-hero > * {
+        animation: home-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+
+    .archive-hero > :nth-child(2) { animation-delay: 0.05s; }
+    .archive-hero > :nth-child(3) { animation-delay: 0.1s; }
+    .archive-hero > :nth-child(4) { animation-delay: 0.18s; }
+    .archive-hero > :nth-child(5) { animation-delay: 0.26s; }
+
+    /* barras crescem de baixo para cima, uma após a outra */
+    .archive-timeline-bar {
+        animation: archive-grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        animation-delay: calc(0.35s + var(--i, 0) * 40ms);
+    }
+
+    .archive-featured > * {
+        animation: home-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+        animation-delay: 0.3s;
+    }
+
+    .archive-featured > :nth-child(2) { animation-delay: 0.38s; }
+    .archive-featured > :nth-child(3) { animation-delay: 0.46s; }
+
+    @supports (animation-timeline: view()) {
+        .archive-item {
+            animation: home-rise linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 60%;
+        }
+    }
+}
+
+
+@keyframes archive-grow {
+    from { transform: scaleY(0); }
 }
 
 
@@ -418,12 +1004,42 @@
 
     .archive-featured {
         grid-template-columns: minmax(0, 1fr);
-        gap: var(--space-7);
+        grid-template-rows: none;
+    }
+
+    .archive-card--lead {
+        grid-row: auto;
+        min-height: 420px;
+        padding: var(--space-5);
+    }
+
+    .archive-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .archive-stats > div:nth-child(3) {
+        border-left: 0;
+    }
+
+    .archive-stats > div:nth-child(n + 3) {
+        border-top: 1px solid var(--border);
+    }
+
+    .archive-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-3);
+    }
+
+    .archive-filter {
+        flex-basis: auto;
     }
 
     .archive-group {
         grid-template-columns: minmax(0, 1fr);
         gap: var(--space-3);
+
+        scroll-margin-top: 9rem;
     }
 
     .archive-group-title {
@@ -432,8 +1048,10 @@
         display: flex;
         align-items: baseline;
         gap: var(--space-3);
+    }
 
-        font-size: 2rem;
+    .archive-group-year {
+        font-size: 3rem;
     }
 
     .archive-group-title small {
@@ -452,11 +1070,25 @@
         font-size: 1.05rem;
     }
 
+    .archive-timeline ol {
+        height: 110px;
+        gap: 3px;
+    }
+
+    /* com muitos anos, mostra só um rótulo a cada dois */
+    .archive-timeline li:nth-child(even) .archive-timeline-year {
+        visibility: hidden;
+    }
+
+    .archive-card-index {
+        font-size: 3rem;
+    }
+
     /* data + categoria na 1ª linha, título embaixo */
     .archive-item {
         grid-template-columns: auto minmax(0, 1fr);
         gap: var(--space-1) var(--space-3);
-        padding: var(--space-4) var(--space-2);
+        padding: var(--space-4) var(--space-2) var(--space-4) var(--space-6);
     }
 
     .archive-date {
@@ -466,10 +1098,24 @@
     .archive-item .archive-category {
         grid-row: 1;
         grid-column: 2;
+        justify-self: start;
     }
 
     .archive-title {
         grid-column: 1 / -1;
         font-size: 1.05rem;
+    }
+
+    .archive-arrow,
+    .archive-filter kbd {
+        display: none;
+    }
+
+    .archive-filter input {
+        padding-right: 6rem;
+    }
+
+    .archive-filter-status {
+        right: var(--space-4);
     }
 }

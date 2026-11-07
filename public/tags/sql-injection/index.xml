@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SQL Injection on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/sql-injection/</link>
+    <link>https://diegobrocanelli.com.br/tags/sql-injection/</link>
     <description>Recent content in SQL Injection on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 06 Feb 2017 22:08:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sql-injection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/sql-injection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Defesa eficaz contra SQL Injection – Comunicação com o banco de dados</title>
-      <link>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</link>
+      <link>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:22 +0000</pubDate>
-      <guid>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-comunicacao-com-o-banco-de-dados/</guid>
       <description>&lt;p&gt;Fala galera, tudo tranquilo?!&lt;/p&gt;
 &lt;p&gt;Chegamos na última parte de nossa trajetória de defesa eficaz contra SQL Injection, caso você esteja lendo este conteúdo e não tem conhecimento dos outros dois posts (&lt;a href=&#34;http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6ction-introducao/&#34;&gt;Defesa eficaz contra SQL Injection – Introdução&lt;/a&gt; e &lt;a href=&#34;http://www.diegobrocanelli.com.br/php/defesa-eficaz-co%E2%80%A6idacao-dos-dados/&#34;&gt;Defesa eficaz contra SQL Injection – Filtragem e validação dos dados&lt;/a&gt;)  recomendo a leitura para maior compreensão do tema.&lt;/p&gt;
 &lt;p&gt;Nós demos uma introdução do SQL Injection, abordamos o quão importante é validar e filtrar os dados recebidos antes de realizar a consulta no banco de dados e agora vamos completar nosso ciclo de login realizando uma consulta no banco para confirmar a existência ou não do usuário no banco de dados.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Defesa eficaz contra SQL Injection – Filtragem e validação dos dados</title>
-      <link>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</link>
+      <link>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:16 +0000</pubDate>
-      <guid>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/</guid>
       <description>&lt;p&gt;Fala galera, tudo tranquilo?!&lt;/p&gt;
 &lt;p&gt;Neste post daremos continuidade a nossa seŕie de posts para prevenção de SQL injection, caso você ainda não tenha lido nosso primeiro post “&lt;a href=&#34;http://www.diegobrocanelli.com.br/php/defesa-eficaz-contra-sql-injection-filtragem-e-validacao-dos-dados/&#34;&gt;Defesa eficaz contra SQL Injection – Introdução&lt;/a&gt;” recomendo a leitura para que assim você possa usufruir com maior qualidade dos textos.&lt;/p&gt;
 &lt;p&gt;Todo sistema, sendo ele desktop, mobile ou web ele recebe dados transmitidos pelo usuário, podendo ser um simples formulário para coleta de e-mail até informações complexas como controle de fluxo orçamentário da empresa. E o ponto comum neste processo é o tráfego de informações entre o sistema e o banco de dados. Para mantermos este elo seguro devemos empregar SEMPRE uma boa prática sendo ela: validar e filtrar “input” e “output”. E o que seria isso? Pois bem vamos detalhar um pouco mais esse processo com nosso caso de uso.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Defesa eficaz contra SQL Injection – Introdução</title>
-      <link>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-introducao/</link>
+      <link>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-introducao/</link>
       <pubDate>Mon, 06 Feb 2017 22:08:07 +0000</pubDate>
-      <guid>http://localhost:1313/posts/defesa-eficaz-contra-sql-injection-introducao/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/defesa-eficaz-contra-sql-injection-introducao/</guid>
       <description>&lt;p&gt;Fala galera, tudo tranquilo?!&lt;/p&gt;
 &lt;p&gt;Um tema muito bacana e recorrente no desenvolvimento web é SQL Injection e neste post irei abordar algumas boas práticas na defesa contra esses ataques.&lt;/p&gt;
 &lt;p&gt;Teremos 3 posts relacionados ao tema, sendo:&lt;/p&gt;

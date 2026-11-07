@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Extract on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/extract/</link>
+    <link>https://diegobrocanelli.com.br/tags/extract/</link>
     <description>Recent content in Extract on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 27 Aug 2018 16:17:28 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/extract/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/extract/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Refactoring – Extract Method</title>
-      <link>http://localhost:1313/posts/refactoring-extract-method/</link>
+      <link>https://diegobrocanelli.com.br/posts/refactoring-extract-method/</link>
       <pubDate>Mon, 27 Aug 2018 16:17:28 +0000</pubDate>
-      <guid>http://localhost:1313/posts/refactoring-extract-method/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/refactoring-extract-method/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Você já deve ter esbarrado ou feito manutenção em códigos que o método tem muitas ações, como bem sabemos isso é muito ruim, pois aumenta a complexidade da leitura, manutenção, acoplamento e dificulta seu reuso. Abaixo podemos observar um exemplo:&lt;/p&gt;
 
@@ -40,9 +40,9 @@
     </item>
     <item>
       <title>Refactoring – Extract Variable</title>
-      <link>http://localhost:1313/posts/refactoring-extract-variable/</link>
+      <link>https://diegobrocanelli.com.br/posts/refactoring-extract-variable/</link>
       <pubDate>Mon, 20 Aug 2018 17:21:01 +0000</pubDate>
-      <guid>http://localhost:1313/posts/refactoring-extract-variable/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/refactoring-extract-variable/</guid>
       <description>&lt;p&gt;Olá, tubo bem?!&lt;/p&gt;
 &lt;p&gt;Refatorar é um processo que faz parte do dia a dia do desenvolvedor, existem diversos motivos e técnicas para isso.&lt;/p&gt;
 &lt;p&gt;Um problema comum que deparamos são condicionais complexas, dificultando sua legibilidade e a manutenção, abaixo podemos observar um exemplo.&lt;/p&gt;

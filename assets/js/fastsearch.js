@@ -71,8 +71,9 @@ const el = (tag, className, text) => {
     return node;
 };
 
-const renderResult = ({ item }, query) => {
+const renderResult = ({ item }, query, index) => {
     const li = el('li', 'search-result');
+    li.style.setProperty('--i', index); // atraso da entrada escalonada (CSS)
 
     const meta = el('div', 'post-meta-line');
     if (item.categories?.length) {
@@ -139,7 +140,7 @@ const performSearch = () => {
     setStatus(`${count} ${results.length === 1 ? 'resultado' : 'resultados'} para “${query}”`);
 
     const fragment = document.createDocumentFragment();
-    results.forEach((result) => fragment.append(renderResult(result, query)));
+    results.forEach((result, i) => fragment.append(renderResult(result, query, i)));
     resList.append(fragment);
 };
 
@@ -180,6 +181,14 @@ const initSearch = async () => {
 window.addEventListener('load', initSearch);
 
 sInput?.addEventListener('input', debounce(performSearch, 150));
+
+// Chips de tópicos: buscam sem recarregar (o href ?q= é o fallback sem JS)
+document.querySelector('.search-suggest')?.addEventListener('click', (event) => {
+    const chip = event.target.closest('[data-query]');
+    if (!chip || sInput.disabled) return;
+    event.preventDefault();
+    runQuery(chip.dataset.query);
+});
 
 const resultLinks = () => Array.from(resList.querySelectorAll('.search-result-link'));
 

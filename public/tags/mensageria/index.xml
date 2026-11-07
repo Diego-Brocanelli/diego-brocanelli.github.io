@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mensageria on Diego Brocanelli</title>
-    <link>http://localhost:1313/tags/mensageria/</link>
+    <link>https://diegobrocanelli.com.br/tags/mensageria/</link>
     <description>Recent content in Mensageria on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>http://localhost:1313/images/social-card.png</url>
-      <link>http://localhost:1313/images/social-card.png</link>
+      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
+      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 26 Sep 2024 14:44:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mensageria/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://diegobrocanelli.com.br/tags/mensageria/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Filas e mensageria com RabbitMQ revolucione a comunicação do seu sistema</title>
-      <link>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
+      <link>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</link>
       <pubDate>Thu, 26 Sep 2024 14:44:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
+      <guid>https://diegobrocanelli.com.br/posts/filas-e-mensageria-com-rabbitmq-revolucione-a-comunicacao-do-seu-sistema/</guid>
       <description>&lt;h2 id=&#34;o-que-é-rabbitmq&#34;&gt;O que é RabbitMQ?&lt;/h2&gt;
 &lt;p&gt;De acordo com sua própria documentação, em tradução livre:&lt;/p&gt;
 
