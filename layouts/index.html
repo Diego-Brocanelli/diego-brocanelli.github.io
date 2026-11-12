@@ -73,10 +73,12 @@
 {{- with $oldest }}
 <span class="t-key">desde</span>: <span class="t-num">{{ .Date.Year }}</span>
 {{- end }}
-<span class="t-key">temas</span>:
-{{- range first 3 $topics }}
-  - <span class="t-str">{{ .Page.Title | lower }}</span>
-{{- end }}
+<span class="t-key">habilidades</span>:
+  - <span class="t-str">arquitetura de software</span>
+  - <span class="t-str">design orientado a domínio</span>
+  - <span class="t-str">sistemas distribuídos</span>
+  - <span class="t-str">código limpo</span>
+  - <span class="t-str">testes automatizados</span>
 
 <span class="t-prompt">~/diego $</span> <span class="t-cursor" aria-hidden="true"></span></code></pre>
         </figure>

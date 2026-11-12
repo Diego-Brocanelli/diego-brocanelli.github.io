@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GitHub on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/github/</link>
+    <link>http://localhost:1313/categories/github/</link>
     <description>Recent content in GitHub on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 25 Jan 2021 10:30:11 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/categories/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratório de ideias</title>
-      <link>https://diegobrocanelli.com.br/posts/laboratorio-de-ideias/</link>
+      <link>http://localhost:1313/posts/laboratorio-de-ideias/</link>
       <pubDate>Mon, 25 Jan 2021 10:30:11 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/laboratorio-de-ideias/</guid>
+      <guid>http://localhost:1313/posts/laboratorio-de-ideias/</guid>
       <description>&lt;p&gt;Nós, profissionais de TI, sempre estamos praticando e estudando novas tecnologias, e fatalmente você esbarrou na dificuldade em definir o que fazer para por em prática o que está ou pretende estudar.&lt;/p&gt;
 &lt;p&gt;Tendo isso em mente, criei o projeto &lt;a href=&#34;https://github.com/Diego-Brocanelli/laboratorio-de-ideias&#34;&gt;Laboratório de ideias&lt;/a&gt;, focado em evitar desperdício de tempo e trazer maior foco nos estudos.&lt;/p&gt;
 &lt;p&gt;Sendo uma lista (issues) contendo diversas ideias para ser posta em prática.&lt;/p&gt;
@@ -25,9 +25,9 @@
     </item>
     <item>
       <title>Atualizando seu fork no GitHub - Um guia prático, fácil e rápido!</title>
-      <link>https://diegobrocanelli.com.br/posts/atualizando-seu-fork-no-github/</link>
+      <link>http://localhost:1313/posts/atualizando-seu-fork-no-github/</link>
       <pubDate>Fri, 17 Nov 2017 18:02:27 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/atualizando-seu-fork-no-github/</guid>
+      <guid>http://localhost:1313/posts/atualizando-seu-fork-no-github/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;h2 id=&#34;sumário&#34;&gt;Sumário&lt;/h2&gt;
 &lt;ol&gt;

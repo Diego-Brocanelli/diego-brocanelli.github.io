@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Comunidade on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/comunidade/</link>
+    <link>http://localhost:1313/tags/comunidade/</link>
     <description>Recent content in Comunidade on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:30:38 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/comunidade/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/comunidade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 16 – Contribuindo com o PHP e o PHP TestFest 2017 (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
+      <link>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</link>
       <pubDate>Tue, 05 Nov 2019 16:30:38 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
+      <guid>http://localhost:1313/posts/hhbr-16-contribuindo-com-o-php-e-o-php-testfest-2017/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta décima sexta edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; trazemos uma grande palestra com o tema “&lt;em&gt;Contribuindo com o PHP e o PHP TestFest 2017&lt;/em&gt;”, ministrado pelo grande &lt;a href=&#34;https://rogeriopradoj.com/&#34;&gt;Rogerio Prado de Jesus&lt;/a&gt;.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -49,27 +49,27 @@
     </item>
     <item>
       <title>Como pedir ajuda?</title>
-      <link>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
+      <link>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
       <pubDate>Sun, 17 Feb 2019 13:40:54 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
+      <guid>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;A comunidade de TI é maravilhosa, muitos profissionais trocando conhecimento e informações, comumente também utilizamos dessa rede para pedir auxílio em algum problema que estamos enfrentando e a comunidade é maravilhosa nesse ponto, a colaboração é fantástica.&lt;/p&gt;
 &lt;p&gt;Entretanto é comum depararmos com um grande problema pessoas pedindo ajuda, porém não sabem como fazer ou pedindo de forma muito ruim, para exemplificar situações em que eu já presenciei e vivencie.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr: 21 – Projeto Statik Stack</title>
-      <link>https://diegobrocanelli.com.br/posts/projeto-statik-stack/</link>
+      <link>http://localhost:1313/posts/projeto-statik-stack/</link>
       <pubDate>Thu, 14 Jun 2018 22:30:37 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/projeto-statik-stack/</guid>
+      <guid>http://localhost:1313/posts/projeto-statik-stack/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;O grande &lt;a href=&#34;https://showmethecode.com.br/&#34;&gt;Roberto Achar&lt;/a&gt; apresentou sua ideia de projeto open source chamado &lt;a href=&#34;https://github.com/statikstack&#34;&gt;Statik Stack&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;O projeto tem como meta criar estruturas base para o start do desenvolvimento de projetos, fornecendo uma estrutura base, padronizada, de fácil compreensão e uso para que todos que desejam iniciar um projeto, porém sem saber por onde dar o primeiro passo ou até mesmo para profissionais mais experientes que desejam iniciar um projeto já com toda a base implementada.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr : 10 – Training Center (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/training-center-video/</link>
+      <link>http://localhost:1313/posts/training-center-video/</link>
       <pubDate>Tue, 16 May 2017 13:37:50 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/training-center-video/</guid>
+      <guid>http://localhost:1313/posts/training-center-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Tivemos a décima edição do &lt;a href=&#34;https://www.youtube.com/watch?v=lya7OIFbRGE&#34;&gt;hhbr&lt;/a&gt;,  uma edição recheada de muita informação!&lt;/p&gt;
 &lt;p&gt;Nesta edição temos a honra de trazer um projeto open source fantástico o &lt;a href=&#34;https://github.com/training-center&#34;&gt;Training Center&lt;/a&gt;. Projeto no qual visa auxiliar e fomenta conteúdo para a comunidade de TI, trazendo excelentes iniciativas como os projetos &lt;a href=&#34;ttps://github.com/training-center/mentoria&#34;&gt;Mentoria&lt;/a&gt; e &lt;a href=&#34;https://github.com/training-center/study-groups&#34;&gt;Study Groups&lt;/a&gt;.&lt;/p&gt;
@@ -77,17 +77,17 @@
     </item>
     <item>
       <title>hhbr : 07 – Mercado de Trabalho (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/mercado-de-trabalho-video/</link>
+      <link>http://localhost:1313/posts/mercado-de-trabalho-video/</link>
       <pubDate>Fri, 24 Feb 2017 11:48:45 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/mercado-de-trabalho-video/</guid>
+      <guid>http://localhost:1313/posts/mercado-de-trabalho-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;É com alegria que apresento o vídeo da sétima edição do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; e nesta edição tivemos a honra de prestigiar um bate papo excepcional com o grande &lt;a href=&#34;http://www.vedovelli.com.br/&#34;&gt;Fabio Vedovelli&lt;/a&gt;, neste bate papo falamos sobre o mercado de trabalho para desenvolvedores, foi uma experiência muito enriquecedora onde nosso convidado compartilhou suas experiências como empreendedor e desenvolvedor para o mercado estrangeiro (Estados Unidos e Alemanha) sem mais delongas espero que apreciem o vídeo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>hhbr : 04 – Por que PHP? (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/por-que-php-video/</link>
+      <link>http://localhost:1313/posts/por-que-php-video/</link>
       <pubDate>Sat, 03 Dec 2016 12:57:16 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/por-que-php-video/</guid>
+      <guid>http://localhost:1313/posts/por-que-php-video/</guid>
       <description>&lt;p&gt;Fala galera, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Ocorreu o quarto encontro hhbr](&lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos)&#34;&gt;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos)&lt;/a&gt;, e nesta edição temos o grande &lt;a href=&#34;https://duodra.co/&#34;&gt;Anderson ‘Duodraco’ Casimiro&lt;/a&gt; nos presenteando com uma super palestra, como tema “Por que PHP?”.&lt;/p&gt;
 &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=4KiWfnn8s-A&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;
@@ -118,11 +118,11 @@ CakePHP: &lt;a href=&#34;https://cakephp.org/&#34;&gt;https://cakephp.org/&lt;/a
     </item>
     <item>
       <title>Um sábado fantástico, evento Front In Vale 2016!</title>
-      <link>https://diegobrocanelli.com.br/posts/um-sabado-fantastico-evento-front-in-vale-2016/</link>
+      <link>http://localhost:1313/posts/um-sabado-fantastico-evento-front-in-vale-2016/</link>
       <pubDate>Mon, 12 Sep 2016 02:58:58 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/um-sabado-fantastico-evento-front-in-vale-2016/</guid>
+      <guid>http://localhost:1313/posts/um-sabado-fantastico-evento-front-in-vale-2016/</guid>
       <description>&lt;p&gt;Sábado dia 10/09/2016 foi um dia muito top, ocorreu o&lt;a href=&#34;http://frontinvale.com.br/&#34;&gt; Front In Vale 2016&lt;/a&gt;. Um evento fantástico com uma galera muito bacana e que fazem a internet dia a dia com projetos pra lá de excelentes, e também uma oportunidade de encontrar amigos.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Time no evendo do Front In Vale&#34; loading=&#34;lazy&#34; src=&#34;https://diegobrocanelli.com.br/wp-content/uploads/2016/09/20160910_090812.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Time no evendo do Front In Vale&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2016/09/20160910_090812.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;O evento já começa com dois pés no peito com uma super palestra da &lt;a href=&#34;https://twitter.com/mjcoffeeholick&#34;&gt;Alda Rocha&lt;/a&gt; com o tema “Empoderei, e agora?”, vários pontos bem interessantes e que nos faz refletir sobre nossas carreiras e nossas atitudes do dia a dia, e como motivar novas pessoas a engessarem no mercado de TI..&lt;/p&gt;</description>
     </item>
   </channel>

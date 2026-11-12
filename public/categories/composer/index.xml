@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Composer on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/composer/</link>
+    <link>http://localhost:1313/categories/composer/</link>
     <description>Recent content in Composer on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 28 Sep 2017 12:15:24 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/categories/composer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HHBR: 14 – Iniciando com Composer (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-14-iniciando-com-composer-video/</link>
+      <link>http://localhost:1313/posts/hhbr-14-iniciando-com-composer-video/</link>
       <pubDate>Thu, 28 Sep 2017 12:15:24 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-14-iniciando-com-composer-video/</guid>
+      <guid>http://localhost:1313/posts/hhbr-14-iniciando-com-composer-video/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Rolou a 14 edição do &lt;a href=&#34;https://www.youtube.com/hhbrtech&#34;&gt;hhbr&lt;/a&gt;, nesta edição trago para vocês uma talk bacana que produzi apresentando o &lt;a href=&#34;https://getcomposer.org/&#34;&gt;Composer&lt;/a&gt;, a ferramenta de gestão de dependências do PHP.&lt;/p&gt;
 &lt;p&gt;Uma talk voltada para o público iniciante, porém, focado em incentivar a adoção da ferramentas pelos desenvolvedores PHP, demonstrando os principais recursos da ferramenta.&lt;/p&gt;
@@ -46,18 +46,18 @@
     </item>
     <item>
       <title>Como usar Traits no PHP com namespace</title>
-      <link>https://diegobrocanelli.com.br/posts/como-usar-traits-no-php-com-namespace/</link>
+      <link>http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/</link>
       <pubDate>Tue, 08 Aug 2017 23:10:42 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/como-usar-traits-no-php-com-namespace/</guid>
-      <description>&lt;p&gt;Recentemente lancei um post &lt;a href=&#34;https://diegobrocanelli.com.br/php/como-usar-traits-no-php/&#34;&gt;Como usar Traits no PHP&lt;/a&gt;, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.&lt;/p&gt;
+      <guid>http://localhost:1313/posts/como-usar-traits-no-php-com-namespace/</guid>
+      <description>&lt;p&gt;Recentemente lancei um post &lt;a href=&#34;http://localhost:1313/php/como-usar-traits-no-php/&#34;&gt;Como usar Traits no PHP&lt;/a&gt;, com isso surgiu uma duvida nos comentários realizado pelo Paulo Dias, onde questionou como poderia utilizar a mesma implementação porem fazendo uso de namespace.&lt;/p&gt;
 &lt;p&gt;Neste post vou implementar o mesmo conceito do post anterior demonstrando o uso de namespace.&lt;/p&gt;
 &lt;p&gt;Para nossa implementação devemos criar o diretório com o nome ‘traits_com_namespace’, após sua criação devemos acessar a raiz do diretório pelo terminal e executar o seguinte comando:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Iniciando com Composer</title>
-      <link>https://diegobrocanelli.com.br/posts/iniciando-com-composer/</link>
+      <link>http://localhost:1313/posts/iniciando-com-composer/</link>
       <pubDate>Fri, 24 Mar 2017 19:05:05 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/iniciando-com-composer/</guid>
+      <guid>http://localhost:1313/posts/iniciando-com-composer/</guid>
       <description>&lt;p&gt;Olá, tudo bem?&lt;/p&gt;
 &lt;p&gt;Em diversos posts aqui no blog faço uso do &lt;a href=&#34;https://getcomposer.org/&#34;&gt;Composer&lt;/a&gt;, e menciono sua importância no ecossistema PHP, porém neste post vamos entrar em mais detalhes sobre essa maravilhosa ferramenta.&lt;/p&gt;
 &lt;h2 id=&#34;o-que-é-o-composer&#34;&gt;O que é o composer?&lt;/h2&gt;

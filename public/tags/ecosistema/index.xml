@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ecosistema on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/ecosistema/</link>
+    <link>http://localhost:1313/tags/ecosistema/</link>
     <description>Recent content in Ecosistema on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:41:34 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/ecosistema/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ecosistema/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</link>
+      <link>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</guid>
+      <guid>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</guid>
       <description>&lt;p&gt;Olá!&lt;/p&gt;
 &lt;p&gt;Nesta 26º edição da comunidade [hhbr][1]  tivemos um super bate papo sobre  “Ecossistema Javascript” com o grande &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;Marco Bruno&lt;/a&gt; do &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;CollabCode&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.&lt;/p&gt;

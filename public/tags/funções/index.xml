@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Funções on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/fun%C3%A7%C3%B5es/</link>
+    <link>http://localhost:1313/tags/fun%C3%A7%C3%B5es/</link>
     <description>Recent content in Funções on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 03 Jan 2020 10:55:13 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/fun%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/fun%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Funções nativas PHP – str_getcsv</title>
-      <link>https://diegobrocanelli.com.br/posts/funcoes-nativas-php-str_getcsv/</link>
+      <link>http://localhost:1313/posts/funcoes-nativas-php-str_getcsv/</link>
       <pubDate>Fri, 03 Jan 2020 10:55:13 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/funcoes-nativas-php-str_getcsv/</guid>
+      <guid>http://localhost:1313/posts/funcoes-nativas-php-str_getcsv/</guid>
       <description>&lt;p&gt;Olá!&lt;/p&gt;
 &lt;p&gt;PHP é uma linguagem fantástica com inúmeros recursos nativos que facilitam e entrega alta performance.&lt;/p&gt;
 &lt;p&gt;Uma dessas funções é a &lt;a href=&#34;https://www.php.net/manual/pt_BR/function.str-getcsv.ph&#34;&gt;str_getcsv&lt;/a&gt;, responsável por ler um arquivo csv e converter seus valores em um array.&lt;/p&gt;
@@ -44,9 +44,9 @@
     </item>
     <item>
       <title>PHP e seu vasto arsenal de funções nativas</title>
-      <link>https://diegobrocanelli.com.br/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</link>
+      <link>http://localhost:1313/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</link>
       <pubDate>Thu, 11 Feb 2016 00:59:12 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</guid>
+      <guid>http://localhost:1313/posts/php-e-seu-vasto-arsenal-de-funcoes-nativas/</guid>
       <description>&lt;p&gt;Fala pessoal tudo certinho.&lt;/p&gt;
 &lt;p&gt;Todos sabemos da grande capacidade  e poder que o PHP dispõem para o desenvolvimento web, porem o que muitos deixam escapar é sua vasta lista de funções nativas que ele fornece.&lt;/p&gt;
 &lt;p&gt;Com isso segue abaixo uma pequena demonstração de funções que podem auxiliar e muito no dia a dia.&lt;/p&gt;

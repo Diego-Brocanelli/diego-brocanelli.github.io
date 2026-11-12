@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/docker/</link>
+    <link>http://localhost:1313/categories/docker/</link>
     <description>Recent content in Docker on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:33:20 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 18 – Docker &#43; Kubernetes &#43; Minikube (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-18-docker-kubernetes-minikube/</link>
+      <link>http://localhost:1313/posts/hhbr-18-docker-kubernetes-minikube/</link>
       <pubDate>Tue, 05 Nov 2019 16:33:20 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-18-docker-kubernetes-minikube/</guid>
+      <guid>http://localhost:1313/posts/hhbr-18-docker-kubernetes-minikube/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta 18º edição da comunidade &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; pudemos apreciar uma fantástica palestra sobre “&lt;em&gt;Docker + Kubernetes + Minikube&lt;/em&gt;” ministrado pelo grande &lt;a href=&#34;https://github.com/robertoachar&#34;&gt;Roberto Achar&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Palestra com conteúdo prático e ótimos exemplos e dicas somados a grande didática do palestrante que consegue prender nossa atenção do início ao fim da Palestra. Sem mais delongas, abaixo temos o vídeo com todo do conteúdo.&lt;/p&gt;
@@ -59,9 +59,9 @@
     </item>
     <item>
       <title>Docker para iniciantes (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/docker-para-iniciantes/</link>
+      <link>http://localhost:1313/posts/docker-para-iniciantes/</link>
       <pubDate>Sat, 27 Aug 2016 01:41:15 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/docker-para-iniciantes/</guid>
+      <guid>http://localhost:1313/posts/docker-para-iniciantes/</guid>
       <description>&lt;p&gt;Olá pessoal tudo bem?!&lt;/p&gt;
 &lt;p&gt;Ontem foi realizado o primeiro webinar do canal &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw/videos&#34;&gt;hhbr&lt;/a&gt;, com o tema “Docker para iniciantes”. Caso você não tenha acompanhado, a gravação encontra-se disponível para a comunidade, espero que apreciem 🙂&lt;/p&gt;
 &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=qjZMHsqSmSE&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;

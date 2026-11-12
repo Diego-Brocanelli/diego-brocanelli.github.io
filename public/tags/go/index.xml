@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Go on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/go/</link>
+    <link>http://localhost:1313/tags/go/</link>
     <description>Recent content in Go on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 01 Aug 2017 03:04:42 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 12 – Por que Golang? (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/por-que-golang-video/</link>
+      <link>http://localhost:1313/posts/por-que-golang-video/</link>
       <pubDate>Tue, 01 Aug 2017 03:04:42 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/por-que-golang-video/</guid>
+      <guid>http://localhost:1313/posts/por-que-golang-video/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; é uma linguagem de programação fantástica, criado pela galera do Google. Nesta edição &lt;a href=&#34;https://twitter.com/zeucxb&#34;&gt;ZeuCXB&lt;/a&gt; traz uma palestra robusta, recheado de exemplos para nós.&lt;/p&gt;
 &lt;p&gt;Pegue seu bloco de notas, prepare uma pipoca e desfrute de uma super palestra.&lt;/p&gt;
 

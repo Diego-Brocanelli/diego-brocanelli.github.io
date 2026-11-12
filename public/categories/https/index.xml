@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Https on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/https/</link>
+    <link>http://localhost:1313/categories/https/</link>
     <description>Recent content in Https on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 30 Jan 2017 10:42:59 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/categories/https/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/https/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr : 06 – Criptografia: Entendendo o HTTPS (Vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/criptografia-entendendo-o-https-video/</link>
+      <link>http://localhost:1313/posts/criptografia-entendendo-o-https-video/</link>
       <pubDate>Mon, 30 Jan 2017 10:42:59 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/criptografia-entendendo-o-https-video/</guid>
+      <guid>http://localhost:1313/posts/criptografia-entendendo-o-https-video/</guid>
       <description>&lt;p&gt;Fala galera, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Tivemos a sexta edição do &lt;a href=&#34;https://www.youtube.com/channel/UCh1xOy7SP_KyRn4wTNVvFHw&#34;&gt;hhbr&lt;/a&gt; a primeira edição de 2017, e nesta fantástica edição foi abordado o tema de criptografia no HTTPS, conteúdo apresentado pelo grande &lt;a href=&#34;https://twitter.com/_hernandev&#34;&gt;Diego Hernandes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Acesse &lt;a href=&#34;https://www.youtube.com/watch?v=ecM7k1OhTwA&#34;&gt;o vídeo da palestra&lt;/a&gt; e espero que aprecie o conteúdo!&lt;/p&gt;

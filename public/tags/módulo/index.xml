@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Módulo on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/m%C3%B3dulo/</link>
+    <link>http://localhost:1313/tags/m%C3%B3dulo/</link>
     <description>Recent content in Módulo on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 05 Sep 2018 13:34:32 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/m%C3%B3dulo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/m%C3%B3dulo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modularizando sua aplicação Laravel</title>
-      <link>https://diegobrocanelli.com.br/posts/laravel-module/</link>
+      <link>http://localhost:1313/posts/laravel-module/</link>
       <pubDate>Wed, 05 Sep 2018 13:34:32 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/laravel-module/</guid>
+      <guid>http://localhost:1313/posts/laravel-module/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Criar aplicações reutilizáveis, manuteníveis, de fácil compreensão pelos membros do time é o desafio do dia a dia.&lt;/p&gt;
 &lt;p&gt;Sem sombra de dúvidas é o correto e devemos seguir esta linha de pensamento, pois assim temos uma aplicação saudável, facilitando novas implementações.&lt;/p&gt;

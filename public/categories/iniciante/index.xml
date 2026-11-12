@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Iniciante on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/categories/iniciante/</link>
+    <link>http://localhost:1313/categories/iniciante/</link>
     <description>Recent content in Iniciante on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 13 May 2021 11:17:13 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/categories/iniciante/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/iniciante/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como estudo uma nova tecnologia?</title>
-      <link>https://diegobrocanelli.com.br/posts/como-estudo-uma-nova-tecnologia/</link>
+      <link>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</link>
       <pubDate>Thu, 13 May 2021 11:17:13 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/como-estudo-uma-nova-tecnologia/</guid>
+      <guid>http://localhost:1313/posts/como-estudo-uma-nova-tecnologia/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;É muito comum as pessoas terem dúvida de como aprender uma nova tecnologia, visto mais frequentemente nas pessoas iniciantes.&lt;/p&gt;
 &lt;p&gt;Com o tempo eu identifiquei a maneira com o qual melhor me adéquo para estudar, sugiro que comece a analisar quais maneiras lhe agrada mais, e que trazem melhores resultados. Sabemos que não existe uma maneira universal (bala de prata) para todos, há pessoas que gostam de ler, outras de assistir ao conteúdo desejado, ouvir podcasts ou áudio books por exemplo, essa diversidade é natural e individual de cada pessoa.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Como realizar parse da query string de forma simples com PHP</title>
-      <link>https://diegobrocanelli.com.br/posts/realizar-parse-da-query-string-de-forma-simples/</link>
+      <link>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</link>
       <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <guid>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</guid>
       <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
 &lt;p&gt;Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?&lt;/p&gt;
 &lt;p&gt;Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.&lt;/p&gt;

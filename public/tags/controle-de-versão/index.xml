@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Controle De Versão on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/controle-de-vers%C3%A3o/</link>
+    <link>http://localhost:1313/tags/controle-de-vers%C3%A3o/</link>
     <description>Recent content in Controle De Versão on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 27 Feb 2021 13:09:10 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/controle-de-vers%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GIT – Seu guia de sobrevivência</title>
-      <link>https://diegobrocanelli.com.br/posts/git-seu-guia-de-sobrevivencia/</link>
+      <link>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</link>
       <pubDate>Sat, 27 Feb 2021 13:09:10 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/git-seu-guia-de-sobrevivencia/</guid>
+      <guid>http://localhost:1313/posts/git-seu-guia-de-sobrevivencia/</guid>
       <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git&lt;/a&gt; é um sistema de controle de versão descentralizado, criado por &lt;a href=&#34;https://github.com/torvalds&#34;&gt;Linus Torvalds&lt;/a&gt;. Ele permite gerenciar versões de código e outros arquivos, sendo a ferramenta mais popular para essa finalidade.

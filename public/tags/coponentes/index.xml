@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Coponentes on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/coponentes/</link>
+    <link>http://localhost:1313/tags/coponentes/</link>
     <description>Recent content in Coponentes on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:42:33 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/coponentes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/coponentes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 28 – Renderizando componentes com Vue.js (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-28-renderizando-componentes-com-vue-js/</link>
+      <link>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:33 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-28-renderizando-componentes-com-vue-js/</guid>
+      <guid>http://localhost:1313/posts/hhbr-28-renderizando-componentes-com-vue-js/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta edição de número 28 do &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; tivemos uma mega palestra sobre Vue.js com o palestrante &lt;a href=&#34;https://twitter.com/wilcorrea&#34;&gt;William Correa&lt;/a&gt;, que explanou em detalhes diversos pontos bacanas da renderização com Vue.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;

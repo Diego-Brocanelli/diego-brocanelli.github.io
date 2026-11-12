@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>String on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/string/</link>
+    <link>http://localhost:1313/tags/string/</link>
     <description>Recent content in String on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 03 May 2018 20:10:54 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/string/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tratamento de HTML dentro de uma string com PHP</title>
-      <link>https://diegobrocanelli.com.br/posts/tratamento-de-html-dentro-de-uma-string-com-php/</link>
+      <link>http://localhost:1313/posts/tratamento-de-html-dentro-de-uma-string-com-php/</link>
       <pubDate>Thu, 03 May 2018 20:10:54 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/tratamento-de-html-dentro-de-uma-string-com-php/</guid>
+      <guid>http://localhost:1313/posts/tratamento-de-html-dentro-de-uma-string-com-php/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Armazenar dados html ou até mesmo manipular é importante, pois devemos nos preocupar com a segurança e também com a integridade dos dados.&lt;/p&gt;
 &lt;p&gt;Há momentos que desejamos armazenar a string HTML, um exemplo é quando temos um textarea que contem a estrutura similar ao word.&lt;/p&gt;
@@ -25,9 +25,9 @@
     </item>
     <item>
       <title>Como realizar parse da query string de forma simples com PHP</title>
-      <link>https://diegobrocanelli.com.br/posts/realizar-parse-da-query-string-de-forma-simples/</link>
+      <link>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</link>
       <pubDate>Fri, 05 Jan 2018 21:05:12 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/realizar-parse-da-query-string-de-forma-simples/</guid>
+      <guid>http://localhost:1313/posts/realizar-parse-da-query-string-de-forma-simples/</guid>
       <description>&lt;p&gt;Olá, tudo bem!&lt;/p&gt;
 &lt;p&gt;Pode parecer simples, porém quem nunca teve a necessidade de realizar parse da query string para obter seus valores?&lt;/p&gt;
 &lt;p&gt;Principalmente quando não estamos utilizando um framework, micro framework ou componente para isso.&lt;/p&gt;

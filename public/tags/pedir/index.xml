@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pedir on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/pedir/</link>
+    <link>http://localhost:1313/tags/pedir/</link>
     <description>Recent content in Pedir on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Sun, 17 Feb 2019 13:40:54 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/pedir/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/pedir/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como pedir ajuda?</title>
-      <link>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
+      <link>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</link>
       <pubDate>Sun, 17 Feb 2019 13:40:54 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
+      <guid>http://localhost:1313/posts/como-pedir-ajuda-em-comunidade-de-ti/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;A comunidade de TI é maravilhosa, muitos profissionais trocando conhecimento e informações, comumente também utilizamos dessa rede para pedir auxílio em algum problema que estamos enfrentando e a comunidade é maravilhosa nesse ponto, a colaboração é fantástica.&lt;/p&gt;
 &lt;p&gt;Entretanto é comum depararmos com um grande problema pessoas pedindo ajuda, porém não sabem como fazer ou pedindo de forma muito ruim, para exemplificar situações em que eu já presenciei e vivencie.&lt;/p&gt;</description>

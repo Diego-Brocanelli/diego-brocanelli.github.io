@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hhbr on Diego Brocanelli</title>
-    <link>https://diegobrocanelli.com.br/tags/hhbr/</link>
+    <link>http://localhost:1313/tags/hhbr/</link>
     <description>Recent content in Hhbr on Diego Brocanelli</description>
     <image>
       <title>Diego Brocanelli</title>
-      <url>https://diegobrocanelli.com.br/images/social-card.png</url>
-      <link>https://diegobrocanelli.com.br/images/social-card.png</link>
+      <url>http://localhost:1313/images/social-card.png</url>
+      <link>http://localhost:1313/images/social-card.png</link>
     </image>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 05 Nov 2019 16:42:02 +0000</lastBuildDate>
-    <atom:link href="https://diegobrocanelli.com.br/tags/hhbr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hhbr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hhbr: 27 – Refactoring calculadora de IMC (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-27-refactoring-calculadora-de-imc/</link>
+      <link>http://localhost:1313/posts/hhbr-27-refactoring-calculadora-de-imc/</link>
       <pubDate>Tue, 05 Nov 2019 16:42:02 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-27-refactoring-calculadora-de-imc/</guid>
+      <guid>http://localhost:1313/posts/hhbr-27-refactoring-calculadora-de-imc/</guid>
       <description>&lt;p&gt;Olá, Tudo bem?! Nesta edição 27 do &lt;a href=&#34;http://youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt;, tive a oportunidade de bater um papo com Henrique um dev fantástico que está iniciando seu caminho com a linguagem PHP. Com isso, aproveitamos a oportunidade para refatorar o projeto que o Henrique desenvolveu do grupo de estudos &lt;a href=&#34;https://github.com/training-center/php-study-group&#34;&gt;php-poo&lt;/a&gt; do &lt;a href=&#34;https://github.com/training-center&#34;&gt;Training Center&lt;/a&gt;,  um grupo focado em fomentar conteúdo e conhecimento sobre a linguagem PHP e POO. Espero que apreciem o conteúdo!&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
 			&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/5mAHPhf9UdI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
@@ -44,9 +44,9 @@
     </item>
     <item>
       <title>hhbr: 26 – Ecossistema javascript (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</link>
+      <link>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</link>
       <pubDate>Tue, 05 Nov 2019 16:41:34 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-26-ecossistema-javascript/</guid>
+      <guid>http://localhost:1313/posts/hhbr-26-ecossistema-javascript/</guid>
       <description>&lt;p&gt;Olá!&lt;/p&gt;
 &lt;p&gt;Nesta 26º edição da comunidade [hhbr][1]  tivemos um super bate papo sobre  “Ecossistema Javascript” com o grande &lt;a href=&#34;https://twitter.com/marcobrunobr&#34;&gt;Marco Bruno&lt;/a&gt; do &lt;a href=&#34;https://medium.com/collabcode&#34;&gt;CollabCode&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Pudemos conversar sobre passado, presente e futuro da linguagem. Falamos sobre frameworks, tc39, como podemos aprender as novas funcionalidades, tiramos muitas dúvidas e muito mais, aperta o play e aproveite o conteúdo que está muito bacana.&lt;/p&gt;
@@ -91,9 +91,9 @@
     </item>
     <item>
       <title>hhbr: 25 – Introdução a CQRS e Event Sourcing (vídeo)</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
+      <link>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</link>
       <pubDate>Tue, 05 Nov 2019 16:40:45 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
+      <guid>http://localhost:1313/posts/hhbr-25-introducao-a-cqrs-e-event-sourcing/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Nesta 25º edição da comunidade &lt;a href=&#34;https://www.youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt;  tivemos uma incrível palestra sobre  “&lt;em&gt;Introdução a CQRS e Event Sourcing&lt;/em&gt;” com o monstro da programação &lt;a href=&#34;http://www.marcelsud.com/&#34;&gt;Marcelo Santos&lt;/a&gt;, abordando de forma prática todas as etapas para implementação e compreensão do CQRS e Event Source em sua aplicação, tivemos exemplos de código e muitas perguntas respondidas na rodada de perguntas.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -106,9 +106,9 @@
     </item>
     <item>
       <title>hhbr : 01 – Docker para iniciantes</title>
-      <link>https://diegobrocanelli.com.br/posts/hhbr-01-docker-para-iniciantes/</link>
+      <link>http://localhost:1313/posts/hhbr-01-docker-para-iniciantes/</link>
       <pubDate>Tue, 05 Nov 2019 16:26:41 +0000</pubDate>
-      <guid>https://diegobrocanelli.com.br/posts/hhbr-01-docker-para-iniciantes/</guid>
+      <guid>http://localhost:1313/posts/hhbr-01-docker-para-iniciantes/</guid>
       <description>&lt;p&gt;Olá, tudo bem?!&lt;/p&gt;
 &lt;p&gt;Em nossa primeira edição da comunidade &lt;a href=&#34;https://www.youtube.com/hhbr-tech&#34;&gt;hhbr&lt;/a&gt; trazemos uma grande palestra com o tema “&lt;em&gt;Docker para iniciantes&lt;/em&gt;”, ministrado pelo grande &lt;a href=&#34;http://wfsilva.com/&#34;&gt;Wellington F. Silva&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Foi abordado os principais conceitos básicos, com muitos exemplos de uso prático. Espero que apreceiem o conteúdo.&lt;/p&gt;
