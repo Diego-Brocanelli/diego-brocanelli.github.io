@@ -80,6 +80,7 @@ buildExpired = false                               # Não publica posts com data
 [Params.assets]
   disableHLJS = false
   favicon = "/favicon.ico" # Sem isso o navegador usa o favicon padrão do Hugo
+  theme_color = "#1f2329"  # Mesmo fundo do favicon
 
 [Params.homeInfoParams]
   Title = "Olá, eu sou Diego Brocanelli."
